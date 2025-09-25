@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import React from "react";
 
 const HeroSection: React.FC = () => {
@@ -46,7 +46,9 @@ const HeroSection: React.FC = () => {
               
               {/* Text with enhanced styling */}
               <span className="relative z-10 flex items-center justify-center gap-1 sm:gap-2">
+                <Link href="https://disha.hirekarma.in/auth/register">
                 <span className="text-white drop-shadow-lg">Get Started</span>
+                </Link>
                 <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white/90 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -59,26 +61,13 @@ const HeroSection: React.FC = () => {
 
           {/* Right Side - Image with Centered Gradient Background */}
           <div className="flex justify-center items-center lg:justify-end animate-fade-in-right animation-delay-300 relative pt-4 sm:pt-6 lg:pt-8">
-            {/* Centered Gradient Background Texture */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-gradient-to-br from-blue-50 via-cyan-30 to-purple-50 rounded-3xl opacity-60">
-              {/* Additional Gradient Layers for Texture */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-emerald-30/40 via-transparent to-yellow-30/30 rounded-3xl"></div>
-              <div className="absolute inset-0 bg-gradient-to-bl from-pink-30/20 via-transparent to-blue-30/30 rounded-3xl"></div>
-              
-              {/* Subtle Pattern Overlay - Centered */}
-              <div className="absolute inset-0 opacity-15">
-                <div className="absolute top-1/4 left-1/4 w-16 sm:w-24 h-16 sm:h-24 bg-gradient-to-r from-cyan-100/20 to-blue-100/20 rounded-full blur-xl sm:blur-2xl"></div>
-                <div className="absolute bottom-1/4 right-1/4 w-20 sm:w-28 h-20 sm:h-28 bg-gradient-to-r from-purple-100/15 to-pink-100/15 rounded-full blur-2xl sm:blur-3xl"></div>
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 sm:w-20 h-12 sm:h-20 bg-gradient-to-r from-emerald-100/20 to-cyan-100/20 rounded-full blur-lg sm:blur-xl"></div>
-              </div>
-            </div>
             
             {/* Image Container */}
             <div className="relative z-10 w-full max-w-2xl lg:max-w-4xl transition-transform duration-500">
               <img
                 src="/demo.png"
                 alt="Placement and hiring workflow illustration"
-                className="w-full h-auto min-h-[300px] sm:min-h-[400px] lg:min-h-[500px] xl:min-h-[600px] object-contain rounded-lg scale-125 sm:scale-150 lg:scale-150 animate-float hover:animate-bounce drop-shadow-lg"
+                className="w-full h-auto min-h-[300px] sm:min-h-[400px] lg:min-h-[500px] xl:min-h-[600px] object-contain rounded-lg scale-125 sm:scale-150 lg:scale-150 animate-float drop-shadow-lg"
               />
             </div>
           </div>
