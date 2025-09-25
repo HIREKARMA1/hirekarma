@@ -34,14 +34,14 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
         ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' 
         : 'bg-white/90 backdrop-blur-sm border-b border-gray-100'
     } ${className}`}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+      <div className="content-container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
           {/* Logo */}
           <div className="flex items-center">
-              <img src="/logo.png" alt="logo" className="w-36 h-15" />
+              <img src="/logo.png" alt="logo" className="w-32 sm:w-36 lg:w-40 h-8 sm:h-10 lg:h-12" />
           </div>
 
-          {/* Desktop Navigation Links */}
+          {/* Desktop Navigation Links
           <div className="hidden lg:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection('hero')}
@@ -79,16 +79,16 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
             >
               Our Solutions
             </button>
-          </div>
+          </div> */}
 
           {/* Desktop Auth Buttons */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <button className="px-6 py-2.5 text-gray-700 font-medium border border-gray-300 rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-all duration-200">
+          <div className="hidden lg:flex items-center space-x-3 xl:space-x-4">
+            <button className="px-4 xl:px-6 py-2 xl:py-2.5 text-sm xl:text-base text-gray-700 font-medium border border-gray-300 rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-all duration-200">
               <Link href="https://disha.hirekarma.in/auth/register">
               Sign Up
               </Link>
             </button>
-            <button className="px-6 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+            <button className="px-4 xl:px-6 py-2 xl:py-2.5 bg-gradient-to-r from-cyan-500 to-blue-500 text-sm xl:text-base text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
               <Link href="https://disha.hirekarma.in/auth/login">
                 Sign In
               </Link>
@@ -138,11 +138,15 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
               
               {/* Mobile Auth Buttons */}
               <div className="pt-4 border-t border-gray-200 space-y-3">
-                <button className="w-full px-6 py-2.5 text-gray-700 font-medium border border-gray-300 rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-all duration-200">
-                  Sign Up
+                <button className="w-full px-4 py-2.5 text-sm text-gray-700 font-medium border border-gray-300 rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-all duration-200">
+                  <Link href="https://disha.hirekarma.in/auth/register">
+                    Sign Up
+                  </Link>
                 </button>
-                <button className="w-full px-6 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-md">
-                  Sign In
+                <button className="w-full px-4 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-500 text-sm text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-md">
+                  <Link href="https://disha.hirekarma.in/auth/login">
+                    Sign In
+                  </Link>
                 </button>
               </div>
             </div>
