@@ -34,14 +34,14 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
         ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' 
         : 'bg-white/90 backdrop-blur-sm border-b border-gray-100'
     } ${className}`}>
-      <div className="content-container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
+      <div className="content-container mx-auto px-3 sm:px-4 lg:px-6">
+        <div className="flex items-center justify-between h-12 sm:h-14 lg:h-16">
           {/* Logo */}
           <div className="flex items-center">
-              <img src="/logo.png" alt="logo" className="w-32 sm:w-36 lg:w-40 h-8 sm:h-10 lg:h-12" />
+              <img src="/logo.png" alt="logo" className="w-28 sm:w-32 lg:w-36 xl:w-40 h-6 sm:h-8 lg:h-10 xl:h-12" />
           </div>
 
-          {/* Desktop Navigation Links
+          {/* Desktop Navigation 
           <div className="hidden lg:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection('hero')}
@@ -82,13 +82,13 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
           </div> */}
 
           {/* Desktop Auth Buttons */}
-          <div className="hidden lg:flex items-center space-x-3 xl:space-x-4">
-            <button className="px-4 xl:px-6 py-2 xl:py-2.5 text-sm xl:text-base text-gray-700 font-medium border border-gray-300 rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-all duration-200">
+          <div className="hidden lg:flex items-center space-x-2 xl:space-x-3">
+            <button className="px-3 xl:px-4 py-1.5 xl:py-2 text-xs xl:text-sm text-gray-700 font-medium border border-gray-300 rounded-md xl:rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-all duration-200">
               <Link href="https://disha.hirekarma.in/auth/register">
               Sign Up
               </Link>
             </button>
-            <button className="px-4 xl:px-6 py-2 xl:py-2.5 bg-gradient-to-r from-cyan-500 to-blue-500 text-sm xl:text-base text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+            <button className="px-3 xl:px-4 py-1.5 xl:py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-xs xl:text-sm text-white font-medium rounded-md xl:rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
               <Link href="https://disha.hirekarma.in/auth/login">
                 Sign In
               </Link>
