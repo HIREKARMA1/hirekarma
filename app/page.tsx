@@ -3,16 +3,20 @@
 import React from 'react';
 import Navbar from '../components/layout/Navbar';
 import HeroSection from '../components/sections/HeroSection';
-import FeaturesSection from '../components/sections/FeaturesSection';
-import SolutionsSection from '../components/sections/SolutionsSection';
+import OurServicesSection from '../components/sections/OurServicesSection';
+import FAQSection from '../components/sections/FAQSection';
+import Footer from '../components/layout/Footer';
 
 const LandingPage: React.FC = () => {
   return (
-    <div className="overflow-x-hidden">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
-      <HeroSection />
-      <FeaturesSection />
-      <SolutionsSection />
+      <main className="flex-grow">
+        <HeroSection />
+        <OurServicesSection />
+        <FAQSection />
+      </main>
+      <Footer />
     </div>
   );
 };
