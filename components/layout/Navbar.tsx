@@ -63,13 +63,13 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
     }
   ];
 
-  // Simple navigation links without dropdown
-  const simpleLinks = [
-    { label: 'Events', href: '/events', icon: Calendar },
-    { label: 'Teams', href: '/teams', icon: Users },
-    { label: 'Gallery', href: '/gallery', icon: Building2 },
-    { label: 'Contact', href: '/contact', icon: BookOpen }
-  ];
+  // // Simple navigation links without dropdown
+  // const simpleLinks = [
+  //   { label: 'Events', href: '/events', icon: Calendar },
+  //   { label: 'Teams', href: '/teams', icon: Users },
+  //   { label: 'Gallery', href: '/gallery', icon: Building2 },
+  //   { label: 'Contact', href: '/contact', icon: BookOpen }
+  // ];
 
   return (
     <>
@@ -175,7 +175,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                 })}
 
                 {/* Simple Links - No Dropdown */}
-                {simpleLinks.map((link) => {
+                {/* {simpleLinks.map((link) => {
                   const LinkIcon = link.icon;
                   return (
                     <Link
@@ -187,7 +187,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                       <span className="whitespace-nowrap text-sm">{link.label}</span>
                     </Link>
                   );
-                })}
+                })} */}
               </div>
             </div>
 
@@ -271,7 +271,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                 })}
 
                 {/* Simple Links - Mobile */}
-                {simpleLinks.map((link) => {
+                {/* {simpleLinks.map((link) => {
                   const LinkIcon = link.icon;
                   return (
                     <Link
@@ -286,7 +286,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                       <span>{link.label}</span>
                     </Link>
                   );
-                })}
+                })} */}
 
               </div>
             </div>

@@ -220,7 +220,7 @@ const OurServicesSection: React.FC = () => {
                     </div>
                 ))}
 
-                {/* CTA Section */}
+                {/* CTA Section
                 <div className="text-center bg-gradient-to-r from-cyan-600 to-blue-600 rounded-3xl p-12 text-white">
                     <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Hiring?</h3>
                     <p className="text-xl mb-8 opacity-90">
@@ -234,7 +234,7 @@ const OurServicesSection: React.FC = () => {
                             Learn More
                         </button>
                     </div>
-                </div>
+                </div> */}
             </div>
         </section>
     );

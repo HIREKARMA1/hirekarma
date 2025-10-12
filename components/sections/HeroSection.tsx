@@ -76,7 +76,7 @@ const HeroSection: React.FC = () => {
                         <div className="grid sm:grid-cols-2 gap-4">
                             <div className="flex items-center space-x-3 p-4 bg-gray-50 rounded-xl border border-gray-200">
                                 <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
-                                    <span className="text-white font-bold text-sm">80%</span>
+                                    <span className="text-white font-bold text-sm">99%</span>
                                 </div>
                                 <div>
                                     <p className="font-semibold text-gray-900">Placement Success</p>
@@ -99,7 +99,9 @@ const HeroSection: React.FC = () => {
                         <div className="flex flex-col sm:flex-row gap-4">
                             <button className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                                 <span className="relative z-10 flex items-center justify-center space-x-2">
+                                  <a href="https://disha.hirekarma.in/">
                                     <span>Get Started Today</span>
+                                  </a>
                                     <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                     </svg>
@@ -119,7 +121,7 @@ const HeroSection: React.FC = () => {
                                 <div className="text-lg font-bold text-gray-700">Utkal University</div>
                                 <div className="text-lg font-bold text-gray-700">Bangalore Institute</div>
                                 <div className="text-lg font-bold text-gray-700">Odisha Colleges</div>
-                                <div className="text-lg font-bold text-gray-700">+200 Partners</div>
+                                <div className="text-lg font-bold text-gray-700">+650 Partners</div>
                             </div>
                         </div>
                     </div>
@@ -153,23 +155,23 @@ const HeroSection: React.FC = () => {
                 {/* Bottom Stats */}
                 <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 animate-fade-in-up-delayed">
                     <div className="text-center p-6 bg-gray-50 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300">
-                        <div className="text-3xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">80%</div>
-                        <p className="text-gray-600 mt-2">Placement Success Rate</p>
+                        <div className="text-3xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">980+</div>
+                        <p className="text-gray-600 mt-2">Trusted Companies</p>
                     </div>
 
                     <div className="text-center p-6 bg-gray-50 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300">
-                        <div className="text-3xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">10,000+</div>
-                        <p className="text-gray-600 mt-2">Students Trained</p>
+                        <div className="text-3xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">130+</div>
+                        <p className="text-gray-600 mt-2">Partnered Colleges</p>
                     </div>
 
                     <div className="text-center p-6 bg-gray-50 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300">
-                        <div className="text-3xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">500+</div>
-                        <p className="text-gray-600 mt-2">Campus Drives Facilitated</p>
+                        <div className="text-3xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">22K+</div>
+                        <p className="text-gray-600 mt-2">Success Stories</p>
                     </div>
 
                     <div className="text-center p-6 bg-gray-50 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300">
-                        <div className="text-3xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">200+</div>
-                        <p className="text-gray-600 mt-2">Hiring Partners Onboarded</p>
+                        <div className="text-3xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">200K+</div>
+                        <p className="text-gray-600 mt-2">Impact Created</p>
                     </div>
                 </div>
             </div>

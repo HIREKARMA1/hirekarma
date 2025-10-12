@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
 
       <div className="relative z-10 content-container py-16 lg:py-20">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-16 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 mb-16">
           {/* Company Info */}
           <div className="space-y-8">
             <div className="space-y-6">
@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
                 </a>
                 
                 <a 
-                  href="https://linkedin.com/company/hirekarma" 
+                  href="https://www.linkedin.com/company/hirekarma-pvt-ltd" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center justify-center w-11 h-11 bg-white hover:bg-gradient-to-br hover:from-cyan-500 hover:to-blue-600 rounded-xl transition-all duration-300 hover:scale-110 group border border-gray-200 hover:border-transparent shadow-sm hover:shadow-lg"
@@ -81,7 +81,84 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Company */}
+          {/* Recognised & Certified By */}
+          <div className="space-y-6">
+            <div className="space-y-2">
+              <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider">Recognised & Certified By</h3>
+              <p className="text-gray-600 text-sm">Trusted partnerships and industry recognition</p>
+            </div>
+            
+            <div className="grid grid-cols-2 gap-4 lg:gap-6">
+              {/* DPIIT India */}
+              <div className="flex flex-col items-center space-y-2 group">
+                <div className="bg-white rounded-xl p-3 border border-gray-200 hover:border-cyan-300 hover:shadow-lg transition-all duration-300 w-full h-20 flex items-center justify-center group-hover:scale-105">
+                  <Image 
+                    src="/DPIIT.png" 
+                    alt="DPIIT India" 
+                    width={100} 
+                    height={60} 
+                    className="max-w-full max-h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <p className="text-gray-700 text-xs text-center font-medium leading-tight">DPIIT India</p>
+              </div>
+
+              {/* MSME India */}
+              <div className="flex flex-col items-center space-y-2 group">
+                <div className="bg-white rounded-xl p-3 border border-gray-200 hover:border-cyan-300 hover:shadow-lg transition-all duration-300 w-full h-20 flex items-center justify-center group-hover:scale-105">
+                  <Image 
+                    src="/MSME.png" 
+                    alt="MSME India" 
+                    width={100} 
+                    height={60} 
+                    className="max-w-full max-h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <p className="text-gray-700 text-xs text-center font-medium leading-tight">MSME India</p>
+              </div>
+
+              {/* Startup Odisha */}
+              <div className="flex flex-col items-center space-y-2 group">
+                <div className="bg-white rounded-xl p-3 border border-gray-200 hover:border-cyan-300 hover:shadow-lg transition-all duration-300 w-full h-20 flex items-center justify-center group-hover:scale-105">
+                  <Image 
+                    src="/StartupOdisha.png" 
+                    alt="Startup Odisha" 
+                    width={100} 
+                    height={60} 
+                    className="max-w-full max-h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <p className="text-gray-700 text-xs text-center font-medium leading-tight">Startup Odisha</p>
+              </div>
+
+              {/* ISO 9001:2015 */}
+              <div className="flex flex-col items-center space-y-2 group">
+                <div className="bg-white rounded-xl p-3 border border-gray-200 hover:border-cyan-300 hover:shadow-lg transition-all duration-300 w-full h-20 flex items-center justify-center group-hover:scale-105">
+                  <Image 
+                    src="/iso.png" 
+                    alt="ISO 9001:2015" 
+                    width={100} 
+                    height={60} 
+                    className="max-w-full max-h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <p className="text-gray-700 text-xs text-center font-medium leading-tight">ISO 9001:2015</p>
+              </div>
+
+              {/* 10,000 Startups Nasscom */}
+              <div className="flex flex-col items-center space-y-2 group col-span-2">
+                <div className="bg-white rounded-xl p-3 border border-gray-200 hover:border-cyan-300 hover:shadow-lg transition-all duration-300 w-full max-w-32 h-20 flex items-center justify-center group-hover:scale-105 mx-auto">
+                  <div className="w-full h-full bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg flex items-center justify-center group-hover:from-cyan-50 group-hover:to-blue-50 transition-all duration-300">
+                    <span className="text-gray-800 text-sm font-bold">NASSCOM</span>
+                  </div>
+                </div>
+                <p className="text-gray-700 text-xs text-center font-medium leading-tight">10,000 Startups</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Commented out navigation sections */}
+          {/* 
           <div className="space-y-5">
             <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider">Company</h3>
             <ul className="space-y-3">
@@ -112,7 +189,6 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Solutions */}
           <div className="space-y-5">
             <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider">Solutions</h3>
             <ul className="space-y-3">
@@ -143,7 +219,6 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Resources */}
           <div className="space-y-5">
             <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider">Resources</h3>
             <ul className="space-y-3">
@@ -173,86 +248,10 @@ const Footer: React.FC = () => {
               </li>
             </ul>
           </div>
+          */}
 
         </div>
 
-        {/* Certifications Section - Separate Section */}
-        <div className="border-t border-gray-200/80 pt-12 pb-12">
-          <div className="text-center space-y-8">
-            <div className="space-y-2">
-              <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider">Recognised & Certified By</h3>
-              <p className="text-gray-600 text-sm">Trusted partnerships and industry recognition</p>
-            </div>
-            
-            <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12">
-              {/* DPIIT India */}
-              <div className="flex flex-col items-center space-y-3 group">
-                <div className="bg-white rounded-2xl p-6 border border-gray-200/80 hover:border-cyan-300 hover:shadow-xl transition-all duration-300 w-32 h-24 flex items-center justify-center group-hover:scale-105">
-                  <Image 
-                    src="/DPIIT.png" 
-                    alt="DPIIT India" 
-                    width={100} 
-                    height={60} 
-                    className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
-                  />
-                </div>
-                <p className="text-gray-700 text-xs text-center font-semibold">DPIIT India</p>
-              </div>
-
-              {/* MSME India */}
-              <div className="flex flex-col items-center space-y-3 group">
-                <div className="bg-white rounded-2xl p-6 border border-gray-200/80 hover:border-cyan-300 hover:shadow-xl transition-all duration-300 w-32 h-24 flex items-center justify-center group-hover:scale-105">
-                  <Image 
-                    src="/MSME.png" 
-                    alt="MSME India" 
-                    width={100} 
-                    height={60} 
-                    className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
-                  />
-                </div>
-                <p className="text-gray-700 text-xs text-center font-semibold">MSME India</p>
-              </div>
-
-              {/* Startup Odisha */}
-              <div className="flex flex-col items-center space-y-3 group">
-                <div className="bg-white rounded-2xl p-6 border border-gray-200/80 hover:border-cyan-300 hover:shadow-xl transition-all duration-300 w-32 h-24 flex items-center justify-center group-hover:scale-105">
-                  <Image 
-                    src="/StartupOdisha.png" 
-                    alt="Startup Odisha" 
-                    width={100} 
-                    height={60} 
-                    className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
-                  />
-                </div>
-                <p className="text-gray-700 text-xs text-center font-semibold">Startup Odisha</p>
-              </div>
-
-              {/* ISO 9001:2015 */}
-              <div className="flex flex-col items-center space-y-3 group">
-                <div className="bg-white rounded-2xl p-6 border border-gray-200/80 hover:border-cyan-300 hover:shadow-xl transition-all duration-300 w-32 h-24 flex items-center justify-center group-hover:scale-105">
-                  <Image 
-                    src="/iso.png" 
-                    alt="ISO 9001:2015" 
-                    width={100} 
-                    height={60} 
-                    className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
-                  />
-                </div>
-                <p className="text-gray-700 text-xs text-center font-semibold">ISO 9001:2015</p>
-              </div>
-
-              {/* 10,000 Startups Nasscom */}
-              <div className="flex flex-col items-center space-y-3 group">
-                <div className="bg-white rounded-2xl p-6 border border-gray-200/80 hover:border-cyan-300 hover:shadow-xl transition-all duration-300 w-32 h-24 flex items-center justify-center group-hover:scale-105">
-                  <div className="w-full h-full bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg flex items-center justify-center group-hover:from-cyan-50 group-hover:to-blue-50 transition-all duration-300">
-                    <span className="text-gray-800 text-sm font-bold">NASSCOM</span>
-                  </div>
-                </div>
-                <p className="text-gray-700 text-xs text-center font-semibold">10,000 Startups</p>
-              </div>
-            </div>
-          </div>
-        </div>
 
         {/* Bottom Section */}
         <div className="border-t border-gray-200/80 pt-8">
