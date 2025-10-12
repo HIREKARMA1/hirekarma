@@ -134,7 +134,7 @@ const FAQSection: React.FC = () => {
                     </div>
 
                     {/* Additional Help Section */}
-                    <div className="mt-16 text-center">
+                    {/* <div className="mt-16 text-center">
                         <div className="bg-gradient-to-r from-cyan-50 to-blue-50 rounded-2xl p-8 max-w-4xl mx-auto">
                             <h3 className="text-2xl font-bold text-gray-900 mb-4">Still have questions?</h3>
                             <p className="text-gray-600 mb-6">
@@ -149,7 +149,7 @@ const FAQSection: React.FC = () => {
                                 </button>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </section>
         </>
