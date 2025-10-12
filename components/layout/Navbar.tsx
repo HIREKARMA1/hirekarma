@@ -57,8 +57,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
       icon: Zap,
       hasDropdown: true,
       dropdownItems: [
-        { label: 'Disha', href: 'https://disha.hirekarma.in/', icon: Target },
-        { label: 'Shaksham', href: '/products/shaksham', icon: Sparkles }
+        { label: 'Disha', href: 'https://disha.hirekarma.in/', icon: Target }
       ]
     }
   ];
