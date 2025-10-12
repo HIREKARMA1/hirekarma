@@ -95,24 +95,6 @@ const HeroSection: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* CTA Buttons */}
-                        <div className="flex flex-col sm:flex-row gap-4">
-                            <button className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                                <span className="relative z-10 flex items-center justify-center space-x-2">
-                                  <a href="https://disha.hirekarma.in/">
-                                    <span>Get Started Today</span>
-                                  </a>
-                                    <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                                    </svg>
-                                </span>
-                                <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            </button>
-
-                            <button className="px-8 py-4 border-2 border-cyan-300 text-cyan-700 font-semibold rounded-xl hover:bg-cyan-50 hover:border-cyan-400 transition-all duration-300">
-                                Learn More
-                            </button>
-                        </div>
 
                         {/* Trust Indicators */}
                         <div className="pt-8 border-t border-gray-200">
