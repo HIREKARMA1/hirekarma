@@ -5,13 +5,22 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Base styles for light and dark mode */
+body {
+  @apply bg-white text-gray-900 transition-colors duration-300;
+}
+
+.dark body {
+  @apply bg-gray-950 text-gray-100;
+}
+
 /* Custom scrollbar styling */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  @apply bg-gray-100 dark:bg-gray-900;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -136,4 +145,89 @@ html {
 .animation-delay-500 {
   animation-delay: 0.5s;
   opacity: 0;
+}
+
+/* Multiple horizontal wavy lines flowing animations */
+@keyframes wave-flow {
+  0% {
+    transform: translateX(-20%);
+  }
+  100% {
+    transform: translateX(20%);
+  }
+}
+
+@keyframes wave-flow-reverse {
+  0% {
+    transform: translateX(20%);
+  }
+  100% {
+    transform: translateX(-20%);
+  }
+}
+
+@keyframes wave-flow-delayed {
+  0% {
+    transform: translateX(-30%);
+  }
+  100% {
+    transform: translateX(30%);
+  }
+}
+
+.animate-wave-flow {
+  animation: wave-flow 15s ease-in-out infinite;
+}
+
+.animate-wave-flow-reverse {
+  animation: wave-flow-reverse 18s ease-in-out infinite;
+}
+
+.animate-wave-flow-delayed {
+  animation: wave-flow-delayed 20s ease-in-out infinite;
+}
+
+.animate-wave-flow-slow {
+  animation: wave-flow 35s ease-in-out infinite;
+}
+
+/* Testimonials scroll animation */
+@keyframes testimonials-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-testimonials-scroll {
+  animation: testimonials-scroll 30s linear infinite;
+}
+
+/* Partners scroll animations */
+@keyframes partners-scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes partners-scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-partners-scroll-left {
+  animation: partners-scroll-left 30s linear infinite;
+}
+
+.animate-partners-scroll-right {
+  animation: partners-scroll-right 30s linear infinite;
 }

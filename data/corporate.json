@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "gift",
+    "logo": "/college/gift.png"
+  },
+  {
+    "id": 2,
+    "name": "bput",
+    "logo": "/college/bput.png"
+  },
+  {
+    "id": 3,
+    "name": "Microsoft",
+    "logo": "/logos/microsoft.png"
+  },
+  {
+    "id": 4,
+    "name": "Accenture",
+    "logo": "/logos/accenture.png"
+  },
+  {
+    "id": 5,
+    "name": "TCS",
+    "logo": "/logos/tcs.png"
+  },
+  {
+    "id": 6,
+    "name": "Wipro",
+    "logo": "/logos/wipro.png"
+  },
+  {
+    "id": 7,
+    "name": "Infosys",
+    "logo": "/logos/infosys.png"
+  },
+  {
+    "id": 8,
+    "name": "TechCorp India",
+    "logo": "/logos/techcorp.png"
+  },
+  {
+    "id": 9,
+    "name": "Demo Company",
+    "logo": "/logos/demo.png"
+  },
+  {
+    "id": 10,
+    "name": "Arizona Automation",
+    "logo": "/logos/arizona.png"
+  }
+]
