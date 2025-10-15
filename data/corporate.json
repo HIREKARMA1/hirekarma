@@ -1,52 +1,54 @@
-[
-  {
-    "id": 1,
-    "name": "gift",
-    "logo": "/college/gift.png"
-  },
-  {
-    "id": 2,
-    "name": "bput",
-    "logo": "/college/bput.png"
-  },
-  {
-    "id": 3,
-    "name": "Microsoft",
-    "logo": "/logos/microsoft.png"
-  },
-  {
-    "id": 4,
-    "name": "Accenture",
-    "logo": "/logos/accenture.png"
-  },
-  {
-    "id": 5,
-    "name": "TCS",
-    "logo": "/logos/tcs.png"
-  },
-  {
-    "id": 6,
-    "name": "Wipro",
-    "logo": "/logos/wipro.png"
-  },
-  {
-    "id": 7,
-    "name": "Infosys",
-    "logo": "/logos/infosys.png"
-  },
-  {
-    "id": 8,
-    "name": "TechCorp India",
-    "logo": "/logos/techcorp.png"
-  },
-  {
-    "id": 9,
-    "name": "Demo Company",
-    "logo": "/logos/demo.png"
-  },
-  {
-    "id": 10,
-    "name": "Arizona Automation",
-    "logo": "/logos/arizona.png"
-  }
-]
+{
+  "corpo": [
+    {
+      "id": 1,
+      "name": "aryan",
+      "logo": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/college_logo/Aryan_1_-removebg-preview.png"
+    },
+    {
+      "id": 2,
+      "name": "BEC",
+      "logo": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/college_logo/BEC_1_-removebg-preview.png"
+    },
+    {
+      "id": 3,
+      "name": "CIME",
+      "logo": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/college_logo/CIME_1_-removebg-preview.png"
+    },
+    {
+      "id": 4,
+      "name": "EATM",
+      "logo": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/college_logo/EATM_logo_1_-removebg-preview.png"
+    },
+    {
+      "id": 5,
+      "name": "GECK",
+      "logo": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/college_logo/GCEKJ_1_-removebg-preview.png"
+    },
+    {
+      "id": 6,
+      "name": "GEC",
+      "logo": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/college_logo/GEC_1_-removebg-preview.png"
+    },
+    {
+      "id": 7,
+      "name": "GIET",
+      "logo": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/college_logo/GIET_baniatangi_1_-removebg-preview.png"
+    },
+    {
+      "id": 8,
+      "name": "GIET Gangapatna",
+      "logo": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/college_logo/GIET_gangapatna_1_-removebg-preview+(1).png"
+    },
+    {
+      "id": 9,
+      "name": "KIT",
+      "logo": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/college_logo/KIT_1_-removebg-preview.png"
+    },
+    {
+      "id": 10,
+      "name": "NIST",
+      "logo": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/college_logo/NISt_1_-removebg-preview.png"
+    }
+  ]
+}

@@ -408,7 +408,7 @@ const Footer: React.FC = () => {
             <div className={`text-sm text-center lg:text-right order-3 ${
               mounted && resolvedTheme === 'dark' ? 'text-gray-400' : 'text-gray-600'
             }`}>
-              Made with ❤️ in India
+              Made with ❤️ in HireKarma
             </div>
           </div>
         </div>

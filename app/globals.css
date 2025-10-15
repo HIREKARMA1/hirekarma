@@ -225,9 +225,9 @@ body {
 }
 
 .animate-partners-scroll-left {
-  animation: partners-scroll-left 30s linear infinite;
+  animation: partners-scroll-left 60s linear infinite;
 }
 
 .animate-partners-scroll-right {
-  animation: partners-scroll-right 30s linear infinite;
+  animation: partners-scroll-right 60s linear infinite;
 }

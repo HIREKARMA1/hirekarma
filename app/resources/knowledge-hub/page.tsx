@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useState } from 'react';
-import Image from 'next/image';
-import Navbar from '../../../components/layout/Navbar';
-import Footer from '../../../components/layout/Footer';
-import WavyBackground from '../../../components/layout/WavyBackground';
-import { Brain, BookOpen, FileText, TrendingUp, Users, Lightbulb, ArrowRight, Search, Filter } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
+import Image from "next/image";
+import Navbar from "../../../components/layout/Navbar";
+import Footer from "../../../components/layout/Footer";
+import WavyBackground from "../../../components/layout/WavyBackground";
+import { Brain, BookOpen, FileText, TrendingUp, Users, Lightbulb, ArrowRight, Search, Filter, Star, Calendar, Clock } from 'lucide-react';
 
 const categories = ['All', 'Recruitment', 'Skills', 'Technology', 'Career Tips', 'Industry Insights'];
 
@@ -72,221 +73,335 @@ const articles = [
   }
 ];
 
-const KnowledgeHubPage: React.FC = () => {
-    const [selectedCategory, setSelectedCategory] = useState('All');
-    const [searchQuery, setSearchQuery] = useState('');
+export default function KnowledgeHubPage() {
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme } = useTheme();
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
 
-    const filteredArticles = articles.filter(article => {
-        const matchesCategory = selectedCategory === 'All' || article.category === selectedCategory;
-        const matchesSearch = article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                            article.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
-        return matchesCategory && matchesSearch;
-    });
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
-    const featuredArticles = articles.filter(article => article.featured);
+  const filteredArticles = articles.filter(article => {
+    const matchesCategory = selectedCategory === 'All' || article.category === selectedCategory;
+    const matchesSearch = article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                        article.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
-    return (
-        <div className="min-h-screen flex flex-col bg-white">
-            <Navbar />
-            
-            <main className="flex-grow">
-                {/* Header Section */}
-                <section className="relative py-16 lg:py-24 bg-gradient-to-br from-blue-50 to-white dark:from-gray-900 dark:to-gray-800">
-                    <WavyBackground variant="primary" intensity="medium" />
-                    <div className="content-container">
-                        <div className="max-w-5xl mx-auto text-center">
-                            <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full mb-6">
-                                <Brain className="w-4 h-4" />
-                                <span className="text-sm font-semibold">Knowledge Hub</span>
-                            </div>
-                            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-blue-700 leading-tight mb-8">
-                                Learn. Grow. Succeed.
-                            </h1>
-                            <p className="text-xl sm:text-2xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
-                                Your go-to resource for insights on campus recruitment, career development, and the latest 
-                                trends in HRTech and talent acquisition.
-                            </p>
-                        </div>
+  const featuredArticles = articles.filter(article => article.featured);
+
+  return (
+    <div className={`min-h-screen flex flex-col ${
+      mounted && resolvedTheme === 'dark' 
+        ? 'bg-gray-900' 
+        : 'bg-white'
+    }`}>
+      <Navbar />
+      
+      <main className="flex-grow">
+        {/* Main Section with consistent background */}
+        <section className={`relative min-h-screen ${
+          mounted && resolvedTheme === 'dark' 
+            ? 'bg-gray-900' 
+            : 'bg-white'
+        }`}>
+          {/* Wavy Background */}
+          <WavyBackground variant="primary" intensity="strong" />
+          
+          {/* Header Section */}
+          <div className="relative content-container pt-20 pb-8">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              {/* Left Content - Header and Description */}
+              <div className="space-y-2 lg:space-y-1">
+                <div className="space-y-4">
+                  <h1 className={`text-2xl sm:text-4xl lg:text-4xl xl:text-6xl font-bold leading-tight tracking-tight ${
+                    mounted && resolvedTheme === 'dark' 
+                      ? 'text-gray-100' 
+                      : 'text-gray-900'
+                  }`}>
+                    Knowledge Hub
+                  </h1>
+                </div>
+
+                <div className="space-y-3">
+                  <p className={`text-lg sm:text-xl leading-relaxed max-w-2xl ${
+                    mounted && resolvedTheme === 'dark' 
+                      ? 'text-gray-300' 
+                      : 'text-gray-600'
+                  }`}>
+                    Your go-to resource for insights on <strong className={`${
+                      mounted && resolvedTheme === 'dark' 
+                        ? 'text-gray-200' 
+                        : 'text-gray-700'
+                    }`}>campus recruitment, career development, and HRTech trends</strong>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Search and Filter Section */}
+          <div className="relative content-container py-8">
+            <div className="max-w-7xl mx-auto">
+              <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
+                {/* Search Bar */}
+                <div className="relative w-full md:w-96">
+                  <Search className={`absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 ${
+                    mounted && resolvedTheme === 'dark' ? 'text-gray-400' : 'text-gray-400'
+                  }`} />
+                  <input
+                    type="text"
+                    placeholder="Search articles..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className={`w-full pl-12 pr-4 py-3 border rounded-xl focus:outline-none focus:ring-2 ${
+                      mounted && resolvedTheme === 'dark'
+                        ? 'bg-gray-800 border-gray-600 text-white focus:ring-blue-500'
+                        : 'border-gray-300 focus:ring-blue-500 focus:border-transparent'
+                    }`}
+                  />
+                </div>
+
+                {/* Category Filter */}
+                <div className="flex flex-wrap gap-2">
+                  {categories.map(category => (
+                    <button
+                      key={category}
+                      onClick={() => setSelectedCategory(category)}
+                      className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                        selectedCategory === category
+                          ? mounted && resolvedTheme === 'dark'
+                            ? 'bg-blue-600 text-white shadow-lg'
+                            : 'bg-blue-600 text-white shadow-lg'
+                          : mounted && resolvedTheme === 'dark'
+                            ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      }`}
+                    >
+                      {category}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Featured Articles Section */}
+          <div className="relative content-container py-8">
+            <div className="max-w-7xl mx-auto">
+              <div className="flex items-center gap-3 mb-10">
+                <Lightbulb className={`w-8 h-8 ${
+                  mounted && resolvedTheme === 'dark' ? 'text-blue-400' : 'text-blue-600'
+                }`} />
+                <h2 className={`text-3xl sm:text-4xl font-bold ${
+                  mounted && resolvedTheme === 'dark' ? 'text-gray-100' : 'text-gray-900'
+                }`}>
+                  Featured Articles
+                </h2>
+              </div>
+
+              <div className="grid lg:grid-cols-2 gap-8 mb-16">
+                {featuredArticles.map(article => (
+                  <div
+                    key={article.id}
+                    className={`rounded-xl border shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 p-6 group ${
+                      mounted && resolvedTheme === 'dark'
+                        ? 'bg-gradient-to-br from-blue-900/20 to-blue-800/10 border-blue-700/30'
+                        : 'bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200'
+                    }`}
+                  >
+                    <div className="relative mb-6">
+                      <div className={`w-full h-64 rounded-xl overflow-hidden border transition-colors duration-300 ${
+                        mounted && resolvedTheme === 'dark'
+                          ? 'border-blue-600/50 group-hover:border-blue-400/70'
+                          : 'border-blue-300/70 group-hover:border-blue-200'
+                      }`}>
+                        <Image
+                          src={article.image}
+                          alt={article.title}
+                          width={600}
+                          height={400}
+                          className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-300"
+                        />
+                      </div>
+                      <div className="absolute top-4 left-4">
+                        <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
+                          mounted && resolvedTheme === 'dark'
+                            ? 'bg-blue-600 text-white'
+                            : 'bg-blue-600 text-white'
+                        }`}>
+                          {article.category}
+                        </span>
+                      </div>
                     </div>
-                </section>
-
-                {/* Search and Filter Section */}
-                <section className="relative py-8 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
-                    <WavyBackground variant="neutral" intensity="light" />
-                    <div className="content-container">
-                        <div className="max-w-7xl mx-auto">
-                            <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
-                                {/* Search Bar */}
-                                <div className="relative w-full md:w-96">
-                                    <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                                    <input
-                                        type="text"
-                                        placeholder="Search articles..."
-                                        value={searchQuery}
-                                        onChange={(e) => setSearchQuery(e.target.value)}
-                                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                    />
-                                </div>
-
-                                {/* Category Filter */}
-                                <div className="flex flex-wrap gap-2">
-                                    {categories.map(category => (
-                                        <button
-                                            key={category}
-                                            onClick={() => setSelectedCategory(category)}
-                                            className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                                                selectedCategory === category
-                                                    ? 'bg-blue-600 text-white shadow-lg'
-                                                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                                            }`}
-                                        >
-                                            {category}
-                                        </button>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
+                    
+                    <div className={`flex items-center gap-4 text-sm mb-4 ${
+                      mounted && resolvedTheme === 'dark' ? 'text-gray-400' : 'text-gray-500'
+                    }`}>
+                      <span>{article.date}</span>
+                      <span>•</span>
+                      <span>{article.readTime}</span>
                     </div>
-                </section>
-
-                {/* Featured Articles Section */}
-                <section className="relative py-16 lg:py-20 bg-white dark:bg-gray-900">
-                    <WavyBackground variant="accent" intensity="light" />
-                    <div className="content-container">
-                        <div className="max-w-7xl mx-auto">
-                            <div className="flex items-center gap-3 mb-10">
-                                <Lightbulb className="w-8 h-8 text-blue-600" />
-                                <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">Featured Articles</h2>
-                            </div>
-
-                            <div className="grid lg:grid-cols-2 gap-8 mb-16">
-                                {featuredArticles.map(article => (
-                                    <div key={article.id} className="group cursor-pointer">
-                                        <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200">
-                                            <div className="relative h-64 overflow-hidden">
-                                                <Image
-                                                    src={article.image}
-                                                    alt={article.title}
-                                                    width={600}
-                                                    height={400}
-                                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                                                />
-                                                <div className="absolute top-4 left-4">
-                                                    <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                                                        {article.category}
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div className="p-8">
-                                                <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
-                                                    <span>{article.date}</span>
-                                                    <span>•</span>
-                                                    <span>{article.readTime}</span>
-                                                </div>
-                                                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                                                    {article.title}
-                                                </h3>
-                                                <p className="text-gray-600 leading-relaxed mb-4">
-                                                    {article.excerpt}
-                                                </p>
-                                                <div className="flex items-center gap-2 text-blue-600 font-semibold group-hover:gap-3 transition-all">
-                                                    Read More <ArrowRight className="w-5 h-5" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
+                    
+                    <h3 className={`text-2xl font-bold mb-3 group-hover:text-blue-600 transition-colors ${
+                      mounted && resolvedTheme === 'dark' ? 'text-gray-100' : 'text-gray-900'
+                    }`}>
+                      {article.title}
+                    </h3>
+                    
+                    <p className={`leading-relaxed mb-4 ${
+                      mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'
+                    }`}>
+                      {article.excerpt}
+                    </p>
+                    
+                    <div className={`flex items-center gap-2 font-semibold group-hover:gap-3 transition-all ${
+                      mounted && resolvedTheme === 'dark' ? 'text-blue-400' : 'text-blue-600'
+                    }`}>
+                      Read More <ArrowRight className="w-5 h-5" />
                     </div>
-                </section>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
 
-                {/* All Articles Grid */}
-                <section className="relative py-16 bg-gray-50 dark:bg-gray-800">
-                    <WavyBackground variant="secondary" intensity="light" />
-                    <div className="content-container">
-                        <div className="max-w-7xl mx-auto">
-                            <div className="flex items-center gap-3 mb-10">
-                                <BookOpen className="w-8 h-8 text-blue-600" />
-                                <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">All Articles</h2>
-                            </div>
+          {/* All Articles Grid */}
+          <div className="relative content-container py-20">
+            <div className="max-w-7xl mx-auto">
+              <div className="flex items-center gap-3 mb-10">
+                <BookOpen className={`w-8 h-8 ${
+                  mounted && resolvedTheme === 'dark' ? 'text-blue-400' : 'text-blue-600'
+                }`} />
+                <h2 className={`text-3xl sm:text-4xl font-bold ${
+                  mounted && resolvedTheme === 'dark' ? 'text-gray-100' : 'text-gray-900'
+                }`}>
+                  All Articles
+                </h2>
+              </div>
 
-                            {filteredArticles.length > 0 ? (
-                                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                                    {filteredArticles.map(article => (
-                                        <div key={article.id} className="group cursor-pointer">
-                                            <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 h-full border border-gray-100">
-                                                <div className="relative h-48 overflow-hidden">
-                                                    <Image
-                                                        src={article.image}
-                                                        alt={article.title}
-                                                        width={400}
-                                                        height={300}
-                                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                                                    />
-                                                    <div className="absolute top-3 right-3">
-                                                        <span className="bg-white/90 backdrop-blur-sm text-blue-600 px-3 py-1 rounded-full text-xs font-semibold">
-                                                            {article.category}
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div className="p-6">
-                                                    <div className="flex items-center gap-3 text-xs text-gray-500 mb-3">
-                                                        <span>{article.date}</span>
-                                                        <span>•</span>
-                                                        <span>{article.readTime}</span>
-                                                    </div>
-                                                    <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors line-clamp-2">
-                                                        {article.title}
-                                                    </h3>
-                                                    <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
-                                                        {article.excerpt}
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            ) : (
-                                <div className="text-center py-20">
-                                    <FileText className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                                    <p className="text-xl text-gray-500">No articles found matching your criteria.</p>
-                                </div>
-                            )}
+              {filteredArticles.length > 0 ? (
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {filteredArticles.map(article => (
+                    <div
+                      key={article.id}
+                      className={`rounded-xl border shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 p-6 text-center group ${
+                        mounted && resolvedTheme === 'dark'
+                          ? 'bg-gradient-to-br from-blue-900/20 to-blue-800/10 border-blue-700/30'
+                          : 'bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200'
+                      }`}
+                    >
+                      <div className="relative mb-6">
+                        <div className={`w-full h-48 rounded-xl overflow-hidden border transition-colors duration-300 ${
+                          mounted && resolvedTheme === 'dark'
+                            ? 'border-blue-600/50 group-hover:border-blue-400/70'
+                            : 'border-blue-300/70 group-hover:border-blue-200'
+                        }`}>
+                          <Image
+                            src={article.image}
+                            alt={article.title}
+                            width={400}
+                            height={300}
+                            className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-300"
+                          />
                         </div>
-                    </div>
-                </section>
-
-                {/* Newsletter Section */}
-                <section className="relative py-16 lg:py-24 bg-gradient-to-br from-blue-700 to-blue-900 dark:from-blue-800 dark:to-blue-950">
-                    <WavyBackground variant="primary" intensity="medium" />
-                    <div className="content-container">
-                        <div className="max-w-4xl mx-auto text-center">
-                            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-                                Stay Updated
-                            </h2>
-                            <p className="text-xl text-blue-100 mb-10">
-                                Subscribe to our newsletter for the latest insights on campus recruitment and career development
-                            </p>
-                            <div className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
-                                <input
-                                    type="email"
-                                    placeholder="Enter your email"
-                                    className="flex-1 px-6 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-white"
-                                />
-                                <button className="px-8 py-4 bg-white text-blue-700 font-bold rounded-xl hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
-                                    Subscribe
-                                </button>
-                            </div>
+                        <div className="absolute top-3 right-3">
+                          <span className={`backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold ${
+                            mounted && resolvedTheme === 'dark'
+                              ? 'bg-gray-800/90 text-blue-400'
+                              : 'bg-white/90 text-blue-600'
+                          }`}>
+                            {article.category}
+                          </span>
                         </div>
+                      </div>
+                      
+                      <div className={`flex items-center gap-3 text-xs mb-3 ${
+                        mounted && resolvedTheme === 'dark' ? 'text-gray-400' : 'text-gray-500'
+                      }`}>
+                        <span>{article.date}</span>
+                        <span>•</span>
+                        <span>{article.readTime}</span>
+                      </div>
+                      
+                      <h3 className={`text-lg font-bold mb-2 group-hover:text-blue-600 transition-colors line-clamp-2 ${
+                        mounted && resolvedTheme === 'dark' ? 'text-gray-100' : 'text-gray-900'
+                      }`}>
+                        {article.title}
+                      </h3>
+                      
+                      <p className={`text-sm leading-relaxed line-clamp-3 ${
+                        mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'
+                      }`}>
+                        {article.excerpt}
+                      </p>
                     </div>
-                </section>
-            </main>
+                  ))}
+                </div>
+              ) : (
+                <div className="text-center py-20">
+                  <FileText className={`w-16 h-16 mx-auto mb-4 ${
+                    mounted && resolvedTheme === 'dark' ? 'text-gray-600' : 'text-gray-400'
+                  }`} />
+                  <p className={`text-xl ${
+                    mounted && resolvedTheme === 'dark' ? 'text-gray-400' : 'text-gray-500'
+                  }`}>
+                    No articles found matching your criteria.
+                  </p>
+                </div>
+              )}
+            </div>
+          </div>
 
-            <Footer />
-        </div>
-    );
-};
+          {/* Newsletter Section */}
+          <div className="relative content-container py-20">
+            <div className="max-w-4xl mx-auto text-center">
+              <div className={`rounded-2xl border shadow-2xl p-12 ${
+                mounted && resolvedTheme === 'dark'
+                  ? 'bg-gradient-to-br from-blue-900/30 to-blue-800/20 border-blue-700/30'
+                  : 'bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200'
+              }`}>
+                <h2 className={`text-4xl sm:text-5xl font-bold mb-6 ${
+                  mounted && resolvedTheme === 'dark' 
+                    ? 'text-blue-400' 
+                    : 'text-blue-700'
+                }`}>
+                  Stay Updated
+                </h2>
+                <p className={`text-xl mb-10 ${
+                  mounted && resolvedTheme === 'dark' 
+                    ? 'text-gray-300' 
+                    : 'text-gray-600'
+                }`}>
+                  Subscribe to our newsletter for the latest insights on campus recruitment and career development
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    className={`flex-1 px-6 py-4 rounded-xl focus:outline-none focus:ring-2 ${
+                      mounted && resolvedTheme === 'dark'
+                        ? 'bg-gray-800 border-gray-600 text-white focus:ring-blue-500'
+                        : 'border-gray-300 focus:ring-blue-500 focus:border-transparent'
+                    }`}
+                  />
+                  <button className={`px-8 py-4 font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 ${
+                    mounted && resolvedTheme === 'dark'
+                      ? 'bg-blue-600 text-white hover:bg-blue-500'
+                      : 'bg-blue-600 text-white hover:bg-blue-500'
+                  }`}>
+                    Subscribe
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
 
-export default KnowledgeHubPage;
-
+      <Footer />
+    </div>
+  );
+}

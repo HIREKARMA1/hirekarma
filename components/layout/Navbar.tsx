@@ -26,7 +26,8 @@ import {
   TrendingUp,
   Handshake,
   Moon,
-  Sun
+  Sun,
+  Contact
 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -119,7 +120,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
 
   // Simple navigation links without dropdown
   const simpleLinks = [
-    { label: 'Partners', href: '/partners', icon: Handshake }
+    { label: 'Contect', href: '/contect', icon: Handshake }
   ];
 
   return (
