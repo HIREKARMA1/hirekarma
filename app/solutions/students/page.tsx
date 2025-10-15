@@ -54,12 +54,12 @@ const ForStudentsPage: React.FC = () => {
     );
 
     return (
-        <div className={`min-h-screen flex flex-col ${mounted && resolvedTheme === 'dark' ? 'bg-gray-900' : 'bg-white'
+        <div className={`min-h-screen flex flex-col transition-all duration-500 ${mounted && resolvedTheme === 'dark' ? 'bg-gray-900' : 'bg-white'
             }`}>
             <Navbar />
 
             <main className="flex-grow">
-                <section className={`relative ${mounted && resolvedTheme === 'dark' ? 'bg-gray-900' : 'bg-white'
+                <section className={`relative transition-all duration-500 ${mounted && resolvedTheme === 'dark' ? 'bg-gray-900' : 'bg-white'
                     }`}>
                     {/* Wavy Background */}
                     <WavyBackground variant="primary" intensity="strong" />
@@ -78,10 +78,10 @@ const ForStudentsPage: React.FC = () => {
                                 </div>
 
                                 <div className="space-y-6">
-                                    <h1 className={`text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight ${mounted && resolvedTheme === 'dark' ? 'text-gray-100' : 'text-gray-900'
+                                    <h1 className={`text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight transition-colors duration-500 ${mounted && resolvedTheme === 'dark' ? 'text-gray-100' : 'text-gray-900'
                                         }`}>
                                         Launch a Career You Love
-                                        <span className={`block mt-2 text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-medium ${mounted && resolvedTheme === 'dark' ? 'text-cyan-400' : 'text-cyan-600'
+                                        <span className={`block mt-2 text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-medium transition-colors duration-500 ${mounted && resolvedTheme === 'dark' ? 'text-cyan-400' : 'text-cyan-600'
                                             }`}>
                                             with High-Growth Companies
                                         </span>
@@ -89,14 +89,14 @@ const ForStudentsPage: React.FC = () => {
                                 </div>
 
                                 <div className="space-y-4">
-                                    <p className={`text-lg sm:text-xl leading-relaxed max-w-2xl ${mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'
+                                    <p className={`text-lg sm:text-xl leading-relaxed max-w-2xl transition-colors duration-500 ${mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'
                                         }`}>
                                         Imagine starting your career at a top company, equipped with the exact skills they need. HireKarma is your launchpad, connecting your academic knowledge to real-world success and placing you in roles where you can make a real impact from day one.
                                     </p>
                                 </div>
 
                                 <div className="flex items-center gap-4">
-                                    <button className={`px-8 py-4 font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 ${mounted && resolvedTheme === 'dark'
+                                    <button className={`px-8 py-4 font-bold rounded-xl transition-all duration-500 shadow-lg hover:shadow-xl hover:scale-105 ${mounted && resolvedTheme === 'dark'
                                         ? 'bg-blue-600 text-white hover:bg-blue-700'
                                         : 'bg-blue-600 text-white hover:bg-blue-700'
                                         }`}>
@@ -187,8 +187,8 @@ const ForStudentsPage: React.FC = () => {
                                     <div>
                                         <h2
                                             className={`text-3xl lg:text-4xl xl:text-5xl font-bold ${mounted && resolvedTheme === 'dark'
-                                                    ? 'text-gray-100'
-                                                    : 'text-gray-900'
+                                                ? 'text-gray-100'
+                                                : 'text-gray-900'
                                                 }`}
                                         >
                                             HireKarma Soluation
@@ -201,8 +201,8 @@ const ForStudentsPage: React.FC = () => {
                                         <div className="flex items-start space-x-4">
                                             <div
                                                 className={`flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-xl ${mounted && resolvedTheme === 'dark'
-                                                        ? 'bg-blue-500/20 text-blue-400'
-                                                        : 'bg-blue-100 text-blue-600'
+                                                    ? 'bg-blue-500/20 text-blue-400'
+                                                    : 'bg-blue-100 text-blue-600'
                                                     }`}
                                             >
                                                 <svg
@@ -229,16 +229,16 @@ const ForStudentsPage: React.FC = () => {
                                             <div>
                                                 <h3
                                                     className={`text-xl font-semibold ${mounted && resolvedTheme === 'dark'
-                                                            ? 'text-gray-100'
-                                                            : 'text-gray-900'
+                                                        ? 'text-gray-100'
+                                                        : 'text-gray-900'
                                                         }`}
                                                 >
                                                     Real-World Skill Training
                                                 </h3>
                                                 <p
                                                     className={`text-base ${mounted && resolvedTheme === 'dark'
-                                                            ? 'text-gray-400'
-                                                            : 'text-gray-600'
+                                                        ? 'text-gray-400'
+                                                        : 'text-gray-600'
                                                         }`}
                                                 >
                                                     Learn practical skills directly aligned with the latest industry demands through guided training and live projects.
@@ -250,8 +250,8 @@ const ForStudentsPage: React.FC = () => {
                                         <div className="flex items-start space-x-4">
                                             <div
                                                 className={`flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-xl ${mounted && resolvedTheme === 'dark'
-                                                        ? 'bg-green-500/20 text-green-400'
-                                                        : 'bg-green-100 text-green-600'
+                                                    ? 'bg-green-500/20 text-green-400'
+                                                    : 'bg-green-100 text-green-600'
                                                     }`}
                                             >
                                                 <svg
@@ -272,16 +272,16 @@ const ForStudentsPage: React.FC = () => {
                                             <div>
                                                 <h3
                                                     className={`text-xl font-semibold ${mounted && resolvedTheme === 'dark'
-                                                            ? 'text-gray-100'
-                                                            : 'text-gray-900'
+                                                        ? 'text-gray-100'
+                                                        : 'text-gray-900'
                                                         }`}
                                                 >
                                                     Direct Industry Connect
                                                 </h3>
                                                 <p
                                                     className={`text-base ${mounted && resolvedTheme === 'dark'
-                                                            ? 'text-gray-400'
-                                                            : 'text-gray-600'
+                                                        ? 'text-gray-400'
+                                                        : 'text-gray-600'
                                                         }`}
                                                 >
                                                     Gain exposure to hiring managers and top recruiters through our company partnerships and job placement drives.
@@ -293,8 +293,8 @@ const ForStudentsPage: React.FC = () => {
                                         <div className="flex items-start space-x-4">
                                             <div
                                                 className={`flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-xl ${mounted && resolvedTheme === 'dark'
-                                                        ? 'bg-yellow-500/20 text-yellow-400'
-                                                        : 'bg-yellow-100 text-yellow-600'
+                                                    ? 'bg-yellow-500/20 text-yellow-400'
+                                                    : 'bg-yellow-100 text-yellow-600'
                                                     }`}
                                             >
                                                 <svg
@@ -321,16 +321,16 @@ const ForStudentsPage: React.FC = () => {
                                             <div>
                                                 <h3
                                                     className={`text-xl font-semibold ${mounted && resolvedTheme === 'dark'
-                                                            ? 'text-gray-100'
-                                                            : 'text-gray-900'
+                                                        ? 'text-gray-100'
+                                                        : 'text-gray-900'
                                                         }`}
                                                 >
                                                     Personalized Career Mentorship
                                                 </h3>
                                                 <p
                                                     className={`text-base ${mounted && resolvedTheme === 'dark'
-                                                            ? 'text-gray-400'
-                                                            : 'text-gray-600'
+                                                        ? 'text-gray-400'
+                                                        : 'text-gray-600'
                                                         }`}
                                                 >
                                                     Receive one-on-one mentorship from industry experts to guide your career path and build your professional confidence.
@@ -342,8 +342,8 @@ const ForStudentsPage: React.FC = () => {
                                         <div className="flex items-start space-x-4">
                                             <div
                                                 className={`flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-xl ${mounted && resolvedTheme === 'dark'
-                                                        ? 'bg-red-500/20 text-red-400'
-                                                        : 'bg-red-100 text-red-600'
+                                                    ? 'bg-red-500/20 text-red-400'
+                                                    : 'bg-red-100 text-red-600'
                                                     }`}
                                             >
                                                 <svg
@@ -364,16 +364,16 @@ const ForStudentsPage: React.FC = () => {
                                             <div>
                                                 <h3
                                                     className={`text-xl font-semibold ${mounted && resolvedTheme === 'dark'
-                                                            ? 'text-gray-100'
-                                                            : 'text-gray-900'
+                                                        ? 'text-gray-100'
+                                                        : 'text-gray-900'
                                                         }`}
                                                 >
                                                     Interview & Resume Mastery
                                                 </h3>
                                                 <p
                                                     className={`text-base ${mounted && resolvedTheme === 'dark'
-                                                            ? 'text-gray-400'
-                                                            : 'text-gray-600'
+                                                        ? 'text-gray-400'
+                                                        : 'text-gray-600'
                                                         }`}
                                                 >
                                                     Master resume building, personal branding, and mock interview preparation to stand out confidently before recruiters.
@@ -396,14 +396,14 @@ const ForStudentsPage: React.FC = () => {
                                     </div>
                                     <div
                                         className={`absolute -bottom-6 -left-6 w-32 h-32 rounded-full blur-3xl ${mounted && resolvedTheme === 'dark'
-                                                ? 'bg-blue-500/30'
-                                                : 'bg-blue-200/50'
+                                            ? 'bg-blue-500/30'
+                                            : 'bg-blue-200/50'
                                             }`}
                                     ></div>
                                     <div
                                         className={`absolute -top-6 -right-6 w-40 h-40 rounded-full blur-3xl ${mounted && resolvedTheme === 'dark'
-                                                ? 'bg-cyan-500/30'
-                                                : 'bg-cyan-200/50'
+                                            ? 'bg-cyan-500/30'
+                                            : 'bg-cyan-200/50'
                                             }`}
                                     ></div>
                                 </div>

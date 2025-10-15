@@ -9,6 +9,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/api/portraits/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'hirekarma.s3.us-east-1.amazonaws.com',
+        port: '',
+        pathname: '/hirekarma_ui/**',
+      },
     ],
   },
 };

@@ -73,7 +73,7 @@ const HeroSection: React.FC = () => {
     };
 
     return (
-        <section className={`relative min-h-screen ${mounted && resolvedTheme === 'dark'
+        <section className={`relative min-h-screen transition-all duration-500 ${mounted && resolvedTheme === 'dark'
             ? 'bg-gray-900'
             : 'bg-white'
             }`}>
@@ -87,12 +87,12 @@ const HeroSection: React.FC = () => {
                     <div className="space-y-8 lg:space-y-10">
                         {/* Main Heading */}
                         <div className="space-y-6">
-                            <h1 className={`text-2xl sm:text-4xl lg:text-4xl xl:text-6xl font-bold leading-tight tracking-tight ${mounted && resolvedTheme === 'dark'
+                            <h1 className={`text-2xl sm:text-4xl lg:text-4xl xl:text-6xl font-bold leading-tight tracking-tight transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
                                 ? 'text-gray-100'
                                 : 'text-gray-900'
                                 }`}>
                                 Transforming Campus Hiring
-                                <span className={`block mt-2 text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-medium ${mounted && resolvedTheme === 'dark'
+                                <span className={`block mt-2 text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-medium transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
                                     ? 'text-cyan-400'
                                     : 'text-cyan-600'
                                     }`}>
@@ -103,7 +103,7 @@ const HeroSection: React.FC = () => {
 
                         {/* Paragraph */}
                         <div className="space-y-4">
-                            <p className={`text-lg sm:text-xl leading-relaxed max-w-2xl ${mounted && resolvedTheme === 'dark'
+                            <p className={`text-lg sm:text-xl leading-relaxed max-w-2xl transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
                                 ? 'text-gray-300'
                                 : 'text-gray-600'
                                 }`}>
@@ -235,7 +235,7 @@ const HeroSection: React.FC = () => {
                         {/* Statistics Grid */}
                         <div className="grid grid-cols-2 gap-4 lg:gap-6 max-w-lg">
                             {/* Row 1 */}
-                            <div className={`p-4 rounded-xl border transition-all duration-300 hover:scale-105 ${mounted && resolvedTheme === 'dark'
+                            <div className={`p-4 rounded-xl border transition-all duration-500 hover:scale-105 ${mounted && resolvedTheme === 'dark'
                                 ? 'bg-gradient-to-br from-blue-900/20 to-blue-800/10 border-blue-700/30 hover:border-blue-600/50'
                                 : 'bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200 hover:border-blue-300'
                                 }`}>
@@ -255,7 +255,7 @@ const HeroSection: React.FC = () => {
                                 </div>
                             </div>
 
-                            <div className={`p-4 rounded-xl border transition-all duration-300 hover:scale-105 ${mounted && resolvedTheme === 'dark'
+                            <div className={`p-4 rounded-xl border transition-all duration-500 hover:scale-105 ${mounted && resolvedTheme === 'dark'
                                 ? 'bg-gradient-to-br from-purple-900/20 to-purple-800/10 border-purple-700/30 hover:border-purple-600/50'
                                 : 'bg-gradient-to-br from-purple-50 to-purple-100/50 border-purple-200 hover:border-purple-300'
                                 }`}>
@@ -276,7 +276,7 @@ const HeroSection: React.FC = () => {
                             </div>
 
                             {/* Row 2 */}
-                            <div className={`p-4 rounded-xl border transition-all duration-300 hover:scale-105 ${mounted && resolvedTheme === 'dark'
+                            <div className={`p-4 rounded-xl border transition-all duration-500 hover:scale-105 ${mounted && resolvedTheme === 'dark'
                                 ? 'bg-gradient-to-br from-orange-900/20 to-orange-800/10 border-orange-700/30 hover:border-orange-600/50'
                                 : 'bg-gradient-to-br from-orange-50 to-orange-100/50 border-orange-200 hover:border-orange-300'
                                 }`}>
@@ -296,7 +296,7 @@ const HeroSection: React.FC = () => {
                                 </div>
                             </div>
 
-                            <div className={`p-4 rounded-xl border transition-all duration-300 hover:scale-105 ${mounted && resolvedTheme === 'dark'
+                            <div className={`p-4 rounded-xl border transition-all duration-500 hover:scale-105 ${mounted && resolvedTheme === 'dark'
                                 ? 'bg-gradient-to-br from-emerald-900/20 to-emerald-800/10 border-emerald-700/30 hover:border-emerald-600/50'
                                 : 'bg-gradient-to-br from-emerald-50 to-emerald-100/50 border-emerald-200 hover:border-emerald-300'
                                 }`}>
@@ -611,7 +611,7 @@ const HeroSection: React.FC = () => {
                         {/* First Set of Cards */}
                         {testimonialsData.testimonials.map((testimonial, index) => (
                             <div key={`first-${index}`} className="flex-shrink-0 w-96 mx-4">
-                                <div className={`p-6 rounded-2xl border transition-all duration-300 hover:scale-105 hover:shadow-xl h-full ${mounted && resolvedTheme === 'dark'
+                                <div className={`p-6 rounded-2xl border transition-all duration-500 hover:scale-105 hover:shadow-xl h-full ${mounted && resolvedTheme === 'dark'
                                     ? 'bg-gradient-to-br from-gray-800 to-gray-900 border-gray-700'
                                     : 'bg-gradient-to-br from-white to-gray-50 border-gray-200'
                                     }`}>
@@ -710,7 +710,7 @@ const HeroSection: React.FC = () => {
                         },
                     ].map((faq, index) => (
                         <div key={index} className="mb-4 w-full">
-                            <div className={`p-6 rounded-xl border transition-all duration-300 hover:shadow-lg w-full ${mounted && resolvedTheme === 'dark'
+                            <div className={`p-6 rounded-xl border transition-all duration-500 hover:shadow-lg w-full ${mounted && resolvedTheme === 'dark'
                                 ? 'bg-gradient-to-br from-gray-800 to-gray-900 border-gray-700'
                                 : 'bg-gradient-to-br from-white to-gray-50 border-gray-200'
                                 }`}>
@@ -742,7 +742,7 @@ const HeroSection: React.FC = () => {
                                         </svg>
                                     </button>
                                 </div>
-                                <div className={`overflow-hidden transition-all duration-300 ease-in-out ${openFAQ === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                                <div className={`overflow-hidden transition-all duration-500 ease-in-out ${openFAQ === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                                     }`}>
                                     <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
                                         <p className={`text-sm leading-relaxed ${mounted && resolvedTheme === 'dark'
@@ -794,7 +794,7 @@ const HeroSection: React.FC = () => {
                                 {/* First Set of Company Partners */}
                                 {University.corpo.map((company, index) => (
                                     <div key={`company-first-${index}`} className="flex-shrink-0 mx-4">
-                                        <div className={`w-60 h-28 rounded-lg border-2 flex items-center justify-center transition-all duration-300 hover:scale-105 ${mounted && resolvedTheme === 'dark'
+                                        <div className={`w-60 h-28 rounded-lg border-2 flex items-center justify-center transition-all duration-500 hover:scale-105 ${mounted && resolvedTheme === 'dark'
                                             ? 'bg-gradient-to-br from-blue-900/20 to-blue-800/10 border-blue-700/30'
                                             : 'bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200'
                                             }`}>
@@ -838,7 +838,7 @@ const HeroSection: React.FC = () => {
                                 {/* First Set of Corporate Partners */}
                                 {Compine.conpanies.map((corporate, index) => (
                                     <div key={`corporate-first-${index}`} className="flex-shrink-0 mx-4">
-                                        <div className={`w-60 h-28 rounded-lg border-2 flex items-center justify-center transition-all duration-300 hover:scale-105 ${mounted && resolvedTheme === 'dark'
+                                        <div className={`w-60 h-28 rounded-lg border-2 flex items-center justify-center transition-all duration-500 hover:scale-105 ${mounted && resolvedTheme === 'dark'
                                             ? 'bg-gradient-to-br from-purple-900/20 to-purple-800/10 border-purple-700/30'
                                             : 'bg-gradient-to-br from-purple-50 to-purple-100/50 border-purple-200'
                                             }`}>
@@ -899,7 +899,7 @@ const HeroSection: React.FC = () => {
                         {certificationsData.slice(0, 4).map((cert, index) => (
                             <div
                                 key={index}
-                                className={`group relative p-4 rounded-lg border-2 transition-all duration-300 h-32 ${mounted && resolvedTheme === 'dark'
+                                className={`group relative p-4 rounded-lg border-2 transition-all duration-500 h-32 ${mounted && resolvedTheme === 'dark'
                                     ? index === 0
                                         ? 'bg-blue-900/20 border-blue-700/40'
                                         : index === 1
@@ -993,7 +993,7 @@ const HeroSection: React.FC = () => {
                         {certificationsData.slice(4, 5).map((cert, index) => (
                             <div
                                 key={index + 4}
-                                className={`group relative p-4 rounded-lg border-2 transition-all duration-300 h-32 ${mounted && resolvedTheme === 'dark'
+                                className={`group relative p-4 rounded-lg border-2 transition-all duration-500 h-32 ${mounted && resolvedTheme === 'dark'
                                     ? 'bg-red-900/20 border-red-700/40'
                                     : 'bg-red-50/50 border-red-200/60'
                                     }`}
