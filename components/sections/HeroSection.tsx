@@ -139,28 +139,28 @@ const HeroSection: React.FC = () => {
                             />
                             {/* Fallback content for browsers that don't support images (rare, but kept for structure) */}
                             <div className={`absolute inset-0 flex items-center justify-center rounded-2xl hidden ${mounted && resolvedTheme === 'dark'
-                                    ? 'bg-gray-900/50 backdrop-blur-sm'
-                                    : 'bg-white/50 backdrop-blur-sm'
+                                ? 'bg-gray-900/50 backdrop-blur-sm'
+                                : 'bg-white/50 backdrop-blur-sm'
                                 }`}>
                                 <div className="text-center space-y-4">
                                     <div className={`w-16 h-16 mx-auto rounded-full flex items-center justify-center ${mounted && resolvedTheme === 'dark'
-                                            ? 'bg-gray-700/80'
-                                            : 'bg-gray-200/80'
+                                        ? 'bg-gray-700/80'
+                                        : 'bg-gray-200/80'
                                         }`}>
                                         <svg className={`w-8 h-8 ${mounted && resolvedTheme === 'dark'
-                                                ? 'text-gray-300'
-                                                : 'text-gray-500'
+                                            ? 'text-gray-300'
+                                            : 'text-gray-500'
                                             }`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                                         </svg>
                                     </div>
                                     <p className={`font-medium ${mounted && resolvedTheme === 'dark'
-                                            ? 'text-gray-200'
-                                            : 'text-gray-600'
+                                        ? 'text-gray-200'
+                                        : 'text-gray-600'
                                         }`}>Animation not supported</p>
                                     <p className={`text-sm ${mounted && resolvedTheme === 'dark'
-                                            ? 'text-gray-300'
-                                            : 'text-gray-500'
+                                        ? 'text-gray-300'
+                                        : 'text-gray-500'
                                         }`}>Your browser doesn't support image playback</p>
                                 </div>
                             </div>
@@ -988,13 +988,14 @@ const HeroSection: React.FC = () => {
                     </div>
 
                     {/* Second Row - Centered single certification */}
-                    <div className="flex justify-center">
+                    <div className="grid grid-cols-3 gap-8">
+                        <div></div> {/* Empty column for centering */}
                         {certificationsData.slice(4, 5).map((cert, index) => (
                             <div
                                 key={index + 4}
-                                className={`group relative p-4 rounded-lg border-2 transition-all duration-300 hover:scale-105 hover:shadow-lg w-full max-w-md h-32 ${mounted && resolvedTheme === 'dark'
-                                    ? 'bg-red-900/20 border-red-700/40 hover:border-red-500/60'
-                                    : 'bg-red-50/50 border-red-200/60 hover:border-red-400/70'
+                                className={`group relative p-4 rounded-lg border-2 transition-all duration-300 h-32 ${mounted && resolvedTheme === 'dark'
+                                    ? 'bg-red-900/20 border-red-700/40'
+                                    : 'bg-red-50/50 border-red-200/60'
                                     }`}
                             >
                                 {/* Category Badge */}
@@ -1061,6 +1062,7 @@ const HeroSection: React.FC = () => {
                                 <div className={`absolute inset-0 rounded-xl bg-gradient-to-br from-emerald-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
                             </div>
                         ))}
+                        <div></div> {/* Empty column for centering */}
                     </div>
                 </div>
 
