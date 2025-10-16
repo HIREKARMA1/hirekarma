@@ -5,23 +5,6 @@ import {
   Menu,
   X,
   ArrowRight,
-  Users,
-  BookOpen,
-  Zap,
-  Target,
-  Calendar,
-  Heart,
-  GraduationCap,
-  Briefcase,
-  School,
-  Award,
-  Library,
-  FileText,
-  Compass,
-  UsersRound,
-  Brain,
-  TrendingUp,
-  Handshake,
   Moon,
   Sun
 } from 'lucide-react';
@@ -31,6 +14,24 @@ import { useTheme } from 'next-themes';
 
 interface NavbarProps {
   className?: string;
+}
+
+interface NavigationItem {
+  label: string;
+  href: string;
+  icon: React.ComponentType<{ className?: string }>;
+  hasDropdown: boolean;
+  dropdownItems: Array<{
+    label: string;
+    href: string;
+    icon: React.ComponentType<{ className?: string }>;
+  }>;
+}
+
+interface SimpleLink {
+  label: string;
+  href: string;
+  icon: React.ComponentType<{ className?: string }>;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
@@ -69,7 +70,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
   };
 
   // Navigation data with dropdowns
-  const navigationItems = [
+  const navigationItems: NavigationItem[] = [
     // {
     //   label: 'About us',
     //   href: '/about-us',
@@ -114,11 +115,11 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
     //     { label: 'Knowledge Hub', href: '/resources/knowledge-hub', icon: Brain },
     //     { label: 'Events', href: '/resources/events', icon: Calendar },
     //     { label: 'Case Studies', href: '/resources/case-studies', icon: FileText }
-        
+
     //   ]
     // }
   ];
-  const simpleLinks = [
+  const simpleLinks: SimpleLink[] = [
     // { label: 'Contact', href: '/contect', icon: Handshake }
   ];
 

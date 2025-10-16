@@ -6,7 +6,7 @@ import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveCo
 
 // Example data for the chart
 const impactData = [
-    { year: '2023', value: 0 },
+    // { year: '2023', value: 0 },
     { year: '2024', value: 8000 },
     { year: '2025', value: 14000 },
     { year: '2026', value: "Comming Soon" },
