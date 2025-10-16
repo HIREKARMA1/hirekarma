@@ -70,58 +70,56 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
 
   // Navigation data with dropdowns
   const navigationItems = [
-    {
-      label: 'About us',
-      href: '/about-us',
-      icon: Users,
-      hasDropdown: true,
-      dropdownItems: [
-        { label: 'Our Story', href: '/about-us/our-story', icon: BookOpen },
-        { label: 'Mission & Value', href: '/about-us/mission-value', icon: Heart },
-        { label: 'People', href: '/about-us/people', icon: UsersRound }
-      ]
-    },
-    {
-      label: 'Products',
-      href: '/products',
-      icon: Zap,
-      hasDropdown: true,
-      dropdownItems: [
-        { label: 'Disha', href: 'https://disha.hirekarma.in/', icon: Compass },
-        { label: 'Sangha', href: '/products/sangha', icon: UsersRound },
-        { label: 'Sadhana', href: '/products/sadhana', icon: Brain },
-        { label: 'Saksham', href: '/products/saksham', icon: TrendingUp }
-      ]
-    },
-    {
-      label: 'Solutions',
-      href: '/solutions',
-      icon: Target,
-      hasDropdown: true,
-      dropdownItems: [
-        { label: 'For Students', href: '/solutions/students', icon: GraduationCap },
-        { label: 'For Corporate', href: '/solutions/corporate', icon: Briefcase },
-        { label: 'For University', href: '/solutions/university', icon: School },
-        { label: 'For Skill Development Organization', href: '/solutions/skill-development', icon: Award }
-      ]
-    },
-    {
-      label: 'Resources',
-      href: '/resources',
-      icon: Library,
-      hasDropdown: true,
-      dropdownItems: [
-        { label: 'Knowledge Hub', href: '/resources/knowledge-hub', icon: Brain },
-        { label: 'Events', href: '/resources/events', icon: Calendar },
-        { label: 'Case Studies', href: '/resources/case-studies', icon: FileText }
-        // FAQ and Association FAQ removed
-      ]
-    }
+    // {
+    //   label: 'About us',
+    //   href: '/about-us',
+    //   icon: Users,
+    //   hasDropdown: true,
+    //   dropdownItems: [
+    //     { label: 'Our Story', href: '/about-us/our-story', icon: BookOpen },
+    //     { label: 'Mission & Value', href: '/about-us/mission-value', icon: Heart },
+    //     { label: 'People', href: '/about-us/people', icon: UsersRound }
+    //   ]
+    // },
+    // {
+    //   label: 'Products',
+    //   href: '/products',
+    //   icon: Zap,
+    //   hasDropdown: true,
+    //   dropdownItems: [
+    //     { label: 'Disha', href: 'https://disha.hirekarma.in/', icon: Compass },
+    //     { label: 'Sangha', href: '/products/sangha', icon: UsersRound },
+    //     { label: 'Sadhana', href: '/products/sadhana', icon: Brain },
+    //     { label: 'Saksham', href: '/products/saksham', icon: TrendingUp }
+    //   ]
+    // },
+    // {
+    //   label: 'Solutions',
+    //   href: '/solutions',
+    //   icon: Target,
+    //   hasDropdown: true,
+    //   dropdownItems: [
+    //     { label: 'For Students', href: '/solutions/students', icon: GraduationCap },
+    //     { label: 'For Corporate', href: '/solutions/corporate', icon: Briefcase },
+    //     { label: 'For University', href: '/solutions/university', icon: School },
+    //     { label: 'For Skill Development Organization', href: '/solutions/skill-development', icon: Award }
+    //   ]
+    // },
+    // {
+    //   label: 'Resources',
+    //   href: '/resources',
+    //   icon: Library,
+    //   hasDropdown: true,
+    //   dropdownItems: [
+    //     { label: 'Knowledge Hub', href: '/resources/knowledge-hub', icon: Brain },
+    //     { label: 'Events', href: '/resources/events', icon: Calendar },
+    //     { label: 'Case Studies', href: '/resources/case-studies', icon: FileText }
+        
+    //   ]
+    // }
   ];
-
-  // Simple navigation links without dropdown
   const simpleLinks = [
-    { label: 'Contact', href: '/contect', icon: Handshake }
+    // { label: 'Contact', href: '/contect', icon: Handshake }
   ];
 
   return (
