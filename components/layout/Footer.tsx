@@ -376,7 +376,7 @@ const Footer: React.FC = () => {
             <div className={`text-sm text-center lg:text-left order-2 lg:order-1 ${
               mounted && resolvedTheme === 'dark' ? 'text-gray-400' : 'text-gray-600'
             }`}>
-              © {new Date().getFullYear()} HireKarma. All rights reserved.
+              Copyright © {new Date().getFullYear()} HireKarma Private Limited. All Rights Reserved.
             </div>
             
             <div className="flex flex-wrap items-center justify-center gap-3 text-sm order-1 lg:order-2">
@@ -408,7 +408,13 @@ const Footer: React.FC = () => {
             <div className={`text-sm text-center lg:text-right order-3 ${
               mounted && resolvedTheme === 'dark' ? 'text-gray-400' : 'text-gray-600'
             }`}>
-              Made with ❤️ in HireKarma
+              Powered by <a href="https://www.linkedin.com/company/hirekarma-pvt-ltd/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className={`transition-colors duration-200 ${
+                mounted && resolvedTheme === 'dark' 
+                  ? 'text-gray-400 hover:text-emerald-400' 
+                  : 'text-gray-600 hover:text-emerald-600'
+              }`}>
+                Hirekarma Pvt Ltd
+              </a>
             </div>
           </div>
         </div>
