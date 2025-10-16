@@ -108,7 +108,7 @@ const CertificationsSection: React.FC = () => {
                         return (
                             <div
                                 key={index}
-                                className={`group relative p-4 sm:p-5 md:p-6 rounded-xl border-2 transition-all duration-500 hover:scale-105 h-auto min-h-[120px] sm:min-h-[130px] md:min-h-[140px] ${colors.bg} ${colors.border}`}
+                                className={`group relative p-4 sm:p-5 md:p-6 rounded-xl border-2 transition-all duration-500 hover:brightness-110 h-auto min-h-[120px] sm:min-h-[130px] md:min-h-[140px] ${colors.bg} ${colors.border}`}
                             >
                                 {/* Category Badge */}
                                 <div className={`absolute -top-2 sm:-top-2.5 left-3 px-3 py-1 rounded-full text-xs font-semibold ${colors.badge}`}>
@@ -146,14 +146,14 @@ const CertificationsSection: React.FC = () => {
                                     {/* Content */}
                                     <div className="flex-1 min-w-0">
                                         <h3 className={`text-sm sm:text-base font-bold mb-1 text-left transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
-                                                ? 'text-gray-100'
-                                                : 'text-gray-900'
+                                            ? 'text-gray-100'
+                                            : 'text-gray-900'
                                             }`}>
                                             {cert.name}
                                         </h3>
                                         <p className={`text-xs sm:text-sm leading-tight text-left transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
-                                                ? 'text-gray-400'
-                                                : 'text-gray-600'
+                                            ? 'text-gray-400'
+                                            : 'text-gray-600'
                                             }`}>
                                             {cert.description}
                                         </p>
@@ -176,7 +176,7 @@ const CertificationsSection: React.FC = () => {
                             return (
                                 <div
                                     key={index + 4}
-                                    className={`group relative p-4 sm:p-5 md:p-6 rounded-xl border-2 transition-all duration-500 hover:scale-105 h-auto min-h-[120px] sm:min-h-[130px] md:min-h-[140px] ${colors.bg} ${colors.border}`}
+                                    className={`group relative p-4 sm:p-5 md:p-6 rounded-xl border-2 transition-all duration-500 hover:brightness-110 h-auto min-h-[120px] sm:min-h-[130px] md:min-h-[140px] ${colors.bg} ${colors.border}`}
                                 >
                                     {/* Category Badge */}
                                     <div className={`absolute -top-2 sm:-top-2.5 left-3 px-3 py-1 rounded-full text-xs font-semibold ${colors.badge}`}>
@@ -214,14 +214,14 @@ const CertificationsSection: React.FC = () => {
                                         {/* Content */}
                                         <div className="flex-1 min-w-0">
                                             <h3 className={`text-sm sm:text-base font-bold mb-1 text-left transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
-                                                    ? 'text-gray-100'
-                                                    : 'text-gray-900'
+                                                ? 'text-gray-100'
+                                                : 'text-gray-900'
                                                 }`}>
                                                 {cert.name}
                                             </h3>
                                             <p className={`text-xs sm:text-sm leading-tight text-left transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
-                                                    ? 'text-gray-400'
-                                                    : 'text-gray-600'
+                                                ? 'text-gray-400'
+                                                : 'text-gray-600'
                                                 }`}>
                                                 {cert.description}
                                             </p>
