@@ -1,0 +1,55 @@
+{
+  "conpanies":[
+  {
+    "id": 1,
+    "name": "Arizona Automation",
+    "logo": "/company/arizona.png"
+  },
+  {
+    "id": 2,
+    "name": "acuity_1",
+    "logo": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/company_logo/acuity_1_-removebg-preview.png"
+  },
+  {
+    "id": 3,
+    "name": "Actowiz_Solutions_1",
+    "logo": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/company_logo/Actowiz_Solutions_1_-removebg-preview.png"
+  },
+  {
+    "id": 4,
+    "name": "adhoc_software",
+  "logo":"https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/company_logo/adhoc_software_1_-removebg-preview.png"  
+  },
+  {
+    "id": 5,
+    "name": "ambetronic_1",
+    "logo": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/company_logo/ambetronic_1_-removebg-preview.png"
+  },
+  {
+    "id": 6,
+    "name": "aristrocard",
+    "logo": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/company_logo/aristrocart_1_-removebg-preview.png"
+  },
+  {
+    "id": 7,
+    "name": "cloude certitude",
+    "logo": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/company_logo/CLOUD_CERTITUDE_1_-removebg-preview.png"
+  },
+  {
+    "id": 8,
+    "name": "cmexpertise_infotech",
+    "logo": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/company_logo/cmexpertise_infotech_1_-removebg-preview.png"
+  },
+  {
+    "id": 9,
+    "name": "Cognizant_logo",
+    "logo": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/company_logo/Cognizant_logo_1_-removebg-preview.png"
+  },
+  {
+    "id": 10,
+    "name": "cordoidhub_1",
+    "logo": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/company_logo/cordoidhub_1_-removebg-preview.png"
+  }
+]
+
+}
