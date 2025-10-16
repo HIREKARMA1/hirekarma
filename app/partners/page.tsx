@@ -1,80 +1,79 @@
 "use client";
 
 import React from 'react';
-import Image from 'next/image';
 import Navbar from '../../components/layout/Navbar';
 import Footer from '../../components/layout/Footer';
 import WavyBackground from '../../components/layout/WavyBackground';
-import { GraduationCap, Briefcase, Users, TrendingUp, Award, Handshake } from 'lucide-react';
+import { GraduationCap, Briefcase, Award, Handshake } from 'lucide-react';
 
 // College Partners Data
 const collegePartners = [
-  {
-    name: "AISECT",
-    description: "All India Society for Electronics & Computer Technology - India's largest education and skill development network",
-    logo: "/logo.png" // Replace with actual logo
-  },
-  {
-    name: "College of IT and Management Education (CIME)",
-    description: "Premier institution in Bhubaneswar delivering quality technical and management education",
-    logo: "/logo.png"
-  },
-  {
-    name: "Orissa University of Agriculture and Technology",
-    description: "Leading agricultural and technology university fostering innovation and research",
-    logo: "/logo.png"
-  },
-  {
-    name: "Institute of Management & Information Technology",
-    description: "Cuttack's premier institute for management and IT excellence",
-    logo: "/logo.png"
-  },
-  {
-    name: "GIET Ghangapatna",
-    description: "Gandhi Institute of Engineering and Technology - Excellence in technical education",
-    logo: "/logo.png"
-  },
-  {
-    name: "Eastern Academy of Technology and Management",
-    description: "Bhubaneswar's leading institution for technology and management studies",
-    logo: "/logo.png"
-  }
+    {
+        name: "AISECT",
+        description: "All India Society for Electronics & Computer Technology - India's largest education and skill development network",
+        logo: "/logo.png" // Replace with actual logo
+    },
+    {
+        name: "College of IT and Management Education (CIME)",
+        description: "Premier institution in Bhubaneswar delivering quality technical and management education",
+        logo: "/logo.png"
+    },
+    {
+        name: "Orissa University of Agriculture and Technology",
+        description: "Leading agricultural and technology university fostering innovation and research",
+        logo: "/logo.png"
+    },
+    {
+        name: "Institute of Management & Information Technology",
+        description: "Cuttack's premier institute for management and IT excellence",
+        logo: "/logo.png"
+    },
+    {
+        name: "GIET Ghangapatna",
+        description: "Gandhi Institute of Engineering and Technology - Excellence in technical education",
+        logo: "/logo.png"
+    },
+    {
+        name: "Eastern Academy of Technology and Management",
+        description: "Bhubaneswar's leading institution for technology and management studies",
+        logo: "/logo.png"
+    }
 ];
 
 // Corporate Partners Data
 const corporatePartners = [
-  {
-    name: "Quality Austria Central Asia Pvt. Ltd.",
-    description: "International quality management and certification leader partnering for campus placements",
-    logo: "/logo.png"
-  },
-  {
-    name: "OLA Krutrim",
-    description: "AI-powered innovation leader conducting campus drives across Odisha",
-    logo: "/logo.png"
-  },
-  {
-    name: "Leading MNCs",
-    description: "National and global corporations hiring pre-vetted talent through our platform",
-    logo: "/logo.png"
-  },
-  {
-    name: "Tech Startups",
-    description: "Emerging technology companies building teams with skilled graduates",
-    logo: "/logo.png"
-  },
-  {
-    name: "Fortune 500 Companies",
-    description: "Industry leaders leveraging our AI-powered recruitment solutions",
-    logo: "/logo.png"
-  }
+    {
+        name: "Quality Austria Central Asia Pvt. Ltd.",
+        description: "International quality management and certification leader partnering for campus placements",
+        logo: "/logo.png"
+    },
+    {
+        name: "OLA Krutrim",
+        description: "AI-powered innovation leader conducting campus drives across Odisha",
+        logo: "/logo.png"
+    },
+    {
+        name: "Leading MNCs",
+        description: "National and global corporations hiring pre-vetted talent through our platform",
+        logo: "/logo.png"
+    },
+    {
+        name: "Tech Startups",
+        description: "Emerging technology companies building teams with skilled graduates",
+        logo: "/logo.png"
+    },
+    {
+        name: "Fortune 500 Companies",
+        description: "Industry leaders leveraging our AI-powered recruitment solutions",
+        logo: "/logo.png"
+    }
 ];
 
 const PartnersPage: React.FC = () => {
     return (
         <div className="min-h-screen flex flex-col bg-white">
             <Navbar />
-            
+
             <main className="flex-grow">
                 {/* Header Section */}
                 <section className="relative py-16 lg:py-24 bg-gradient-to-br from-blue-50 to-white dark:from-gray-900 dark:to-gray-800">
@@ -89,11 +88,11 @@ const PartnersPage: React.FC = () => {
                                 Building Success Together
                             </h1>
                             <p className="text-xl sm:text-2xl text-gray-600 leading-relaxed max-w-4xl mx-auto mb-6">
-                                HireKarma bridges academia and industry, delivering measurable results and fostering 
+                                HireKarma bridges academia and industry, delivering measurable results and fostering
                                 collaborative success for all stakeholders in the talent ecosystem.
                             </p>
                             <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                                Trusted by over 200+ educational institutions and leading corporates across India to 
+                                Trusted by over 200+ educational institutions and leading corporates across India to
                                 transform campus recruitment and early-career hiring.
                             </p>
                         </div>
@@ -137,12 +136,12 @@ const PartnersPage: React.FC = () => {
                                     Empowering Campuses. Accelerating Careers.
                                 </h2>
                                 <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto mb-4">
-                                    HireKarma for Colleges is more than a tech platform—it's a strategic ally for educational 
+                                    HireKarma for Colleges is more than a tech platform—it&apos;s a strategic ally for educational
                                     institutions committed to transforming placement outcomes and student success.
                                 </p>
                                 <p className="text-lg text-gray-600 leading-relaxed max-w-4xl mx-auto">
-                                    Partner colleges across India trust us to automate training and placement (T&P) workflows, 
-                                    connect with top recruiters, and equip students with in-demand skills through data-driven, 
+                                    Partner colleges across India trust us to automate training and placement (T&P) workflows,
+                                    connect with top recruiters, and equip students with in-demand skills through data-driven,
                                     AI-powered modules.
                                 </p>
                             </div>
@@ -212,7 +211,7 @@ const PartnersPage: React.FC = () => {
                                     Corporate partners choose HireKarma to unlock efficient, fair, and scalable early-career hiring.
                                 </p>
                                 <p className="text-lg text-gray-600 leading-relaxed max-w-4xl mx-auto">
-                                    Tap into a curated pipeline of job-ready graduates and skilled interns from top colleges, 
+                                    Tap into a curated pipeline of job-ready graduates and skilled interns from top colleges,
                                     streamline campus recruitment cycles, and make hiring decisions powered by real talent data—not just resumes.
                                 </p>
                             </div>
@@ -275,14 +274,14 @@ const PartnersPage: React.FC = () => {
                                 Our Mission
                             </h2>
                             <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                                Make every campus a launchpad for career impact. Join leading universities and institutes 
-                                who rely on HireKarma to empower faculty, raise placement rates, and prepare students for 
+                                Make every campus a launchpad for career impact. Join leading universities and institutes
+                                who rely on HireKarma to empower faculty, raise placement rates, and prepare students for
                                 the future of work.
                             </p>
                             <p className="text-lg text-gray-600 leading-relaxed">
-                                HireKarma helps companies build smarter teams, achieve hiring targets, and create impact 
-                                where it matters. Join our network of forward-thinking employers who shape the careers of 
-                                India's youth and drive business growth through data-driven talent acquisition.
+                                HireKarma helps companies build smarter teams, achieve hiring targets, and create impact
+                                where it matters. Join our network of forward-thinking employers who shape the careers of
+                                India&apos;s youth and drive business growth through data-driven talent acquisition.
                             </p>
                         </div>
                     </div>

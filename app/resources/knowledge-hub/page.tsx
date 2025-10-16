@@ -7,7 +7,7 @@ import Navbar from "../../../components/layout/Navbar";
 import Footer from "../../../components/layout/Footer";
 import WavyBackground from "../../../components/layout/WavyBackground";
 import KnowledgeHubHeader from "../../../components/resources/KnowledgeHubHeader";
-import { Brain, BookOpen, FileText, TrendingUp, Users, Lightbulb, ArrowRight, Search, Filter, Star, Calendar, Clock } from 'lucide-react';
+import { BookOpen, FileText, Lightbulb, ArrowRight, Search } from 'lucide-react';
 
 const categories = ['All', 'Recruitment', 'Skills', 'Technology', 'Career Tips', 'Industry Insights'];
 
