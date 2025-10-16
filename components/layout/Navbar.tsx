@@ -5,7 +5,6 @@ import {
   Menu,
   X,
   ArrowRight,
-  Home,
   Users,
   BookOpen,
   Zap,
@@ -141,7 +140,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
 
             {/* Logo Section - Left Aligned */}
             <div className="flex items-center flex-shrink-0">
-              <div className="relative">
+              <Link href="/" className="relative">
                 <Image
                   src={mounted && resolvedTheme === 'dark'
                     ? "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/HKlogowhite.png"
@@ -154,7 +153,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                   priority
                 />
                 <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg opacity-0 hover:opacity-20 transition-opacity duration-300 blur-sm"></div>
-              </div>
+              </Link>
             </div>
 
             {/* Desktop Navigation - Right Aligned */}
@@ -177,17 +176,6 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                     )}
                   </button>
                 )}
-                {/* Home Link */}
-                <Link
-                  href="/"
-                  className={`flex items-center space-x-2 font-medium transition-all duration-300 py-2 px-4 rounded-lg ${mounted && resolvedTheme === 'dark'
-                    ? 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-950'
-                    : 'text-gray-700 hover:text-cyan-600 hover:bg-cyan-50'
-                    }`}
-                >
-                  <Home className="w-4 h-4 flex-shrink-0" />
-                  <span className="whitespace-nowrap">Home</span>
-                </Link>
 
                 {/* Products Dropdown */}
                 {navigationItems.map((item) => {
@@ -351,16 +339,6 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
               }`}>
               <div className="px-6 py-6 space-y-2">
                 {/* Mobile Navigation Items */}
-                <Link
-                  href="/"
-                  className="flex items-center space-x-3 w-full text-left text-gray-700 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 font-medium py-3 px-4 rounded-xl hover:bg-cyan-50 dark:hover:bg-cyan-950 transition-all duration-200"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  <div className="w-8 h-8 rounded-lg bg-cyan-100 dark:bg-cyan-900 flex items-center justify-center flex-shrink-0">
-                    <Home className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
-                  </div>
-                  <span>Home</span>
-                </Link>
 
                 {/* Products Dropdown */}
                 {navigationItems.map((item) => {
