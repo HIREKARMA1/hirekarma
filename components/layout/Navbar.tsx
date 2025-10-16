@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState, useEffect } from 'react';
 import {
   ChevronDown,
@@ -19,15 +18,13 @@ import {
   Award,
   Library,
   FileText,
-  HelpCircle,
   Compass,
   UsersRound,
   Brain,
   TrendingUp,
   Handshake,
   Moon,
-  Sun,
-  Contact
+  Sun
 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -112,8 +109,8 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
       dropdownItems: [
         { label: 'Knowledge Hub', href: '/resources/knowledge-hub', icon: Brain },
         { label: 'Events', href: '/resources/events', icon: Calendar },
-        { label: 'Case Studies', href: '/resources/case-studies', icon: FileText },
-        { label: 'FAQ', href: '/resources/faq', icon: HelpCircle }
+        { label: 'Case Studies', href: '/resources/case-studies', icon: FileText }
+        // FAQ and Association FAQ removed
       ]
     }
   ];

@@ -380,7 +380,7 @@ const Footer: React.FC = () => {
             </div>
             
             <div className="flex flex-wrap items-center justify-center gap-3 text-sm order-1 lg:order-2">
-              <a href="#" className={`transition-colors duration-200 ${
+              <a href="/PrivacyPolicy" className={`transition-colors duration-200 ${
                 mounted && resolvedTheme === 'dark' 
                   ? 'text-gray-400 hover:text-emerald-400' 
                   : 'text-gray-600 hover:text-emerald-600'
@@ -388,7 +388,7 @@ const Footer: React.FC = () => {
                 Privacy Policy
               </a>
               <span className={mounted && resolvedTheme === 'dark' ? 'text-gray-600' : 'text-gray-300'}>•</span>
-              <a href="#" className={`transition-colors duration-200 ${
+              <a href="TermsofService" className={`transition-colors duration-200 ${
                 mounted && resolvedTheme === 'dark' 
                   ? 'text-gray-400 hover:text-emerald-400' 
                   : 'text-gray-600 hover:text-emerald-600'

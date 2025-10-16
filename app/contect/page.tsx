@@ -1,13 +1,16 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import emailjs from 'emailjs-com';
 import { useTheme } from 'next-themes';
-import Image from 'next/image';
 import Navbar from '../../components/layout/Navbar';
 import Footer from '../../components/layout/Footer';
 import WavyBackground from '../../components/layout/WavyBackground';
-import { Mail, Phone, MapPin, Send, User, MessageSquare, FileText, AlertTriangle } from 'lucide-react';
-import Lottie from 'lottie-react';
+import { Mail, Phone, MapPin, Send, User, MessageSquare } from 'lucide-react';
+import contactAnimation from '../../public/contect.json';
+import dynamic from 'next/dynamic';
+
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 const ContactPage: React.FC = () => {
     const [mounted, setMounted] = useState(false);
     const { resolvedTheme } = useTheme();
@@ -22,6 +25,12 @@ const ContactPage: React.FC = () => {
         message: '',
     });
 
+    const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+
+    const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '';
+    const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '';
+    const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || '';
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({
             ...formData,
@@ -31,10 +40,24 @@ const ContactPage: React.FC = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        // Handle form submission logic here (e.g., API call)
-        console.log('Form submitted:', formData);
-        alert('Thank you for your message! We\'ll get back to you soon.');
-        setFormData({ name: '', email: '', message: '' });
+        setStatus('sending');
+
+        const templateParams = {
+            name: formData.name,
+            email: formData.email,
+            message: formData.message,
+        };
+
+        emailjs
+            .send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
+            .then(() => {
+                setStatus('success');
+                setFormData({ name: '', email: '', message: '' });
+            })
+            .catch((error: unknown) => {
+                console.error('EmailJS error:', error);
+                setStatus('error');
+            });
     };
 
     return (
@@ -69,7 +92,7 @@ const ContactPage: React.FC = () => {
                                         Get In Touch
                                         <span className={`block mt-2 text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-medium ${mounted && resolvedTheme === 'dark' ? 'text-cyan-400' : 'text-cyan-600'
                                             }`}>
-                                            Let's Build the Future Together
+                                            Let&#39;s Build the Future Together
                                         </span>
                                     </h1>
                                 </div>
@@ -77,19 +100,11 @@ const ContactPage: React.FC = () => {
                                 <div className="space-y-4">
                                     <p className={`text-lg sm:text-xl leading-relaxed max-w-2xl ${mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'
                                         }`}>
-                                        Whether you're a student seeking opportunities, a corporate leader sourcing talent, or an institution
-                                        enhancing employability, we're here to help. Reach out and let's connect to explore how HireKarma can transform your journey.
+                                        Whether you are a student seeking opportunities, a corporate leader sourcing talent, or an institution
+                                        enhancing employability, we are here to help. Reach out and let us connect to explore how HireKarma can transform your journey.
                                     </p>
                                 </div>
 
-                                <div className="flex items-center gap-4">
-                                    <button className={`px-8 py-4 font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 ${mounted && resolvedTheme === 'dark'
-                                            ? 'bg-blue-600 text-white hover:bg-blue-700'
-                                            : 'bg-blue-600 text-white hover:bg-blue-700'
-                                        }`}>
-                                        Send a Message
-                                    </button>
-                                </div>
                             </div>
 
                             {/* Right Content - Image */}
@@ -171,14 +186,26 @@ const ContactPage: React.FC = () => {
 
                                     <button
                                         type="submit"
+                                        disabled={status === 'sending'}
                                         className={`w-full flex items-center justify-center space-x-2 px-8 py-4 font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 ${mounted && resolvedTheme === 'dark'
                                                 ? 'bg-blue-600 text-white hover:bg-blue-700'
                                                 : 'bg-blue-600 text-white hover:bg-blue-700'
-                                            }`}
+                                            } ${status === 'sending' ? 'opacity-60 cursor-not-allowed' : ''}`}
                                     >
                                         <Send className="w-5 h-5" />
-                                        <span>Send Message</span>
+                                        <span>{status === 'sending' ? 'Sending...' : 'Send Message'}</span>
                                     </button>
+
+                                    {/* Status messages */}
+                                    {status === 'sending' && (
+                                        <p className="text-sm text-gray-600">Sending...</p>
+                                    )}
+                                    {status === 'success' && (
+                                        <p className="text-sm text-green-600">Message sent successfully ✅</p>
+                                    )}
+                                    {status === 'error' && (
+                                        <p className="text-sm text-red-600">Failed to send. Please try again later.</p>
+                                    )}
                                 </form>
                             </div>
                         </div>
@@ -187,17 +214,17 @@ const ContactPage: React.FC = () => {
                     {/* Section 2: Contact Methods (The Ways to Reach Us) */}
                     <div className="relative content-container py-20">
                         <div className="max-w-7xl mx-auto">
-                            <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                            <div className="grid lg:grid-cols-2 gap-16 lg:gap-30 items-center">
                                 {/* Left Side - Images */}
                                 <div className="order-2 lg:order-1">
-                                    {/* <div className="rounded-3xl overflow-hidden shadow-2xl">
+                                    <div className="rounded-3xl overflow-hidden bg-transparent">
                                         <Lottie
-                                            animationData={'./contect.json'}
+                                            animationData={contactAnimation}
                                             loop={true}
                                             autoplay={true}
-                                            style={{ width: '100%', height: 'auto' }}
+                                            style={{ width: '100%', height: 'auto', minHeight: 320, background: 'transparent' }}
                                         />
-                                    </div> */}
+                                    </div>
                                 </div>
 
                                 {/* Right Side - Content */}
@@ -236,7 +263,7 @@ const ContactPage: React.FC = () => {
                                                     For general inquiries, partnerships, or technical support.
                                                 </p>
                                                 <a href="mailto:hello@hirekarma.com" className={`inline-flex items-center space-x-2 mt-2 text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 font-semibold`}>
-                                                    <span>hello@hirekarma.com</span>
+                                                    <span>hr@hirekarma.in</span>
                                                     <Mail className="w-4 h-4" />
                                                 </a>
                                             </div>
@@ -263,8 +290,8 @@ const ContactPage: React.FC = () => {
                                                     }`}>
                                                     For immediate help or scheduling a call.
                                                 </p>
-                                                <a href="tel:+91-1234567890" className={`inline-flex items-center space-x-2 mt-2 text-green-500 hover:text-green-600 dark:text-green-400 dark:hover:text-green-300 font-semibold`}>
-                                                    <span>+91 123 456 7890</span>
+                                                <a href="tel:+919876543210" className={`inline-flex items-center space-x-2 mt-2 text-green-500 hover:text-green-600 dark:text-green-400 dark:hover:text-green-300 font-semibold`}>
+                                                    <span>+91 98765 43210</span>
                                                     <Phone className="w-4 h-4" />
                                                 </a>
                                             </div>
@@ -289,13 +316,11 @@ const ContactPage: React.FC = () => {
                                                         ? 'text-gray-400'
                                                         : 'text-gray-600'
                                                     }`}>
-                                                    Visit our headquarters in Bangalore for in-person meetings.
+                                                    Visit our headquarters in Bhubaneswar for in-person meetings.
                                                 </p>
                                                 <p className={`mt-2 font-semibold ${mounted && resolvedTheme === 'dark' ? 'text-gray-100' : 'text-gray-900'
                                                     }`}>
-                                                    HireKarma HQ<br />
-                                                    Koramangala, Bangalore<br />
-                                                    Karnataka, India 560034
+                                                    Room No: 103, 1st Floor, Tower A, O-HUB, Bhubaneswar
                                                 </p>
                                             </div>
                                         </div>

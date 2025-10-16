@@ -6,7 +6,7 @@ import WavyBackground from '../layout/WavyBackground';
 import companyData from '../../data/company.json';
 import corporateData from '../../data/corporate.json';
 import testimonialsData from '../../data/testimonial.json';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import University from '../../data/corporate.json'
 import Compine from "../../data/company.json"
 
@@ -169,7 +169,7 @@ const HeroSection: React.FC = () => {
                 </div>
             </div>
 
-            {/* Impact Section - MOSIP Style */}
+            {/* Impact Section */}
             <div className="relative content-container py-20">
                 <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
@@ -318,20 +318,24 @@ const HeroSection: React.FC = () => {
                         </div>
                     </div>
 
-                    {/* Right Content - ChartJS/Pages Chart */}
+                    {/* Right Content - Bar Chart */}
                     <div className="relative">
                         <div className={`relative w-full h-[450px] lg:h-[500px] border overflow-hidden ${mounted && resolvedTheme === 'dark'
                             ? 'bg-gradient-to-br from-gray-800 via-gray-800 to-gray-900 border-gray-600'
                             : 'bg-gradient-to-br from-gray-50 via-white to-gray-100 border-gray-200'
                             }`}>
                             <ResponsiveContainer width="100%" height="100%">
-                                <LineChart data={impactData} margin={{ top: 40, right: 40, left: 20, bottom: 40 }}>
+                                <BarChart data={impactData} margin={{ top: 40, right: 40, left: 20, bottom: 40 }}>
                                     <CartesianGrid strokeDasharray="3 3" />
                                     <XAxis dataKey="year" />
                                     <YAxis />
                                     <Tooltip />
-                                    <Line type="monotone" dataKey="value" stroke="#06b6d4" strokeWidth={4} dot={{ r: 6 }} activeDot={{ r: 8 }} />
-                                </LineChart>
+                                    <Bar dataKey="value" fill="#06b6d4">
+                                        {impactData.map((entry, index) => (
+                                            <Cell key={`cell-${index}`} fill={mounted && resolvedTheme === 'dark' ? '#06b6d4' : '#0891b2'} />
+                                        ))}
+                                    </Bar>
+                                </BarChart>
                             </ResponsiveContainer>
                         </div>
                     </div>

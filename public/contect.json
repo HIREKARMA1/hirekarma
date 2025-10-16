@@ -7,6 +7,11 @@
     "h": 500,
     "nm": "customer-support",
     "ddd": 0,
+    "bg": {
+        "a": 0,
+        "k": [0, 0, 0, 0],
+        "ix": 3
+    },
     "assets": [],
     "layers": [
         {
