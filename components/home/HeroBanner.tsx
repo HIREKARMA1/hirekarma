@@ -47,7 +47,7 @@ const HeroBanner: React.FC = () => {
                 {/* Right Content - Hero GIF */}
                 <div className="relative">
                     {/* Hero GIF */}
-                    <div className="relative w-full h-[450px] lg:h-[450]">
+                    <div className="relative w-full h-[350px] lg:h-[400px]">
                         <img
                             src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/Heroimage.gif"
                             alt="Hero animation"
