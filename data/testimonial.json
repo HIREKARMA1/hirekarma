@@ -1,60 +1,32 @@
 {
     "testimonials": [
         {
-            "name": "Dr. Priya Sharma",
-            "designation": "Director of Placements",
-            "institution": "IIT Bhubaneswar",
-            "image": "https://randomuser.me/api/portraits/women/44.jpg",
-            "feedback": "HireKarma has revolutionized our campus placement process. The AI-powered matching has increased our placement rate by 40% and reduced the time to hire significantly."
+            "name": "Rupali Saive",
+            "designation": "General Manager",
+            "institution": "Vision Mechatronics Pvt. Ltd.",
+            "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/testimonial/Rupali+Salve.jpg",
+            "feedback": "HireKarma delivers exceptional coordination and professionalism. Their platform helps us connect with skilled candidates efficiently, and the experience has always been smooth and productive."
         },
         {
-            "name": "Rajesh Kumar",
-            "designation": "HR Director",
-            "institution": "TechCorp India",
-            "image": "https://randomuser.me/api/portraits/men/32.jpg",
-            "feedback": "The quality of candidates we get through HireKarma is exceptional. The platform's analytics help us make data-driven hiring decisions that align perfectly with our company culture."
+            "name": "Altamas",
+            "designation": "HR/Admin",
+            "institution": "Team Arizona",
+            "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/testimonial/Altamas.jpg",
+            "feedback": "Excellent Coordination at BPUT! We had a great time at the BPUT event—everything was flawlessly managed. Special thanks to Subhasmita Sahoo and Rohit Samantaray for their constant support. Grateful to HireKarma for organizing such a meaningful experience."
         },
         {
-            "name": "Prof. Ananya Das",
-            "designation": "Dean of Engineering",
-            "institution": "NIT Rourkela",
-            "image": "https://randomuser.me/api/portraits/women/68.jpg",
-            "feedback": "Our students love the skill assessment modules. It helps them understand their strengths and areas for improvement, making them more job-ready than ever before."
+            "name": "Laxmidhar Bhoi",
+            "designation": "Head Training Placement Officer",
+            "institution": "CIME Bhubaneswar",
+            "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/testimonial/Dheeraj+KK.jpg",
+            "feedback": "Exceptional Support from HireKarma! Working with HireKarma has streamlined our placement process. The platform is efficient, user-friendly, and perfectly caters to both recruiters and students. The team is incredibly supportive, ensuring a seamless experience. We highly recommend HireKarma to any institution aiming to enhance their recruitment efforts!"
         },
         {
-            "name": "Vikram Singh",
-            "designation": "Talent Acquisition Head",
-            "institution": "Infosys",
-            "image": "https://randomuser.me/api/portraits/men/65.jpg",
-            "feedback": "HireKarma's platform has streamlined our campus hiring by 60%. The pre-vetted candidates save us countless hours of screening, and the results speak for themselves."
-        },
-                {
-            "name": "Dr. Priya Sharma",
-            "designation": "Director of Placements",
-            "institution": "IIT Bhubaneswar",
-            "image": "https://randomuser.me/api/portraits/women/44.jpg",
-            "feedback": "HireKarma has revolutionized our campus placement process. The AI-powered matching has increased our placement rate by 40% and reduced the time to hire significantly."
-        },
-        {
-            "name": "Rajesh Kumar",
-            "designation": "HR Director",
-            "institution": "TechCorp India",
-            "image": "https://randomuser.me/api/portraits/men/32.jpg",
-            "feedback": "The quality of candidates we get through HireKarma is exceptional. The platform's analytics help us make data-driven hiring decisions that align perfectly with our company culture."
-        },
-        {
-            "name": "Prof. Ananya Das",
-            "designation": "Dean of Engineering",
-            "institution": "NIT Rourkela",
-            "image": "https://randomuser.me/api/portraits/women/68.jpg",
-            "feedback": "Our students love the skill assessment modules. It helps them understand their strengths and areas for improvement, making them more job-ready than ever before."
-        },
-        {
-            "name": "Vikram Singh",
-            "designation": "Talent Acquisition Head",
-            "institution": "Infosys",
-            "image": "https://randomuser.me/api/portraits/men/65.jpg",
-            "feedback": "HireKarma's platform has streamlined our campus hiring by 60%. The pre-vetted candidates save us countless hours of screening, and the results speak for themselves."
+            "name": "Nrusingh Samanata",
+            "designation": "Associate Director Talent Acquisition",
+            "institution": "Incture Technologies Pvt. Ltd.",
+            "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/testimonial/Nrusingh+Samanata.jpg",
+            "feedback": "HireKarma has been a game-changer for our placement process. The platform is user-friendly, and the support team is incredibly helpful. We've been able to connect with top recruiters and students with ease."
         }
     ]
 }
