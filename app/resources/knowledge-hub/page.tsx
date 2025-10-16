@@ -6,6 +6,7 @@ import Image from "next/image";
 import Navbar from "../../../components/layout/Navbar";
 import Footer from "../../../components/layout/Footer";
 import WavyBackground from "../../../components/layout/WavyBackground";
+import KnowledgeHubHeader from "../../../components/resources/KnowledgeHubHeader";
 import { Brain, BookOpen, FileText, TrendingUp, Users, Lightbulb, ArrowRight, Search, Filter, Star, Calendar, Clock } from 'lucide-react';
 
 const categories = ['All', 'Recruitment', 'Skills', 'Technology', 'Career Tips', 'Industry Insights'];
@@ -94,48 +95,22 @@ export default function KnowledgeHubPage() {
 
   return (
     <div className={`min-h-screen flex flex-col transition-all duration-500 ${mounted && resolvedTheme === 'dark'
-        ? 'bg-gray-900'
-        : 'bg-white'
+      ? 'bg-gray-900'
+      : 'bg-white'
       }`}>
       <Navbar />
 
       <main className="flex-grow">
         {/* Main Section with consistent background */}
         <section className={`relative min-h-screen transition-all duration-500 ${mounted && resolvedTheme === 'dark'
-            ? 'bg-gray-900'
-            : 'bg-white'
+          ? 'bg-gray-900'
+          : 'bg-white'
           }`}>
           {/* Wavy Background */}
           <WavyBackground variant="primary" intensity="strong" />
 
           {/* Header Section */}
-          <div className="relative content-container pt-20 pb-8">
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              {/* Left Content - Header and Description */}
-              <div className="space-y-2 lg:space-y-1">
-                <div className="space-y-4">
-                  <h1 className={`text-2xl sm:text-4xl lg:text-4xl xl:text-6xl font-bold leading-tight tracking-tight ${mounted && resolvedTheme === 'dark'
-                      ? 'text-gray-100'
-                      : 'text-gray-900'
-                    }`}>
-                    Knowledge Hub
-                  </h1>
-                </div>
-
-                <div className="space-y-3">
-                  <p className={`text-lg sm:text-xl leading-relaxed max-w-2xl ${mounted && resolvedTheme === 'dark'
-                      ? 'text-gray-300'
-                      : 'text-gray-600'
-                    }`}>
-                    Your go-to resource for insights on <strong className={`${mounted && resolvedTheme === 'dark'
-                        ? 'text-gray-200'
-                        : 'text-gray-700'
-                      }`}>campus recruitment, career development, and HRTech trends</strong>.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <KnowledgeHubHeader />
 
           {/* Search and Filter Section */}
           <div className="relative content-container py-8">
@@ -151,8 +126,8 @@ export default function KnowledgeHubPage() {
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className={`w-full pl-12 pr-4 py-3 border rounded-xl focus:outline-none focus:ring-2 ${mounted && resolvedTheme === 'dark'
-                        ? 'bg-gray-800 border-gray-600 text-white focus:ring-blue-500'
-                        : 'border-gray-300 focus:ring-blue-500 focus:border-transparent'
+                      ? 'bg-gray-800 border-gray-600 text-white focus:ring-blue-500'
+                      : 'border-gray-300 focus:ring-blue-500 focus:border-transparent'
                       }`}
                   />
                 </div>
@@ -164,12 +139,12 @@ export default function KnowledgeHubPage() {
                       key={category}
                       onClick={() => setSelectedCategory(category)}
                       className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${selectedCategory === category
-                          ? mounted && resolvedTheme === 'dark'
-                            ? 'bg-blue-600 text-white shadow-lg'
-                            : 'bg-blue-600 text-white shadow-lg'
-                          : mounted && resolvedTheme === 'dark'
-                            ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
-                            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                        ? mounted && resolvedTheme === 'dark'
+                          ? 'bg-blue-600 text-white shadow-lg'
+                          : 'bg-blue-600 text-white shadow-lg'
+                        : mounted && resolvedTheme === 'dark'
+                          ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                         }`}
                     >
                       {category}
@@ -197,14 +172,14 @@ export default function KnowledgeHubPage() {
                   <div
                     key={article.id}
                     className={`rounded-xl border shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 p-6 group ${mounted && resolvedTheme === 'dark'
-                        ? 'bg-gradient-to-br from-blue-900/20 to-blue-800/10 border-blue-700/30'
-                        : 'bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200'
+                      ? 'bg-gradient-to-br from-blue-900/20 to-blue-800/10 border-blue-700/30'
+                      : 'bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200'
                       }`}
                   >
                     <div className="relative mb-6">
                       <div className={`w-full h-64 rounded-xl overflow-hidden border transition-colors duration-300 ${mounted && resolvedTheme === 'dark'
-                          ? 'border-blue-600/50 group-hover:border-blue-400/70'
-                          : 'border-blue-300/70 group-hover:border-blue-200'
+                        ? 'border-blue-600/50 group-hover:border-blue-400/70'
+                        : 'border-blue-300/70 group-hover:border-blue-200'
                         }`}>
                         <Image
                           src={article.image}
@@ -216,8 +191,8 @@ export default function KnowledgeHubPage() {
                       </div>
                       <div className="absolute top-4 left-4">
                         <span className={`px-3 py-1 rounded-full text-sm font-semibold ${mounted && resolvedTheme === 'dark'
-                            ? 'bg-blue-600 text-white'
-                            : 'bg-blue-600 text-white'
+                          ? 'bg-blue-600 text-white'
+                          : 'bg-blue-600 text-white'
                           }`}>
                           {article.category}
                         </span>
@@ -269,14 +244,14 @@ export default function KnowledgeHubPage() {
                     <div
                       key={article.id}
                       className={`rounded-xl border shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 p-6 text-center group ${mounted && resolvedTheme === 'dark'
-                          ? 'bg-gradient-to-br from-blue-900/20 to-blue-800/10 border-blue-700/30'
-                          : 'bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200'
+                        ? 'bg-gradient-to-br from-blue-900/20 to-blue-800/10 border-blue-700/30'
+                        : 'bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200'
                         }`}
                     >
                       <div className="relative mb-6">
                         <div className={`w-full h-48 rounded-xl overflow-hidden border transition-colors duration-300 ${mounted && resolvedTheme === 'dark'
-                            ? 'border-blue-600/50 group-hover:border-blue-400/70'
-                            : 'border-blue-300/70 group-hover:border-blue-200'
+                          ? 'border-blue-600/50 group-hover:border-blue-400/70'
+                          : 'border-blue-300/70 group-hover:border-blue-200'
                           }`}>
                           <Image
                             src={article.image}
@@ -288,8 +263,8 @@ export default function KnowledgeHubPage() {
                         </div>
                         <div className="absolute top-3 right-3">
                           <span className={`backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold ${mounted && resolvedTheme === 'dark'
-                              ? 'bg-gray-800/90 text-blue-400'
-                              : 'bg-white/90 text-blue-600'
+                            ? 'bg-gray-800/90 text-blue-400'
+                            : 'bg-white/90 text-blue-600'
                             }`}>
                             {article.category}
                           </span>
@@ -332,18 +307,18 @@ export default function KnowledgeHubPage() {
           <div className="relative content-container py-20">
             <div className="max-w-4xl mx-auto text-center">
               <div className={`rounded-2xl border shadow-2xl p-12 ${mounted && resolvedTheme === 'dark'
-                  ? 'bg-gradient-to-br from-blue-900/30 to-blue-800/20 border-blue-700/30'
-                  : 'bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200'
+                ? 'bg-gradient-to-br from-blue-900/30 to-blue-800/20 border-blue-700/30'
+                : 'bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200'
                 }`}>
                 <h2 className={`text-4xl sm:text-5xl font-bold mb-6 ${mounted && resolvedTheme === 'dark'
-                    ? 'text-blue-400'
-                    : 'text-blue-700'
+                  ? 'text-blue-400'
+                  : 'text-blue-700'
                   }`}>
                   Stay Updated
                 </h2>
                 <p className={`text-xl mb-10 ${mounted && resolvedTheme === 'dark'
-                    ? 'text-gray-300'
-                    : 'text-gray-600'
+                  ? 'text-gray-300'
+                  : 'text-gray-600'
                   }`}>
                   Subscribe to our newsletter for the latest insights on campus recruitment and career development
                 </p>
@@ -352,13 +327,13 @@ export default function KnowledgeHubPage() {
                     type="email"
                     placeholder="Enter your email"
                     className={`flex-1 px-6 py-4 rounded-xl focus:outline-none focus:ring-2 ${mounted && resolvedTheme === 'dark'
-                        ? 'bg-gray-800 border-gray-600 text-white focus:ring-blue-500'
-                        : 'border-gray-300 focus:ring-blue-500 focus:border-transparent'
+                      ? 'bg-gray-800 border-gray-600 text-white focus:ring-blue-500'
+                      : 'border-gray-300 focus:ring-blue-500 focus:border-transparent'
                       }`}
                   />
                   <button className={`px-8 py-4 font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 ${mounted && resolvedTheme === 'dark'
-                      ? 'bg-blue-600 text-white hover:bg-blue-500'
-                      : 'bg-blue-600 text-white hover:bg-blue-500'
+                    ? 'bg-blue-600 text-white hover:bg-blue-500'
+                    : 'bg-blue-600 text-white hover:bg-blue-500'
                     }`}>
                     Subscribe
                   </button>
