@@ -67,7 +67,7 @@ const Footer: React.FC = () => {
                 <span className={`text-sm ${
                   mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'
                 }`}>
-                  +91 98765 43210
+                  +91 90786 83876
                 </span>
               </div>
               <div className="flex items-start space-x-3">
