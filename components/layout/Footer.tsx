@@ -38,8 +38,8 @@ const Footer: React.FC = () => {
                   : "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/HKlogoblack.png"
                 }
                 alt="HireKarma Logo"
-                width={160}
-                height={48}
+                width={250}
+                height={50}
                 className="w-32 sm:w-36 lg:w-40 h-8 sm:h-10 lg:h-12"
               />
               <p className={`text-base leading-relaxed max-w-sm ${mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'

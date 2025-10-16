@@ -121,7 +121,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
 
   // Simple navigation links without dropdown
   const simpleLinks = [
-    { label: 'Contect', href: '/contect', icon: Handshake }
+    { label: 'Contact', href: '/contect', icon: Handshake }
   ];
 
   return (
@@ -147,8 +147,8 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                     : "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/HKlogoblack.png"
                   }
                   alt="HireKarma Logo"
-                  width={160}
-                  height={48}
+                  width={250}
+                  height={50}
                   className="w-32 sm:w-36 lg:w-40 h-8 sm:h-10 lg:h-12 transition-transform duration-300 hover:scale-105"
                   priority
                 />
@@ -331,13 +331,13 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
 
 
           {/* Mobile Menu - Still uses click for mobile */}
-          <div className={`lg:hidden overflow-hidden transition-all duration-500 ${isMobileMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+          <div className={`lg:hidden transition-all duration-500 ${isMobileMenuOpen ? 'max-h-[calc(100vh-4rem)] opacity-100' : 'max-h-0 opacity-0'
             }`}>
-            <div className={`border-t backdrop-blur-xl ${mounted && resolvedTheme === 'dark'
+            <div className={`border-t backdrop-blur-xl overflow-y-auto max-h-[calc(100vh-4rem)] ${mounted && resolvedTheme === 'dark'
               ? 'border-gray-800 bg-gray-900'
               : 'border-gray-200 bg-white'
               }`}>
-              <div className="px-6 py-6 space-y-2">
+              <div className="px-6 py-6 pb-12 space-y-2">
                 {/* Mobile Navigation Items */}
 
                 {/* Products Dropdown */}
