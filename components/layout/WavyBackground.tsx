@@ -1,25 +1,100 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { usePathname } from 'next/navigation';
 import { useTheme } from 'next-themes';
 
 interface WavyBackgroundProps {
   variant?: 'primary' | 'secondary' | 'accent' | 'neutral';
   intensity?: 'light' | 'medium' | 'strong';
+  density?: 'sparse' | 'normal' | 'dense';
   className?: string;
 }
 
 const WavyBackground: React.FC<WavyBackgroundProps> = ({ 
   variant = 'primary', 
   intensity = 'medium',
+  density = 'normal',
   className = '' 
 }) => {
   const [mounted, setMounted] = useState(false);
+  const [svgHeight, setSvgHeight] = useState<number>(1600);
+  const [svgWidth, setSvgWidth] = useState<number>(1440);
+  const lastHeightRef = useRef<number>(1600);
+  const lastWidthRef = useRef<number>(1440);
+  const rafIdRef = useRef<number | null>(null);
+  const pathname = usePathname();
   const { resolvedTheme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
+    const scheduleUpdate = () => {
+      if (rafIdRef.current !== null) return; // throttle to one RAF
+      rafIdRef.current = window.requestAnimationFrame(() => {
+        rafIdRef.current = null;
+        const docHeight = Math.max(
+          document.documentElement.scrollHeight,
+          document.documentElement.offsetHeight,
+          document.documentElement.clientHeight,
+          window.innerHeight
+        );
+        const docWidth = Math.max(
+          document.documentElement.clientWidth,
+          window.innerWidth
+        );
+        const nextHeight = Math.max(docHeight, window.innerHeight) + 800; // generous buffer
+        const nextWidth = docWidth; // avoid feedback loop from extra width
+        const heightChanged = Math.abs(nextHeight - lastHeightRef.current) > 64; // ignore small changes
+        const widthChanged = Math.abs(nextWidth - lastWidthRef.current) > 32;
+        if (heightChanged) {
+          lastHeightRef.current = nextHeight;
+          setSvgHeight(nextHeight);
+        }
+        if (widthChanged) {
+          lastWidthRef.current = nextWidth;
+          setSvgWidth(nextWidth);
+        }
+      });
+    };
+    // initial
+    scheduleUpdate();
+    // listeners
+    window.addEventListener('resize', scheduleUpdate, { passive: true });
+    window.addEventListener('load', scheduleUpdate);
+    return () => {
+      window.removeEventListener('resize', scheduleUpdate as EventListener);
+      window.removeEventListener('load', scheduleUpdate as EventListener);
+      if (rafIdRef.current !== null) cancelAnimationFrame(rafIdRef.current);
+    };
   }, []);
+
+  // Recalculate on route change as well
+  useEffect(() => {
+    if (!mounted) return;
+    const id = window.requestAnimationFrame(() => {
+      const docHeight = Math.max(
+        document.documentElement.scrollHeight,
+        document.documentElement.offsetHeight,
+        document.documentElement.clientHeight,
+        window.innerHeight
+      );
+      const docWidth = Math.max(
+        document.documentElement.clientWidth,
+        window.innerWidth
+      );
+      const nextHeight = Math.max(docHeight, window.innerHeight) + 800;
+      const nextWidth = docWidth;
+      if (Math.abs(nextHeight - lastHeightRef.current) > 64) {
+        lastHeightRef.current = nextHeight;
+        setSvgHeight(nextHeight);
+      }
+      if (Math.abs(nextWidth - lastWidthRef.current) > 32) {
+        lastWidthRef.current = nextWidth;
+        setSvgWidth(nextWidth);
+      }
+    });
+    return () => window.cancelAnimationFrame(id);
+  }, [pathname, mounted]);
 
   const isDark = mounted && resolvedTheme === 'dark';
 
@@ -87,47 +162,67 @@ const WavyBackground: React.FC<WavyBackgroundProps> = ({
 
   // Adjust intensity
   const intensityMultiplier = intensity === 'light' ? 0.5 : intensity === 'strong' ? 2 : 1;
+  // Slight boost to ensure visibility across themes and long scrolls
+  const visibilityBoost = isDark ? 1.25 : 1.15;
+  const isSparse = density === 'sparse';
+  const isDense = density === 'dense';
+  const baseLayer1Count = isSparse ? 12 : isDense ? 70 : 50;
+  const layer1Spacing = isSparse ? 80 : isDense ? 22 : 30;
+  const layer1Stroke = isSparse ? 3 : isDense ? 1.8 : 1.5;
+  const layer1MinOpacity = isSparse ? 0.35 : 0.15;
+  const layer1Count = Math.max(baseLayer1Count, Math.ceil(svgHeight / layer1Spacing) + 5);
+  const layer2Count = isSparse ? 0 : (isDense ? 30 : 25);
+  const layer3Count = isSparse ? 6 : (isDense ? 20 : 15);
+  const layer4Count = isSparse ? 0 : (isDense ? 26 : 20);
   
   return (
     <div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
       {/* Enhanced Wavy Background with Multiple Layers */}
       <svg
-        className="absolute inset-0 w-full h-full"
+        className="absolute inset-0 w-full"
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 1600"
+        viewBox={`0 0 ${svgWidth} ${svgHeight}`}
         preserveAspectRatio="none"
+        style={{ '--scroll-distance': `${svgWidth}px`, '--scroll-duration': (density === 'sparse' ? '80s' : density === 'dense' ? '40s' : '60s') } as React.CSSProperties}
       >
-        {/* Layer 1: 50 Horizontal Wavy Lines with Enhanced Visibility */}
-        {Array.from({ length: 50 }, (_, i) => {
-          const y = 30 + (i * 30); // Closer spacing for more density
+        {/* Layer 1: Horizontal Wavy Lines */}
+        {Array.from({ length: layer1Count }, (_, i) => {
+          const y = 30 + (i * layer1Spacing);
           const colorIndex = i % currentColors.length;
           const animationClass = i % 4 === 0 ? 'animate-wave-flow' : 
                                 i % 4 === 1 ? 'animate-wave-flow-delayed' : 
                                 i % 4 === 2 ? 'animate-wave-flow-reverse' : 'animate-wave-flow-slow';
-          const opacity = intensityMultiplier * (0.8 - (i * 0.01)); // Better opacity distribution
-          const amplitude = 15 + (i % 3) * 5; // Varying wave amplitudes
+          const opacity = intensityMultiplier * (isSparse ? 0.45 : (0.8 - (i * 0.01)));
+          const amplitude = isSparse ? 8 + (i % 2) * 3 : 15 + (i % 3) * 5;
           
           return (
-            <path
-              key={`layer1-${i}`}
-              stroke={currentColors[colorIndex]}
-              strokeWidth={1.5}
-              fill="none"
-              strokeOpacity={Math.max(opacity, 0.15)}
-              d={`M0,${y} Q360,${y-amplitude} 720,${y} Q1080,${y+amplitude} 1440,${y}`}
-              className={animationClass}
-            />
+            <g key={`layer1-${i}`} className={`animate-wave-scroll-left`}>
+              <path
+                stroke={currentColors[colorIndex]}
+                strokeWidth={layer1Stroke}
+                fill="none"
+                strokeOpacity={Math.min(1, Math.max(opacity * visibilityBoost, layer1MinOpacity))}
+                d={`M0,${y} Q${svgWidth/4},${y-amplitude} ${svgWidth/2},${y} Q${(3*svgWidth)/4},${y+amplitude} ${svgWidth},${y}`}
+              />
+              <path
+                stroke={currentColors[colorIndex]}
+                strokeWidth={layer1Stroke}
+                fill="none"
+                strokeOpacity={Math.min(1, Math.max(opacity * visibilityBoost, layer1MinOpacity))}
+                d={`M${svgWidth},${y} Q${(5*svgWidth)/4},${y-amplitude} ${svgWidth + svgWidth/2},${y} Q${(7*svgWidth)/4},${y+amplitude} ${2*svgWidth},${y}`}
+              />
+            </g>
           );
         })}
 
         {/* Layer 2: Diagonal Flowing Lines */}
-        {Array.from({ length: 25 }, (_, i) => {
+        {Array.from({ length: layer2Count }, (_, i) => {
           const startX = -100 + (i * 60);
           const startY = 100 + (i * 50);
           const colorIndex = (i + 10) % currentColors.length;
           const animationClass = i % 3 === 0 ? 'animate-wave-flow' : 
                                 i % 3 === 1 ? 'animate-wave-flow-delayed' : 'animate-wave-flow-reverse';
-          const opacity = intensityMultiplier * (0.4 - (i * 0.008));
+          const opacity = intensityMultiplier * (isSparse ? 0.22 : (0.4 - (i * 0.008)));
           
           return (
             <path
@@ -135,36 +230,35 @@ const WavyBackground: React.FC<WavyBackgroundProps> = ({
               stroke={currentColors[colorIndex]}
               strokeWidth={1}
               fill="none"
-              strokeOpacity={Math.max(opacity, 0.1)}
-              d={`M${startX},${startY} Q${startX + 200},${startY - 30} ${startX + 400},${startY + 20} Q${startX + 600},${startY - 10} ${startX + 800},${startY + 30} Q${startX + 1000},${startY + 10} ${startX + 1200},${startY - 20} Q${startX + 1400},${startY + 15} ${startX + 1600},${startY}`}
+              strokeOpacity={Math.min(1, Math.max(opacity * visibilityBoost, 0.12))}
+              d={`M${startX},${startY} Q${startX + 200},${startY - 30} ${startX + 400},${startY + 20} Q${startX + 600},${startY - 10} ${startX + 800},${startY + 30} Q${startX + 1000},${startY + 10} ${startX + 1200},${startY - 20} Q${startX + 1400},${startY + 15} ${svgWidth + 160},${startY}`}
               className={animationClass}
             />
           );
         })}
 
-        {/* Layer 3: Vertical Accent Lines */}
-        {Array.from({ length: 15 }, (_, i) => {
+        {/* Layer 3: Vertical Accent Lines (full height) */}
+        {Array.from({ length: layer3Count }, (_, i) => {
           const x = 100 + (i * 80);
           const colorIndex = (i + 20) % currentColors.length;
           const animationClass = i % 2 === 0 ? 'animate-wave-flow-delayed' : 'animate-wave-flow-slow';
-          const opacity = intensityMultiplier * (0.3 - (i * 0.01));
-          const height = 200 + (i % 4) * 100;
+          const opacity = intensityMultiplier * (isSparse ? 0.28 : (0.4 - (i * 0.012)));
           
           return (
             <path
               key={`layer3-${i}`}
               stroke={currentColors[colorIndex]}
-              strokeWidth={0.8}
+              strokeWidth={isSparse ? 2 : 1}
               fill="none"
-              strokeOpacity={Math.max(opacity, 0.08)}
-              d={`M${x},0 Q${x + 20},${height/3} ${x},${height/2} Q${x - 20},${height*2/3} ${x},${height}`}
+              strokeOpacity={Math.min(1, Math.max(opacity * visibilityBoost, isSparse ? 0.25 : 0.12))}
+              d={`M${x},0 L${x},${svgHeight}`}
               className={animationClass}
             />
           );
         })}
 
         {/* Layer 4: Curved Accent Patterns */}
-        {Array.from({ length: 20 }, (_, i) => {
+        {Array.from({ length: layer4Count }, (_, i) => {
           const centerX = 200 + (i * 60);
           const centerY = 300 + (i * 70);
           const radius = 80 + (i % 3) * 20;
@@ -180,7 +274,7 @@ const WavyBackground: React.FC<WavyBackgroundProps> = ({
               stroke={currentColors[colorIndex]}
               strokeWidth={0.6}
               fill="none"
-              strokeOpacity={Math.max(opacity, 0.06)}
+              strokeOpacity={Math.min(1, Math.max(opacity * visibilityBoost, 0.08))}
               d={`M${centerX},${centerY} A${radius},${radius} 0 0,1 ${centerX + radius},${centerY + radius/2} A${radius*0.7},${radius*0.7} 0 0,0 ${centerX},${centerY + radius} A${radius*0.5},${radius*0.5} 0 0,1 ${centerX - radius/2},${centerY}`}
               className={animationClass}
             />

@@ -96,39 +96,6 @@ const SolutionSection: React.FC = () => {
                             }`}></div>
                     </div>
                 </div>
-
-                {/* Left Content */}
-                <div className="space-y-8 lg:space-y-10 lg:order-1 order-2">
-                    <div className="space-y-6">
-                        <h2 className={`text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight ${mounted && resolvedTheme === 'dark'
-                            ? 'text-gray-100'
-                            : 'text-gray-900'
-                            }`}>
-                            The Challenge We Saw
-                            <span className={`block mt-2 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium ${mounted && resolvedTheme === 'dark'
-                                ? 'text-red-400'
-                                : 'text-red-600'
-                                }`}>
-                                Campus Hiring Roadblocks
-                            </span>
-                        </h2>
-                    </div>
-
-                    <div className="space-y-4">
-                        <p className={`text-lg sm:text-xl leading-relaxed max-w-2xl ${mounted && resolvedTheme === 'dark'
-                            ? 'text-gray-300'
-                            : 'text-gray-600'
-                            }`}>
-                            Recognizing that many <strong className={`${mounted && resolvedTheme === 'dark'
-                                ? 'text-gray-200'
-                                : 'text-gray-700'
-                                }`}>talented graduates face roadblocks</strong> to meaningful employment, we identified the <strong className={`${mounted && resolvedTheme === 'dark'
-                                    ? 'text-gray-200'
-                                    : 'text-gray-700'
-                                    }`}>critical gap</strong> between what students learn in college and what industries actually need.
-                        </p>
-                    </div>
-                </div>
             </div>
         </div>
     );
