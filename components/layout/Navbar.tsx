@@ -83,8 +83,8 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
       hasDropdown: true,
       dropdownItems: [
         { label: 'Our Story', href: '/about-us/our-story', icon: BookOpen },
-        { label: 'Mission & Value', href: '/about-us/mission-value', icon: Heart },
-        { label: 'People', href: '/about-us/people', icon: UsersRound }
+        // { label: 'Mission & Value', href: '/about-us/mission-value', icon: Heart },
+        // { label: 'People', href: '/about-us/people', icon: UsersRound }
       ]
     },
     // {

@@ -36,16 +36,67 @@ const MissionValuePage: React.FC = () => {
                                         create equitable access to opportunities and measurable hiring outcomes for all stakeholders.
                                     </p>
                                 </div>
-     
+
                             </div>
 
 
                             {/* Right: Visual */}
-                            <div className="relative">
-                                <div className={`relative w-full h-[420px] lg:h-[460px] rounded-3xl border overflow-hidden shadow-2xl ${mounted && resolvedTheme === 'dark' ? 'bg-gradient-to-br from-gray-800 via-gray-800 to-gray-900 border-gray-600' : 'bg-gradient-to-br from-gray-50 via-white to-gray-100 border-gray-200'}`}>
-                                    <div className="absolute inset-0 flex items-center justify-center">
-                                        <div className={`w-24 h-24 rounded-full flex items-center justify-center ${mounted && resolvedTheme === 'dark' ? 'bg-gradient-to-br from-blue-700 to-cyan-500' : 'bg-gradient-to-br from-blue-500 to-cyan-400'}`}>
-                                            <Target className="w-12 h-12 text-white" />
+                            {/* Right Content - Hero GIF */}
+                            <div className="order-1 lg:order-2 flex justify-center">
+                                <div className="relative w-full sm:w-[90%] md:w-[80%] lg:w-[95%] xl:w-[100%] h-[250px] sm:h-[320px] md:h-[420px] lg:h-[520px]">
+                                    <img
+                                        src="/Mission-removebg-preview.png"
+                                        alt="Journey animation"
+                                        className="w-full h-full object-cover "
+                                    />
+
+                                    {/* Fallback */}
+                                    <div
+                                        className={`absolute inset-0 flex items-center justify-center rounded-2xl hidden ${mounted && resolvedTheme === "dark"
+                                                ? "bg-gray-900/50 backdrop-blur-sm"
+                                                : "bg-white/50 backdrop-blur-sm"
+                                            }`}
+                                    >
+                                        <div className="text-center space-y-4">
+                                            <div
+                                                className={`w-12 sm:w-16 h-12 sm:h-16 mx-auto rounded-full flex items-center justify-center ${mounted && resolvedTheme === "dark"
+                                                        ? "bg-gray-700/80"
+                                                        : "bg-gray-200/80"
+                                                    }`}
+                                            >
+                                                <svg
+                                                    className={`w-6 sm:w-8 h-6 sm:h-8 ${mounted && resolvedTheme === "dark"
+                                                            ? "text-gray-300"
+                                                            : "text-gray-500"
+                                                        }`}
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                >
+                                                    <path
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                        strokeWidth={1.5}
+                                                        d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                                                    />
+                                                </svg>
+                                            </div>
+                                            <p
+                                                className={`font-medium text-sm sm:text-base ${mounted && resolvedTheme === "dark"
+                                                        ? "text-gray-200"
+                                                        : "text-gray-600"
+                                                    }`}
+                                            >
+                                                Animation not supported
+                                            </p>
+                                            <p
+                                                className={`text-xs sm:text-sm ${mounted && resolvedTheme === "dark"
+                                                        ? "text-gray-300"
+                                                        : "text-gray-500"
+                                                    }`}
+                                            >
+                                                Your browser doesn&apos;t support image playback
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -69,12 +120,62 @@ const MissionValuePage: React.FC = () => {
                                 </p>
                             </div>
 
-                            {/* Right: Visual */}
-                            <div className="relative">
-                                <div className={`relative w-full h-[420px] lg:h-[460px] rounded-3xl border overflow-hidden shadow-2xl ${mounted && resolvedTheme === 'dark' ? 'bg-gradient-to-br from-gray-800 via-gray-800 to-gray-900 border-gray-600' : 'bg-gradient-to-br from-gray-50 via-white to-gray-100 border-gray-200'}`}>
-                                    <div className="absolute inset-0 flex items-center justify-center">
-                                        <div className={`w-24 h-24 rounded-full flex items-center justify-center ${mounted && resolvedTheme === 'dark' ? 'bg-gradient-to-br from-purple-700 to-pink-500' : 'bg-gradient-to-br from-purple-500 to-pink-400'}`}>
-                                            <Eye className="w-12 h-12 text-white" />
+                            {/* Right Content - Hero GIF */}
+                            <div className="order-1 lg:order-2 flex justify-center">
+                                <div className="relative w-full sm:w-[90%] md:w-[80%] lg:w-[95%] xl:w-[100%] h-[250px] sm:h-[320px] md:h-[420px] lg:h-[520px]">
+                                    <img
+                                        src="/vision-removebg-preview.png"
+                                        alt="Journey animation"
+                                        className="w-full h-full object-cover "
+                                    />
+
+                                    {/* Fallback */}
+                                    <div
+                                        className={`absolute inset-0 flex items-center justify-center rounded-2xl hidden ${mounted && resolvedTheme === "dark"
+                                                ? "bg-gray-900/50 backdrop-blur-sm"
+                                                : "bg-white/50 backdrop-blur-sm"
+                                            }`}
+                                    >
+                                        <div className="text-center space-y-4">
+                                            <div
+                                                className={`w-12 sm:w-16 h-12 sm:h-16 mx-auto rounded-full flex items-center justify-center ${mounted && resolvedTheme === "dark"
+                                                        ? "bg-gray-700/80"
+                                                        : "bg-gray-200/80"
+                                                    }`}
+                                            >
+                                                <svg
+                                                    className={`w-6 sm:w-8 h-6 sm:h-8 ${mounted && resolvedTheme === "dark"
+                                                            ? "text-gray-300"
+                                                            : "text-gray-500"
+                                                        }`}
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                >
+                                                    <path
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                        strokeWidth={1.5}
+                                                        d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                                                    />
+                                                </svg>
+                                            </div>
+                                            <p
+                                                className={`font-medium text-sm sm:text-base ${mounted && resolvedTheme === "dark"
+                                                        ? "text-gray-200"
+                                                        : "text-gray-600"
+                                                    }`}
+                                            >
+                                                Animation not supported
+                                            </p>
+                                            <p
+                                                className={`text-xs sm:text-sm ${mounted && resolvedTheme === "dark"
+                                                        ? "text-gray-300"
+                                                        : "text-gray-500"
+                                                    }`}
+                                            >
+                                                Your browser doesn&apos;t support image playback
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -98,12 +199,62 @@ const MissionValuePage: React.FC = () => {
                                 </p>
                             </div>
 
-                            {/* Right: Visual */}
-                            <div className="relative">
-                                <div className={`relative w-full h-[420px] lg:h-[460px] rounded-3xl border overflow-hidden shadow-2xl ${mounted && resolvedTheme === 'dark' ? 'bg-gradient-to-br from-gray-800 via-gray-800 to-gray-900 border-gray-600' : 'bg-gradient-to-br from-gray-50 via-white to-gray-100 border-gray-200'}`}>
-                                    <div className="absolute inset-0 flex items-center justify-center">
-                                        <div className={`w-24 h-24 rounded-full flex items-center justify-center ${mounted && resolvedTheme === 'dark' ? 'bg-gradient-to-br from-emerald-700 to-teal-500' : 'bg-gradient-to-br from-emerald-500 to-teal-400'}`}>
-                                            <Star className="w-12 h-12 text-white" />
+                            {/* Right Content - Hero GIF */}
+                            <div className="order-1 lg:order-2 flex justify-center">
+                                <div className="relative w-full sm:w-[90%] md:w-[80%] lg:w-[95%] xl:w-[100%] h-[250px] sm:h-[320px] md:h-[420px] lg:h-[520px]">
+                                    <img
+                                        src="/Values-removebg-preview.png"
+                                        alt="Journey animation"
+                                        className="w-full h-full object-cover "
+                                    />
+
+                                    {/* Fallback */}
+                                    <div
+                                        className={`absolute inset-0 flex items-center justify-center rounded-2xl hidden ${mounted && resolvedTheme === "dark"
+                                                ? "bg-gray-900/50 backdrop-blur-sm"
+                                                : "bg-white/50 backdrop-blur-sm"
+                                            }`}
+                                    >
+                                        <div className="text-center space-y-4">
+                                            <div
+                                                className={`w-12 sm:w-16 h-12 sm:h-16 mx-auto rounded-full flex items-center justify-center ${mounted && resolvedTheme === "dark"
+                                                        ? "bg-gray-700/80"
+                                                        : "bg-gray-200/80"
+                                                    }`}
+                                            >
+                                                <svg
+                                                    className={`w-6 sm:w-8 h-6 sm:h-8 ${mounted && resolvedTheme === "dark"
+                                                            ? "text-gray-300"
+                                                            : "text-gray-500"
+                                                        }`}
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                >
+                                                    <path
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                        strokeWidth={1.5}
+                                                        d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                                                    />
+                                                </svg>
+                                            </div>
+                                            <p
+                                                className={`font-medium text-sm sm:text-base ${mounted && resolvedTheme === "dark"
+                                                        ? "text-gray-200"
+                                                        : "text-gray-600"
+                                                    }`}
+                                            >
+                                                Animation not supported
+                                            </p>
+                                            <p
+                                                className={`text-xs sm:text-sm ${mounted && resolvedTheme === "dark"
+                                                        ? "text-gray-300"
+                                                        : "text-gray-500"
+                                                    }`}
+                                            >
+                                                Your browser doesn&apos;t support image playback
+                                            </p>
                                         </div>
                                     </div>
                                 </div>

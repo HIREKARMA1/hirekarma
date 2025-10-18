@@ -1,17 +1,182 @@
 [
-  {"name":"Alex Smith","role":"Creative Leader","image":"https://randomuser.me/api/portraits/men/32.jpg","description":"Drives brand vision and creative strategy across products and campaigns.","socialLinks":{"linkedin":"https://linkedin.com/demo","twitter":"https://twitter.com/demo","instagram":"https://instagram.com/demo","email":"mailto:demo@example.com"}},
-  {"name":"May Brown","role":"Sales Manager","image":"https://randomuser.me/api/portraits/women/44.jpg","description":"Leads growth initiatives and partnerships with enterprise clients.","socialLinks":{"linkedin":"https://linkedin.com/demo","twitter":"https://twitter.com/demo","instagram":"https://instagram.com/demo","email":"mailto:demo@example.com"}},
-  {"name":"Ann Richmond","role":"Web Developer","image":"https://randomuser.me/api/portraits/women/68.jpg","description":"Builds robust frontends with React, TypeScript, and Tailwind CSS.","socialLinks":{"linkedin":"https://linkedin.com/demo","twitter":"https://twitter.com/demo","instagram":"https://instagram.com/demo","email":"mailto:demo@example.com"}},
-  {"name":"Roxie Swanson","role":"Web Designer","image":"https://randomuser.me/api/portraits/women/56.jpg","description":"Creates user-centered designs and component libraries.","socialLinks":{"linkedin":"https://linkedin.com/demo","twitter":"https://twitter.com/demo","instagram":"https://instagram.com/demo","email":"mailto:demo@example.com"}},
-  {"name":"Jordan Lee","role":"Product Manager","image":"https://randomuser.me/api/portraits/men/12.jpg","description":"Owns roadmap and aligns cross-functional delivery to outcomes.","socialLinks":{"linkedin":"https://linkedin.com/demo","twitter":"https://twitter.com/demo","instagram":"https://instagram.com/demo","email":"mailto:demo@example.com"}},
-  {"name":"Priya Nair","role":"Data Scientist","image":"https://randomuser.me/api/portraits/women/12.jpg","description":"Builds ML models powering insights and recommendations.","socialLinks":{"linkedin":"https://linkedin.com/demo","twitter":"https://twitter.com/demo","instagram":"https://instagram.com/demo","email":"mailto:demo@example.com"}},
-  {"name":"Rahul Verma","role":"Backend Engineer","image":"https://randomuser.me/api/portraits/men/60.jpg","description":"Designs resilient services and APIs with Node.js and PostgreSQL.","socialLinks":{"linkedin":"https://linkedin.com/demo","twitter":"https://twitter.com/demo","instagram":"https://instagram.com/demo","email":"mailto:demo@example.com"}},
-  {"name":"Sara Kim","role":"UX Researcher","image":"https://randomuser.me/api/portraits/women/65.jpg","description":"Runs studies to uncover user needs and validate designs.","socialLinks":{"linkedin":"https://linkedin.com/demo","twitter":"https://twitter.com/demo","instagram":"https://instagram.com/demo","email":"mailto:demo@example.com"}},
-  {"name":"Vikram Singh","role":"DevOps Engineer","image":"https://randomuser.me/api/portraits/men/28.jpg","description":"Automates CI/CD pipelines and ensures platform reliability.","socialLinks":{"linkedin":"https://linkedin.com/demo","twitter":"https://twitter.com/demo","instagram":"https://instagram.com/demo","email":"mailto:demo@example.com"}},
-  {"name":"Emily Chen","role":"Marketing Strategist","image":"https://randomuser.me/api/portraits/women/21.jpg","description":"Crafts go-to-market plans and content strategies.","socialLinks":{"linkedin":"https://linkedin.com/demo","twitter":"https://twitter.com/demo","instagram":"https://instagram.com/demo","email":"mailto:demo@example.com"}},
-  {"name":"Omar Haddad","role":"QA Engineer","image":"https://randomuser.me/api/portraits/men/48.jpg","description":"Ensures quality with automated and exploratory testing.","socialLinks":{"linkedin":"https://linkedin.com/demo","twitter":"https://twitter.com/demo","instagram":"https://instagram.com/demo","email":"mailto:demo@example.com"}},
-  {"name":"Nina Petrova","role":"UI Engineer","image":"https://randomuser.me/api/portraits/women/28.jpg","description":"Implements pixel-perfect components with accessibility in mind.","socialLinks":{"linkedin":"https://linkedin.com/demo","twitter":"https://twitter.com/demo","instagram":"https://instagram.com/demo","email":"mailto:demo@example.com"}},
-  {"name":"Diego Martinez","role":"Mobile Developer","image":"https://randomuser.me/api/portraits/men/77.jpg","description":"Builds performant mobile apps with React Native.","socialLinks":{"linkedin":"https://linkedin.com/demo","twitter":"https://twitter.com/demo","instagram":"https://instagram.com/demo","email":"mailto:demo@example.com"}},
-  {"name":"Aisha Abdulla","role":"Content Designer","image":"https://randomuser.me/api/portraits/women/77.jpg","description":"Shapes product narratives with clear, inclusive copy.","socialLinks":{"linkedin":"https://linkedin.com/demo","twitter":"https://twitter.com/demo","instagram":"https://instagram.com/demo","email":"mailto:demo@example.com"}},
-  {"name":"Kenji Watanabe","role":"Security Engineer","image":"https://randomuser.me/api/portraits/men/14.jpg","description":"Safeguards data and systems with proactive security practices.","socialLinks":{"linkedin":"https://linkedin.com/demo","twitter":"https://twitter.com/demo","instagram":"https://instagram.com/demo","email":"mailto:demo@example.com"}}
+  {
+    "name": "Alex Smith",
+    "role": "Creative Leader",
+    "image": "https://randomuser.me/api/portraits/men/32.jpg",
+    "description": "Drives brand vision and creative strategy across products and campaigns.",
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/demo",
+      "twitter": "https://twitter.com/demo",
+      "instagram": "https://instagram.com/demo",
+      "email": "mailto:demo@example.com"
+    }
+  },
+  {
+    "name": "May Brown",
+    "role": "Sales Manager",
+    "image": "https://randomuser.me/api/portraits/women/44.jpg",
+    "description": "Leads growth initiatives and partnerships with enterprise clients.",
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/demo",
+      "twitter": "https://twitter.com/demo",
+      "instagram": "https://instagram.com/demo",
+      "email": "mailto:demo@example.com"
+    }
+  },
+  {
+    "name": "Priyanshu Priyadarsini Patra",
+    "role": "HR Executive",
+    "image": "https://randomuser.me/api/portraits/women/68.jpg",
+    "description": "Passionate about connecting talent with opportunity and enhancing workplace engagement.",
+    "socialLinks": {
+      "linkedin": "https://www.linkedin.com/in/priyanshupriyadarsini/",
+      "twitter": "https://twitter.com/demo",
+      "instagram": "https://www.instagram.com/_.pri_y.a.n_shu._/",
+      "email": "mailto:priyanshu.priyadarshini2002@gmail.com"
+    }
+  },
+  {
+    "name": "Roxie Swanson",
+    "role": "Web Designer",
+    "image": "https://randomuser.me/api/portraits/women/56.jpg",
+    "description": "Creates user-centered designs and component libraries.",
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/demo",
+      "twitter": "https://twitter.com/demo",
+      "instagram": "https://instagram.com/demo",
+      "email": "mailto:demo@example.com"
+    }
+  },
+  {
+    "name": "Jordan Lee",
+    "role": "Product Manager",
+    "image": "https://randomuser.me/api/portraits/men/12.jpg",
+    "description": "Owns roadmap and aligns cross-functional delivery to outcomes.",
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/demo",
+      "twitter": "https://twitter.com/demo",
+      "instagram": "https://instagram.com/demo",
+      "email": "mailto:demo@example.com"
+    }
+  },
+  {
+    "name": "Priya Nair",
+    "role": "Data Scientist",
+    "image": "https://randomuser.me/api/portraits/women/12.jpg",
+    "description": "Builds ML models powering insights and recommendations.",
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/demo",
+      "twitter": "https://twitter.com/demo",
+      "instagram": "https://instagram.com/demo",
+      "email": "mailto:demo@example.com"
+    }
+  },
+  {
+    "name": "Rahul Verma",
+    "role": "Backend Engineer",
+    "image": "https://randomuser.me/api/portraits/men/60.jpg",
+    "description": "Designs resilient services and APIs with Node.js and PostgreSQL.",
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/demo",
+      "twitter": "https://twitter.com/demo",
+      "instagram": "https://instagram.com/demo",
+      "email": "mailto:demo@example.com"
+    }
+  },
+  {
+    "name": "Sara Kim",
+    "role": "UX Researcher",
+    "image": "https://randomuser.me/api/portraits/women/65.jpg",
+    "description": "Runs studies to uncover user needs and validate designs.",
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/demo",
+      "twitter": "https://twitter.com/demo",
+      "instagram": "https://instagram.com/demo",
+      "email": "mailto:demo@example.com"
+    }
+  },
+  {
+    "name": "Vikram Singh",
+    "role": "DevOps Engineer",
+    "image": "https://randomuser.me/api/portraits/men/28.jpg",
+    "description": "Automates CI/CD pipelines and ensures platform reliability.",
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/demo",
+      "twitter": "https://twitter.com/demo",
+      "instagram": "https://instagram.com/demo",
+      "email": "mailto:demo@example.com"
+    }
+  },
+  {
+    "name": "Emily Chen",
+    "role": "Marketing Strategist",
+    "image": "https://randomuser.me/api/portraits/women/21.jpg",
+    "description": "Crafts go-to-market plans and content strategies.",
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/demo",
+      "twitter": "https://twitter.com/demo",
+      "instagram": "https://instagram.com/demo",
+      "email": "mailto:demo@example.com"
+    }
+  },
+  {
+    "name": "Omar Haddad",
+    "role": "QA Engineer",
+    "image": "https://randomuser.me/api/portraits/men/48.jpg",
+    "description": "Ensures quality with automated and exploratory testing.",
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/demo",
+      "twitter": "https://twitter.com/demo",
+      "instagram": "https://instagram.com/demo",
+      "email": "mailto:demo@example.com"
+    }
+  },
+  {
+    "name": "Nina Petrova",
+    "role": "UI Engineer",
+    "image": "https://randomuser.me/api/portraits/women/28.jpg",
+    "description": "Implements pixel-perfect components with accessibility in mind.",
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/demo",
+      "twitter": "https://twitter.com/demo",
+      "instagram": "https://instagram.com/demo",
+      "email": "mailto:demo@example.com"
+    }
+  },
+  {
+    "name": "Diego Martinez",
+    "role": "Mobile Developer",
+    "image": "https://randomuser.me/api/portraits/men/77.jpg",
+    "description": "Builds performant mobile apps with React Native.",
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/demo",
+      "twitter": "https://twitter.com/demo",
+      "instagram": "https://instagram.com/demo",
+      "email": "mailto:demo@example.com"
+    }
+  },
+  {
+    "name": "Aisha Abdulla",
+    "role": "Content Designer",
+    "image": "https://randomuser.me/api/portraits/women/77.jpg",
+    "description": "Shapes product narratives with clear, inclusive copy.",
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/demo",
+      "twitter": "https://twitter.com/demo",
+      "instagram": "https://instagram.com/demo",
+      "email": "mailto:demo@example.com"
+    }
+  },
+  {
+    "name": "Kenji Watanabe",
+    "role": "Security Engineer",
+    "image": "https://randomuser.me/api/portraits/men/14.jpg",
+    "description": "Safeguards data and systems with proactive security practices.",
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/demo",
+      "twitter": "https://twitter.com/demo",
+      "instagram": "https://instagram.com/demo",
+      "email": "mailto:demo@example.com"
+    }
+  }
 ]
