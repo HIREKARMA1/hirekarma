@@ -80,70 +80,67 @@ const FutureReadySection: React.FC = () => {
                 </div>
 
 
-                {/* Right Content - Problem Statement Video */}
-                <div className="relative">
-                    {/* Problem Statement Video */}
-                    <div className="relative w-full h-[350px] lg:h-[420px]">
-                        <video
-                            src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/HirekarmaSolution.mp4"
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            className="w-full h-full object-cover rounded-2xl"
-                        />
+                <div className="relative w-full h-[220px] xs:h-[280px] sm:h-[320px] md:h-[350px] lg:h-[420px]">
+                    <video
+                        src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/HirekarmaSolution.mp4"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover rounded-2xl"
+                    />
 
-                        {/* Fallback content if video not supported */}
-                        <div
-                            className={`absolute inset-0 flex items-center justify-center rounded-2xl hidden ${mounted && resolvedTheme === 'dark'
+                    {/* Fallback content */}
+                    <div
+                        className={`absolute inset-0 flex items-center justify-center rounded-2xl hidden ${mounted && resolvedTheme === 'dark'
                                 ? 'bg-gray-900/50 backdrop-blur-sm'
                                 : 'bg-white/50 backdrop-blur-sm'
-                                }`}
-                        >
-                            <div className="text-center space-y-4">
-                                <div
-                                    className={`w-16 h-16 mx-auto rounded-full flex items-center justify-center ${mounted && resolvedTheme === 'dark'
+                            }`}
+                    >
+                        <div className="text-center space-y-4">
+                            <div
+                                className={`w-16 h-16 mx-auto rounded-full flex items-center justify-center ${mounted && resolvedTheme === 'dark'
                                         ? 'bg-gray-700/80'
                                         : 'bg-gray-200/80'
-                                        }`}
-                                >
-                                    <svg
-                                        className={`w-8 h-8 ${mounted && resolvedTheme === 'dark'
+                                    }`}
+                            >
+                                <svg
+                                    className={`w-8 h-8 ${mounted && resolvedTheme === 'dark'
                                             ? 'text-gray-300'
                                             : 'text-gray-500'
-                                            }`}
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth={1.5}
-                                            d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
-                                        />
-                                    </svg>
-                                </div>
-                                <p
-                                    className={`font-medium ${mounted && resolvedTheme === 'dark'
+                                        }`}
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={1.5}
+                                        d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                                    />
+                                </svg>
+                            </div>
+                            <p
+                                className={`font-medium ${mounted && resolvedTheme === 'dark'
                                         ? 'text-gray-200'
                                         : 'text-gray-600'
-                                        }`}
-                                >
-                                    Animation not supported
-                                </p>
-                                <p
-                                    className={`text-sm ${mounted && resolvedTheme === 'dark'
+                                    }`}
+                            >
+                                Animation not supported
+                            </p>
+                            <p
+                                className={`text-sm ${mounted && resolvedTheme === 'dark'
                                         ? 'text-gray-300'
                                         : 'text-gray-500'
-                                        }`}
-                                >
-                                    Your browser doesn&apos;t support video playback
-                                </p>
-                            </div>
+                                    }`}
+                            >
+                                Your browser doesn&apos;t support video playback
+                            </p>
                         </div>
                     </div>
                 </div>
+
 
             </div>
         </div>
