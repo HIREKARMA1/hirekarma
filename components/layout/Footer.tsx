@@ -28,9 +28,9 @@ const Footer: React.FC = () => {
 
       <div className="relative z-10 content-container py-16 lg:py-20">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-16">
           {/* Company Info */}
-          <div className="lg:col-span-1 space-y-6">
+          <div className="col-span-2 lg:col-span-1 space-y-6">
             <div className="space-y-4">
               <Image
                 src={mounted && resolvedTheme === 'dark'
@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
                   }`} />
                 <span className={`text-sm ${mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'
                   }`}>
-                  info@hirekarma.com
+                  info@hirekarma.in
                 </span>
               </div>
               <div className="flex items-center space-x-3">
@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
                   }`} />
                 <span className={`text-sm ${mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'
                   }`}>
-                  Room No: 103, 1st Floor, Tower A, O-HUB, Bhubaneswar
+                  Room No: 109, 1st Floor, Tower A, O-HUB, Bhubaneswar
                 </span>
               </div>
             </div>
@@ -171,7 +171,7 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href="/about-us/people" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
+                <a href="#" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
                   ? 'text-gray-300 hover:text-emerald-400'
                   : 'text-gray-600 hover:text-emerald-600'
                   }`}>
@@ -183,7 +183,7 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href="/partners" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
+                <a href="#" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
                   ? 'text-gray-300 hover:text-emerald-400'
                   : 'text-gray-600 hover:text-emerald-600'
                   }`}>
@@ -217,7 +217,7 @@ const Footer: React.FC = () => {
             </h3>
             <ul className="space-y-3">
               <li>
-                <a href="/solutions/corporate" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
+                <a href="#" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
                   ? 'text-gray-300 hover:text-emerald-400'
                   : 'text-gray-600 hover:text-emerald-600'
                   }`}>
@@ -229,7 +229,7 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href="/solutions/students" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
+                <a href="#" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
                   ? 'text-gray-300 hover:text-emerald-400'
                   : 'text-gray-600 hover:text-emerald-600'
                   }`}>
@@ -241,7 +241,7 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href="/solutions/university" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
+                <a href="#" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
                   ? 'text-gray-300 hover:text-emerald-400'
                   : 'text-gray-600 hover:text-emerald-600'
                   }`}>
@@ -253,7 +253,7 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href="/solutions/skill-development" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
+                <a href="#" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
                   ? 'text-gray-300 hover:text-emerald-400'
                   : 'text-gray-600 hover:text-emerald-600'
                   }`}>
@@ -275,7 +275,7 @@ const Footer: React.FC = () => {
             </h3>
             <ul className="space-y-3">
               <li>
-                <a href="/resources/knowledge-hub" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
+                <a href="#" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
                   ? 'text-gray-300 hover:text-emerald-400'
                   : 'text-gray-600 hover:text-emerald-600'
                   }`}>
@@ -287,7 +287,7 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href="/resources/case-studies" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
+                <a href="#" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
                   ? 'text-gray-300 hover:text-emerald-400'
                   : 'text-gray-600 hover:text-emerald-600'
                   }`}>
@@ -299,7 +299,7 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href="/resources/events" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
+                <a href="#" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
                   ? 'text-gray-300 hover:text-emerald-400'
                   : 'text-gray-600 hover:text-emerald-600'
                   }`}>
@@ -311,7 +311,7 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href="/resources/faq" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
+                <a href="#" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
                   ? 'text-gray-300 hover:text-emerald-400'
                   : 'text-gray-600 hover:text-emerald-600'
                   }`}>
@@ -325,7 +325,6 @@ const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
-
 
         {/* Bottom Section */}
         <div className={`border-t pt-8 ${mounted && resolvedTheme === 'dark' ? 'border-gray-700' : 'border-gray-200/80'
@@ -344,19 +343,12 @@ const Footer: React.FC = () => {
                 Privacy Policy
               </a>
               <span className={mounted && resolvedTheme === 'dark' ? 'text-gray-600' : 'text-gray-300'}>•</span>
-              <a href="TermsofService" className={`transition-colors duration-200 ${mounted && resolvedTheme === 'dark'
+              <a href="/TermsofService" className={`transition-colors duration-200 ${mounted && resolvedTheme === 'dark'
                 ? 'text-gray-400 hover:text-emerald-400'
                 : 'text-gray-600 hover:text-emerald-600'
                 }`}>
                 Terms of Service
               </a>
-              {/* <span className={mounted && resolvedTheme === 'dark' ? 'text-gray-600' : 'text-gray-300'}>•</span>
-              <a href="#" className={`transition-colors duration-200 ${mounted && resolvedTheme === 'dark'
-                ? 'text-gray-400 hover:text-emerald-400'
-                : 'text-gray-600 hover:text-emerald-600'
-                }`}>
-                Cookie Policy
-              </a> */}
             </div>
 
             <div className={`text-sm text-center lg:text-right order-3 ${mounted && resolvedTheme === 'dark' ? 'text-gray-400' : 'text-gray-600'
@@ -376,4 +368,3 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
-

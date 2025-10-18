@@ -6,7 +6,12 @@ import {
   X,
   ArrowRight,
   Moon,
-  Sun
+  Sun,
+  BookOpen,
+  Heart,
+  UsersRound,
+  Users,
+  Handshake
 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -71,17 +76,17 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
 
   // Navigation data with dropdowns
   const navigationItems: NavigationItem[] = [
-    // {
-    //   label: 'About us',
-    //   href: '/about-us',
-    //   icon: Users,
-    //   hasDropdown: true,
-    //   dropdownItems: [
-    //     { label: 'Our Story', href: '/about-us/our-story', icon: BookOpen },
-    //     { label: 'Mission & Value', href: '/about-us/mission-value', icon: Heart },
-    //     { label: 'People', href: '/about-us/people', icon: UsersRound }
-    //   ]
-    // },
+    {
+      label: 'About us',
+      href: '/about-us',
+      icon: Users,
+      hasDropdown: true,
+      dropdownItems: [
+        { label: 'Our Story', href: '/about-us/our-story', icon: BookOpen },
+        // { label: 'Mission & Value', href: '/about-us/mission-value', icon: Heart },
+        // { label: 'People', href: '/about-us/people', icon: UsersRound }
+      ]
+    },
     // {
     //   label: 'Products',
     //   href: '/products',
@@ -120,7 +125,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
     // }
   ];
   const simpleLinks: SimpleLink[] = [
-    // { label: 'Contact', href: '/contect', icon: Handshake }
+    { label: 'Contact', href: '/contect', icon: Handshake }
   ];
 
   return (

@@ -191,6 +191,21 @@ body {
   animation: wave-flow 35s ease-in-out infinite;
 }
 
+/* Continuous horizontal scroll for waves */
+@keyframes wave-scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-1 * var(--scroll-distance, 1440px)));
+  }
+}
+
+.animate-wave-scroll-left {
+  animation: wave-scroll-left var(--scroll-duration, 60s) linear infinite;
+  will-change: transform;
+}
+
 /* Testimonials scroll animation */
 @keyframes testimonials-scroll {
   0% {

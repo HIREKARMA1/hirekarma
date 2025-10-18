@@ -3,9 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
 import { useTheme } from 'next-themes';
-import Navbar from '../../components/layout/Navbar';
-import Footer from '../../components/layout/Footer';
-import WavyBackground from '../../components/layout/WavyBackground';
+// import WavyBackground from '../../components/layout/WavyBackground';
 import { Mail, Phone, MapPin, Send, User, MessageSquare } from 'lucide-react';
 import contactAnimation from '../../public/contect.json';
 import dynamic from 'next/dynamic';
@@ -59,32 +57,17 @@ const ContactPage: React.FC = () => {
                 setStatus('error');
             });
     };
-
     return (
-        <div className={`min-h-screen flex flex-col ${mounted && resolvedTheme === 'dark' ? 'bg-gray-900' : 'bg-white'
-            }`}>
-            <Navbar />
-
+        <div className={`min-h-screen flex flex-col transition-all duration-500`}>
             <main className="flex-grow">
-                <section className={`relative ${mounted && resolvedTheme === 'dark' ? 'bg-gray-900' : 'bg-white'
-                    }`}>
+                <section className={`relative min-h-screen transition-all duration-500`}>
                     {/* Wavy Background */}
-                    <WavyBackground variant="primary" intensity="strong" />
-
+                    {/* <WavyBackground variant="primary" intensity="medium" density="normal" /> */}
                     {/* Section 1: Hero (Get In Touch) */}
                     <div className="relative content-container pt-20 pb-20">
                         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center min-h-[85vh]">
                             {/* Left Content */}
                             <div className="space-y-8 lg:space-y-10">
-                                <div className={`inline-flex items-center space-x-2 px-4 py-2 rounded-full ${mounted && resolvedTheme === 'dark'
-                                        ? 'bg-blue-900/30 border border-blue-700/50'
-                                        : 'bg-blue-100 border border-blue-200'
-                                    }`}>
-                                    <Mail className={`w-4 h-4 ${mounted && resolvedTheme === 'dark' ? 'text-blue-400' : 'text-blue-700'
-                                        }`} />
-                                    <span className={`text-sm font-semibold ${mounted && resolvedTheme === 'dark' ? 'text-blue-400' : 'text-blue-700'
-                                        }`}>Contact Us</span>
-                                </div>
 
                                 <div className="space-y-6">
                                     <h1 className={`text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight ${mounted && resolvedTheme === 'dark' ? 'text-gray-100' : 'text-gray-900'
@@ -216,7 +199,7 @@ const ContactPage: React.FC = () => {
                         <div className="max-w-7xl mx-auto">
                             <div className="grid lg:grid-cols-2 gap-16 lg:gap-30 items-center">
                                 {/* Left Side - Images */}
-                                <div className="order-2 lg:order-1">
+                                <div className="order-1 lg:order-1">
                                     <div className="rounded-3xl overflow-hidden bg-transparent">
                                         <Lottie
                                             animationData={contactAnimation}
@@ -228,7 +211,7 @@ const ContactPage: React.FC = () => {
                                 </div>
 
                                 {/* Right Side - Content */}
-                                <div className="order-1 lg:order-2 space-y-10">
+                                <div className="order-2 lg:order-2 space-y-10">
                                     <div>
                                         <h2 className={`text-3xl lg:text-4xl xl:text-5xl font-bold ${mounted && resolvedTheme === 'dark' ? 'text-gray-100' : 'text-gray-900'
                                             }`}>
@@ -332,8 +315,6 @@ const ContactPage: React.FC = () => {
 
                 </section>
             </main>
-
-            <Footer />
         </div>
     );
 };
