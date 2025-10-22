@@ -35,7 +35,7 @@ const PrivacyPolicy = () => {
                                 </h1>
                                 <p className={`text-lg ${mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'
                                     }`}>
-                                    Last updated: October 16, 2025
+                                    Last updated: October 22, 2025
                                 </p>
                             </div>
 
@@ -49,7 +49,7 @@ const PrivacyPolicy = () => {
                                     </h2>
                                     <p className={`text-lg leading-relaxed ${mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'
                                         }`}>
-                                        HireKarma (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) respects your privacy and is committed to protecting your personal data. This privacy policy explains how we collect, use, and safeguard your information when you use our platform.
+                                        Welcome to HireKarma (hirekarma.in). HireKarma Private Limited is committed to protecting your privacy and ensuring that your personal information is handled responsibly. This Privacy Policy outlines how we collect, use, store, and protect your data when you use our website and services.
                                     </p>
                                 </section>
 
@@ -59,16 +59,28 @@ const PrivacyPolicy = () => {
                                         }`}>
                                         2. Information We Collect
                                     </h2>
-                                    <div className={`space-y-4 text-lg leading-relaxed ${mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'
+                                    <div className={`space-y-6 text-lg leading-relaxed ${mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'
                                         }`}>
-                                        <p>We collect information that you provide directly to us, including:</p>
-                                        <ul className="list-disc pl-6 space-y-2">
-                                            <li>Personal identification information (name, email address, phone number)</li>
-                                            <li>Educational background and qualifications</li>
-                                            <li>Professional experience and skills</li>
-                                            <li>Resume/CV and portfolio materials</li>
-                                            <li>Communication preferences and history</li>
-                                        </ul>
+                                        <div>
+                                            <h3 className={`text-xl font-semibold mb-2 ${mounted && resolvedTheme === 'dark' ? 'text-white' : 'text-gray-900'
+                                                }`}>Personal Information:</h3>
+                                            <p>Details such as your name, email address, contact number, education, work experience, and other information you share during registration or job applications.</p>
+                                        </div>
+                                        <div>
+                                            <h3 className={`text-xl font-semibold mb-2 ${mounted && resolvedTheme === 'dark' ? 'text-white' : 'text-gray-900'
+                                                }`}>Payment Information:</h3>
+                                            <p>If you use our paid services, payment details, including card information and billing address, are processed securely through authorized payment gateways.</p>
+                                        </div>
+                                        <div>
+                                            <h3 className={`text-xl font-semibold mb-2 ${mounted && resolvedTheme === 'dark' ? 'text-white' : 'text-gray-900'
+                                                }`}>Technical Information:</h3>
+                                            <p>Information such as your IP address, browser type, and device data is collected to improve functionality and ensure platform performance.</p>
+                                        </div>
+                                        <div>
+                                            <h3 className={`text-xl font-semibold mb-2 ${mounted && resolvedTheme === 'dark' ? 'text-white' : 'text-gray-900'
+                                                }`}>Cookies and Tracking Technologies:</h3>
+                                            <p>Cookies and similar tools are used to enhance user experience and analyze website usage. You can manage your preferences in browser settings.</p>
+                                        </div>
                                     </div>
                                 </section>
 
@@ -80,13 +92,30 @@ const PrivacyPolicy = () => {
                                     </h2>
                                     <div className={`space-y-4 text-lg leading-relaxed ${mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'
                                         }`}>
-                                        <p>We use the information we collect to:</p>
+                                        <p>Your data is used for:</p>
                                         <ul className="list-disc pl-6 space-y-2">
-                                            <li>Facilitate job matching and recruitment processes</li>
-                                            <li>Improve and personalize our services</li>
-                                            <li>Communicate with you about opportunities and updates</li>
-                                            <li>Analyze platform usage and enhance user experience</li>
-                                            <li>Ensure platform security and prevent fraud</li>
+                                            <li>Providing and improving services including recruitment, job matching, and career guidance.</li>
+                                            <li>Processing payments and managing your account.</li>
+                                            <li>Communicating about updates, promotions, and service notifications.</li>
+                                            <li>Analyzing website usage and improving user experience.</li>
+                                            <li>Complying with legal requirements and safeguarding our rights.</li>
+                                        </ul>
+                                    </div>
+                                </section>
+
+                                {/* Sharing of Your Information */}
+                                <section className="space-y-4">
+                                    <h2 className={`text-2xl font-bold ${mounted && resolvedTheme === 'dark' ? 'text-white' : 'text-gray-900'
+                                        }`}>
+                                        4. Sharing of Your Information
+                                    </h2>
+                                    <div className={`space-y-4 text-lg leading-relaxed ${mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'
+                                        }`}>
+                                        <p>HireKarma does not sell or rent personal information. We may share data only as follows:</p>
+                                        <ul className="list-disc pl-6 space-y-2">
+                                            <li><strong className={mounted && resolvedTheme === 'dark' ? 'text-white' : 'text-gray-900'}>Employers and Recruiters:</strong> To support hiring and job placement activities.</li>
+                                            <li><strong className={mounted && resolvedTheme === 'dark' ? 'text-white' : 'text-gray-900'}>Service Providers:</strong> For tasks like analytics, payment processing, or marketing under confidentiality agreements.</li>
+                                            <li><strong className={mounted && resolvedTheme === 'dark' ? 'text-white' : 'text-gray-900'}>Legal Authorities:</strong> To comply with lawful requests or regulations.</li>
                                         </ul>
                                     </div>
                                 </section>
@@ -95,11 +124,11 @@ const PrivacyPolicy = () => {
                                 <section className="space-y-4">
                                     <h2 className={`text-2xl font-bold ${mounted && resolvedTheme === 'dark' ? 'text-white' : 'text-gray-900'
                                         }`}>
-                                        4. Data Security
+                                        5. Data Security
                                     </h2>
                                     <p className={`text-lg leading-relaxed ${mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'
                                         }`}>
-                                        We implement appropriate security measures to protect your personal information. This includes encryption, secure servers, and regular security assessments. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.
+                                        We employ appropriate organizational and technical safeguards to protect your personal data from unauthorized access, loss, or disclosure. However, as with all internet-based operations, absolute security cannot be guaranteed.
                                     </p>
                                 </section>
 
@@ -107,37 +136,90 @@ const PrivacyPolicy = () => {
                                 <section className="space-y-4">
                                     <h2 className={`text-2xl font-bold ${mounted && resolvedTheme === 'dark' ? 'text-white' : 'text-gray-900'
                                         }`}>
-                                        5. Your Rights
+                                        6. Your Rights
                                     </h2>
                                     <div className={`space-y-4 text-lg leading-relaxed ${mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'
                                         }`}>
-                                        <p>You have the right to:</p>
+                                        <p>You may exercise the following rights regarding your data:</p>
                                         <ul className="list-disc pl-6 space-y-2">
-                                            <li>Access your personal data</li>
-                                            <li>Correct inaccurate data</li>
-                                            <li>Request deletion of your data</li>
-                                            <li>Object to data processing</li>
-                                            <li>Receive a copy of your data</li>
+                                            <li><strong className={mounted && resolvedTheme === 'dark' ? 'text-white' : 'text-gray-900'}>Access:</strong> Request a copy of your personal data.</li>
+                                            <li><strong className={mounted && resolvedTheme === 'dark' ? 'text-white' : 'text-gray-900'}>Correction:</strong> Ask for corrections of inaccurate or incomplete information.</li>
+                                            <li><strong className={mounted && resolvedTheme === 'dark' ? 'text-white' : 'text-gray-900'}>Deletion:</strong> Request the deletion of your personal data, subject to legal obligations.</li>
+                                            <li><strong className={mounted && resolvedTheme === 'dark' ? 'text-white' : 'text-gray-900'}>Objection:</strong> Object to certain types of data processing.</li>
                                         </ul>
+                                        <p className="mt-4">
+                                            Requests should be sent to{' '}
+                                            <a
+                                                href="mailto:info@hirekarma.in"
+                                                className={`font-semibold transition-colors duration-200 ${mounted && resolvedTheme === 'dark'
+                                                    ? 'text-cyan-400 hover:text-cyan-300'
+                                                    : 'text-cyan-600 hover:text-cyan-700'
+                                                    }`}
+                                            >
+                                                info@hirekarma.in
+                                            </a>
+                                        </p>
                                     </div>
+                                </section>
+
+                                {/* Data Retention */}
+                                <section className="space-y-4">
+                                    <h2 className={`text-2xl font-bold ${mounted && resolvedTheme === 'dark' ? 'text-white' : 'text-gray-900'
+                                        }`}>
+                                        7. Data Retention
+                                    </h2>
+                                    <p className={`text-lg leading-relaxed ${mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'
+                                        }`}>
+                                        HireKarma retains your personal information only as long as necessary for the purposes outlined in this policy or as required by applicable law.
+                                    </p>
+                                </section>
+
+                                {/* Third-Party Websites */}
+                                <section className="space-y-4">
+                                    <h2 className={`text-2xl font-bold ${mounted && resolvedTheme === 'dark' ? 'text-white' : 'text-gray-900'
+                                        }`}>
+                                        8. Third-Party Websites
+                                    </h2>
+                                    <p className={`text-lg leading-relaxed ${mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'
+                                        }`}>
+                                        Our website may link to third-party sites. HireKarma is not responsible for these external sites&apos; privacy practices and encourages users to review their policies.
+                                    </p>
+                                </section>
+
+                                {/* Changes to This Privacy Policy */}
+                                <section className="space-y-4">
+                                    <h2 className={`text-2xl font-bold ${mounted && resolvedTheme === 'dark' ? 'text-white' : 'text-gray-900'
+                                        }`}>
+                                        9. Changes to This Privacy Policy
+                                    </h2>
+                                    <p className={`text-lg leading-relaxed ${mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'
+                                        }`}>
+                                        This policy may be updated periodically. Updates will be posted on our website, and continued use of the platform implies agreement with the revised terms.
+                                    </p>
                                 </section>
 
                                 {/* Contact Us */}
                                 <section className="space-y-4">
                                     <h2 className={`text-2xl font-bold ${mounted && resolvedTheme === 'dark' ? 'text-white' : 'text-gray-900'
                                         }`}>
-                                        6. Contact Us
+                                        10. Contact Us
                                     </h2>
-                                    <p className={`text-lg leading-relaxed ${mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'
+                                    <div className={`text-lg leading-relaxed ${mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'
                                         }`}>
-                                        If you have any questions about this Privacy Policy, please contact us at:{' '}
-                                        <a
-                                            href="mailto:privacy@hirekarma.com"
-                                            className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300"
-                                        >
-                                            privacy@hirekarma.com
-                                        </a>
-                                    </p>
+                                        <p className="mb-4">For any queries or concerns regarding this Privacy Policy, you may contact:</p>
+                                        <p>
+                                            <strong className={mounted && resolvedTheme === 'dark' ? 'text-white' : 'text-gray-900'}>Email:</strong>{' '}
+                                            <a
+                                                href="mailto:info@hirekarma.in"
+                                                className={`font-semibold transition-colors duration-200 ${mounted && resolvedTheme === 'dark'
+                                                    ? 'text-cyan-400 hover:text-cyan-300'
+                                                    : 'text-cyan-600 hover:text-cyan-700'
+                                                    }`}
+                                            >
+                                                info@hirekarma.in
+                                            </a>
+                                        </p>
+                                    </div>
                                 </section>
                             </div>
                         </div>
@@ -145,7 +227,6 @@ const PrivacyPolicy = () => {
                 </section>
             </main>
 
-            <Footer />
         </div>
     );
 };

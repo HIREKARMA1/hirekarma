@@ -246,7 +246,7 @@ const ContactPage: React.FC = () => {
                                                     For general inquiries, partnerships, or technical support.
                                                 </p>
                                                 <a href="mailto:hello@hirekarma.com" className={`inline-flex items-center space-x-2 mt-2 text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 font-semibold`}>
-                                                    <span>hr@hirekarma.in</span>
+                                                    <span>info@hirekarma.in</span>
                                                     <Mail className="w-4 h-4" />
                                                 </a>
                                             </div>
@@ -274,7 +274,7 @@ const ContactPage: React.FC = () => {
                                                     For immediate help or scheduling a call.
                                                 </p>
                                                 <a href="tel:+919876543210" className={`inline-flex items-center space-x-2 mt-2 text-green-500 hover:text-green-600 dark:text-green-400 dark:hover:text-green-300 font-semibold`}>
-                                                    <span>+91 98765 43210</span>
+                                                    <span>+91 90786 83876</span>
                                                     <Phone className="w-4 h-4" />
                                                 </a>
                                             </div>
@@ -303,7 +303,7 @@ const ContactPage: React.FC = () => {
                                                 </p>
                                                 <p className={`mt-2 font-semibold ${mounted && resolvedTheme === 'dark' ? 'text-gray-100' : 'text-gray-900'
                                                     }`}>
-                                                    Room No: 103, 1st Floor, Tower A, O-HUB, Bhubaneswar
+                                                    Room No: 109, 1st Floor, Tower A, O-HUB, Bhubaneswar
                                                 </p>
                                             </div>
                                         </div>
