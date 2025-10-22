@@ -80,19 +80,19 @@ const FutureReadySection: React.FC = () => {
                 </div>
 
 
-                <div className="relative w-full h-[220px] xs:h-[280px] sm:h-[320px] md:h-[350px] lg:h-[420px]">
+                <div className="relative w-full h-[220px] xs:h-[280px] sm:h-[320px] md:h-[350px] lg:h-[420px] xl:h-[480px] flex items-center justify-center">
                     <video
                         src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/HirekarmaSolution.mp4"
                         autoPlay
                         loop
                         muted
                         playsInline
-                        className="w-full h-full object-cover rounded-2xl"
+                        className="w-full h-full object-contain rounded-2xl"
                     />
 
                     {/* Fallback content */}
                     <div
-                        className={`absolute inset-0 flex items-center justify-center rounded-2xl hidden ${mounted && resolvedTheme === 'dark'
+                        className={`absolute inset-0 rounded-2xl hidden ${mounted && resolvedTheme === 'dark'
                                 ? 'bg-gray-900/50 backdrop-blur-sm'
                                 : 'bg-white/50 backdrop-blur-sm'
                             }`}

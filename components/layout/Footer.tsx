@@ -28,9 +28,9 @@ const Footer: React.FC = () => {
 
       <div className="relative z-10 content-container py-16 lg:py-20">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-8 xl:gap-12 mb-16">
           {/* Company Info */}
-          <div className="col-span-2 lg:col-span-1 space-y-6">
+          <div className="col-span-1 md:col-span-2 lg:col-span-3 space-y-6">
             <div className="space-y-4">
               <Image
                 src={mounted && resolvedTheme === 'dark'
@@ -151,11 +151,11 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Company */}
+          {/* About Us */}
           <div className="space-y-5">
             <h3 className={`text-sm font-bold uppercase tracking-wider ${mounted && resolvedTheme === 'dark' ? 'text-gray-200' : 'text-gray-900'
               }`}>
-              Company
+              About Us
             </h3>
             <ul className="space-y-3">
               <li>
@@ -164,25 +164,37 @@ const Footer: React.FC = () => {
                   : 'text-gray-600 hover:text-emerald-600'
                   }`}>
                   <span className="relative">
-                    About Us
+                    Our Story
                     <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${mounted && resolvedTheme === 'dark' ? 'bg-emerald-400' : 'bg-emerald-600'
                       }`}></span>
                   </span>
                 </a>
               </li>
               <li>
-                <a href="#" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
+                <a href="/about-us/mission-value" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
                   ? 'text-gray-300 hover:text-emerald-400'
                   : 'text-gray-600 hover:text-emerald-600'
                   }`}>
                   <span className="relative">
-                    Team
+                    Mission & Value
                     <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${mounted && resolvedTheme === 'dark' ? 'bg-emerald-400' : 'bg-emerald-600'
                       }`}></span>
                   </span>
                 </a>
               </li>
               <li>
+                <a href="/about-us/people" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
+                  ? 'text-gray-300 hover:text-emerald-400'
+                  : 'text-gray-600 hover:text-emerald-600'
+                  }`}>
+                  <span className="relative">
+                    People
+                    <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${mounted && resolvedTheme === 'dark' ? 'bg-emerald-400' : 'bg-emerald-600'
+                      }`}></span>
+                  </span>
+                </a>
+              </li>
+              {/* <li>
                 <a href="#" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
                   ? 'text-gray-300 hover:text-emerald-400'
                   : 'text-gray-600 hover:text-emerald-600'
@@ -205,12 +217,56 @@ const Footer: React.FC = () => {
                       }`}></span>
                   </span>
                 </a>
+              </li> */}
+            </ul>
+          </div>
+
+          {/* Products */}
+          <div className="space-y-5">
+            <h3 className={`text-sm font-bold uppercase tracking-wider ${mounted && resolvedTheme === 'dark' ? 'text-gray-200' : 'text-gray-900'
+              }`}>
+              Products
+            </h3>
+            <ul className="space-y-3">
+              <li>
+                <a href="https://disha.hirekarma.in/" target="_blank" rel="noopener noreferrer" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
+                  ? 'text-gray-300 hover:text-emerald-400'
+                  : 'text-gray-600 hover:text-emerald-600'
+                  }`}>
+                  <span className="relative">
+                    Disha
+                    <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${mounted && resolvedTheme === 'dark' ? 'bg-emerald-400' : 'bg-emerald-600'
+                      }`}></span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div className="space-y-5">
+            <h3 className={`text-sm font-bold uppercase tracking-wider ${mounted && resolvedTheme === 'dark' ? 'text-gray-200' : 'text-gray-900'
+              }`}>
+              Contact
+            </h3>
+            <ul className="space-y-3">
+              <li>
+                <a href="/contect" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
+                  ? 'text-gray-300 hover:text-emerald-400'
+                  : 'text-gray-600 hover:text-emerald-600'
+                  }`}>
+                  <span className="relative">
+                    Get in Touch
+                    <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${mounted && resolvedTheme === 'dark' ? 'bg-emerald-400' : 'bg-emerald-600'
+                      }`}></span>
+                  </span>
+                </a>
               </li>
             </ul>
           </div>
 
           {/* Solutions */}
-          <div className="space-y-5">
+          {/* <div className="space-y-5">
             <h3 className={`text-sm font-bold uppercase tracking-wider ${mounted && resolvedTheme === 'dark' ? 'text-gray-200' : 'text-gray-900'
               }`}>
               Solutions
@@ -265,10 +321,10 @@ const Footer: React.FC = () => {
                 </a>
               </li>
             </ul>
-          </div>
+          </div>  */}
 
           {/* Resources */}
-          <div className="space-y-5">
+          {/* <div className="space-y-5">
             <h3 className={`text-sm font-bold uppercase tracking-wider ${mounted && resolvedTheme === 'dark' ? 'text-gray-200' : 'text-gray-900'
               }`}>
               Resources
@@ -323,7 +379,7 @@ const Footer: React.FC = () => {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
 
         {/* Bottom Section */}

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 import { Target, Eye, Star } from 'lucide-react';
 
-const MissionValuePage: React.FC = () => {
+const MissionValuePage = () => {
     const [mounted, setMounted] = useState(false);
     const { resolvedTheme } = useTheme();
     useEffect(() => setMounted(true), []);
@@ -45,7 +45,7 @@ const MissionValuePage: React.FC = () => {
                             <div className="order-1 lg:order-2 flex justify-center">
                                 <div className="relative w-full sm:w-[90%] md:w-[80%] lg:w-[95%] xl:w-[100%] h-[250px] sm:h-[320px] md:h-[420px] lg:h-[520px]">
                                     <img
-                                        src="/Mission-removebg-preview.png"
+                                        src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/about-us/mission-about.gif"
                                         alt="Journey animation"
                                         className="w-full h-full object-cover "
                                     />
@@ -124,7 +124,7 @@ const MissionValuePage: React.FC = () => {
                             <div className="order-1 lg:order-2 flex justify-center">
                                 <div className="relative w-full sm:w-[90%] md:w-[80%] lg:w-[95%] xl:w-[100%] h-[250px] sm:h-[320px] md:h-[420px] lg:h-[520px]">
                                     <img
-                                        src="/vision-removebg-preview.png"
+                                        src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/about-us/vission-about.gif"
                                         alt="Journey animation"
                                         className="w-full h-full object-cover "
                                     />
@@ -203,8 +203,8 @@ const MissionValuePage: React.FC = () => {
                             <div className="order-1 lg:order-2 flex justify-center">
                                 <div className="relative w-full sm:w-[90%] md:w-[80%] lg:w-[95%] xl:w-[100%] h-[250px] sm:h-[320px] md:h-[420px] lg:h-[520px]">
                                     <img
-                                        src="/Values-removebg-preview.png"
-                                        alt="Journey animation"
+                                        src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/about-us/value-about.gif"
+                                        alt="Values animation"
                                         className="w-full h-full object-cover "
                                     />
 

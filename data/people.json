@@ -1,182 +1,90 @@
 [
+
   {
-    "name": "Alex Smith",
-    "role": "Creative Leader",
-    "image": "https://randomuser.me/api/portraits/men/32.jpg",
-    "description": "Drives brand vision and creative strategy across products and campaigns.",
+    "name": "Sohan Kumar Dey",
+    "role": "Cheif Executive Officer",
+    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/SohanKumarDey.jpg",
+    "description": "Leading Hirekarma with a strong vision to ensure every fresher finds the right career opportunity by empowering them through skills, training, and effective industry connections.",
     "socialLinks": {
-      "linkedin": "https://linkedin.com/demo",
-      "twitter": "https://twitter.com/demo",
-      "instagram": "https://instagram.com/demo",
-      "email": "mailto:demo@example.com"
+      "linkedin": "https://www.linkedin.com/in/sohan-kumar-dey-762399260/",
+      "instagram": "https://www.instagram.com/the_bhatakta_enginer/",
+      "email": "mailto:sohan@hirekarma.in"
+    }
+  },
+    {
+    "name": "Rohit Samantaray",
+    "role": "Cheif Marketing Officer & COO",
+    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Rohit.jpg",
+    "description": "Dedicated to bridging the gap between students, employers, and institutions by building a platform that connects talent with opportunities and drives placement excellence.",
+    "socialLinks": {
+      "linkedin": "https://www.linkedin.com/in/rohit97/",
+      "instagram": "https://www.instagram.com/rohit_samantary/",
+      "email": "mailto:rohit@hirekarma.in"
     }
   },
   {
-    "name": "May Brown",
-    "role": "Sales Manager",
-    "image": "https://randomuser.me/api/portraits/women/44.jpg",
-    "description": "Leads growth initiatives and partnerships with enterprise clients.",
+    "name": "Lipsa P Barik",
+    "role": "CEO's Office Executive ",
+    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Lipsa.jpg",
+    "description": "Focused on research and development to deliver business-driven strategies, streamline operations, and foster innovation that contributes to Hirekarma’s long-term growth vision.",
     "socialLinks": {
-      "linkedin": "https://linkedin.com/demo",
-      "twitter": "https://twitter.com/demo",
-      "instagram": "https://instagram.com/demo",
-      "email": "mailto:demo@example.com"
+      "linkedin": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Lipsa.jpg",
+      "email": "mailto:info@hirekarma.in"
     }
   },
   {
-    "name": "Priyanshu Priyadarsini Patra",
-    "role": "HR Executive",
-    "image": "https://randomuser.me/api/portraits/women/68.jpg",
-    "description": "Passionate about connecting talent with opportunity and enhancing workplace engagement.",
+    "name": "Ansuman Panda",
+    "role": "Team Lead- Operation",
+    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Ansuman.jpg",
+    "description": "Driving campus engagement and placement operations by coordinating recruitment processes that connect institutions and employers for building efficient and scalable talent pipelines.",
+    "socialLinks": {
+      "linkedin": "https://www.linkedin.com/in/ansuman-panda-84a532278?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      "instagram": "https://www.instagram.com/_ansuman_panda__/",
+      "email": "mailto:ansuman@hirekarma.in"
+    }
+  },
+  {
+    "name": "Subhasmita Sahoo",
+    "role": "Team Lead- Skilling",
+    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Subhasmita.jpg",
+    "description": "Leading skill development initiatives that empower individuals with industry-relevant capabilities, enhancing employability and ensuring alignment with evolving corporate requirements.",
+    "socialLinks": {
+      "linkedin": "https://www.linkedin.com/in/subhasmita-sahoo-b9878b20a/",
+      "email": "mailto:Subhasmita@hirekarma.in"
+    }
+  },
+  {
+    "name": "Priyanshu P Patra",
+    "role": "Team Lead- HR",
+    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Priyanshu.jpg",
+    "description": "Passionate about fostering meaningful workplace engagement, connecting top talent with opportunities, and driving an inclusive HR culture that supports organizational excellence.",
     "socialLinks": {
       "linkedin": "https://www.linkedin.com/in/priyanshupriyadarsini/",
-      "twitter": "https://twitter.com/demo",
-      "instagram": "https://www.instagram.com/_.pri_y.a.n_shu._/",
-      "email": "mailto:priyanshu.priyadarshini2002@gmail.com"
+      "instagram": "https://www.instagram.com/_.pri_y.a.n_shu._?igsh=MTNqOTk3dWl6YjluMg==",
+      "email": "mailto:hr@hirekarma.in"
     }
   },
   {
-    "name": "Roxie Swanson",
-    "role": "Web Designer",
-    "image": "https://randomuser.me/api/portraits/women/56.jpg",
-    "description": "Creates user-centered designs and component libraries.",
+    "name": "Lokanath Panda",
+    "role": "Team Lead- Development",
+    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Lokanath.jpg",
+    "description": "Leading the development team with a focus on building scalable softwares, integrating innovative technologies, and ensuring smooth digital transformation for Hirekarma’s platform.",
     "socialLinks": {
-      "linkedin": "https://linkedin.com/demo",
-      "twitter": "https://twitter.com/demo",
-      "instagram": "https://instagram.com/demo",
-      "email": "mailto:demo@example.com"
+      "linkedin": "https://www.linkedin.com/in/lokanath-panda-642193238/",
+      "instagram": "https://www.instagram.com/lokanathpanda7/",
+      "email": "mailto:lokanath@hirekarma.in"
     }
   },
-  {
-    "name": "Jordan Lee",
-    "role": "Product Manager",
-    "image": "https://randomuser.me/api/portraits/men/12.jpg",
-    "description": "Owns roadmap and aligns cross-functional delivery to outcomes.",
-    "socialLinks": {
-      "linkedin": "https://linkedin.com/demo",
-      "twitter": "https://twitter.com/demo",
-      "instagram": "https://instagram.com/demo",
-      "email": "mailto:demo@example.com"
-    }
-  },
-  {
-    "name": "Priya Nair",
-    "role": "Data Scientist",
-    "image": "https://randomuser.me/api/portraits/women/12.jpg",
-    "description": "Builds ML models powering insights and recommendations.",
-    "socialLinks": {
-      "linkedin": "https://linkedin.com/demo",
-      "twitter": "https://twitter.com/demo",
-      "instagram": "https://instagram.com/demo",
-      "email": "mailto:demo@example.com"
-    }
-  },
-  {
-    "name": "Rahul Verma",
-    "role": "Backend Engineer",
-    "image": "https://randomuser.me/api/portraits/men/60.jpg",
-    "description": "Designs resilient services and APIs with Node.js and PostgreSQL.",
-    "socialLinks": {
-      "linkedin": "https://linkedin.com/demo",
-      "twitter": "https://twitter.com/demo",
-      "instagram": "https://instagram.com/demo",
-      "email": "mailto:demo@example.com"
-    }
-  },
-  {
-    "name": "Sara Kim",
-    "role": "UX Researcher",
-    "image": "https://randomuser.me/api/portraits/women/65.jpg",
-    "description": "Runs studies to uncover user needs and validate designs.",
-    "socialLinks": {
-      "linkedin": "https://linkedin.com/demo",
-      "twitter": "https://twitter.com/demo",
-      "instagram": "https://instagram.com/demo",
-      "email": "mailto:demo@example.com"
-    }
-  },
-  {
-    "name": "Vikram Singh",
-    "role": "DevOps Engineer",
-    "image": "https://randomuser.me/api/portraits/men/28.jpg",
-    "description": "Automates CI/CD pipelines and ensures platform reliability.",
-    "socialLinks": {
-      "linkedin": "https://linkedin.com/demo",
-      "twitter": "https://twitter.com/demo",
-      "instagram": "https://instagram.com/demo",
-      "email": "mailto:demo@example.com"
-    }
-  },
-  {
-    "name": "Emily Chen",
-    "role": "Marketing Strategist",
-    "image": "https://randomuser.me/api/portraits/women/21.jpg",
-    "description": "Crafts go-to-market plans and content strategies.",
-    "socialLinks": {
-      "linkedin": "https://linkedin.com/demo",
-      "twitter": "https://twitter.com/demo",
-      "instagram": "https://instagram.com/demo",
-      "email": "mailto:demo@example.com"
-    }
-  },
-  {
-    "name": "Omar Haddad",
-    "role": "QA Engineer",
-    "image": "https://randomuser.me/api/portraits/men/48.jpg",
-    "description": "Ensures quality with automated and exploratory testing.",
-    "socialLinks": {
-      "linkedin": "https://linkedin.com/demo",
-      "twitter": "https://twitter.com/demo",
-      "instagram": "https://instagram.com/demo",
-      "email": "mailto:demo@example.com"
-    }
-  },
-  {
-    "name": "Nina Petrova",
-    "role": "UI Engineer",
-    "image": "https://randomuser.me/api/portraits/women/28.jpg",
-    "description": "Implements pixel-perfect components with accessibility in mind.",
-    "socialLinks": {
-      "linkedin": "https://linkedin.com/demo",
-      "twitter": "https://twitter.com/demo",
-      "instagram": "https://instagram.com/demo",
-      "email": "mailto:demo@example.com"
-    }
-  },
-  {
-    "name": "Diego Martinez",
-    "role": "Mobile Developer",
-    "image": "https://randomuser.me/api/portraits/men/77.jpg",
-    "description": "Builds performant mobile apps with React Native.",
-    "socialLinks": {
-      "linkedin": "https://linkedin.com/demo",
-      "twitter": "https://twitter.com/demo",
-      "instagram": "https://instagram.com/demo",
-      "email": "mailto:demo@example.com"
-    }
-  },
-  {
-    "name": "Aisha Abdulla",
-    "role": "Content Designer",
-    "image": "https://randomuser.me/api/portraits/women/77.jpg",
-    "description": "Shapes product narratives with clear, inclusive copy.",
-    "socialLinks": {
-      "linkedin": "https://linkedin.com/demo",
-      "twitter": "https://twitter.com/demo",
-      "instagram": "https://instagram.com/demo",
-      "email": "mailto:demo@example.com"
-    }
-  },
-  {
-    "name": "Kenji Watanabe",
-    "role": "Security Engineer",
-    "image": "https://randomuser.me/api/portraits/men/14.jpg",
-    "description": "Safeguards data and systems with proactive security practices.",
-    "socialLinks": {
-      "linkedin": "https://linkedin.com/demo",
-      "twitter": "https://twitter.com/demo",
-      "instagram": "https://instagram.com/demo",
-      "email": "mailto:demo@example.com"
-    }
+{
+  "name": "Sanjib Sahoo",
+  "role": "Team Lead - Corporate Relation",
+  "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/sanjib.jpg",
+  "description": "Leading the company onboarding process by collaborating with partners, ensuring seamless integration, and building strong relationships that drive successful hiring outcomes.",
+  "socialLinks": {
+    "linkedin": "https://www.linkedin.com/in/sanjib-sahoo-727958234/",
+    "instagram": "https://www.instagram.com/justt.sanjiv/",
+    "email": "mailto:sanjib@hirekarma.in"
   }
+}
+
 ]

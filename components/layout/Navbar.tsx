@@ -11,7 +11,12 @@ import {
   Heart,
   UsersRound,
   Users,
-  Handshake
+  Handshake,
+  TrendingUp,
+  Compass,
+  Zap
+
+  
 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -83,22 +88,22 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
       hasDropdown: true,
       dropdownItems: [
         { label: 'Our Story', href: '/about-us/our-story', icon: BookOpen },
-        // { label: 'Mission & Value', href: '/about-us/mission-value', icon: Heart },
-        // { label: 'People', href: '/about-us/people', icon: UsersRound }
+        { label: 'Mission & Value', href: '/about-us/mission-value', icon: Heart },
+        { label: 'People', href: '/about-us/people', icon: UsersRound }
       ]
     },
-    // {
-    //   label: 'Products',
-    //   href: '/products',
-    //   icon: Zap,
-    //   hasDropdown: true,
-    //   dropdownItems: [
-    //     { label: 'Disha', href: 'https://disha.hirekarma.in/', icon: Compass },
-    //     { label: 'Sangha', href: '/products/sangha', icon: UsersRound },
-    //     { label: 'Sadhana', href: '/products/sadhana', icon: Brain },
-    //     { label: 'Saksham', href: '/products/saksham', icon: TrendingUp }
-    //   ]
-    // },
+    {
+      label: 'Products',
+      href: '/products',
+      icon: Zap,
+      hasDropdown: true,
+      dropdownItems: [
+        { label: 'Disha', href: 'https://disha.hirekarma.in/', icon: Compass },
+        // { label: 'Sangha', href: '/products/sangha', icon: UsersRound },
+        // { label: 'Sadhana', href: '/products/sadhana', icon: Brain },
+        // { label: 'Saksham', href: '/products/saksham', icon: TrendingUp }
+      ]
+    },
     // {
     //   label: 'Solutions',
     //   href: '/solutions',
