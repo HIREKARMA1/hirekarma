@@ -71,7 +71,7 @@ export default function PeoplePage() {
                 <button
                   onClick={() => setActiveTab("advisory")}
                   className={`px-6 py-2.5 rounded-full font-semibold transition-all duration-300 ${activeTab === "advisory"
-                    ? "bg-yellow-400 text-gray-900 shadow-md"
+                    ? "bg-cyan-500 text-white shadow-md"
                     : `border ${mounted && resolvedTheme === "dark"
                       ? "border-gray-600 text-gray-400 hover:border-gray-500 hover:text-gray-300"
                       : "border-gray-300 text-gray-600 hover:border-gray-400 hover:text-gray-700"
@@ -83,7 +83,7 @@ export default function PeoplePage() {
                 <button
                   onClick={() => setActiveTab("leadership")}
                   className={`px-6 py-2.5 rounded-full font-semibold transition-all duration-300 ${activeTab === "leadership"
-                    ? "bg-yellow-400 text-gray-900 shadow-md"
+                    ? "bg-cyan-500 text-white shadow-md"
                     : `border ${mounted && resolvedTheme === "dark"
                       ? "border-gray-600 text-gray-400 hover:border-gray-500 hover:text-gray-300"
                       : "border-gray-300 text-gray-600 hover:border-gray-400 hover:text-gray-700"
@@ -95,7 +95,7 @@ export default function PeoplePage() {
                 <button
                   onClick={() => setActiveTab("core")}
                   className={`px-6 py-2.5 rounded-full font-semibold transition-all duration-300 ${activeTab === "core"
-                    ? "bg-yellow-400 text-gray-900 shadow-md"
+                    ? "bg-cyan-500 text-white shadow-md"
                     : `border ${mounted && resolvedTheme === "dark"
                       ? "border-gray-600 text-gray-400 hover:border-gray-500 hover:text-gray-300"
                       : "border-gray-300 text-gray-600 hover:border-gray-400 hover:text-gray-700"
