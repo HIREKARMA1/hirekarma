@@ -23,12 +23,12 @@ const HeroBanner: React.FC = () => {
                             ? 'text-gray-100'
                             : 'text-gray-900'
                             }`}>
-                            Transforming Campus Hiring
+                           Transforming Talent Ecosystems 
                             <span className={`block mt-1 sm:mt-2 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
                                 ? 'text-cyan-400'
                                 : 'text-cyan-600'
                                 }`}>
-                                with AI, Automation, and Analytics
+                               with AI, Automation, and Analytics
                             </span>
                         </h1>
                     </div>
@@ -39,7 +39,7 @@ const HeroBanner: React.FC = () => {
                             ? 'text-gray-300'
                             : 'text-gray-600'
                             }`}>
-                            With tailored skill development, real-time dashboards, and a network of top government and private colleges, HireKarma transforms the way education aligns with industry needs. Join the hundreds of institutions and organizations already accelerating their recruitment success with HireKarma
+                            HireKarma bridges the gap between education and industry through smart technology and data-driven insights. From career readiness for students to hiring automation for companies and analytics for institutions, HireKarma connects all stakeholders in one intelligent ecosystem. Join the growing network of organizations, universities, and learners shaping the future of talent with HireKarma.
                         </p>
                     </div>
                 </div>

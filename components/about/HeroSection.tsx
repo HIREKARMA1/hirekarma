@@ -55,7 +55,7 @@ const HeroSection: React.FC = () => {
             >
               Bhubaneswar in 2020
             </strong>
-            , HireKarma emerged from a vision to{" "}
+            , HireKarma was envisioned to transform the connection between education and employment. Through{" "}
             <strong
               className={`${
                 mounted && resolvedTheme === "dark"
@@ -63,9 +63,9 @@ const HeroSection: React.FC = () => {
                   : "text-gray-700"
               }`}
             >
-              transform campus recruitment
-            </strong>{" "}
-            through AI automation and community-driven engagement.
+              AI-driven automation
+            </strong>
+            , data intelligence, and industry collaboration, HireKarma empowers students, institutions, and employers to engage in a seamless, transparent, and outcome-focused recruitment ecosystem aligning academic learning with real-world opportunities.
           </p>
         </div>
 
