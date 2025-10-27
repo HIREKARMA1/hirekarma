@@ -26,7 +26,7 @@ const teamMembers = people as TeamMember[];
 
 export default function PeoplePage() {
   const [mounted, setMounted] = useState(false);
-  const [activeTab, setActiveTab] = useState<TeamCategory>("leadership");
+  const [activeTab, setActiveTab] = useState<TeamCategory>("advisory");
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
   const { resolvedTheme } = useTheme();
   useEffect(() => setMounted(true), []);
