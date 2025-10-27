@@ -29,7 +29,7 @@ const FutureReadySection: React.FC = () => {
                                 ? 'text-emerald-400'
                                 : 'text-emerald-600'
                                 }`}>
-                                Next-Gen Campus Solutions
+                                Next-Gen Talent Solutions
                             </span>
                         </h2>
                     </div>
@@ -40,25 +40,19 @@ const FutureReadySection: React.FC = () => {
                             ? 'text-gray-300'
                             : 'text-gray-600'
                             }`}>
-                            Our platform is built with <strong className={`transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
+                            Built on <strong className={`transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
                                 ? 'text-gray-200'
                                 : 'text-gray-700'
                                 }`}>cutting-edge technology</strong> and <strong className={`transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
                                     ? 'text-gray-200'
                                     : 'text-gray-700'
-                                    }`}>scalable architecture</strong> to meet the evolving needs of modern campus recruitment.
-                        </p>
-                        <p className={`text-base sm:text-lg md:text-xl leading-relaxed transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
-                            ? 'text-gray-300'
-                            : 'text-gray-600'
-                            }`}>
-                            From <strong className={`transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
+                                    }`}>scalable architecture</strong>, our platform empowers institutions to adapt to the evolving landscape of recruitment and skill development. With <strong className={`transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
                                 ? 'text-gray-200'
                                 : 'text-gray-700'
-                                }`}>AI-powered matching</strong> to <strong className={`transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
+                                }`}>AI-driven matching</strong> and <strong className={`transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
                                     ? 'text-gray-200'
                                     : 'text-gray-700'
-                                    }`}>real-time analytics</strong>, we provide institutions with the tools they need to stay ahead in the digital transformation era.
+                                    }`}>real-time analytics</strong>, we enable smarter decisions, faster hiring, and seamless digital transformation across campuses.
                         </p>
                     </div>
 

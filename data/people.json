@@ -1,8 +1,8 @@
 [
-
   {
     "name": "Sohan Kumar Dey",
     "role": "Cheif Executive Officer",
+    "category": "leadership",
     "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/SohanKumarDey.jpg",
     "description": "Leading Hirekarma with a strong vision to ensure every fresher finds the right career opportunity by empowering them through skills, training, and effective industry connections.",
     "socialLinks": {
@@ -11,9 +11,10 @@
       "email": "mailto:sohan@hirekarma.in"
     }
   },
-    {
+  {
     "name": "Rohit Samantaray",
     "role": "Cheif Marketing Officer & COO",
+    "category": "leadership",
     "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Rohit.jpg",
     "description": "Dedicated to bridging the gap between students, employers, and institutions by building a platform that connects talent with opportunities and drives placement excellence.",
     "socialLinks": {
@@ -25,8 +26,9 @@
   {
     "name": "Lipsa P Barik",
     "role": "CEO's Office Executive ",
+    "category": "core",
     "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Lipsa.jpg",
-    "description": "Focused on research and development to deliver business-driven strategies, streamline operations, and foster innovation that contributes to Hirekarma’s long-term growth vision.",
+    "description": "Focused on research and development to deliver business-driven strategies, streamline operations, and foster innovation that contributes to Hirekarma's long-term growth vision.",
     "socialLinks": {
       "linkedin": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Lipsa.jpg",
       "email": "mailto:info@hirekarma.in"
@@ -35,6 +37,7 @@
   {
     "name": "Ansuman Panda",
     "role": "Team Lead- Operation",
+    "category": "core",
     "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Ansuman.jpg",
     "description": "Driving campus engagement and placement operations by coordinating recruitment processes that connect institutions and employers for building efficient and scalable talent pipelines.",
     "socialLinks": {
@@ -46,6 +49,7 @@
   {
     "name": "Subhasmita Sahoo",
     "role": "Team Lead- Skilling",
+    "category": "core",
     "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Subhasmita.jpg",
     "description": "Leading skill development initiatives that empower individuals with industry-relevant capabilities, enhancing employability and ensuring alignment with evolving corporate requirements.",
     "socialLinks": {
@@ -56,6 +60,7 @@
   {
     "name": "Priyanshu P Patra",
     "role": "Team Lead- HR",
+    "category": "core",
     "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Priyanshu.jpg",
     "description": "Passionate about fostering meaningful workplace engagement, connecting top talent with opportunities, and driving an inclusive HR culture that supports organizational excellence.",
     "socialLinks": {
@@ -67,24 +72,37 @@
   {
     "name": "Lokanath Panda",
     "role": "Team Lead- Development",
+    "category": "core",
     "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Lokanath.jpg",
-    "description": "Leading the development team with a focus on building scalable softwares, integrating innovative technologies, and ensuring smooth digital transformation for Hirekarma’s platform.",
+    "description": "Leading the development team with a focus on building scalable softwares, integrating innovative technologies, and ensuring smooth digital transformation for Hirekarma's platform.",
     "socialLinks": {
       "linkedin": "https://www.linkedin.com/in/lokanath-panda-642193238/",
       "instagram": "https://www.instagram.com/lokanathpanda7/",
       "email": "mailto:lokanath@hirekarma.in"
     }
   },
-{
-  "name": "Sanjib Sahoo",
-  "role": "Team Lead - Corporate Relation",
-  "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/sanjib.jpg",
-  "description": "Leading the company onboarding process by collaborating with partners, ensuring seamless integration, and building strong relationships that drive successful hiring outcomes.",
-  "socialLinks": {
-    "linkedin": "https://www.linkedin.com/in/sanjib-sahoo-727958234/",
-    "instagram": "https://www.instagram.com/justt.sanjiv/",
-    "email": "mailto:sanjib@hirekarma.in"
+  {
+    "name": "Sanjib Sahoo",
+    "role": "Team Lead - Corporate Relation",
+    "category": "core",
+    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/sanjib.jpg",
+    "description": "Leading the company onboarding process by collaborating with partners, ensuring seamless integration, and building strong relationships that drive successful hiring outcomes.",
+    "socialLinks": {
+      "linkedin": "https://www.linkedin.com/in/sanjib-sahoo-727958234/",
+      "instagram": "https://www.instagram.com/justt.sanjiv/",
+      "email": "mailto:sanjib@hirekarma.in"
+    }
+  },
+    {
+    "name": "Rama Devi Lanka",
+    "role": "Team Lead - Corporate Relation",
+    "category": "advisory",
+    "image": "/ramadevi.jpeg",
+    "description": "Rama Devi Lanka is a pioneering leader in emerging technologies and e-Governance, serving as Director of Emerging Technologies, Government of Telangana, with over 25 years of experience in tech-led transformation and policy frameworks for AI, blockchain, and digital governance.",
+    "socialLinks": {
+      "linkedin": "https://www.linkedin.com/in/ramadevi-lanka/",
+      "instagram": "",
+      "email": ""
+    }
   }
-}
-
 ]

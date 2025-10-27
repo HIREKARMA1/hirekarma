@@ -27,7 +27,7 @@ const ProblemStatement: React.FC = () => {
                                 ? 'text-red-400'
                                 : 'text-red-600'
                                 }`}>
-                                Campus Hiring Challenges
+                                Traditional Talent Ecosystem Gaps
                             </span>
                         </h2>
                     </div>
@@ -38,31 +38,10 @@ const ProblemStatement: React.FC = () => {
                             ? 'text-gray-300'
                             : 'text-gray-600'
                             }`}>
-                            Traditional campus hiring processes are <strong className={`${mounted && resolvedTheme === 'dark'
+                            The traditional talent ecosystem is <strong className={`${mounted && resolvedTheme === 'dark'
                                 ? 'text-gray-200'
                                 : 'text-gray-700'
-                                }`}>time-consuming</strong>, <strong className={`${mounted && resolvedTheme === 'dark'
-                                    ? 'text-gray-200'
-                                    : 'text-gray-700'
-                                    }`}>inefficient</strong>, and often result in <strong className={`${mounted && resolvedTheme === 'dark'
-                                        ? 'text-gray-200'
-                                        : 'text-gray-700'
-                                        }`}>poor matches</strong> between students and companies.
-                        </p>
-                        <p className={`text-base sm:text-lg md:text-xl leading-relaxed max-w-full sm:max-w-xl md:max-w-2xl ${mounted && resolvedTheme === 'dark'
-                            ? 'text-gray-300'
-                            : 'text-gray-600'
-                            }`}>
-                            Colleges struggle with <strong className={`${mounted && resolvedTheme === 'dark'
-                                ? 'text-gray-200'
-                                : 'text-gray-700'
-                                }`}>manual coordination</strong>, <strong className={`${mounted && resolvedTheme === 'dark'
-                                    ? 'text-gray-200'
-                                    : 'text-gray-700'
-                                    }`}>lack of data insights</strong>, and <strong className={`${mounted && resolvedTheme === 'dark'
-                                        ? 'text-gray-200'
-                                        : 'text-gray-700'
-                                        }`}>limited reach</strong> to quality employers.
+                                }`}>fragmented and inefficient</strong>. Students struggle to meet industry expectations, institutions lack data-driven insights, and employers find it hard to identify job-ready talent. This leads to mismatches, longer hiring cycles, and a widening gap between education and employability.
                         </p>
                     </div>
                 </div>

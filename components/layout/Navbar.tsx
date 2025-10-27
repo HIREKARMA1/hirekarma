@@ -130,7 +130,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
     // }
   ];
   const simpleLinks: SimpleLink[] = [
-    { label: 'Contact', href: '/contect', icon: Handshake }
+    { label: 'Contact', href: '/contact', icon: Handshake }
   ];
 
   return (
