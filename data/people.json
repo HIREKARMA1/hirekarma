@@ -58,18 +58,6 @@
     }
   },
   {
-    "name": "Priyanshu P Patra",
-    "role": "Team Lead- HR",
-    "category": "core",
-    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Priyanshu.jpg",
-    "description": "Passionate about fostering meaningful workplace engagement, connecting top talent with opportunities, and driving an inclusive HR culture that supports organizational excellence.",
-    "socialLinks": {
-      "linkedin": "https://www.linkedin.com/in/priyanshupriyadarsini/",
-      "instagram": "https://www.instagram.com/_.pri_y.a.n_shu._?igsh=MTNqOTk3dWl6YjluMg==",
-      "email": "mailto:hr@hirekarma.in"
-    }
-  },
-  {
     "name": "Lokanath Panda",
     "role": "Team Lead- Development",
     "category": "core",
@@ -79,6 +67,18 @@
       "linkedin": "https://www.linkedin.com/in/lokanath-panda-642193238/",
       "instagram": "https://www.instagram.com/lokanathpanda7/",
       "email": "mailto:lokanath@hirekarma.in"
+    }
+  },
+  {
+    "name": "Priyanshu P Patra",
+    "role": "Team Lead- HR",
+    "category": "core",
+    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Priyanshu.jpg",
+    "description": "Passionate about fostering meaningful workplace engagement, connecting top talent with opportunities, and driving an inclusive HR culture that supports organizational excellence.",
+    "socialLinks": {
+      "linkedin": "https://www.linkedin.com/in/priyanshupriyadarsini/",
+      "instagram": "https://www.instagram.com/_.pri_y.a.n_shu._?igsh=MTNqOTk3dWl6YjluMg==",
+      "email": "mailto:hr@hirekarma.in"
     }
   },
   {
@@ -95,7 +95,7 @@
   },
     {
     "name": "Rama Devi Lanka",
-    "role": "Team Lead - Corporate Relation",
+    "role": "Former Director Emerging Technologies Information Technology, Electronics & Communications  Department, Government of Telangana",
     "category": "advisory",
     "image": "/ramadevi.jpeg",
     "description": "Rama Devi Lanka is a pioneering leader in emerging technologies and e-Governance, serving as Director of Emerging Technologies, Government of Telangana, with over 25 years of experience in tech-led transformation and policy frameworks for AI, blockchain, and digital governance.",
