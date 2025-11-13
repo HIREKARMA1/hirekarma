@@ -24,17 +24,6 @@
     }
   },
   {
-    "name": "Lipsa P Barik",
-    "role": "CEO's Office Executive ",
-    "category": "core",
-    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Lipsa.jpg",
-    "description": "Focused on research and development to deliver business-driven strategies, streamline operations, and foster innovation that contributes to Hirekarma's long-term growth vision.",
-    "socialLinks": {
-      "linkedin": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Lipsa.jpg",
-      "email": "mailto:info@hirekarma.in"
-    }
-  },
-  {
     "name": "Ansuman Panda",
     "role": "Team Lead- Operation",
     "category": "core",
@@ -67,18 +56,6 @@
       "linkedin": "https://www.linkedin.com/in/lokanath-panda-642193238/",
       "instagram": "https://www.instagram.com/lokanathpanda7/",
       "email": "mailto:lokanath@hirekarma.in"
-    }
-  },
-  {
-    "name": "Priyanshu P Patra",
-    "role": "Team Lead- HR",
-    "category": "core",
-    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Priyanshu.jpg",
-    "description": "Passionate about fostering meaningful workplace engagement, connecting top talent with opportunities, and driving an inclusive HR culture that supports organizational excellence.",
-    "socialLinks": {
-      "linkedin": "https://www.linkedin.com/in/priyanshupriyadarsini/",
-      "instagram": "https://www.instagram.com/_.pri_y.a.n_shu._?igsh=MTNqOTk3dWl6YjluMg==",
-      "email": "mailto:hr@hirekarma.in"
     }
   },
   {
