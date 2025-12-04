@@ -36,21 +36,10 @@
     }
   },
   {
-    "name": "Subhasmita Sahoo",
-    "role": "Team Lead- Skilling",
-    "category": "core",
-    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Subhasmita.jpg",
-    "description": "Leading skill development initiatives that empower individuals with industry-relevant capabilities, enhancing employability and ensuring alignment with evolving corporate requirements.",
-    "socialLinks": {
-      "linkedin": "https://www.linkedin.com/in/subhasmita-sahoo-b9878b20a/",
-      "email": "mailto:Subhasmita@hirekarma.in"
-    }
-  },
-  {
     "name": "Lokanath Panda",
     "role": "Team Lead- Development",
     "category": "core",
-    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Lokanath.jpg",
+    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/LokanathPanda.jpg",
     "description": "Leading the development team with a focus on building scalable softwares, integrating innovative technologies, and ensuring smooth digital transformation for Hirekarma's platform.",
     "socialLinks": {
       "linkedin": "https://www.linkedin.com/in/lokanath-panda-642193238/",
