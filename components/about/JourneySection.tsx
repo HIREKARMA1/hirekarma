@@ -2,11 +2,13 @@
 
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 import { Calendar, MapPin } from "lucide-react";
 
 const JourneySection: React.FC = () => {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme } = useTheme();
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -183,12 +185,30 @@ const JourneySection: React.FC = () => {
 
         {/* Right Content - Hero GIF */}
         <div className="order-2 lg:order-2 flex justify-center mt-8 lg:mt-0">
-          <div className="relative w-full sm:w-[90%] md:w-[80%] lg:w-[95%] xl:w-[100%] h-[250px] sm:h-[320px] md:h-[420px] lg:h-[520px] xl:h-[600px]">
-            <img
-              src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/about-us/founding-story.gif"
-              alt="Journey animation"
-              className="w-full h-full object-cover rounded-2xl"
+          <div className="relative w-full sm:w-[90%] md:w-[80%] lg:w-[95%] xl:w-[100%] h-[250px] sm:h-[320px] md:h-[420px] lg:h-[520px] xl:h-[600px] overflow-hidden rounded-2xl">
+            <Image
+              src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/about-us/founding-story1.gif"
+              alt="HireKarma founding story journey animation"
+              fill
+              priority
+              quality={85}
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 95vw"
+              className={`object-cover transition-opacity duration-300 ${
+                imageLoaded ? "opacity-100" : "opacity-0"
+              }`}
+              onLoad={() => setImageLoaded(true)}
             />
+
+            {/* Loading skeleton */}
+            {!imageLoaded && (
+              <div
+                className={`absolute inset-0 rounded-2xl animate-pulse ${
+                  mounted && resolvedTheme === "dark"
+                    ? "bg-gray-800"
+                    : "bg-gray-200"
+                }`}
+              />
+            )}
 
             {/* Fallback */}
             <div
