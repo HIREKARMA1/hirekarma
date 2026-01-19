@@ -60,7 +60,7 @@ const Testimonials: React.FC = () => {
             <div className="relative overflow-hidden">
                 <div
                     ref={scrollContainerRef}
-                    className={`flex animate-testimonials-scroll space-x-3 sm:space-x-4 md:space-x-6 overflow-x-hidden scrollbar-hide touch-pan-x`}
+                    className={`flex animate-testimonials-scroll space-x-3 sm:space-x-4 md:space-x-6 overflow-x-hidden scrollbar-hide touch-pan-x will-change-transform`}
                     onMouseDown={handleDragStart}
                     onMouseMove={handleDragMove}
                     onMouseUp={handleDragEnd}
@@ -95,6 +95,7 @@ const Testimonials: React.FC = () => {
                                                 src={testimonial.image}
                                                 alt={testimonial.name}
                                                 className="w-full h-full object-cover"
+                                                loading="lazy"
                                             />
                                         </div>
                                     </div>
@@ -143,21 +144,23 @@ const Testimonials: React.FC = () => {
                 </div>
             </div>
 
-            {/* CSS Animation */}
+            {/* CSS Animation - Optimized for performance */}
             <style jsx>{`
                 @keyframes testimonials-scroll {
                     0% {
                         transform: translateX(0);
                     }
                     100% {
-                        transform: translateX(-50%); /* Move half the width of the duplicated content */
+                        transform: translateX(-50%);
                     }
                 }
                 
                 .animate-testimonials-scroll {
                     animation: testimonials-scroll 15s linear infinite;
                     display: flex;
-                    width: 200%; /* Double the width to accommodate duplicated content */
+                    width: 200%;
+                    backface-visibility: hidden;
+                    perspective: 1000px;
                 }
                 
                 @media (max-width: 1023px) {
@@ -177,6 +180,10 @@ const Testimonials: React.FC = () => {
                 .scrollbar-hide {
                     -ms-overflow-style: none;
                     scrollbar-width: none;
+                }
+                
+                .will-change-transform {
+                    will-change: transform;
                 }
             `}</style>
         </div>
