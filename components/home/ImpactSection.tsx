@@ -1,12 +1,21 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import { useTheme } from 'next-themes';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import dynamic from 'next/dynamic';
+
+// Lazy load recharts to reduce initial bundle
+const ResponsiveContainer = dynamic(() => import('recharts').then(mod => ({ default: mod.ResponsiveContainer })), { ssr: false });
+const BarChart = dynamic(() => import('recharts').then(mod => ({ default: mod.BarChart })), { ssr: false });
+const Bar = dynamic(() => import('recharts').then(mod => ({ default: mod.Bar })), { ssr: false });
+const Cell = dynamic(() => import('recharts').then(mod => ({ default: mod.Cell })), { ssr: false });
+const XAxis = dynamic(() => import('recharts').then(mod => ({ default: mod.XAxis })), { ssr: false });
+const YAxis = dynamic(() => import('recharts').then(mod => ({ default: mod.YAxis })), { ssr: false });
+const CartesianGrid = dynamic(() => import('recharts').then(mod => ({ default: mod.CartesianGrid })), { ssr: false });
+const Tooltip = dynamic(() => import('recharts').then(mod => ({ default: mod.Tooltip })), { ssr: false });
 
 // Example data for the chart
 const impactData = [
-    // { year: '2023', value: 0 },
     { year: '2024', value: 8000 },
     { year: '2025', value: 14000 },
     { year: '2026', value: "Comming Soon" },
@@ -16,6 +25,23 @@ const impactData = [
     { year: '2030', value: "Comming Soon" },
     { year: '2031', value: "Comming Soon" },
 ];
+
+// Chart component - will be lazy loaded
+const ChartComponent: React.FC<{ mounted: boolean; resolvedTheme?: string }> = ({ mounted, resolvedTheme }) => (
+    <ResponsiveContainer width="100%" height="100%">
+        <BarChart data={impactData} margin={{ top: 40, right: 40, left: 20, bottom: 40 }}>
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="year" />
+            <YAxis />
+            <Tooltip />
+            <Bar dataKey="value" fill="#06b6d4">
+                {impactData.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={mounted && resolvedTheme === 'dark' ? '#06b6d4' : '#0891b2'} />
+                ))}
+            </Bar>
+        </BarChart>
+    </ResponsiveContainer>
+);
 
 const ImpactSection: React.FC = () => {
     const [mounted, setMounted] = useState(false);
@@ -180,19 +206,9 @@ const ImpactSection: React.FC = () => {
                         ? 'bg-gradient-to-br from-gray-800 via-gray-800 to-gray-900 border-gray-600'
                         : 'bg-gradient-to-br from-gray-50 via-white to-gray-100 border-gray-200'
                         }`}>
-                        <ResponsiveContainer width="100%" height="100%">
-                            <BarChart data={impactData} margin={{ top: 40, right: 40, left: 20, bottom: 40 }}>
-                                <CartesianGrid strokeDasharray="3 3" />
-                                <XAxis dataKey="year" />
-                                <YAxis />
-                                <Tooltip />
-                                <Bar dataKey="value" fill="#06b6d4">
-                                    {impactData.map((entry, index) => (
-                                        <Cell key={`cell-${index}`} fill={mounted && resolvedTheme === 'dark' ? '#06b6d4' : '#0891b2'} />
-                                    ))}
-                                </Bar>
-                            </BarChart>
-                        </ResponsiveContainer>
+                        <Suspense fallback={<div className="w-full h-full flex items-center justify-center" />}>
+                            <ChartComponent mounted={mounted} resolvedTheme={resolvedTheme} />
+                        </Suspense>
                     </div>
                 </div>
             </div>

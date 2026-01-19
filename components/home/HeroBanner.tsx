@@ -2,10 +2,12 @@
 
 import React, { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
+import Image from 'next/image';
 
 const HeroBanner: React.FC = () => {
     const [mounted, setMounted] = useState(false);
     const { resolvedTheme } = useTheme();
+    const [imageLoaded, setImageLoaded] = useState(false);
 
     useEffect(() => {
         setMounted(true);
@@ -16,26 +18,26 @@ const HeroBanner: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] lg:min-h-[85vh]">
 
                 {/* Left Content - Clean and Modern */}
-                <div className="space-y-6 sm:space-y-8 lg:space-y-10">
+                <div className="space-y-6 sm:space-y-8 lg:space-y-10 px-[5px] sm:px-0">
                     {/* Main Heading */}
                     <div className="space-y-4 sm:space-y-6">
                         <h1 className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl font-bold leading-tight tracking-tight transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
                             ? 'text-gray-100'
                             : 'text-gray-900'
                             }`}>
-                           Transforming Talent Ecosystems 
+                            Transforming Talent Ecosystems
                             <span className={`block mt-1 sm:mt-2 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
                                 ? 'text-cyan-400'
                                 : 'text-cyan-600'
                                 }`}>
-                               with AI, Automation, and Analytics
+                                with AI, Automation, and Analytics
                             </span>
                         </h1>
                     </div>
 
                     {/* Paragraph */}
                     <div className="space-y-3 sm:space-y-4">
-                        <p className={`text-base sm:text-lg md:text-xl leading-relaxed max-w-full sm:max-w-xl md:max-w-2xl transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
+                        <p className={`text-justify sm:text-left text-base sm:text-lg md:text-xl leading-relaxed max-w-full sm:max-w-xl md:max-w-2xl transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
                             ? 'text-gray-300'
                             : 'text-gray-600'
                             }`}>
@@ -44,15 +46,28 @@ const HeroBanner: React.FC = () => {
                     </div>
                 </div>
 
-                {/* Right Content - Hero GIF */}
-                <div className="relative">
-                    {/* Hero GIF */}
-                    <div className="relative w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] sm:p-5 md:p-5">
-                        <img
-                            src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/Heroimage.gif"
-                            alt="Hero animation"
-                            className="w-full h-full object-cover rounded-2xl"
+                {/* Right Content - Hero Image */}
+                <div className="relative px-0 sm:px-5 md:px-5">
+                    <div className="relative w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] overflow-hidden rounded-2xl">
+                        <Image
+                            src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/Hero.gif"
+                            alt="Hero animation - HireKarma platform showcase"
+                            fill
+                            priority
+                            quality={85}
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
+                            className={`object-cover transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+                            onLoad={() => setImageLoaded(true)}
                         />
+                        
+                        {/* Loading skeleton */}
+                        {!imageLoaded && (
+                            <div className={`absolute inset-0 rounded-2xl animate-pulse ${mounted && resolvedTheme === 'dark'
+                                ? 'bg-gray-800'
+                                : 'bg-gray-200'
+                                }`} />
+                        )}
+
                         {/* Fallback content for browsers that don't support images */}
                         <div className={`absolute inset-0 flex items-center justify-center rounded-2xl hidden ${mounted && resolvedTheme === 'dark'
                             ? 'bg-gray-900/50 backdrop-blur-sm'
@@ -82,9 +97,13 @@ const HeroBanner: React.FC = () => {
                         </div>
                     </div>
                 </div>
+
+
             </div>
         </div>
     );
 };
 
 export default HeroBanner;
+
+
