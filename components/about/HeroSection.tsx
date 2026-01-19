@@ -2,10 +2,12 @@
 
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
 const HeroSection: React.FC = () => {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme } = useTheme();
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -70,15 +72,33 @@ const HeroSection: React.FC = () => {
         </div>
 
         {/* Right Content - Hero GIF */}
-        <div className="relative flex order-2 lg:order-2 justify-center mt-8 lg:mt-0">
-          <div className="relative w-full sm:w-[80%] md:w-[80%] lg:w-[95%] xl:w-[95%] h-[250px] sm:h-[300px] md:h-[420px] lg:h-[490px] xl:h-[540px]">
-            <img
-              src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/about-us/briding_gap_beetween.gif"
-              alt="Hero animation"
-              className="w-full h-full object-cover rounded-2xl"
+        <div className="relative px-0 sm:px-5 md:px-5 order-2 lg:order-2">
+          <div className="relative w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] overflow-hidden rounded-2xl">
+            <Image
+              src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/about-us/briding_gap.gif"
+              alt="Hero animation - Bridging academia and industry"
+              fill
+              priority
+              quality={85}
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
+              className={`object-cover transition-opacity duration-300 ${
+                imageLoaded ? "opacity-100" : "opacity-0"
+              }`}
+              onLoad={() => setImageLoaded(true)}
             />
-            
-            {/* Fallback */}
+
+            {/* Loading skeleton */}
+            {!imageLoaded && (
+              <div
+                className={`absolute inset-0 rounded-2xl animate-pulse ${
+                  mounted && resolvedTheme === "dark"
+                    ? "bg-gray-800"
+                    : "bg-gray-200"
+                }`}
+              />
+            )}
+
+            {/* Fallback content for browsers that don't support images */}
             <div
               className={`absolute inset-0 flex items-center justify-center rounded-2xl hidden ${
                 mounted && resolvedTheme === "dark"
@@ -86,7 +106,7 @@ const HeroSection: React.FC = () => {
                   : "bg-white/50 backdrop-blur-sm"
               }`}
             >
-              <div className="text-center space-y-3">
+              <div className="text-center space-y-4">
                 <div
                   className={`w-12 sm:w-16 h-12 sm:h-16 mx-auto rounded-full flex items-center justify-center ${
                     mounted && resolvedTheme === "dark"

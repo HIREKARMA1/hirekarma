@@ -2,10 +2,12 @@
 
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
 const ChallengeSection: React.FC = () => {
     const [mounted, setMounted] = useState(false);
     const { resolvedTheme } = useTheme();
+    const [imageLoaded, setImageLoaded] = useState(false);
 
     useEffect(() => {
         setMounted(true);
@@ -68,13 +70,30 @@ const ChallengeSection: React.FC = () => {
 
                 {/* RIGHT CONTENT - HERO GIF */}
                 <div className="relative order-2 lg:order-2 flex justify-center lg:justify-end mt-6 lg:mt-0">
-                    <div className="relative w-full sm:w-[90%] md:w-[80%] lg:w-[100%] xl:w-[100%] h-[250px] sm:h-[200px] md:h-[300px] lg:h-[400px] xl:h-[500px]">
-                        <img
+                    <div className="relative w-full sm:w-[90%] md:w-[80%] lg:w-[100%] xl:w-[100%] h-[250px] sm:h-[200px] md:h-[300px] lg:h-[400px] xl:h-[500px] overflow-hidden rounded-2xl">
+                        <Image
                             src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/about-us/challenges_we_saw.gif"
-                            alt="Bridging the gap animation"
-                            className="w-full h-full object-cover object-left  pr-10"
+                            alt="Campus hiring roadblocks challenges visualization"
+                            fill
+                            priority
+                            quality={85}
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 50vw"
+                            className={`object-cover object-left transition-opacity duration-300 ${
+                                imageLoaded ? "opacity-100" : "opacity-0"
+                            }`}
+                            onLoad={() => setImageLoaded(true)}
                         />
 
+                        {/* Loading skeleton */}
+                        {!imageLoaded && (
+                            <div
+                                className={`absolute inset-0 rounded-2xl animate-pulse ${
+                                    mounted && resolvedTheme === "dark"
+                                        ? "bg-gray-800"
+                                        : "bg-gray-200"
+                                }`}
+                            />
+                        )}
 
                         {/* FALLBACK */}
                         <div
