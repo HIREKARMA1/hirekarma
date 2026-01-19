@@ -2,9 +2,15 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
-import WavyBackground from "@/components/layout/WavyBackground";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import dynamic from "next/dynamic";
+
+// Lazy load WavyBackground to improve initial paint
+const WavyBackground = dynamic(() => import("@/components/layout/WavyBackground"), {
+  ssr: true,
+  loading: () => null,
+});
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700', '900'],
@@ -25,11 +31,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
+      <head>
+        {/* Preconnect to external resources */}
+        <link rel="preconnect" href="https://randomuser.me" />
+        <link rel="preconnect" href="https://hirekarma.s3.us-east-1.amazonaws.com" />
+        <link rel="dns-prefetch" href="https://randomuser.me" />
+        <link rel="dns-prefetch" href="https://hirekarma.s3.us-east-1.amazonaws.com" />
+      </head>
       <body
         className={`${roboto.variable} antialiased`}
       >
       <div className="relative min-h-screen">
-        {/* Wavy Background */}
+        {/* Wavy Background - Lazy loaded */}
         <WavyBackground variant="primary" intensity="medium" density="sparse" />
         <ThemeProvider>
           <Navbar />
