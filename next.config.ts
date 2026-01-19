@@ -2,8 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   // Performance optimizations
-  swcMinify: true,
-  compress: true,
+  // Note: swcMinify is default in Next.js 15+, compress is handled by deployment
   productionBrowserSourceMaps: false,
   
   // Image optimization
