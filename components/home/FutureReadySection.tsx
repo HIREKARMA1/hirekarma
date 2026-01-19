@@ -76,7 +76,7 @@ const FutureReadySection: React.FC = () => {
 
                 <div className="relative w-full h-[220px] xs:h-[280px] sm:h-[320px] md:h-[350px] lg:h-[420px] xl:h-[480px] flex items-center justify-center">
                     <video
-                        src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/HirekarmaSolution.mp4"
+                        src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/HirekarmaSolution1.mp4"
                         autoPlay
                         loop
                         muted

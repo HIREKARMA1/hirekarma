@@ -51,7 +51,7 @@ const ProblemStatement: React.FC = () => {
                     {/* Problem Statement GIF */}
                     <div className="relative w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[450px]">
                         <img
-                            src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/problemStatementSection.gif"
+                            src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/problemStatemen.gif"
                             alt="Problem Statement animation"
                             className="w-full h-full object-cover rounded-2xl"
                         />
