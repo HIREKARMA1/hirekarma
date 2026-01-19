@@ -251,7 +251,7 @@ const Footer: React.FC = () => {
             </h3>
             <ul className="space-y-3">
               <li>
-                <a href="/contect" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
+                <a href="/contact" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
                   ? 'text-gray-300 hover:text-emerald-400'
                   : 'text-gray-600 hover:text-emerald-600'
                   }`}>

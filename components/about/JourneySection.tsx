@@ -185,7 +185,7 @@ const JourneySection: React.FC = () => {
         <div className="order-2 lg:order-2 flex justify-center mt-8 lg:mt-0">
           <div className="relative w-full sm:w-[90%] md:w-[80%] lg:w-[95%] xl:w-[100%] h-[250px] sm:h-[320px] md:h-[420px] lg:h-[520px] xl:h-[600px]">
             <img
-              src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/about-us/the_journey_bigin.gif"
+              src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/about-us/founding-story.gif"
               alt="Journey animation"
               className="w-full h-full object-cover rounded-2xl"
             />

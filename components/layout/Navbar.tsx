@@ -99,9 +99,9 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
       hasDropdown: true,
       dropdownItems: [
         { label: 'Disha', href: 'https://disha.hirekarma.in/', icon: Compass },
+        { label: 'SolviqAI', href: 'https://www.solviqai.in/', icon: TrendingUp }
         // { label: 'Sangha', href: '/products/sangha', icon: UsersRound },
         // { label: 'Sadhana', href: '/products/sadhana', icon: Brain },
-        // { label: 'Saksham', href: '/products/saksham', icon: TrendingUp }
       ]
     },
     // {
