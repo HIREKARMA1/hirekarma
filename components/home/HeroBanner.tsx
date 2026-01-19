@@ -57,7 +57,7 @@ const HeroBanner: React.FC = () => {
                             quality={85}
                             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
                             className={`object-cover transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
-                            onLoadingComplete={() => setImageLoaded(true)}
+                            onLoad={() => setImageLoaded(true)}
                         />
                         
                         {/* Loading skeleton */}
