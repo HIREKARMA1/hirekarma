@@ -1,9 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Performance optimizations
-  swcMinify: true,
-  compress: true,
+  // Performance optimizations handled by Next.js 16+ automatically
   productionBrowserSourceMaps: false,
   
   // Image optimization
