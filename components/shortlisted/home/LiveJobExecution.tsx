@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import { Calendar } from 'lucide-react';
 import Image from 'next/image';
+import { Button } from '../ui/button';
+import { cn } from '@/lib/shortlisted/utils';
 
 const LiveJobExecution: React.FC = () => {
     const [mounted, setMounted] = useState(false);
@@ -54,12 +56,17 @@ const LiveJobExecution: React.FC = () => {
                         </p>
                     </div>
 
-                    {/* Phase 2 Badge */}
-                    <div className="flex justify-center mb-8">
-                        <span className="bg-[#00BAE8] text-white font-semibold text-sm px-3 py-1 rounded-lg">
-                            Phase 2
-                        </span>
-                    </div>
+                {/* Phase 1 Button */}
+                <div className="flex justify-center mb-12">
+                    <Button
+                        className={cn(
+                            "bg-[#00a2e5] hover:bg-[#0091cc] text-white rounded-lg",
+                            "px-5 py-2 font-semibold text-[20px] font-poppins"
+                        )}
+                    >
+                        Phase 2
+                    </Button>
+                </div>
                 </div>
 
                 {/* Premium Cards Grid */}
