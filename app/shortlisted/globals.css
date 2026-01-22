@@ -135,7 +135,8 @@
 
 @layer components {
   .gradient-text {
-    @apply bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r bg-clip-text text-transparent;
+    background-image: linear-gradient(to right, #1b52a4, #00a2e5);
   }
   
   .card {
