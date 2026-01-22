@@ -42,7 +42,10 @@ const CTABanner: React.FC = () => {
                     {/* Call-to-Action Buttons */}
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-6 sm:mb-8 md:mb-12">
                         <Button 
-                            className="bg-black hover:bg-gray-900 text-white h-[50px] px-4 sm:px-6 py-3 text-sm sm:text-base font-semibold rounded-xl transition-all duration-300 flex items-center gap-[10px] w-full sm:w-auto"
+                            className={`${mounted && resolvedTheme === 'dark'
+                                ? 'bg-blue-700 hover:bg-blue-800'
+                                : 'bg-gray-900 hover:bg-gray-800'
+                                } text-white h-[50px] px-4 sm:px-6 py-3 text-sm sm:text-base font-semibold rounded-xl transition-all duration-300 flex items-center gap-[10px] w-full sm:w-auto`}
                         >
                            <Link href="https://forms.gle/oDq7HQkzx6zk3Nz76">Register Now</Link>
                             <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />

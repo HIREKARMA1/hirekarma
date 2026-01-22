@@ -8,14 +8,18 @@ import { useEffect, useState } from "react"
 import { cn } from "@/lib/shortlisted/utils"
 import Link from "next/link"
 export function HeroSection() {
-  const { theme } = useTheme()
+  const { resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
     setMounted(true)
   }, [])
 
-  const vectorFill = mounted && theme === "dark" ? "#2a3441" : "#EEF7FF"
+  // Check if dark theme is active - same pattern as navbar
+  const isDark = mounted && resolvedTheme === "dark"
+  
+  const vectorFill = isDark ? "#2a3441" : "#EEF7FF"
+  const sectionBgColor = isDark ? "#1a1f2e" : "#ffffff"
   const features = [
     "Live jobs & campus drives",
     "Offline + online execution",
@@ -24,7 +28,10 @@ export function HeroSection() {
   ]
 
   return (
-    <section className="relative min-h-screen md:min-h-0 md:py-8 lg:min-h-screen lg:py-0 pt-4 flex items-center md:items-start lg:items-center bg-white dark:bg-[#1a1f2e] overflow-hidden max-[375px]:pt-8">
+    <section 
+      className="relative min-h-screen md:min-h-0 md:py-8 lg:min-h-screen lg:py-0 pt-4 flex items-center md:items-start lg:items-center overflow-hidden max-[375px]:pt-8"
+      style={{ backgroundColor: sectionBgColor }}
+    >
       <style dangerouslySetInnerHTML={{
         __html: `
         @media (min-width: 1024px) {
@@ -77,7 +84,10 @@ export function HeroSection() {
           {/* Left Section - Content */}
           <div className="flex flex-col space-y-6 lg:space-y-8 z-10 px-2 sm:px-0">
             {/* Main Heading */}
-            <h1 className="font-semibold text-[36px] max-[375px]:text-[32px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-[1.1] text-gray-900 dark:text-white font-poppins break-words">
+            <h1 
+              className="font-semibold text-[36px] max-[375px]:text-[32px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-[1.1] font-poppins break-words"
+              style={{ color: isDark ? '#ffffff' : '#111827' }}
+            >
               Get Shortlisted
               <br />
               Faster. Get Placed
@@ -86,7 +96,10 @@ export function HeroSection() {
             </h1>
 
             {/* Sub Heading */}
-            <p className="font-normal text-base max-[375px]:text-sm sm:text-lg md:text-xl lg:text-2xl text-gray-700 dark:text-gray-300 font-poppins">
+            <p 
+              className="font-normal text-base max-[375px]:text-sm sm:text-lg md:text-xl lg:text-2xl font-poppins"
+              style={{ color: isDark ? '#d1d5db' : '#374151' }}
+            >
               60-day premium placement acceleration program for unplaced students.
             </p>
 
@@ -100,7 +113,10 @@ export function HeroSection() {
                   <div className="flex-shrink-0 mt-0.5 flex items-center justify-center w-6 h-6 rounded-full bg-[#00a2e5]">
                     <Check className="w-4 h-4 text-white stroke-[2.5]" />
                   </div>
-                  <span className="font-normal text-[20px] leading-relaxed text-gray-900 dark:text-white font-poppins">
+                  <span 
+                    className="font-normal text-[20px] leading-relaxed font-poppins"
+                    style={{ color: isDark ? '#ffffff' : '#111827' }}
+                  >
                     {feature}
                   </span>
                 </div>
@@ -138,20 +154,28 @@ export function HeroSection() {
                 <Button
                   variant="outline"
                   className={cn(
-                    "border-2 border-gray-900 dark:border-white",
-                    "text-gray-900 dark:text-white",
-                    "bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800",
-                    "rounded-lg px-5 py-2 font-semibold text-[20px] font-poppins h-auto w-full sm:w-auto"
+                    "border-2 bg-transparent rounded-lg px-5 py-2 font-semibold text-[20px] font-poppins h-auto w-full sm:w-auto",
+                    isDark ? "hover:bg-gray-800" : "hover:bg-gray-100"
                   )}
+                  style={{
+                    borderColor: isDark ? '#ffffff' : '#111827',
+                    color: isDark ? '#ffffff' : '#111827'
+                  }}
                 >
                   Check Eligibility
                 </Button>
                 {/* Tooltip */}
-                <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 dark:bg-gray-700 text-white text-sm font-poppins rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-50">
+                <div 
+                  className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 text-white text-sm font-poppins rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-50"
+                  style={{ backgroundColor: isDark ? '#374151' : '#111827' }}
+                >
                   For 2025 & 2026 Graduates
                   {/* Tooltip arrow */}
                   <div className="absolute top-full left-1/2 transform -translate-x-1/2 -mt-1">
-                    <div className="border-4 border-transparent border-t-gray-900 dark:border-t-gray-700"></div>
+                    <div 
+                      className="border-4 border-transparent"
+                      style={{ borderTopColor: isDark ? '#374151' : '#111827' }}
+                    ></div>
                   </div>
                 </div>
               </div>

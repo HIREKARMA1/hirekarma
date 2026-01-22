@@ -32,7 +32,6 @@ export default function ShortlistedLayout({
     return (
         <div className={poppins.className}>
             <ThemeProvider
-                attribute="class"
                 defaultTheme="system"
                 enableSystem
                 disableTransitionOnChange

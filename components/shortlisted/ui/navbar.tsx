@@ -29,10 +29,16 @@ export function Navbar({ className }: NavbarProps) {
     setMounted(true)
   }, [])
 
+  // Check if dark theme is active - same pattern as logo
+  const isDark = mounted && resolvedTheme === "dark"
+
   // Logo URLs based on theme - always provide a default
-  const logoUrl = mounted && resolvedTheme === "dark"
+  const logoUrl = isDark
     ? "https://hirekarma.s3.us-east-1.amazonaws.com/shortlisted/shortlisted-logo-dm.png"
     : "https://hirekarma.s3.us-east-1.amazonaws.com/shortlisted/shortlisted-logo-lm.png"
+
+  // Background color based on theme
+  const navBgColor = isDark ? "#1a1f2e" : "#ffffff"
 
   return (
     <>
@@ -42,11 +48,16 @@ export function Navbar({ className }: NavbarProps) {
       <nav
         className={cn(
           "fixed top-0 left-0 right-0 z-[100] w-full transition-colors",
-          "bg-white dark:bg-[#1a1f2e]",
-          "shadow-[0_2px_8px_rgba(0,0,0,0.08)] dark:shadow-[0_2px_8px_rgba(0,0,0,0.3)]",
           className
         )}
-        style={{ position: 'fixed', top: 0, left: 0, right: 0 }}
+        style={{ 
+          position: 'fixed', 
+          top: 0, 
+          left: 0, 
+          right: 0,
+          backgroundColor: navBgColor,
+          boxShadow: `0 2px 8px ${isDark ? 'rgba(0,0,0,0.3)' : 'rgba(0,0,0,0.08)'}`
+        }}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 max-w-[1600px]">
           <div className="flex h-20 items-center justify-between">
@@ -65,7 +76,10 @@ export function Navbar({ className }: NavbarProps) {
                   />
                 </div>
               ) : (
-                <span className="text-xl font-bold text-gray-900 dark:text-white font-poppins">
+                <span 
+                  className="text-xl font-bold font-poppins"
+                  style={{ color: isDark ? '#ffffff' : '#111827' }}
+                >
                   Shortlisted
                 </span>
               )}
@@ -99,7 +113,8 @@ export function Navbar({ className }: NavbarProps) {
               {/* Mobile Menu Button */}
               <button
                 type="button"
-                className="md:hidden p-2 text-gray-900 dark:text-gray-200"
+                className="md:hidden p-2"
+                style={{ color: isDark ? '#e5e7eb' : '#111827' }}
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 aria-label="Toggle menu"
               >
@@ -115,7 +130,13 @@ export function Navbar({ className }: NavbarProps) {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-gray-200 dark:border-[#2a3441] bg-white dark:bg-[#1a1f2e]">
+          <div 
+            className="md:hidden border-t"
+            style={{ 
+              borderColor: isDark ? '#2a3441' : '#e5e7eb',
+              backgroundColor: navBgColor
+            }}
+          >
             <div className="container mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 max-w-[1600px] py-4 space-y-4">
               {/* {navigationItems.map((item) => (
                 <Link
@@ -127,7 +148,10 @@ export function Navbar({ className }: NavbarProps) {
                   {item.label}
                 </Link>
               ))} */}
-              <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-[#2a3441]">
+              <div 
+                className="flex items-center justify-between pt-4 border-t"
+                style={{ borderColor: isDark ? '#2a3441' : '#e5e7eb' }}
+              >
                 <ThemeToggle />
                 <Button
                   className="bg-[#00a2e5] hover:bg-[#0091cc] text-white rounded-lg px-6 py-2 font-medium text-sm"

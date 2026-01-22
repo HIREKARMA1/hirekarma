@@ -2,6 +2,8 @@
 
 import { X } from "lucide-react"
 import { cn } from "@/lib/shortlisted/utils"
+import { useTheme } from "next-themes"
+import { useEffect, useState } from "react"
 
 const problems = [
   "Applying daily, no interview calls",
@@ -11,16 +13,37 @@ const problems = [
 ]
 
 export function WhyShortlistedSection() {
+  const { resolvedTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  // Check if dark theme is active - same pattern as navbar
+  const isDark = mounted && resolvedTheme === "dark"
+  
+  const sectionBgColor = isDark ? "#1a1f2e" : "#ffffff"
+
   return (
-    <section className="relative bg-white dark:bg-[#1a1f2e] py-16 lg:py-24">
+    <section 
+      className="relative py-16 lg:py-24"
+      style={{ backgroundColor: sectionBgColor }}
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 max-w-[1600px]">
         {/* Title */}
         <div className="text-center mb-12 px-2 sm:px-0">
-          <h1 className="font-semibold text-[36px] max-[375px]:text-[32px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-[1.1] text-gray-900 dark:text-white font-poppins mb-4 break-words">
+          <h1 
+            className="font-semibold text-[36px] max-[375px]:text-[32px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-[1.1] font-poppins mb-4 break-words"
+            style={{ color: isDark ? '#ffffff' : '#111827' }}
+          >
             Why SHORTLISTED Exists
           </h1>
           
-          <p className="font-normal text-base max-[375px]:text-sm sm:text-lg md:text-xl lg:text-2xl text-gray-700 dark:text-gray-300 font-poppins">
+          <p 
+            className="font-normal text-base max-[375px]:text-sm sm:text-lg md:text-xl lg:text-2xl font-poppins"
+            style={{ color: isDark ? '#d1d5db' : '#374151' }}
+          >
             You&apos;re stuck in a loop. We&apos;re here to break it.
           </p>
         </div>
@@ -51,12 +74,20 @@ export function WhyShortlistedSection() {
         </div>
 
         {/* Separator Line */}
-        <div className="w-full h-px bg-gray-600 dark:bg-gray-700 my-8 lg:my-12" />
+        <div 
+          className="w-full h-px my-8 lg:my-12"
+          style={{ backgroundColor: isDark ? '#374151' : '#4b5563' }}
+        />
 
         {/* Concluding Statement */}
         <div className="text-center">
           <p className="text-2xl lg:text-3xl xl:text-4xl font-bold font-poppins">
-            <span className="text-gray-900 dark:text-white font-poppins">It&apos;s time for execution </span>
+            <span 
+              className="font-poppins"
+              style={{ color: isDark ? '#ffffff' : '#111827' }}
+            >
+              It&apos;s time for execution{" "}
+            </span>
             <span className="text-[#00a2e5]">over effort</span>
           </p>
         </div>

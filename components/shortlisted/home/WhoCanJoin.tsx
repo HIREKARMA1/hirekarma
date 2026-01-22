@@ -27,10 +27,16 @@ const WhoCanJoin: React.FC = () => {
             <div className="max-w-[1000px] mx-auto px-2 sm:px-0">
                 {/* Header Section */}
                 <div className="text-center mb-8 sm:mb-12">
-                    <h2 className="font-semibold text-[36px] max-[375px]:text-[32px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-[1.1] text-gray-900 dark:text-white font-poppins mb-4 break-words">
+                    <h2 className={`font-semibold text-[36px] max-[375px]:text-[32px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-[1.1] font-poppins mb-4 break-words ${mounted && resolvedTheme === 'dark'
+                        ? 'text-white'
+                        : 'text-gray-900'
+                        }`}>
                         Who Can Join
                     </h2>
-                    <p className="font-normal text-base max-[375px]:text-sm sm:text-lg md:text-xl lg:text-2xl text-gray-700 dark:text-gray-300 font-poppins">
+                    <p className={`font-normal text-base max-[375px]:text-sm sm:text-lg md:text-xl lg:text-2xl font-poppins ${mounted && resolvedTheme === 'dark'
+                        ? 'text-gray-300'
+                        : 'text-gray-700'
+                        }`}>
                         This program is built for students ready to execute
                     </p>
                 </div>
@@ -52,7 +58,7 @@ const WhoCanJoin: React.FC = () => {
                                         </div>
                                     </div>
                                     {/* Criterion Text */}
-                                    <p className="text-base font-medium text-gray-800">
+                                    <p className="text-base font-medium text-gray-800 font-poppins ">
                                         {criterion}
                                     </p>
                                 </div>
@@ -69,7 +75,7 @@ const WhoCanJoin: React.FC = () => {
                                 <Users className="w-6 h-6 text-[#FFD4A1]" />
                             </div>
                             {/* Limited Seats Text */}
-                            <p className="text-base font-semibold text-gray-800">
+                            <p className="text-base font-bold text-gray-800 font-poppins">
                                 Limited Seats: Only 12 per Batch
                             </p>
                         </div>
