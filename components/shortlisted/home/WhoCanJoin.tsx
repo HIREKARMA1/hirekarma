@@ -27,7 +27,7 @@ const WhoCanJoin: React.FC = () => {
             <div className="max-w-[1000px] mx-auto px-2 sm:px-0">
                 {/* Header Section */}
                 <div className="text-center mb-8 sm:mb-12">
-                    <h2 className={`font-semibold text-[36px] max-[375px]:text-[32px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-[1.1] font-poppins mb-4 break-words ${mounted && resolvedTheme === 'dark'
+                    <h2 className={`font-bold text-[36px] max-[375px]:text-[32px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-[1.1] font-poppins mb-4 break-words ${mounted && resolvedTheme === 'dark'
                         ? 'text-white'
                         : 'text-gray-900'
                         }`}>
@@ -49,7 +49,7 @@ const WhoCanJoin: React.FC = () => {
                             {eligibilityCriteria.map((criterion, index) => (
                                 <div
                                     key={index}
-                                    className="flex items-center gap-3 h-[70px] p-[10px] bg-white border border-[#E6E7EB] rounded-2xl"
+                                    className="flex items-center gap-3 h-[70px] p-[10px] bg-white border border-[#E6E7EB] rounded-2xl font-poppins"
                                 >
                                     {/* Checkmark Icon */}
                                     <div className="flex-shrink-0">
