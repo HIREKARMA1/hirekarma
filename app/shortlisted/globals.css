@@ -54,6 +54,17 @@
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
   }
+  
+  /* Force scrolling to work on all devices */
+  html {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  body {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 @layer base {
@@ -78,6 +89,8 @@
   html {
     scrollbar-gutter: stable;
     overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
   }
   
   /* Ensure dropdowns don't cause layout shifts */
@@ -88,6 +101,10 @@
   /* Prevent layout shifts from dropdowns */
   body {
     overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    touch-action: pan-y pan-x;
   }
   
   /* Fix for Radix UI Select components */
@@ -130,6 +147,12 @@
   body {
     width: 100% !important;
     max-width: 100% !important;
+  }
+  
+  /* Ensure scrolling works on all devices */
+  html, body {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
@@ -245,11 +268,68 @@ html, body {
   position: relative;
 }
 
-/* Prevent touch scrolling issues on mobile */
-@media (max-width: 1023px) {
-  body {
+/* Android-specific scrolling fixes */
+@supports (-webkit-touch-callout: none) {
+  /* iOS Safari */
+  html, body {
     -webkit-overflow-scrolling: touch;
-    overscroll-behavior: none;
+  }
+}
+
+/* Android Chrome and other browsers - Mobile scrolling fixes */
+@media (max-width: 1023px) {
+  html {
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    /* Remove height constraint to allow scrolling */
+    height: auto !important;
+    min-height: 100%;
+  }
+  
+  body {
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: auto;
+    overscroll-behavior-x: none;
+    /* Remove height constraint to allow scrolling */
+    height: auto !important;
+    min-height: 100vh;
+    position: relative;
+    touch-action: pan-y pan-x;
+    -ms-touch-action: pan-y pan-x;
+    /* Force enable scrolling */
+    overflow-style: scrollbar;
+  }
+  
+  .shortlisted-theme-container {
+    overflow-y: visible !important;
+    overflow-x: hidden !important;
+    min-height: 100vh;
+    height: auto !important;
+    position: relative;
+    touch-action: pan-y;
+  }
+  
+  main {
+    overflow-y: visible !important;
+    overflow-x: hidden !important;
+    position: relative;
+    touch-action: pan-y;
+    min-height: 100vh;
+  }
+  
+  /* Ensure sections can scroll */
+  section {
+    position: relative;
+    touch-action: pan-y;
+  }
+  
+  /* Hero section should not prevent scrolling */
+  section.relative {
+    overflow: visible !important;
   }
   
   .overflow-x-hidden {

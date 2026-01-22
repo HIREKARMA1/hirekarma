@@ -16,7 +16,15 @@ function ShortlistedThemeWrapper({ children }: { children: React.ReactNode }) {
     const isDark = mounted && resolvedTheme === "dark"
     
     return (
-        <div className={`shortlisted-theme-container min-h-screen w-full bg-white ${isDark ? "dark" : ""} ${isDark ? "dark:bg-[#1a1f2e]" : ""}`}>
+        <div 
+            className={`shortlisted-theme-container min-h-screen w-full bg-white ${isDark ? "dark" : ""} ${isDark ? "dark:bg-[#1a1f2e]" : ""}`} 
+            style={{ 
+                overflowY: 'visible', 
+                overflowX: 'hidden',
+                touchAction: 'pan-y',
+                WebkitOverflowScrolling: 'touch'
+            }}
+        >
             {children}
         </div>
     )
