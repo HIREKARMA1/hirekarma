@@ -77,7 +77,9 @@
   /* Prevent layout shift when scrollbar appears/disappears */
   html {
     scrollbar-gutter: stable;
-    overflow-y: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
   }
   
   /* Ensure dropdowns don't cause layout shifts */
@@ -88,6 +90,9 @@
   /* Prevent layout shifts from dropdowns */
   body {
     overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
   }
   
   /* Fix for Radix UI Select components */
@@ -245,11 +250,39 @@ html, body {
   position: relative;
 }
 
-/* Prevent touch scrolling issues on mobile */
+/* Ensure proper scrolling on mobile */
 @media (max-width: 1023px) {
+  html {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch;
+    height: auto;
+    min-height: 100%;
+  }
+  
   body {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior: none;
+    height: auto;
+    min-height: 100vh;
+    position: relative;
+    touch-action: pan-y;
+  }
+  
+  .shortlisted-theme-container {
+    overflow-y: visible !important;
+    overflow-x: hidden !important;
+    min-height: 100vh;
+    height: auto;
+    position: relative;
+  }
+  
+  main {
+    overflow-y: visible !important;
+    overflow-x: hidden !important;
+    position: relative;
   }
   
   .overflow-x-hidden {

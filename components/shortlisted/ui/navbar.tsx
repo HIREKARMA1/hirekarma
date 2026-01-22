@@ -29,6 +29,15 @@ export function Navbar({ className }: NavbarProps) {
     setMounted(true)
   }, [])
 
+  // Prevent body scroll lock on mobile when menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      // Don't lock body scroll - allow scrolling even when menu is open
+      document.body.style.overflow = 'auto'
+      document.body.style.position = 'relative'
+    }
+  }, [mobileMenuOpen])
+
   // Logo URLs based on theme - always provide a default
   const logoUrl = mounted && theme === "dark"
     ? "https://hirekarma.s3.us-east-1.amazonaws.com/shortlisted/shortlisted-logo-dm.png"
