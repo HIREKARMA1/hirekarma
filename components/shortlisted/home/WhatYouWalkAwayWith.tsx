@@ -28,7 +28,7 @@ const WhatYouWalkAwayWith: React.FC = () => {
             <div className="max-w-[1000px] mx-auto px-2 sm:px-0">
                 {/* Header Section */}
                 <div className="text-center mb-8 sm:mb-12">
-                    <h2 className={`font-semibold text-[36px] max-[375px]:text-[32px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-[1.1] font-poppins mb-4 break-words ${mounted && resolvedTheme === 'dark'
+                    <h2 className={`font-bold text-[36px] max-[375px]:text-[32px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-[1.1] font-poppins mb-4 break-words ${mounted && resolvedTheme === 'dark'
                         ? 'text-white'
                         : 'text-gray-900'
                         }`}>
@@ -50,7 +50,7 @@ const WhatYouWalkAwayWith: React.FC = () => {
                             {outcomes.map((outcome, index) => (
                                 <div
                                     key={index}
-                                    className="flex items-center gap-3 h-[70px] p-[10px] bg-[#E6F7ED] border border-[#D0EDDD] rounded-2xl"
+                                    className="flex items-center gap-3 h-[70px] p-[10px] bg-[#E6F7ED] border border-[#D0EDDD] rounded-2xl font-poppins"
                                 >
                                     {/* Checkmark Icon */}
                                     <div className="flex-shrink-0">
@@ -59,7 +59,7 @@ const WhatYouWalkAwayWith: React.FC = () => {
                                         </div>
                                     </div>
                                     {/* Outcome Text */}
-                                    <p className="text-base font-medium text-gray-800">
+                                    <p className="text-base font-medium text-gray-800 font-poppins">
                                         {outcome}
                                     </p>
                                 </div>
