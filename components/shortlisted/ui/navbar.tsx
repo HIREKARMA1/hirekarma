@@ -127,7 +127,10 @@ export function Navbar({ className }: NavbarProps) {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-gray-200 dark:border-[#2a3441] bg-white dark:bg-[#1a1f2e]">
+          <div className={`md:hidden border-t border-gray-200 dark:border-[#2a3441] ${theme === 'dark'
+            ? 'bg-[#1a1f2e]'
+            : 'bg-white'
+            }`}>
             <div className="container mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 max-w-[1600px] py-4 space-y-4">
               {/* {navigationItems.map((item) => (
                 <Link
@@ -139,7 +142,7 @@ export function Navbar({ className }: NavbarProps) {
                   {item.label}
                 </Link>
               ))} */}
-              <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-[#2a3441]">
+              <div className="flex items-center justify-between pt-4">
                 <ThemeToggle />
                 <Button
                   className="bg-[#00a2e5] hover:bg-[#0091cc] text-white rounded-lg px-6 py-2 font-medium text-sm"
