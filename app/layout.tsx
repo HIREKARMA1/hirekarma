@@ -1,16 +1,9 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/layout/ThemeProvider";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import dynamic from "next/dynamic";
-
-// Lazy load WavyBackground to improve initial paint
-const WavyBackground = dynamic(() => import("@/components/layout/WavyBackground"), {
-  ssr: true,
-  loading: () => null,
-});
+import { ConditionalThemeProvider } from "@/components/layout/ConditionalThemeProvider";
+import { ConditionalLayout } from "@/components/layout/ConditionalLayout";
+import { ConditionalWavyBackground } from "@/components/layout/ConditionalWavyBackground";
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700', '900'],
@@ -42,13 +35,13 @@ export default function RootLayout({
         className={`${roboto.variable} antialiased`}
       >
       <div className="relative min-h-screen">
-        {/* Wavy Background - Lazy loaded */}
-        <WavyBackground variant="primary" intensity="medium" density="sparse" />
-        <ThemeProvider>
-          <Navbar />
-          {children}
-          <Footer />
-        </ThemeProvider>
+        {/* Wavy Background - Only for HireKarma routes */}
+        <ConditionalWavyBackground />
+        <ConditionalThemeProvider>
+          <ConditionalLayout>
+            {children}
+          </ConditionalLayout>
+        </ConditionalThemeProvider>
       </div>
       </body>
     </html>
