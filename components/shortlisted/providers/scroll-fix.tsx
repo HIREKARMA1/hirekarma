@@ -26,8 +26,8 @@ export function ScrollFix() {
       body.style.overflowX = "hidden"
 
       // Enable touch scrolling
-      html.style.webkitOverflowScrolling = "touch"
-      body.style.webkitOverflowScrolling = "touch"
+      ;(html.style as any).webkitOverflowScrolling = "touch"
+      ;(body.style as any).webkitOverflowScrolling = "touch"
 
       // Set touch action to allow panning
       html.style.touchAction = "pan-y pan-x"
