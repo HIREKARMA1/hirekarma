@@ -29,8 +29,8 @@ export function HeroSection() {
 
   return (
     <section 
-      className="relative min-h-screen md:min-h-0 md:py-8 lg:min-h-screen lg:py-0 pt-4 flex items-center md:items-start lg:items-center overflow-hidden max-[375px]:pt-8"
-      style={{ backgroundColor: sectionBgColor }}
+      className="relative min-h-screen md:min-h-0 md:py-8 lg:min-h-screen lg:py-0 pt-4 flex items-center md:items-start lg:items-center max-[375px]:pt-8"
+      style={{ backgroundColor: sectionBgColor, touchAction: 'pan-y', overflow: 'visible' }}
     >
       <style dangerouslySetInnerHTML={{
         __html: `
