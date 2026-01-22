@@ -17,7 +17,33 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'hirekarma.s3.us-east-1.amazonaws.com',
         port: '',
-        pathname: '/hirekarma_ui/**',
+        pathname: '/**',
+      },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '8000',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.s3.amazonaws.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.s3.*.amazonaws.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 's3.amazonaws.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        pathname: '/**',
       },
     ],
     // Disable optimization for remote GIFs due to timeout issues
