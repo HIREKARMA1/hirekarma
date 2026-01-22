@@ -116,9 +116,15 @@ export function Navbar({ className }: NavbarProps) {
                 aria-label="Toggle menu"
               >
                 {mobileMenuOpen ? (
-                  <X className="h-6 w-6" />
+                  <X className={`h-6 w-6 ${theme === 'dark'
+                    ? 'text-gray-200'
+                    : 'text-black'
+                    }`}    />
                 ) : (
-                  <Menu className="h-6 w-6" />
+                  <Menu className={`h-6 w-6 ${theme === 'dark'
+                    ? 'text-gray-200'
+                    : 'text-black'
+                    }`} />
                 )}
               </button>
             </div>
