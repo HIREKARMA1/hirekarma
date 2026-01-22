@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Poppins } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/shortlisted/providers/theme-provider'
+import { ScrollFix } from '@/components/shortlisted/providers/scroll-fix'
 import { Toaster } from 'react-hot-toast'
 import { Navbar } from '@/components/shortlisted/ui/navbar'
 
@@ -19,8 +20,8 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
     width: 'device-width',
     initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
+    maximumScale: 5,
+    userScalable: true,
     viewportFit: 'cover'
 }
 
@@ -31,6 +32,7 @@ export default function ShortlistedLayout({
 }) {
     return (
         <div className={poppins.className}>
+            <ScrollFix />
             <ThemeProvider
                 defaultTheme="system"
                 enableSystem
