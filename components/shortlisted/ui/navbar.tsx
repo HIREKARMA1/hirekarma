@@ -73,7 +73,7 @@ export function Navbar({ className }: NavbarProps) {
                     height={40}
                     priority
                     className="h-16 w-auto object-contain"
-                    style={{ maxWidth: '200px', height: '100px' }}
+                    style={{ maxWidth: '230px', height: '130px !important', paddingTop: '10px' }}
                   />
                 </div>
               ) : (
