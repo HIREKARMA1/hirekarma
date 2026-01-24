@@ -23,7 +23,7 @@ interface NavbarProps {
 export function Navbar({ className }: NavbarProps) {
   const [mounted, setMounted] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const { theme } = useTheme()
+  const { resolvedTheme } = useTheme()
 
   useEffect(() => {
     setMounted(true)
@@ -38,8 +38,11 @@ export function Navbar({ className }: NavbarProps) {
     }
   }, [mobileMenuOpen])
 
-  // Logo URLs based on theme - always provide a default
-  const logoUrl = mounted && theme === "dark"
+  // Only use theme after mount to avoid hydration mismatch (server vs client)
+  const isDark = mounted && resolvedTheme === "dark"
+
+  // Logo URLs based on theme - use light default until mounted
+  const logoUrl = isDark
     ? "https://hirekarma.s3.us-east-1.amazonaws.com/shortlisted/shortlisted-logo-dm.png"
     : "https://hirekarma.s3.us-east-1.amazonaws.com/shortlisted/shortlisted-logo-lm.png"
 
@@ -51,10 +54,7 @@ export function Navbar({ className }: NavbarProps) {
       <nav
         className={cn(
           "fixed top-0 left-0 right-0 z-[100] w-full transition-colors",
-          `${theme === 'dark'
-            ? 'bg-[#1a1f2e]'
-            : 'bg-white'
-            }`,
+          isDark ? "bg-[#1a1f2e]" : "bg-white",
           "shadow-[0_2px_8px_rgba(0,0,0,0.08)] dark:shadow-[0_2px_8px_rgba(0,0,0,0.3)]",
           className
         )}
@@ -116,15 +116,9 @@ export function Navbar({ className }: NavbarProps) {
                 aria-label="Toggle menu"
               >
                 {mobileMenuOpen ? (
-                  <X className={`h-6 w-6 ${theme === 'dark'
-                    ? 'text-gray-200'
-                    : 'text-black'
-                    }`}    />
+                  <X className={cn("h-6 w-6", isDark ? "text-gray-200" : "text-black")} />
                 ) : (
-                  <Menu className={`h-6 w-6 ${theme === 'dark'
-                    ? 'text-gray-200'
-                    : 'text-black'
-                    }`} />
+                  <Menu className={cn("h-6 w-6", isDark ? "text-gray-200" : "text-black")} />
                 )}
               </button>
             </div>
@@ -133,10 +127,12 @@ export function Navbar({ className }: NavbarProps) {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className={`md:hidden border-t border-gray-200 dark:border-[#2a3441] ${theme === 'dark'
-            ? 'bg-[#1a1f2e]'
-            : 'bg-white'
-            }`}>
+          <div
+            className={cn(
+              "md:hidden border-t border-gray-200 dark:border-[#2a3441]",
+              isDark ? "bg-[#1a1f2e]" : "bg-white"
+            )}
+          >
             <div className="container mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 max-w-[1600px] py-4 space-y-4">
               {/* {navigationItems.map((item) => (
                 <Link
