@@ -208,7 +208,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                             : 'text-gray-700 hover:text-cyan-600 hover:bg-cyan-50')
                           }`}
                       >
-                        <IconComponent className="w-4 h-4 flex-shrink-0" />
+                        <IconComponent className="w-4 h-4 flex-shrink-0 " />
                         <span className="whitespace-nowrap text-sm">{item.label}</span>
                         <ChevronDown className={`w-3 h-3 flex-shrink-0 transition-transform duration-300 ${activeDropdown === item.label ? 'rotate-180' : 'group-hover:rotate-180'
                           }`} />
@@ -360,10 +360,19 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                         className="flex items-center justify-between w-full text-left text-gray-700 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 font-medium py-3 px-4 rounded-xl hover:bg-cyan-50 dark:hover:bg-cyan-950 transition-all duration-200"
                       >
                         <div className="flex items-center space-x-3">
-                          <div className="w-8 h-8 rounded-lg bg-cyan-100 dark:bg-cyan-900 flex items-center justify-center flex-shrink-0">
-                            <IconComponent className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
+                          <div className={`w-8 h-8 rounded-lg ${mounted && resolvedTheme === 'dark'
+                            ? 'bg-cyan-900'
+                            : 'bg-cyan-100'
+                            } flex items-center justify-center flex-shrink-0`}>
+                            <IconComponent className={`w-4 h-4 ${mounted && resolvedTheme === 'dark'
+                              ? 'text-cyan-400'
+                              : 'text-gray-700'
+                              }`} />
                           </div>
-                          <span>{item.label}</span>
+                          <span className={`${mounted && resolvedTheme === 'dark'
+                            ? 'text-gray-300'
+                            : 'text-gray-700'
+                            }`}>{item.label}</span>
                         </div>
                         <ChevronDown className={`w-4 h-4 transition-transform duration-300 flex-shrink-0 ${activeDropdown === item.label ? 'rotate-180' : ''
                           }`} />
