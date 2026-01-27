@@ -14,7 +14,8 @@ import {
   Handshake,
   TrendingUp,
   Compass,
-  Zap
+  Zap,
+  TargetIcon
 
   
 } from 'lucide-react';
@@ -99,8 +100,8 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
       hasDropdown: true,
       dropdownItems: [
         { label: 'Disha', href: 'https://disha.hirekarma.in/', icon: Compass },
-        { label: 'SolviqAI', href: 'https://www.solviqai.in/', icon: TrendingUp }
-        // { label: 'Sangha', href: '/products/sangha', icon: UsersRound },
+        { label: 'SolviqAI', href: 'https://www.solviqai.in/', icon: TrendingUp },
+         { label: 'Shortlisted', href: '/shortlisted', icon: TargetIcon },
         // { label: 'Sadhana', href: '/products/sadhana', icon: Brain },
       ]
     },
