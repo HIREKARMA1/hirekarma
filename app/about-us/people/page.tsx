@@ -66,7 +66,7 @@ export default function PeoplePage() {
           <div className="relative content-container py-8">
             {/* Toggle Buttons */}
             <div className="mb-8">
-              <div className="flex flex-wrap justify-center gap-3 mb-6">
+              <div className="flex flex-wrap justify-start gap-3 mb-6">
 
                 <button
                   onClick={() => setActiveTab("advisory")}
