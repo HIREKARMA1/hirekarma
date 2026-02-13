@@ -24,20 +24,8 @@
     }
   },
   {
-    "name": "Ansuman Panda",
-    "role": "Team Lead- Operation",
-    "category": "core",
-    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Ansuman.jpg",
-    "description": "Driving campus engagement and placement operations by coordinating recruitment processes that connect institutions and employers for building efficient and scalable talent pipelines.",
-    "socialLinks": {
-      "linkedin": "https://www.linkedin.com/in/ansuman-panda-84a532278?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      "instagram": "https://www.instagram.com/_ansuman_panda__/",
-      "email": "mailto:ansuman@hirekarma.in"
-    }
-  },
-  {
     "name": "Lokanath Panda",
-    "role": "Team Lead- Development",
+    "role": "Lead Engineer",
     "category": "core",
     "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/LokanathPanda.jpg",
     "description": "Leading the development team with a focus on building scalable softwares, integrating innovative technologies, and ensuring smooth digital transformation for Hirekarma's platform.",
@@ -45,18 +33,6 @@
       "linkedin": "https://www.linkedin.com/in/lokanath-panda-642193238/",
       "instagram": "https://www.instagram.com/lokanathpanda7/",
       "email": "mailto:lokanath@hirekarma.in"
-    }
-  },
-  {
-    "name": "Sanjib Sahoo",
-    "role": "Team Lead - Corporate Relation",
-    "category": "core",
-    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/sanjib.jpg",
-    "description": "Leading the company onboarding process by collaborating with partners, ensuring seamless integration, and building strong relationships that drive successful hiring outcomes.",
-    "socialLinks": {
-      "linkedin": "https://www.linkedin.com/in/sanjib-sahoo-727958234/",
-      "instagram": "https://www.instagram.com/justt.sanjiv/",
-      "email": "mailto:sanjib@hirekarma.in"
     }
   },
     {
