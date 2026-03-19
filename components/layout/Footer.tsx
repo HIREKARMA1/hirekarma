@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import { Twitter, Linkedin, Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import footerProducts from '@/data/footer-products.json';
 
 const Footer: React.FC = () => {
   const [mounted, setMounted] = useState(false);
@@ -64,7 +65,7 @@ const Footer: React.FC = () => {
                   }`} />
                 <span className={`text-sm ${mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'
                   }`}>
-                  +91 90786 83876
+                  +91 91243 64762
                 </span>
               </div>
               <div className="flex items-start space-x-3">
@@ -72,7 +73,7 @@ const Footer: React.FC = () => {
                   }`} />
                 <span className={`text-sm ${mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'
                   }`}>
-                  Room No: 109, 1st Floor, Tower A, O-HUB, Bhubaneswar
+                  2nd Floor, SS Niwas, Hirekarma Private Limited, Raghunathpur, Bhubaneswar, Raghunathpurjali, Odisha 751024
                 </span>
               </div>
             </div>
@@ -228,18 +229,28 @@ const Footer: React.FC = () => {
               Products
             </h3>
             <ul className="space-y-3">
-              <li>
-                <a href="https://disha.hirekarma.in/" target="_blank" rel="noopener noreferrer" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
-                  ? 'text-gray-300 hover:text-emerald-400'
-                  : 'text-gray-600 hover:text-emerald-600'
-                  }`}>
-                  <span className="relative">
-                    Disha
-                    <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${mounted && resolvedTheme === 'dark' ? 'bg-emerald-400' : 'bg-emerald-600'
-                      }`}></span>
-                  </span>
-                </a>
-              </li>
+              {footerProducts.map((product) => {
+                const isExternal = product.href.startsWith('http');
+                return (
+                  <li key={product.name}>
+                    <a
+                      href={product.href}
+                      target={isExternal ? '_blank' : undefined}
+                      rel={isExternal ? 'noopener noreferrer' : undefined}
+                      className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
+                        ? 'text-gray-300 hover:text-emerald-400'
+                        : 'text-gray-600 hover:text-emerald-600'
+                        }`}
+                    >
+                      <span className="relative">
+                        {product.name}
+                        <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${mounted && resolvedTheme === 'dark' ? 'bg-emerald-400' : 'bg-emerald-600'
+                          }`}></span>
+                      </span>
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
