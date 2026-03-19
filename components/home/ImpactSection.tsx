@@ -18,7 +18,7 @@ const Tooltip = dynamic(() => import('recharts').then(mod => ({ default: mod.Too
 const impactData = [
     { year: '2024', value: 8000 },
     { year: '2025', value: 14000 },
-    { year: '2026', value: "Comming Soon" },
+    { year: '2026', value: 2000 },
     { year: '2027', value: "Comming Soon" },
     { year: '2028', value: "Comming Soon" },
     { year: '2029', value: "Comming Soon" },

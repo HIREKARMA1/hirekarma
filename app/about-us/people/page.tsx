@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useTheme } from "next-themes";
 
 import { Users, Star, Heart, Info, X, Linkedin, Instagram, Mail } from "lucide-react";
+import { Loader } from "@/components/shortlisted/ui/loader";
 import people from "@/data/people.json";
 
 type TeamCategory = "leadership" | "core" | "advisory";
@@ -24,17 +25,35 @@ interface TeamMember {
 
 const teamMembers = people as TeamMember[];
 
+// Simulated fetch: replace with your API call when backend is ready
+async function fetchTeamByCategory(category: TeamCategory): Promise<TeamMember[]> {
+  // Simulate network delay (remove when using real API)
+  await new Promise((r) => setTimeout(r, 600));
+  return teamMembers.filter((m) => m.category === category);
+}
+
 export default function PeoplePage() {
   const [mounted, setMounted] = useState(false);
   const [activeTab, setActiveTab] = useState<TeamCategory>("advisory");
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [filteredMembers, setFilteredMembers] = useState<TeamMember[]>(() =>
+    teamMembers.filter((m) => m.category === "advisory")
+  );
   const { resolvedTheme } = useTheme();
+
   useEffect(() => setMounted(true), []);
 
-  // Filter team members based on active tab
-  const filteredMembers = teamMembers.filter(
-    (member: TeamMember) => member.category === activeTab
-  );
+  const handleTabChange = (category: TeamCategory) => {
+    if (category === activeTab) return;
+    setActiveTab(category);
+    setExpandedIndex(null);
+    setIsLoading(true);
+    fetchTeamByCategory(category).then((members) => {
+      setFilteredMembers(members);
+      setIsLoading(false);
+    });
+  };
 
   return (
     <div className={`min-h-screen flex flex-col transition-all duration-500`}>
@@ -69,8 +88,9 @@ export default function PeoplePage() {
               <div className="flex flex-wrap justify-start gap-3 mb-6">
 
                 <button
-                  onClick={() => setActiveTab("advisory")}
-                  className={`px-6 py-2.5 rounded-full font-semibold transition-all duration-300 ${activeTab === "advisory"
+                  onClick={() => handleTabChange("advisory")}
+                  disabled={isLoading}
+                  className={`px-6 py-2.5 rounded-full font-semibold transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed ${activeTab === "advisory"
                     ? "bg-cyan-500 text-white shadow-md"
                     : `border ${mounted && resolvedTheme === "dark"
                       ? "border-gray-600 text-gray-400 hover:border-gray-500 hover:text-gray-300"
@@ -81,8 +101,9 @@ export default function PeoplePage() {
                   Advisory Board
                 </button>
                 <button
-                  onClick={() => setActiveTab("leadership")}
-                  className={`px-6 py-2.5 rounded-full font-semibold transition-all duration-300 ${activeTab === "leadership"
+                  onClick={() => handleTabChange("leadership")}
+                  disabled={isLoading}
+                  className={`px-6 py-2.5 rounded-full font-semibold transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed ${activeTab === "leadership"
                     ? "bg-cyan-500 text-white shadow-md"
                     : `border ${mounted && resolvedTheme === "dark"
                       ? "border-gray-600 text-gray-400 hover:border-gray-500 hover:text-gray-300"
@@ -93,8 +114,9 @@ export default function PeoplePage() {
                   Leadership
                 </button>
                 <button
-                  onClick={() => setActiveTab("core")}
-                  className={`px-6 py-2.5 rounded-full font-semibold transition-all duration-300 ${activeTab === "core"
+                  onClick={() => handleTabChange("core")}
+                  disabled={isLoading}
+                  className={`px-6 py-2.5 rounded-full font-semibold transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed ${activeTab === "core"
                     ? "bg-cyan-500 text-white shadow-md"
                     : `border ${mounted && resolvedTheme === "dark"
                       ? "border-gray-600 text-gray-400 hover:border-gray-500 hover:text-gray-300"
@@ -111,8 +133,15 @@ export default function PeoplePage() {
               <div className={`h-px w-full ${mounted && resolvedTheme === 'dark' ? 'bg-gray-700' : 'bg-gray-200'}`}></div>
             </div>
 
-            <div>
-              {filteredMembers.length > 0 ? (
+            <div className="min-h-[320px]">
+              {isLoading ? (
+                <div className="flex flex-col items-center justify-center py-20">
+                  <Loader size="lg" className="border-cyan-500 border-t-transparent" />
+                  <p className={`mt-4 text-sm ${mounted && resolvedTheme === "dark" ? "text-gray-400" : "text-gray-500"}`}>
+                    Loading team...
+                  </p>
+                </div>
+              ) : filteredMembers.length > 0 ? (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                   {filteredMembers.map((member, index) => (
                     <div
