@@ -252,3 +252,45 @@ body {
 .animate-partners-scroll-right {
   animation: partners-scroll-right 60s linear infinite;
 }
+
+/* (Intentionally no automatic constellation animation; it is parallax-driven in JS) */
+
+/* Constellation pulse (modern, without moving geometry) */
+@keyframes constellationDotPulse {
+  0%,
+  100% {
+    opacity: calc(var(--dot-base) * 0.55);
+  }
+  50% {
+    opacity: var(--dot-base);
+  }
+}
+
+@keyframes constellationLinePulse {
+  0%,
+  100% {
+    stroke-opacity: calc(var(--line-base) * 0.55);
+  }
+  50% {
+    stroke-opacity: var(--line-base);
+  }
+}
+
+.constellation-dot-pulse {
+  animation-name: constellationDotPulse;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.constellation-line-pulse {
+  animation-name: constellationLinePulse;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .constellation-dot-pulse,
+  .constellation-line-pulse {
+    animation: none !important;
+  }
+}
