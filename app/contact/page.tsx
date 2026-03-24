@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import emailjs from 'emailjs-com';
 import { useTheme } from 'next-themes';
 // import WavyBackground from '../../components/layout/WavyBackground';
 import { Mail, Phone, MapPin, Send, User, MessageSquare } from 'lucide-react';
 import contactAnimation from '../../public/contect.json';
 import dynamic from 'next/dynamic';
+import toast from 'react-hot-toast';
 
 const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 const ContactPage: React.FC = () => {
@@ -25,10 +25,6 @@ const ContactPage: React.FC = () => {
 
     const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
-    const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '';
-    const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '';
-    const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || '';
-
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({
             ...formData,
@@ -36,26 +32,28 @@ const ContactPage: React.FC = () => {
         });
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setStatus('sending');
 
-        const templateParams = {
-            name: formData.name,
-            email: formData.email,
-            message: formData.message,
-        };
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            });
 
-        emailjs
-            .send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
-            .then(() => {
+            if (!response.ok) {
+                throw new Error('Failed to send message');
+            }
+
                 setStatus('success');
                 setFormData({ name: '', email: '', message: '' });
-            })
-            .catch((error: unknown) => {
-                console.error('EmailJS error:', error);
-                setStatus('error');
-            });
+                toast.success('Message sent successfully');
+        } catch (error: unknown) {
+            console.error('Contact form error:', error);
+            setStatus('error');
+        }
     };
     return (
         <div className={`min-h-screen flex flex-col transition-all duration-500`}>
@@ -180,9 +178,6 @@ const ContactPage: React.FC = () => {
                                     </button>
 
                                     {/* Status messages */}
-                                    {status === 'success' && (
-                                        <p className="text-sm text-green-600">Message sent successfully ✅</p>
-                                    )}
                                     {status === 'error' && (
                                         <p className="text-sm text-red-600">Failed to send. Please try again later.</p>
                                     )}
