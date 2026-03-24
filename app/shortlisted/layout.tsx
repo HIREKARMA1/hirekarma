@@ -34,8 +34,8 @@ export default function ShortlistedLayout({
         <div className={poppins.className}>
             <ScrollFix />
             <ThemeProvider
-                defaultTheme="system"
-                enableSystem
+                defaultTheme="dark"
+                enableSystem={false}
                 disableTransitionOnChange
             >
                 <Navbar />
