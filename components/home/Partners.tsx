@@ -117,7 +117,11 @@ const Partners: React.FC = () => {
                                         <img
                                             src={company.logo}
                                             alt={company.name}
-                                            className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 object-contain"
+                                            className={`w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 object-contain transition-all duration-500 ${
+                                                mounted && resolvedTheme === 'dark'
+                                                    ? 'bg-white/90 rounded-md p-1 shadow-[0_0_0_1px_rgba(148,163,184,0.35)]'
+                                                    : ''
+                                            }`}
                                             onError={(e) => {
                                                 const target = e.currentTarget as HTMLImageElement;
                                                 target.style.display = 'none';
@@ -171,7 +175,11 @@ const Partners: React.FC = () => {
                                         <img
                                             src={corporate.logo}
                                             alt={corporate.name}
-                                            className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 object-contain"
+                                            className={`w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 object-contain transition-all duration-500 ${
+                                                mounted && resolvedTheme === 'dark'
+                                                    ? 'bg-white/90 rounded-md p-1 shadow-[0_0_0_1px_rgba(148,163,184,0.35)]'
+                                                    : ''
+                                            }`}
                                             onError={(e) => {
                                                 const target = e.currentTarget as HTMLImageElement;
                                                 target.style.display = 'none';
