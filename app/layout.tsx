@@ -4,6 +4,7 @@ import "./globals.css";
 import { ConditionalThemeProvider } from "@/components/layout/ConditionalThemeProvider";
 import { ConditionalLayout } from "@/components/layout/ConditionalLayout";
 import { ConditionalWavyBackground } from "@/components/layout/ConditionalWavyBackground";
+import { Toaster } from "react-hot-toast";
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700', '900'],
@@ -42,6 +43,12 @@ export default function RootLayout({
             {children}
           </ConditionalLayout>
         </ConditionalThemeProvider>
+        <Toaster
+          position="top-right"
+          toastOptions={{
+            duration: 3000,
+          }}
+        />
       </div>
       </body>
     </html>
