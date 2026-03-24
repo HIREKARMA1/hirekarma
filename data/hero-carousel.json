@@ -1,0 +1,59 @@
+[
+  {
+    "id": "placement",
+    "focusTitle": "Placement Programs",
+    "headlineLines": [
+      { "text": "PLACEMENT", "variant": "white" },
+      { "text": "AUTOMATION", "variant": "gradient" },
+      { "text": "PATHWAYS", "variant": "white" }
+    ],
+    "description": "Accelerate campus-to-career outcomes with\nintelligent hiring workflows built for better role matching.",
+    "ctaLabel": "Explore Placement Programs",
+    "ctaHref": "/solutions/students",
+    "badgeText": "Placement Pathways",
+    "badgePosition": "right"
+  },
+  {
+    "id": "it-service",
+    "focusTitle": "IT Consulting Services",
+    "headlineLines": [
+      { "text": "IT SERVICE", "variant": "white" },
+      { "text": "CONSULTING", "variant": "gradient" },
+      { "text": "SOLUTIONS", "variant": "white" }
+    ],
+    "description": "Modernize enterprise hiring with\nintegrated consulting services and seamless HR automation.",
+    "ctaLabel": "Explore IT Consulting Services",
+    "ctaHref": "/solutions/corporate",
+    "badgeText": "Consulting Solutions",
+    "badgePosition": "right"
+  },
+  {
+    "id": "community",
+    "focusTitle": "Community Impact Programs",
+    "headlineLines": [
+      { "text": "COMMUNITY", "variant": "white" },
+      { "text": "CONTRIBUTION", "variant": "gradient" },
+      { "text": "INITIATIVES", "variant": "white" }
+    ],
+    "description": "Strengthen social outcomes through\ntransparent recruitment progress and community-first engagement.",
+    "ctaLabel": "Explore Community Impact Programs",
+    "ctaHref": "/about-us/mission-value",
+    "badgeText": "Community Initiatives",
+    "badgePosition": "right"
+  },
+  {
+    "id": "skilling",
+    "focusTitle": "Skilling Training Programs",
+    "headlineLines": [
+      { "text": "SKILLING", "variant": "white" },
+      { "text": "TRAINING", "variant": "gradient" },
+      { "text": "PATHWAYS", "variant": "white" }
+    ],
+    "description": "Build job-ready capabilities with\nAI-powered learning pathways designed for stronger placement outcomes.",
+    "ctaLabel": "Explore Skilling Training Programs",
+    "ctaHref": "/solutions/skill-development",
+    "badgeText": "Training Pathways",
+    "badgePosition": "right"
+  }
+]
+

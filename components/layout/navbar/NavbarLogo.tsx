@@ -17,7 +17,7 @@ export function NavbarLogo({ isDark }: NavbarLogoProps) {
         alt="HireKarma Logo"
         width={250}
         height={50}
-        className="h-8 w-auto max-w-[9.5rem] object-contain object-left transition-transform duration-300 hover:scale-105 sm:h-9 sm:max-w-[10.5rem] md:h-10 md:max-w-[11rem]"
+        className="h-9 w-auto max-w-42 object-contain object-left transition-transform duration-300 hover:scale-105 sm:h-10 sm:max-w-46 md:h-11 md:max-w-50"
         priority
       />
     </Link>

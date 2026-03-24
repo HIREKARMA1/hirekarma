@@ -20,7 +20,7 @@ export function NavbarMobileControls({
   const { setTheme, resolvedTheme } = useTheme();
 
   return (
-    <div className="flex lg:hidden items-center gap-2 shrink-0">
+    <div className="flex lg:hidden items-center gap-2.5 shrink-0">
       <NavbarThemeToggle
         isDark={isDark}
         mounted={mounted}
@@ -31,7 +31,7 @@ export function NavbarMobileControls({
       <button
         type="button"
         onClick={onToggleMenu}
-        className={`p-2 rounded-full transition-all duration-200 ${
+        className={`p-2.5 rounded-full transition-all duration-200 ${
           isDark
             ? "text-white hover:text-[#00E5FF]"
             : "text-gray-800 hover:text-cyan-600"
@@ -39,16 +39,16 @@ export function NavbarMobileControls({
         aria-expanded={isMobileMenuOpen}
         aria-label="Toggle menu"
       >
-        <div className="relative w-5 h-5">
+        <div className="relative w-6 h-6">
           <Menu
-            className={`absolute inset-0 w-5 h-5 transition-all duration-300 ${
+            className={`absolute inset-0 w-6 h-6 transition-all duration-300 ${
               isMobileMenuOpen
                 ? "opacity-0 rotate-90"
                 : "opacity-100 rotate-0"
             }`}
           />
           <X
-            className={`absolute inset-0 w-5 h-5 transition-all duration-300 ${
+            className={`absolute inset-0 w-6 h-6 transition-all duration-300 ${
               isMobileMenuOpen
                 ? "opacity-100 rotate-0"
                 : "opacity-0 -rotate-90"

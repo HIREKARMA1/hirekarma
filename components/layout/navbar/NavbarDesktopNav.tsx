@@ -30,7 +30,7 @@ export function NavbarDesktopNav({
   const { setTheme, resolvedTheme } = useTheme();
 
   return (
-    <div className="hidden lg:flex items-center gap-1 xl:gap-2">
+    <div className="hidden lg:flex items-center gap-1.5 xl:gap-2.5">
       {navigationItems.map((item) => (
         <NavbarNavItemDesktop
           key={item.label}
@@ -54,7 +54,7 @@ export function NavbarDesktopNav({
 
       <Link
         href="/contact"
-        className="ml-1 inline-flex items-center justify-center rounded-full bg-white px-6 py-2.5 text-sm font-bold uppercase tracking-wide text-black shadow-sm transition-transform duration-200 hover:scale-[1.02] hover:bg-white/95 active:scale-[0.98]"
+        className="ml-1.5 inline-flex items-center justify-center rounded-full bg-white px-7 py-3 text-base font-bold uppercase tracking-wide text-black shadow-sm transition-transform duration-200 hover:scale-[1.02] hover:bg-white/95 active:scale-[0.98]"
       >
         Contact
       </Link>

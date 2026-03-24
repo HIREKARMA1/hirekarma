@@ -34,7 +34,7 @@ export function NavbarNavItemDesktop({
       <button
         type="button"
         onClick={onButtonClick}
-        className={`flex items-center gap-1 font-semibold text-sm xl:text-[15px] transition-colors duration-200 py-2 px-3 xl:px-4 rounded-full ${
+        className={`flex items-center gap-1.5 font-semibold text-base xl:text-[17px] transition-colors duration-200 py-2.5 px-3.5 xl:px-4.5 rounded-full ${
           isOpen
             ? isDark
               ? "text-[#00E5FF]"
@@ -46,7 +46,7 @@ export function NavbarNavItemDesktop({
       >
         <span className="whitespace-nowrap">{item.label}</span>
         <ChevronDown
-          className={`w-3.5 h-3.5 opacity-60 transition-transform duration-300 ${
+          className={`w-4 h-4 opacity-60 transition-transform duration-300 ${
             isOpen ? "rotate-180" : ""
           }`}
         />

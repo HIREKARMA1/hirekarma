@@ -55,7 +55,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
       >
         <div className="content-container">
           <div
-            className={`flex flex-wrap items-center justify-between gap-3 px-4 py-2.5 sm:px-5 sm:py-3 md:px-7 md:py-3.5 ${pillClass}`}
+            className={`flex flex-wrap items-center justify-between gap-3 px-4 py-3.5 sm:px-6 sm:py-4 md:px-8 md:py-4.5 ${pillClass}`}
           >
             <NavbarLogo isDark={isDark} />
 

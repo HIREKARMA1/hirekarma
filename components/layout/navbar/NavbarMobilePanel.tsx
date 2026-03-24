@@ -44,7 +44,7 @@ export function NavbarMobilePanel({
                 <button
                   type="button"
                   onClick={(e) => onDropdownClick(item.label, e)}
-                  className={`flex items-center justify-between w-full text-left font-semibold py-3 px-3 rounded-xl transition-all duration-200 ${
+                  className={`flex items-center justify-between w-full text-left font-semibold text-base py-3.5 px-3.5 rounded-xl transition-all duration-200 ${
                     isDark
                       ? "text-white hover:bg-white/5"
                       : "text-gray-800 hover:bg-gray-100/80"
@@ -100,7 +100,7 @@ export function NavbarMobilePanel({
 
           <Link
             href="/contact"
-            className="mt-4 flex items-center justify-center w-full rounded-full bg-white py-3 text-sm font-bold uppercase tracking-wide text-black shadow-sm"
+            className="mt-4 flex items-center justify-center w-full rounded-full bg-white py-3.5 text-base font-bold uppercase tracking-wide text-black shadow-sm"
             onClick={onCloseMobileMenu}
           >
             Contact
