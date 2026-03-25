@@ -4,7 +4,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useTheme } from 'next-themes';
 import corporateData from '../../data/corporate.json';
 import companyData from '../../data/company.json';
-import SectionHeader from '../shared/SectionHeader';
 
 const Partners: React.FC = () => {
     const [mounted, setMounted] = useState(false);
@@ -76,12 +75,25 @@ const Partners: React.FC = () => {
 
     return (
         <div className="relative content-container py-12 sm:py-16 md:py-20">
-            <div className="mb-12 sm:mb-16">
-                <SectionHeader
-                    title="Our Partners"
-                    description="Trusted by leading companies and educational institutions across India who rely on HireKarma for their campus placement needs."
-                    alignment="left"
-                />
+            <div className="mb-12 sm:mb-16 space-y-6">
+                <h2 className={`text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight ${mounted && resolvedTheme === 'dark'
+                    ? 'text-gray-100'
+                    : 'text-gray-900'
+                    }`}>
+                    Our Partners
+                    <span className={`block mt-2 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium ${mounted && resolvedTheme === 'dark'
+                        ? 'text-orange-400'
+                        : 'text-orange-600'
+                        }`}>
+                        Trusted Collaboration Network
+                    </span>
+                </h2>
+                <p className={`text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl ${mounted && resolvedTheme === 'dark'
+                    ? 'text-gray-300'
+                    : 'text-gray-600'
+                    }`}>
+                    Trusted by leading companies and educational institutions across India who rely on HireKarma for their campus placement needs.
+                </p>
             </div>
 
             <div className="relative overflow-hidden space-y-10 sm:space-y-12 md:space-y-14">

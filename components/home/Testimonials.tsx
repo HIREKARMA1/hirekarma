@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useTheme } from 'next-themes';
 import testimonialsData from '../../data/testimonial.json';
-import SectionHeader from '../shared/SectionHeader';
 
 const Testimonials: React.FC = () => {
     const [mounted, setMounted] = useState(false);
@@ -48,12 +47,25 @@ const Testimonials: React.FC = () => {
     return (
         <div className="relative content-container py-8 sm:py-12 md:py-16 lg:py-20">
             {/* Section Header */}
-            <div className="mb-8 sm:mb-12 md:mb-16">
-                <SectionHeader
-                    title="Testimonials"
-                    description="Hear from colleges, universities, and corporate partners who have transformed their hiring processes with HireKarma"
-                    alignment="left"
-                />
+            <div className="mb-8 sm:mb-12 md:mb-16 space-y-6">
+                <h2 className={`text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight ${mounted && resolvedTheme === 'dark'
+                    ? 'text-gray-100'
+                    : 'text-gray-900'
+                    }`}>
+                    Testimonials
+                    <span className={`block mt-2 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium ${mounted && resolvedTheme === 'dark'
+                        ? 'text-amber-400'
+                        : 'text-amber-600'
+                        }`}>
+                        Voices of Transformation
+                    </span>
+                </h2>
+                <p className={`text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl ${mounted && resolvedTheme === 'dark'
+                    ? 'text-gray-300'
+                    : 'text-gray-600'
+                    }`}>
+                    Hear from colleges, universities, and corporate partners who have transformed their hiring processes with HireKarma.
+                </p>
             </div>
 
             {/* Testimonials Cards Container */}

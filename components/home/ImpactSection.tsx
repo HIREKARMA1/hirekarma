@@ -65,8 +65,8 @@ const ImpactSection: React.FC = () => {
                             }`}>
                             Our Impact in Numbers
                             <span className={`block mt-2 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium ${mounted && resolvedTheme === 'dark'
-                                ? 'text-cyan-400'
-                                : 'text-cyan-600'
+                                ? 'text-fuchsia-400'
+                                : 'text-fuchsia-600'
                                 }`}>
                                 Transforming Campus Hiring
                             </span>
