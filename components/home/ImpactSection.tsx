@@ -65,8 +65,8 @@ const ImpactSection: React.FC = () => {
                             }`}>
                             Our Impact in Numbers
                             <span className={`block mt-2 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium ${mounted && resolvedTheme === 'dark'
-                                ? 'text-cyan-400'
-                                : 'text-cyan-600'
+                                ? 'text-fuchsia-400'
+                                : 'text-fuchsia-600'
                                 }`}>
                                 Transforming Campus Hiring
                             </span>
@@ -117,11 +117,11 @@ const ImpactSection: React.FC = () => {
                     {/* Statistics Grid */}
                     <div className="grid grid-cols-2 gap-4 lg:gap-6 max-w-lg">
                         {/* Row 1 */}
-                        <div className={`p-4 rounded-xl border transition-all duration-500 hover:scale-105 ${mounted && resolvedTheme === 'dark'
+                        <div className={`group relative p-4 rounded-xl border transition-all duration-500 hover:brightness-110 ${mounted && resolvedTheme === 'dark'
                             ? 'bg-gradient-to-br from-blue-900/20 to-blue-800/10 border-blue-700/30 hover:border-blue-600/50'
                             : 'bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200 hover:border-blue-300'
                             }`}>
-                            <div className="space-y-2">
+                            <div className="relative z-10 space-y-2">
                                 <div className={`text-2xl sm:text-3xl font-bold ${mounted && resolvedTheme === 'dark'
                                     ? 'text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400'
                                     : 'text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600'
@@ -135,13 +135,14 @@ const ImpactSection: React.FC = () => {
                                     Trusted Colleges
                                 </div>
                             </div>
+                            <div className="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-br from-emerald-500/5 to-blue-500/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                         </div>
 
-                        <div className={`p-4 rounded-xl border transition-all duration-500 hover:scale-105 ${mounted && resolvedTheme === 'dark'
+                        <div className={`group relative p-4 rounded-xl border transition-all duration-500 hover:brightness-110 ${mounted && resolvedTheme === 'dark'
                             ? 'bg-gradient-to-br from-purple-900/20 to-purple-800/10 border-purple-700/30 hover:border-purple-600/50'
                             : 'bg-gradient-to-br from-purple-50 to-purple-100/50 border-purple-200 hover:border-purple-300'
                             }`}>
-                            <div className="space-y-2">
+                            <div className="relative z-10 space-y-2">
                                 <div className={`text-2xl sm:text-3xl font-bold ${mounted && resolvedTheme === 'dark'
                                     ? 'text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-yellow-400'
                                     : 'text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-yellow-600'
@@ -155,14 +156,15 @@ const ImpactSection: React.FC = () => {
                                     Partnered Companies
                                 </div>
                             </div>
+                            <div className="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-br from-emerald-500/5 to-blue-500/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                         </div>
 
                         {/* Row 2 */}
-                        <div className={`p-4 rounded-xl border transition-all duration-500 hover:scale-105 ${mounted && resolvedTheme === 'dark'
+                        <div className={`group relative p-4 rounded-xl border transition-all duration-500 hover:brightness-110 ${mounted && resolvedTheme === 'dark'
                             ? 'bg-gradient-to-br from-orange-900/20 to-orange-800/10 border-orange-700/30 hover:border-orange-600/50'
                             : 'bg-gradient-to-br from-orange-50 to-orange-100/50 border-orange-200 hover:border-orange-300'
                             }`}>
-                            <div className="space-y-2">
+                            <div className="relative z-10 space-y-2">
                                 <div className={`text-2xl sm:text-3xl font-bold ${mounted && resolvedTheme === 'dark'
                                     ? 'text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400'
                                     : 'text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-red-600'
@@ -176,13 +178,14 @@ const ImpactSection: React.FC = () => {
                                     Campus Drives Conducted
                                 </div>
                             </div>
+                            <div className="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-br from-emerald-500/5 to-blue-500/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                         </div>
 
-                        <div className={`p-4 rounded-xl border transition-all duration-500 hover:scale-105 ${mounted && resolvedTheme === 'dark'
+                        <div className={`group relative p-4 rounded-xl border transition-all duration-500 hover:brightness-110 ${mounted && resolvedTheme === 'dark'
                             ? 'bg-gradient-to-br from-emerald-900/20 to-emerald-800/10 border-emerald-700/30 hover:border-emerald-600/50'
                             : 'bg-gradient-to-br from-emerald-50 to-emerald-100/50 border-emerald-200 hover:border-emerald-300'
                             }`}>
-                            <div className="space-y-2">
+                            <div className="relative z-10 space-y-2">
                                 <div className={`text-2xl sm:text-3xl font-bold ${mounted && resolvedTheme === 'dark'
                                     ? 'text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400'
                                     : 'text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600'
@@ -196,6 +199,7 @@ const ImpactSection: React.FC = () => {
                                     Students Placed
                                 </div>
                             </div>
+                            <div className="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-br from-emerald-500/5 to-blue-500/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                         </div>
                     </div>
                 </div>

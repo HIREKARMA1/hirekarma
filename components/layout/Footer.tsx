@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import { Twitter, Linkedin, Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import footerProducts from '@/data/footer-products.json';
+import footerPrograms from '@/data/footer-programs.json';
 
 const Footer: React.FC = () => {
   const [mounted, setMounted] = useState(false);
@@ -31,7 +32,7 @@ const Footer: React.FC = () => {
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-8 xl:gap-12 mb-16">
           {/* Company Info */}
-          <div className="col-span-1 md:col-span-2 lg:col-span-3 space-y-6">
+          <div className="col-span-1 md:col-span-2 lg:col-span-2 space-y-6">
             <div className="space-y-4">
               <Image
                 src={mounted && resolvedTheme === 'dark'
@@ -89,13 +90,14 @@ const Footer: React.FC = () => {
                   href="https://twitter.com/hirekarma"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`flex items-center justify-center w-10 h-10 rounded-lg transition-all duration-300 hover:scale-110 group border ${mounted && resolvedTheme === 'dark'
-                    ? 'bg-gray-800 border-gray-700 hover:bg-gradient-to-br hover:from-cyan-500 hover:to-blue-600 hover:border-transparent'
-                    : 'bg-white border-gray-200 hover:bg-gradient-to-br hover:from-cyan-500 hover:to-blue-600 hover:border-transparent'
-                    } shadow-sm hover:shadow-lg`}
+                  className={`relative flex items-center justify-center w-10 h-10 rounded-lg transition-all duration-500 group border shadow-sm ${mounted && resolvedTheme === 'dark'
+                    ? 'bg-gray-800 border-gray-700'
+                    : 'bg-white border-gray-200'
+                    } hover:brightness-110`}
                   aria-label="Twitter"
                 >
-                  <Twitter className={`w-4 h-4 transition-colors duration-200 ${mounted && resolvedTheme === 'dark'
+                  <div className="pointer-events-none absolute inset-0 rounded-lg bg-gradient-to-br from-emerald-500/5 to-blue-500/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <Twitter className={`relative z-10 w-4 h-4 transition-colors duration-200 ${mounted && resolvedTheme === 'dark'
                     ? 'text-gray-400 group-hover:text-white'
                     : 'text-gray-600 group-hover:text-white'
                     }`} />
@@ -105,13 +107,14 @@ const Footer: React.FC = () => {
                   href="https://www.linkedin.com/company/hirekarma-pvt-ltd"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`flex items-center justify-center w-10 h-10 rounded-lg transition-all duration-300 hover:scale-110 group border ${mounted && resolvedTheme === 'dark'
-                    ? 'bg-gray-800 border-gray-700 hover:bg-gradient-to-br hover:from-cyan-500 hover:to-blue-600 hover:border-transparent'
-                    : 'bg-white border-gray-200 hover:bg-gradient-to-br hover:from-cyan-500 hover:to-blue-600 hover:border-transparent'
-                    } shadow-sm hover:shadow-lg`}
+                  className={`relative flex items-center justify-center w-10 h-10 rounded-lg transition-all duration-500 group border shadow-sm ${mounted && resolvedTheme === 'dark'
+                    ? 'bg-gray-800 border-gray-700'
+                    : 'bg-white border-gray-200'
+                    } hover:brightness-110`}
                   aria-label="LinkedIn"
                 >
-                  <Linkedin className={`w-4 h-4 transition-colors duration-200 ${mounted && resolvedTheme === 'dark'
+                  <div className="pointer-events-none absolute inset-0 rounded-lg bg-gradient-to-br from-emerald-500/5 to-blue-500/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <Linkedin className={`relative z-10 w-4 h-4 transition-colors duration-200 ${mounted && resolvedTheme === 'dark'
                     ? 'text-gray-400 group-hover:text-white'
                     : 'text-gray-600 group-hover:text-white'
                     }`} />
@@ -121,13 +124,14 @@ const Footer: React.FC = () => {
                   href="https://facebook.com/hirekarma"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`flex items-center justify-center w-10 h-10 rounded-lg transition-all duration-300 hover:scale-110 group border ${mounted && resolvedTheme === 'dark'
-                    ? 'bg-gray-800 border-gray-700 hover:bg-gradient-to-br hover:from-cyan-500 hover:to-blue-600 hover:border-transparent'
-                    : 'bg-white border-gray-200 hover:bg-gradient-to-br hover:from-cyan-500 hover:to-blue-600 hover:border-transparent'
-                    } shadow-sm hover:shadow-lg`}
+                  className={`relative flex items-center justify-center w-10 h-10 rounded-lg transition-all duration-500 group border shadow-sm ${mounted && resolvedTheme === 'dark'
+                    ? 'bg-gray-800 border-gray-700'
+                    : 'bg-white border-gray-200'
+                    } hover:brightness-110`}
                   aria-label="Facebook"
                 >
-                  <Facebook className={`w-4 h-4 transition-colors duration-200 ${mounted && resolvedTheme === 'dark'
+                  <div className="pointer-events-none absolute inset-0 rounded-lg bg-gradient-to-br from-emerald-500/5 to-blue-500/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <Facebook className={`relative z-10 w-4 h-4 transition-colors duration-200 ${mounted && resolvedTheme === 'dark'
                     ? 'text-gray-400 group-hover:text-white'
                     : 'text-gray-600 group-hover:text-white'
                     }`} />
@@ -137,13 +141,14 @@ const Footer: React.FC = () => {
                   href="https://instagram.com/hirekarma"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`flex items-center justify-center w-10 h-10 rounded-lg transition-all duration-300 hover:scale-110 group border ${mounted && resolvedTheme === 'dark'
-                    ? 'bg-gray-800 border-gray-700 hover:bg-gradient-to-br hover:from-cyan-500 hover:to-blue-600 hover:border-transparent'
-                    : 'bg-white border-gray-200 hover:bg-gradient-to-br hover:from-cyan-500 hover:to-blue-600 hover:border-transparent'
-                    } shadow-sm hover:shadow-lg`}
+                  className={`relative flex items-center justify-center w-10 h-10 rounded-lg transition-all duration-500 group border shadow-sm ${mounted && resolvedTheme === 'dark'
+                    ? 'bg-gray-800 border-gray-700'
+                    : 'bg-white border-gray-200'
+                    } hover:brightness-110`}
                   aria-label="Instagram"
                 >
-                  <Instagram className={`w-4 h-4 transition-colors duration-200 ${mounted && resolvedTheme === 'dark'
+                  <div className="pointer-events-none absolute inset-0 rounded-lg bg-gradient-to-br from-emerald-500/5 to-blue-500/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <Instagram className={`relative z-10 w-4 h-4 transition-colors duration-200 ${mounted && resolvedTheme === 'dark'
                     ? 'text-gray-400 group-hover:text-white'
                     : 'text-gray-600 group-hover:text-white'
                     }`} />
@@ -251,6 +256,33 @@ const Footer: React.FC = () => {
                   </li>
                 );
               })}
+            </ul>
+          </div>
+
+          {/* Programs */}
+          <div className="space-y-5">
+            <h3 className={`text-sm font-bold uppercase tracking-wider ${mounted && resolvedTheme === 'dark' ? 'text-gray-200' : 'text-gray-900'
+              }`}>
+              Programs
+            </h3>
+            <ul className="space-y-3">
+              {footerPrograms.map((program) => (
+                <li key={program.name}>
+                  <a
+                    href={program.href}
+                    className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
+                      ? 'text-gray-300 hover:text-emerald-400'
+                      : 'text-gray-600 hover:text-emerald-600'
+                      }`}
+                  >
+                    <span className="relative">
+                      {program.name}
+                      <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${mounted && resolvedTheme === 'dark' ? 'bg-emerald-400' : 'bg-emerald-600'
+                        }`} />
+                    </span>
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 

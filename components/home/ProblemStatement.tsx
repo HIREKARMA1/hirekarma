@@ -15,7 +15,7 @@ const ProblemStatement: React.FC = () => {
 
     return (
         <div className="relative content-container py-12 sm:py-16 md:py-20">
-            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-24 items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center">
                 {/* Left Content - Problem Statement */}
                 <div className="space-y-6 sm:space-y-8 lg:space-y-10">
                     {/* Section Header */}
@@ -48,19 +48,19 @@ const ProblemStatement: React.FC = () => {
                     </div>
                 </div>
 
-                {/* Right Content - Problem Statement Image */}
+                {/* Right Content - Problem Statement Image (same width/sizing as Hero right column) */}
                 <div className="relative px-0 sm:px-5 md:px-5">
-                    <div className="relative w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[450px] overflow-hidden rounded-2xl">
+                    <div className="relative w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] overflow-hidden rounded-2xl">
                         <Image
                             src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/problemStatemen.gif"
                             alt="Problem Statement visualization - Talent ecosystem gaps and challenges"
                             fill
                             quality={85}
                             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
-                            className={`object-cover transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+                            className={`object-contain object-center transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
                             onLoad={() => setImageLoaded(true)}
                         />
-                        
+
                         {/* Loading skeleton */}
                         {!imageLoaded && (
                             <div className={`absolute inset-0 rounded-2xl animate-pulse ${mounted && resolvedTheme === 'dark'

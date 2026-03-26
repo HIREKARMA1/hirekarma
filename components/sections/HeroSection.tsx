@@ -10,6 +10,11 @@ const ImpactSection = dynamic(() => import('../home/ImpactSection'), {
   ssr: true
 });
 
+const ProductsSection = dynamic(() => import('../home/ProductsSection'), {
+  loading: () => <div className="min-h-[400px]" />,
+  ssr: true
+});
+
 const ProblemStatement = dynamic(() => import('../home/ProblemStatement'), {
   loading: () => <div className="min-h-screen" />,
   ssr: true
@@ -49,6 +54,10 @@ const HeroSection: React.FC = () => {
       {/* Lazy loaded sections (below the fold) */}
       <Suspense fallback={<div className="min-h-screen" />}>
         <ImpactSection />
+      </Suspense>
+
+      <Suspense fallback={<div className="min-h-[400px]" />}>
+        <ProductsSection />
       </Suspense>
       
       <Suspense fallback={<div className="min-h-screen" />}>
