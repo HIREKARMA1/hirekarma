@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
-import SectionHeader from '../shared/SectionHeader';
 
 // Certifications Data
 const certificationsData = [
@@ -90,12 +89,25 @@ const CertificationsSection: React.FC = () => {
     return (
         <div className="relative content-container py-12 sm:py-16 md:py-20">
             {/* Section Header */}
-            <div className="mb-12 sm:mb-16">
-                <SectionHeader
-                    title="Recognised & Certified By"
-                    description="Our platform meets the highest industry standards and is recognized by leading certification bodies and technology partners worldwide."
-                    alignment="left"
-                />
+            <div className="mb-12 sm:mb-16 space-y-6">
+                <h2 className={`text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight ${mounted && resolvedTheme === 'dark'
+                    ? 'text-gray-100'
+                    : 'text-gray-900'
+                    }`}>
+                    Recognised & Certified By
+                    <span className={`block mt-2 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium ${mounted && resolvedTheme === 'dark'
+                        ? 'text-teal-400'
+                        : 'text-teal-600'
+                        }`}>
+                        Trusted by Industry and Institutions
+                    </span>
+                </h2>
+                <p className={`text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl ${mounted && resolvedTheme === 'dark'
+                    ? 'text-gray-300'
+                    : 'text-gray-600'
+                    }`}>
+                    Our platform meets the highest industry standards and is recognized by leading certification bodies and technology partners worldwide.
+                </p>
             </div>
 
             {/* Certifications Grid */}

@@ -60,15 +60,16 @@ const FutureReadySection: React.FC = () => {
                     <div className="pt-2 sm:pt-4">
                         <Link
                             href="/about-us/our-story"
-                            className={`inline-flex items-center px-5 py-2.5 sm:px-6 sm:py-3 font-semibold rounded-lg transition-all duration-500 border-2 hover:shadow-lg transform hover:-translate-y-0.5 ${mounted && resolvedTheme === 'dark'
+                            className={`group relative inline-flex items-center overflow-hidden px-5 py-2.5 sm:px-6 sm:py-3 font-semibold rounded-lg transition-all duration-500 hover:brightness-110 border-2 ${mounted && resolvedTheme === 'dark'
                                 ? 'border-emerald-600 text-emerald-400 hover:bg-emerald-600 hover:text-white'
                                 : 'border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white'
                                 }`}
                         >
-                            <span>Read More</span>
-                            <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <span className="relative z-10">Read More</span>
+                            <svg className="relative z-10 ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                             </svg>
+                            <span className="pointer-events-none absolute inset-0 rounded-lg bg-gradient-to-br from-emerald-500/5 to-blue-500/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" aria-hidden />
                         </Link>
                     </div>
                 </div>

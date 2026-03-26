@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "id": "disha",
+      "logoLight": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/HKlogoblack.png",
+      "logoDark": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/HKlogowhite.png",
+      "title": "DISHA",
+      "subtitle": "Career Intelligence Transformation",
+      "description": "DISHA is a career intelligence ecosystem engineered to modernize institutional placement operations. It replaces fragmented, manual processes with structured, data-centric workflows, transforming student data into transparent, scalable career pathways for Tier-2 and Tier-3 institutions.",
+      "href": "https://disha.hirekarma.in/"
+    },
+    {
+      "id": "solviqai",
+      "logoLight": "https://solviqai.s3.ap-south-1.amazonaws.com/solviqligt.png",
+      "logoDark": "https://solviqai.s3.ap-south-1.amazonaws.com/solviqdark.png",
+      "title": "SOLVIQ AI",
+      "subtitle": "The Vanguard of Hiring Intelligence",
+      "description": "Solviq AI is a skill-intelligent platform that designs personalized learning journeys and connects candidates to opportunities precisely when they achieve job-readiness. It aligns academic potential with corporate demand through predictive, data-driven intelligence.",
+      "href": "https://www.solviqai.in/"
+    }
+  ]
+}

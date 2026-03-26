@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
-import SectionHeader from '../shared/SectionHeader';
 
 const faqData = [
     {
@@ -43,12 +42,25 @@ const FAQ: React.FC = () => {
     return (
         <div className="relative content-container py-12 sm:py-16 md:py-20">
             {/* Section Header */}
-            <div className="mb-12 sm:mb-16">
-                <SectionHeader
-                    title="FAQ"
-                    description="Have questions? We've got answers. If you can't find what you're looking for, feel free to contact us directly."
-                    alignment="left"
-                />
+            <div className="mb-12 sm:mb-16 space-y-6">
+                <h2 className={`text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight ${mounted && resolvedTheme === 'dark'
+                    ? 'text-gray-100'
+                    : 'text-gray-900'
+                    }`}>
+                    FAQ
+                    <span className={`block mt-2 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium ${mounted && resolvedTheme === 'dark'
+                        ? 'text-indigo-400'
+                        : 'text-indigo-600'
+                        }`}>
+                        Answers to Common Questions
+                    </span>
+                </h2>
+                <p className={`text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl ${mounted && resolvedTheme === 'dark'
+                    ? 'text-gray-300'
+                    : 'text-gray-600'
+                    }`}>
+                    Have questions? We&apos;ve got answers. If you can&apos;t find what you&apos;re looking for, feel free to contact us directly.
+                </p>
             </div>
 
             {/* FAQ Items */}

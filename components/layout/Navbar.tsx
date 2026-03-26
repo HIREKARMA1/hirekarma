@@ -5,8 +5,6 @@ import {
   Menu,
   X,
   ArrowRight,
-  Moon,
-  Sun,
   BookOpen,
   Heart,
   UsersRound,
@@ -50,7 +48,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mounted, setMounted] = useState(false);
-  const { setTheme, resolvedTheme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
@@ -101,8 +99,16 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
       dropdownItems: [
         { label: 'Disha', href: 'https://disha.hirekarma.in/', icon: Compass },
         { label: 'SolviqAI', href: 'https://www.solviqai.in/', icon: TrendingUp },
-         { label: 'Shortlisted', href: '/shortlisted', icon: TargetIcon },
         // { label: 'Sadhana', href: '/products/sadhana', icon: Brain },
+      ]
+    },
+    {
+      label: 'Programs',
+      href: '/programs',
+      icon: TargetIcon,
+      hasDropdown: true,
+      dropdownItems: [
+        { label: 'Shortlisted', href: '/shortlisted', icon: TargetIcon },
       ]
     },
     // {
@@ -169,27 +175,8 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
             {/* Desktop Navigation - Right Aligned */}
             <div className="hidden lg:flex items-center">
               <div className="flex items-center space-x-1">
-                {/* Theme Toggle Button - Desktop */}
-                {mounted && (
-                  <button
-                    onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-                    className={`p-2 rounded-lg transition-all duration-300 mr-2 ${resolvedTheme === 'dark'
-                      ? 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-950'
-                      : 'text-gray-700 hover:text-cyan-600 hover:bg-cyan-50'
-                      }`}
-                    aria-label="Toggle theme"
-                  >
-                    {resolvedTheme === 'dark' ? (
-                      <Sun className="w-5 h-5" />
-                    ) : (
-                      <Moon className="w-5 h-5" />
-                    )}
-                  </button>
-                )}
-
                 {/* Products Dropdown */}
                 {navigationItems.map((item) => {
-                  const IconComponent = item.icon;
                   return (
                     <div
                       key={item.label}
@@ -208,7 +195,6 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                             : 'text-gray-700 hover:text-cyan-600 hover:bg-cyan-50')
                           }`}
                       >
-                        <IconComponent className="w-4 h-4 flex-shrink-0 " />
                         <span className="whitespace-nowrap text-sm">{item.label}</span>
                         <ChevronDown className={`w-3 h-3 flex-shrink-0 transition-transform duration-300 ${activeDropdown === item.label ? 'rotate-180' : 'group-hover:rotate-180'
                           }`} />
@@ -229,10 +215,6 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                               ? 'border-gray-800'
                               : 'border-gray-100'
                               }`}>
-                              <IconComponent className={`w-4 h-4 ${mounted && resolvedTheme === 'dark'
-                                ? 'text-cyan-400'
-                                : 'text-cyan-600'
-                                }`} />
                               <h3 className={`font-semibold text-sm ${mounted && resolvedTheme === 'dark'
                                 ? 'text-gray-200'
                                 : 'text-gray-800'
@@ -240,7 +222,6 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                             </div>
                             <div className="grid grid-cols-1 gap-1">
                               {item.dropdownItems.map((dropdownItem, index) => {
-                                const DropdownIcon = dropdownItem.icon;
                                 return (
                                   <Link
                                     key={dropdownItem.label}
@@ -252,15 +233,6 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                                     style={{ animationDelay: `${index * 50}ms` }}
                                     onClick={closeDropdowns}
                                   >
-                                    <div className={`flex-shrink-0 w-7 h-7 rounded-lg bg-gradient-to-br flex items-center justify-center transition-all duration-200 ${mounted && resolvedTheme === 'dark'
-                                      ? 'from-cyan-900 to-blue-900 group-hover:from-cyan-800 group-hover:to-blue-800'
-                                      : 'from-cyan-100 to-blue-100 group-hover:from-cyan-200 group-hover:to-blue-200'
-                                      }`}>
-                                      <DropdownIcon className={`w-3 h-3 transition-all duration-200 ${mounted && resolvedTheme === 'dark'
-                                        ? 'text-cyan-400 group-hover:text-cyan-300'
-                                        : 'text-cyan-600 group-hover:text-cyan-700'
-                                        }`} />
-                                    </div>
                                     <div className="flex-1 min-w-0">
                                       <span className={`font-medium text-sm transition-colors duration-200 block truncate ${mounted && resolvedTheme === 'dark'
                                         ? 'text-gray-300 group-hover:text-cyan-400'
@@ -286,7 +258,6 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
 
                 {/* Simple Links - No Dropdown */}
                 {simpleLinks.map((link) => {
-                  const LinkIcon = link.icon;
                   return (
                     <Link
                       key={link.label}
@@ -296,7 +267,6 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                         : 'text-gray-700 hover:text-cyan-600 hover:bg-cyan-50'
                         }`}
                     >
-                      <LinkIcon className="w-4 h-4 flex-shrink-0" />
                       <span className="whitespace-nowrap text-sm">{link.label}</span>
                     </Link>
                   );
@@ -305,25 +275,8 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
             </div>
 
 
-            {/* Mobile Menu Button & Theme Toggle */}
+            {/* Mobile Menu Button */}
             <div className="flex lg:hidden items-center gap-2 flex-shrink-0">
-              {/* Theme Toggle Button - Mobile */}
-              {mounted && (
-                <button
-                  onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-                  className={`p-2.5 rounded-lg transition-all duration-200 ${resolvedTheme === 'dark'
-                    ? 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-950'
-                    : 'text-gray-700 hover:text-cyan-600 hover:bg-cyan-50'
-                    }`}
-                  aria-label="Toggle theme"
-                >
-                  {resolvedTheme === 'dark' ? (
-                    <Sun className="w-5 h-5" />
-                  ) : (
-                    <Moon className="w-5 h-5" />
-                  )}
-                </button>
-              )}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className={`p-2.5 rounded-lg transition-all duration-200 ${mounted && resolvedTheme === 'dark'
@@ -352,23 +305,13 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
 
                 {/* Products Dropdown */}
                 {navigationItems.map((item) => {
-                  const IconComponent = item.icon;
                   return (
                     <div key={item.label} className="space-y-1">
                       <button
                         onClick={(e) => handleDropdownClick(item.label, e)}
                         className="flex items-center justify-between w-full text-left text-gray-700 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 font-medium py-3 px-4 rounded-xl hover:bg-cyan-50 dark:hover:bg-cyan-950 transition-all duration-200"
                       >
-                        <div className="flex items-center space-x-3">
-                          <div className={`w-8 h-8 rounded-lg ${mounted && resolvedTheme === 'dark'
-                            ? 'bg-cyan-900'
-                            : 'bg-cyan-100'
-                            } flex items-center justify-center flex-shrink-0`}>
-                            <IconComponent className={`w-4 h-4 ${mounted && resolvedTheme === 'dark'
-                              ? 'text-cyan-400'
-                              : 'text-gray-700'
-                              }`} />
-                          </div>
+                        <div className="flex items-center">
                           <span className={`${mounted && resolvedTheme === 'dark'
                             ? 'text-gray-300'
                             : 'text-gray-700'
@@ -381,12 +324,11 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                       {activeDropdown === item.label && (
                         <div className="ml-4 space-y-1 animate-in slide-in-from-top-2 duration-300">
                           {item.dropdownItems.map((dropdownItem) => {
-                            const DropdownIcon = dropdownItem.icon;
                             return (
                               <Link
                                 key={dropdownItem.label}
                                 href={dropdownItem.href}
-                                className={`flex items-center space-x-3 w-full text-left font-medium py-2 px-4 rounded-lg transition-all duration-200 ${mounted && resolvedTheme === 'dark'
+                                className={`flex items-center w-full text-left font-medium py-2 px-4 rounded-lg transition-all duration-200 ${mounted && resolvedTheme === 'dark'
                                   ? 'text-gray-400 hover:text-cyan-400 hover:bg-cyan-950'
                                   : 'text-gray-600 hover:text-cyan-600 hover:bg-cyan-50'
                                   }`}
@@ -395,15 +337,6 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                                   closeDropdowns();
                                 }}
                               >
-                                <div className={`w-6 h-6 rounded-md flex items-center justify-center flex-shrink-0 ${mounted && resolvedTheme === 'dark'
-                                  ? 'bg-cyan-900'
-                                  : 'bg-cyan-100'
-                                  }`}>
-                                  <DropdownIcon className={`w-3 h-3 ${mounted && resolvedTheme === 'dark'
-                                    ? 'text-cyan-400'
-                                    : 'text-cyan-600'
-                                    }`} />
-                                </div>
                                 <span className="text-sm">{dropdownItem.label}</span>
                               </Link>
                             );
@@ -416,7 +349,6 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
 
                 {/* Simple Links - Mobile */}
                 {simpleLinks.map((link) => {
-                  const LinkIcon = link.icon;
                   return (
                     <Link
                       key={link.label}
@@ -427,15 +359,6 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                         }`}
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 ${mounted && resolvedTheme === 'dark'
-                        ? 'bg-cyan-900'
-                        : 'bg-cyan-100'
-                        }`}>
-                        <LinkIcon className={`w-4 h-4 ${mounted && resolvedTheme === 'dark'
-                          ? 'text-cyan-400'
-                          : 'text-cyan-600'
-                          }`} />
-                      </div>
                       <span>{link.label}</span>
                     </Link>
                   );
