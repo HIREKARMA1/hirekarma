@@ -68,8 +68,8 @@ const Testimonials: React.FC = () => {
                 </p>
             </div>
 
-            {/* Testimonials Cards Container */}
-            <div className="relative overflow-hidden">
+            {/* Testimonials Cards Container — overflow-x only + vertical padding so hover never clips */}
+            <div className="relative overflow-x-hidden py-3 sm:py-4 md:py-5">
                 <div
                     ref={scrollContainerRef}
                     className={`flex animate-testimonials-scroll space-x-3 sm:space-x-4 md:space-x-6 overflow-x-hidden scrollbar-hide touch-pan-x will-change-transform`}
@@ -90,11 +90,12 @@ const Testimonials: React.FC = () => {
                             key={`testimonial-${index}`}
                             className="flex-shrink-0 w-[240px] sm:w-[280px] md:w-[320px] lg:w-96"
                         >
-                            <div className={`p-4 sm:p-5 md:p-6 rounded-2xl border transition-all duration-500 hover:scale-105 hover:shadow-xl h-full ${
+                            <div className={`group relative h-full rounded-2xl border p-4 sm:p-5 md:p-6 transition-all duration-500 hover:brightness-110 ${
                                 mounted && resolvedTheme === 'dark'
                                     ? 'bg-gradient-to-br from-gray-800 to-gray-900 border-gray-700'
                                     : 'bg-gradient-to-br from-white to-gray-50 border-gray-200'
                             }`}>
+                                <div className="relative z-10">
                                 {/* Top Row - Profile Section */}
                                 <div className="flex items-center gap-2 sm:gap-3 md:gap-4 mb-3 sm:mb-4">
                                     <div className="flex-shrink-0">
@@ -150,6 +151,8 @@ const Testimonials: React.FC = () => {
                                         &quot;{testimonial.feedback}&quot;
                                     </p>
                                 </div>
+                                </div>
+                                <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/5 to-blue-500/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                             </div>
                         </div>
                     ))}

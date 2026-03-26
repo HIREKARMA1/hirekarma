@@ -33,7 +33,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
   return (
     <div
-      className={`group relative h-full overflow-hidden rounded-2xl border p-6 sm:p-7 transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl ${
+      className={`group relative h-full overflow-hidden rounded-2xl border p-6 sm:p-7 transition-all duration-500 hover:brightness-110 ${
         isDark
           ? 'bg-gradient-to-br from-blue-900/25 via-slate-900/30 to-cyan-950/20 border-blue-700/30 hover:border-cyan-500/40'
           : 'bg-gradient-to-br from-blue-50 via-white to-cyan-50 border-blue-200 hover:border-cyan-300'
@@ -45,7 +45,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         }`}
       />
 
-      <div className="flex h-full flex-col gap-5">
+      <div className="relative z-10 flex h-full flex-col gap-5">
         <div className="flex items-start justify-between gap-4">
           <div
             className={`relative flex h-12 w-36 shrink-0 items-center justify-start rounded-xl px-3 transition-all duration-500 ${
@@ -120,6 +120,8 @@ const ProductCard: React.FC<ProductCardProps> = ({
           <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         </a>
       </div>
+
+      <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/5 to-blue-500/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
     </div>
   );
 };
