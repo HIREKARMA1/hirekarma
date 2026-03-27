@@ -94,10 +94,10 @@ const HeroSection: React.FC = () => {
       <Suspense fallback={<div className="min-h-screen" />}>
         <Partners />
       </Suspense>
-
+{/* 
       <Suspense fallback={<div className="min-h-screen" />}>
         <GoogleLocationSection />
-      </Suspense>
+      </Suspense> */}
       
       <Suspense fallback={<div className="min-h-screen" />}>
         <CertificationsSection />
