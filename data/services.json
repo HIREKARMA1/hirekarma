@@ -1,0 +1,32 @@
+{
+  "heading": "Our Services",
+  "subheading": "IT Services for Custom Software Development",
+  "description": "We build and maintain software for clients—turning business goals into robust web and mobile solutions with secure, scalable, and performance-focused engineering.",
+  "items": [
+    {
+      "id": "custom-dev",
+      "badge": "Software Development",
+      "title": "Custom Software Development",
+      "description": "End-to-end development for business-critical applications with clean architecture and reliable delivery."
+    },
+    {
+      "id": "web-apps",
+      "badge": "Web Applications",
+      "title": "Web App Development",
+      "description": "Modern, responsive, and scalable web apps designed for seamless user experiences."
+    },
+    {
+      "id": "mobile-apps",
+      "badge": "Mobile Apps",
+      "title": "Mobile App Development",
+      "description": "Cross-platform solutions that bring your product to mobile with smooth performance."
+    },
+    {
+      "id": "support",
+      "badge": "Support & Maintenance",
+      "title": "Support, Maintenance & Upgrades",
+      "description": "Ongoing support, performance improvements, and feature upgrades to keep your software future-ready."
+    }
+  ]
+}
+
