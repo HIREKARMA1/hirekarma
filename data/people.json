@@ -24,6 +24,30 @@
     }
   },
   {
+    "name": "SAMBASIVARAO K",
+    "role": "Team Lead- Operations",
+    "category": "core",
+    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/sambasivarao.jpg",
+    "description": "As branch head, I oversee Bhubaneswar office, guide teams, track.",
+    "socialLinks": {
+      "linkedin": "https://www.linkedin.com/in/shankar-kesanupalli-31a33693/",
+      "instagram": "",
+      "email": "mailto:sambasiva@hirekarma.in"
+    }
+  },
+  {
+    "name": "Ganesh Chandra Dey",
+    "role": "Finance & Account's executive (FO)",
+    "category": "core",
+    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/GANESH+CHANDRA+DEY.jpg",
+    "description": "Manage finance, procurement, payments, vendors, compliance, reporting, operations efficiently",
+    "socialLinks": {
+      "linkedin": "",
+      "instagram": "",
+      "email": "mailto:gcdey98@gmail.com"
+    }
+  },
+  {
     "name": "Lokanath Panda",
     "role": "Lead Engineer",
     "category": "core",
@@ -35,11 +59,35 @@
       "email": "mailto:lokanath@hirekarma.in"
     }
   },
+  {
+    "name": "Sneha Parida",
+    "role": "HR Executive",
+    "category": "core",
+    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Sneha+Parida.jpg",
+    "description": "Recruit, manage employees, ensure compliance, support organizational growth.",
+    "socialLinks": {
+      "linkedin": "https://www.linkedin.com/in/sneha-parida-865529268/",
+      "instagram": "",
+      "email": "mailto:hr@hirekarma.in"
+    }
+  },
+  {
+    "name": "Sushree Sagarika Padhy ",
+    "role": "Team Lead- Corporate Relations",
+    "category": "core",
+    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Sagarika+Padhy.jpg",
+    "description": "Guiding BDE team and Lead generation team to drive campus hiring and partnerships.",
+    "socialLinks": {
+      "linkedin": "https://www.linkedin.com/in/shankar-kesanupalli-31a33693/",
+      "instagram": "",
+      "email": "mailto:sushree@hirekarma.in"
+    }
+  },
     {
     "name": "Rama Devi Lanka",
     "role": "Former Director Emerging Technologies Information Technology, Electronics & Communications  Department, Government of Telangana",
     "category": "advisory",
-    "image": "/ramadevi.jpeg",
+    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/ramadevi.jpg",
     "description": "Pioneering leader in emerging technologies and e-Governance with over 25 years of experience in tech-led transformation and policy frameworks for AI, blockchain, and digital governance.",
     "socialLinks": {
       "linkedin": "https://www.linkedin.com/in/ramadevi-lanka/",
