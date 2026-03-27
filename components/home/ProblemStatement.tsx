@@ -29,7 +29,7 @@ const ProblemStatement: React.FC = () => {
                                 ? 'text-red-400'
                                 : 'text-red-600'
                                 }`}>
-                                Traditional Talent Ecosystem Gaps
+                                Industry-Ready Skilling and Placement
                             </span>
                         </h2>
                     </div>
@@ -40,11 +40,35 @@ const ProblemStatement: React.FC = () => {
                             ? 'text-gray-300'
                             : 'text-gray-600'
                             }`}>
-                            The traditional talent ecosystem is <strong className={`${mounted && resolvedTheme === 'dark'
+                            Many students have potential but miss real exposure to industry workflows, tools, and expectations. Our skilling model closes this gap through structured training at our centers, with <strong className={`${mounted && resolvedTheme === 'dark'
                                 ? 'text-gray-200'
                                 : 'text-gray-700'
-                                }`}>fragmented and inefficient</strong>. Students struggle to meet industry expectations, institutions lack data-driven insights, and employers find it hard to identify job-ready talent. This leads to mismatches, longer hiring cycles, and a widening gap between education and employability.
+                                }`}>advanced technology labs and classroom facilities</strong> designed for practical, job-focused learning.
                         </p>
+
+                        <p className={`text-base sm:text-lg md:text-xl leading-relaxed max-w-full sm:max-w-xl md:max-w-2xl ${mounted && resolvedTheme === 'dark'
+                            ? 'text-gray-300'
+                            : 'text-gray-600'
+                            }`}>
+                            We currently train students for three active domains: <strong className={`${mounted && resolvedTheme === 'dark'
+                                ? 'text-gray-200'
+                                : 'text-gray-700'
+                                }`}>Retail, IT, and Core Industry</strong>. From lab sessions and classroom instruction to industry-level projects, we make candidates job-ready and connect them with employment opportunities across relevant industries.
+                        </p>
+
+                        <div className="flex flex-wrap gap-2.5 pt-1">
+                            {['Retail', 'IT', 'Core Industry'].map((domain) => (
+                                <span
+                                    key={domain}
+                                    className={`inline-flex rounded-full border px-3 py-1 text-xs sm:text-sm font-semibold ${mounted && resolvedTheme === 'dark'
+                                        ? 'border-red-500/35 bg-red-500/10 text-red-300'
+                                        : 'border-red-200 bg-red-50 text-red-700'
+                                        }`}
+                                >
+                                    {domain}
+                                </span>
+                            ))}
+                        </div>
                     </div>
                 </div>
 
