@@ -52,7 +52,7 @@ const ProblemStatement: React.FC = () => {
                 <div className="relative px-0 sm:px-5 md:px-5">
                     <div className="relative w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] overflow-hidden rounded-2xl">
                         <Image
-                            src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/problemStatemen.gif"
+                            src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/problemwesolve.gif"
                             alt="Problem Statement visualization - Talent ecosystem gaps and challenges"
                             fill
                             quality={85}
