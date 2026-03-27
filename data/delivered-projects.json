@@ -7,6 +7,7 @@
       "id": "project-1",
       "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/delivered-projects/AmaGopalpur.png",
       "title": "Ama Gopalpur Consituency Dashboard",
+      "clientType": "Government",
       "subtitle": "Public Governance Dashboard",
       "description": "A dashboard for the Ama Gopalpur Consituency to track the progress of the constituency.",
       "href": "https://mlagopalpur.org/"
@@ -15,6 +16,7 @@
       "id": "project-2",
       "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/delivered-projects/AARIAH.png",
       "title": "AARIAH",
+      "clientType": "Private",
       "subtitle": "Portal for the AARIAH NGO",
       "description": "A portal for the AARIAH NGO to showcase their work and projects.",
       "href": "https://aariah.vercel.app/"

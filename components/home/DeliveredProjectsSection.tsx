@@ -10,6 +10,7 @@ type DeliveredProjectsItem = {
   id: string;
   image: string;
   title: string;
+  clientType: string;
   subtitle: string;
   description: string;
   href: string;
@@ -69,6 +70,7 @@ const DeliveredProjectsSection: React.FC<DeliveredProjectsSectionProps> = ({
             key={item.id}
             image={item.image}
             title={item.title}
+            clientType={item.clientType}
             subtitle={item.subtitle}
             description={item.description}
             href={item.href}
