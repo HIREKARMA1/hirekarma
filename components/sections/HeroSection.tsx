@@ -25,6 +25,11 @@ const FutureReadySection = dynamic(() => import('../home/FutureReadySection'), {
   ssr: true
 });
 
+const DeliveredProjectsSection = dynamic(() => import('../home/DeliveredProjectsSection'), {
+  loading: () => <div className="min-h-screen" />,
+  ssr: true
+});
+
 const Testimonials = dynamic(() => import('../home/Testimonials'), {
   loading: () => <div className="min-h-screen" />,
   ssr: true
@@ -36,6 +41,11 @@ const FAQ = dynamic(() => import('../home/FAQ'), {
 });
 
 const Partners = dynamic(() => import('../home/Partners'), {
+  loading: () => <div className="min-h-screen" />,
+  ssr: true
+});
+
+const GoogleLocationSection = dynamic(() => import('../home/GoogleLocationSection'), {
   loading: () => <div className="min-h-screen" />,
   ssr: true
 });
@@ -61,12 +71,17 @@ const HeroSection: React.FC = () => {
       </Suspense>
       
       <Suspense fallback={<div className="min-h-screen" />}>
+        <DeliveredProjectsSection />
+      </Suspense>
+      
+      <Suspense fallback={<div className="min-h-screen" />}>
         <ProblemStatement />
       </Suspense>
       
       <Suspense fallback={<div className="min-h-screen" />}>
         <FutureReadySection />
       </Suspense>
+
       
       <Suspense fallback={<div className="min-h-screen" />}>
         <Testimonials />
@@ -79,6 +94,10 @@ const HeroSection: React.FC = () => {
       <Suspense fallback={<div className="min-h-screen" />}>
         <Partners />
       </Suspense>
+
+      {/* <Suspense fallback={<div className="min-h-screen" />}>
+        <GoogleLocationSection />
+      </Suspense> */}
       
       <Suspense fallback={<div className="min-h-screen" />}>
         <CertificationsSection />
