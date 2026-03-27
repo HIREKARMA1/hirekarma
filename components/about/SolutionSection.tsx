@@ -74,16 +74,16 @@ const SolutionSection: React.FC = () => {
         </div>
 
         {/* RIGHT CONTENT - HERO GIF */}
-        <div className="relative order-2 lg:order-2 flex justify-center lg:justify-end pr-2.5 mt-6 lg:mt-0">
-          <div className="relative w-full sm:w-[90%] md:w-[80%] lg:w-[70%] xl:w-[75%] h-[250px] sm:h-[320px] md:h-[420px] lg:h-[450px] overflow-hidden rounded-2xl">
+        <div className="relative order-2 lg:order-2 px-0 sm:px-5 md:px-5 mt-6 lg:mt-0">
+          <div className="relative w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] overflow-hidden rounded-2xl">
             <Image
               src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/about-us/transforming_solution.gif"
               alt="AI-powered transformative solution for campus hiring"
               fill
               priority
               quality={85}
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 95vw"
-              className={`object-cover transition-opacity duration-300 ${
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
+              className={`object-contain object-center transition-opacity duration-300 ${
                 imageLoaded ? "opacity-100" : "opacity-0"
               }`}
               onLoad={() => setImageLoaded(true)}
