@@ -27,21 +27,48 @@ const impactData = [
 ];
 
 // Chart component - will be lazy loaded
-const ChartComponent: React.FC<{ mounted: boolean; resolvedTheme?: string }> = ({ mounted, resolvedTheme }) => (
-    <ResponsiveContainer width="100%" height="100%">
-        <BarChart data={impactData} margin={{ top: 40, right: 40, left: 20, bottom: 40 }}>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="year" />
-            <YAxis />
-            <Tooltip />
-            <Bar dataKey="value" fill="#06b6d4">
-                {impactData.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={mounted && resolvedTheme === 'dark' ? '#06b6d4' : '#0891b2'} />
-                ))}
-            </Bar>
-        </BarChart>
-    </ResponsiveContainer>
-);
+const ChartComponent: React.FC<{ mounted: boolean; resolvedTheme?: string }> = ({ mounted, resolvedTheme }) => {
+    const isDarkTheme = mounted && resolvedTheme === 'dark';
+    // Recharts defaults often render axis/grid with low contrast on dark gradients.
+    const gridStroke = isDarkTheme ? 'rgba(248, 250, 252, 0.42)' : 'rgba(71, 85, 105, 0.22)';
+    const axisStroke = isDarkTheme ? '#cbd5e1' : '#94a3b8';
+    const tickColor = isDarkTheme ? '#f8fafc' : '#334155';
+
+    return (
+        <ResponsiveContainer width="100%" height="100%">
+            <BarChart data={impactData} margin={{ top: 40, right: 40, left: 20, bottom: 40 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke={gridStroke} />
+                <XAxis
+                    dataKey="year"
+                    stroke={axisStroke}
+                    axisLine={{ stroke: axisStroke }}
+                    tick={{ fill: tickColor, fontSize: 13, fontWeight: 600 }}
+                    tickLine={{ stroke: axisStroke }}
+                />
+                <YAxis
+                    stroke={axisStroke}
+                    axisLine={{ stroke: axisStroke }}
+                    tick={{ fill: tickColor, fontSize: 13, fontWeight: 600 }}
+                    tickLine={{ stroke: axisStroke }}
+                />
+                <Tooltip
+                    contentStyle={{
+                        backgroundColor: isDarkTheme ? 'rgba(15, 23, 42, 0.92)' : 'rgba(255, 255, 255, 0.95)',
+                        border: `1px solid ${isDarkTheme ? 'rgba(203, 213, 225, 0.25)' : 'rgba(148, 163, 184, 0.35)'}`,
+                        borderRadius: '10px',
+                        color: isDarkTheme ? '#f8fafc' : '#0f172a',
+                        fontWeight: 600,
+                    }}
+                />
+                <Bar dataKey="value" fill="#06b6d4">
+                    {impactData.map((entry, index) => (
+                        <Cell key={`cell-${index}`} fill={mounted && resolvedTheme === 'dark' ? '#06b6d4' : '#0891b2'} />
+                    ))}
+                </Bar>
+            </BarChart>
+        </ResponsiveContainer>
+    );
+};
 
 const ImpactSection: React.FC = () => {
     const [mounted, setMounted] = useState(false);
