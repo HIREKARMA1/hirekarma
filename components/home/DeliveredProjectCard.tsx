@@ -8,6 +8,7 @@ import { ArrowUpRight } from 'lucide-react';
 interface DeliveredProjectCardProps {
   image: string;
   title: string;
+  clientType: string;
   subtitle: string;
   description: string;
   href: string;
@@ -16,6 +17,7 @@ interface DeliveredProjectCardProps {
 const DeliveredProjectCard: React.FC<DeliveredProjectCardProps> = ({
   image,
   title,
+  clientType,
   subtitle,
   description,
   href,
@@ -42,6 +44,16 @@ const DeliveredProjectCard: React.FC<DeliveredProjectCardProps> = ({
       />
 
       <div className="relative z-10 flex h-full flex-col gap-4">
+        <span
+          className={`inline-flex w-fit rounded-full px-3 py-1 text-xs font-semibold ${
+            isDark
+              ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/30'
+              : 'bg-cyan-100 text-cyan-700 border border-cyan-200'
+          }`}
+        >
+          {clientType}
+        </span>
+
         <div
           className={`relative h-40 overflow-hidden rounded-xl border ${
             isDark ? 'bg-gray-900/40 border-gray-800' : 'bg-white/60 border-gray-200'
