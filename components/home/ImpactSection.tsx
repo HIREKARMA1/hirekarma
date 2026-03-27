@@ -153,13 +153,13 @@ const ImpactSection: React.FC = () => {
                                     ? 'text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400'
                                     : 'text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600'
                                     }`}>
-                                    80+
+                                    130+
                                 </div>
                                 <div className={`text-xs sm:text-sm font-semibold text-right ${mounted && resolvedTheme === 'dark'
                                     ? 'text-gray-300'
                                     : 'text-gray-700'
                                     }`}>
-                                    Trusted Colleges
+                                    Universities
                                 </div>
                             </div>
                             <div className="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-br from-emerald-500/5 to-blue-500/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
@@ -174,13 +174,13 @@ const ImpactSection: React.FC = () => {
                                     ? 'text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-yellow-400'
                                     : 'text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-yellow-600'
                                     }`}>
-                                    950+
+                                    980+
                                 </div>
                                 <div className={`text-xs sm:text-sm font-semibold text-left ${mounted && resolvedTheme === 'dark'
                                     ? 'text-gray-300'
                                     : 'text-gray-700'
                                     }`}>
-                                    Partnered Companies
+                                    Companies
                                 </div>
                             </div>
                             <div className="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-br from-emerald-500/5 to-blue-500/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
