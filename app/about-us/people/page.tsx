@@ -65,10 +65,13 @@ export default function PeoplePage() {
           <div className="relative content-container pt-20 pb-8">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Left Content - Header and Description */}
-              <div className="space-y-2 lg:space-y-1">
+                <div className="space-y-2 lg:space-y-1">
                 <div className="space-y-4">
                   <h1 className={`text-2xl sm:text-4xl lg:text-4xl xl:text-6xl font-bold leading-tight tracking-tight ${mounted && resolvedTheme === 'dark' ? 'text-gray-100' : 'text-gray-900'}`}>
                     Leadership that Inspires Growth
+                    <span className={`block mt-2 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium ${mounted && resolvedTheme === 'dark' ? 'text-cyan-300' : 'text-cyan-700'}`}>
+                      Meet the People Powering HireKarma
+                    </span>
                   </h1>
                 </div>
 
@@ -264,7 +267,12 @@ export default function PeoplePage() {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 {/* Left Side - Header and Description */}
                 <div>
-                  <h2 className={`text-4xl sm:text-5xl font-bold mb-6 ${mounted && resolvedTheme === 'dark' ? 'text-blue-400' : 'text-blue-700'}`}>Our Culture</h2>
+                  <h2 className={`text-4xl sm:text-5xl font-bold leading-tight tracking-tight mb-6 ${mounted && resolvedTheme === 'dark' ? 'text-gray-100' : 'text-gray-900'}`}>
+                    Our Culture
+                    <span className={`block mt-2 text-lg sm:text-xl lg:text-2xl font-medium ${mounted && resolvedTheme === 'dark' ? 'text-cyan-300' : 'text-cyan-700'}`}>
+                      Inclusive, Innovative, and Collaborative
+                    </span>
+                  </h2>
                   <p className={`text-xl leading-relaxed mb-8 ${mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
                     We believe in fostering an inclusive, innovative, and collaborative environment where every team member can thrive and contribute to our mission of transforming campus recruitment.
                   </p>
