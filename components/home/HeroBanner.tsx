@@ -50,7 +50,7 @@ const HeroBanner: React.FC = () => {
                 <div className="relative px-0 sm:px-5 md:px-5">
                     <div className="relative w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] overflow-hidden rounded-2xl">
                         <Image
-                            src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/Hero.gif"
+                            src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/Landingpage.gif"
                             alt="Hero animation - HireKarma platform showcase"
                             fill
                             priority
