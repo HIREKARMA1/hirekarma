@@ -1,0 +1,26 @@
+{
+  "heading": "Our Locations",
+  "subheading": "Serving Clients Across Key Regions",
+  "description": "Head location: Bhubaneswar. Explore our office and delivery presence across four locations on the map below.",
+  "locations": [
+    {
+      "name": "Bhubaneswar",
+      "type": "Head Location"
+    },
+    {
+      "name": "Bengaluru",
+      "type": "Delivery"
+    },
+    {
+      "name": "Hyderabad",
+      "type": "Delivery"
+    },
+    {
+      "name": "Pune",
+      "type": "Delivery"
+    }
+  ],
+  "headerCropPx": 72,
+  "iframeHtml": "<iframe src=\"https://www.google.com/maps/d/embed?mid=1iF_D0vlN1RxncEOG3gPFQKjGx58-5bc&ehbc=2E312F\" width=\"640\" height=\"480\" style=\"border:0;\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\" allowfullscreen></iframe>"
+}
+
