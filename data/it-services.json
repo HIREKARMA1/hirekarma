@@ -1,0 +1,227 @@
+{
+  "meta": {
+    "pageTitle": "IT Services",
+    "pageDescription": "Technology services for product engineering, QA, and transformation delivery."
+  },
+  "hero": {
+    "label": "IT SERVICES & SOLUTIONS",
+    "title": "Technology that",
+    "highlight": "moves businesses",
+    "titleSuffix": "forward.",
+    "description": "From enterprise applications to quality assurance — we deliver end-to-end IT solutions tailored to your business goals.",
+    "iconCloud": [
+      "Code2",
+      "Monitor",
+      "Smartphone",
+      "Database",
+      "Layers",
+      "Cloud",
+      "ShieldCheck",
+      "Bug",
+      "GitBranch",
+      "Cpu",
+      "Workflow",
+      "Server"
+    ]
+  },
+  "about": {
+    "label": "ABOUT",
+    "title": "Who we are",
+    "description": "A trusted technology partner delivering quality-first IT services across domains.",
+    "stats": [
+      {
+        "id": "projects-delivered",
+        "value": "10+",
+        "label": "Projects delivered"
+      },
+      {
+        "id": "years-experience",
+        "value": "5+",
+        "label": "Years experience"
+      },
+      {
+        "id": "expert-pros",
+        "value": "10+",
+        "label": "Expert pros"
+      },
+      {
+        "id": "happy-clients",
+        "value": "15+",
+        "label": "Happy clients"
+      }
+    ],
+    "detail": "HireKarma is a technology services company helping businesses build, test, and scale their digital products. We combine deep domain expertise with a collaborative approach — working as an extension of your team to deliver outcomes that matter."
+  },
+  "services": {
+    "label": "SERVICES",
+    "title": "IT services",
+    "description": "Core technology capabilities we bring to every engagement.",
+    "items": [
+      {
+        "id": "web-development",
+        "icon": "Monitor",
+        "title": "Web development",
+        "chips": ["Next.js","Python FastAPI","MERN"]
+      },
+      {
+        "id": "mobile-app-development",
+        "icon": "Smartphone",
+        "title": "Mobile app development",
+        "chips": ["Android", "iOS", "Flutter"]
+      },
+      {
+        "id": "cloud-infrastructure",
+        "icon": "Database",
+        "title": "Cloud & infrastructure",
+        "chips": ["AWS", "Azure", "DevOps"]
+      },
+      {
+        "id": "data-analytics",
+        "icon": "Layers",
+        "title": "Data & analytics",
+        "chips": ["ETL", "BI", "Pipelines"]
+      },
+      {
+        "id": "software-testing-qa",
+        "icon": "Code2",
+        "title": "Software testing & QA",
+        "chips": ["Manual", "Automation", "UAT"]
+      },
+      {
+        "id": "api-integration-services",
+        "icon": "CircleDashed",
+        "title": "API & integration services",
+        "chips": ["REST", "SOAP", "Middleware"]
+      }
+    ]
+  },
+  "projects": {
+    "label": "PROJECTS",
+    "title": "IT projects",
+    "description": "A selection of technology solutions we've built and shipped.",
+    "items": [
+      {
+        "id": "enterprise-hr-portal",
+        "index": "01",
+        "title": "Enterprise HR portal",
+        "description": "Full-stack web app for workforce management, attendance and payroll.",
+        "tag": "Web app"
+      },
+      {
+        "id": "logistics-tracking-platform",
+        "index": "02",
+        "title": "Logistics tracking platform",
+        "description": "Real-time shipment tracking dashboard with mobile companion app.",
+        "tag": "Mobile + web"
+      },
+      {
+        "id": "data-migration-etl",
+        "index": "03",
+        "title": "Data migration & ETL pipeline",
+        "description": "Large-scale ETL pipeline migrating 10M+ records to cloud data warehouse.",
+        "tag": "Data"
+      },
+      {
+        "id": "client-onboarding-system",
+        "index": "04",
+        "title": "Client onboarding system",
+        "description": "Digital onboarding workflow with document verification and API integrations.",
+        "tag": "Enterprise"
+      }
+    ]
+  },
+  "testingQuality": {
+    "label": "TESTING & QUALITY",
+    "title": "QA & testing services",
+    "description": "Comprehensive quality assurance across industries, platforms, and testing types.",
+    "industryFocus": {
+      "icon": "Building2",
+      "title": "BFSI — Banking, Financial Services & Insurance",
+      "description": "Core banking · Insurance platforms · Financial data systems · Regulatory compliance testing"
+    },
+    "testingAreas": [
+      {
+        "id": "manual-testing",
+        "title": "Manual testing",
+        "description": "Functional, regression, exploratory"
+      },
+      {
+        "id": "automation-testing",
+        "title": "Automation testing",
+        "description": "Selenium, Cypress, Appium"
+      },
+      {
+        "id": "api-testing",
+        "title": "API testing",
+        "description": "REST, SOAP, Postman"
+      },
+      {
+        "id": "uat",
+        "title": "UAT",
+        "description": "User acceptance & sign-off"
+      },
+      {
+        "id": "core-banking-testing",
+        "title": "Core banking testing",
+        "description": "Transactional & integration flows"
+      },
+      {
+        "id": "etl-testing",
+        "title": "ETL testing",
+        "description": "Data validation & pipeline QA"
+      },
+      {
+        "id": "performance-testing",
+        "title": "Performance testing",
+        "description": "Load, stress, scalability"
+      },
+      {
+        "id": "security-testing",
+        "title": "Security testing",
+        "description": "Vulnerability & penetration"
+      },
+      {
+        "id": "mobile-testing",
+        "title": "Mobile testing",
+        "description": "iOS, Android, cross-device"
+      }
+    ]
+  },
+  "team": {
+    "label": "TEAM",
+    "title": "People behind the work",
+    "description": "Experienced engineers, QA specialists, and delivery leads.",
+    "members": [
+      {
+        "id": "member-1",
+        "initials": "AK",
+        "name": "Add name",
+        "role": "Founder & CEO"
+      },
+      {
+        "id": "member-2",
+        "initials": "SR",
+        "name": "Add name",
+        "role": "Lead QA engineer"
+      },
+      {
+        "id": "member-3",
+        "initials": "PM",
+        "name": "Add name",
+        "role": "Full-stack developer"
+      },
+      {
+        "id": "member-4",
+        "initials": "RD",
+        "name": "Add name",
+        "role": "Delivery manager"
+      }
+    ],
+    "cta": {
+      "title": "Ready to work with us?",
+      "description": "Let's talk about your next project.",
+      "buttonLabel": "Get in touch",
+      "buttonHref": "/contact"
+    }
+  }
+}

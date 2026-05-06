@@ -13,9 +13,8 @@ import {
   TrendingUp,
   Compass,
   Zap,
-  TargetIcon
-
-  
+  TargetIcon,
+  BriefcaseBusiness
 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -137,6 +136,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
     // }
   ];
   const simpleLinks: SimpleLink[] = [
+    { label: 'Services', href: '/services/it-services', icon: BriefcaseBusiness },
     { label: 'Contact', href: '/contact', icon: Handshake }
   ];
 
