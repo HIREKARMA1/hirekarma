@@ -101,32 +101,60 @@
     "description": "A selection of technology solutions we've built and shipped.",
     "items": [
       {
-        "id": "enterprise-hr-portal",
+        "id": "ama-gopalpur",
         "index": "01",
-        "title": "Enterprise HR portal",
-        "description": "Full-stack web app for workforce management, attendance and payroll.",
-        "tag": "Web app"
+        "title": "AmaGopalpur",
+        "description": "A dashboard for the Ama Gopalpur Consituency to track the progress of the constituency.",
+        "tag": "Web app",
+        "href": "https://amagopalpur.org/"
       },
       {
-        "id": "logistics-tracking-platform",
+        "id": "atal-yuva-vikas-2026",
         "index": "02",
-        "title": "Logistics tracking platform",
-        "description": "Real-time shipment tracking dashboard with mobile companion app.",
-        "tag": "Mobile + web"
+        "title": "Atal Yuva Vikas 2026",
+        "description": "A portal for the Atal Yuva Vikas 2026",
+        "tag": "Web app",
+        "href": "https://atalyuvavikas.amagopalpur.org/"
       },
       {
-        "id": "data-migration-etl",
+        "id": "maa-tara-tarini",
         "index": "03",
-        "title": "Data migration & ETL pipeline",
-        "description": "Large-scale ETL pipeline migrating 10M+ records to cloud data warehouse.",
-        "tag": "Data"
+        "title": "Maa Tara tarini",
+        "description": "A portal for the Maa Tara tarini temple",
+        "tag": "Web app",
+        "href": "https://maataratarini.hirekarma.in/"
       },
       {
-        "id": "client-onboarding-system",
+        "id": "aariah",
         "index": "04",
-        "title": "Client onboarding system",
-        "description": "Digital onboarding workflow with document verification and API integrations.",
-        "tag": "Enterprise"
+        "title": "AARIAH",
+        "description": "A portal for the AARIAH NGO",
+        "tag": "Web app",
+        "href": "https://aariah.vercel.app/"
+      },
+      {
+        "id": "gdmspl",
+        "index": "05",
+        "title": "GDMSPL",
+        "description": "A portal for the GDMSPL",
+        "tag": "Web app",
+        "href": ""
+      },
+      {
+        "id": "bput-o-job",
+        "index": "06",
+        "title": "BPUT'O'JOB",
+        "description": "A portal for the BPUT'O'JOB",
+        "tag": "Web app",
+        "href": "https://bputojob.bput.ac.in/"
+      },
+      {
+        "id": "mla-gopalpur",
+        "index": "07",
+        "title": "MLA Gopalpur",
+        "description": "A grievance redressal portal for the Gopalpur constituency",
+        "tag": "Web app",
+        "href": "https://mlagopalpur.org/"
       }
     ]
   },
@@ -194,27 +222,57 @@
     "members": [
       {
         "id": "member-1",
-        "initials": "AK",
-        "name": "Add name",
-        "role": "Founder & CEO"
+        "initials": "SM",
+        "name": "Swapnajit Mohanty",
+        "role": "Senior Product Manager"
       },
       {
         "id": "member-2",
-        "initials": "SR",
-        "name": "Add name",
-        "role": "Lead QA engineer"
+        "initials": "LP",
+        "name": "Lokanath Panda",
+        "role": "Lead Engineer"
       },
       {
         "id": "member-3",
         "initials": "PM",
-        "name": "Add name",
-        "role": "Full-stack developer"
+        "name": "Sradha Mohanty",
+        "role": "Jr. Software Engineer"
       },
       {
         "id": "member-4",
         "initials": "RD",
-        "name": "Add name",
-        "role": "Delivery manager"
+        "name": "Rakshitha Sai Naraharisetti",
+        "role": "Jr Software developer"
+      },
+      {
+        "id": "member-5",
+        "initials": "RG",
+        "name": "Rohith Goud Buyyani",
+        "role": "QA Engineer"
+      },
+      {
+        "id": "member-6",
+        "initials": "RD",
+        "name": "Sane Hemavathi",
+        "role": "Java developer intern"
+      },
+      {
+        "id": "member-7",
+        "initials": "KL",
+        "name": "Krishnaveni Linga",
+        "role": "Devops trainee"
+      },
+      {
+        "id": "member-8",
+        "initials": "KL",
+        "name": "Anubhab Sahoo",
+        "role": "Software Developer Intern"
+      },
+      {
+        "id": "member-9",
+        "initials": "KL",
+        "name": "Biswarupa Panda",
+        "role": "UI/UX Intern"
       }
     ],
     "cta": {
