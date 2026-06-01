@@ -6,6 +6,7 @@ import WhatMakesDifferent from "@/components/shortlisted/home/WhatMakesDifferent
 import LiveJobExecution from "@/components/shortlisted/home/LiveJobExecution"
 import WhatYouWalkAwayWith from "@/components/shortlisted/home/WhatYouWalkAwayWith"
 import CTABanner from "@/components/shortlisted/home/CTABanner"
+import PricingSection from "@/components/shortlisted/home/PricingSection"
 import Footer from "@/components/shortlisted/ui/Footer"
 
 export default function HomePage() {
@@ -18,6 +19,7 @@ export default function HomePage() {
             <WhoCanJoin />
             <WhatMakesDifferent />
             <WhatYouWalkAwayWith />
+            <PricingSection />
             <CTABanner />
             <Footer />
         </main>

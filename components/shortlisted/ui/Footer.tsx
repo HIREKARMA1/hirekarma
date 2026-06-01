@@ -37,6 +37,7 @@ const Footer: React.FC = () => {
     const privacyPolicyLinks = [
         { name: "Privacy Policy", href: "/shortlisted/privacy-policy" },
         { name: "Terms of Service", href: "/shortlisted/terms-of-service" },
+        { name: "Refund Policy", href: "/shortlisted/refund-policy" },
         { name: "Cookie Policy", href: "/shortlisted/cookie-policy" },
         { name: "Release Notes", href: "/shortlisted/release-notes" }
     ];
