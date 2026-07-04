@@ -1,0 +1,66 @@
+{
+  "hero": {
+    "tabletSlides": [
+      {
+        "src": "https://hirekarma.s3.us-east-1.amazonaws.com/Products/disha.png",
+        "alt": {
+          "en": "DISHA campus recruitment dashboard",
+          "hi": "DISHA कैंपस भर्ती डैशबोर्ड",
+          "od": "DISHA କ୍ୟାମ୍ପସ୍ ନିଯୁକ୍ତି ଡ୍ୟାସବୋର୍ଡ"
+        }
+      },
+      {
+        "src": "https://hirekarma.s3.us-east-1.amazonaws.com/Products/solviq.jpeg",
+        "alt": {
+          "en": "SolviqAI resume checker dashboard",
+          "hi": "SolviqAI रिज़्यूमे चेकर डैशबोर्ड",
+          "od": "SolviqAI ରିଜ୍ୟୁମେ ଚେକର ଡ୍ୟାସବୋର୍ଡ"
+        }
+      },
+      {
+        "src": "https://hirekarma.s3.us-east-1.amazonaws.com/Products/Lakshya.png",
+        "alt": {
+          "en": "Lakshya campus hiring platform",
+          "hi": "Lakshya कैंपस हायरिंग प्लेटफ़ॉर्म",
+          "od": "Lakshya କ୍ୟାମ୍ପସ୍ ହାୟରିଂ ପ୍ଲାଟଫର୍ମ"
+        }
+      },
+      {
+        "src": "https://hirekarma.s3.us-east-1.amazonaws.com/Products/Shortlisted.png",
+        "alt": {
+          "en": "Shortlisted AI virtual placement cell",
+          "hi": "Shortlisted AI वर्चुअल प्लेसमेंट सेल",
+          "od": "Shortlisted AI ଭର୍ଚୁଆଲ ପ୍ଲେସମେଣ୍ଟ ସେଲ"
+        }
+      }
+    ]
+  },
+  "partners": {
+    "bannerImage": "/about-us/partner-logos.png",
+    "logos": [
+      { "name": "TATA", "src": "/company/tcs.png" },
+      { "name": "Wipro", "src": "/company/wipro.png" },
+      { "name": "Accenture", "src": "/company/accenture.png" }
+    ]
+  },
+  "products": {
+    "disha": {
+      "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Products/disha.png"
+    },
+    "solviq": {
+      "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Products/solviq.jpeg"
+    },
+    "lakshya": {
+      "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Products/Lakshya.png"
+    },
+    "shortlisted": {
+      "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Products/Shortlisted.png"
+    },
+    "janasamadhan": {
+      "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Products/eabhijog.png"
+    },
+    "amagopalpur": {
+      "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Products/amagopalpur.png"
+    }
+  }
+}
