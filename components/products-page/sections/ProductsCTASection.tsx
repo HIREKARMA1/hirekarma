@@ -10,7 +10,7 @@ export function ProductsCTASection() {
   const { cta } = content;
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20" style={{ backgroundColor: theme.colors.heroBg }}>
+    <section className="relative py-12 sm:py-16 lg:py-20">
       <div className="content-container">
         <div
           className="overflow-hidden rounded-3xl border border-white/10 p-8 sm:p-10 lg:p-14"

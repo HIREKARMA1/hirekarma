@@ -58,7 +58,7 @@ export interface ProductItem {
 
 export interface ProductsSectionContent {
   label: string;
-  heading: string;
+  heading: HeadingParts;
   description: string;
   items: ProductItem[];
 }

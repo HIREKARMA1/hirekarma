@@ -9,12 +9,10 @@ export function ImpactStatsSection() {
   const { impact } = content;
 
   return (
-    <section className="border-t border-gray-100 bg-gray-50 py-14 sm:py-16 lg:py-20">
+    <section className="relative py-14 sm:py-16 lg:py-20">
       <div className="content-container">
-        <div className="mb-10 text-center sm:mb-12">
-          <SectionLabel variant="light" className="text-center">
-            {impact.label}
-          </SectionLabel>
+        <div className="mb-10 sm:mb-12">
+          <SectionLabel>{impact.label}</SectionLabel>
         </div>
 
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-5 lg:gap-6">
