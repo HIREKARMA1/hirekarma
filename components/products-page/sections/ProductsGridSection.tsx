@@ -1,6 +1,7 @@
 "use client";
 
 import { useProductsLocale } from "@/contexts/ProductsLocaleContext";
+import { GradientHeading } from "../ui/GradientHeading";
 import { SectionLabel } from "../ui/SectionLabel";
 import { ProductDetailCard } from "./ProductDetailCard";
 
@@ -9,19 +10,24 @@ export function ProductsGridSection() {
   const { productsSection } = content;
 
   return (
-    <section className="relative z-0 bg-white pb-14 pt-8 sm:pb-16 sm:pt-10 lg:pb-20 lg:pt-12">
-      <div className="content-container">
-        <div className="mx-auto mb-12 max-w-3xl space-y-4 text-center sm:mb-16">
-          <SectionLabel variant="light">{productsSection.label}</SectionLabel>
-          <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl lg:text-4xl">
-            {productsSection.heading}
-          </h2>
-          <p className="text-base leading-relaxed text-gray-600 sm:text-lg">
+    <section className="relative w-full max-w-full py-14 sm:py-16 lg:py-20">
+      <div className="relative z-10 content-container">
+        <div className="mb-12 max-w-3xl space-y-5 sm:mb-16 sm:space-y-6">
+          <SectionLabel>{productsSection.label}</SectionLabel>
+
+          <GradientHeading
+            heading={productsSection.heading}
+            as="h2"
+            size="section"
+            layout="stacked"
+          />
+
+          <p className="max-w-2xl text-base font-medium leading-[1.7] text-white/88 sm:text-lg lg:font-normal lg:leading-[1.75] lg:text-white/80">
             {productsSection.description}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+        <div className="grid grid-cols-1 items-stretch gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-10">
           {productsSection.items.map((product) => (
             <ProductDetailCard key={product.id} product={product} />
           ))}

@@ -28,7 +28,11 @@
   },
   "productsSection": {
     "label": "OUR PRODUCTS",
-    "heading": "Purpose-built. Outcomes-driven.",
+    "heading": {
+      "part1": "Purpose-built.",
+      "gradient": "Outcomes-driven.",
+      "part2": ""
+    },
     "description": "Six integrated platforms covering placement operations, AI readiness, virtual placement cells, and citizen services — designed to work together as one ecosystem.",
     "items": [
       {

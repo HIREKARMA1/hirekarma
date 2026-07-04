@@ -13,6 +13,7 @@ interface ProductButtonProps {
   className?: string;
   fullWidth?: boolean;
   accentColor?: string;
+  accentTextColor?: string;
 }
 
 export function ProductButton({
@@ -20,6 +21,7 @@ export function ProductButton({
   className,
   fullWidth = false,
   accentColor,
+  accentTextColor,
 }: ProductButtonProps) {
   const href = resolveHref(cta.hrefKey);
   const isExternal = href.startsWith("http");
@@ -28,7 +30,7 @@ export function ProductButton({
     "inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold transition-all duration-300";
 
   const variants: Record<CtaLink["variant"], string> = {
-    primary: "text-white hover:shadow-lg",
+    primary: "hover:shadow-lg",
     outline: "border bg-transparent text-white hover:bg-white/5",
     ghost: "border border-white/30 bg-transparent text-white hover:border-white/50",
   };
@@ -36,7 +38,8 @@ export function ProductButton({
   const style =
     cta.variant === "primary"
       ? {
-          background: accentColor ?? theme.gradients.brand,
+          backgroundColor: accentColor ?? theme.colors.primary,
+          color: accentTextColor ?? "#ffffff",
           borderColor: "transparent",
         }
       : cta.variant === "outline"

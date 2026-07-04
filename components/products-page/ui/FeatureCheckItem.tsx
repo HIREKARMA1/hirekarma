@@ -6,22 +6,26 @@ interface FeatureCheckItemProps {
   text: string;
   accentColor: string;
   className?: string;
+  variant?: "light" | "dark";
 }
 
 export function FeatureCheckItem({
   text,
   accentColor,
   className,
+  variant = "light",
 }: FeatureCheckItemProps) {
   return (
-    <li className={cn("flex items-start gap-3 text-sm leading-relaxed", className)}>
+    <li className={cn("flex items-start gap-2.5 text-[13px] leading-snug sm:text-sm sm:leading-relaxed", className)}>
       <span
-        className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full"
-        style={{ backgroundColor: `${accentColor}18`, color: accentColor }}
+        className="mt-0.5 flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-full sm:h-5 sm:w-5"
+        style={{ backgroundColor: `${accentColor}20`, color: accentColor }}
       >
-        <Check className="h-3 w-3" strokeWidth={3} aria-hidden />
+        <Check className="h-2.5 w-2.5 sm:h-3 sm:w-3" strokeWidth={3} aria-hidden />
       </span>
-      <span className="text-gray-600">{text}</span>
+      <span className={variant === "dark" ? "text-white/75" : "text-gray-600"}>
+        {text}
+      </span>
     </li>
   );
 }
