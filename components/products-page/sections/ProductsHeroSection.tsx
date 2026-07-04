@@ -28,33 +28,33 @@ export function ProductsHeroSection() {
 
   return (
     <section
-      className="relative flex w-full flex-col"
+      className="relative flex w-full max-w-full flex-col overflow-x-clip"
       style={{
         background: `linear-gradient(180deg, #070b14 0%, ${theme.colors.heroBg} 60%, ${theme.colors.heroBg} 100%)`,
       }}
     >
-      <div
-        className="pointer-events-none absolute -top-24 -right-32 h-[560px] w-[560px] rounded-full blur-[140px]"
-        style={{ backgroundColor: theme.colors.heroGlowPrimary }}
-        aria-hidden
-      />
-      <div
-        className="pointer-events-none absolute -bottom-32 left-0 h-[300px] w-[300px] rounded-full blur-[120px]"
-        style={{ backgroundColor: "rgba(27, 82, 164, 0.10)" }}
-        aria-hidden
-      />
-
-      <div className="pointer-events-none absolute inset-0 max-lg:opacity-35 lg:opacity-100" aria-hidden>
-        <Vortex
-          transparentBackground
-          particleCount={theme.vortex.particleCount}
-          rangeY={theme.vortex.rangeY}
-          baseHue={theme.vortex.baseHue}
-          containerClassName="h-full w-full"
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
+        <div
+          className="absolute -top-24 -right-32 h-[560px] w-[560px] rounded-full blur-[140px]"
+          style={{ backgroundColor: theme.colors.heroGlowPrimary }}
         />
+        <div
+          className="absolute -bottom-32 left-0 h-[300px] w-[300px] rounded-full blur-[120px]"
+          style={{ backgroundColor: "rgba(27, 82, 164, 0.10)" }}
+        />
+
+        <div className="absolute inset-0 max-lg:opacity-35 lg:opacity-100">
+          <Vortex
+            transparentBackground
+            particleCount={theme.vortex.particleCount}
+            rangeY={theme.vortex.rangeY}
+            baseHue={theme.vortex.baseHue}
+            containerClassName="h-full w-full"
+          />
+        </div>
       </div>
 
-      <div className="relative z-10 flex w-full min-w-0 flex-col content-container pb-4 pt-20 sm:pb-5 sm:pt-24 lg:pb-5 lg:pt-28">
+      <div className="relative z-10 flex w-full min-w-0 max-w-full flex-col content-container pb-4 pt-20 sm:pb-5 sm:pt-24 lg:pb-5 lg:pt-28">
         <div className="relative flex flex-col gap-5 max-lg:gap-4 lg:grid lg:grid-cols-[1fr_1.15fr] lg:items-center lg:gap-8 xl:gap-12">
           <div className="order-1 flex min-w-0 flex-col text-left max-lg:flex-none lg:justify-center">
             <div className="space-y-5 rounded-2xl border border-white/5 bg-black/30 px-5 py-6 backdrop-blur-md sm:space-y-6 sm:px-6 lg:border-0 lg:bg-transparent lg:p-0 lg:backdrop-blur-none">

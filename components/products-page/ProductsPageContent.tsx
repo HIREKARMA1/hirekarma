@@ -8,7 +8,7 @@ import { ProductsCTASection } from "./sections/ProductsCTASection";
 
 function ProductsPageInner() {
   return (
-    <main className="products-page min-h-screen">
+    <main className="products-page min-h-screen w-full max-w-full overflow-x-clip">
       <ProductsHeroSection />
       <ProductsGridSection />
       <ImpactStatsSection />
