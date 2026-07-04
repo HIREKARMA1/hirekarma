@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "title": "ଉତ୍ପାଦ | HireKarma",
+    "description": "DISHA, SolviqAI, Lakshya, Shortlisted, Janasamadhan ଏବଂ AMA Gopalpur — HireKarma ର ଉତ୍ପାଦ ଇକୋସିଷ୍ଟମ।"
+  },
+  "hero": {
+    "label": "ଉତ୍ପାଦ ସମୀକ୍ଷା",
+    "heading": {
+      "part1": "ସ୍ମାର୍ଟ ଉତ୍ପାଦ।",
+      "gradient": "ଶକ୍ତିଶାଳୀ ଫଳାଫଳ।",
+      "part2": "ପ୍ରମାଣିତ ପ୍ରଭାବ।"
+    },
+    "description": "ଛଅଟି ପ୍ଲାଟଫର୍ମ ଯାହା କ୍ୟାମ୍ପସ୍ ହାୟରିଂ, AI କ୍ୟାରିୟର ପ୍ରସ୍ତୁତି, ଭର୍ଚୁଆଲ ପ୍ଲେସମେଣ୍ଟ ଏବଂ ଡିଜିଟାଲ ଜନସେବା ଆଚ୍ଛାଦନ କରେ — ମାପନୀୟ ଫଳାଫଳ ପାଇଁ ନିର୍ମିତ।",
+    "primaryCta": {
+      "label": "DISHA ଦେଖନ୍ତୁ",
+      "hrefKey": "disha",
+      "variant": "primary"
+    },
+    "secondaryCta": {
+      "label": "SolviqAI ଦେଖନ୍ତୁ",
+      "hrefKey": "solviq",
+      "variant": "outline"
+    },
+    "footerNote": "କଲେଜ, ଛାତ୍ର ଏବଂ କମ୍ପାନୀମାନଙ୍କ ପାଇଁ ନିର୍ମିତ। ଖୋଲା ମାନଦଣ୍ଡ ଉପରେ ଆଧାରିତ। ସ୍କେଲ୍ ପାଇଁ ପ୍ରସ୍ତୁତ।"
+  },
+  "partners": {
+    "text": "କଲେଜ, କମ୍ପାନୀ ଏବଂ ସରକାରୀ ସହଭାଗୀମାନଙ୍କ ଦ୍ୱାରା ବିଶ୍ୱାସଯୋଗ୍ୟ"
+  },
+  "productsSection": {
+    "label": "ଆମର ଉତ୍ପାଦ",
+    "heading": "ଉଦ୍ଦେଶ୍ୟ-ନିର୍ମିତ। ଫଳାଫଳ-ଚାଳିତ।",
+    "description": "ଛଅଟି ସମନ୍ୱିତ ପ୍ଲାଟଫର୍ମ ଯାହା ପ୍ଲେସମେଣ୍ଟ ପରିଚାଳନା, AI ପ୍ରସ୍ତୁତି, ଭର୍ଚୁଆଲ ପ୍ଲେସମେଣ୍ଟ ସେଲ ଏବଂ ନାଗରିକ ସେବା ଆଚ୍ଛାଦନ କରେ — ଗୋଟିଏ ଇକୋସିଷ୍ଟମ ଭାବରେ ଏକାଠି କାମ କରିବା ପାଇଁ ଡିଜାଇନ୍।",
+    "items": [
+      {
+        "id": "disha",
+        "accentKey": "disha",
+        "icon": "graduation-cap",
+        "title": "DISHA",
+        "subtitle": "କ୍ୟାମ୍ପସ୍ ନିଯୁକ୍ତି ପ୍ଲାଟଫର୍ମ",
+        "description": "କଲେଜମାନଙ୍କ ପାଇଁ ସମ୍ପୂର୍ଣ୍ଣ ପ୍ଲେସମେଣ୍ଟ ପରିଚାଳନା — ଡ୍ରାଇଭ ସ୍କେଡ୍ୟୁଲିଂ, କମ୍ପାନୀ ସମନ୍ୱୟ, ଅଫର ଟ୍ରାକିଂ ଏବଂ TPO ଆନାଲିଟିକ୍ସ।",
+        "features": [
+          { "text": "ସମ୍ପୂର୍ଣ୍ଣ ପ୍ଲେସମେଣ୍ଟ ପରିଚାଳନା" },
+          { "text": "ଡ୍ରାଇଭ ସ୍କେଡ୍ୟୁଲିଂ ଏବଂ କମ୍ପାନୀ ସମନ୍ୱୟ" },
+          { "text": "ଛାତ୍ର ପ୍ରୋଫାଇଲ ଏବଂ ଆବେଦନ ଟ୍ରାକିଂ" },
+          { "text": "TPO ମାନଙ୍କ ପାଇଁ ରିଅଲ-ଟାଇମ ଆନାଲିଟିକ୍ସ" }
+        ],
+        "cta": { "label": "DISHA ଦେଖନ୍ତୁ", "hrefKey": "disha", "variant": "primary" }
+      },
+      {
+        "id": "solviq",
+        "accentKey": "solviq",
+        "icon": "cpu",
+        "title": "SolviqAI",
+        "subtitle": "AI କ୍ୟାରିୟର ପ୍ରସ୍ତୁତି ପ୍ଲାଟଫର୍ମ",
+        "description": "AI-ଚାଳିତ ରିଜ୍ୟୁମେ ବିଶ୍ଳେଷଣ, ଦକ୍ଷତା ମୂଲ୍ୟାଙ୍କନ ଏବଂ ମକ ଇଣ୍ଟରଭ୍ୟୁ ଯାହା ଛାତ୍ରମାନଙ୍କୁ ପ୍ରକୃତ ନିଯୁକ୍ତି ପାଇଁ ପ୍ରସ୍ତୁତ କରେ।",
+        "features": [
+          { "text": "ATS ସଙ୍ଗତ AI ରିଜ୍ୟୁମେ ଚେକର" },
+          { "text": "ଦକ୍ଷତା ଏବଂ ଯୋଗ୍ୟତା ମୂଲ୍ୟାଙ୍କନ" },
+          { "text": "ରିଅଲ-ଟାଇମ ଫିଡବ୍ୟାକ୍ ସହ ମକ ଇଣ୍ଟରଭ୍ୟୁ" },
+          { "text": "ବ୍ୟକ୍ତିଗତ ପ୍ଲେସମେଣ୍ଟ ପ୍ରସ୍ତୁତି ସ୍କୋରିଂ" }
+        ],
+        "cta": { "label": "SolviqAI ଦେଖନ୍ତୁ", "hrefKey": "solviq", "variant": "primary" }
+      },
+      {
+        "id": "lakshya",
+        "accentKey": "lakshya",
+        "icon": "users",
+        "title": "Lakshya",
+        "subtitle": "କ୍ୟାମ୍ପସ୍ ହାୟରିଂ ଇକୋସିଷ୍ଟମ",
+        "description": "ଗୋଟିଏ ପ୍ଲାଟଫର୍ମ ଯାହା ଛାତ୍ର, ବିଶ୍ୱବିଦ୍ୟାଳୟ ଏବଂ ରିକ୍ରୁଟରମାନଙ୍କୁ ସଂଯୋଗ କରେ — କ୍ୟାମ୍ପସ୍ ଡ୍ରାଇଭ, ଆବେଦନ ପରିଚାଳନା ଏବଂ ଦ୍ରୁତ ଶର୍ଟଲିଷ୍ଟିଂ।",
+        "features": [
+          { "text": "ସମସ୍ତ ହିତାଧିକାରୀଙ୍କ ପାଇଁ ଏକୀକୃତ ଡ୍ୟାସବୋର୍ଡ" },
+          { "text": "କ୍ୟାମ୍ପସ୍ ଡ୍ରାଇଭ ଏବଂ ଆବେଦନ ପରିଚାଳନା" },
+          { "text": "ରିକ୍ରୁଟର ଶର୍ଟଲିଷ୍ଟିଂ ୱର୍କଫ୍ଲୋ" },
+          { "text": "ଛାତ୍ର, କର୍ପୋରେଟ ଏବଂ ବିଶ୍ୱବିଦ୍ୟାଳୟ ପାଇଁ" }
+        ],
+        "cta": { "label": "Lakshya ଦେଖନ୍ତୁ", "hrefKey": "lakshya", "variant": "primary" }
+      },
+      {
+        "id": "shortlisted",
+        "accentKey": "shortlisted",
+        "icon": "briefcase",
+        "title": "Shortlisted",
+        "subtitle": "AI ଭର୍ଚୁଆଲ ପ୍ଲେସମେଣ୍ଟ ସେଲ",
+        "description": "ଭାରତର ପ୍ରଥମ AI ଭର୍ଚୁଆଲ ପ୍ଲେସମେଣ୍ଟ ସେଲ — କ୍ୟୁରେଟେଡ ବ୍ୟାଚ, AI ଚାକିରି ମିଳାଣ ଏବଂ ସମର୍ପିତ ପ୍ଲେସମେଣ୍ଟ ସମନ୍ୱୟକ।",
+        "features": [
+          { "text": "12 ଛାତ୍ରଙ୍କ କ୍ୟୁରେଟେଡ ବ୍ୟାଚ" },
+          { "text": "AI ସ୍ମାର୍ଟ ଚାକିରି ମିଳାଣ" },
+          { "text": "24/7 ଆବେଦନ ଟ୍ରାକିଂ" },
+          { "text": "ସମର୍ପିତ ପ୍ଲେସମେଣ୍ଟ ସମନ୍ୱୟକ" }
+        ],
+        "cta": { "label": "Shortlisted ଦେଖନ୍ତୁ", "hrefKey": "shortlisted", "variant": "primary" }
+      },
+      {
+        "id": "janasamadhan",
+        "accentKey": "janasamadhan",
+        "icon": "building",
+        "title": "Janasamadhan",
+        "subtitle": "ଜନଶିକାୟତ ପ୍ଲାଟଫର୍ମ",
+        "description": "ନାଗରିକମାନଙ୍କ ପାଇଁ ଡିଜିଟାଲ ଶିକାୟତ ନିଷ୍ପତ୍ତି — ସରକାରୀ ବିଭାଗମାନଙ୍କ ପାଇଁ ସମ୍ପୂର୍ଣ୍ଣ ସ୍ୱଚ୍ଛତା ସହ ଶିକାୟତ ଟ୍ରାକ ଏବଂ ସମାଧାନ।",
+        "features": [
+          { "text": "ନାଗରିକ ଶିକାୟତ ଦାଖଲ ଏବଂ ଟ୍ରାକିଂ" },
+          { "text": "ବିଭାଗ-ଭିତ୍ତିକ ରୁଟିଂ ଏବଂ ଏସ୍କାଲେସନ" },
+          { "text": "ଅଧିକାରୀମାନଙ୍କ ପାଇଁ ସ୍ଥିତି ଡ୍ୟାସବୋର୍ଡ" },
+          { "text": "ଓଡ଼ିଶା ସରକାର ପାଇଁ ନିର୍ମିତ" }
+        ],
+        "cta": { "label": "Janasamadhan ଦେଖନ୍ତୁ", "hrefKey": "janasamadhan", "variant": "primary" }
+      },
+      {
+        "id": "amagopalpur",
+        "accentKey": "amagopalpur",
+        "icon": "map-pin",
+        "title": "AMA Gopalpur",
+        "subtitle": "ନିର୍ବାଚନୀ ଅଞ୍ଚଳ ବିକାଶ ଡ୍ୟାସବୋର୍ଡ",
+        "description": "AMA Gopalpur ରେ ବିଭାଗୀୟ ସମ୍ପତ୍ତି, ପ୍ରକଳ୍ପ ଏବଂ ବିକାଶ ପ୍ରଗତି ମ୍ୟାପ କରୁଥିବା ଇଣ୍ଟରାକ୍ଟିଭ ନିର୍ବାଚନୀ ଅଞ୍ଚଳ ଡ୍ୟାସବୋର୍ଡ।",
+        "features": [
+          { "text": "ବିଭାଗ-ଭିତ୍ତିକ ସମ୍ପତ୍ତି ମ୍ୟାପିଂ" },
+          { "text": "ଇଣ୍ଟରାକ୍ଟିଭ ଜିଓ-ଭିଜୁଆଲ ଡ୍ୟାସବୋର୍ଡ" },
+          { "text": "ପ୍ରକଳ୍ପ ଏବଂ ଅବସ୍ଥାପନା ଟ୍ରାକିଂ" },
+          { "text": "ନିର୍ବାଚନୀ ଅଞ୍ଚଳ ଶାସନ ପାଇଁ ନିର୍ମିତ" }
+        ],
+        "cta": { "label": "AMA Gopalpur ଦେଖନ୍ତୁ", "hrefKey": "amagopalpur", "variant": "primary" }
+      }
+    ]
+  },
+  "impact": {
+    "label": "ଉତ୍ପାଦ ମାଧ୍ୟମରେ ଆମର ପ୍ରଭାବ",
+    "stats": [
+      { "id": "careers", "icon": "users", "value": "22,000+", "label": "ପ୍ରଭାବିତ କ୍ୟାରିୟର", "accentKey": "primary" },
+      { "id": "trained", "icon": "graduation-cap", "value": "1,400+", "label": "ପ୍ରଶିକ୍ଷିତ ଯୁବ", "accentKey": "disha" },
+      { "id": "projects", "icon": "briefcase", "value": "100+", "label": "ସମ୍ପୂର୍ଣ୍ଣ ପ୍ରକଳ୍ପ", "accentKey": "solviq" },
+      { "id": "companies", "icon": "building", "value": "900+", "label": "ନିଯୁକ୍ତି କମ୍ପାନୀ", "accentKey": "lakshya" },
+      { "id": "platforms", "icon": "shield-check", "value": "6", "label": "ଲାଇଭ ଉତ୍ପାଦ", "accentKey": "shortlisted" }
+    ]
+  },
+  "cta": {
+    "heading": { "part1": "ଗୋଟିଏ ଇକୋସିଷ୍ଟମ।", "gradient": "ପ୍ରତ୍ୟେକ ଫଳାଫଳ, ଯାଞ୍ଚିତ।", "part2": "" },
+    "description": "ଆପଣ ପ୍ଲେସମେଣ୍ଟ ଚଲାନ୍ତୁ, ଛାତ୍ରମାନଙ୍କୁ ପ୍ରସ୍ତୁତ କରନ୍ତୁ, କିମ୍ବା ଜନସେବା ଦିଅନ୍ତୁ — HireKarma ଉତ୍ପାଦ ମିଳିତ ଭାବରେ ମାପନୀୟ ଫଳାଫଳ ଦିଏ।",
+    "buttons": [
+      { "label": "DISHA ଦେଖନ୍ତୁ", "hrefKey": "disha", "variant": "primary" },
+      { "label": "SolviqAI ଦେଖନ୍ତୁ", "hrefKey": "solviq", "variant": "outline" },
+      { "label": "Lakshya ଦେଖନ୍ତୁ", "hrefKey": "lakshya", "variant": "outline" }
+    ]
+  }
+}
