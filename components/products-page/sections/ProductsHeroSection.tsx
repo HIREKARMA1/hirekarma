@@ -1,8 +1,6 @@
 "use client";
 
 import { Users } from "lucide-react";
-import { useCallback, useEffect, useState } from "react";
-import { motion } from "framer-motion";
 
 import { theme } from "@/config/theme";
 import { useProductsLocale } from "@/contexts/ProductsLocaleContext";
@@ -11,16 +9,12 @@ import {
   getSlideAlt,
   resolveMediaSrc,
 } from "@/services/products-page-media";
-import { AnimatedHeroHeading } from "../ui/AnimatedHeroHeading";
 import { AutoSlideGallery } from "../ui/AutoSlideGallery";
 import { ContainerScroll } from "../container-scroll/ContainerScroll";
+import { GradientHeading } from "../ui/GradientHeading";
 import { SectionLabel } from "../ui/SectionLabel";
-import { TextBlurReveal } from "../ui/TextBlurReveal";
 import { Vortex } from "../ui/Vortex";
 import { HeroTrustBand } from "./HeroTrustBand";
-
-/** 1=heading 2=description 3=footer 4=tablet 5=trust */
-type HeroStep = 1 | 2 | 3 | 4 | 5;
 
 export function ProductsHeroSection() {
   const { content, locale } = useProductsLocale();
@@ -32,23 +26,9 @@ export function ProductsHeroSection() {
     alt: getSlideAlt(slide, locale),
   }));
 
-  const [step, setStep] = useState<HeroStep>(1);
-
-  const advance = useCallback((next: HeroStep) => {
-    setStep(next);
-  }, []);
-
-  useEffect(() => {
-    if (step !== 4) return;
-    const timer = window.setTimeout(() => advance(5), 1200);
-    return () => window.clearTimeout(timer);
-  }, [step, advance]);
-
   return (
     <section
-      className={`relative flex w-full flex-col ${
-        step < 4 ? "min-h-[100dvh]" : "min-h-0"
-      }`}
+      className="relative flex w-full flex-col"
       style={{
         background: `linear-gradient(180deg, #070b14 0%, ${theme.colors.heroBg} 60%, ${theme.colors.heroBg} 100%)`,
       }}
@@ -74,62 +54,39 @@ export function ProductsHeroSection() {
         />
       </div>
 
-      <div
-        className={`relative z-10 flex w-full min-w-0 flex-col content-container pt-20 sm:pt-24 lg:pt-28 ${
-          step < 4 ? "min-h-[100dvh] pb-6" : "pb-4 sm:pb-5 lg:pb-5"
-        }`}
-      >
-        <div className="relative flex flex-col gap-5 max-lg:gap-4 lg:grid lg:flex-1 lg:grid-cols-[1fr_1.15fr] lg:items-center lg:gap-8 xl:gap-12">
-          {/* Left — text column */}
-          <div className="order-1 flex min-w-0 flex-col text-left max-lg:flex-none lg:min-h-0 lg:flex-1 lg:justify-center">
+      <div className="relative z-10 flex w-full min-w-0 flex-col content-container pb-4 pt-20 sm:pb-5 sm:pt-24 lg:pb-5 lg:pt-28">
+        <div className="relative flex flex-col gap-5 max-lg:gap-4 lg:grid lg:grid-cols-[1fr_1.15fr] lg:items-center lg:gap-8 xl:gap-12">
+          <div className="order-1 flex min-w-0 flex-col text-left max-lg:flex-none lg:justify-center">
             <div className="space-y-5 rounded-2xl border border-white/5 bg-black/30 px-5 py-6 backdrop-blur-md sm:space-y-6 sm:px-6 lg:border-0 lg:bg-transparent lg:p-0 lg:backdrop-blur-none">
-              <motion.div
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4 }}
-              >
-                <SectionLabel>{hero.label}</SectionLabel>
-              </motion.div>
+              <SectionLabel>{hero.label}</SectionLabel>
 
-              <AnimatedHeroHeading
+              <GradientHeading
                 heading={hero.heading}
-                active={step >= 1}
-                onComplete={() => advance(2)}
+                as="h1"
+                size="hero"
+                layout="stacked"
+                className="font-extrabold lg:font-bold"
               />
 
-              <p className="min-h-[5.5rem] max-w-lg text-left text-lg font-medium leading-[1.7] text-white/92 sm:min-h-[6rem] sm:text-xl lg:min-h-0 lg:text-lg lg:font-normal lg:leading-[1.75] lg:text-white/90">
-                <TextBlurReveal
-                  text={hero.description}
-                  active={step >= 2}
-                  onComplete={() => advance(3)}
-                />
+              <p className="max-w-lg text-left text-lg font-medium leading-[1.7] text-white/92 sm:text-xl lg:text-lg lg:font-normal lg:leading-[1.75] lg:text-white/90">
+                {hero.description}
               </p>
 
-              <div className="flex min-h-[4.5rem] max-w-lg items-start gap-3 sm:min-h-[5rem] lg:min-h-0">
+              <div className="flex max-w-lg items-start gap-3">
                 <Users
-                  className={`mt-1 h-5 w-5 shrink-0 text-white/85 transition-opacity duration-300 ${step >= 3 ? "opacity-100" : "opacity-0"}`}
+                  className="mt-1 h-5 w-5 shrink-0 text-white/85"
                   strokeWidth={1.75}
                   aria-hidden
                 />
                 <p className="text-left text-base font-medium leading-[1.65] text-white/88 sm:text-lg lg:text-base lg:font-normal lg:text-white/80">
-                  <TextBlurReveal
-                    text={hero.footerNote}
-                    active={step >= 3}
-                    onComplete={() => advance(4)}
-                  />
+                  {hero.footerNote}
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Right — stacks below text on mobile; side-by-side on desktop */}
-          <div
-            className={`order-2 w-full min-w-0 lg:relative lg:py-4 xl:py-6 ${
-              step < 4 ? "max-lg:hidden" : "max-lg:mt-1"
-            }`}
-            aria-hidden={step < 4}
-          >
-            <ContainerScroll compact showTablet={step >= 4}>
+          <div className="order-2 w-full min-w-0 max-lg:mt-1 lg:py-4 xl:py-6">
+            <ContainerScroll compact showTablet>
               <AutoSlideGallery
                 images={slides}
                 imageClassName="max-lg:object-[78%_center] lg:object-center"
@@ -138,15 +95,8 @@ export function ProductsHeroSection() {
           </div>
         </div>
 
-        {/* Trust band — pinned to bottom with clear space above next section */}
-        <div className="mt-auto shrink-0 pt-2" aria-hidden={step < 5}>
-          <div
-            className={`transition-opacity duration-500 ease-out ${
-              step >= 5 ? "opacity-100" : "pointer-events-none opacity-0"
-            }`}
-          >
-            <HeroTrustBand />
-          </div>
+        <div className="mt-auto shrink-0 pt-2">
+          <HeroTrustBand />
         </div>
       </div>
     </section>
