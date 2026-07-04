@@ -37,7 +37,7 @@ export function LogoMarquee({
 
   return (
     <div
-      className={cn("relative overflow-hidden", className)}
+      className={cn("relative w-full max-w-full overflow-hidden", className)}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
