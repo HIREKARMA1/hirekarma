@@ -39,7 +39,7 @@
         "id": "disha",
         "accentKey": "disha",
         "icon": "graduation-cap",
-        "title": "DISHA",
+        "title": "Disha",
         "subtitle": "Campus Recruitment Platform",
         "description": "End-to-end placement management for colleges — from drive scheduling and company coordination to offer tracking and TPO analytics.",
         "features": [
@@ -153,11 +153,17 @@
   },
   "impact": {
     "label": "OUR IMPACT THROUGH PRODUCTS",
+    "heading": {
+      "part1": "Measured impact.",
+      "gradient": "Proven at scale.",
+      "part2": ""
+    },
+    "description": "From careers transformed to platforms live in production — HireKarma products deliver outcomes you can count on.",
     "stats": [
       {
         "id": "careers",
         "icon": "users",
-        "value": "22,000+",
+        "value": "32,000+",
         "label": "Careers Impacted",
         "accentKey": "primary"
       },
@@ -171,21 +177,21 @@
       {
         "id": "projects",
         "icon": "briefcase",
-        "value": "100+",
+        "value": "20+",
         "label": "Projects Delivered",
         "accentKey": "solviq"
       },
       {
         "id": "companies",
         "icon": "building",
-        "value": "900+",
+        "value": "2000+",
         "label": "Hiring Companies",
         "accentKey": "lakshya"
       },
       {
         "id": "platforms",
         "icon": "shield-check",
-        "value": "6",
+        "value": "4",
         "label": "Live Products",
         "accentKey": "shortlisted"
       }

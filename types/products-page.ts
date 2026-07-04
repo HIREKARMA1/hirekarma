@@ -73,6 +73,8 @@ export interface ImpactStat {
 
 export interface ImpactContent {
   label: string;
+  heading: HeadingParts;
+  description: string;
   stats: ImpactStat[];
 }
 
