@@ -11,8 +11,9 @@ const WavyBackground = dynamic(() => import("@/components/layout/WavyBackground"
 export function ConditionalWavyBackground() {
   const pathname = usePathname()
   const isShortlistedRoute = pathname?.startsWith("/shortlisted")
+  const isProductsRoute = pathname?.startsWith("/products")
 
-  if (isShortlistedRoute) {
+  if (isShortlistedRoute || isProductsRoute) {
     return null
   }
 
