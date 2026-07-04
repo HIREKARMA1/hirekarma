@@ -129,6 +129,12 @@
   },
   "impact": {
     "label": "उत्पादों के माध्यम से हमारा प्रभाव",
+    "heading": {
+      "part1": "मापा गया प्रभाव।",
+      "gradient": "सिद्ध पैमाने पर।",
+      "part2": ""
+    },
+    "description": "करियर से लेकर लाइव प्लेटफ़ॉर्म तक — HireKarma उत्पाद ऐसे परिणाम देते हैं जिन पर आप भरोसा कर सकते हैं।",
     "stats": [
       { "id": "careers", "icon": "users", "value": "22,000+", "label": "प्रभावित करियर", "accentKey": "primary" },
       { "id": "trained", "icon": "graduation-cap", "value": "1,400+", "label": "प्रशिक्षित युवा", "accentKey": "disha" },

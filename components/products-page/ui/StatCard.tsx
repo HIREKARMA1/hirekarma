@@ -1,22 +1,50 @@
-import { IconBadge, getAccentColor, getProductIcon } from "./IconBadge";
+import { theme } from "@/config/theme";
 
 import type { ImpactStat } from "@/types/products-page";
+import { IconBadge, getProductIcon } from "./IconBadge";
+import { NumberTicker } from "./NumberTicker";
+
+/** Brand palette — one solid color per impact stat card. */
+const STAT_PALETTE = [
+  theme.colors.primary,
+  theme.colors.secondary,
+  theme.colors.orange,
+  theme.colors.yellow,
+  theme.colors.green,
+] as const;
 
 interface StatCardProps {
   stat: ImpactStat;
+  colorIndex: number;
 }
 
-export function StatCard({ stat }: StatCardProps) {
+export function StatCard({ stat, colorIndex }: StatCardProps) {
   const Icon = getProductIcon(stat.icon);
-  const color = getAccentColor(stat.accentKey);
+  const color = STAT_PALETTE[colorIndex % STAT_PALETTE.length];
 
   return (
-    <div className="flex flex-col items-center gap-3 text-center sm:gap-4">
-      <IconBadge icon={Icon} color={color} size="lg" />
-      <div className="space-y-1">
-        <p className="text-xl font-bold text-white sm:text-2xl">{stat.value}</p>
-        <p className="text-xs text-white/55 sm:text-sm">{stat.label}</p>
-      </div>
+    <div className="group relative flex flex-col items-center overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] px-3 py-5 text-center shadow-[0_4px_24px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.05)] backdrop-blur-sm transition-colors duration-300 hover:border-white/15 hover:bg-white/[0.06] sm:rounded-3xl sm:px-4 sm:py-6">
+      <div
+        className="absolute inset-x-0 top-0 h-0.5 opacity-90"
+        style={{ backgroundColor: color }}
+        aria-hidden
+      />
+
+      <IconBadge
+        icon={Icon}
+        color={color}
+        size="md"
+        className="mb-3 shadow-[0_0_16px_rgba(0,0,0,0.2)] sm:mb-4"
+      />
+
+      <NumberTicker
+        value={stat.value}
+        className="text-xl font-bold tabular-nums tracking-tight sm:text-2xl lg:text-3xl"
+        style={{ color }}
+      />
+      <p className="mt-1.5 text-[11px] font-medium leading-snug text-white/60 sm:text-xs sm:text-white/55">
+        {stat.label}
+      </p>
     </div>
   );
 }

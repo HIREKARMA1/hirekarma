@@ -129,6 +129,12 @@
   },
   "impact": {
     "label": "ଉତ୍ପାଦ ମାଧ୍ୟମରେ ଆମର ପ୍ରଭାବ",
+    "heading": {
+      "part1": "ମାପାଯାଇଥିବା ପ୍ରଭାବ।",
+      "gradient": "ପ୍ରମାଣିତ ଆକାରରେ।",
+      "part2": ""
+    },
+    "description": "କ୍ୟାରିୟର ପରିବର୍ତ୍ତନରୁ ଲାଇଭ ପ୍ଲାଟଫର୍ମ ପର୍ଯ୍ୟନ୍ତ — HireKarma ଉତ୍ପାଦ ଏମିତି ଫଳାଫଳ ଦିଏ ଯାହା ଆପଣ ଗଣି ପାରିବେ।",
     "stats": [
       { "id": "careers", "icon": "users", "value": "22,000+", "label": "ପ୍ରଭାବିତ କ୍ୟାରିୟର", "accentKey": "primary" },
       { "id": "trained", "icon": "graduation-cap", "value": "1,400+", "label": "ପ୍ରଶିକ୍ଷିତ ଯୁବ", "accentKey": "disha" },
