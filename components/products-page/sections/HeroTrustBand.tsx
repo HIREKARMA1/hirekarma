@@ -1,7 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 import { useProductsLocale } from "@/contexts/ProductsLocaleContext";
 import { getTrustConfig, getTrustLogos } from "@/services/trust";
 import { LogoMarquee } from "../ui/LogoMarquee";
@@ -13,12 +11,7 @@ export function HeroTrustBand() {
   const { settings } = getTrustConfig();
 
   return (
-    <motion.div
-      className="border-t border-white/10 pt-5 sm:pt-6 lg:pt-5"
-      initial={{ opacity: 0, y: 16 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-    >
+    <div className="border-t border-white/10 pt-5 sm:pt-6 lg:pt-5">
       <div className="flex min-w-0 flex-col gap-4 sm:gap-5 lg:flex-row lg:items-center lg:gap-8">
         <p className="w-full shrink-0 text-left text-sm font-medium leading-relaxed text-white/90 sm:text-base lg:max-w-[220px]">
           {content.partners.text}
@@ -33,6 +26,6 @@ export function HeroTrustBand() {
           />
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
