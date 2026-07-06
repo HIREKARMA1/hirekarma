@@ -27,6 +27,27 @@
             "institution": "Incture Technologies Pvt. Ltd.",
             "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/testimonial/Nrusingh+Samanata.jpg",
             "feedback": "HireKarma has been a game-changer for our placement process. The platform is user-friendly, and the support team is incredibly helpful. We've been able to connect with top recruiters and students with ease."
+        },
+        {
+            "name": "Mr. Debajyoti Mishra",
+            "designation": "Placement Officer",
+            "institution": "GIET, Ghangapatana, Bhubaneswar",
+            "image": "https://hirekarma.s3.us-east-1.amazonaws.com/testimonials/images/debajyoti-mishra.jpg",
+            "feedback": "HireKarma has significantly improved our placement operations at GIET. The platform simplifies student-recruiter coordination, and the support team is always responsive. It has become an essential tool for managing campus hiring effectively."
+        },
+        {
+            "name": "Dr. Suvendra Kumar Jayasingh",
+            "designation": "Associate Professor (Computer Science)",
+            "institution": "Institute of Management and Information Technology",
+            "image": "https://hirekarma.s3.us-east-1.amazonaws.com/testimonials/images/suvendu-jayasingh.jpg",
+            "feedback": "HireKarma has been invaluable in bridging academia and industry for our students. The platform equips computer science learners with practical career insights and connects them with the right opportunities. A trusted partner for employability-focused institutions."
+        },
+        {
+            "name": "Satya Moharana",
+            "designation": "Advisor, ASDC",
+            "institution": "",
+            "image": "https://hirekarma.s3.us-east-1.amazonaws.com/testimonials/images/satya-moharana.jpeg",
+            "feedback": "We conducted a cybersecurity hiring assessment at GRAMAX with around 500 students participating. SolviqAI's AI-powered assessment module streamlined the entire process and helped us evaluate and shortlist talent efficiently. It made a real difference for our hiring drive."
         }
     ]
 }

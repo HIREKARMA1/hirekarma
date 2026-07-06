@@ -5,6 +5,7 @@ import { ProductsPageBackground } from "./ui/ProductsPageBackground";
 import { ProductsHeroSection } from "./sections/ProductsHeroSection";
 import { ProductsGridSection } from "./sections/ProductsGridSection";
 import { ImpactStatsSection } from "./sections/ImpactStatsSection";
+import { ProductsTestimonialsSection } from "./sections/ProductsTestimonialsSection";
 
 function ProductsPageInner() {
   return (
@@ -15,6 +16,7 @@ function ProductsPageInner() {
         <ProductsHeroSection />
         <ProductsGridSection />
         <ImpactStatsSection />
+        <ProductsTestimonialsSection />
       </main>
     </>
   );

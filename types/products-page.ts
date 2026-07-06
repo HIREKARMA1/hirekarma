@@ -84,6 +84,20 @@ export interface CtaSectionContent {
   buttons: CtaLink[];
 }
 
+export interface TestimonialItem {
+  id: string;
+  quote: string;
+  name: string;
+  designation: string;
+  image: string;
+}
+
+export interface TestimonialsContent {
+  label: string;
+  heading: HeadingParts;
+  items: TestimonialItem[];
+}
+
 export interface ProductsPageContent {
   meta: {
     title: string;
@@ -93,6 +107,7 @@ export interface ProductsPageContent {
   partners: PartnersContent;
   productsSection: ProductsSectionContent;
   impact: ImpactContent;
+  testimonials: TestimonialsContent;
   cta: CtaSectionContent;
 }
 
