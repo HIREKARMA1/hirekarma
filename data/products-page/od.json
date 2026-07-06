@@ -143,6 +143,65 @@
       { "id": "platforms", "icon": "shield-check", "value": "6", "label": "ଲାଇଭ ଉତ୍ପାଦ", "accentKey": "shortlisted" }
     ]
   },
+  "testimonials": {
+    "label": "ପ୍ରଶଂସାପତ୍ର",
+    "heading": {
+      "part1": "ଲୋକମାନେ ଆମକୁ ପସନ୍ଦ କରନ୍ତି,",
+      "gradient": "ଆପଣ ଜାଣନ୍ତି।",
+      "part2": ""
+    },
+    "items": [
+      {
+        "id": "rupali",
+        "quote": "HireKarma ଅସାଧାରଣ ସମନ୍ୱୟ ଏବଂ ବୃତ୍ତିଗତତା ପ୍ରଦାନ କରେ। ତାଙ୍କ ପ୍ଲାଟଫର୍ମ ଆମକୁ ଦକ୍ଷ ପ୍ରାର୍ଥୀମାନଙ୍କ ସହ ଦକ୍ଷତାର ସହ ସଂଯୋଗ କରିବାକୁ ସାହାଯ୍ୟ କରେ।",
+        "name": "Rupali Saive",
+        "designation": "General Manager, Vision Mechatronics Pvt. Ltd.",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/testimonial/Rupali+Salve.jpg"
+      },
+      {
+        "id": "altamas",
+        "quote": "BPUT ରେ ଉତ୍କୃଷ୍ଟ ସମନ୍ୱୟ! ସବୁକିଛି ନିର୍ବିଘ୍ନ ଭାବରେ ପରିଚାଳିତ ହୋଇଥିଲା। Subhasmita Sahoo ଏବଂ Rohit Samantaray ଙ୍କୁ ତାଙ୍କ ନିରନ୍ତର ସହାୟତା ପାଇଁ ଧନ୍ୟବାଦ।",
+        "name": "Altamas",
+        "designation": "HR/Admin, Team Arizona",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/testimonial/Altamas.jpg"
+      },
+      {
+        "id": "laxmidhar",
+        "quote": "HireKarma ସହ କାମ କରିବା ଆମର ପ୍ଲେସମେଣ୍ଟ ପ୍ରକ୍ରିୟାକୁ ସହଜ କରିଛି। ପ୍ଲାଟଫର୍ମ ଦକ୍ଷ, ବ୍ୟବହାରକାରୀ-ଅନୁକୂଳ ଏବଂ ନିଯୁକ୍ତିଦାତା ଏବଂ ଛାତ୍ରମାନଙ୍କ ଉଭୟ ଆବଶ୍ୟକତା ପୂରଣ କରେ।",
+        "name": "Laxmidhar Bhoi",
+        "designation": "Head Training Placement Officer, CIME Bhubaneswar",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/testimonial/Dheeraj+KK.jpg"
+      },
+      {
+        "id": "nrusingh",
+        "quote": "HireKarma ଆମର ପ୍ଲେସମେଣ୍ଟ ପ୍ରକ୍ରିୟା ପାଇଁ ଗେମ-ଚେଞ୍ଜର ହୋଇଛି। ପ୍ଲାଟଫର୍ମ ବ୍ୟବହାରକାରୀ-ଅନୁକୂଳ ଏବଂ ସହାୟତା ଦଳ ଅତ୍ୟନ୍ତ ସହାୟକ।",
+        "name": "Nrusingh Samanata",
+        "designation": "Associate Director Talent Acquisition, Incture Technologies",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/testimonial/Nrusingh+Samanata.jpg"
+      },
+      {
+        "id": "debajyoti",
+        "quote": "HireKarma GIET ରେ ଆମର ପ୍ଲେସମେଣ୍ଟ କାର୍ଯ୍ୟକୁ ଉଲ୍ଲେଖନୀୟ ଭାବରେ ଉନ୍ନତ କରିଛି। ପ୍ଲାଟଫର୍ମ ଛାତ୍ର-ନିଯୁକ୍ତିଦାତା ସମନ୍ୱୟକୁ ସହଜ କରେ, ଏବଂ ସହାୟତା ଦଳ ସର୍ବଦା ସମୟୋପଯୁକ୍ତ। କ୍ୟାମ୍ପସ ନିଯୁକ୍ତି ପରିଚାଳନା ପାଇଁ ଏହା ଏକ ଅପରିହାର୍ଯ୍ୟ ଉପକରଣ ହୋଇଛି।",
+        "name": "Mr. Debajyoti Mishra",
+        "designation": "Placement Officer, GIET, Ghangapatana, Bhubaneswar",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/testimonials/images/debajyoti-mishra.jpg"
+      },
+      {
+        "id": "suvendra",
+        "quote": "HireKarma ଆମ ଛାତ୍ରମାନଙ୍କ ପାଇଁ ଶିକ୍ଷା ଏବଂ ଶିଳ୍ପ ମଧ୍ୟରେ ସେତୁ ନିର୍ମାଣରେ ଅମୂଲ୍ୟ ହୋଇଛି। ଏହି ପ୍ଲାଟଫର୍ମ କମ୍ପ୍ୟୁଟର ବିଜ୍ଞାନ ଛାତ୍ରମାନଙ୍କୁ ବ୍ୟବହାରିକ କ୍ୟାରିୟର ଅନ୍ତର୍ଦୃଷ୍ଟି ପ୍ରଦାନ କରେ ଏବଂ ସଠିକ୍ ସୁଯୋଗ ସହ ସଂଯୋଗ କରେ।",
+        "name": "Dr. Suvendra Kumar Jayasingh",
+        "designation": "Associate Professor (Computer Science), Institute of Management and Information Technology",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/testimonials/images/suvendu-jayasingh.jpg"
+      },
+      {
+        "id": "satya",
+        "quote": "GRAMAX ରେ ଆମେ ସାଇବର ସୁରକ୍ଷା ନିଯୁକ୍ତି ମୂଲ୍ୟାଙ୍କନ ଆୟୋଜନ କରିଥିଲୁ, ଯେଉଁଠାରେ ପ୍ରାୟ ୫୦୦ ଛାତ୍ର ଅଂଶଗ୍ରହଣ କରିଥିଲେ। SolviqAI ର AI-ଚାଳିତ ମୂଲ୍ୟାଙ୍କନ ମଡ୍ୟୁଲ୍ ସମ୍ପୂର୍ଣ୍ଣ ପ୍ରକ୍ରିୟାକୁ ସହଜ କରିଛି ଏବଂ ପ୍ରତିଭା ମୂଲ୍ୟାଙ୍କନରେ ବହୁତ ସାହାଯ୍ୟ କରିଛି।",
+        "name": "Satya Moharana",
+        "designation": "GRAMAX",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/testimonials/images/Satya.jpeg"
+      }
+    ]
+  },
   "cta": {
     "heading": { "part1": "ଗୋଟିଏ ଇକୋସିଷ୍ଟମ।", "gradient": "ପ୍ରତ୍ୟେକ ଫଳାଫଳ, ଯାଞ୍ଚିତ।", "part2": "" },
     "description": "ଆପଣ ପ୍ଲେସମେଣ୍ଟ ଚଲାନ୍ତୁ, ଛାତ୍ରମାନଙ୍କୁ ପ୍ରସ୍ତୁତ କରନ୍ତୁ, କିମ୍ବା ଜନସେବା ଦିଅନ୍ତୁ — HireKarma ଉତ୍ପାଦ ମିଳିତ ଭାବରେ ମାପନୀୟ ଫଳାଫଳ ଦିଏ।",
