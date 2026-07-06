@@ -197,6 +197,65 @@
       }
     ]
   },
+  "testimonials": {
+    "label": "Testimonials",
+    "heading": {
+      "part1": "People love us,",
+      "gradient": "you know.",
+      "part2": ""
+    },
+    "items": [
+      {
+        "id": "rupali",
+        "quote": "HireKarma delivers exceptional coordination and professionalism. Their platform helps us connect with skilled candidates efficiently, and the experience has always been smooth and productive.",
+        "name": "Rupali Saive",
+        "designation": "General Manager, Vision Mechatronics Pvt. Ltd.",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/testimonial/Rupali+Salve.jpg"
+      },
+      {
+        "id": "altamas",
+        "quote": "Excellent coordination at BPUT! Everything was flawlessly managed. Special thanks to Subhasmita Sahoo and Rohit Samantaray for their constant support. Grateful to HireKarma for organizing such a meaningful experience.",
+        "name": "Altamas",
+        "designation": "HR/Admin, Team Arizona",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/testimonial/Altamas.jpg"
+      },
+      {
+        "id": "laxmidhar",
+        "quote": "Working with HireKarma has streamlined our placement process. The platform is efficient, user-friendly, and perfectly caters to both recruiters and students. We highly recommend HireKarma to any institution aiming to enhance their recruitment efforts!",
+        "name": "Laxmidhar Bhoi",
+        "designation": "Head Training Placement Officer, CIME Bhubaneswar",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/testimonial/Dheeraj+KK.jpg"
+      },
+      {
+        "id": "nrusingh",
+        "quote": "HireKarma has been a game-changer for our placement process. The platform is user-friendly, and the support team is incredibly helpful. We've been able to connect with top recruiters and students with ease.",
+        "name": "Nrusingh Samanata",
+        "designation": "Associate Director Talent Acquisition, Incture Technologies",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/testimonial/Nrusingh+Samanata.jpg"
+      },
+      {
+        "id": "debajyoti",
+        "quote": "HireKarma has significantly improved our placement operations at GIET. The platform simplifies student-recruiter coordination, and the support team is always responsive. It has become an essential tool for managing campus hiring effectively.",
+        "name": "Mr. Debajyoti Mishra",
+        "designation": "Placement Officer, GIET, Ghangapatana, Bhubaneswar",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/testimonials/images/debajyoti-mishra.jpg"
+      },
+      {
+        "id": "suvendra",
+        "quote": "HireKarma has been invaluable in bridging academia and industry for our students. The platform equips computer science learners with practical career insights and connects them with the right opportunities. A trusted partner for employability-focused institutions.",
+        "name": "Dr. Suvendra Kumar Jayasingh",
+        "designation": "Associate Professor (Computer Science), Institute of Management and Information Technology",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/testimonials/images/suvendu-jayasingh.jpg"
+      },
+      {
+        "id": "satya",
+        "quote": "We conducted a cybersecurity hiring assessment at GRAMAX with around 500 students participating. SolviqAI's AI-powered assessment module streamlined the entire process and helped us evaluate and shortlist talent efficiently. It made a real difference for our hiring drive.",
+        "name": "Satya Moharana",
+        "designation": "GRAMAX",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/testimonials/images/Satya.jpeg"
+      }
+    ]
+  },
   "cta": {
     "heading": {
       "part1": "One ecosystem.",

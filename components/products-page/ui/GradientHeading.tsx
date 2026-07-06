@@ -8,6 +8,7 @@ interface GradientHeadingProps {
   className?: string;
   size?: "hero" | "section" | "cta";
   layout?: "inline" | "stacked";
+  accentColor?: string;
 }
 
 const sizeClasses = {
@@ -22,9 +23,10 @@ export function GradientHeading({
   className,
   size = "section",
   layout = "inline",
+  accentColor = theme.colors.secondary,
 }: GradientHeadingProps) {
   const accentSpan = (
-    <span style={{ color: theme.colors.secondary }}>{heading.gradient}</span>
+    <span style={{ color: accentColor }}>{heading.gradient}</span>
   );
 
   if (layout === "stacked") {
