@@ -5,7 +5,6 @@ import {
   Menu,
   X,
   ArrowRight,
-  BookOpen,
   Heart,
   UsersRound,
   Users,
@@ -13,13 +12,13 @@ import {
   TrendingUp,
   Compass,
   Zap,
-  TargetIcon
-
-  
+  LayoutGrid,
+  Briefcase,
 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
+import { env } from '@/lib/config/env';
 
 interface NavbarProps {
   className?: string;
@@ -86,7 +85,6 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
       icon: Users,
       hasDropdown: true,
       dropdownItems: [
-        { label: 'Our Story', href: '/about-us/our-story', icon: BookOpen },
         { label: 'Mission & Value', href: '/about-us/mission-value', icon: Heart },
         { label: 'People', href: '/about-us/people', icon: UsersRound }
       ]
@@ -97,18 +95,11 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
       icon: Zap,
       hasDropdown: true,
       dropdownItems: [
-        { label: 'Disha', href: 'https://disha.hirekarma.in/', icon: Compass },
-        { label: 'SolviqAI', href: 'https://www.solviqai.in/', icon: TrendingUp },
-        // { label: 'Sadhana', href: '/products/sadhana', icon: Brain },
-      ]
-    },
-    {
-      label: 'Programs',
-      href: '/programs',
-      icon: TargetIcon,
-      hasDropdown: true,
-      dropdownItems: [
-        { label: 'Shortlisted', href: '/shortlisted', icon: TargetIcon },
+        { label: 'Overview', href: '/products', icon: LayoutGrid },
+        { label: 'Disha', href: env.dishaUrl, icon: Compass },
+        { label: 'SolviqAI', href: env.solviqUrl, icon: TrendingUp },
+        { label: 'Lakshya', href: env.lakshyaUrl, icon: Users },
+        { label: 'Shortlisted', href: '/shortlisted', icon: Briefcase },
       ]
     },
     // {
@@ -215,10 +206,16 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                               ? 'border-gray-800'
                               : 'border-gray-100'
                               }`}>
-                              <h3 className={`font-semibold text-sm ${mounted && resolvedTheme === 'dark'
-                                ? 'text-gray-200'
-                                : 'text-gray-800'
-                                }`}>{item.label}</h3>
+                              <Link
+                                href={item.href}
+                                className={`font-semibold text-sm transition-colors duration-200 hover:underline ${mounted && resolvedTheme === 'dark'
+                                  ? 'text-gray-200 hover:text-cyan-400'
+                                  : 'text-gray-800 hover:text-cyan-600'
+                                  }`}
+                                onClick={closeDropdowns}
+                              >
+                                {item.label}
+                              </Link>
                             </div>
                             <div className="grid grid-cols-1 gap-1">
                               {item.dropdownItems.map((dropdownItem, index) => {
