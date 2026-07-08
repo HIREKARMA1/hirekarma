@@ -1,0 +1,430 @@
+{
+  "faq": {
+    "badge": "FAQ",
+    "title": "How Can We Help You?",
+    "description": "Find answers to commonly asked questions about HireKarma's platform, features, and services.",
+    "searchPlaceholder": "Search for answers...",
+    "emptyTitle": "No FAQs found matching your search.",
+    "emptyHint": "Try adjusting your search or browse by category.",
+    "categories": [
+      {
+        "id": "students",
+        "name": "For Students",
+        "faqs": [
+          {
+            "question": "How do I register on the HireKarma platform?",
+            "answer": "Registration is simple! Visit your college's placement portal powered by HireKarma, or access the platform through the link provided by your T&P cell. You'll need your college email ID and basic profile information to get started. Once registered, you can complete your profile, upload your resume, and start accessing placement opportunities."
+          },
+          {
+            "question": "How does HireKarma help me find job opportunities?",
+            "answer": "HireKarma uses AI-powered matching to connect you with relevant job opportunities based on your skills, academic background, and career preferences. You'll receive personalized job alerts, can apply to campus drives, access skill assessment tools, and get career guidance—all from one platform. Our system ensures you never miss an opportunity that matches your profile."
+          },
+          {
+            "question": "Can I access the platform if I'm from a tier-2 or tier-3 college?",
+            "answer": "Absolutely! HireKarma is specifically designed to bridge the opportunity gap for students from all college tiers. We partner with 200+ colleges across India, with a special focus on tier-2, tier-3, and tier-4 institutions. Every student deserves equal access to quality opportunities, regardless of their college brand."
+          },
+          {
+            "question": "What is the AI assessment and how does it work?",
+            "answer": "Our AI assessment evaluates your technical skills, soft skills, and domain knowledge through interactive tests and simulations. Based on your performance, you receive a detailed skill report with personalized improvement recommendations. This helps you understand your strengths and areas for growth, making you more job-ready and confident during interviews."
+          },
+          {
+            "question": "Is there any fee to use HireKarma as a student?",
+            "answer": "No! HireKarma is completely free for students. All features including job matching, skill assessments, career guidance, and placement opportunities are available at no cost. Our platform is designed to empower students, and we believe access to career opportunities should never be limited by financial constraints."
+          }
+        ]
+      },
+      {
+        "id": "corporate",
+        "name": "For Corporate",
+        "faqs": [
+          {
+            "question": "How does HireKarma help streamline campus recruitment?",
+            "answer": "HireKarma provides end-to-end automation for campus hiring—from posting job requirements and receiving pre-assessed candidate profiles to scheduling interviews and managing offers. Our AI-powered matching ensures you only see candidates who meet your criteria, reducing screening time by up to 70%. Integration with your existing ATS makes the process seamless."
+          },
+          {
+            "question": "What kind of candidates can we access through HireKarma?",
+            "answer": "You get access to 50,000+ pre-vetted, skill-verified candidates from 200+ partner institutions across India. Our database includes students from engineering, management, commerce, science, and other streams. Each candidate has been assessed through our AI platform, giving you confidence in their skills and job-readiness before you even start interviewing."
+          },
+          {
+            "question": "How does the AI-powered candidate matching work?",
+            "answer": "Our AI analyzes multiple parameters including technical skills, soft skills, academic performance, projects, internships, and cultural fit indicators. We match these against your job requirements, company values, and historical hiring patterns to recommend the best-fit candidates. This predictive matching has shown to improve quality-of-hire by 40% and reduce early attrition."
+          },
+          {
+            "question": "Can we conduct virtual campus drives through the platform?",
+            "answer": "Yes! HireKarma supports fully virtual campus recruitment including online assessments, video interviews, and digital offer management. You can reach students across multiple colleges simultaneously, conduct large-scale assessments, and track every stage of your recruitment funnel—all through our integrated platform."
+          },
+          {
+            "question": "What are the pricing models for corporate partners?",
+            "answer": "We offer flexible pricing based on your hiring volume and needs—including subscription models, per-hire pricing, and enterprise packages. Contact our sales team for a customized quote based on your campus recruitment requirements. We also offer a demo to show you the platform's capabilities before you commit."
+          }
+        ]
+      },
+      {
+        "id": "universities",
+        "name": "For Universities",
+        "faqs": [
+          {
+            "question": "How does HireKarma benefit our Training & Placement cell?",
+            "answer": "HireKarma automates 80% of your T&P workflows—from student database management and eligibility tracking to recruiter coordination and placement analytics. You get real-time dashboards showing placement progress, company-wise statistics, and student performance metrics. This frees up your team to focus on strategic initiatives like building recruiter relationships and career counseling."
+          },
+          {
+            "question": "Can we customize the platform for our institution's specific needs?",
+            "answer": "Absolutely! HireKarma is highly customizable to match your institution's workflows, branding, and requirements. You can configure eligibility criteria, approval workflows, communication templates, and reporting formats. We work closely with your T&P team during onboarding to ensure the platform aligns perfectly with your processes."
+          },
+          {
+            "question": "How do you help improve our students' employability?",
+            "answer": "Beyond placement management, we provide comprehensive skill development tools including AI-powered assessments, personalized learning paths, mock interviews, and resume builders. Students get detailed feedback on their strengths and improvement areas. Our analytics help you identify skill gaps at a cohort level, enabling targeted training interventions."
+          },
+          {
+            "question": "What kind of analytics and reports do we get access to?",
+            "answer": "You get comprehensive analytics including placement statistics, company-wise hiring trends, student performance metrics, salary benchmarks, and sector-wise placement distribution. All reports are exportable and customizable for accreditation purposes, management presentations, or strategic planning. Real-time dashboards keep you updated throughout the placement season."
+          },
+          {
+            "question": "Is training provided for our T&P team and faculty?",
+            "answer": "Yes! We provide comprehensive onboarding and training for your entire T&P team, faculty coordinators, and student representatives. This includes platform walkthroughs, best practices workshops, and ongoing support. We also provide documentation, video tutorials, and a dedicated support team to ensure smooth adoption and usage."
+          }
+        ]
+      },
+      {
+        "id": "platform",
+        "name": "Platform & Technical",
+        "faqs": [
+          {
+            "question": "What technology does HireKarma use?",
+            "answer": "HireKarma is built on a modern, cloud-native architecture using cutting-edge technologies including AI/ML for candidate matching, natural language processing for resume parsing, and advanced analytics engines. Our platform is mobile-responsive, secure, and scalable to handle high-volume campus recruitment cycles across hundreds of institutions simultaneously."
+          },
+          {
+            "question": "How secure is student and company data on the platform?",
+            "answer": "Data security is our top priority. We use bank-grade encryption for data in transit and at rest, comply with industry-standard security protocols, and undergo regular security audits. We're GDPR-compliant and follow strict data privacy policies. Access controls ensure that data is only visible to authorized users, and we never share student data without explicit consent."
+          },
+          {
+            "question": "Can HireKarma integrate with our existing systems?",
+            "answer": "Yes! We offer API-based integrations with popular ATS systems, HRMS platforms, learning management systems, and communication tools. For universities, we can integrate with student information systems and ERP platforms. Our technical team works with you to ensure seamless data flow between systems while maintaining security and compliance."
+          },
+          {
+            "question": "Is the platform mobile-friendly?",
+            "answer": "Absolutely! HireKarma is fully responsive and works seamlessly on smartphones, tablets, and desktops. Students can apply for jobs, take assessments, and track their applications on the go. Recruiters can review candidates and schedule interviews from anywhere. We also offer native mobile apps for iOS and Android for enhanced user experience."
+          },
+          {
+            "question": "What kind of support do you provide?",
+            "answer": "We offer multi-channel support including email, phone, and in-platform chat. Dedicated account managers are assigned to institutional and corporate partners. We provide 24/7 technical support during critical recruitment periods. Our comprehensive help center includes FAQs, video tutorials, and step-by-step guides. We also conduct regular check-ins and training sessions."
+          }
+        ]
+      }
+    ],
+    "stillNeedHelp": {
+      "title": "Still Need Help?",
+      "cards": [
+        {
+          "title": "Live Chat",
+          "description": "Chat with our support team in real-time for instant assistance",
+          "cta": "Start Chat"
+        },
+        {
+          "title": "Email Support",
+          "description": "Send us your questions and we'll respond within 24 hours",
+          "cta": "Send Email"
+        },
+        {
+          "title": "Help Center",
+          "description": "Browse our comprehensive guides and documentation",
+          "cta": "Visit Help Center"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Didn't Find What You're Looking For?",
+      "description": "Our team is here to help you with any questions or concerns",
+      "primary": "Contact Support",
+      "secondary": "Request a Demo"
+    }
+  },
+  "events": {
+    "title": "Events",
+    "description": "Attend workshops, webinars and conferences to connect with recruiters, learn industry trends, and sharpen employability skills.",
+    "searchPlaceholder": "Search events...",
+    "featuredTitle": "Featured Events",
+    "allTitle": "All Events",
+    "register": "Register",
+    "categories": [
+      { "id": "all", "label": "All" },
+      { "id": "webinar", "label": "Webinar" },
+      { "id": "workshop", "label": "Workshop" },
+      { "id": "conference", "label": "Conference" },
+      { "id": "bootcamp", "label": "Bootcamp" },
+      { "id": "virtual", "label": "Virtual" },
+      { "id": "in-person", "label": "In-Person" }
+    ],
+    "events": [
+      {
+        "id": "1",
+        "title": "Campus Recruitment Excellence Summit 2025",
+        "date": "November 15, 2025",
+        "time": "10:00 AM - 4:00 PM IST",
+        "location": "Bhubaneswar, Odisha",
+        "type": "In-Person",
+        "attendees": "200+ Expected",
+        "image": "/university.jpg",
+        "description": "Join industry leaders and T&P heads for a day of insights on transforming campus recruitment with AI and automation.",
+        "featured": true,
+        "categoryId": "conference"
+      },
+      {
+        "id": "2",
+        "title": "Webinar: Future-Ready Skills for 2026",
+        "date": "November 22, 2025",
+        "time": "3:00 PM - 4:30 PM IST",
+        "location": "Virtual Event",
+        "type": "Online",
+        "attendees": "500+ Expected",
+        "image": "/students.jpg",
+        "description": "Expert panel discussion on emerging skills and how students can prepare for the evolving job market.",
+        "featured": true,
+        "categoryId": "webinar"
+      },
+      {
+        "id": "3",
+        "title": "Corporate Hiring Strategy Workshop",
+        "date": "December 5, 2025",
+        "time": "2:00 PM - 5:00 PM IST",
+        "location": "Virtual Event",
+        "type": "Online",
+        "attendees": "150+ Expected",
+        "image": "/corporate.jpg",
+        "description": "Interactive workshop for HR professionals on optimizing campus hiring processes and leveraging data analytics.",
+        "featured": false,
+        "categoryId": "workshop"
+      },
+      {
+        "id": "4",
+        "title": "Student Success Bootcamp",
+        "date": "December 12, 2025",
+        "time": "9:00 AM - 6:00 PM IST",
+        "location": "Cuttack, Odisha",
+        "type": "In-Person",
+        "attendees": "300+ Expected",
+        "image": "/students.jpg",
+        "description": "Full-day intensive bootcamp covering resume building, interview skills, and personal branding for college students.",
+        "featured": false,
+        "categoryId": "bootcamp"
+      }
+    ],
+    "subscribe": {
+      "title": "Stay Informed",
+      "description": "Subscribe to event updates and announcements — never miss an opportunity to learn and network.",
+      "emailPlaceholder": "Enter your email",
+      "cta": "Subscribe"
+    }
+  },
+  "caseStudies": {
+    "badge": "Case Studies",
+    "title": "Real Impact. Real Results.",
+    "description": "Discover how colleges, universities, and corporations are transforming recruitment outcomes with HireKarma's solutions.",
+    "searchPlaceholder": "Search case studies...",
+    "featuredTitle": "Featured Case Studies",
+    "allTitle": "All Case Studies",
+    "readCaseStudy": "Read Case Study",
+    "readFullStory": "Read Full Story",
+    "filters": [
+      { "id": "all", "label": "All" },
+      { "id": "education", "label": "Education" },
+      { "id": "corporate", "label": "Corporate" },
+      { "id": "skill-development", "label": "Skill Development" }
+    ],
+    "studies": [
+      {
+        "id": "1",
+        "title": "Transforming Placement Rates: GIET Success Story",
+        "client": "Gandhi Institute of Engineering and Technology",
+        "industry": "Education - Engineering College",
+        "filterId": "education",
+        "challenge": "Low placement rates and manual T&P processes creating inefficiencies",
+        "solution": "Implemented HireKarma's end-to-end placement automation platform",
+        "results": [
+          "85% increase in placement rates within one year",
+          "Reduced placement cycle time by 60%",
+          "Connected with 50+ new corporate recruiters",
+          "Achieved 100% digital transformation of T&P processes"
+        ],
+        "testimonial": "HireKarma has revolutionized how we manage placements. The platform's analytics and automation have helped us achieve placement rates we never thought possible.",
+        "author": "Dr. Rajesh Kumar",
+        "position": "Head of Training & Placement",
+        "image": "/university.jpg",
+        "stats": {
+          "metric1": { "value": "85%", "label": "Increase in Placements" },
+          "metric2": { "value": "60%", "label": "Time Saved" },
+          "metric3": { "value": "50+", "label": "New Recruiters" }
+        },
+        "featured": true
+      },
+      {
+        "id": "2",
+        "title": "Scaling Campus Hiring: A Fortune 500 Journey",
+        "client": "Leading Technology Corporation",
+        "industry": "Information Technology",
+        "filterId": "corporate",
+        "challenge": "Difficulty scaling campus recruitment across 200+ colleges with quality control",
+        "solution": "Deployed HireKarma's AI-powered candidate assessment and matching platform",
+        "results": [
+          "3x increase in campus hiring efficiency",
+          "Hired 500+ quality freshers in one recruitment season",
+          "Improved diversity metrics by 40%",
+          "Reduced cost-per-hire by 45%"
+        ],
+        "testimonial": "HireKarma's platform gave us the scale and quality we needed. The AI matching ensured we found the right candidates faster than ever before.",
+        "author": "Priya Sharma",
+        "position": "VP of Campus Recruitment",
+        "image": "/corporate.jpg",
+        "stats": {
+          "metric1": { "value": "3x", "label": "Hiring Efficiency" },
+          "metric2": { "value": "500+", "label": "Quality Hires" },
+          "metric3": { "value": "45%", "label": "Cost Reduction" }
+        },
+        "featured": true
+      },
+      {
+        "id": "3",
+        "title": "Empowering Rural Students: AISECT Partnership",
+        "client": "AISECT - All India Society for Electronics & Computer Technology",
+        "industry": "Skill Development & Education",
+        "filterId": "skill-development",
+        "challenge": "Limited access to quality job opportunities for students in tier-3 and tier-4 cities",
+        "solution": "Partnered with HireKarma to create direct pathways from training to employment",
+        "results": [
+          "5000+ students connected to employment opportunities",
+          "Partnerships with 100+ national employers",
+          "70% job placement rate for skill development graduates",
+          "Expanded reach to 50+ rural locations"
+        ],
+        "testimonial": "This partnership has been transformative. Students who previously had no access to quality jobs are now working with leading companies across India.",
+        "author": "Santosh Mishra",
+        "position": "Director of Partnerships",
+        "image": "/students.jpg",
+        "stats": {
+          "metric1": { "value": "5000+", "label": "Students Placed" },
+          "metric2": { "value": "70%", "label": "Placement Rate" },
+          "metric3": { "value": "100+", "label": "Employer Partners" }
+        },
+        "featured": false
+      },
+      {
+        "id": "4",
+        "title": "Digital Transformation: CIME Bhubaneswar",
+        "client": "College of IT and Management Education",
+        "industry": "Education - IT & Management",
+        "filterId": "education",
+        "challenge": "Outdated placement processes and limited industry connections",
+        "solution": "Complete digital overhaul with HireKarma's placement management suite",
+        "results": [
+          "100% digitization of placement workflows",
+          "Student employability score improved by 65%",
+          "Partnership with 75+ companies established",
+          "Real-time analytics for continuous improvement"
+        ],
+        "testimonial": "The transition to HireKarma was seamless. We now have complete visibility into our placement ecosystem and can make data-driven decisions.",
+        "author": "Prof. Anjali Nayak",
+        "position": "Dean of Placements",
+        "image": "/university.jpg",
+        "stats": {
+          "metric1": { "value": "100%", "label": "Digital Transformation" },
+          "metric2": { "value": "65%", "label": "Skill Improvement" },
+          "metric3": { "value": "75+", "label": "Company Partners" }
+        },
+        "featured": false
+      }
+    ],
+    "cta": {
+      "title": "Ready to Write Your Success Story?",
+      "description": "Join institutions and companies transforming their recruitment outcomes.",
+      "primary": "Get Started Today",
+      "secondary": "Schedule a Demo"
+    }
+  },
+  "knowledgeHub": {
+    "title": "Knowledge Hub",
+    "descriptionBefore": "Your go-to resource for insights on ",
+    "descriptionStrong": "campus recruitment, career development, and HRTech trends",
+    "descriptionAfter": ".",
+    "searchPlaceholder": "Search articles...",
+    "featuredTitle": "Featured Articles",
+    "allTitle": "All Articles",
+    "readMore": "Read More",
+    "empty": "No articles found matching your criteria.",
+    "categories": [
+      { "id": "all", "label": "All" },
+      { "id": "recruitment", "label": "Recruitment" },
+      { "id": "skills", "label": "Skills" },
+      { "id": "technology", "label": "Technology" },
+      { "id": "career-tips", "label": "Career Tips" },
+      { "id": "industry-insights", "label": "Industry Insights" }
+    ],
+    "articles": [
+      {
+        "id": "1",
+        "title": "The Future of Campus Recruitment: AI and Automation",
+        "excerpt": "Discover how artificial intelligence is transforming the way companies hire fresh talent from campuses across India.",
+        "categoryId": "technology",
+        "image": "/demo.png",
+        "readTime": "5 min read",
+        "date": "Oct 10, 2024",
+        "featured": true
+      },
+      {
+        "id": "2",
+        "title": "10 Essential Skills Every Graduate Needs in 2024",
+        "excerpt": "A comprehensive guide to the most in-demand skills that employers are looking for in fresh graduates.",
+        "categoryId": "skills",
+        "image": "/students.jpg",
+        "readTime": "8 min read",
+        "date": "Oct 8, 2024",
+        "featured": true
+      },
+      {
+        "id": "3",
+        "title": "How to Optimize Your T&P Cell with HRTech Solutions",
+        "excerpt": "Learn best practices for digitizing your placement cell and improving student outcomes through technology.",
+        "categoryId": "recruitment",
+        "image": "/university.jpg",
+        "readTime": "6 min read",
+        "date": "Oct 5, 2024",
+        "featured": false
+      },
+      {
+        "id": "4",
+        "title": "Building Diverse Teams: A Guide for Corporate Recruiters",
+        "excerpt": "Strategies for creating inclusive hiring processes and building diverse teams from campus recruitment.",
+        "categoryId": "recruitment",
+        "image": "/corporate.jpg",
+        "readTime": "7 min read",
+        "date": "Oct 3, 2024",
+        "featured": false
+      },
+      {
+        "id": "5",
+        "title": "Data-Driven Hiring: Metrics That Matter",
+        "excerpt": "Understanding key recruitment metrics and how to leverage data for better hiring decisions.",
+        "categoryId": "industry-insights",
+        "image": "/demo.png",
+        "readTime": "9 min read",
+        "date": "Sep 28, 2024",
+        "featured": false
+      },
+      {
+        "id": "6",
+        "title": "Resume Writing Tips for College Students",
+        "excerpt": "Expert advice on crafting a compelling resume that stands out to recruiters and gets you interviews.",
+        "categoryId": "career-tips",
+        "image": "/students.jpg",
+        "readTime": "4 min read",
+        "date": "Sep 25, 2024",
+        "featured": false
+      }
+    ],
+    "subscribe": {
+      "title": "Stay Updated",
+      "description": "Subscribe to our newsletter for the latest insights on campus recruitment and career development",
+      "emailPlaceholder": "Enter your email",
+      "cta": "Subscribe"
+    }
+  }
+}

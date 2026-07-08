@@ -3,11 +3,14 @@
 import React, { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
+import { useHomeLocale } from '@/contexts/HomeLocaleContext';
 
 const HeroBanner: React.FC = () => {
     const [mounted, setMounted] = useState(false);
     const { resolvedTheme } = useTheme();
     const [imageLoaded, setImageLoaded] = useState(false);
+    const { content } = useHomeLocale();
+    const { heroBanner } = content;
 
     useEffect(() => {
         setMounted(true);
@@ -25,12 +28,12 @@ const HeroBanner: React.FC = () => {
                             ? 'text-gray-100'
                             : 'text-gray-900'
                             }`}>
-                            Transforming Talent Ecosystems
+                            {heroBanner.heading}
                             <span className={`block mt-1 sm:mt-2 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
                                 ? 'text-cyan-400'
                                 : 'text-cyan-600'
                                 }`}>
-                                with AI, Automation, and Analytics
+                                {heroBanner.subheading}
                             </span>
                         </h1>
                     </div>
@@ -41,7 +44,7 @@ const HeroBanner: React.FC = () => {
                             ? 'text-gray-300'
                             : 'text-gray-600'
                             }`}>
-                            HireKarma bridges the gap between education and industry through smart technology and data-driven insights. From career readiness for students to hiring automation for companies and analytics for institutions, HireKarma connects all stakeholders in one intelligent ecosystem. Join the growing network of organizations, universities, and learners shaping the future of talent with HireKarma.
+                            {heroBanner.description}
                         </p>
                     </div>
                 </div>

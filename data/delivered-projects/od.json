@@ -1,0 +1,27 @@
+{
+  "heading": "ବିତରିତ ପ୍ରକଳ୍ପ",
+  "subheading": "ପ୍ରକୃତ ଗ୍ରାହକଙ୍କ ପାଇଁ ବିତରିତ ସଫ୍ଟୱେର୍",
+  "description": "ଆମ ଗ୍ରାହକଙ୍କ ପାଇଁ ବିତରିତ ସଫ୍ଟୱେର୍ ସମାଧାନର ଏକ ସ୍ନାପସଟ୍, ଯାହା କାର୍ଯ୍ୟଦକ୍ଷତା, ସୁରକ୍ଷା ଏବଂ ରକ୍ଷଣାବେକ୍ଷଣକୁ ଧ୍ୟାନରେ ରଖି ନିର୍ମିତ।",
+  "viewMore": "ଅଧିକ ଦେଖନ୍ତୁ",
+  "viewProject": "ପ୍ରକଳ୍ପ ଦେଖନ୍ତୁ",
+  "items": [
+    {
+      "id": "project-1",
+      "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/delivered-projects/AmaGopalpur.png",
+      "title": "ଅମା ଗୋପାଳପୁର ନିର୍ବାଚନ ମଣ୍ଡଳୀ ଡ୍ୟାସବୋର୍ଡ୍",
+      "clientType": "ସରକାରୀ",
+      "subtitle": "ସାର୍ବଜନୀନ ଶାସନ ଡ୍ୟାସବୋର୍ଡ୍",
+      "description": "ଅମା ଗୋପାଳପୁର ନିର୍ବାଚନ ମଣ୍ଡଳୀର ପ୍ରଗତି ଟ୍ରାକ୍ କରିବା ପାଇଁ ଏକ ଡ୍ୟାସବୋର୍ଡ୍।",
+      "href": "https://mlagopalpur.org/"
+    },
+    {
+      "id": "project-2",
+      "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/delivered-projects/AARIAH.png",
+      "title": "AARIAH",
+      "clientType": "ବ୍ୟକ୍ତିଗତ",
+      "subtitle": "AARIAH NGO ପାଇଁ ପୋର୍ଟାଲ୍",
+      "description": "AARIAH NGO ର କାର୍ଯ୍ୟ ଏବଂ ପ୍ରକଳ୍ପଗୁଡ଼ିକୁ ପ୍ରଦର୍ଶନ କରିବା ପାଇଁ ଏକ ପୋର୍ଟାଲ୍।",
+      "href": "https://aariah.vercel.app/"
+    }
+  ]
+}

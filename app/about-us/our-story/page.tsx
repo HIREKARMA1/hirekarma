@@ -1,31 +1,28 @@
 "use client";
 
-import React from 'react';
-import HeroSection from '../../../components/about/HeroSection';
-import JourneySection from '../../../components/about/JourneySection';
-import ChallengeSection from '../../../components/about/ChallengeSection';
-import SolutionSection from '../../../components/about/SolutionSection';
+import React from "react";
 
-const OurStoryPage: React.FC = () => {
-    
+import HeroSection from "@/components/about/HeroSection";
+import JourneySection from "@/components/about/JourneySection";
+import ChallengeSection from "@/components/about/ChallengeSection";
+import SolutionSection from "@/components/about/SolutionSection";
+import { AboutLocaleProvider } from "@/contexts/AboutLocaleContext";
 
-    return (
-        <section className={`relative min-h-screen transition-all duration-500`}>
-                    {/* Hero Content */}
-                    <HeroSection />
+function OurStoryInner() {
+  return (
+    <section className="relative min-h-screen transition-all duration-500">
+      <HeroSection />
+      <JourneySection />
+      <ChallengeSection />
+      <SolutionSection />
+    </section>
+  );
+}
 
-                    {/* The Journey Begins Section */}
-                    <JourneySection />
-
-                    {/* The Challenge Section */}
-                    <ChallengeSection />
-
-                    {/* Our Solution Section */}
-                    <SolutionSection />
-
-        </section>
-    );
-};
-
-export default OurStoryPage;
-
+export default function OurStoryPage() {
+  return (
+    <AboutLocaleProvider>
+      <OurStoryInner />
+    </AboutLocaleProvider>
+  );
+}

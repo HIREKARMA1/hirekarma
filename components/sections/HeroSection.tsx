@@ -2,6 +2,7 @@
 
 import React, { Suspense } from 'react';
 import dynamic from 'next/dynamic';
+import { HomeLocaleProvider } from '@/contexts/HomeLocaleContext';
 import HeroBanner from '../home/HeroBanner';
 
 // Lazy load below-the-fold sections for better initial load
@@ -57,52 +58,54 @@ const CertificationsSection = dynamic(() => import('../home/CertificationsSectio
 
 const HeroSection: React.FC = () => {
   return (
-    <section className={`relative min-h-screen transition-all duration-500`}>
-      {/* Hero Banner loads immediately (above the fold) */}
-      <HeroBanner />
-      
-      {/* Lazy loaded sections (below the fold) */}
-      <Suspense fallback={<div className="min-h-screen" />}>
-        <ImpactSection />
-      </Suspense>
+    <HomeLocaleProvider>
+      <section className={`relative min-h-screen transition-all duration-500`}>
+        {/* Hero Banner loads immediately (above the fold) */}
+        <HeroBanner />
+        
+        {/* Lazy loaded sections (below the fold) */}
+        <Suspense fallback={<div className="min-h-screen" />}>
+          <ImpactSection />
+        </Suspense>
 
-      <Suspense fallback={<div className="min-h-[400px]" />}>
-        <ProductsSection />
-      </Suspense>
-      
-      {/* <Suspense fallback={<div className="min-h-screen" />}>
-        <DeliveredProjectsSection />
-      </Suspense> */}
-      
-      <Suspense fallback={<div className="min-h-screen" />}>
-        <ProblemStatement />
-      </Suspense>
-      
-      <Suspense fallback={<div className="min-h-screen" />}>
-        <FutureReadySection />
-      </Suspense>
+        <Suspense fallback={<div className="min-h-[400px]" />}>
+          <ProductsSection />
+        </Suspense>
+        
+        {/* <Suspense fallback={<div className="min-h-screen" />}>
+          <DeliveredProjectsSection />
+        </Suspense> */}
+        
+        <Suspense fallback={<div className="min-h-screen" />}>
+          <ProblemStatement />
+        </Suspense>
+        
+        <Suspense fallback={<div className="min-h-screen" />}>
+          <FutureReadySection />
+        </Suspense>
 
-      
-      <Suspense fallback={<div className="min-h-screen" />}>
-        <Testimonials />
-      </Suspense>
-      
-      <Suspense fallback={<div className="min-h-screen" />}>
-        <FAQ />
-      </Suspense>
-      
-      <Suspense fallback={<div className="min-h-screen" />}>
-        <Partners />
-      </Suspense>
-{/* 
-      <Suspense fallback={<div className="min-h-screen" />}>
-        <GoogleLocationSection />
-      </Suspense> */}
-      
-      <Suspense fallback={<div className="min-h-screen" />}>
-        <CertificationsSection />
-      </Suspense>
-    </section>
+        
+        <Suspense fallback={<div className="min-h-screen" />}>
+          <Testimonials />
+        </Suspense>
+        
+        <Suspense fallback={<div className="min-h-screen" />}>
+          <FAQ />
+        </Suspense>
+        
+        <Suspense fallback={<div className="min-h-screen" />}>
+          <Partners />
+        </Suspense>
+  {/* 
+        <Suspense fallback={<div className="min-h-screen" />}>
+          <GoogleLocationSection />
+        </Suspense> */}
+        
+        <Suspense fallback={<div className="min-h-screen" />}>
+          <CertificationsSection />
+        </Suspense>
+      </section>
+    </HomeLocaleProvider>
   );
 };
 

@@ -1,0 +1,111 @@
+{
+  "nav": {
+    "home": {
+      "id": "home",
+      "label": "ହୋମ୍",
+      "href": "/"
+    },
+    "products": {
+      "id": "products",
+      "label": "ଉତ୍ପାଦ",
+      "href": "/products",
+      "items": [
+        {
+          "id": "overview",
+          "label": "ସାରାଂଶ",
+          "href": "/products"
+        },
+        {
+          "id": "disha",
+          "label": "ଦିଶା",
+          "href": "https://disha.hirekarma.in/"
+        },
+        {
+          "id": "solviq",
+          "label": "ସୋଲ୍ଭିକ AI",
+          "href": "https://solviqai.hirekarma.in/"
+        },
+        {
+          "id": "lakshya",
+          "label": "ଲକ୍ଷ୍ଯ",
+          "href": "https://lakshya.hirekarma.in/"
+        },
+        {
+          "id": "shortlisted",
+          "label": "ଶର୍ଟଲିଷ୍ଟେଡ୍",
+          "href": "/shortlisted"
+        }
+      ]
+    },
+    "resources": {
+      "id": "resources",
+      "label": "ସମ୍ବଳ",
+      "href": "/resources"
+    },
+    "about": {
+      "id": "about",
+      "label": "ଆମ ବିଷୟରେ",
+      "href": "/about-us",
+      "items": [
+        {
+          "id": "mission",
+          "label": "ମିସନ୍ ଏବଂ ମୂଲ୍ୟ",
+          "href": "/about-us/mission-value"
+        },
+        {
+          "id": "people",
+          "label": "ଟିମ୍",
+          "href": "/about-us/people"
+        }
+      ]
+    },
+    "contact": {
+      "id": "contact",
+      "label": "ଯୋଗାଯୋଗ କରନ୍ତୁ",
+      "href": "/contact"
+    },
+    "language": "ଭାଷା"
+  },
+  "footer": {
+    "description": "HireKarma ର ନବୀନ ପ୍ଲାଟଫର୍ମ ସହ ଆପଣଙ୍କ ନିଯୁକ୍ତି ପ୍ରକ୍ରିୟାକୁ ପରିବର୍ତ୍ତନ କରନ୍ତୁ। ସଠିକ୍ ପ୍ରତିଭାକୁ ଶୀଘ୍ର ଏବଂ ଅଧିକ ଦକ୍ଷତାର ସହିତ ଖୋଜନ୍ତୁ।",
+    "connectTitle": "ଆମ ସହିତ ଯୋଗାଯୋଗ କରନ୍ତୁ",
+    "email": "info@hirekarma.in",
+    "phone": "+91 91243 64762",
+    "address": "ଦ୍ୱିତୀୟ ତଳ, ଏସଏସ୍ ନିବାସ, Hirekarma Private Limited, ରଘୁନାଥପୁର, ଭୁବନେଶ୍ୱର, ରଘୁନାଥପୁରଜାଲି, ଓଡ଼ିଶା 751024",
+    "aboutTitle": "ଆମ ବିଷୟରେ",
+    "aboutLinks": [
+      {
+        "label": "ଆମର କାହାଣୀ",
+        "href": "/about-us/our-story"
+      },
+      {
+        "label": "ମିସନ୍ ଏବଂ ମୂଲ୍ୟ",
+        "href": "/about-us/mission-value"
+      },
+      {
+        "label": "ଟିମ୍",
+        "href": "/about-us/people"
+      }
+    ],
+    "productsTitle": "ଉତ୍ପାଦ",
+    "programsTitle": "କାର୍ଯ୍ୟକ୍ରମ",
+    "contactTitle": "ଯୋଗାଯୋଗ",
+    "contactLink": "ଆମ ସହିତ ଯୋଗାଯୋଗ କରନ୍ତୁ",
+    "privacyPolicy": "ଗୋପନୀୟତା ନୀତି",
+    "termsOfService": "ସେବା ସର୍ତ୍ତାବଳୀ",
+    "copyright": "© {year} HireKarma. ସମସ୍ତ ଅଧିକାର ସଂରକ୍ଷିତ।",
+    "poweredByPrefix": "",
+    "poweredBySuffix": "ଦ୍ୱାରା ପ୍ରସ୍ତୁତ",
+    "poweredByCompany": "Hirekarma Pvt Ltd",
+    "productLinks": [
+      {
+        "label": "ଦିଶା",
+        "href": "https://disha.hirekarma.in/"
+      },
+      {
+        "label": "ସୋଲ୍ଭିକ AI",
+        "href": "https://solviqai.hirekarma.in/"
+      }
+    ]
+  }
+}

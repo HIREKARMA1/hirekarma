@@ -1,0 +1,111 @@
+{
+  "nav": {
+    "home": {
+      "id": "home",
+      "label": "Home",
+      "href": "/"
+    },
+    "products": {
+      "id": "products",
+      "label": "Products",
+      "href": "/products",
+      "items": [
+        {
+          "id": "overview",
+          "label": "Overview",
+          "href": "/products"
+        },
+        {
+          "id": "disha",
+          "label": "Disha",
+          "href": "https://disha.hirekarma.in/"
+        },
+        {
+          "id": "solviq",
+          "label": "SolviqAI",
+          "href": "https://solviqai.hirekarma.in/"
+        },
+        {
+          "id": "lakshya",
+          "label": "Lakshya",
+          "href": "https://lakshya.hirekarma.in/"
+        },
+        {
+          "id": "shortlisted",
+          "label": "Shortlisted",
+          "href": "/shortlisted"
+        }
+      ]
+    },
+    "resources": {
+      "id": "resources",
+      "label": "Resources",
+      "href": "/resources"
+    },
+    "about": {
+      "id": "about",
+      "label": "About",
+      "href": "/about-us",
+      "items": [
+        {
+          "id": "mission",
+          "label": "Mission & Value",
+          "href": "/about-us/mission-value"
+        },
+        {
+          "id": "people",
+          "label": "People",
+          "href": "/about-us/people"
+        }
+      ]
+    },
+    "contact": {
+      "id": "contact",
+      "label": "Contact Us",
+      "href": "/contact"
+    },
+    "language": "Language"
+  },
+  "footer": {
+    "description": "Transform your hiring process with HireKarma's innovative platform. Find the right talent faster and more efficiently.",
+    "connectTitle": "Connect With Us",
+    "email": "info@hirekarma.in",
+    "phone": "+91 91243 64762",
+    "address": "2nd Floor, SS Niwas, Hirekarma Private Limited, Raghunathpur, Bhubaneswar, Raghunathpurjali, Odisha 751024",
+    "aboutTitle": "About Us",
+    "aboutLinks": [
+      {
+        "label": "Our Story",
+        "href": "/about-us/our-story"
+      },
+      {
+        "label": "Mission & Value",
+        "href": "/about-us/mission-value"
+      },
+      {
+        "label": "People",
+        "href": "/about-us/people"
+      }
+    ],
+    "productsTitle": "Products",
+    "programsTitle": "Programs",
+    "contactTitle": "Contact",
+    "contactLink": "Get in Touch",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "copyright": "© {year} HireKarma. All rights reserved.",
+    "poweredByPrefix": "Powered by",
+    "poweredBySuffix": "",
+    "poweredByCompany": "Hirekarma Pvt Ltd",
+    "productLinks": [
+      {
+        "label": "Disha",
+        "href": "https://disha.hirekarma.in/"
+      },
+      {
+        "label": "SolviqAI",
+        "href": "https://solviqai.hirekarma.in/"
+      }
+    ]
+  }
+}

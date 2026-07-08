@@ -5,7 +5,11 @@ import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import { ArrowRight, BarChart3 } from "lucide-react";
 
+import { useSakshamLocale } from "@/contexts/SakshamLocaleContext";
+
 const CTASection: React.FC = () => {
+  const { content } = useSakshamLocale();
+  const { cta } = content;
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme } = useTheme();
 
@@ -17,10 +21,8 @@ const CTASection: React.FC = () => {
 
   return (
     <div className="relative overflow-hidden py-24 flex items-center justify-center">
-      {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-pink-500 to-purple-600 animate-gradient-move opacity-70" />
 
-      {/* AI Waveform effect */}
       <div className="absolute bottom-0 left-0 right-0 h-16 overflow-hidden">
         <div className="wave" />
       </div>
@@ -36,26 +38,20 @@ const CTASection: React.FC = () => {
         }`}
       >
         <h2 className="text-3xl md:text-4xl font-bold mb-6">
-          Take the First Step Toward Your{" "}
-          <span className="text-indigo-500">Career.</span>
+          {cta.titleBefore}
+          <span className="text-indigo-500">{cta.titleHighlight}</span>
         </h2>
-        <p className="text-gray-600 dark:text-gray-300 mb-8">
-          Begin your AI-powered career readiness journey today - real simulations, personalized insights, and instant results.
-        </p>
+        <p className="text-gray-600 dark:text-gray-300 mb-8">{cta.description}</p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<button
-  className="px-6 py-3 text-lg font-semibold flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white"
->
-  Begin Free Simulation
-  <ArrowRight className="w-4 h-4" />
-</button>
+          <button className="px-6 py-3 text-lg font-semibold flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white">
+            {cta.primaryCta}
+            <ArrowRight className="w-4 h-4" />
+          </button>
 
-          <button
-            className="px-6 py-3 text-lg font-semibold flex items-center gap-2 border-indigo-400 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-zinc-800"
-          >
+          <button className="px-6 py-3 text-lg font-semibold flex items-center gap-2 border-indigo-400 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-zinc-800">
             <BarChart3 className="w-4 h-4" />
-            View Student Reports
+            {cta.secondaryCta}
           </button>
         </div>
       </motion.div>
@@ -81,7 +77,11 @@ const CTASection: React.FC = () => {
           bottom: 0;
           width: 200%;
           height: 100%;
-          background: radial-gradient(circle at 50% 100%, rgba(255, 255, 255, 0.2) 10%, transparent 70%);
+          background: radial-gradient(
+            circle at 50% 100%,
+            rgba(255, 255, 255, 0.2) 10%,
+            transparent 70%
+          );
           animation: waveMotion 6s linear infinite;
           opacity: 0.3;
         }

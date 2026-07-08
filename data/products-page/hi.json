@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "उत्पाद | HireKarma",
-    "description": "DISHA, SolviqAI, Lakshya, Shortlisted, Janasamadhan और AMA Gopalpur - HireKarma का उत्पाद इकोसिस्टम।"
+    "description": "दिशा, सोल्विक AI, लक्ष्य, शॉर्टलिस्टेड, जनसमाधान और AMA गोपालपुर - HireKarma का उत्पाद इकोसिस्टम।"
   },
   "hero": {
     "label": "उत्पाद अवलोकन",
@@ -12,12 +12,12 @@
     },
     "description": "छह प्लेटफ़ॉर्म जो कैंपस हायरिंग, AI करियर तत्परता, वर्चुअल प्लेसमेंट और डिजिटल सार्वजनिक सेवाओं को कवर करते हैं - मापने योग्य परिणामों के लिए बनाए गए।",
     "primaryCta": {
-      "label": "DISHA देखें",
+      "label": "दिशा देखें",
       "hrefKey": "disha",
       "variant": "primary"
     },
     "secondaryCta": {
-      "label": "SolviqAI देखें",
+      "label": "सोल्विक AI देखें",
       "hrefKey": "solviq",
       "variant": "outline"
     },
@@ -39,7 +39,7 @@
         "id": "disha",
         "accentKey": "disha",
         "icon": "graduation-cap",
-        "title": "DISHA",
+        "title": "दिशा",
         "subtitle": "कैंपस भर्ती प्लेटफ़ॉर्म",
         "description": "कॉलेजों के लिए एंड-टू-एंड प्लेसमेंट प्रबंधन - ड्राइव शेड्यूलिंग, कंपनी समन्वय, ऑफर ट्रैकिंग और TPO एनालिटिक्स।",
         "features": [
@@ -48,13 +48,13 @@
           { "text": "छात्र प्रोफ़ाइल और आवेदन ट्रैकिंग" },
           { "text": "TPO के लिए रियल-टाइम एनालिटिक्स" }
         ],
-        "cta": { "label": "DISHA देखें", "hrefKey": "disha", "variant": "primary" }
+        "cta": { "label": "दिशा देखें", "hrefKey": "disha", "variant": "primary" }
       },
       {
         "id": "solviq",
         "accentKey": "solviq",
         "icon": "cpu",
-        "title": "SolviqAI",
+        "title": "सोल्विक AI",
         "subtitle": "AI करियर तत्परता प्लेटफ़ॉर्म",
         "description": "AI-संचालित रिज़्यूमे विश्लेषण, कौशल मूल्यांकन और मॉक इंटरव्यू जो छात्रों को वास्तविक भर्ती राउंड के लिए तैयार करते हैं।",
         "features": [
@@ -63,13 +63,13 @@
           { "text": "रियल-टाइम फीडबैक के साथ मॉक इंटरव्यू" },
           { "text": "व्यक्तिगत प्लेसमेंट तत्परता स्कोरिंग" }
         ],
-        "cta": { "label": "SolviqAI देखें", "hrefKey": "solviq", "variant": "primary" }
+        "cta": { "label": "सोल्विक AI देखें", "hrefKey": "solviq", "variant": "primary" }
       },
       {
         "id": "lakshya",
         "accentKey": "lakshya",
         "icon": "users",
-        "title": "Lakshya",
+        "title": "लक्ष्य",
         "subtitle": "कैंपस हायरिंग इकोसिस्टम",
         "description": "एक प्लेटफ़ॉर्म जो छात्र, विश्वविद्यालय और रिक्रूटर्स को जोड़ता है - कैंपस ड्राइव, आवेदन प्रबंधन और तेज़ शॉर्टलिस्टिंग।",
         "features": [
@@ -78,13 +78,13 @@
           { "text": "रिक्रूटर शॉर्टलिस्टिंग वर्कफ़्लो" },
           { "text": "छात्र, कॉर्पोरेट और विश्वविद्यालयों के लिए" }
         ],
-        "cta": { "label": "Lakshya देखें", "hrefKey": "lakshya", "variant": "primary" }
+        "cta": { "label": "लक्ष्य देखें", "hrefKey": "lakshya", "variant": "primary" }
       },
       {
         "id": "shortlisted",
         "accentKey": "shortlisted",
         "icon": "briefcase",
-        "title": "Shortlisted",
+        "title": "शॉर्टलिस्टेड",
         "subtitle": "AI वर्चुअल प्लेसमेंट सेल",
         "description": "भारत का पहला AI वर्चुअल प्लेसमेंट सेल - क्यूरेटेड बैच, AI जॉब मैचिंग और समर्पित प्लेसमेंट कोऑर्डिनेटर।",
         "features": [
@@ -93,13 +93,13 @@
           { "text": "24/7 आवेदन ट्रैकिंग" },
           { "text": "समर्पित प्लेसमेंट कोऑर्डिनेटर" }
         ],
-        "cta": { "label": "Shortlisted देखें", "hrefKey": "shortlisted", "variant": "primary" }
+        "cta": { "label": "शॉर्टलिस्टेड देखें", "hrefKey": "shortlisted", "variant": "primary" }
       },
       {
         "id": "janasamadhan",
         "accentKey": "janasamadhan",
         "icon": "building",
-        "title": "Janasamadhan",
+        "title": "जनसमाधान",
         "subtitle": "सार्वजनिक शिकायत प्लेटफ़ॉर्म",
         "description": "नागरिकों के लिए डिजिटल शिकायत निवारण - सरकारी विभागों के लिए पूर्ण पारदर्शिता के साथ शिकायतों को ट्रैक और हल करें।",
         "features": [
@@ -108,22 +108,22 @@
           { "text": "अधिकारियों के लिए स्थिति डैशबोर्ड" },
           { "text": "ओडिशा सरकार के लिए निर्मित" }
         ],
-        "cta": { "label": "Janasamadhan देखें", "hrefKey": "janasamadhan", "variant": "primary" }
+        "cta": { "label": "जनसमाधान देखें", "hrefKey": "janasamadhan", "variant": "primary" }
       },
       {
         "id": "amagopalpur",
         "accentKey": "amagopalpur",
         "icon": "map-pin",
-        "title": "AMA Gopalpur",
+        "title": "AMA गोपालपुर",
         "subtitle": "निर्वाचन क्षेत्र विकास डैशबोर्ड",
-        "description": "AMA Gopalpur में विभागीय संपत्तियों, परियोजनाओं और विकास प्रगति को मैप करने वाला इंटरैक्टिव निर्वाचन क्षेत्र डैशबोर्ड।",
+        "description": "AMA गोपालपुर में विभागीय संपत्तियों, परियोजनाओं और विकास प्रगति को मैप करने वाला इंटरैक्टिव निर्वाचन क्षेत्र डैशबोर्ड।",
         "features": [
           { "text": "विभाग-वार संपत्ति मैपिंग" },
           { "text": "इंटरैक्टिव जियो-विज़ुअल डैशबोर्ड" },
           { "text": "परियोजना और अवसंरचना ट्रैकिंग" },
           { "text": "निर्वाचन क्षेत्र शासन के लिए निर्मित" }
         ],
-        "cta": { "label": "AMA Gopalpur देखें", "hrefKey": "amagopalpur", "variant": "primary" }
+        "cta": { "label": "AMA गोपालपुर देखें", "hrefKey": "amagopalpur", "variant": "primary" }
       }
     ]
   },
@@ -195,7 +195,7 @@
       },
       {
         "id": "satya",
-        "quote": "GRAMAX में हमने साइबर सुरक्षा भर्ती मूल्यांकन आयोजित किया, जिसमें लगभग 500 छात्रों ने भाग लिया। SolviqAI का AI-संचालित मूल्यांकन मॉड्यूल ने पूरी प्रक्रिया को सरल बनाया और प्रतिभा का मूल्यांकन व शॉर्टलिस्ट करने में बहुत मदद की।",
+        "quote": "GRAMAX में हमने साइबर सुरक्षा भर्ती मूल्यांकन आयोजित किया, जिसमें लगभग 500 छात्रों ने भाग लिया। सोल्विक AI का AI-संचालित मूल्यांकन मॉड्यूल ने पूरी प्रक्रिया को सरल बनाया और प्रतिभा का मूल्यांकन व शॉर्टलिस्ट करने में बहुत मदद की।",
         "name": "Satya Moharana",
         "designation": "GRAMAX",
         "image": "https://hirekarma.s3.us-east-1.amazonaws.com/testimonials/images/satya-moharana.jpeg"
@@ -206,9 +206,9 @@
     "heading": { "part1": "एक इकोसिस्टम।", "gradient": "हर परिणाम, सत्यापित।", "part2": "" },
     "description": "चाहे आप प्लेसमेंट चलाएं, छात्रों को तैयार करें, या सार्वजनिक सेवाएं दें - HireKarma उत्पाद मिलकर मापने योग्य परिणाम देते हैं।",
     "buttons": [
-      { "label": "DISHA देखें", "hrefKey": "disha", "variant": "primary" },
-      { "label": "SolviqAI देखें", "hrefKey": "solviq", "variant": "outline" },
-      { "label": "Lakshya देखें", "hrefKey": "lakshya", "variant": "outline" }
+      { "label": "दिशा देखें", "hrefKey": "disha", "variant": "primary" },
+      { "label": "सोल्विक AI देखें", "hrefKey": "solviq", "variant": "outline" },
+      { "label": "लक्ष्य देखें", "hrefKey": "lakshya", "variant": "outline" }
     ]
   }
 }
