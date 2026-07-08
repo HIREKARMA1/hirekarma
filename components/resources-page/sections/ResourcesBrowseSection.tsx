@@ -12,7 +12,7 @@ export function ResourcesBrowseSection() {
   return (
     <section className="relative py-12 sm:py-16 lg:py-20">
       <div className="relative z-10 content-container">
-        <h2 className="text-xl font-bold tracking-tight text-white sm:text-2xl">
+        <h2 className="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl dark:text-white">
           {browse.title}
         </h2>
 

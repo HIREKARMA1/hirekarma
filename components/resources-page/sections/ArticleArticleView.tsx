@@ -18,15 +18,15 @@ interface ArticleArticleViewProps {
 export function ArticleArticleView({ article }: ArticleArticleViewProps) {
   return (
     <>
-      <section className="relative border-b border-white/10 pt-24 pb-10 sm:pt-28 lg:pt-32">
+      <section className="relative border-b border-slate-200 pt-24 pb-10 sm:pt-28 lg:pt-32 dark:border-white/10">
         <div className="relative z-10 content-container">
           <ArticleBackLink label={article.hero.backLink} />
 
-          <h1 className="mt-6 w-full max-w-none text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+          <h1 className="mt-6 w-full max-w-none text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl dark:text-white">
             {article.hero.title}
           </h1>
 
-          <div className="mt-5 flex flex-wrap items-center gap-4 text-sm text-white/60">
+          <div className="mt-5 flex flex-wrap items-center gap-4 text-sm text-slate-600 dark:text-white/60">
             <div className="flex items-center gap-3">
               <span
                 className="grid size-10 place-items-center rounded-full text-xs font-bold text-white"

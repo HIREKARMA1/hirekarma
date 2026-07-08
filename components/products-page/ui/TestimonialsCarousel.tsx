@@ -75,7 +75,7 @@ export function TestimonialsWithCarousel({
   if (!testimonials.length) return null;
 
   const navButtonClass =
-    "flex size-10 items-center justify-center rounded-full border border-white/15 text-white/85 transition duration-200 hover:border-white/25 hover:bg-white/10 hover:text-white active:scale-[0.98]";
+    "flex size-10 items-center justify-center rounded-full border border-slate-300 text-slate-700 transition duration-200 hover:border-slate-400 hover:bg-slate-100 hover:text-slate-900 active:scale-[0.98] dark:border-white/15 dark:text-white/85 dark:hover:border-white/25 dark:hover:bg-white/10 dark:hover:text-white";
 
   return (
     <div className="py-12 md:py-20">
@@ -149,7 +149,7 @@ export function TestimonialsWithCarousel({
                       transition: { duration: 0.3, ease: [0.22, 1, 0.36, 1] },
                     },
                   }}
-                  className="relative flex h-[280px] flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-4 shadow-[0_4px_24px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.05)] ring-1 ring-white/5 backdrop-blur-sm sm:h-[300px] md:rounded-2xl md:p-6"
+                  className="relative flex h-[280px] flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-4 shadow-[0_4px_24px_rgba(15,23,42,0.08)] ring-1 ring-slate-100 backdrop-blur-sm dark:border-white/10 dark:bg-white/[0.04] dark:shadow-[0_4px_24px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.05)] dark:ring-white/5 sm:h-[300px] md:rounded-2xl md:p-6"
                 >
                   <div
                     className="absolute inset-x-0 top-0 h-0.5 opacity-90"
@@ -158,7 +158,7 @@ export function TestimonialsWithCarousel({
                   />
 
                   <p
-                    className="line-clamp-6 text-base leading-relaxed text-white/85 sm:text-xl sm:leading-relaxed"
+                    className="line-clamp-6 text-base leading-relaxed text-slate-700 sm:text-xl sm:leading-relaxed dark:text-white/85"
                     title={isTruncated ? full : undefined}
                   >
                     {display}
@@ -178,7 +178,7 @@ export function TestimonialsWithCarousel({
                       />
                     </div>
                     <div className="flex min-w-0 flex-col">
-                      <span className="truncate text-sm font-medium text-white">
+                      <span className="truncate text-sm font-medium text-gray-900 dark:text-white">
                         {testimonial.name}
                       </span>
                       <span

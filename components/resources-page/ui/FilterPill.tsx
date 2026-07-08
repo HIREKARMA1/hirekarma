@@ -16,8 +16,8 @@ export function FilterPill({ label, active = false, onClick }: FilterPillProps) 
       className={cn(
         "rounded-full border px-4 py-2 text-sm font-semibold transition-colors",
         active
-          ? "border-white/30 bg-white/10 text-white"
-          : "border-white/15 text-white/70 hover:border-white/25 hover:text-white"
+          ? "border-slate-900 bg-slate-900 text-white dark:border-white/30 dark:bg-white/10 dark:text-white"
+          : "border-slate-300 text-slate-600 hover:border-slate-400 hover:text-slate-900 dark:border-white/15 dark:text-white/70 dark:hover:border-white/25 dark:hover:text-white"
       )}
     >
       {label}

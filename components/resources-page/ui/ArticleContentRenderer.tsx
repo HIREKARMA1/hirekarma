@@ -7,7 +7,7 @@ function renderInlineBold(text: string) {
   return parts.map((part, index) => {
     if (part.startsWith("**") && part.endsWith("**")) {
       return (
-        <strong key={index} className="font-semibold text-white">
+        <strong key={index} className="font-semibold text-gray-900 dark:text-white">
           {part.slice(2, -2)}
         </strong>
       );
@@ -17,7 +17,9 @@ function renderInlineBold(text: string) {
     if (colonMatch && part.includes(" - ")) {
       return (
         <span key={index}>
-          <strong className="font-semibold text-white">{colonMatch[1]}</strong>
+          <strong className="font-semibold text-gray-900 dark:text-white">
+            {colonMatch[1]}
+          </strong>
           {colonMatch[2]}
         </span>
       );
@@ -29,7 +31,7 @@ function renderInlineBold(text: string) {
         <span key={index}>
           {dashParts.map((segment, i) =>
             i === 0 && segment.includes(":") ? (
-              <strong key={i} className="font-semibold text-white">
+              <strong key={i} className="font-semibold text-gray-900 dark:text-white">
                 {segment.split(":")[0]}:
               </strong>
             ) : (
@@ -51,12 +53,13 @@ function ParagraphBlock({
   return (
     <p
       className={cn(
-        "mb-4 leading-relaxed text-white/75",
-        variant === "lead" && "text-lg text-white/90",
-        variant === "emphasis" && "font-semibold text-white/90",
+        "mb-4 leading-relaxed text-slate-600 dark:text-white/75",
+        variant === "lead" && "text-lg text-slate-800 dark:text-white/90",
+        variant === "emphasis" &&
+          "font-semibold text-slate-800 dark:text-white/90",
         variant === "pullquote" &&
           "border-l-4 pl-4 text-lg font-bold text-[#00a2e5]",
-        variant === "italic" && "text-white/60 italic"
+        variant === "italic" && "italic text-slate-500 dark:text-white/60"
       )}
       style={
         variant === "pullquote"
@@ -86,9 +89,9 @@ function ListBlock({
         <li
           key={index}
           className={cn(
-            "text-white/75",
+            "text-slate-600 dark:text-white/75",
             listType === "product" &&
-              "border-b border-white/10 py-3 last:border-b-0"
+              "border-b border-slate-200 py-3 last:border-b-0 dark:border-white/10"
           )}
         >
           {renderInlineBold(item)}
@@ -118,7 +121,7 @@ export function ArticleContentRenderer({
             <Tag
               key={index}
               className={cn(
-                "font-bold tracking-tight text-white",
+                "font-bold tracking-tight text-gray-900 dark:text-white",
                 block.level === 2
                   ? "mt-8 mb-4 text-2xl"
                   : "mt-6 mb-3 text-lg text-[#00a2e5]"

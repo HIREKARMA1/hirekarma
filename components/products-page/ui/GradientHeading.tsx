@@ -33,7 +33,7 @@ export function GradientHeading({
     return (
       <Tag
         className={cn(
-          "font-bold leading-[1.1] tracking-tight text-white",
+          "font-bold leading-[1.1] tracking-tight text-gray-900 dark:text-white",
           sizeClasses[size],
           className
         )}
@@ -48,7 +48,7 @@ export function GradientHeading({
   return (
     <Tag
       className={cn(
-        "font-bold leading-[1.15] tracking-tight text-white",
+        "font-bold leading-[1.15] tracking-tight text-gray-900 dark:text-white",
         sizeClasses[size],
         className
       )}

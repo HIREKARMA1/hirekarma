@@ -9,7 +9,7 @@ export function ProductsTestimonialsSection() {
   const { testimonials } = content;
 
   return (
-    <section className="relative border-t border-white/10">
+    <section className="relative border-t border-slate-200 dark:border-white/10">
       <div className="relative z-10 content-container">
         <TestimonialsWithCarousel
           label={testimonials.label}
