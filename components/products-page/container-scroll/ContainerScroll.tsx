@@ -9,7 +9,7 @@ interface ContainerScrollProps {
   children: React.ReactNode;
   className?: string;
   compact?: boolean;
-  /** Controls tablet entrance — wait until text sequence finishes */
+  /** Controls tablet entrance - wait until text sequence finishes */
   showTablet?: boolean;
 }
 

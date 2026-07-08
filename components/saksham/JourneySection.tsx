@@ -131,7 +131,7 @@ const JourneySection: React.FC = () => {
       mounted && resolvedTheme === "dark" ? "text-gray-300" : "text-gray-600"
     }`}
   >
-    Follow this seamless 7-step journey — from uploading your resume to automated job applications.
+    Follow this seamless 7-step journey - from uploading your resume to automated job applications.
   </p>
 </div>
 

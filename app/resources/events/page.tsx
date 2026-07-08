@@ -232,7 +232,7 @@ export default function EventsPage() {
                                     Stay Informed
                                 </h2>
                                 <p className={`text-xl mb-10 ${mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
-                                    Subscribe to event updates and announcements — never miss an opportunity to learn and network.
+                                    Subscribe to event updates and announcements - never miss an opportunity to learn and network.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
                                     <input type="email" placeholder="Enter your email" className={`flex-1 px-6 py-4 rounded-xl focus:outline-none focus:ring-2 ${mounted && resolvedTheme === 'dark' ? 'bg-gray-800 border-gray-600 text-white focus:ring-blue-500' : 'border-gray-300 focus:ring-blue-500 focus:border-transparent'}`} />

@@ -68,7 +68,7 @@ const Testimonials: React.FC = () => {
                 </p>
             </div>
 
-            {/* Testimonials Cards Container — overflow-x only + vertical padding so hover never clips */}
+            {/* Testimonials Cards Container - overflow-x only + vertical padding so hover never clips */}
             <div className="relative overflow-x-hidden py-3 sm:py-4 md:py-5">
                 <div
                     ref={scrollContainerRef}

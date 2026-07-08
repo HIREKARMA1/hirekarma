@@ -108,7 +108,7 @@ export function isResourceArticleSlug(
   return (RESOURCE_ARTICLE_SLUGS as readonly string[]).includes(slug);
 }
 
-/** Article loader — swap to a Python API later. Falls back to English. */
+/** Article loader - swap to a Python API later. Falls back to English. */
 export async function fetchResourceArticle(
   slug: ResourceArticleSlug,
   locale: Locale

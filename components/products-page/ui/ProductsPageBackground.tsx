@@ -2,7 +2,7 @@ import { theme } from "@/config/theme";
 
 import { Vortex } from "./Vortex";
 
-/** Single fixed background for the entire products page — gradient, glows, and vortex. */
+/** Single fixed background for the entire products page - gradient, glows, and vortex. */
 export function ProductsPageBackground() {
   return (
     <div

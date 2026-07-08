@@ -1,6 +1,6 @@
 /**
  * Centralized environment variable access.
- * All external URLs and credentials must be read from here — never hardcode in components.
+ * All external URLs and credentials must be read from here - never hardcode in components.
  */
 const requiredPublic = ["NEXT_PUBLIC_DISHA_URL", "NEXT_PUBLIC_SOLVIQ_URL"] as const;
 

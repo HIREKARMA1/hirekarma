@@ -97,7 +97,7 @@ const Partners: React.FC = () => {
             </div>
 
             <div className="relative space-y-10 sm:space-y-12 md:space-y-14">
-                {/* University Partners — scroll RIGHT to LEFT */}
+                {/* University Partners - scroll RIGHT to LEFT */}
                 <div className="space-y-3 sm:space-y-4 overflow-x-hidden py-2 sm:py-3 md:py-4">
                     <h3 className={`text-base sm:text-lg font-semibold transition-colors duration-500 ${
                         mounted && resolvedTheme === 'dark' ? 'text-gray-200' : 'text-gray-700'
@@ -156,7 +156,7 @@ const Partners: React.FC = () => {
                     </div>
                 </div>
 
-                {/* Corporate Partners — scroll LEFT to RIGHT */}
+                {/* Corporate Partners - scroll LEFT to RIGHT */}
                 <div className="space-y-3 sm:space-y-4 overflow-x-hidden py-2 sm:py-3 md:py-4">
                     <h3 className={`text-base sm:text-lg font-semibold transition-colors duration-500 ${
                         mounted && resolvedTheme === 'dark' ? 'text-gray-200' : 'text-gray-700'

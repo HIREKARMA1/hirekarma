@@ -5,7 +5,7 @@ import type { Locale, ProductsPageMedia, SlideImage } from "@/types/products-pag
 const media = mediaData as ProductsPageMedia;
 
 /**
- * Media loader — swap to API fetch when backend is ready.
+ * Media loader - swap to API fetch when backend is ready.
  */
 export async function fetchProductsPageMedia(): Promise<ProductsPageMedia> {
   return media;

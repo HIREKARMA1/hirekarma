@@ -15,7 +15,7 @@
     {
       "type": "paragraph",
       "variant": "lead",
-      "text": "Every government talks about citizen-centric governance. Very few talk about why citizens still feel their complaints disappear into a black hole — or why departments drown in paperwork while resolution rates barely move."
+      "text": "Every government talks about citizen-centric governance. Very few talk about why citizens still feel their complaints disappear into a black hole - or why departments drown in paperwork while resolution rates barely move."
     },
     {
       "type": "paragraph",
@@ -47,11 +47,11 @@
       "ordered": false,
       "listType": "default",
       "items": [
-        "Volume without visibility: Complaints arrive through letters, counters, helplines, and social media — but many still lack a unified registry with status, ownership, and audit trail.",
-        "Routing by guesswork: Without intelligent categorization and department mapping, grievances bounce between desks — adding days or weeks before the right officer even sees them.",
-        "The accountability void: When there is no SLA tracking or escalation path, \"pending\" becomes a permanent state — and citizen trust erodes quietly.",
-        "Data that doesn't drive action: Dashboards that count registrations but don't connect to resolution workflows, field verification, or citizen feedback are reporting tools — not governance systems.",
-        "Wasteful use of officer bandwidth: Skilled administrators spend hours on manual status updates, duplicate entries, and phone follow-ups — tasks that don't require policy judgment but consume most of their day."
+        "Volume without visibility: Complaints arrive through letters, counters, helplines, and social media - but many still lack a unified registry with status, ownership, and audit trail.",
+        "Routing by guesswork: Without intelligent categorization and department mapping, grievances bounce between desks - adding days or weeks before the right officer even sees them.",
+        "The accountability void: When there is no SLA tracking or escalation path, \"pending\" becomes a permanent state - and citizen trust erodes quietly.",
+        "Data that doesn't drive action: Dashboards that count registrations but don't connect to resolution workflows, field verification, or citizen feedback are reporting tools - not governance systems.",
+        "Wasteful use of officer bandwidth: Skilled administrators spend hours on manual status updates, duplicate entries, and phone follow-ups - tasks that don't require policy judgment but consume most of their day."
       ]
     },
     {
@@ -69,11 +69,11 @@
       "ordered": true,
       "listType": "default",
       "items": [
-        "Channel fragmentation: Citizens use WhatsApp, web portals, and physical visits — but backend systems often don't speak the same language, creating duplicate grievances and conflicting statuses.",
+        "Channel fragmentation: Citizens use WhatsApp, web portals, and physical visits - but backend systems often don't speak the same language, creating duplicate grievances and conflicting statuses.",
         "No closed-loop lifecycle: Registration without routing, routing without resolution proof, and resolution without citizen confirmation leaves the loop permanently open.",
-        "Geography and constituency blind spots: Development assets, project progress, and citizen complaints live in separate silos — making it hard for elected representatives and administrators to see the full picture.",
+        "Geography and constituency blind spots: Development assets, project progress, and citizen complaints live in separate silos - making it hard for elected representatives and administrators to see the full picture.",
         "Transparency without accessibility: Publishing statistics on a website doesn't help a citizen in a rural block who needs a simple WhatsApp update in their language.",
-        "Reactive, not predictive: Manual systems detect bottlenecks only after backlash — not when SLAs slip or departments fall behind."
+        "Reactive, not predictive: Manual systems detect bottlenecks only after backlash - not when SLAs slip or departments fall behind."
       ]
     },
     {
@@ -94,12 +94,12 @@
     {
       "type": "paragraph",
       "variant": "default",
-      "text": "The solution isn't just more desks or more helpline agents. It's about rethinking how public grievance systems handle intake, routing, tracking, escalation, and transparency — as one connected architecture."
+      "text": "The solution isn't just more desks or more helpline agents. It's about rethinking how public grievance systems handle intake, routing, tracking, escalation, and transparency - as one connected architecture."
     },
     {
       "type": "paragraph",
       "variant": "default",
-      "text": "When a citizen registers once and receives a tracking ID instantly; when grievances route automatically to the right department with SLA timers; when officers update status from the field and citizens get notified in real time; and when constituency leaders see development progress alongside citizen feedback on a single dashboard — governments can restore trust at a scale no manual process can match."
+      "text": "When a citizen registers once and receives a tracking ID instantly; when grievances route automatically to the right department with SLA timers; when officers update status from the field and citizens get notified in real time; and when constituency leaders see development progress alongside citizen feedback on a single dashboard - governments can restore trust at a scale no manual process can match."
     },
     {
       "type": "heading",
@@ -109,15 +109,15 @@
     {
       "type": "paragraph",
       "variant": "default",
-      "text": "This is exactly why HireKarma extends its outcome-driven platform philosophy into digital public service — not as another form portal, but as governance infrastructure:"
+      "text": "This is exactly why HireKarma extends its outcome-driven platform philosophy into digital public service - not as another form portal, but as governance infrastructure:"
     },
     {
       "type": "list",
       "ordered": false,
       "listType": "product",
       "items": [
-        "Janasamadhan — A digital public grievance platform that lets citizens track, route, and resolve complaints with full transparency for government departments. From registration to resolution, every step is auditable — for citizens and administrators alike.",
-        "AMA Gopalpur — An interactive constituency development dashboard mapping department assets, projects, and progress — giving representatives and citizens a shared view of what is being built and what still needs attention."
+        "Janasamadhan - A digital public grievance platform that lets citizens track, route, and resolve complaints with full transparency for government departments. From registration to resolution, every step is auditable - for citizens and administrators alike.",
+        "AMA Gopalpur - An interactive constituency development dashboard mapping department assets, projects, and progress - giving representatives and citizens a shared view of what is being built and what still needs attention."
       ]
     },
     {
@@ -128,7 +128,7 @@
     {
       "type": "paragraph",
       "variant": "italic",
-      "text": "We believe public servants should focus on policy, field verification, and citizen outcomes — not on chasing files across departments or answering the same status query fifty times a day."
+      "text": "We believe public servants should focus on policy, field verification, and citizen outcomes - not on chasing files across departments or answering the same status query fifty times a day."
     },
     {
       "type": "paragraph",
@@ -145,9 +145,9 @@
       "ordered": true,
       "listType": "default",
       "items": [
-        "Department of Administrative Reforms & Public Grievances (DARPG) — CPGRAMS statistics and citizen charter guidelines",
-        "NITI Aayog — Digital governance and e-governance adoption reports",
-        "State e-Governance mission reports — grievance resolution SLA benchmarks"
+        "Department of Administrative Reforms & Public Grievances (DARPG) - CPGRAMS statistics and citizen charter guidelines",
+        "NITI Aayog - Digital governance and e-governance adoption reports",
+        "State e-Governance mission reports - grievance resolution SLA benchmarks"
       ]
     },
     {
@@ -168,22 +168,22 @@
     {
       "type": "paragraph",
       "variant": "default",
-      "text": "HireKarma builds digital platforms spanning campus hiring, AI career readiness, virtual placement, and public grievance redressal — delivering measurable outcomes for colleges, companies, and government partners across India."
+      "text": "HireKarma builds digital platforms spanning campus hiring, AI career readiness, virtual placement, and public grievance redressal - delivering measurable outcomes for colleges, companies, and government partners across India."
     }
   ],
   "references": {
     "title": "References",
     "items": [
-      "Department of Administrative Reforms & Public Grievances (DARPG) — CPGRAMS statistics and citizen charter guidelines",
-      "NITI Aayog — Digital governance and e-governance adoption reports",
-      "State e-Governance mission reports — grievance resolution SLA benchmarks"
+      "Department of Administrative Reforms & Public Grievances (DARPG) - CPGRAMS statistics and citizen charter guidelines",
+      "NITI Aayog - Digital governance and e-governance adoption reports",
+      "State e-Governance mission reports - grievance resolution SLA benchmarks"
     ]
   },
   "authorBox": {
     "title": "About the authors",
     "name": "HireKarma Editorial Team",
     "role": "Product and Impact, HireKarma Private Limited",
-    "bio": "HireKarma builds outcome-driven platforms for campus recruitment, AI career readiness, and digital public service — trusted by colleges, companies, and government partners across India."
+    "bio": "HireKarma builds outcome-driven platforms for campus recruitment, AI career readiness, and digital public service - trusted by colleges, companies, and government partners across India."
   },
   "sidebar": {
     "shareTitle": "Loved this insight?",

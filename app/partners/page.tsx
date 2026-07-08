@@ -136,7 +136,7 @@ const PartnersPage: React.FC = () => {
                                     Empowering Campuses. Accelerating Careers.
                                 </h2>
                                 <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto mb-4">
-                                    HireKarma for Colleges is more than a tech platform—it&apos;s a strategic ally for educational
+                                    HireKarma for Colleges is more than a tech platform-it&apos;s a strategic ally for educational
                                     institutions committed to transforming placement outcomes and student success.
                                 </p>
                                 <p className="text-lg text-gray-600 leading-relaxed max-w-4xl mx-auto">
@@ -205,14 +205,14 @@ const PartnersPage: React.FC = () => {
                                     <span className="text-sm font-semibold">Corporate Partners</span>
                                 </div>
                                 <h2 className="text-4xl sm:text-5xl font-bold text-blue-700 mb-6">
-                                    Build the Workforce of Tomorrow—Today.
+                                    Build the Workforce of Tomorrow-Today.
                                 </h2>
                                 <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto mb-4">
                                     Corporate partners choose HireKarma to unlock efficient, fair, and scalable early-career hiring.
                                 </p>
                                 <p className="text-lg text-gray-600 leading-relaxed max-w-4xl mx-auto">
                                     Tap into a curated pipeline of job-ready graduates and skilled interns from top colleges,
-                                    streamline campus recruitment cycles, and make hiring decisions powered by real talent data—not just resumes.
+                                    streamline campus recruitment cycles, and make hiring decisions powered by real talent data-not just resumes.
                                 </p>
                             </div>
 

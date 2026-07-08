@@ -46,7 +46,7 @@ const HeroSection: React.FC = () => {
                                 }`}>end-to-end corporate hiring suite</strong>.
                             Tap into a network of thousands of pre-vetted, job-ready graduates from India&apos;s top colleges,
                             accelerate your campus hiring cycles, and leverage data for <strong className={`${mounted && resolvedTheme === 'dark' ? 'text-gray-200' : 'text-gray-700'
-                                }`}>predictive hiring</strong>—all through one
+                                }`}>predictive hiring</strong>-all through one
                             seamless HRTech gateway.
                         </p>
                     </div>

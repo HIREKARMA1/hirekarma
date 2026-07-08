@@ -18,7 +18,7 @@ const faqCategories = [
             },
             {
                 question: "How does HireKarma help me find job opportunities?",
-                answer: "HireKarma uses AI-powered matching to connect you with relevant job opportunities based on your skills, academic background, and career preferences. You'll receive personalized job alerts, can apply to campus drives, access skill assessment tools, and get career guidance—all from one platform. Our system ensures you never miss an opportunity that matches your profile."
+                answer: "HireKarma uses AI-powered matching to connect you with relevant job opportunities based on your skills, academic background, and career preferences. You'll receive personalized job alerts, can apply to campus drives, access skill assessment tools, and get career guidance-all from one platform. Our system ensures you never miss an opportunity that matches your profile."
             },
             {
                 question: "Can I access the platform if I'm from a tier-2 or tier-3 college?",
@@ -41,7 +41,7 @@ const faqCategories = [
         faqs: [
             {
                 question: "How does HireKarma help streamline campus recruitment?",
-                answer: "HireKarma provides end-to-end automation for campus hiring—from posting job requirements and receiving pre-assessed candidate profiles to scheduling interviews and managing offers. Our AI-powered matching ensures you only see candidates who meet your criteria, reducing screening time by up to 70%. Integration with your existing ATS makes the process seamless."
+                answer: "HireKarma provides end-to-end automation for campus hiring-from posting job requirements and receiving pre-assessed candidate profiles to scheduling interviews and managing offers. Our AI-powered matching ensures you only see candidates who meet your criteria, reducing screening time by up to 70%. Integration with your existing ATS makes the process seamless."
             },
             {
                 question: "What kind of candidates can we access through HireKarma?",
@@ -53,11 +53,11 @@ const faqCategories = [
             },
             {
                 question: "Can we conduct virtual campus drives through the platform?",
-                answer: "Yes! HireKarma supports fully virtual campus recruitment including online assessments, video interviews, and digital offer management. You can reach students across multiple colleges simultaneously, conduct large-scale assessments, and track every stage of your recruitment funnel—all through our integrated platform."
+                answer: "Yes! HireKarma supports fully virtual campus recruitment including online assessments, video interviews, and digital offer management. You can reach students across multiple colleges simultaneously, conduct large-scale assessments, and track every stage of your recruitment funnel-all through our integrated platform."
             },
             {
                 question: "What are the pricing models for corporate partners?",
-                answer: "We offer flexible pricing based on your hiring volume and needs—including subscription models, per-hire pricing, and enterprise packages. Contact our sales team for a customized quote based on your campus recruitment requirements. We also offer a demo to show you the platform's capabilities before you commit."
+                answer: "We offer flexible pricing based on your hiring volume and needs-including subscription models, per-hire pricing, and enterprise packages. Contact our sales team for a customized quote based on your campus recruitment requirements. We also offer a demo to show you the platform's capabilities before you commit."
             }
         ]
     },
@@ -68,7 +68,7 @@ const faqCategories = [
         faqs: [
             {
                 question: "How does HireKarma benefit our Training & Placement cell?",
-                answer: "HireKarma automates 80% of your T&P workflows—from student database management and eligibility tracking to recruiter coordination and placement analytics. You get real-time dashboards showing placement progress, company-wise statistics, and student performance metrics. This frees up your team to focus on strategic initiatives like building recruiter relationships and career counseling."
+                answer: "HireKarma automates 80% of your T&P workflows-from student database management and eligibility tracking to recruiter coordination and placement analytics. You get real-time dashboards showing placement progress, company-wise statistics, and student performance metrics. This frees up your team to focus on strategic initiatives like building recruiter relationships and career counseling."
             },
             {
                 question: "Can we customize the platform for our institution's specific needs?",

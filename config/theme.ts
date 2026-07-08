@@ -88,7 +88,7 @@ export const theme = {
     heroGlow:
       "radial-gradient(ellipse at 20% 30%, rgba(27,82,164,0.2) 0%, transparent 50%), radial-gradient(ellipse at 80% 60%, rgba(0,162,229,0.12) 0%, transparent 50%)",
   },
-  /** Aceternity vortex-demo-2 preset — https://ui.aceternity.com/components/vortex */
+  /** Aceternity vortex-demo-2 preset - https://ui.aceternity.com/components/vortex */
   vortex: {
     particleCount: 500,
     rangeY: 800,
