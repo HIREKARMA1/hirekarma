@@ -33,7 +33,7 @@ export function LogoMarquee({
       ? "animate-partners-scroll-left"
       : "animate-partners-scroll-right";
 
-  const gap = variant === "mono" ? "gap-5 sm:gap-8 md:gap-12" : "gap-5 sm:gap-6";
+  const gap = variant === "mono" ? "gap-1" : "gap-1";
 
   return (
     <div
@@ -61,12 +61,13 @@ export function LogoMarquee({
       >
         {[0, 1].map((copy) => (
           <div key={copy} className={cn("flex items-center", gap)} aria-hidden={copy === 1}>
-            {logos.map((logo) => (
+            {logos.map((logo, index) => (
               <TrustLogoChip
                 key={`${copy}-${logo.id}`}
                 name={logo.name}
                 logo={logo.logo}
                 variant={variant}
+                colorIndex={copy * logos.length + index}
               />
             ))}
           </div>
