@@ -35,10 +35,11 @@ export function ResourceCardVisual({
             alt=""
             fill
             sizes="(max-width: 768px) 100vw, 33vw"
+            unoptimized
             className="object-cover"
           />
           <div
-            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent"
+            className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/55 via-black/10 to-transparent"
             aria-hidden
           />
         </>
