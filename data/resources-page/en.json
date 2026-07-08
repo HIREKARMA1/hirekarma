@@ -5,7 +5,11 @@
   },
   "hero": {
     "badge": "Resources Hub",
-    "heading": "Insights on outcomes-driven platforms for Bharat",
+    "heading": {
+      "part1": "Insights on",
+      "gradient": "outcomes-driven platforms",
+      "part2": "for Bharat"
+    },
     "lead": "Explore our latest thought leadership on campus hiring, AI career readiness, virtual placement, and digital public service - built to deliver measurable impact at scale."
   },
   "browse": {
