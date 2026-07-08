@@ -3,7 +3,6 @@
 import React from 'react';
 import Navbar from '../../components/layout/Navbar';
 import Footer from '../../components/layout/Footer';
-import WavyBackground from '../../components/layout/WavyBackground';
 import { GraduationCap, Briefcase, Award, Handshake } from 'lucide-react';
 
 // College Partners Data
@@ -77,7 +76,6 @@ const PartnersPage: React.FC = () => {
             <main className="flex-grow">
                 {/* Header Section */}
                 <section className="relative py-16 lg:py-24 bg-gradient-to-br from-blue-50 to-white dark:from-gray-900 dark:to-gray-800">
-                    <WavyBackground variant="primary" intensity="medium" />
                     <div className="content-container">
                         <div className="max-w-5xl mx-auto text-center">
                             <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full mb-6">
@@ -101,7 +99,6 @@ const PartnersPage: React.FC = () => {
 
                 {/* Stats Section */}
                 <section className="relative py-12 bg-white dark:bg-gray-900">
-                    <WavyBackground variant="neutral" intensity="light" />
                     <div className="content-container">
                         <div className="max-w-7xl mx-auto">
                             <div className="grid md:grid-cols-3 gap-8">
@@ -124,7 +121,6 @@ const PartnersPage: React.FC = () => {
 
                 {/* College Partners Section */}
                 <section className="relative py-16 lg:py-24 bg-white dark:bg-gray-900">
-                    <WavyBackground variant="accent" intensity="light" />
                     <div className="content-container">
                         <div className="max-w-7xl mx-auto mb-12">
                             <div className="text-center mb-8">
@@ -196,7 +192,6 @@ const PartnersPage: React.FC = () => {
 
                 {/* Corporate Partners Section */}
                 <section className="relative py-16 lg:py-24 bg-gradient-to-br from-blue-50 to-white dark:from-gray-800 dark:to-gray-900">
-                    <WavyBackground variant="secondary" intensity="light" />
                     <div className="content-container">
                         <div className="max-w-7xl mx-auto mb-12">
                             <div className="text-center mb-8">
@@ -266,7 +261,6 @@ const PartnersPage: React.FC = () => {
 
                 {/* Mission Statement */}
                 <section className="relative py-16 lg:py-24 bg-white dark:bg-gray-900">
-                    <WavyBackground variant="accent" intensity="light" />
                     <div className="content-container">
                         <div className="max-w-4xl mx-auto text-center">
                             <Award className="w-16 h-16 text-blue-600 mx-auto mb-6" />
@@ -289,7 +283,6 @@ const PartnersPage: React.FC = () => {
 
                 {/* CTA Section */}
                 <section className="relative py-16 lg:py-24 bg-gradient-to-br from-blue-700 to-blue-900 dark:from-blue-800 dark:to-blue-950">
-                    <WavyBackground variant="primary" intensity="medium" />
                     <div className="content-container">
                         <div className="max-w-4xl mx-auto text-center">
                             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">

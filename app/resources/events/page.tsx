@@ -5,7 +5,6 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 import Navbar from "../../../components/layout/Navbar";
 import Footer from "../../../components/layout/Footer";
-import WavyBackground from "../../../components/layout/WavyBackground";
 import { Calendar, ArrowRight, Search } from 'lucide-react';
 
 const categories = ['All', 'Webinar', 'Workshop', 'Conference', 'Bootcamp', 'Virtual', 'In-Person'];
@@ -89,8 +88,6 @@ export default function EventsPage() {
 
             <main className="flex-grow">
                 <section className={`relative min-h-screen transition-all duration-500 ${mounted && resolvedTheme === 'dark' ? 'bg-gray-900' : 'bg-white'}`}>
-                    <WavyBackground variant="primary" intensity="strong" />
-
                     <div className="relative content-container pt-20 pb-8">
                         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                             <div className="space-y-2 lg:space-y-1">

@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import Navbar from '../../../components/layout/Navbar';
 import Footer from '../../../components/layout/Footer';
-import WavyBackground from '../../../components/layout/WavyBackground';
 import { HelpCircle, ChevronDown, Search, GraduationCap, Briefcase, School, Settings, MessageCircle } from 'lucide-react';
 
 const faqCategories = [
@@ -141,7 +140,6 @@ const FAQPage: React.FC = () => {
             <main className="flex-grow">
                 {/* Header Section */}
                 <section className="relative py-16 lg:py-24 bg-gradient-to-br from-blue-50 to-white dark:from-gray-900 dark:to-gray-800">
-                    <WavyBackground variant="primary" intensity="medium" />
                     <div className="content-container">
                         <div className="max-w-5xl mx-auto text-center">
                             <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full mb-6">
@@ -172,7 +170,6 @@ const FAQPage: React.FC = () => {
 
                 {/* Category Navigation */}
                 <section className="relative py-8 border-b border-gray-200 dark:border-gray-700 sticky top-20 z-30 backdrop-blur-lg bg-white/95 dark:bg-gray-900/95">
-                    <WavyBackground variant="neutral" intensity="light" />
                     <div className="content-container">
                         <div className="max-w-7xl mx-auto">
                             <div className="flex flex-wrap gap-3 justify-center">
@@ -202,7 +199,6 @@ const FAQPage: React.FC = () => {
 
                 {/* FAQ Accordion Section */}
                 <section className="relative py-16 lg:py-20 bg-white dark:bg-gray-900">
-                    <WavyBackground variant="accent" intensity="light" />
                     <div className="content-container">
                         <div className="max-w-4xl mx-auto">
                             {filteredFAQs.length > 0 ? (
@@ -254,7 +250,6 @@ const FAQPage: React.FC = () => {
 
                 {/* Quick Help Cards */}
                 <section className="relative py-16 bg-gray-50 dark:bg-gray-800">
-                    <WavyBackground variant="secondary" intensity="light" />
                     <div className="content-container">
                         <div className="max-w-7xl mx-auto">
                             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 text-center mb-12">
@@ -307,7 +302,6 @@ const FAQPage: React.FC = () => {
 
                 {/* CTA Section */}
                 <section className="relative py-16 lg:py-24 bg-gradient-to-br from-blue-700 to-blue-900 dark:from-blue-800 dark:to-blue-950">
-                    <WavyBackground variant="primary" intensity="medium" />
                     <div className="content-container">
                         <div className="max-w-4xl mx-auto text-center">
                             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">

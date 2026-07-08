@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
-import WavyBackground from '../../../components/layout/WavyBackground';
 import HeroSection from '../../../components/saksham/HeroSection';
 import ProblemSection from '../../../components/saksham/ProblemSection';
 import SolutionSection from '../../../components/saksham/SolutionSection';
@@ -20,9 +19,6 @@ const SakshamPage = () => {
 
   return (
    <section className={`relative min-h-screen transition-all duration-500`}>
-      {/* Wavy Background
-      <WavyBackground variant="primary" intensity="medium" /> */}
-      
       {/* Hero Section */}
       <HeroSection />
       
