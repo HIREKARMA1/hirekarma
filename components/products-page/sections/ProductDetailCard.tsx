@@ -24,7 +24,7 @@ export function ProductDetailCard({ product }: ProductDetailCardProps) {
 
   return (
     <CardContainer containerClassName="h-full w-full py-0" className="h-full w-full">
-      <CardBody className="group/card relative flex h-full w-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-linear-to-b from-white/[0.08] via-[#0d1118]/95 to-[#080b10]/98 shadow-[0_4px_24px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-xl sm:rounded-3xl">
+      <CardBody className="group/card relative flex h-full w-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-linear-to-b from-white via-slate-50 to-white shadow-[0_4px_24px_rgba(15,23,42,0.08)] backdrop-blur-xl dark:border-white/10 dark:from-white/[0.08] dark:via-[#0d1118]/95 dark:to-[#080b10]/98 dark:shadow-[0_4px_24px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.06)] sm:rounded-3xl">
         {/* Accent atmosphere */}
         <div
           className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full opacity-50 blur-3xl transition-opacity duration-500 group-hover/card:opacity-80"
@@ -37,14 +37,14 @@ export function ProductDetailCard({ product }: ProductDetailCardProps) {
           aria-hidden
         />
         <div
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-white/5"
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-slate-200 dark:bg-white/5"
           aria-hidden
         />
 
         {/* Header */}
         <CardItem translateZ={45} className="relative w-full px-5 pb-0 pt-5">
           <div className="min-w-0">
-            <h3 className="text-lg font-bold tracking-tight text-white sm:text-xl">
+            <h3 className="text-lg font-bold tracking-tight text-gray-900 dark:text-white sm:text-xl">
               {product.title}
             </h3>
             <p
@@ -59,13 +59,13 @@ export function ProductDetailCard({ product }: ProductDetailCardProps) {
         {/* Product preview - elevated frame */}
         <CardItem translateZ={75} className="relative w-full px-4 pt-3 sm:px-5 sm:pt-4">
           <div
-            className="overflow-hidden rounded-xl border p-1 shadow-[0_16px_48px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.08)]"
+            className="overflow-hidden rounded-xl border p-1 shadow-[0_16px_48px_rgba(15,23,42,0.12)] dark:shadow-[0_16px_48px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.08)]"
             style={{
               borderColor: accent.border,
               backgroundColor: accent.bg,
             }}
           >
-            <div className="relative aspect-[18/10] overflow-hidden rounded-lg bg-[#0a0e14]">
+            <div className="relative aspect-[18/10] overflow-hidden rounded-lg bg-slate-100 dark:bg-[#0a0e14]">
               <Image
                 src={imageSrc}
                 alt={`${product.title} preview`}
@@ -82,7 +82,7 @@ export function ProductDetailCard({ product }: ProductDetailCardProps) {
           translateZ={40}
           className="flex w-full flex-1 flex-col px-5 pb-5 pt-3 sm:px-5 sm:pb-5 sm:pt-4"
         >
-          <p className="line-clamp-3 text-sm leading-snug text-white/72">
+          <p className="line-clamp-3 text-sm leading-snug text-slate-600 dark:text-white/72">
             {product.description}
           </p>
 

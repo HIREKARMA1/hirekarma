@@ -23,7 +23,13 @@ export function FeatureCheckItem({
       >
         <Check className="h-2.5 w-2.5 sm:h-3 sm:w-3" strokeWidth={3} aria-hidden />
       </span>
-      <span className={variant === "dark" ? "text-white/75" : "text-gray-600"}>
+      <span
+        className={
+          variant === "dark"
+            ? "text-slate-600 dark:text-white/75"
+            : "text-gray-600"
+        }
+      >
         {text}
       </span>
     </li>

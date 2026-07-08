@@ -19,6 +19,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import { env } from '@/lib/config/env';
+import { ThemeToggle } from '@/components/layout/ThemeToggle';
 
 interface NavbarProps {
   className?: string;
@@ -148,7 +149,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
             </div>
 
             {/* Desktop Navigation - Right Aligned */}
-            <div className="hidden lg:flex items-center">
+            <div className="hidden lg:flex items-center gap-1">
               <div className="flex items-center space-x-1">
                 {navEntries.map((entry) => {
                   if (entry.type === 'link') {
@@ -252,11 +253,13 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                   );
                 })}
               </div>
+              <ThemeToggle className="ml-1" />
             </div>
 
 
             {/* Mobile Menu Button */}
             <div className="flex lg:hidden items-center gap-2 flex-shrink-0">
+              <ThemeToggle />
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className={`p-2.5 rounded-lg transition-all duration-200 ${mounted && resolvedTheme === 'dark'

@@ -15,7 +15,7 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
   return (
     <div
       className={cn(
-        "inline-flex items-center gap-0.5 rounded-full border border-white/15 bg-white/5 p-1 backdrop-blur-sm",
+        "inline-flex items-center gap-0.5 rounded-full border border-slate-200 bg-white/80 p-1 backdrop-blur-sm dark:border-white/15 dark:bg-white/5",
         className
       )}
       role="group"
@@ -29,8 +29,8 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
           className={cn(
             "rounded-full px-3 py-1.5 text-xs font-medium transition-colors",
             locale === code
-              ? "bg-white/15 text-white"
-              : "text-white/55 hover:text-white/80"
+              ? "bg-slate-900 text-white dark:bg-white/15 dark:text-white"
+              : "text-slate-600 hover:text-slate-900 dark:text-white/55 dark:hover:text-white/80"
           )}
           aria-pressed={locale === code}
         >
