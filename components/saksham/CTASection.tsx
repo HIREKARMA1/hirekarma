@@ -40,7 +40,7 @@ const CTASection: React.FC = () => {
           <span className="text-indigo-500">Career.</span>
         </h2>
         <p className="text-gray-600 dark:text-gray-300 mb-8">
-          Begin your AI-powered career readiness journey today — real simulations, personalized insights, and instant results.
+          Begin your AI-powered career readiness journey today - real simulations, personalized insights, and instant results.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

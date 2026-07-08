@@ -28,7 +28,7 @@ const AIAdvantageSection: React.FC = () => {
     {
       icon: <Zap className="w-10 h-10 text-teal-500" />,
       title: "Automated Career Progression",
-      desc: "When you're ready, AI matches and applies to suitable roles instantly—saving you time and effort.",
+      desc: "When you're ready, AI matches and applies to suitable roles instantly-saving you time and effort.",
     },
   ];
 

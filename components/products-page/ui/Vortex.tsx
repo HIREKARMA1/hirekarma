@@ -18,7 +18,7 @@ interface VortexProps {
   baseRadius?: number;
   rangeRadius?: number;
   backgroundColor?: string;
-  /** When true, canvas is transparent — particles overlay an existing background. */
+  /** When true, canvas is transparent - particles overlay an existing background. */
   transparentBackground?: boolean;
 }
 

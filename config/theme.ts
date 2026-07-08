@@ -88,11 +88,20 @@ export const theme = {
     heroGlow:
       "radial-gradient(ellipse at 20% 30%, rgba(27,82,164,0.2) 0%, transparent 50%), radial-gradient(ellipse at 80% 60%, rgba(0,162,229,0.12) 0%, transparent 50%)",
   },
-  /** Aceternity vortex-demo-2 preset — https://ui.aceternity.com/components/vortex */
+  /** Aceternity vortex-demo-2 preset - https://ui.aceternity.com/components/vortex */
   vortex: {
     particleCount: 500,
     rangeY: 800,
     baseHue: 120,
+  },
+  resourceCards: {
+    default: "linear-gradient(135deg, rgba(27, 82, 164, 0.92), rgba(0, 162, 229, 0.75))",
+    alt: "linear-gradient(135deg, rgba(9, 136, 85, 0.92), rgba(0, 162, 229, 0.65))",
+    warm: "linear-gradient(135deg, rgba(245, 128, 32, 0.95), rgba(27, 82, 164, 0.85))",
+    sky: "linear-gradient(135deg, rgba(0, 162, 229, 0.92), rgba(27, 82, 164, 0.78))",
+    deep: "linear-gradient(135deg, rgba(15, 22, 34, 0.95), rgba(9, 136, 85, 0.75))",
+    overlay:
+      "radial-gradient(circle at 80% 20%, rgba(254, 196, 13, 0.35), transparent 45%), radial-gradient(circle at 10% 90%, rgba(245, 128, 32, 0.25), transparent 40%)",
   },
 } as const;
 

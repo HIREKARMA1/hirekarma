@@ -4,7 +4,7 @@ import type { ImpactStat } from "@/types/products-page";
 import { IconBadge, getProductIcon } from "./IconBadge";
 import { NumberTicker } from "./NumberTicker";
 
-/** Brand palette — one solid color per impact stat card. */
+/** Brand palette - one solid color per impact stat card. */
 const STAT_PALETTE = [
   theme.colors.primary,
   theme.colors.secondary,

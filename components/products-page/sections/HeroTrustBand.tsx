@@ -4,7 +4,7 @@ import { useProductsLocale } from "@/contexts/ProductsLocaleContext";
 import { getTrustConfig, getTrustLogos } from "@/services/trust";
 import { LogoMarquee } from "../ui/LogoMarquee";
 
-/** Trust logos row — rendered inside the hero, not as a separate section. */
+/** Trust logos row - rendered inside the hero, not as a separate section. */
 export function HeroTrustBand() {
   const { content } = useProductsLocale();
   const logos = getTrustLogos();

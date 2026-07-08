@@ -1,6 +1,6 @@
 /**
  * Centralized environment variable access.
- * All external URLs and credentials must be read from here — never hardcode in components.
+ * All external URLs and credentials must be read from here - never hardcode in components.
  */
 const requiredPublic = ["NEXT_PUBLIC_DISHA_URL", "NEXT_PUBLIC_SOLVIQ_URL"] as const;
 
@@ -39,7 +39,8 @@ export type HrefKey =
   | "janasamadhan"
   | "amagopalpur"
   | "careers"
-  | "products";
+  | "products"
+  | "resources";
 
 const hrefMap: Record<HrefKey, () => string> = {
   disha: () => env.dishaUrl,
@@ -50,6 +51,7 @@ const hrefMap: Record<HrefKey, () => string> = {
   amagopalpur: () => env.amagopalpurUrl,
   careers: () => getEnv("NEXT_PUBLIC_CAREERS_URL", "/contact"),
   products: () => "/products",
+  resources: () => "/resources",
 };
 
 export function resolveHref(key: HrefKey): string {

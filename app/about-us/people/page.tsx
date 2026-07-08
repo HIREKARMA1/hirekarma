@@ -77,7 +77,7 @@ export default function PeoplePage() {
 
                 <div className="space-y-3">
                   <p className={`text-lg sm:text-xl leading-relaxed max-w-2xl ${mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
-                    The passionate people behind our success — innovators, creators, and leaders dedicated to <strong className={`${mounted && resolvedTheme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>transforming campus recruitment</strong> across India.
+                    The passionate people behind our success - innovators, creators, and leaders dedicated to <strong className={`${mounted && resolvedTheme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>transforming campus recruitment</strong> across India.
                   </p>
                 </div>
               </div>

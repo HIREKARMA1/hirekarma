@@ -10,7 +10,7 @@ interface ProductsSectionHeaderProps {
   className?: string;
 }
 
-/** Shared section header — label + single-line gradient heading only. */
+/** Shared section header - label + single-line gradient heading only. */
 export function ProductsSectionHeader({
   label,
   heading,
