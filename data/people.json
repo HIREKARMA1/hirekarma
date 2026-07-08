@@ -1,10 +1,22 @@
 [
   {
-    "name": "Sohan Kumar Dey",
-    "role": "Cheif Executive Officer",
+    "name": {
+      "en": "Sohan Kumar Dey",
+      "hi": "सोहन कुमार दे",
+      "od": "ସୋହନ କୁମାର ଦେ"
+    },
+    "role": {
+      "en": "Chief Executive Officer",
+      "hi": "मुख्य कार्यकारी अधिकारी",
+      "od": "ମୁଖ୍ୟ କାର୍ଯ୍ୟନିର୍ବାହୀ ଅଧିକାରୀ"
+    },
     "category": "leadership",
     "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/SohanKumarDey.jpg",
-    "description": "Leading Hirekarma with a strong vision to ensure every fresher finds the right career opportunity by empowering them through skills, training, and effective industry connections.",
+    "description": {
+      "en": "Leading Hirekarma with a strong vision to ensure every fresher finds the right career opportunity by empowering them through skills, training, and effective industry connections.",
+      "hi": "HireKarma का नेतृत्व करते हुए यह सुनिश्चित करते हैं कि हर फ्रेशर को सही करियर अवसर मिले — कौशल, प्रशिक्षण और प्रभावी उद्योग कनेक्शन के माध्यम से उन्हें सशक्त बनाकर।",
+      "od": "HireKarma ର ନେତୃତ୍ୱ କରି ନିଶ୍ଚିତ କରନ୍ତି ଯେ ପ୍ରତ୍ୟେକ ଫ୍ରେସର ସଠିକ୍ କ୍ୟାରିୟର ସୁଯୋଗ ପାଆନ୍ତି — ଦକ୍ଷତା, ପ୍ରଶିକ୍ଷଣ ଏବଂ ପ୍ରଭାବଶାଳୀ ଶିଳ୍ପ ସଂଯୋଗ ମାଧ୍ୟମରେ ସେମାନଙ୍କୁ ସଶକ୍ତ କରି।"
+    },
     "socialLinks": {
       "linkedin": "https://www.linkedin.com/in/sohan-kumar-dey-762399260/",
       "instagram": "https://www.instagram.com/the_bhatakta_founder/",
@@ -12,11 +24,23 @@
     }
   },
   {
-    "name": "Rohit Samantaray",
-    "role": "Cheif Marketing Officer & COO",
+    "name": {
+      "en": "Rohit Samantaray",
+      "hi": "रोहित समंतराय",
+      "od": "ରୋହିତ ସାମନ୍ତରାୟ"
+    },
+    "role": {
+      "en": "Chief Marketing Officer & COO",
+      "hi": "मुख्य विपणन अधिकारी एवं COO",
+      "od": "ମୁଖ୍ୟ ମାର୍କେଟିଂ ଅଧିକାରୀ ଏବଂ COO"
+    },
     "category": "leadership",
     "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Rohit.jpg",
-    "description": "Dedicated to bridging the gap between students, employers, and institutions by building a platform that connects talent with opportunities and drives placement excellence.",
+    "description": {
+      "en": "Dedicated to bridging the gap between students, employers, and institutions by building a platform that connects talent with opportunities and drives placement excellence.",
+      "hi": "छात्रों, नियोक्ताओं और संस्थानों के बीच की खाई पाटने के लिए समर्पित — एक ऐसा प्लेटफ़ॉर्म बनाकर जो प्रतिभा को अवसरों से जोड़ता है और प्लेसमेंट उत्कृष्टता बढ़ाता है।",
+      "od": "ଛାତ୍ର, ନିଯୋକ୍ତା ଏବଂ ଅନୁଷ୍ଠାନ ମଧ୍ୟରେ ଥିବା ବ୍ୟବଧାନ ପୂରଣ କରିବାରେ ସମର୍ପିତ — ଏପରି ଏକ ପ୍ଲାଟଫର୍ମ ନିର୍ମାଣ କରି ଯାହା ପ୍ରତିଭାକୁ ସୁଯୋଗ ସହିତ ସଂଯୋଗ କରେ ଏବଂ ପ୍ଲେସମେଣ୍ଟ ଉତ୍କର୍ଷତା ବଢ଼ାଏ।"
+    },
     "socialLinks": {
       "linkedin": "https://www.linkedin.com/in/rohit97/",
       "instagram": "https://www.instagram.com/rohit_samantary/",
@@ -24,11 +48,23 @@
     }
   },
   {
-    "name": "Swapnajit Mohanty",
-    "role": "Senior Product Manager",
+    "name": {
+      "en": "Swapnajit Mohanty",
+      "hi": "स्वप्नजीत मोहंती",
+      "od": "ସ୍ୱପ୍ନଜିତ ମହାନ୍ତି"
+    },
+    "role": {
+      "en": "Senior Product Manager",
+      "hi": "सीनियर प्रोडक्ट मैनेजर",
+      "od": "ସିନିୟର ପ୍ରୋଡକ୍ଟ ମ୍ୟାନେଜର୍"
+    },
     "category": "core",
     "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/SwapnajitMohanty.jpg",
-    "description": "Leading product strategy, solutions, and stakeholder-driven scalable platform design and development",
+    "description": {
+      "en": "Leading product strategy, solutions, and stakeholder-driven scalable platform design and development",
+      "hi": "प्रोडक्ट रणनीति, समाधान और हितधारक-संचालित स्केलेबल प्लेटफ़ॉर्म डिज़ाइन व विकास का नेतृत्व",
+      "od": "ପ୍ରୋଡକ୍ଟ ରଣନୀତି, ସମାଧାନ ଏବଂ ଅଂଶୀଦାର-ଚାଳିତ ସ୍କେଲେବଲ ପ୍ଲାଟଫର୍ମ ଡିଜାଇନ୍ ଓ ବିକାଶର ନେତୃତ୍ୱ"
+    },
     "socialLinks": {
       "linkedin": "https://www.linkedin.com/in/swapnajit-mohanty/",
       "instagram": "https://www.instagram.com/_charliable/",
@@ -36,11 +72,23 @@
     }
   },
   {
-    "name": "SAMBASIVARAO K",
-    "role": "Team Lead- Operations",
+    "name": {
+      "en": "SAMBASIVARAO K",
+      "hi": "सम्बाशिवराव के",
+      "od": "ସାମ୍ବାଶିବରାଓ କେ"
+    },
+    "role": {
+      "en": "Team Lead - Operations",
+      "hi": "टीम लीड - ऑपरेशन्स",
+      "od": "ଟିମ୍ ଲିଡ୍ - ଅପରେସନ୍ସ"
+    },
     "category": "core",
     "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/sambasivarao.jpg",
-    "description": "As branch head, I oversee Bhubaneswar office, guide teams, track.",
+    "description": {
+      "en": "As branch head, I oversee Bhubaneswar office, guide teams, track.",
+      "hi": "शाखा प्रमुख के रूप में भुवनेश्वर कार्यालय का पर्यवेक्षण, टीम मार्गदर्शन और ट्रैकिंग।",
+      "od": "ଶାଖା ମୁଖ୍ୟ ଭାବରେ ଭୁବନେଶ୍ୱର କାର୍ଯ୍ୟାଳୟ ତଦାରଖ, ଟିମ୍ ମାର୍ଗଦର୍ଶନ ଏବଂ ଟ୍ରାକିଂ।"
+    },
     "socialLinks": {
       "linkedin": "https://www.linkedin.com/in/shankar-kesanupalli-31a33693/",
       "instagram": "",
@@ -48,11 +96,23 @@
     }
   },
   {
-    "name": "Ganesh Chandra Dey",
-    "role": "Finance & Account's executive (FO)",
+    "name": {
+      "en": "Ganesh Chandra Dey",
+      "hi": "गणेश चंद्र दे",
+      "od": "ଗଣେଶ ଚନ୍ଦ୍ର ଦେ"
+    },
+    "role": {
+      "en": "Finance & Accounts Executive (FO)",
+      "hi": "वित्त एवं लेखा कार्यकारी (FO)",
+      "od": "ଅର୍ଥ ଏବଂ ହିସାବ କାର୍ଯ୍ୟନିର୍ବାହୀ (FO)"
+    },
     "category": "core",
     "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/GANESH+CHANDRA+DEY.jpg",
-    "description": "Manage finance, procurement, payments, vendors, compliance, reporting, operations efficiently",
+    "description": {
+      "en": "Manage finance, procurement, payments, vendors, compliance, reporting, operations efficiently",
+      "hi": "वित्त, खरीद, भुगतान, विक्रेता, अनुपालन, रिपोर्टिंग और संचालन का कुशल प्रबंधन",
+      "od": "ଅର୍ଥ, କ୍ରୟ, ଦେୟ, ବିକ୍ରେତା, ଅନୁପାଳନ, ରିପୋର୍ଟିଂ ଏବଂ ସଞ୍ଚାଳନର ଦକ୍ଷ ପରିଚାଳନା"
+    },
     "socialLinks": {
       "linkedin": "",
       "instagram": "",
@@ -60,11 +120,23 @@
     }
   },
   {
-    "name": "Lokanath Panda",
-    "role": "Lead Engineer",
+    "name": {
+      "en": "Lokanath Panda",
+      "hi": "लोकनाथ पांडा",
+      "od": "ଲୋକନାଥ ପଣ୍ଡା"
+    },
+    "role": {
+      "en": "Lead Engineer",
+      "hi": "लीड इंजीनियर",
+      "od": "ଲିଡ୍ ଇଞ୍ଜିନିୟର୍"
+    },
     "category": "core",
     "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/LokanathPanda.jpg",
-    "description": "Leading the development team with a focus on building scalable softwares, integrating innovative technologies, and ensuring smooth digital transformation for Hirekarma's platform.",
+    "description": {
+      "en": "Leading the development team with a focus on building scalable softwares, integrating innovative technologies, and ensuring smooth digital transformation for Hirekarma's platform.",
+      "hi": "डेवलपमेंट टीम का नेतृत्व — स्केलेबल सॉफ़्टवेयर निर्माण, नवीन तकनीक एकीकरण, और HireKarma प्लेटफ़ॉर्म के सुचारू डिजिटल ट्रांसफ़ॉर्मेशन पर ध्यान।",
+      "od": "ଡେଭଲପମେଣ୍ଟ ଟିମର ନେତୃତ୍ୱ — ସ୍କେଲେବଲ ସଫ୍ଟୱେର ନିର୍ମାଣ, ନବାଚାର ପ୍ରଯୁକ୍ତି ଏକୀକରଣ, ଏବଂ HireKarma ପ୍ଲାଟଫର୍ମର ସୁଚାରୁ ଡିଜିଟାଲ ରୂପାନ୍ତରଣ ଉପରେ ଧ୍ୟାନ।"
+    },
     "socialLinks": {
       "linkedin": "https://www.linkedin.com/in/lokanath-panda-642193238/",
       "instagram": "https://www.instagram.com/lokanathpanda7/",
@@ -72,11 +144,23 @@
     }
   },
   {
-    "name": "Sneha Parida",
-    "role": "HR Executive",
+    "name": {
+      "en": "Sneha Parida",
+      "hi": "स्नेहा परिडा",
+      "od": "ସ୍ନେହା ପରିଡା"
+    },
+    "role": {
+      "en": "HR Executive",
+      "hi": "एचआर कार्यकारी",
+      "od": "HR କାର୍ଯ୍ୟନିର୍ବାହୀ"
+    },
     "category": "core",
     "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Sneha+Parida.jpg",
-    "description": "Recruit, manage employees, ensure compliance, support organizational growth.",
+    "description": {
+      "en": "Recruit, manage employees, ensure compliance, support organizational growth.",
+      "hi": "भर्ती, कर्मचारी प्रबंधन, अनुपालन सुनिश्चित करना और संगठनात्मक विकास में सहयोग।",
+      "od": "ନିଯୁକ୍ତି, କର୍ମଚାରୀ ପରିଚାଳନା, ଅନୁପାଳନ ନିଶ୍ଚିତ କରିବା ଏବଂ ସଂଗଠନିକ ବିକାଶରେ ସହାୟତା।"
+    },
     "socialLinks": {
       "linkedin": "https://www.linkedin.com/in/sneha-parida-865529268/",
       "instagram": "",
@@ -84,23 +168,47 @@
     }
   },
   {
-    "name": "Sushree Sagarika Padhy ",
-    "role": "Team Lead- Corporate Relations",
+    "name": {
+      "en": "Sushree Sagarika Padhy",
+      "hi": "सुश्री सागरिका पढ़ी",
+      "od": "ସୁଶ୍ରୀ ସାଗରିକା ପାଢ଼ୀ"
+    },
+    "role": {
+      "en": "Team Lead - Corporate Relations",
+      "hi": "टीम लीड - कॉर्पोरेट रिलेशन्स",
+      "od": "ଟିମ୍ ଲିଡ୍ - କର୍ପୋରେଟ ସମ୍ପର୍କ"
+    },
     "category": "core",
     "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Sagarika+Padhy.jpg",
-    "description": "Guiding BDE team and Lead generation team to drive campus hiring and partnerships.",
+    "description": {
+      "en": "Guiding BDE team and Lead generation team to drive campus hiring and partnerships.",
+      "hi": "कैंपस हायरिंग और साझेदारियों को बढ़ाने के लिए BDE और लीड जनरेशन टीम का मार्गदर्शन।",
+      "od": "କ୍ୟାମ୍ପସ୍ ହାୟରିଂ ଏବଂ ସହଭାଗିତା ବଢ଼ାଇବା ପାଇଁ BDE ଏବଂ ଲିଡ୍ ଜେନେରେସନ୍ ଟିମକୁ ମାର୍ଗଦର୍ଶନ।"
+    },
     "socialLinks": {
       "linkedin": "https://www.linkedin.com/in/shankar-kesanupalli-31a33693/",
       "instagram": "",
       "email": "mailto:sushree@hirekarma.in"
     }
   },
-    {
-    "name": "Rama Devi Lanka",
-    "role": "Former Director Emerging Technologies Information Technology, Electronics & Communications  Department, Government of Telangana",
+  {
+    "name": {
+      "en": "Rama Devi Lanka",
+      "hi": "रामा देवी लंका",
+      "od": "ରାମା ଦେବୀ ଲଙ୍କା"
+    },
+    "role": {
+      "en": "Former Director Emerging Technologies Information Technology, Electronics & Communications Department, Government of Telangana",
+      "hi": "पूर्व निदेशक, इमर्जिंग टेक्नोलॉजीज — सूचना प्रौद्योगिकी, इलेक्ट्रॉनिक्स एवं संचार विभाग, तेलंगाना सरकार",
+      "od": "ପୂର୍ବତନ ନିର୍ଦ୍ଦେଶକ, ଇମର୍ଜିଂ ଟେକ୍ନୋଲୋଜି — ସୂଚନା ପ୍ରଯୁକ୍ତି, ଇଲେକ୍ଟ୍ରୋନିକ୍ସ ଏବଂ ଯୋଗାଯୋଗ ବିଭାଗ, ତେଲେଙ୍ଗାନା ସରକାର"
+    },
     "category": "advisory",
     "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/ramadevi.jpg",
-    "description": "Pioneering leader in emerging technologies and e-Governance with over 25 years of experience in tech-led transformation and policy frameworks for AI, blockchain, and digital governance.",
+    "description": {
+      "en": "Pioneering leader in emerging technologies and e-Governance with over 25 years of experience in tech-led transformation and policy frameworks for AI, blockchain, and digital governance.",
+      "hi": "इमर्जिंग टेक्नोलॉजी और ई-गवर्नेंस में अग्रणी — AI, ब्लॉकचेन और डिजिटल गवर्नेंस के लिए टेक्नोलॉजी-नेतृत्व वाले परिवर्तन व नीति ढाँचों में 25+ वर्षों का अनुभव।",
+      "od": "ଇମର୍ଜିଂ ଟେକ୍ନୋଲୋଜି ଏବଂ ଇ-ଗଭର୍ନାନ୍ସରେ ଅଗ୍ରଣୀ — AI, ବ୍ଲକଚେନ୍ ଏବଂ ଡିଜିଟାଲ ଶାସନ ପାଇଁ ପ୍ରଯୁକ୍ତି-ଚାଳିତ ରୂପାନ୍ତରଣ ଓ ନୀତି ଢାଞ୍ଚାରେ ୨୫+ ବର୍ଷର ଅନୁଭବ।"
+    },
     "socialLinks": {
       "linkedin": "https://www.linkedin.com/in/ramadevi-lanka/",
       "instagram": "",

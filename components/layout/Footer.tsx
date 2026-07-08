@@ -6,10 +6,13 @@ import { useTheme } from 'next-themes';
 import { Twitter, Linkedin, Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import footerProducts from '@/data/footer-products.json';
 import footerPrograms from '@/data/footer-programs.json';
+import { useSiteLocale } from '@/contexts/SiteLocaleContext';
 
 const Footer: React.FC = () => {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme } = useTheme();
+  const { content } = useSiteLocale();
+  const { footer } = content;
 
   useEffect(() => {
     setMounted(true);
@@ -46,8 +49,7 @@ const Footer: React.FC = () => {
               />
               <p className={`text-base leading-relaxed max-w-sm ${mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'
                 }`}>
-                Transform your hiring process with HireKarma&apos;s innovative platform.
-                Find the right talent faster and more efficiently.
+                {footer.description}
               </p>
             </div>
 
@@ -58,7 +60,7 @@ const Footer: React.FC = () => {
                   }`} />
                 <span className={`text-sm ${mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'
                   }`}>
-                  info@hirekarma.in
+                  {footer.email}
                 </span>
               </div>
               <div className="flex items-center space-x-3">
@@ -66,7 +68,7 @@ const Footer: React.FC = () => {
                   }`} />
                 <span className={`text-sm ${mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'
                   }`}>
-                  +91 91243 64762
+                  {footer.phone}
                 </span>
               </div>
               <div className="flex items-start space-x-3">
@@ -74,7 +76,7 @@ const Footer: React.FC = () => {
                   }`} />
                 <span className={`text-sm ${mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'
                   }`}>
-                  2nd Floor, SS Niwas, Hirekarma Private Limited, Raghunathpur, Bhubaneswar, Raghunathpurjali, Odisha 751024
+                  {footer.address}
                 </span>
               </div>
             </div>
@@ -83,7 +85,7 @@ const Footer: React.FC = () => {
             <div className="space-y-4">
               <h4 className={`text-sm font-semibold uppercase tracking-wider ${mounted && resolvedTheme === 'dark' ? 'text-gray-200' : 'text-gray-900'
                 }`}>
-                Connect With Us
+                {footer.connectTitle}
               </h4>
               <div className="flex flex-wrap gap-3">
                 <a
@@ -161,45 +163,23 @@ const Footer: React.FC = () => {
           <div className="space-y-5">
             <h3 className={`text-sm font-bold uppercase tracking-wider ${mounted && resolvedTheme === 'dark' ? 'text-gray-200' : 'text-gray-900'
               }`}>
-              About Us
+              {footer.aboutTitle}
             </h3>
             <ul className="space-y-3">
-              <li>
-                <a href="/about-us/our-story" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
-                  ? 'text-gray-300 hover:text-emerald-400'
-                  : 'text-gray-600 hover:text-emerald-600'
-                  }`}>
-                  <span className="relative">
-                    Our Story
-                    <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${mounted && resolvedTheme === 'dark' ? 'bg-emerald-400' : 'bg-emerald-600'
-                      }`}></span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="/about-us/mission-value" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
-                  ? 'text-gray-300 hover:text-emerald-400'
-                  : 'text-gray-600 hover:text-emerald-600'
-                  }`}>
-                  <span className="relative">
-                    Mission & Value
-                    <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${mounted && resolvedTheme === 'dark' ? 'bg-emerald-400' : 'bg-emerald-600'
-                      }`}></span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="/about-us/people" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
-                  ? 'text-gray-300 hover:text-emerald-400'
-                  : 'text-gray-600 hover:text-emerald-600'
-                  }`}>
-                  <span className="relative">
-                    People
-                    <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${mounted && resolvedTheme === 'dark' ? 'bg-emerald-400' : 'bg-emerald-600'
-                      }`}></span>
-                  </span>
-                </a>
-              </li>
+              {footer.aboutLinks.map((link) => (
+                <li key={link.href}>
+                  <a href={link.href} className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
+                    ? 'text-gray-300 hover:text-emerald-400'
+                    : 'text-gray-600 hover:text-emerald-600'
+                    }`}>
+                    <span className="relative">
+                      {link.label}
+                      <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${mounted && resolvedTheme === 'dark' ? 'bg-emerald-400' : 'bg-emerald-600'
+                        }`}></span>
+                    </span>
+                  </a>
+                </li>
+              ))}
               {/* <li>
                 <a href="#" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
                   ? 'text-gray-300 hover:text-emerald-400'
@@ -231,7 +211,7 @@ const Footer: React.FC = () => {
           <div className="space-y-5">
             <h3 className={`text-sm font-bold uppercase tracking-wider ${mounted && resolvedTheme === 'dark' ? 'text-gray-200' : 'text-gray-900'
               }`}>
-              Products
+              {footer.productsTitle}
             </h3>
             <ul className="space-y-3">
               {footerProducts.map((product) => {
@@ -263,7 +243,7 @@ const Footer: React.FC = () => {
           <div className="space-y-5">
             <h3 className={`text-sm font-bold uppercase tracking-wider ${mounted && resolvedTheme === 'dark' ? 'text-gray-200' : 'text-gray-900'
               }`}>
-              Programs
+              {footer.programsTitle}
             </h3>
             <ul className="space-y-3">
               {footerPrograms.map((program) => (
@@ -290,7 +270,7 @@ const Footer: React.FC = () => {
           <div className="space-y-5">
             <h3 className={`text-sm font-bold uppercase tracking-wider ${mounted && resolvedTheme === 'dark' ? 'text-gray-200' : 'text-gray-900'
               }`}>
-              Contact
+              {footer.contactTitle}
             </h3>
             <ul className="space-y-3">
               <li>
@@ -299,7 +279,7 @@ const Footer: React.FC = () => {
                   : 'text-gray-600 hover:text-emerald-600'
                   }`}>
                   <span className="relative">
-                    Get in Touch
+                    {footer.contactLink}
                     <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${mounted && resolvedTheme === 'dark' ? 'bg-emerald-400' : 'bg-emerald-600'
                       }`}></span>
                   </span>
@@ -431,7 +411,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-0">
             <div className={`text-sm text-center lg:text-left order-2 lg:order-1 ${mounted && resolvedTheme === 'dark' ? 'text-gray-400' : 'text-gray-600'
               }`}>
-              Copyright © {new Date().getFullYear()} HireKarma Private Limited. All Rights Reserved.
+              {footer.copyright.replace('{year}', String(new Date().getFullYear()))}
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-3 text-sm order-1 lg:order-2">
@@ -439,25 +419,27 @@ const Footer: React.FC = () => {
                 ? 'text-gray-400 hover:text-emerald-400'
                 : 'text-gray-600 hover:text-emerald-600'
                 }`}>
-                Privacy Policy
+                {footer.privacyPolicy}
               </a>
               <span className={mounted && resolvedTheme === 'dark' ? 'text-gray-600' : 'text-gray-300'}>•</span>
               <a href="/TermsofService" className={`transition-colors duration-200 ${mounted && resolvedTheme === 'dark'
                 ? 'text-gray-400 hover:text-emerald-400'
                 : 'text-gray-600 hover:text-emerald-600'
                 }`}>
-                Terms of Service
+                {footer.termsOfService}
               </a>
             </div>
 
             <div className={`text-sm text-center lg:text-right order-3 ${mounted && resolvedTheme === 'dark' ? 'text-gray-400' : 'text-gray-600'
               }`}>
-              Powered by <a href="https://www.linkedin.com/company/hirekarma-pvt-ltd/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className={`transition-colors duration-200 ${mounted && resolvedTheme === 'dark'
+              {footer.poweredByPrefix && `${footer.poweredByPrefix} `}
+              <a href="https://www.linkedin.com/company/hirekarma-pvt-ltd/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className={`transition-colors duration-200 ${mounted && resolvedTheme === 'dark'
                 ? 'text-gray-400 hover:text-emerald-400'
                 : 'text-gray-600 hover:text-emerald-600'
                 }`}>
-                Hirekarma Pvt Ltd
+                {footer.poweredByCompany}
               </a>
+              {footer.poweredBySuffix && ` ${footer.poweredBySuffix}`}
             </div>
           </div>
         </div>

@@ -4,10 +4,15 @@ import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 
+import { useAboutLocale } from "@/contexts/AboutLocaleContext";
+
 const SolutionSection: React.FC = () => {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme } = useTheme();
   const [imageLoaded, setImageLoaded] = useState(false);
+  const { content } = useAboutLocale();
+  const solution = content.story.solution;
+  const common = content.common;
 
   useEffect(() => {
     setMounted(true);
@@ -16,7 +21,6 @@ const SolutionSection: React.FC = () => {
   return (
     <div className="relative content-container pt-16 pb-32 sm:py-20">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 xl:gap-24 items-center">
-        {/* LEFT CONTENT */}
         <div className="space-y-8 lg:space-y-10 text-center lg:text-left order-1 lg:order-1">
           <div className="space-y-6">
             <h2
@@ -26,7 +30,7 @@ const SolutionSection: React.FC = () => {
                   : "text-gray-900"
               }`}
             >
-              Our Transformative Solution
+              {solution.title}
               <span
                 className={`block mt-2 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium ${
                   mounted && resolvedTheme === "dark"
@@ -34,7 +38,7 @@ const SolutionSection: React.FC = () => {
                     : "text-emerald-600"
                 }`}
               >
-                AI-Powered Innovation
+                {solution.subtitle}
               </span>
             </h2>
           </div>
@@ -47,7 +51,7 @@ const SolutionSection: React.FC = () => {
                   : "text-gray-600"
               }`}
             >
-              The founders set out to{" "}
+              {solution.beforeHighlight1}{" "}
               <strong
                 className={`${
                   mounted && resolvedTheme === "dark"
@@ -55,9 +59,9 @@ const SolutionSection: React.FC = () => {
                     : "text-gray-700"
                 }`}
               >
-                transform campus recruitment
+                {solution.highlight1}
               </strong>{" "}
-              through AI automation,{" "}
+              {solution.betweenHighlights}{" "}
               <strong
                 className={`${
                   mounted && resolvedTheme === "dark"
@@ -65,20 +69,18 @@ const SolutionSection: React.FC = () => {
                     : "text-gray-700"
                 }`}
               >
-                predictive analytics
+                {solution.highlight2}
               </strong>
-              , and community-driven engagement. Our platform streamlines the
-              entire hiring journey.
+              {solution.afterHighlights}
             </p>
           </div>
         </div>
 
-        {/* RIGHT CONTENT - HERO GIF */}
         <div className="relative order-2 lg:order-2 px-0 sm:px-5 md:px-5 mt-6 lg:mt-0">
           <div className="relative w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] overflow-hidden rounded-2xl">
             <Image
               src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/about-us/transforming_solution.gif"
-              alt="AI-powered transformative solution for campus hiring"
+              alt={solution.imageAlt}
               fill
               priority
               quality={85}
@@ -89,7 +91,6 @@ const SolutionSection: React.FC = () => {
               onLoad={() => setImageLoaded(true)}
             />
 
-            {/* Loading skeleton */}
             {!imageLoaded && (
               <div
                 className={`absolute inset-0 rounded-2xl animate-pulse ${
@@ -100,7 +101,6 @@ const SolutionSection: React.FC = () => {
               />
             )}
 
-            {/* FALLBACK */}
             <div
               className={`absolute inset-0 flex items-center justify-center rounded-2xl hidden ${
                 mounted && resolvedTheme === "dark"
@@ -130,7 +130,7 @@ const SolutionSection: React.FC = () => {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={1.5}
-                      d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                      d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 002 2z"
                     />
                   </svg>
                 </div>
@@ -141,7 +141,7 @@ const SolutionSection: React.FC = () => {
                       : "text-gray-600"
                   }`}
                 >
-                  Animation not supported
+                  {common.animationNotSupported}
                 </p>
                 <p
                   className={`text-xs sm:text-sm ${
@@ -150,7 +150,7 @@ const SolutionSection: React.FC = () => {
                       : "text-gray-500"
                   }`}
                 >
-                  Your browser doesn&apos;t support image playback
+                  {common.browserNoImagePlayback}
                 </p>
               </div>
             </div>

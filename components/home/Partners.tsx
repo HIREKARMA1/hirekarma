@@ -4,10 +4,13 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useTheme } from 'next-themes';
 import corporateData from '../../data/corporate.json';
 import companyData from '../../data/company.json';
+import { useHomeLocale } from '@/contexts/HomeLocaleContext';
 
 const Partners: React.FC = () => {
     const [mounted, setMounted] = useState(false);
     const { resolvedTheme } = useTheme();
+    const { content } = useHomeLocale();
+    const { partners } = content;
 
     const universityScrollRef = useRef<HTMLDivElement>(null);
     const corporateScrollRef = useRef<HTMLDivElement>(null);
@@ -80,19 +83,19 @@ const Partners: React.FC = () => {
                     ? 'text-gray-100'
                     : 'text-gray-900'
                     }`}>
-                    Our Partners
+                    {partners.heading}
                     <span className={`block mt-2 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium ${mounted && resolvedTheme === 'dark'
                         ? 'text-orange-400'
                         : 'text-orange-600'
                         }`}>
-                        Trusted Collaboration Network
+                        {partners.subheading}
                     </span>
                 </h2>
                 <p className={`text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl ${mounted && resolvedTheme === 'dark'
                     ? 'text-gray-300'
                     : 'text-gray-600'
                     }`}>
-                    Trusted by leading companies and educational institutions across India who rely on HireKarma for their campus placement needs.
+                    {partners.description}
                 </p>
             </div>
 
@@ -102,7 +105,7 @@ const Partners: React.FC = () => {
                     <h3 className={`text-base sm:text-lg font-semibold transition-colors duration-500 ${
                         mounted && resolvedTheme === 'dark' ? 'text-gray-200' : 'text-gray-700'
                     }`}>
-                        University Partners
+                        {partners.universityPartnersLabel}
                     </h3>
                     <div
                         ref={universityScrollRef}
@@ -161,7 +164,7 @@ const Partners: React.FC = () => {
                     <h3 className={`text-base sm:text-lg font-semibold transition-colors duration-500 ${
                         mounted && resolvedTheme === 'dark' ? 'text-gray-200' : 'text-gray-700'
                     }`}>
-                        Corporate Partners
+                        {partners.corporatePartnersLabel}
                     </h3>
                     <div
                         ref={corporateScrollRef}

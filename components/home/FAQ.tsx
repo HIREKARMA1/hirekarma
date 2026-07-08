@@ -2,34 +2,14 @@
 
 import React, { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
-
-const faqData = [
-    {
-        question: "How does HireKarma help colleges improve placement rates?",
-        answer: "HireKarma connects colleges with top recruiters and equips students with industry-relevant skills, increasing their placement success significantly."
-    },
-    {
-        question: "What types of roles does HireKarma recruit for?",
-        answer: "HireKarma recruits for entry to mid-level positions in tech, marketing, HR, operations, sales, and more across diverse industries."
-    },
-    {
-        question: "Can companies hire from multiple colleges at once?",
-        answer: "Yes. Our Centralized Placement System allows companies to post once and hire from multiple colleges in real-time."
-    },
-    {
-        question: "How are the funds utilized in the platform?",
-        answer: "Funds are primarily utilized for platform development, AI model training, infrastructure maintenance, and continuous feature enhancement. We also invest in training programs, student support services, and partnership development to ensure the platform remains cutting-edge and beneficial for all stakeholders."
-    },
-    {
-        question: "Is the skill development program customized?",
-        answer: "Yes, HireKarma designs skill training programs based on student profiles, industry needs, and future job trends."
-    }
-];
+import { useHomeLocale } from '@/contexts/HomeLocaleContext';
 
 const FAQ: React.FC = () => {
     const [mounted, setMounted] = useState(false);
     const [openFAQ, setOpenFAQ] = useState<number | null>(null);
     const { resolvedTheme } = useTheme();
+    const { content } = useHomeLocale();
+    const { faq } = content;
 
     useEffect(() => {
         setMounted(true);
@@ -47,25 +27,25 @@ const FAQ: React.FC = () => {
                     ? 'text-gray-100'
                     : 'text-gray-900'
                     }`}>
-                    FAQ
+                    {faq.heading}
                     <span className={`block mt-2 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium ${mounted && resolvedTheme === 'dark'
                         ? 'text-indigo-400'
                         : 'text-indigo-600'
                         }`}>
-                        Answers to Common Questions
+                        {faq.subheading}
                     </span>
                 </h2>
                 <p className={`text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl ${mounted && resolvedTheme === 'dark'
                     ? 'text-gray-300'
                     : 'text-gray-600'
                     }`}>
-                    Have questions? We&apos;ve got answers. If you can&apos;t find what you&apos;re looking for, feel free to contact us directly.
+                    {faq.description}
                 </p>
             </div>
 
             {/* FAQ Items */}
             <div className="w-full space-y-3 sm:space-y-4">
-                {faqData.map((faq, index) => (
+                {faq.items.map((faqItem, index) => (
                     <div key={index} className="w-full">
                         <div className={`p-4 sm:p-5 md:p-6 rounded-xl border transition-all duration-500 hover:shadow-lg ${mounted && resolvedTheme === 'dark'
                                 ? 'bg-gradient-to-br from-gray-800 to-gray-900 border-gray-700'
@@ -76,7 +56,7 @@ const FAQ: React.FC = () => {
                                         ? 'text-gray-100'
                                         : 'text-gray-900'
                                     }`}>
-                                    {faq.question}
+                                    {faqItem.question}
                                 </h3>
                                 <button
                                     onClick={() => toggleFAQ(index)}
@@ -118,7 +98,7 @@ const FAQ: React.FC = () => {
                                             ? 'text-gray-300'
                                             : 'text-gray-600'
                                         }`}>
-                                        {faq.answer}
+                                        {faqItem.answer}
                                     </p>
                                 </div>
                             </div>
@@ -131,4 +111,3 @@ const FAQ: React.FC = () => {
 };
 
 export default FAQ;
-

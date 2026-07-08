@@ -1,0 +1,210 @@
+{
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdatedLabel": "Last updated:",
+    "lastUpdated": "October 22, 2025",
+    "sections": [
+      {
+        "id": "introduction",
+        "title": "1. Introduction",
+        "paragraphs": [
+          "Welcome to HireKarma (hirekarma.in). HireKarma Private Limited is committed to protecting your privacy and ensuring that your personal information is handled responsibly. This Privacy Policy outlines how we collect, use, store, and protect your data when you use our website and services."
+        ]
+      },
+      {
+        "id": "information-we-collect",
+        "title": "2. Information We Collect",
+        "subsections": [
+          {
+            "title": "Personal Information:",
+            "text": "Details such as your name, email address, contact number, education, work experience, and other information you share during registration or job applications."
+          },
+          {
+            "title": "Payment Information:",
+            "text": "If you use our paid services, payment details, including card information and billing address, are processed securely through authorized payment gateways."
+          },
+          {
+            "title": "Technical Information:",
+            "text": "Information such as your IP address, browser type, and device data is collected to improve functionality and ensure platform performance."
+          },
+          {
+            "title": "Cookies and Tracking Technologies:",
+            "text": "Cookies and similar tools are used to enhance user experience and analyze website usage. You can manage your preferences in browser settings."
+          }
+        ]
+      },
+      {
+        "id": "how-we-use",
+        "title": "3. How We Use Your Information",
+        "intro": "Your data is used for:",
+        "listItems": [
+          { "text": "Providing and improving services including recruitment, job matching, and career guidance." },
+          { "text": "Processing payments and managing your account." },
+          { "text": "Communicating about updates, promotions, and service notifications." },
+          { "text": "Analyzing website usage and improving user experience." },
+          { "text": "Complying with legal requirements and safeguarding our rights." }
+        ]
+      },
+      {
+        "id": "sharing",
+        "title": "4. Sharing of Your Information",
+        "intro": "HireKarma does not sell or rent personal information. We may share data only as follows:",
+        "listItems": [
+          {
+            "label": "Employers and Recruiters:",
+            "text": "To support hiring and job placement activities."
+          },
+          {
+            "label": "Service Providers:",
+            "text": "For tasks like analytics, payment processing, or marketing under confidentiality agreements."
+          },
+          {
+            "label": "Legal Authorities:",
+            "text": "To comply with lawful requests or regulations."
+          }
+        ]
+      },
+      {
+        "id": "data-security",
+        "title": "5. Data Security",
+        "paragraphs": [
+          "We employ appropriate organizational and technical safeguards to protect your personal data from unauthorized access, loss, or disclosure. However, as with all internet-based operations, absolute security cannot be guaranteed."
+        ]
+      },
+      {
+        "id": "your-rights",
+        "title": "6. Your Rights",
+        "intro": "You may exercise the following rights regarding your data:",
+        "listItems": [
+          { "label": "Access:", "text": "Request a copy of your personal data." },
+          { "label": "Correction:", "text": "Ask for corrections of inaccurate or incomplete information." },
+          { "label": "Deletion:", "text": "Request the deletion of your personal data, subject to legal obligations." },
+          { "label": "Objection:", "text": "Object to certain types of data processing." }
+        ],
+        "outro": "Requests should be sent to",
+        "contactEmail": "info@hirekarma.in"
+      },
+      {
+        "id": "data-retention",
+        "title": "7. Data Retention",
+        "paragraphs": [
+          "HireKarma retains your personal information only as long as necessary for the purposes outlined in this policy or as required by applicable law."
+        ]
+      },
+      {
+        "id": "third-party",
+        "title": "8. Third-Party Websites",
+        "paragraphs": [
+          "Our website may link to third-party sites. HireKarma is not responsible for these external sites' privacy practices and encourages users to review their policies."
+        ]
+      },
+      {
+        "id": "changes",
+        "title": "9. Changes to This Privacy Policy",
+        "paragraphs": [
+          "This policy may be updated periodically. Updates will be posted on our website, and continued use of the platform implies agreement with the revised terms."
+        ]
+      },
+      {
+        "id": "contact",
+        "title": "10. Contact Us",
+        "intro": "For any queries or concerns regarding this Privacy Policy, you may contact:",
+        "contactEmailLabel": "Email:",
+        "contactEmail": "info@hirekarma.in"
+      }
+    ]
+  },
+  "terms": {
+    "title": "Terms and Conditions",
+    "lastUpdatedLabel": "Last updated:",
+    "lastUpdated": "October 22, 2025",
+    "sections": [
+      {
+        "id": "introduction",
+        "title": "1. Introduction",
+        "paragraphs": [
+          "These Terms and Conditions govern the use of HireKarma's website, services, and platforms (collectively referred to as the \"Services\"). By accessing or using our Services, you agree to be bound by these Terms. If you do not agree, you may not use the Services."
+        ]
+      },
+      {
+        "id": "eligibility",
+        "title": "2. Eligibility",
+        "paragraphs": [
+          "To use the HireKarma platform, you must be at least 18 years of age or have parental/guardian consent. By using the Services, you represent that you meet these eligibility conditions."
+        ]
+      },
+      {
+        "id": "account-registration",
+        "title": "3. Account Registration",
+        "paragraphs": [
+          "Users must provide accurate, complete, and updated information during registration. You are responsible for maintaining the confidentiality of your login credentials and for all activities under your account. HireKarma shall not be liable for unauthorized use of your account."
+        ]
+      },
+      {
+        "id": "use-of-services",
+        "title": "4. Use of Services",
+        "intro": "Users agree to use the platform solely for lawful purposes, such as recruitment, job search, or career-related activities. Prohibited uses include:",
+        "listItems": [
+          { "text": "Uploading misleading or fraudulent information." },
+          { "text": "Sharing confidential or proprietary data without authorization." },
+          { "text": "Disrupting or attempting to exploit the platform." }
+        ],
+        "outro": "Violation of these rules may lead to suspension or termination of your account."
+      },
+      {
+        "id": "responsibilities",
+        "title": "5. Employer and Candidate Responsibilities",
+        "listItems": [
+          { "text": "Employers are responsible for the accuracy of job postings and compliance with applicable employment laws." },
+          { "text": "Candidates are responsible for ensuring the truthfulness of their submitted profiles and documents." }
+        ],
+        "outro": "HireKarma acts only as an intermediary between job seekers and employers and does not guarantee employment outcomes."
+      },
+      {
+        "id": "fees",
+        "title": "6. Fees and Payments",
+        "paragraphs": [
+          "Certain features or services may be available on a paid basis. By purchasing such services, you agree to pay all applicable fees per the pricing displayed on the platform. All payments are processed securely through authorized payment gateways."
+        ]
+      },
+      {
+        "id": "ip",
+        "title": "7. Intellectual Property",
+        "paragraphs": [
+          "All content on the HireKarma platform, including trademarks, logos, software, and materials, is the property of HireKarma Private Limited or its licensors. Users may not copy, modify, or distribute any content without prior written consent."
+        ]
+      },
+      {
+        "id": "liability",
+        "title": "8. Limitation of Liability",
+        "paragraphs": [
+          "HireKarma is not responsible for any direct, indirect, incidental, or consequential damages resulting from your use or inability to use the Services. The platform is provided \"as is\" without any warranties, express or implied."
+        ]
+      },
+      {
+        "id": "changes",
+        "title": "9. Changes to the Terms",
+        "paragraphs": [
+          "HireKarma reserves the right to modify these Terms at any time without prior notice. Updated Terms will take effect immediately upon posting. Continued use of the Services constitutes acceptance of the modified Terms."
+        ]
+      },
+      {
+        "id": "governing-law",
+        "title": "10. Governing Law",
+        "paragraphs": [
+          "These Terms shall be governed by and construed in accordance with the laws of India. Any disputes arising shall fall under the exclusive jurisdiction of the courts located in Bangalore, Karnataka."
+        ]
+      },
+      {
+        "id": "contact",
+        "title": "11. Contact Information",
+        "intro": "For questions or concerns regarding these Terms and Conditions, please contact:",
+        "companyName": "HireKarma Private Limited",
+        "contactEmailLabel": "Email:",
+        "contactEmail": "info@hirekarma.in",
+        "addressLabel": "Address:",
+        "address": "HireKarma Private Limited, Bangalore, India"
+      }
+    ]
+  }
+}

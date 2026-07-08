@@ -2,44 +2,15 @@
 
 import React, { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
+import { useHomeLocale } from '@/contexts/HomeLocaleContext';
 
-// Certifications Data
-const certificationsData = [
-    {
-        name: "DPIIT Recognized",
-        logo: "/DPIIT.png",
-        description: "Department for Promotion of Industry and Internal Trade",
-        category: "Government",
-        colors: { dark: 'blue', light: 'blue' }
-    },
-    {
-        name: "ISO Certified",
-        logo: "/iso.png",
-        description: "International Organization for Standardization",
-        category: "Quality",
-        colors: { dark: 'green', light: 'green' }
-    },
-    {
-        name: "MSME Registered",
-        logo: "/MSME.png",
-        description: "Ministry of Micro, Small and Medium Enterprises",
-        category: "Registration",
-        colors: { dark: 'purple', light: 'purple' }
-    },
-    {
-        name: "Startup Odisha",
-        logo: "/StartupOdisha.png",
-        description: "Startup Odisha Initiative",
-        category: "Startup",
-        colors: { dark: 'orange', light: 'orange' }
-    },
-    {
-        name: "NASSCOM",
-        logo: "/nasscome.png",
-        description: "National Association of Software and Service Companies",
-        category: "Technology",
-        colors: { dark: 'red', light: 'red' }
-    }
+// Visual metadata kept local; chrome text comes from locale content
+const certificationMeta = [
+    { logo: "/DPIIT.png", colors: { dark: 'blue', light: 'blue' } },
+    { logo: "/iso.png", colors: { dark: 'green', light: 'green' } },
+    { logo: "/MSME.png", colors: { dark: 'purple', light: 'purple' } },
+    { logo: "/StartupOdisha.png", colors: { dark: 'orange', light: 'orange' } },
+    { logo: "/nasscome.png", colors: { dark: 'red', light: 'red' } },
 ];
 
 const getColorClasses = (color: string, isDark: boolean) => {
@@ -81,10 +52,17 @@ const getColorClasses = (color: string, isDark: boolean) => {
 const CertificationsSection: React.FC = () => {
     const [mounted, setMounted] = useState(false);
     const { resolvedTheme } = useTheme();
+    const { content } = useHomeLocale();
+    const { certificationsSection } = content;
 
     useEffect(() => {
         setMounted(true);
     }, []);
+
+    const certificationsData = certificationsSection.items.map((item, index) => ({
+        ...item,
+        ...(certificationMeta[index] ?? certificationMeta[0]),
+    }));
 
     return (
         <div className="relative content-container py-12 sm:py-16 md:py-20">
@@ -94,19 +72,19 @@ const CertificationsSection: React.FC = () => {
                     ? 'text-gray-100'
                     : 'text-gray-900'
                     }`}>
-                    Recognised & Certified By
+                    {certificationsSection.heading}
                     <span className={`block mt-2 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium ${mounted && resolvedTheme === 'dark'
                         ? 'text-teal-400'
                         : 'text-teal-600'
                         }`}>
-                        Trusted by Industry and Institutions
+                        {certificationsSection.subheading}
                     </span>
                 </h2>
                 <p className={`text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl ${mounted && resolvedTheme === 'dark'
                     ? 'text-gray-300'
                     : 'text-gray-600'
                     }`}>
-                    Our platform meets the highest industry standards and is recognized by leading certification bodies and technology partners worldwide.
+                    {certificationsSection.description}
                 </p>
             </div>
 
