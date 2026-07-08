@@ -16,11 +16,18 @@ body {
 
 /* Products page — prevent horizontal bleed from marquee / hero glows */
 html:has(.products-page),
-html:has(.products-page) body {
+html:has(.products-page) body,
+html:has(.resources-page),
+html:has(.resources-page) body {
   overflow-x: clip;
 }
 
 .products-page {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+.resources-page {
   max-width: 100%;
   overflow-x: clip;
 }

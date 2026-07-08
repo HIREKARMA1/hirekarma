@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "title": "Resources | HireKarma",
+    "description": "Explore insights on campus hiring, AI career readiness, and digital public service from HireKarma."
+  },
+  "hero": {
+    "badge": "Resources Hub",
+    "heading": "Insights on outcomes-driven platforms for Bharat",
+    "lead": "Explore our latest thought leadership on campus hiring, AI career readiness, virtual placement, and digital public service — built to deliver measurable impact at scale."
+  },
+  "browse": {
+    "title": "Browse Resources",
+    "filters": [
+      { "id": "all", "label": "All Resources" },
+      { "id": "blogs", "label": "Blogs" }
+    ],
+    "readMore": "Read More →"
+  },
+  "items": [
+    {
+      "id": "campus-placement",
+      "slug": "campus-placement-systems-problem",
+      "category": "blogs",
+      "tag": "Campus Hiring",
+      "visualVariant": "default",
+      "title": "Stop Adding Drives. Start Rebuilding Readiness: The Campus Placement Gap Is a Systems Problem",
+      "excerpt": "India produces millions of graduates each year, yet employability gaps persist. The issue isn't pipeline volume — it's fragmented placement architecture.",
+      "date": "July 2026",
+      "dateIso": "2026-07-08"
+    },
+    {
+      "id": "public-grievance",
+      "slug": "public-grievance-systems-problem",
+      "category": "blogs",
+      "tag": "Public Service",
+      "visualVariant": "alt",
+      "title": "Stop Adding Desks. Start Rebuilding Trust: Public Grievance Redressal Is a Systems Problem",
+      "excerpt": "Citizens file lakhs of grievances annually, yet trust erodes when complaints vanish into manual workflows. Governance needs architecture, not more counters.",
+      "date": "July 2026",
+      "dateIso": "2026-07-08"
+    },
+    {
+      "id": "hyperlocal-workforce",
+      "slug": "hyperlocal-workforce-systems-problem",
+      "category": "blogs",
+      "tag": "LAKSHYA",
+      "visualVariant": "warm",
+      "title": "Stop Posting Listings. Start Matching Locally: Bharat's Workforce Gap Is a Systems Problem",
+      "excerpt": "National job boards surface volume, not verified local opportunity. Bharat's workforce needs hyperlocal matching, zero fees, and employers you can trust.",
+      "date": "July 2026",
+      "dateIso": "2026-07-08"
+    },
+    {
+      "id": "solviqai-readiness",
+      "slug": "solviqai-career-readiness-systems-problem",
+      "category": "blogs",
+      "tag": "SolviqAI",
+      "visualVariant": "sky",
+      "title": "Stop Guessing Readiness. Start Measuring It: The Career Prep Gap Is a Systems Problem",
+      "excerpt": "Generic workshops can't tell you who's interview-ready for which role. AI career readiness needs measurement, feedback, and role-aware preparation — not more slides.",
+      "date": "July 2026",
+      "dateIso": "2026-07-08"
+    },
+    {
+      "id": "shortlisted-placement",
+      "slug": "shortlisted-virtual-placement-systems-problem",
+      "category": "blogs",
+      "tag": "Shortlisted",
+      "visualVariant": "default",
+      "title": "Stop Closing the Cell in May. Start Placing Every Day: The Unplaced Graduate Gap Is a Systems Problem",
+      "excerpt": "Placement support shouldn't vanish when season ends. India's first AI virtual placement cell keeps curated matching and human coordination alive every day.",
+      "date": "July 2026",
+      "dateIso": "2026-07-08"
+    },
+    {
+      "id": "ama-gopalpur",
+      "slug": "ama-gopalpur-constituency-development-systems-problem",
+      "category": "blogs",
+      "tag": "AMA Gopalpur",
+      "visualVariant": "deep",
+      "title": "Stop Reporting in Silos. Start Governing with Visibility: Constituency Development Is a Systems Problem",
+      "excerpt": "Development data and citizen grievances live in separate worlds. Constituency leaders need one live map of assets, projects, and progress — not another review binder.",
+      "date": "July 2026",
+      "dateIso": "2026-07-08"
+    }
+  ],
+  "cta": {
+    "heading": "Ready to see HireKarma in action?",
+    "description": "Discover purpose-built platforms for campus recruitment, AI career readiness, virtual placement, and digital grievance redressal — trusted across Bharat.",
+    "button": {
+      "label": "Explore Products",
+      "hrefKey": "products"
+    }
+  }
+}

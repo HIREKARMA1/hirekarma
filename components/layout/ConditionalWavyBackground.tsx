@@ -12,8 +12,9 @@ export function ConditionalWavyBackground() {
   const pathname = usePathname()
   const isShortlistedRoute = pathname?.startsWith("/shortlisted")
   const isProductsRoute = pathname?.startsWith("/products")
+  const isResourcesRoute = pathname?.startsWith("/resources")
 
-  if (isShortlistedRoute || isProductsRoute) {
+  if (isShortlistedRoute || isProductsRoute || isResourcesRoute) {
     return null
   }
 
