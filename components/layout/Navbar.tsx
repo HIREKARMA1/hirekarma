@@ -77,59 +77,42 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
     setActiveDropdown(null);
   };
 
-  // Navigation data with dropdowns
-  const navigationItems: NavigationItem[] = [
-    {
-      label: 'About us',
-      href: '/about-us',
-      icon: Users,
-      hasDropdown: true,
-      dropdownItems: [
-        { label: 'Mission & Value', href: '/about-us/mission-value', icon: Heart },
-        { label: 'People', href: '/about-us/people', icon: UsersRound }
-      ]
-    },
-    {
-      label: 'Products',
-      href: '/products',
-      icon: Zap,
-      hasDropdown: true,
-      dropdownItems: [
-        { label: 'Overview', href: '/products', icon: LayoutGrid },
-        { label: 'Disha', href: env.dishaUrl, icon: Compass },
-        { label: 'SolviqAI', href: env.solviqUrl, icon: TrendingUp },
-        { label: 'Lakshya', href: env.lakshyaUrl, icon: Users },
-        { label: 'Shortlisted', href: '/shortlisted', icon: Briefcase },
-      ]
-    },
-    // {
-    //   label: 'Solutions',
-    //   href: '/solutions',
-    //   icon: Target,
-    //   hasDropdown: true,
-    //   dropdownItems: [
-    //     { label: 'For Students', href: '/solutions/students', icon: GraduationCap },
-    //     { label: 'For Corporate', href: '/solutions/corporate', icon: Briefcase },
-    //     { label: 'For University', href: '/solutions/university', icon: School },
-    //     { label: 'For Skill Development Organization', href: '/solutions/skill-development', icon: Award }
-    //   ]
-    // },
-    // {
-    //   label: 'Resources',
-    //   href: '/resources',
-    //   icon: Library,
-    //   hasDropdown: true,
-    //   dropdownItems: [
-    //     { label: 'Knowledge Hub', href: '/resources/knowledge-hub', icon: Brain },
-    //     { label: 'Events', href: '/resources/events', icon: Calendar },
-    //     { label: 'Case Studies', href: '/resources/case-studies', icon: FileText }
+  // Nav order: Home, Products, Resources, About, Contact Us
+  const productsItem: NavigationItem = {
+    label: 'Products',
+    href: '/products',
+    icon: Zap,
+    hasDropdown: true,
+    dropdownItems: [
+      { label: 'Overview', href: '/products', icon: LayoutGrid },
+      { label: 'Disha', href: env.dishaUrl, icon: Compass },
+      { label: 'SolviqAI', href: env.solviqUrl, icon: TrendingUp },
+      { label: 'Lakshya', href: env.lakshyaUrl, icon: Users },
+      { label: 'Shortlisted', href: '/shortlisted', icon: Briefcase },
+    ],
+  };
 
-    //   ]
-    // }
-  ];
-  const simpleLinks: SimpleLink[] = [
-    { label: 'Resources', href: '/resources', icon: Compass },
-    { label: 'Contact', href: '/contact', icon: Handshake }
+  const aboutItem: NavigationItem = {
+    label: 'About',
+    href: '/about-us',
+    icon: Users,
+    hasDropdown: true,
+    dropdownItems: [
+      { label: 'Mission & Value', href: '/about-us/mission-value', icon: Heart },
+      { label: 'People', href: '/about-us/people', icon: UsersRound },
+    ],
+  };
+
+  type NavEntry =
+    | { type: 'link'; item: SimpleLink }
+    | { type: 'dropdown'; item: NavigationItem };
+
+  const navEntries: NavEntry[] = [
+    { type: 'link', item: { label: 'Home', href: '/', icon: LayoutGrid } },
+    { type: 'dropdown', item: productsItem },
+    { type: 'link', item: { label: 'Resources', href: '/resources', icon: Compass } },
+    { type: 'dropdown', item: aboutItem },
+    { type: 'link', item: { label: 'Contact Us', href: '/contact', icon: Handshake } },
   ];
 
   return (
@@ -167,8 +150,24 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
             {/* Desktop Navigation - Right Aligned */}
             <div className="hidden lg:flex items-center">
               <div className="flex items-center space-x-1">
-                {/* Products Dropdown */}
-                {navigationItems.map((item) => {
+                {navEntries.map((entry) => {
+                  if (entry.type === 'link') {
+                    const link = entry.item;
+                    return (
+                      <Link
+                        key={link.label}
+                        href={link.href}
+                        className={`flex items-center space-x-2 font-medium transition-all duration-300 py-2 px-4 rounded-lg ${mounted && resolvedTheme === 'dark'
+                          ? 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-950'
+                          : 'text-gray-700 hover:text-cyan-600 hover:bg-cyan-50'
+                          }`}
+                      >
+                        <span className="whitespace-nowrap text-sm">{link.label}</span>
+                      </Link>
+                    );
+                  }
+
+                  const item = entry.item;
                   return (
                     <div
                       key={item.label}
@@ -192,7 +191,6 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                           }`} />
                       </button>
 
-                      {/* Enhanced Dropdown Menu - Shows on Hover */}
                       {activeDropdown === item.label && (
                         <div
                           className={`absolute top-full left-1/2 transform -translate-x-1/2 mt-0 w-72 rounded-2xl shadow-2xl border backdrop-blur-xl z-50 animate-in slide-in-from-top-2 duration-300 overflow-hidden ${mounted && resolvedTheme === 'dark'
@@ -253,22 +251,6 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                     </div>
                   );
                 })}
-
-                {/* Simple Links - No Dropdown */}
-                {simpleLinks.map((link) => {
-                  return (
-                    <Link
-                      key={link.label}
-                      href={link.href}
-                      className={`flex items-center space-x-2 font-medium transition-all duration-300 py-2 px-4 rounded-lg ${mounted && resolvedTheme === 'dark'
-                        ? 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-950'
-                        : 'text-gray-700 hover:text-cyan-600 hover:bg-cyan-50'
-                        }`}
-                    >
-                      <span className="whitespace-nowrap text-sm">{link.label}</span>
-                    </Link>
-                  );
-                })}
               </div>
             </div>
 
@@ -299,10 +281,25 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
               : 'border-gray-200 bg-white'
               }`}>
               <div className="px-6 py-6 pb-12 space-y-2">
-                {/* Mobile Navigation Items */}
+                {navEntries.map((entry) => {
+                  if (entry.type === 'link') {
+                    const link = entry.item;
+                    return (
+                      <Link
+                        key={link.label}
+                        href={link.href}
+                        className={`flex items-center space-x-3 w-full text-left font-medium py-3 px-4 rounded-xl transition-all duration-200 ${mounted && resolvedTheme === 'dark'
+                          ? 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-950'
+                          : 'text-gray-700 hover:text-cyan-600 hover:bg-cyan-50'
+                          }`}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        <span>{link.label}</span>
+                      </Link>
+                    );
+                  }
 
-                {/* Products Dropdown */}
-                {navigationItems.map((item) => {
+                  const item = entry.item;
                   return (
                     <div key={item.label} className="space-y-1">
                       <button
@@ -344,24 +341,6 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                     </div>
                   );
                 })}
-
-                {/* Simple Links - Mobile */}
-                {simpleLinks.map((link) => {
-                  return (
-                    <Link
-                      key={link.label}
-                      href={link.href}
-                      className={`flex items-center space-x-3 w-full text-left font-medium py-3 px-4 rounded-xl transition-all duration-200 ${mounted && resolvedTheme === 'dark'
-                        ? 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-950'
-                        : 'text-gray-700 hover:text-cyan-600 hover:bg-cyan-50'
-                        }`}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      <span>{link.label}</span>
-                    </Link>
-                  );
-                })}
-
               </div>
             </div>
           </div>
