@@ -106,7 +106,7 @@ export function ArticleContentRenderer({
   blocks,
 }: ArticleContentRendererProps) {
   return (
-    <div className="max-w-3xl">
+    <div className="w-full max-w-none">
       {blocks.map((block, index) => {
         if (block.type === "paragraph") {
           return <ParagraphBlock key={index} {...block} />;
