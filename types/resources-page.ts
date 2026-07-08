@@ -17,6 +17,7 @@ export interface ResourceHubItem {
   category: ResourceCategory;
   tag: string;
   visualVariant: ResourceCardVariant;
+  image: string;
   title: string;
   excerpt: string;
   date: string;

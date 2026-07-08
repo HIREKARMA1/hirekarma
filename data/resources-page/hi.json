@@ -11,8 +11,14 @@
   "browse": {
     "title": "संसाधन ब्राउज़ करें",
     "filters": [
-      { "id": "all", "label": "सभी संसाधन" },
-      { "id": "blogs", "label": "ब्लॉग" }
+      {
+        "id": "all",
+        "label": "सभी संसाधन"
+      },
+      {
+        "id": "blogs",
+        "label": "ब्लॉग"
+      }
     ],
     "readMore": "और पढ़ें →"
   },
@@ -23,6 +29,7 @@
       "category": "blogs",
       "tag": "कैंपस हायरिंग",
       "visualVariant": "default",
+      "image": "https://hirekarma.s3.us-east-1.amazonaws.com/resources/campus-hiring.jpeg",
       "title": "ड्राइव बंद करें, तैयारी पुनर्निर्मित करें: कैंपस प्लेसमेंट अंतर एक सिस्टम समस्या है",
       "excerpt": "भारत हर साल लाखों स्नातक पैदा करता है, फिर भी रोजगार योग्यता का अंतर बना रहता है। मुद्दा पाइपलाइन की मात्रा नहीं - खंडित प्लेसमेंट आर्किटेक्चर है।",
       "date": "जुलाई 2026",
@@ -34,6 +41,7 @@
       "category": "blogs",
       "tag": "जनसेवा",
       "visualVariant": "alt",
+      "image": "https://hirekarma.s3.us-east-1.amazonaws.com/resources/public+service.jpeg",
       "title": "डेस्क बंद करें, विश्वास पुनर्निर्मित करें: जन शिकायत निवारण एक सिस्टम समस्या है",
       "excerpt": "नागरिक सालाना लाखों शिकायतें दर्ज करते हैं, फिर भी मैनुअल वर्कफ़्लो में शिकायतें गायब होने पर विश्वास घटता है। शासन को काउंटर नहीं, आर्किटेक्चर चाहिए।",
       "date": "जुलाई 2026",
@@ -45,6 +53,7 @@
       "category": "blogs",
       "tag": "LAKSHYA",
       "visualVariant": "warm",
+      "image": "https://hirekarma.s3.us-east-1.amazonaws.com/resources/lakshya.jpeg",
       "title": "लिस्टिंग बंद करें, स्थानीय मिलान शुरू करें: भारत का वर्कफ़ोर्स अंतर एक सिस्टम समस्या है",
       "excerpt": "राष्ट्रीय जॉब बोर्ड मात्रा दिखाते हैं, सत्यापित स्थानीय अवसर नहीं। भारत के वर्कफ़ोर्स को हाइपरलोकल मिलान, शून्य शुल्क और भरोसेमंद नियोक्ता चाहिए।",
       "date": "जुलाई 2026",
@@ -56,6 +65,7 @@
       "category": "blogs",
       "tag": "SolviqAI",
       "visualVariant": "sky",
+      "image": "https://hirekarma.s3.us-east-1.amazonaws.com/resources/solviqAi.jpeg",
       "title": "अनुमान बंद करें, मापना शुरू करें: करियर तैयारी अंतर एक सिस्टम समस्या है",
       "excerpt": "सामान्य कार्यशालाएं नहीं बता सकतीं कि कौन किस भूमिका के लिए इंटरव्यू-तैयार है। AI करियर रेडिनेस को मापन, फीडबैक और भूमिका-जागरूक तैयारी चाहिए।",
       "date": "जुलाई 2026",
@@ -67,6 +77,7 @@
       "category": "blogs",
       "tag": "Shortlisted",
       "visualVariant": "default",
+      "image": "https://hirekarma.s3.us-east-1.amazonaws.com/resources/shortlisted.jpeg",
       "title": "मई में सेल बंद करें, हर दिन प्लेसमेंट करें: अनप्लेस्ड ग्रेजुएट अंतर एक सिस्टम समस्या है",
       "excerpt": "सीज़न खत्म होने पर प्लेसमेंट सहायता नहीं गायब होनी चाहिए। भारत का पहला AI वर्चुअल प्लेसमेंट सेल हर दिन मिलान और समन्वय जीवित रखता है।",
       "date": "जुलाई 2026",
@@ -78,6 +89,7 @@
       "category": "blogs",
       "tag": "AMA Gopalpur",
       "visualVariant": "deep",
+      "image": "https://hirekarma.s3.us-east-1.amazonaws.com/resources/ama-gopalpur.jpeg",
       "title": "साइलो में रिपोर्टिंग बंद करें, दृश्यता से शासन करें: निर्वाचन क्षेत्र विकास एक सिस्टम समस्या है",
       "excerpt": "विकास डेटा और नागरिक शिकायतें अलग दुनियाओं में रहती हैं। नेताओं को संपत्ति, परियोजनाओं और प्रगति का एक लाइव मानचित्र चाहिए।",
       "date": "जुलाई 2026",
