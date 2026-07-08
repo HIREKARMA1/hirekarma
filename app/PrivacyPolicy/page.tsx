@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import Navbar from '../../components/layout/Navbar';
 import Footer from '../../components/layout/Footer';
-import WavyBackground from '../../components/layout/WavyBackground';
 
 const PrivacyPolicy = () => {
     const [mounted, setMounted] = useState(false);
@@ -22,9 +21,6 @@ const PrivacyPolicy = () => {
             <main className="flex-grow">
                 <section className={`relative ${mounted && resolvedTheme === 'dark' ? 'bg-gray-900' : 'bg-white'
                     }`}>
-                    {/* Wavy Background */}
-                    <WavyBackground variant="primary" intensity="light" />
-
                     <div className="relative content-container py-20">
                         <div className="max-w-4xl mx-auto">
                             {/* Header */}

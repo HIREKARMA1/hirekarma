@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
-// import WavyBackground from '../../components/layout/WavyBackground';
 import { Mail, Phone, MapPin, Send, User, MessageSquare } from 'lucide-react';
 import contactAnimation from '../../public/contect.json';
 import dynamic from 'next/dynamic';
@@ -59,8 +58,6 @@ const ContactPage: React.FC = () => {
         <div className={`min-h-screen flex flex-col transition-all duration-500`}>
             <main className="flex-grow">
                 <section className={`relative min-h-screen transition-all duration-500`}>
-                    {/* Wavy Background */}
-                    {/* <WavyBackground variant="primary" intensity="medium" density="normal" /> */}
                     {/* Section 1: Hero (Get In Touch) */}
                     <div className="relative content-container pt-20 pb-20">
                         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center min-h-[85vh]">

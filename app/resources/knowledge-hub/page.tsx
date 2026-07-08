@@ -5,7 +5,6 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 import Navbar from "../../../components/layout/Navbar";
 import Footer from "../../../components/layout/Footer";
-import WavyBackground from "../../../components/layout/WavyBackground";
 import KnowledgeHubHeader from "../../../components/resources/KnowledgeHubHeader";
 import { BookOpen, FileText, Lightbulb, ArrowRight, Search } from 'lucide-react';
 
@@ -106,9 +105,6 @@ export default function KnowledgeHubPage() {
           ? 'bg-gray-900'
           : 'bg-white'
           }`}>
-          {/* Wavy Background */}
-          <WavyBackground variant="primary" intensity="strong" />
-
           {/* Header Section */}
           <KnowledgeHubHeader />
 

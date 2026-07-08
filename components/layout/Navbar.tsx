@@ -163,7 +163,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                           : 'text-gray-700 hover:text-cyan-600 hover:bg-cyan-50'
                           }`}
                       >
-                        <span className="whitespace-nowrap text-sm">{link.label}</span>
+                        <span className="whitespace-nowrap text-base">{link.label}</span>
                       </Link>
                     );
                   }
@@ -187,7 +187,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                             : 'text-gray-700 hover:text-cyan-600 hover:bg-cyan-50')
                           }`}
                       >
-                        <span className="whitespace-nowrap text-sm">{item.label}</span>
+                        <span className="whitespace-nowrap text-base">{item.label}</span>
                         <ChevronDown className={`w-3 h-3 flex-shrink-0 transition-transform duration-300 ${activeDropdown === item.label ? 'rotate-180' : 'group-hover:rotate-180'
                           }`} />
                       </button>

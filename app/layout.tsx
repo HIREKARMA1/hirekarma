@@ -3,7 +3,7 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 import { ConditionalThemeProvider } from "@/components/layout/ConditionalThemeProvider";
 import { ConditionalLayout } from "@/components/layout/ConditionalLayout";
-import { ConditionalWavyBackground } from "@/components/layout/ConditionalWavyBackground";
+import { ConditionalGridBackground } from "@/components/layout/ConditionalGridBackground";
 import { Toaster } from "react-hot-toast";
 
 const roboto = Roboto({
@@ -36,9 +36,8 @@ export default function RootLayout({
         className={`${roboto.variable} antialiased`}
       >
       <div className="relative min-h-screen">
-        {/* Wavy Background - Only for HireKarma routes */}
-        <ConditionalWavyBackground />
         <ConditionalThemeProvider>
+          <ConditionalGridBackground />
           <ConditionalLayout>
             {children}
           </ConditionalLayout>
