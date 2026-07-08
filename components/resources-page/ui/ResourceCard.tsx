@@ -14,7 +14,11 @@ export function ResourceCard({ item, readMoreLabel }: ResourceCardProps) {
 
   return (
     <article className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] shadow-[0_4px_24px_rgba(0,0,0,0.2)] ring-1 ring-white/5 transition duration-200 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_16px_40px_rgba(0,0,0,0.35)]">
-      <ResourceCardVisual tag={item.tag} variant={item.visualVariant} />
+      <ResourceCardVisual
+        tag={item.tag}
+        image={item.image}
+        variant={item.visualVariant}
+      />
 
       <div className="flex flex-1 flex-col p-5 sm:p-6">
         <h3 className="mb-2 text-lg leading-snug font-semibold tracking-tight text-white">
