@@ -1,0 +1,228 @@
+{
+  "meta": {
+    "title": "HireKarma - Where Talent Meets Opportunity",
+    "description": "HireKarma is an AI-powered ecosystem for campus placement, career readiness, recruitment, and digital public infrastructure across Bharat."
+  },
+  "hero": {
+    "badge": "AI-Powered Talent Ecosystem",
+    "heading": {
+      "part1": "Where Talent",
+      "gradient": "Meets",
+      "part2": "Opportunity."
+    },
+    "description": "HireKarma connects learners, institutions, employers, and public systems through purpose-built platforms for placement, recruitment, career readiness, and digital infrastructure.",
+    "primaryCta": {
+      "label": "Explore Products",
+      "hrefKey": "products",
+      "variant": "primary"
+    },
+    "secondaryCta": {
+      "label": "Contact Us",
+      "hrefKey": "contact",
+      "variant": "outline"
+    },
+    "trustLabel": "Trusted by colleges, companies and government partners"
+  },
+  "stats": [
+    { "id": "careers", "icon": "users", "value": "22,000+", "label": "Careers Shaped" },
+    { "id": "youth", "icon": "graduation-cap", "value": "5,500+", "label": "Youth Trained" },
+    { "id": "projects", "icon": "briefcase", "value": "100+", "label": "Projects Delivered" },
+    { "id": "colleges", "icon": "building", "value": "60+", "label": "College Partners" },
+    { "id": "offices", "icon": "map-pin", "value": "3", "label": "Offices" },
+    { "id": "simulations", "icon": "shield-check", "value": "10K+", "label": "SOLVIQ Simulations" }
+  ],
+  "divisions": {
+    "label": "Our Divisions",
+    "heading": {
+      "part1": "Six Divisions.",
+      "gradient": "One",
+      "part2": "Mission."
+    },
+    "description": "From skilling and campus enablement to AI readiness, consulting, staffing, and open digital public infrastructure - one ecosystem built for Bharat.",
+    "linkLabel": "Explore all products",
+    "items": [
+      {
+        "id": "skill-development",
+        "number": "01",
+        "title": "Skill Development",
+        "description": "Industry-aligned skilling programs that prepare youth for real roles across Retail, IT, and Core.",
+        "accent": "primary",
+        "hrefKey": "about"
+      },
+      {
+        "id": "disha",
+        "number": "02",
+        "title": "DISHA",
+        "description": "College enablement and placement intelligence that modernizes campus hiring operations at scale.",
+        "accent": "secondary",
+        "hrefKey": "disha"
+      },
+      {
+        "id": "solviq",
+        "number": "03",
+        "title": "SOLVIQ",
+        "description": "AI career readiness platform that measures interview readiness and closes skill gaps with precision.",
+        "accent": "orange",
+        "hrefKey": "solviq"
+      },
+      {
+        "id": "it-consulting",
+        "number": "04",
+        "title": "IT Consulting",
+        "description": "Digital transformation and systems advisory for institutions, enterprises, and public programs.",
+        "accent": "green",
+        "hrefKey": "products"
+      },
+      {
+        "id": "staff-augmentation",
+        "number": "05",
+        "title": "Staff Augmentation",
+        "description": "Verified talent pipelines that help teams scale delivery with job-ready professionals.",
+        "accent": "yellow",
+        "hrefKey": "shortlisted"
+      },
+      {
+        "id": "open-source-dpi",
+        "number": "06",
+        "title": "Open Source & DPI",
+        "description": "Digital public infrastructure and open standards work for governance systems that serve millions.",
+        "accent": "red",
+        "hrefKey": "amagopalpur"
+      }
+    ]
+  },
+  "journey": {
+    "label": "Ecosystem Journey",
+    "heading": "A Journey Across Our Ecosystem",
+    "steps": [
+      { "id": "learn", "label": "Learn" },
+      { "id": "practice", "label": "Practice" },
+      { "id": "assess", "label": "Assess" },
+      { "id": "connect", "label": "Connect" },
+      { "id": "hire", "label": "Hire" },
+      { "id": "grow", "label": "Grow" },
+      { "id": "contribute", "label": "Contribute" }
+    ]
+  },
+  "featured": {
+    "label": "Featured Platforms",
+    "heading": {
+      "part1": "Our Technology.",
+      "gradient": "Real",
+      "part2": "Impact."
+    },
+    "products": [
+      {
+        "id": "disha",
+        "title": "DISHA",
+        "description": "A career intelligence ecosystem that replaces fragmented placement workflows with structured, data-centric operations for colleges across Bharat.",
+        "cta": { "label": "Explore DISHA", "hrefKey": "disha", "variant": "primary" },
+        "tone": "light",
+        "accent": "primary",
+        "metricLabel": "College Dashboard",
+        "metricValue": "Live placement ops"
+      },
+      {
+        "id": "solviq",
+        "title": "SOLVIQ",
+        "description": "Skill-intelligent preparation that personalizes learning journeys and connects candidates to opportunities once they are truly interview-ready.",
+        "cta": { "label": "Explore SOLVIQ", "hrefKey": "solviq", "variant": "primary" },
+        "tone": "dark",
+        "accent": "secondary",
+        "metricLabel": "Candidate Progress",
+        "metricValue": "850/1000"
+      }
+    ]
+  },
+  "testimonials": {
+    "label": "Voices from our ecosystem",
+    "heading": {
+      "part1": "Trusted by partners",
+      "gradient": "across",
+      "part2": "Bharat."
+    },
+    "items": [
+      {
+        "id": "nrusingh",
+        "quote": "HireKarma has been a game-changer for our placement process. The platform is user-friendly, and the support team is incredibly helpful.",
+        "name": "Nrusingh Samanata",
+        "designation": "Associate Director Talent Acquisition, Incture",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/testimonial/Nrusingh+Samanata.jpg",
+        "featured": true
+      },
+      {
+        "id": "rupali",
+        "quote": "HireKarma delivers exceptional coordination and professionalism. Their platform helps us connect with skilled candidates efficiently.",
+        "name": "Rupali Saive",
+        "designation": "General Manager, Vision Mechatronics",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/testimonial/Rupali+Salve.jpg"
+      },
+      {
+        "id": "debajyoti",
+        "quote": "HireKarma has significantly improved our placement operations at GIET. It has become an essential tool for managing campus hiring effectively.",
+        "name": "Mr. Debajyoti Mishra",
+        "designation": "Placement Officer, GIET",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/testimonials/images/debajyoti-mishra.jpg"
+      },
+      {
+        "id": "suvendra",
+        "quote": "HireKarma has been invaluable in bridging academia and industry for our students. A trusted partner for employability-focused institutions.",
+        "name": "Dr. Suvendra Kumar Jayasingh",
+        "designation": "Associate Professor, IMIT",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/testimonials/images/suvendu-jayasingh.jpg"
+      },
+      {
+        "id": "satya",
+        "quote": "SolviqAI's AI-powered assessment module streamlined the entire process and helped us evaluate and shortlist talent efficiently.",
+        "name": "Satya Moharana",
+        "designation": "Advisor, ASDC",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/testimonials/images/satya-moharana.jpeg"
+      }
+    ]
+  },
+  "hiring": {
+    "heading": "We're hiring. Build what matters.",
+    "description": "Join a team building platforms that connect talent, institutions, employers, and digital public systems across Bharat.",
+    "primaryCta": {
+      "label": "View Open Positions",
+      "hrefKey": "careers",
+      "variant": "primary"
+    },
+    "secondaryCta": {
+      "label": "Talk to Us",
+      "hrefKey": "contact",
+      "variant": "outline"
+    }
+  },
+  "dpi": {
+    "label": "Digital Public Infrastructure",
+    "heading": {
+      "part1": "Building Digital Public Infrastructure",
+      "gradient": "for a",
+      "part2": "billion+"
+    },
+    "description": "We contribute to open-source protocols and digital public systems that help governments deliver identity, services, and outcomes at national scale.",
+    "cta": {
+      "label": "Explore Our Work",
+      "hrefKey": "amagopalpur",
+      "variant": "outline"
+    },
+    "partners": [
+      {
+        "id": "mosip",
+        "name": "MOSIP",
+        "logo": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/company_logo/mosipn-logo.png"
+      },
+      {
+        "id": "inj",
+        "name": "iNJi",
+        "logo": ""
+      },
+      {
+        "id": "w3c",
+        "name": "W3C",
+        "logo": ""
+      }
+    ]
+  }
+}

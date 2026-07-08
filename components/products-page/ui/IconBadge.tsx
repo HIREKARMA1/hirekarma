@@ -24,7 +24,7 @@ const iconMap: Record<string, LucideIcon> = {
   "map-pin": MapPin,
 };
 
-export function getProductIcon(name: ProductItem["icon"] | ImpactStat["icon"]) {
+export function getProductIcon(name: string) {
   return iconMap[name] ?? Cpu;
 }
 

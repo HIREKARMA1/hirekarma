@@ -1,22 +1,15 @@
-"use client";
+import type { Metadata } from "next";
 
-import React, { Suspense } from 'react';
-import dynamic from 'next/dynamic';
+import { HomePageContent } from "@/components/home-page/HomePageContent";
+import { getHomePageContentSync } from "@/services/home-page";
 
-// Lazy load HeroSection for better code splitting
-const HeroSection = dynamic(() => import('../components/sections/HeroSection'), {
-  loading: () => <div className="min-h-screen bg-white dark:bg-gray-950" />,
-  ssr: true
-});
+const content = getHomePageContentSync("en");
 
-const LandingPage: React.FC = () => {
-  return (
-    <main className="min-h-screen">
-      <Suspense fallback={<div className="min-h-screen bg-white dark:bg-gray-950" />}>
-        <HeroSection />
-      </Suspense>
-    </main>
-  );
+export const metadata: Metadata = {
+  title: content.meta.title,
+  description: content.meta.description,
 };
 
-export default LandingPage;
+export default function LandingPage() {
+  return <HomePageContent />;
+}

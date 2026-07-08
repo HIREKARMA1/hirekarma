@@ -40,7 +40,11 @@ export type HrefKey =
   | "amagopalpur"
   | "careers"
   | "products"
-  | "resources";
+  | "resources"
+  | "contact"
+  | "about"
+  | "home"
+  | "partners";
 
 const hrefMap: Record<HrefKey, () => string> = {
   disha: () => env.dishaUrl,
@@ -52,6 +56,10 @@ const hrefMap: Record<HrefKey, () => string> = {
   careers: () => getEnv("NEXT_PUBLIC_CAREERS_URL", "/contact"),
   products: () => "/products",
   resources: () => "/resources",
+  contact: () => "/contact",
+  about: () => "/about-us/mission-value",
+  home: () => "/",
+  partners: () => "/partners",
 };
 
 export function resolveHref(key: HrefKey): string {

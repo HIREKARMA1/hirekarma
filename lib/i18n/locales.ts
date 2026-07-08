@@ -12,3 +12,4 @@ export const DEFAULT_LOCALE: Locale = "en";
 
 export const LOCALE_STORAGE_KEY = "hirekarma-products-locale";
 export const RESOURCES_LOCALE_STORAGE_KEY = "hirekarma-resources-locale";
+export const HOME_LOCALE_STORAGE_KEY = "hirekarma-home-locale";

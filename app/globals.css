@@ -18,7 +18,9 @@ body {
 html:has(.products-page),
 html:has(.products-page) body,
 html:has(.resources-page),
-html:has(.resources-page) body {
+html:has(.resources-page) body,
+html:has(.home-page),
+html:has(.home-page) body {
   overflow-x: clip;
 }
 
@@ -28,6 +30,11 @@ html:has(.resources-page) body {
 }
 
 .resources-page {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+.home-page {
   max-width: 100%;
   overflow-x: clip;
 }
