@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import Navbar from '../../../components/layout/Navbar';
 import Footer from '../../../components/layout/Footer';
-import WavyBackground from '../../../components/layout/WavyBackground';
 import HeroSection from '../../../components/solutions/students/HeroSection';
 import ProblemSection from '../../../components/solutions/students/ProblemSection';
 import SolutionSection from '../../../components/solutions/students/SolutionSection';
@@ -25,9 +24,6 @@ const ForStudentsPage: React.FC = () => {
             <main className="flex-grow">
                 <section className={`relative transition-all duration-500 ${mounted && resolvedTheme === 'dark' ? 'bg-gray-900' : 'bg-white'
                     }`}>
-                    {/* Wavy Background */}
-                    <WavyBackground variant="primary" intensity="strong" />
-
                     {/* Section 1: The Impact (Your Dream Career Awaits) */}
                     <HeroSection />
 

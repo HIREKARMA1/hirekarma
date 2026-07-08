@@ -5,7 +5,6 @@ import Image from "next/image";
 import { useTheme } from "next-themes";
 import Navbar from '../../../components/layout/Navbar';
 import Footer from '../../../components/layout/Footer';
-import WavyBackground from '../../../components/layout/WavyBackground';
 import { FileText, TrendingUp, ChevronRight, Search, ArrowRight } from 'lucide-react';
 
 const caseStudies = [
@@ -141,8 +140,6 @@ export default function CaseStudiesPage() {
 
             <main className="flex-grow">
                 <section className={`relative transition-all duration-500 ${mounted && resolvedTheme === 'dark' ? 'bg-gray-900' : 'bg-white'}`}>
-                    <WavyBackground variant="primary" intensity="medium" />
-
                     <div className="relative content-container pt-25 pb-8">
                         <div className="text-left">
                             <div className={`inline-flex items-center space-x-2 px-4 py-2 rounded-full mb-4 ${mounted && resolvedTheme === 'dark' ? 'bg-blue-900/30 border border-blue-700/50' : 'bg-blue-100 border border-blue-200'}`}>
