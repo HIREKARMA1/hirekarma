@@ -1,6 +1,7 @@
-import type { Locale } from "@/types/products-page";
+import type { HeadingParts, Locale } from "@/types/products-page";
 
 export type { Locale };
+export type { HeadingParts };
 
 export type ResourceCardVariant = "default" | "alt" | "warm" | "sky" | "deep";
 
@@ -31,7 +32,7 @@ export interface ResourcesHubContent {
   };
   hero: {
     badge: string;
-    heading: string;
+    heading: HeadingParts;
     lead: string;
   };
   browse: {
