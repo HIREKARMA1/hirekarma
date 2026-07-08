@@ -121,7 +121,7 @@ export default function RefundPolicyPage() {
                             info@hirekarma.in
                         </a>
                         <br />
-                        HireKarma Private Limited — Room No: 109, 1st Floor, Tower A, O-HUB, Bhubaneswar
+                        HireKarma Private Limited - Room No: 109, 1st Floor, Tower A, O-HUB, Bhubaneswar
                     </p>
                 </div>
 

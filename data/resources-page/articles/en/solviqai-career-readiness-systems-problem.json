@@ -15,17 +15,17 @@
     {
       "type": "paragraph",
       "variant": "lead",
-      "text": "Every college runs career prep sessions. Very few can tell you — with data — which students are actually interview-ready for which roles, or where skill gaps persist two weeks before a company arrives on campus."
+      "text": "Every college runs career prep sessions. Very few can tell you - with data - which students are actually interview-ready for which roles, or where skill gaps persist two weeks before a company arrives on campus."
     },
     {
       "type": "paragraph",
       "variant": "emphasis",
-      "text": "We've all seen the pattern: students attend a résumé workshop, pass a generic aptitude test, and still freeze in a technical or HR round. TPOs inherit the outcome without diagnostic visibility into what failed — communication, domain depth, or role fit."
+      "text": "We've all seen the pattern: students attend a résumé workshop, pass a generic aptitude test, and still freeze in a technical or HR round. TPOs inherit the outcome without diagnostic visibility into what failed - communication, domain depth, or role fit."
     },
     {
       "type": "paragraph",
       "variant": "emphasis",
-      "text": "As trainers, TPOs, and recruiters, we feel this gap every time a polished résumé hides weak fundamentals, a mock GD gives false confidence, or batch-level prep ignores that a product role and a core engineering role demand entirely different readiness profiles. Here is the hard truth: This isn't a motivation problem. It's a measurement and personalization problem — and at its root, a structural one."
+      "text": "As trainers, TPOs, and recruiters, we feel this gap every time a polished résumé hides weak fundamentals, a mock GD gives false confidence, or batch-level prep ignores that a product role and a core engineering role demand entirely different readiness profiles. Here is the hard truth: This isn't a motivation problem. It's a measurement and personalization problem - and at its root, a structural one."
     },
     {
       "type": "paragraph",
@@ -49,9 +49,9 @@
       "items": [
         "Subjective prep: \"Looks good\" résumé feedback from peers or overworked TPOs doesn't benchmark against what recruiters actually shortlist.",
         "One curriculum, many roles: A single prep track can't simultaneously prepare students for IT services, product companies, core manufacturing, and analytics roles.",
-        "Assessment theatre: Generic aptitude scores tell you who solved puzzles fastest — not who can articulate a project, handle behavioral questions, or demonstrate domain skills.",
+        "Assessment theatre: Generic aptitude scores tell you who solved puzzles fastest - not who can articulate a project, handle behavioral questions, or demonstrate domain skills.",
         "No continuous loop: Prep happens in bursts before placement season, with no ongoing feedback loop as students improve or as job descriptions change.",
-        "Recruiter mismatch: Companies arrive expecting role-ready candidates; colleges deliver batch-averaged preparation — and both sides blame each other."
+        "Recruiter mismatch: Companies arrive expecting role-ready candidates; colleges deliver batch-averaged preparation - and both sides blame each other."
       ]
     },
     {
@@ -69,11 +69,11 @@
       "ordered": true,
       "listType": "default",
       "items": [
-        "No baseline: Without structured skill assessment, you can't prioritize who needs what help — everyone gets the same generic deck.",
+        "No baseline: Without structured skill assessment, you can't prioritize who needs what help - everyone gets the same generic deck.",
         "Résumé cosmetics: Formatting fixes don't close experience gaps; recruiters see through templates immediately.",
         "Interview practice without feedback: Mock interviews that don't score communication, structure, and technical depth leave students rehearsing blind.",
         "TPO bandwidth: Placement officers cannot manually review thousands of résumés and conduct personalized mock rounds for every aspirant.",
-        "Late discovery: Gaps surface in the actual interview — the most expensive place to learn."
+        "Late discovery: Gaps surface in the actual interview - the most expensive place to learn."
       ]
     },
     {
@@ -94,7 +94,7 @@
     {
       "type": "paragraph",
       "variant": "default",
-      "text": "The solution isn't more slides. It's an architecture where résumé quality, skill levels, and interview performance are assessed continuously — with actionable feedback before recruiters walk through the gate."
+      "text": "The solution isn't more slides. It's an architecture where résumé quality, skill levels, and interview performance are assessed continuously - with actionable feedback before recruiters walk through the gate."
     },
     {
       "type": "heading",
@@ -104,33 +104,33 @@
     {
       "type": "paragraph",
       "variant": "default",
-      "text": "This is exactly why HireKarma built SolviqAI — an AI career readiness platform that turns preparation from guesswork into measurable progress:"
+      "text": "This is exactly why HireKarma built SolviqAI - an AI career readiness platform that turns preparation from guesswork into measurable progress:"
     },
     {
       "type": "list",
       "ordered": false,
       "listType": "product",
       "items": [
-        "AI résumé analysis — Structured feedback aligned to role expectations, not just grammar and layout.",
-        "Skill assessments — Role-aware evaluations that reveal domain and aptitude gaps before shortlists are built.",
-        "Mock interviews — Practice rounds that simulate real hiring conversations with feedback students can act on immediately.",
-        "TPO visibility — Institutions see cohort readiness trends and intervene where it matters, not after offers are lost."
+        "AI résumé analysis - Structured feedback aligned to role expectations, not just grammar and layout.",
+        "Skill assessments - Role-aware evaluations that reveal domain and aptitude gaps before shortlists are built.",
+        "Mock interviews - Practice rounds that simulate real hiring conversations with feedback students can act on immediately.",
+        "TPO visibility - Institutions see cohort readiness trends and intervene where it matters, not after offers are lost."
       ]
     },
     {
       "type": "paragraph",
       "variant": "default",
-      "text": "SolviqAI integrates with HireKarma's placement stack — Disha for drive operations, Lakshya for hiring workflows, and Shortlisted for students who need placement support beyond season — so readiness data flows into outcomes, not slide decks."
+      "text": "SolviqAI integrates with HireKarma's placement stack - Disha for drive operations, Lakshya for hiring workflows, and Shortlisted for students who need placement support beyond season - so readiness data flows into outcomes, not slide decks."
     },
     {
       "type": "paragraph",
       "variant": "italic",
-      "text": "We believe students should enter interviews knowing their strengths are verified and their gaps are already being closed — not discovering both for the first time across the table from a recruiter."
+      "text": "We believe students should enter interviews knowing their strengths are verified and their gaps are already being closed - not discovering both for the first time across the table from a recruiter."
     },
     {
       "type": "paragraph",
       "variant": "emphasis",
-      "text": "The readiness gap isn't going away. It's time we stop guessing and start measuring — with AI built for how hiring actually works."
+      "text": "The readiness gap isn't going away. It's time we stop guessing and start measuring - with AI built for how hiring actually works."
     },
     {
       "type": "heading",
@@ -142,9 +142,9 @@
       "ordered": true,
       "listType": "default",
       "items": [
-        "India Skills Report / Wheebox — graduate employability and role-readiness benchmarks",
-        "NASSCOM FutureSkills — emerging role competencies and assessment frameworks",
-        "National Education Policy (NEP) 2020 — emphasis on vocational readiness and outcome tracking"
+        "India Skills Report / Wheebox - graduate employability and role-readiness benchmarks",
+        "NASSCOM FutureSkills - emerging role competencies and assessment frameworks",
+        "National Education Policy (NEP) 2020 - emphasis on vocational readiness and outcome tracking"
       ]
     },
     {
@@ -171,16 +171,16 @@
   "references": {
     "title": "References",
     "items": [
-      "India Skills Report / Wheebox — graduate employability and role-readiness benchmarks",
-      "NASSCOM FutureSkills — emerging role competencies and assessment frameworks",
-      "National Education Policy (NEP) 2020 — emphasis on vocational readiness and outcome tracking"
+      "India Skills Report / Wheebox - graduate employability and role-readiness benchmarks",
+      "NASSCOM FutureSkills - emerging role competencies and assessment frameworks",
+      "National Education Policy (NEP) 2020 - emphasis on vocational readiness and outcome tracking"
     ]
   },
   "authorBox": {
     "title": "About the authors",
     "name": "HireKarma Editorial Team",
     "role": "Product and Impact, HireKarma Private Limited",
-    "bio": "HireKarma builds outcome-driven platforms for campus recruitment, AI career readiness, and digital public service — trusted by colleges, companies, and government partners across India."
+    "bio": "HireKarma builds outcome-driven platforms for campus recruitment, AI career readiness, and digital public service - trusted by colleges, companies, and government partners across India."
   },
   "sidebar": {
     "shareTitle": "Loved this insight?",

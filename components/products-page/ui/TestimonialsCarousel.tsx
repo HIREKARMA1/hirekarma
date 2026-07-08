@@ -51,7 +51,7 @@ function ChevronIcon({ direction }: { direction: "left" | "right" }) {
 }
 
 /**
- * Aceternity UI — Testimonials With Carousel (HireKarma brand palette)
+ * Aceternity UI - Testimonials With Carousel (HireKarma brand palette)
  * @see https://ui.aceternity.com/blocks/testimonials/testimonials-with-carousel
  */
 export function TestimonialsWithCarousel({

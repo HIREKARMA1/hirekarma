@@ -15,17 +15,17 @@
     {
       "type": "paragraph",
       "variant": "lead",
-      "text": "Every elected representative promises development. Very few constituents can point to a single dashboard that shows — by department, by block, by project — what was planned, what is underway, and what still needs attention in their constituency."
+      "text": "Every elected representative promises development. Very few constituents can point to a single dashboard that shows - by department, by block, by project - what was planned, what is underway, and what still needs attention in their constituency."
     },
     {
       "type": "paragraph",
       "variant": "emphasis",
-      "text": "Development data lives in departmental files, scheme PDFs, and meeting minutes. Citizen complaints live in separate grievance systems. Field assets — roads, schools, health centres, irrigation — rarely appear on one map that a representative, administrator, or citizen can explore together."
+      "text": "Development data lives in departmental files, scheme PDFs, and meeting minutes. Citizen complaints live in separate grievance systems. Field assets - roads, schools, health centres, irrigation - rarely appear on one map that a representative, administrator, or citizen can explore together."
     },
     {
       "type": "paragraph",
       "variant": "emphasis",
-      "text": "As MLAs, field staff, and citizens, we feel this gap every time a project is \"sanctioned\" but invisible on the ground, a grievance about the same road is filed three times because status isn't shared, or a constituency review meeting starts from scratch because last year's data isn't accessible. Here is the hard truth: This isn't a lack-of-schemes problem. It's a visibility and integration problem — and at its root, a structural one."
+      "text": "As MLAs, field staff, and citizens, we feel this gap every time a project is \"sanctioned\" but invisible on the ground, a grievance about the same road is filed three times because status isn't shared, or a constituency review meeting starts from scratch because last year's data isn't accessible. Here is the hard truth: This isn't a lack-of-schemes problem. It's a visibility and integration problem - and at its root, a structural one."
     },
     {
       "type": "paragraph",
@@ -47,11 +47,11 @@
       "ordered": false,
       "listType": "default",
       "items": [
-        "Department silos: Rural development, health, education, and PWD each report upward — nobody sees the composite picture at constituency level.",
+        "Department silos: Rural development, health, education, and PWD each report upward - nobody sees the composite picture at constituency level.",
         "Asset blindness: Citizens know what's broken; maps of what exists and what's funded often don't exist in one place.",
-        "Progress opacity: \"Work in progress\" without milestones erodes trust — especially when grievances about the same asset pile up unanswered.",
+        "Progress opacity: \"Work in progress\" without milestones erodes trust - especially when grievances about the same asset pile up unanswered.",
         "Meeting-driven governance: Reviews depend on manually compiled slides that are outdated the moment they're printed.",
-        "No citizen-facing layer: Transparency means publishing aggregate stats — not letting constituents see projects that affect their village."
+        "No citizen-facing layer: Transparency means publishing aggregate stats - not letting constituents see projects that affect their village."
       ]
     },
     {
@@ -69,8 +69,8 @@
       "ordered": true,
       "listType": "default",
       "items": [
-        "Incompatible formats: Excel from one desk, PDF from another — stitching them together consumes staff time better spent on execution.",
-        "No geospatial context: Lists of projects don't answer \"what's happening near me?\" — geography is how citizens experience development.",
+        "Incompatible formats: Excel from one desk, PDF from another - stitching them together consumes staff time better spent on execution.",
+        "No geospatial context: Lists of projects don't answer \"what's happening near me?\" - geography is how citizens experience development.",
         "Grievance disconnect: Complaint systems and development trackers don't talk; the same unresolved issue appears in both without linkage.",
         "Reactive prioritization: Without live dashboards, leaders learn about delays from protests, not from early signals.",
         "Accountability gaps: When ownership isn't visible on a shared timeline, responsibility diffuses across departments."
@@ -89,7 +89,7 @@
     {
       "type": "paragraph",
       "variant": "pullquote",
-      "text": "It's: \"Why don't representatives and citizens share one live view of what's being built — and what's still stuck?\""
+      "text": "It's: \"Why don't representatives and citizens share one live view of what's being built - and what's still stuck?\""
     },
     {
       "type": "paragraph",
@@ -104,28 +104,28 @@
     {
       "type": "paragraph",
       "variant": "default",
-      "text": "This is exactly why HireKarma built AMA Gopalpur — an interactive constituency development dashboard:"
+      "text": "This is exactly why HireKarma built AMA Gopalpur - an interactive constituency development dashboard:"
     },
     {
       "type": "list",
       "ordered": false,
       "listType": "product",
       "items": [
-        "Department asset mapping — Schools, health infrastructure, roads, and scheme assets visualized geographically — not buried in files.",
-        "Project tracking — Sanctioned works, milestones, and status visible for field coordination and public accountability.",
-        "Shared constituency view — Representatives, administrators, and citizens align on the same picture of progress and gaps.",
-        "Complements Janasamadhan — Development visibility pairs with HireKarma's grievance platform so complaints and projects connect in one governance story."
+        "Department asset mapping - Schools, health infrastructure, roads, and scheme assets visualized geographically - not buried in files.",
+        "Project tracking - Sanctioned works, milestones, and status visible for field coordination and public accountability.",
+        "Shared constituency view - Representatives, administrators, and citizens align on the same picture of progress and gaps.",
+        "Complements Janasamadhan - Development visibility pairs with HireKarma's grievance platform so complaints and projects connect in one governance story."
       ]
     },
     {
       "type": "paragraph",
       "variant": "default",
-      "text": "AMA Gopalpur reflects HireKarma's public-service design principle: measurable outcomes citizens can see — not activity reports they can't."
+      "text": "AMA Gopalpur reflects HireKarma's public-service design principle: measurable outcomes citizens can see - not activity reports they can't."
     },
     {
       "type": "paragraph",
       "variant": "italic",
-      "text": "We believe elected leaders should walk into reviews with live intelligence — and citizens should see development as something trackable, not something promised."
+      "text": "We believe elected leaders should walk into reviews with live intelligence - and citizens should see development as something trackable, not something promised."
     },
     {
       "type": "paragraph",
@@ -142,9 +142,9 @@
       "ordered": true,
       "listType": "default",
       "items": [
-        "Ministry of Panchayati Raj — Spatial Planning Application (SPAP) and local governance digitization initiatives",
-        "Digital India — geospatial and e-governance infrastructure programs",
-        "Odisha State e-Governance Society — district and constituency-level digital dashboard pilots"
+        "Ministry of Panchayati Raj - Spatial Planning Application (SPAP) and local governance digitization initiatives",
+        "Digital India - geospatial and e-governance infrastructure programs",
+        "Odisha State e-Governance Society - district and constituency-level digital dashboard pilots"
       ]
     },
     {
@@ -171,16 +171,16 @@
   "references": {
     "title": "References",
     "items": [
-      "Ministry of Panchayati Raj — Spatial Planning Application (SPAP) and local governance digitization initiatives",
-      "Digital India — geospatial and e-governance infrastructure programs",
-      "Odisha State e-Governance Society — district and constituency-level digital dashboard pilots"
+      "Ministry of Panchayati Raj - Spatial Planning Application (SPAP) and local governance digitization initiatives",
+      "Digital India - geospatial and e-governance infrastructure programs",
+      "Odisha State e-Governance Society - district and constituency-level digital dashboard pilots"
     ]
   },
   "authorBox": {
     "title": "About the authors",
     "name": "HireKarma Editorial Team",
     "role": "Product and Impact, HireKarma Private Limited",
-    "bio": "HireKarma builds outcome-driven platforms for campus recruitment, AI career readiness, and digital public service — trusted by colleges, companies, and government partners across India."
+    "bio": "HireKarma builds outcome-driven platforms for campus recruitment, AI career readiness, and digital public service - trusted by colleges, companies, and government partners across India."
   },
   "sidebar": {
     "shareTitle": "Loved this insight?",

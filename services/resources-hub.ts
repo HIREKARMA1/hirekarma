@@ -10,7 +10,7 @@ const contentMap: Record<Locale, ResourcesHubContent> = {
   od: odContent as ResourcesHubContent,
 };
 
-/** Content loader — swap to a Python API later. */
+/** Content loader - swap to a Python API later. */
 export async function fetchResourcesHubContent(
   locale: Locale
 ): Promise<ResourcesHubContent> {

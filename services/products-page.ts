@@ -11,7 +11,7 @@ const contentMap: Record<Locale, ProductsPageContent> = {
 };
 
 /**
- * Content loader — swap this implementation to fetch from a Python API later.
+ * Content loader - swap this implementation to fetch from a Python API later.
  */
 export async function fetchProductsPageContent(
   locale: Locale

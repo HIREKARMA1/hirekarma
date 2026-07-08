@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Products | HireKarma",
-    "description": "DISHA, SolviqAI, Lakshya, Shortlisted, Janasamadhan, and AMA Gopalpur — HireKarma's product ecosystem for hiring and public service."
+    "description": "DISHA, SolviqAI, Lakshya, Shortlisted, Janasamadhan, and AMA Gopalpur - HireKarma's product ecosystem for hiring and public service."
   },
   "hero": {
     "label": "PRODUCTS OVERVIEW",
@@ -10,7 +10,7 @@
       "gradient": "Stronger outcomes.",
       "part2": "Proven impact."
     },
-    "description": "Six platforms spanning campus hiring, AI career readiness, virtual placement, and digital public service — built to deliver measurable outcomes at scale.",
+    "description": "Six platforms spanning campus hiring, AI career readiness, virtual placement, and digital public service - built to deliver measurable outcomes at scale.",
     "primaryCta": {
       "label": "Explore DISHA",
       "hrefKey": "disha",
@@ -33,7 +33,7 @@
       "gradient": "Outcomes-driven.",
       "part2": ""
     },
-    "description": "Six integrated platforms covering placement operations, AI readiness, virtual placement cells, and citizen services — designed to work together as one ecosystem.",
+    "description": "Six integrated platforms covering placement operations, AI readiness, virtual placement cells, and citizen services - designed to work together as one ecosystem.",
     "items": [
       {
         "id": "disha",
@@ -41,7 +41,7 @@
         "icon": "graduation-cap",
         "title": "Disha",
         "subtitle": "Campus Recruitment Platform",
-        "description": "End-to-end placement management for colleges — from drive scheduling and company coordination to offer tracking and TPO analytics.",
+        "description": "End-to-end placement management for colleges - from drive scheduling and company coordination to offer tracking and TPO analytics.",
         "features": [
           { "text": "End-to-end placement management" },
           { "text": "Drive scheduling & company coordination" },
@@ -79,7 +79,7 @@
         "icon": "users",
         "title": "Lakshya",
         "subtitle": "Campus Hiring Ecosystem",
-        "description": "One platform connecting students, universities, and recruiters — run campus drives, manage applications, and shortlist faster.",
+        "description": "One platform connecting students, universities, and recruiters - run campus drives, manage applications, and shortlist faster.",
         "features": [
           { "text": "Unified dashboard for all stakeholders" },
           { "text": "Campus drive & application management" },
@@ -98,7 +98,7 @@
         "icon": "briefcase",
         "title": "Shortlisted",
         "subtitle": "AI Virtual Placement Cell",
-        "description": "India's first AI virtual placement cell — curated batches, AI-matched jobs, and a human coordinator focused on your placement every day.",
+        "description": "India's first AI virtual placement cell - curated batches, AI-matched jobs, and a human coordinator focused on your placement every day.",
         "features": [
           { "text": "Curated batches of 12 students" },
           { "text": "AI smart job matching" },
@@ -117,7 +117,7 @@
         "icon": "building",
         "title": "Janasamadhan",
         "subtitle": "Public Grievance Platform",
-        "description": "Digital grievance redressal for citizens — track, route, and resolve public complaints with full transparency for government departments.",
+        "description": "Digital grievance redressal for citizens - track, route, and resolve public complaints with full transparency for government departments.",
         "features": [
           { "text": "Citizen grievance submission & tracking" },
           { "text": "Department-wise routing & escalation" },
@@ -158,7 +158,7 @@
       "gradient": "Proven at scale.",
       "part2": ""
     },
-    "description": "From careers transformed to platforms live in production — HireKarma products deliver outcomes you can count on.",
+    "description": "From careers transformed to platforms live in production - HireKarma products deliver outcomes you can count on.",
     "stats": [
       {
         "id": "careers",
@@ -262,7 +262,7 @@
       "gradient": "Every outcome, verified.",
       "part2": ""
     },
-    "description": "Whether you run placements, prepare students, or deliver public services — HireKarma products work together to deliver measurable outcomes.",
+    "description": "Whether you run placements, prepare students, or deliver public services - HireKarma products work together to deliver measurable outcomes.",
     "buttons": [
       {
         "label": "Explore DISHA",

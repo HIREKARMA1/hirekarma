@@ -11,7 +11,7 @@ const batchIncludes = [
   "Offline kickstart (first 4 days) with ATS resume rebuild & interview prep",
   "60-day placement execution with live jobs & campus drives",
   "Premium Solviq AI mock interviews & DISHA job platform access",
-  "Continuous mentoring — only 12 students per batch",
+  "Continuous mentoring - only 12 students per batch",
 ]
 
 export default function PricingSection() {
@@ -47,7 +47,7 @@ export default function PricingSection() {
             className="font-normal text-base max-[375px]:text-sm sm:text-lg md:text-xl lg:text-2xl font-poppins max-w-3xl mx-auto"
             style={{ color: descColor }}
           >
-            One batch. One outcome. Placement execution — not another online course.
+            One batch. One outcome. Placement execution - not another online course.
           </p>
         </div>
 
@@ -74,7 +74,7 @@ export default function PricingSection() {
                 style={{ color: descColor }}
               >
                 SHORTLISTED is HireKarma&apos;s intensive placement program for 2025/2026
-                batch students who are ready to execute — not watch more videos. Each batch
+                batch students who are ready to execute - not watch more videos. Each batch
                 is capped at 12 students so every participant gets personalized mentoring,
                 offline kickstart, and live job execution through Solviq and DISHA for 60
                 days.

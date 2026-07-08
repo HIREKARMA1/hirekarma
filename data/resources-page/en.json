@@ -6,7 +6,7 @@
   "hero": {
     "badge": "Resources Hub",
     "heading": "Insights on outcomes-driven platforms for Bharat",
-    "lead": "Explore our latest thought leadership on campus hiring, AI career readiness, virtual placement, and digital public service — built to deliver measurable impact at scale."
+    "lead": "Explore our latest thought leadership on campus hiring, AI career readiness, virtual placement, and digital public service - built to deliver measurable impact at scale."
   },
   "browse": {
     "title": "Browse Resources",
@@ -24,7 +24,7 @@
       "tag": "Campus Hiring",
       "visualVariant": "default",
       "title": "Stop Adding Drives. Start Rebuilding Readiness: The Campus Placement Gap Is a Systems Problem",
-      "excerpt": "India produces millions of graduates each year, yet employability gaps persist. The issue isn't pipeline volume — it's fragmented placement architecture.",
+      "excerpt": "India produces millions of graduates each year, yet employability gaps persist. The issue isn't pipeline volume - it's fragmented placement architecture.",
       "date": "July 2026",
       "dateIso": "2026-07-08"
     },
@@ -57,7 +57,7 @@
       "tag": "SolviqAI",
       "visualVariant": "sky",
       "title": "Stop Guessing Readiness. Start Measuring It: The Career Prep Gap Is a Systems Problem",
-      "excerpt": "Generic workshops can't tell you who's interview-ready for which role. AI career readiness needs measurement, feedback, and role-aware preparation — not more slides.",
+      "excerpt": "Generic workshops can't tell you who's interview-ready for which role. AI career readiness needs measurement, feedback, and role-aware preparation - not more slides.",
       "date": "July 2026",
       "dateIso": "2026-07-08"
     },
@@ -79,14 +79,14 @@
       "tag": "AMA Gopalpur",
       "visualVariant": "deep",
       "title": "Stop Reporting in Silos. Start Governing with Visibility: Constituency Development Is a Systems Problem",
-      "excerpt": "Development data and citizen grievances live in separate worlds. Constituency leaders need one live map of assets, projects, and progress — not another review binder.",
+      "excerpt": "Development data and citizen grievances live in separate worlds. Constituency leaders need one live map of assets, projects, and progress - not another review binder.",
       "date": "July 2026",
       "dateIso": "2026-07-08"
     }
   ],
   "cta": {
     "heading": "Ready to see HireKarma in action?",
-    "description": "Discover purpose-built platforms for campus recruitment, AI career readiness, virtual placement, and digital grievance redressal — trusted across Bharat.",
+    "description": "Discover purpose-built platforms for campus recruitment, AI career readiness, virtual placement, and digital grievance redressal - trusted across Bharat.",
     "button": {
       "label": "Explore Products",
       "hrefKey": "products"

@@ -56,7 +56,7 @@ export function ProductDetailCard({ product }: ProductDetailCardProps) {
           </div>
         </CardItem>
 
-        {/* Product preview — elevated frame */}
+        {/* Product preview - elevated frame */}
         <CardItem translateZ={75} className="relative w-full px-4 pt-3 sm:px-5 sm:pt-4">
           <div
             className="overflow-hidden rounded-xl border p-1 shadow-[0_16px_48px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.08)]"

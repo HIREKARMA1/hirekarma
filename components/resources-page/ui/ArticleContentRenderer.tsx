@@ -14,7 +14,7 @@ function renderInlineBold(text: string) {
     }
 
     const colonMatch = part.match(/^([^:]+:)(.*)$/);
-    if (colonMatch && part.includes("—")) {
+    if (colonMatch && part.includes(" - ")) {
       return (
         <span key={index}>
           <strong className="font-semibold text-white">{colonMatch[1]}</strong>
@@ -23,7 +23,7 @@ function renderInlineBold(text: string) {
       );
     }
 
-    const dashParts = part.split(/(\s—\s)/);
+    const dashParts = part.split(/(\s-\s)/);
     if (dashParts.length > 1) {
       return (
         <span key={index}>
