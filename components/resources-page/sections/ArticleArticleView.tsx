@@ -22,7 +22,7 @@ export function ArticleArticleView({ article }: ArticleArticleViewProps) {
         <div className="relative z-10 content-container">
           <ArticleBackLink label={article.hero.backLink} />
 
-          <h1 className="mt-6 max-w-4xl text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+          <h1 className="mt-6 w-full max-w-none text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
             {article.hero.title}
           </h1>
 
@@ -45,7 +45,7 @@ export function ArticleArticleView({ article }: ArticleArticleViewProps) {
 
       <section className="relative py-10 sm:py-12 lg:py-16">
         <div className="relative z-10 content-container">
-          <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_280px] lg:gap-12">
+          <div className="grid gap-8 xl:grid-cols-[minmax(0,1fr)_280px] xl:gap-10">
             <div>
               <ArticleContentRenderer blocks={article.blocks} />
               {article.references ? (
