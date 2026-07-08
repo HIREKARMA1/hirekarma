@@ -1,29 +1,69 @@
 {
   "nav": {
-    "home": { "id": "home", "label": "ହୋମ୍", "href": "/" },
+    "home": {
+      "id": "home",
+      "label": "ହୋମ୍",
+      "href": "/"
+    },
     "products": {
       "id": "products",
       "label": "ଉତ୍ପାଦ",
       "href": "/products",
       "items": [
-        { "id": "overview", "label": "ସାରାଂଶ", "href": "/products" },
-        { "id": "disha", "label": "Disha", "href": "https://disha.hirekarma.in/" },
-        { "id": "solviq", "label": "SolviqAI", "href": "https://solviqai.hirekarma.in/" },
-        { "id": "lakshya", "label": "Lakshya", "href": "https://lakshya.hirekarma.in/" },
-        { "id": "shortlisted", "label": "Shortlisted", "href": "/shortlisted" }
+        {
+          "id": "overview",
+          "label": "ସାରାଂଶ",
+          "href": "/products"
+        },
+        {
+          "id": "disha",
+          "label": "ଦିଶା",
+          "href": "https://disha.hirekarma.in/"
+        },
+        {
+          "id": "solviq",
+          "label": "ସୋଲ୍ଭିକ AI",
+          "href": "https://solviqai.hirekarma.in/"
+        },
+        {
+          "id": "lakshya",
+          "label": "ଲକ୍ଷ୍ଯ",
+          "href": "https://lakshya.hirekarma.in/"
+        },
+        {
+          "id": "shortlisted",
+          "label": "ଶର୍ଟଲିଷ୍ଟେଡ୍",
+          "href": "/shortlisted"
+        }
       ]
     },
-    "resources": { "id": "resources", "label": "ସମ୍ବଳ", "href": "/resources" },
+    "resources": {
+      "id": "resources",
+      "label": "ସମ୍ବଳ",
+      "href": "/resources"
+    },
     "about": {
       "id": "about",
       "label": "ଆମ ବିଷୟରେ",
       "href": "/about-us",
       "items": [
-        { "id": "mission", "label": "ମିସନ୍ ଏବଂ ମୂଲ୍ୟ", "href": "/about-us/mission-value" },
-        { "id": "people", "label": "ଟିମ୍", "href": "/about-us/people" }
+        {
+          "id": "mission",
+          "label": "ମିସନ୍ ଏବଂ ମୂଲ୍ୟ",
+          "href": "/about-us/mission-value"
+        },
+        {
+          "id": "people",
+          "label": "ଟିମ୍",
+          "href": "/about-us/people"
+        }
       ]
     },
-    "contact": { "id": "contact", "label": "ଯୋଗାଯୋଗ କରନ୍ତୁ", "href": "/contact" },
+    "contact": {
+      "id": "contact",
+      "label": "ଯୋଗାଯୋଗ କରନ୍ତୁ",
+      "href": "/contact"
+    },
     "language": "ଭାଷା"
   },
   "footer": {
@@ -34,9 +74,18 @@
     "address": "ଦ୍ୱିତୀୟ ତଳ, ଏସଏସ୍ ନିବାସ, Hirekarma Private Limited, ରଘୁନାଥପୁର, ଭୁବନେଶ୍ୱର, ରଘୁନାଥପୁରଜାଲି, ଓଡ଼ିଶା 751024",
     "aboutTitle": "ଆମ ବିଷୟରେ",
     "aboutLinks": [
-      { "label": "ଆମର କାହାଣୀ", "href": "/about-us/our-story" },
-      { "label": "ମିସନ୍ ଏବଂ ମୂଲ୍ୟ", "href": "/about-us/mission-value" },
-      { "label": "ଟିମ୍", "href": "/about-us/people" }
+      {
+        "label": "ଆମର କାହାଣୀ",
+        "href": "/about-us/our-story"
+      },
+      {
+        "label": "ମିସନ୍ ଏବଂ ମୂଲ୍ୟ",
+        "href": "/about-us/mission-value"
+      },
+      {
+        "label": "ଟିମ୍",
+        "href": "/about-us/people"
+      }
     ],
     "productsTitle": "ଉତ୍ପାଦ",
     "programsTitle": "କାର୍ଯ୍ୟକ୍ରମ",
@@ -47,6 +96,16 @@
     "copyright": "© {year} HireKarma. ସମସ୍ତ ଅଧିକାର ସଂରକ୍ଷିତ।",
     "poweredByPrefix": "",
     "poweredBySuffix": "ଦ୍ୱାରା ପ୍ରସ୍ତୁତ",
-    "poweredByCompany": "Hirekarma Pvt Ltd"
+    "poweredByCompany": "Hirekarma Pvt Ltd",
+    "productLinks": [
+      {
+        "label": "ଦିଶା",
+        "href": "https://disha.hirekarma.in/"
+      },
+      {
+        "label": "ସୋଲ୍ଭିକ AI",
+        "href": "https://solviqai.hirekarma.in/"
+      }
+    ]
   }
 }

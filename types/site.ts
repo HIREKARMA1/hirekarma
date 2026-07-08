@@ -42,6 +42,7 @@ export interface SiteFooterContent {
   aboutTitle: string;
   aboutLinks: FooterLink[];
   productsTitle: string;
+  productLinks: FooterLink[];
   programsTitle: string;
   contactTitle: string;
   contactLink: string;

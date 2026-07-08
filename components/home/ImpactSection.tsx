@@ -4,6 +4,7 @@ import React, { useState, useEffect, Suspense } from 'react';
 import { useTheme } from 'next-themes';
 import dynamic from 'next/dynamic';
 import { useHomeLocale } from '@/contexts/HomeLocaleContext';
+import { localizeNumerals } from '@/lib/i18n/localizeNumerals';
 
 // Lazy load recharts to reduce initial bundle
 const ResponsiveContainer = dynamic(() => import('recharts').then(mod => ({ default: mod.ResponsiveContainer })), { ssr: false });
@@ -20,18 +21,22 @@ const ChartComponent: React.FC<{
     mounted: boolean;
     resolvedTheme?: string;
     chartComingSoon: string;
-}> = ({ mounted, resolvedTheme, chartComingSoon }) => {
+    locale: Parameters<typeof localizeNumerals>[1];
+}> = ({ mounted, resolvedTheme, chartComingSoon, locale }) => {
     const isDarkTheme = mounted && resolvedTheme === 'dark';
     const impactData = [
         { year: '2024', value: 8000 },
         { year: '2025', value: 14000 },
-        { year: '2026', value: 2000 },
+        { year: '2026', value: 10000 },
         { year: '2027', value: chartComingSoon },
         { year: '2028', value: chartComingSoon },
         { year: '2029', value: chartComingSoon },
         { year: '2030', value: chartComingSoon },
         { year: '2031', value: chartComingSoon },
-    ];
+    ].map((entry) => ({
+        ...entry,
+        year: localizeNumerals(entry.year, locale),
+    }));
     // Recharts defaults often render axis/grid with low contrast on dark gradients.
     const gridStroke = isDarkTheme ? 'rgba(248, 250, 252, 0.42)' : 'rgba(71, 85, 105, 0.22)';
     const axisStroke = isDarkTheme ? '#cbd5e1' : '#94a3b8';
@@ -53,8 +58,14 @@ const ChartComponent: React.FC<{
                     axisLine={{ stroke: axisStroke }}
                     tick={{ fill: tickColor, fontSize: 13, fontWeight: 600 }}
                     tickLine={{ stroke: axisStroke }}
+                    tickFormatter={(value) => localizeNumerals(String(value), locale)}
                 />
                 <Tooltip
+                    formatter={(value) =>
+                        typeof value === 'number'
+                            ? localizeNumerals(String(value), locale)
+                            : String(value)
+                    }
                     contentStyle={{
                         backgroundColor: isDarkTheme ? 'rgba(15, 23, 42, 0.92)' : 'rgba(255, 255, 255, 0.95)',
                         border: `1px solid ${isDarkTheme ? 'rgba(203, 213, 225, 0.25)' : 'rgba(148, 163, 184, 0.35)'}`,
@@ -123,7 +134,7 @@ const statCardStyles = [
 const ImpactSection: React.FC = () => {
     const [mounted, setMounted] = useState(false);
     const { resolvedTheme } = useTheme();
-    const { content } = useHomeLocale();
+    const { content, locale } = useHomeLocale();
     const { impactSection } = content;
     const isDark = mounted && resolvedTheme === 'dark';
 
@@ -170,14 +181,14 @@ const ImpactSection: React.FC = () => {
                                 ? 'text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500'
                                 : 'text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600'
                                 }`}>
-                                {impactSection.primaryStat.value}
+                                {localizeNumerals(impactSection.primaryStat.value, locale)}
                             </h2>
                             {/* Glow effect */}
                             <div className={`absolute inset-0 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight blur-sm opacity-30 ${isDark
                                 ? 'text-green-400'
                                 : 'text-green-600'
                                 }`}>
-                                {impactSection.primaryStat.value}
+                                {localizeNumerals(impactSection.primaryStat.value, locale)}
                             </div>
                         </div>
                         <p className={`text-lg sm:text-l font-semibold ${isDark
@@ -199,7 +210,7 @@ const ImpactSection: React.FC = () => {
                                 >
                                     <div className="relative z-10 space-y-2">
                                         <div className={`text-2xl sm:text-3xl font-bold ${isDark ? style.value.dark : style.value.light}`}>
-                                            {stat.value}
+                                            {localizeNumerals(stat.value, locale)}
                                         </div>
                                         <div className={`text-xs sm:text-sm font-semibold ${style.labelAlign} ${isDark
                                             ? 'text-gray-300'
@@ -226,6 +237,7 @@ const ImpactSection: React.FC = () => {
                                 mounted={mounted}
                                 resolvedTheme={resolvedTheme}
                                 chartComingSoon={impactSection.chartComingSoon}
+                                locale={locale}
                             />
                         </Suspense>
                     </div>

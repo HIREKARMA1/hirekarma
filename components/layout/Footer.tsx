@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import { Twitter, Linkedin, Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
-import footerProducts from '@/data/footer-products.json';
 import footerPrograms from '@/data/footer-programs.json';
 import { useSiteLocale } from '@/contexts/SiteLocaleContext';
 
@@ -214,10 +213,10 @@ const Footer: React.FC = () => {
               {footer.productsTitle}
             </h3>
             <ul className="space-y-3">
-              {footerProducts.map((product) => {
+              {footer.productLinks.map((product) => {
                 const isExternal = product.href.startsWith('http');
                 return (
-                  <li key={product.name}>
+                  <li key={product.label}>
                     <a
                       href={product.href}
                       target={isExternal ? '_blank' : undefined}
@@ -228,7 +227,7 @@ const Footer: React.FC = () => {
                         }`}
                     >
                       <span className="relative">
-                        {product.name}
+                        {product.label}
                         <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${mounted && resolvedTheme === 'dark' ? 'bg-emerald-400' : 'bg-emerald-600'
                           }`}></span>
                       </span>

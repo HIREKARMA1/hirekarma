@@ -1,4 +1,7 @@
+"use client";
+
 import { theme } from "@/config/theme";
+import { useProductsLocale } from "@/contexts/ProductsLocaleContext";
 
 import type { ImpactStat } from "@/types/products-page";
 import { IconBadge, getProductIcon } from "./IconBadge";
@@ -19,6 +22,7 @@ interface StatCardProps {
 }
 
 export function StatCard({ stat, colorIndex }: StatCardProps) {
+  const { locale } = useProductsLocale();
   const Icon = getProductIcon(stat.icon);
   const color = STAT_PALETTE[colorIndex % STAT_PALETTE.length];
 
@@ -39,6 +43,7 @@ export function StatCard({ stat, colorIndex }: StatCardProps) {
 
       <NumberTicker
         value={stat.value}
+        locale={locale}
         className="text-xl font-bold tabular-nums tracking-tight sm:text-2xl lg:text-3xl"
         style={{ color }}
       />

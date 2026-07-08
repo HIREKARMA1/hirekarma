@@ -15,11 +15,12 @@ import {
   ResourcesExtraLocaleProvider,
   useResourcesExtraLocale,
 } from "@/contexts/ResourcesExtraLocaleContext";
+import { localizeNumerals } from "@/lib/i18n/localizeNumerals";
 
 function CaseStudiesPageInner() {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme } = useTheme();
-  const { content } = useResourcesExtraLocale();
+  const { locale, content } = useResourcesExtraLocale();
   const caseStudiesContent = content.caseStudies;
 
   const [selectedFilter, setSelectedFilter] = useState("all");
@@ -320,7 +321,7 @@ function CaseStudiesPageInner() {
                     <div className="grid grid-cols-3 gap-2 mt-4">
                       <div className="bg-blue-50 p-3 rounded-lg text-center">
                         <div className="text-lg font-bold text-blue-700">
-                          {study.stats.metric1.value}
+                          {localizeNumerals(study.stats.metric1.value, locale)}
                         </div>
                         <div className="text-xs text-gray-600">
                           {study.stats.metric1.label}
@@ -328,7 +329,7 @@ function CaseStudiesPageInner() {
                       </div>
                       <div className="bg-blue-50 p-3 rounded-lg text-center">
                         <div className="text-lg font-bold text-blue-700">
-                          {study.stats.metric2.value}
+                          {localizeNumerals(study.stats.metric2.value, locale)}
                         </div>
                         <div className="text-xs text-gray-600">
                           {study.stats.metric2.label}
@@ -336,7 +337,7 @@ function CaseStudiesPageInner() {
                       </div>
                       <div className="bg-blue-50 p-3 rounded-lg text-center">
                         <div className="text-lg font-bold text-blue-700">
-                          {study.stats.metric3.value}
+                          {localizeNumerals(study.stats.metric3.value, locale)}
                         </div>
                         <div className="text-xs text-gray-600">
                           {study.stats.metric3.label}

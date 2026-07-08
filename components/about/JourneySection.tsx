@@ -6,12 +6,13 @@ import Image from "next/image";
 import { Calendar, MapPin } from "lucide-react";
 
 import { useAboutLocale } from "@/contexts/AboutLocaleContext";
+import { localizeNumerals } from "@/lib/i18n/localizeNumerals";
 
 const JourneySection: React.FC = () => {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme } = useTheme();
   const [imageLoaded, setImageLoaded] = useState(false);
-  const { content } = useAboutLocale();
+  const { locale, content } = useAboutLocale();
   const journey = content.story.journey;
   const common = content.common;
 
@@ -118,7 +119,7 @@ const JourneySection: React.FC = () => {
                       : "text-blue-600"
                   }`}
                 >
-                  {journey.foundedCard.value}
+                  {localizeNumerals(journey.foundedCard.value, locale)}
                 </div>
                 <div
                   className={`text-sm ${
@@ -165,7 +166,7 @@ const JourneySection: React.FC = () => {
                       : "from-purple-600 to-pink-600"
                   }`}
                 >
-                  {journey.focusCard.value}
+                  {localizeNumerals(journey.focusCard.value, locale)}
                 </div>
                 <div
                   className={`text-sm ${

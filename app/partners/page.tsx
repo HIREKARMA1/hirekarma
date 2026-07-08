@@ -7,9 +7,10 @@ import {
   PartnersLocaleProvider,
   usePartnersLocale,
 } from "@/contexts/PartnersLocaleContext";
+import { localizeNumerals } from "@/lib/i18n/localizeNumerals";
 
 function PartnersPageInner() {
-  const { content } = usePartnersLocale();
+  const { locale, content } = usePartnersLocale();
   const { hero, stats, college, corporate, mission, cta } = content;
 
   return (
@@ -44,7 +45,7 @@ function PartnersPageInner() {
                 {stats.map((stat) => (
                   <div key={stat.label} className="text-center p-6">
                     <div className="text-5xl font-bold text-blue-700 mb-3">
-                      {stat.value}
+                      {localizeNumerals(stat.value, locale)}
                     </div>
                     <p className="text-lg text-gray-700 font-medium">
                       {stat.label}
