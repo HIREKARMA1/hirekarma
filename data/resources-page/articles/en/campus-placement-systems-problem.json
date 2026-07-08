@@ -1,0 +1,195 @@
+{
+  "slug": "campus-placement-systems-problem",
+  "meta": {
+    "title": "Stop Adding Drives. Start Rebuilding Readiness: The Campus Placement Gap Is a Systems P...",
+    "description": "The campus placement gap is a systems problem, not a pipeline problem. How HireKarma closes the loop with SolviqAI, Disha, Lakshya, and Shortlisted."
+  },
+  "hero": {
+    "title": "Stop Adding Drives. Start Rebuilding Readiness: The Campus Placement Gap Is a Systems Problem, Not a Pipeline Problem",
+    "date": "July 8, 2026",
+    "categoryLabel": "Campus Hiring · Blogs",
+    "author": "HireKarma Editorial Team",
+    "backLink": "Back to Resources"
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "variant": "lead",
+      "text": "Everyone talks about India's youth dividend. Very few talk about why millions of graduates still leave campus without a job offer — or why placement cells burn out running the same drives year after year with marginally better outcomes."
+    },
+    {
+      "type": "paragraph",
+      "variant": "emphasis",
+      "text": "We've all seen the headlines: India produces over 10 million graduates annually, yet employability surveys consistently report that fewer than half are ready for their first professional role on day one."
+    },
+    {
+      "type": "paragraph",
+      "variant": "emphasis",
+      "text": "As TPOs, recruiters, and students, we feel this gap every time a shortlist falls short, a mock interview exposes a résumé that doesn't match skills, or a placement season ends with strong companies visiting but weak conversion. Here is the hard truth we aren't discussing enough: This isn't a talent shortage problem. It's a structural one."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "If we continue to address campus hiring as a \"more drives, more companies\" game, we've already lost."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Here is why the math simply doesn't add up anymore:"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "The Reality Check"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "listType": "default",
+      "items": [
+        "Volume vs. readiness: India adds millions of graduates each year, but industry reports continue to flag a wide skills-to-role mismatch — especially in communication, problem-solving, and role-specific technical depth.",
+        "Fragmented placement ops: Most colleges still coordinate drives through spreadsheets, WhatsApp groups, and email chains — creating delays, duplicate data, and zero real-time visibility for TPOs and students alike.",
+        "The experience paradox: Recruiters demand \"job-ready\" candidates, yet many campuses offer only one or two generic prep sessions before the season begins.",
+        "Linear human capacity: A single TPO team cannot personally coach thousands of students, track every application, and manage dozens of company relationships simultaneously — yet that is exactly what the system expects.",
+        "Wasteful use of student bandwidth: Students spend weeks chasing form links and drive updates instead of building interview-ready skills — low-leverage activity dressed up as \"placement preparation.\""
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Why \"More Placement Drives\" Isn't the Answer"
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Even if every top recruiter visited every campus, five barriers would remain:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "listType": "default",
+      "items": [
+        "Readiness arrives too late: Career preparation is treated as a pre-season sprint, not a continuous journey. By the time drives begin, gaps in résumés, communication, and domain skills are already baked in.",
+        "Disconnected ecosystems: Students, colleges, and companies operate on different tools with no shared context — applications, shortlists, and feedback live in silos.",
+        "The coordination tax: TPOs spend disproportionate time on logistics (scheduling, reminders, offer tracking) instead of strategy (employability mapping, employer relationship building, outcome analytics).",
+        "One-size-fits-all preparation: Generic aptitude tests and group discussions don't prepare a CS graduate for a product role or a mechanical engineer for a core manufacturing interview — yet most prep remains undifferentiated.",
+        "Placement without persistence: When the season ends, support stops — leaving unplaced students without structured pathways, curated opportunities, or daily placement momentum."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "A Shift in Perspective"
+    },
+    {
+      "type": "paragraph",
+      "variant": "italic",
+      "text": "Maybe the real question isn't \"How do we invite more companies to campus?\""
+    },
+    {
+      "type": "paragraph",
+      "variant": "pullquote",
+      "text": "It's: \"Why are we still expecting manual coordination and last-minute coaching to close an ecosystem-scale problem?\""
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "The solution isn't just more drives or more training sessions. It's about rethinking how the campus hiring system handles readiness, coordination, matching, and follow-through — end to end."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "When résumé feedback is continuous, not cosmetic; when drives run on a single platform instead of fifteen inboxes; when AI-matched opportunities reach students daily instead of once a semester; and when a virtual placement cell keeps momentum alive after the formal season — institutions can deliver far more outcomes than headcount alone would suggest."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "How HireKarma closes the loop"
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "This is exactly why HireKarma built a portfolio of purpose-built platforms — not another generic job board, but an architecture where readiness, recruitment, and outcomes connect natively:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "listType": "product",
+      "items": [
+        "SolviqAI — AI-powered résumé analysis, skill assessments, and mock interviews that prepare students for real hiring rounds before companies arrive.",
+        "Disha — End-to-end placement management for colleges: drive scheduling, company coordination, offer tracking, and TPO analytics in one place.",
+        "Lakshya — A campus hiring ecosystem connecting students, universities, and recruiters to run drives, manage applications, and shortlist faster.",
+        "Shortlisted — India's first AI virtual placement cell: curated batches, AI-matched jobs, and a human coordinator focused on placement every day — not just during season."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "variant": "italic",
+      "text": "We truly believe TPOs and students should spend their bandwidth on high-impact work — building employability, nurturing employer relationships, and converting opportunity into offers — not on manual coordination across disconnected channels."
+    },
+    {
+      "type": "paragraph",
+      "variant": "emphasis",
+      "text": "The gap isn't going away. It's time we stop trying to fill it with more drives and start closing it with better architecture."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "References"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "listType": "default",
+      "items": [
+        "India Skills Report / Wheebox employability surveys (annual graduate readiness benchmarks)",
+        "All India Survey on Higher Education (AISHE) — graduate output statistics",
+        "National Employability Report — role-specific skills gap analysis"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "About the authors"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "HireKarma Editorial Team"
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Product & Impact, HireKarma Private Limited"
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "HireKarma builds outcome-driven platforms for campus recruitment, AI career readiness, and digital public service — trusted by colleges, companies, and government partners across India."
+    }
+  ],
+  "references": {
+    "title": "References",
+    "items": [
+      "India Skills Report / Wheebox employability surveys (annual graduate readiness benchmarks)",
+      "All India Survey on Higher Education (AISHE) — graduate output statistics",
+      "National Employability Report — role-specific skills gap analysis"
+    ]
+  },
+  "authorBox": {
+    "title": "About the authors",
+    "name": "HireKarma Editorial Team",
+    "role": "Product and Impact, HireKarma Private Limited",
+    "bio": "HireKarma builds outcome-driven platforms for campus recruitment, AI career readiness, and digital public service — trusted by colleges, companies, and government partners across India."
+  },
+  "sidebar": {
+    "shareTitle": "Loved this insight?",
+    "shareDescription": "Share it with your network and help strengthen India's placement ecosystem.",
+    "relatedTitle": "Related products",
+    "relatedProducts": "SolviqAI · Disha · Lakshya · Shortlisted",
+    "cta": {
+      "label": "View all products",
+      "hrefKey": "products"
+    }
+  }
+}

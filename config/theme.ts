@@ -94,6 +94,15 @@ export const theme = {
     rangeY: 800,
     baseHue: 120,
   },
+  resourceCards: {
+    default: "linear-gradient(135deg, rgba(27, 82, 164, 0.92), rgba(0, 162, 229, 0.75))",
+    alt: "linear-gradient(135deg, rgba(9, 136, 85, 0.92), rgba(0, 162, 229, 0.65))",
+    warm: "linear-gradient(135deg, rgba(245, 128, 32, 0.95), rgba(27, 82, 164, 0.85))",
+    sky: "linear-gradient(135deg, rgba(0, 162, 229, 0.92), rgba(27, 82, 164, 0.78))",
+    deep: "linear-gradient(135deg, rgba(15, 22, 34, 0.95), rgba(9, 136, 85, 0.75))",
+    overlay:
+      "radial-gradient(circle at 80% 20%, rgba(254, 196, 13, 0.35), transparent 45%), radial-gradient(circle at 10% 90%, rgba(245, 128, 32, 0.25), transparent 40%)",
+  },
 } as const;
 
 export type ProductAccentKey = keyof typeof theme.productAccents;

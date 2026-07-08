@@ -128,6 +128,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
     // }
   ];
   const simpleLinks: SimpleLink[] = [
+    { label: 'Resources', href: '/resources', icon: Compass },
     { label: 'Contact', href: '/contact', icon: Handshake }
   ];
 
