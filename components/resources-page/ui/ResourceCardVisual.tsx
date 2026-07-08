@@ -8,6 +8,7 @@ interface ResourceCardVisualProps {
   tag: string;
   image?: string;
   variant?: ResourceCardVariant;
+  accentColor?: string;
   className?: string;
 }
 
@@ -15,10 +16,15 @@ export function ResourceCardVisual({
   tag,
   image,
   variant = "default",
+  accentColor,
   className,
 }: ResourceCardVisualProps) {
   const gradient =
     theme.resourceCards[variant] ?? theme.resourceCards.default;
+  const accent =
+    accentColor ??
+    theme.resourceCardAccents[variant]?.main ??
+    theme.colors.primary;
 
   return (
     <div
@@ -39,7 +45,12 @@ export function ResourceCardVisual({
             className="object-cover"
           />
           <div
-            className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/55 via-black/10 to-transparent"
+            className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/60 via-black/15 to-transparent"
+            aria-hidden
+          />
+          <div
+            className="pointer-events-none absolute inset-x-0 top-0 h-1"
+            style={{ backgroundColor: accent }}
             aria-hidden
           />
         </>
@@ -50,7 +61,10 @@ export function ResourceCardVisual({
           aria-hidden
         />
       )}
-      <span className="relative z-10 rounded-md bg-white/20 px-2.5 py-1 text-[0.72rem] font-bold tracking-wider text-white uppercase backdrop-blur-sm">
+      <span
+        className="relative z-10 rounded-md px-2.5 py-1 text-[0.72rem] font-bold tracking-wider text-white uppercase backdrop-blur-sm"
+        style={{ backgroundColor: `${accent}cc` }}
+      >
         {tag}
       </span>
     </div>
