@@ -29,7 +29,7 @@ export function ProductsHeroSection() {
       <div className="relative z-10 flex w-full min-w-0 max-w-full flex-col content-container pb-4 pt-20 sm:pb-5 sm:pt-24 lg:pb-5 lg:pt-28">
         <div className="relative flex flex-col gap-5 max-lg:gap-4 lg:grid lg:grid-cols-[1fr_1.15fr] lg:items-center lg:gap-8 xl:gap-12">
           <div className="order-1 flex min-w-0 flex-col text-left max-lg:flex-none lg:justify-center">
-            <div className="space-y-5 rounded-2xl border border-slate-200/80 bg-white/70 px-5 py-6 backdrop-blur-md sm:space-y-6 sm:px-6 dark:border-0 dark:bg-transparent dark:p-0 dark:backdrop-blur-none lg:border-0 lg:bg-transparent lg:p-0 lg:backdrop-blur-none">
+            <div className="space-y-5 max-lg:rounded-2xl max-lg:border max-lg:border-slate-200/80 max-lg:bg-white/70 max-lg:px-5 max-lg:py-6 max-lg:backdrop-blur-md max-lg:dark:border-white/10 max-lg:dark:bg-black/30 sm:max-lg:space-y-6 sm:max-lg:px-6 lg:space-y-5">
               <SectionLabel>{hero.label}</SectionLabel>
 
               <GradientHeading
