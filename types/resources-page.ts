@@ -3,7 +3,13 @@ import type { HeadingParts, Locale } from "@/types/products-page";
 export type { Locale };
 export type { HeadingParts };
 
-export type ResourceCardVariant = "default" | "alt" | "warm" | "sky" | "deep";
+export type ResourceCardVariant =
+  | "default"
+  | "alt"
+  | "warm"
+  | "sky"
+  | "deep"
+  | "gold";
 
 export type ResourceCategory = "blogs";
 

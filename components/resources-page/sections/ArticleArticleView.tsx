@@ -18,7 +18,7 @@ interface ArticleArticleViewProps {
 export function ArticleArticleView({ article }: ArticleArticleViewProps) {
   return (
     <>
-      <section className="relative border-b border-slate-200 pt-24 pb-10 sm:pt-28 lg:pt-32 dark:border-white/10">
+      <section className="relative pt-24 pb-10 sm:pt-28 lg:pt-32">
         <div className="relative z-10 content-container">
           <ArticleBackLink label={article.hero.backLink} />
 
