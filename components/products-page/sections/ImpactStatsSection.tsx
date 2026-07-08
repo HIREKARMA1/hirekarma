@@ -10,7 +10,7 @@ export function ImpactStatsSection() {
   const { impact } = content;
 
   return (
-    <section className="relative border-t border-white/10 py-14 sm:py-16 lg:py-20">
+    <section className="relative border-t border-slate-200 py-14 sm:py-16 lg:py-20 dark:border-white/10">
       <div className="relative z-10 content-container">
         <ProductsSectionHeader
           label={impact.label}

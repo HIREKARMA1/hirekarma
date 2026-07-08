@@ -18,7 +18,7 @@ export function ResourcesLanguageSwitcher({
   return (
     <div
       className={cn(
-        "inline-flex items-center gap-1 rounded-full border border-white/15 bg-white/5 p-1 backdrop-blur-sm",
+        "inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white/80 p-1 backdrop-blur-sm dark:border-white/15 dark:bg-white/5",
         className
       )}
       role="group"
@@ -32,8 +32,8 @@ export function ResourcesLanguageSwitcher({
           className={cn(
             "rounded-full px-3 py-1.5 text-xs font-semibold transition-colors",
             locale === code
-              ? "bg-white/15 text-white"
-              : "text-white/60 hover:text-white"
+              ? "bg-slate-900 text-white dark:bg-white/15 dark:text-white"
+              : "text-slate-600 hover:text-slate-900 dark:text-white/60 dark:hover:text-white"
           )}
         >
           {LOCALE_LABELS[code]}

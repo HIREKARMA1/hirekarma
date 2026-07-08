@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 
 import { theme } from "@/config/theme";
 import { cn } from "@/lib/utils/cn";
@@ -21,12 +22,22 @@ export function LogoMarquee({
   speedSeconds = 40,
   direction = "left",
   variant = "mono",
-  edgeColor = theme.colors.heroBg,
+  edgeColor,
   className,
 }: LogoMarqueeProps) {
+  const { resolvedTheme } = useTheme();
   const [isPaused, setIsPaused] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   if (!logos.length) return null;
+
+  const isDark = !mounted || resolvedTheme === "dark";
+  const resolvedEdgeColor =
+    edgeColor ?? (isDark ? theme.colors.heroBg : theme.colors.heroBgLight);
 
   const animationClass =
     direction === "left"
@@ -43,12 +54,16 @@ export function LogoMarquee({
     >
       <div
         className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 sm:w-20"
-        style={{ background: `linear-gradient(to right, ${edgeColor}, transparent)` }}
+        style={{
+          background: `linear-gradient(to right, ${resolvedEdgeColor}, transparent)`,
+        }}
         aria-hidden
       />
       <div
         className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 sm:w-20"
-        style={{ background: `linear-gradient(to left, ${edgeColor}, transparent)` }}
+        style={{
+          background: `linear-gradient(to left, ${resolvedEdgeColor}, transparent)`,
+        }}
         aria-hidden
       />
 
@@ -60,7 +75,11 @@ export function LogoMarquee({
         }}
       >
         {[0, 1].map((copy) => (
-          <div key={copy} className={cn("flex items-center", gap)} aria-hidden={copy === 1}>
+          <div
+            key={copy}
+            className={cn("flex items-center", gap)}
+            aria-hidden={copy === 1}
+          >
             {logos.map((logo, index) => (
               <TrustLogoChip
                 key={`${copy}-${logo.id}`}

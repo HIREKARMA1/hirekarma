@@ -31,8 +31,10 @@ export function ProductButton({
 
   const variants: Record<CtaLink["variant"], string> = {
     primary: "hover:shadow-lg",
-    outline: "border bg-transparent text-white hover:bg-white/5",
-    ghost: "border border-white/30 bg-transparent text-white hover:border-white/50",
+    outline:
+      "border border-slate-300 bg-transparent text-slate-800 hover:bg-slate-100 dark:border-white/35 dark:text-white dark:hover:bg-white/5",
+    ghost:
+      "border border-slate-300 bg-transparent text-slate-800 hover:border-slate-400 dark:border-white/30 dark:text-white dark:hover:border-white/50",
   };
 
   const style =
@@ -42,9 +44,7 @@ export function ProductButton({
           color: accentTextColor ?? "#ffffff",
           borderColor: "transparent",
         }
-      : cta.variant === "outline"
-        ? { borderColor: "rgba(255,255,255,0.35)" }
-        : undefined;
+      : undefined;
 
   const linkClass = cn(
     base,

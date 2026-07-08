@@ -11,9 +11,9 @@ export function HeroTrustBand() {
   const { settings } = getTrustConfig();
 
   return (
-    <div className="border-t border-white/10 pt-5 sm:pt-6 lg:pt-5">
+    <div className="border-t border-slate-200 pt-5 sm:pt-6 lg:pt-5 dark:border-white/10">
       <div className="flex min-w-0 flex-col gap-4 sm:gap-5 lg:flex-row lg:items-center lg:gap-8">
-        <p className="w-full shrink-0 text-left text-sm font-medium leading-relaxed text-white/90 sm:text-base lg:max-w-[220px]">
+        <p className="w-full shrink-0 text-left text-sm font-medium leading-relaxed text-gray-700 sm:text-base lg:max-w-[220px] dark:text-white/90">
           {content.partners.text}
         </p>
 
