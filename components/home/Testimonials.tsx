@@ -2,11 +2,14 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { useTheme } from 'next-themes';
-import testimonialsData from '../../data/testimonial.json';
+import { useHomeLocale } from '@/contexts/HomeLocaleContext';
 
 const Testimonials: React.FC = () => {
     const [mounted, setMounted] = useState(false);
     const { resolvedTheme } = useTheme();
+    const { content } = useHomeLocale();
+    const { testimonials } = content;
+    const testimonialItems = testimonials.items;
     const scrollContainerRef = useRef<HTMLDivElement>(null);
     const [isDragging, setIsDragging] = useState(false);
     const [startX, setStartX] = useState(0);
@@ -52,19 +55,19 @@ const Testimonials: React.FC = () => {
                     ? 'text-gray-100'
                     : 'text-gray-900'
                     }`}>
-                    Testimonials
+                    {testimonials.heading}
                     <span className={`block mt-2 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium ${mounted && resolvedTheme === 'dark'
                         ? 'text-amber-400'
                         : 'text-amber-600'
                         }`}>
-                        Voices of Transformation
+                        {testimonials.subheading}
                     </span>
                 </h2>
                 <p className={`text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl ${mounted && resolvedTheme === 'dark'
                     ? 'text-gray-300'
                     : 'text-gray-600'
                     }`}>
-                    Hear from colleges, universities, and corporate partners who have transformed their hiring processes with HireKarma.
+                    {testimonials.description}
                 </p>
             </div>
 
@@ -85,7 +88,7 @@ const Testimonials: React.FC = () => {
                     style={{ cursor: isDragging ? 'grabbing' : 'grab', touchAction: 'pan-x' }}
                 >
                     {/* Duplicate the testimonials for seamless scrolling */}
-                    {[...testimonialsData.testimonials, ...testimonialsData.testimonials].map((testimonial, index) => (
+                    {[...testimonialItems, ...testimonialItems].map((testimonial, index) => (
                         <div
                             key={`testimonial-${index}`}
                             className="flex-shrink-0 w-[240px] sm:w-[280px] md:w-[320px] lg:w-96"

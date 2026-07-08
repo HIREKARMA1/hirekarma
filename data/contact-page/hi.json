@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "title": "संपर्क | HireKarma",
+    "description": "छात्र अवसरों, कैंपस हायरिंग या संस्थागत साझेदारी के लिए HireKarma से संपर्क करें।"
+  },
+  "hero": {
+    "title": "संपर्क करें",
+    "subtitle": "आइए मिलकर भविष्य बनाएँ",
+    "description": "चाहे आप अवसर तलाशते छात्र हों, प्रतिभा की खोज करने वाले कॉर्पोरेट नेता हों, या रोज़गार योग्यता बढ़ाती संस्था — हम मदद के लिए यहाँ हैं। संपर्क करें और जानें कि HireKarma आपकी यात्रा को कैसे बदल सकता है।"
+  },
+  "form": {
+    "title": "हमें संदेश भेजें",
+    "name": {
+      "label": "पूरा नाम",
+      "placeholder": "आपका पूरा नाम"
+    },
+    "email": {
+      "label": "ईमेल पता",
+      "placeholder": "your@email.com"
+    },
+    "message": {
+      "label": "आपका संदेश",
+      "placeholder": "अपनी पूछताछ या ज़रूरत के बारे में बताएँ..."
+    },
+    "submit": "संदेश भेजें",
+    "submitting": "भेजा जा रहा है...",
+    "errorInline": "भेजने में विफल। कृपया बाद में पुनः प्रयास करें।"
+  },
+  "toasts": {
+    "success": "संदेश सफलतापूर्वक भेजा गया"
+  },
+  "methods": {
+    "title": "हमसे जुड़ने के तरीके",
+    "subtitle": "अपना पसंदीदा माध्यम चुनें",
+    "methods": [
+      {
+        "id": "email",
+        "title": "ईमेल सहायता",
+        "description": "सामान्य पूछताछ, साझेदारी या तकनीकी सहायता के लिए।",
+        "value": "info@hirekarma.in",
+        "href": "mailto:hello@hirekarma.com"
+      },
+      {
+        "id": "phone",
+        "title": "फ़ोन सहायता",
+        "description": "तुरंत मदद या कॉल शेड्यूल करने के लिए।",
+        "value": "+91 91243 64762",
+        "href": "tel:+919876543210"
+      },
+      {
+        "id": "location",
+        "title": "कार्यालय स्थान",
+        "description": "व्यक्तिगत बैठकों के लिए भुवनेश्वर में हमारे मुख्यालय आएँ।",
+        "value": "2nd Floor, SS Niwas, Hirekarma Private Limited, Raghunathpur, Bhubaneswar, Raghunathpurjali, Odisha 751024"
+      }
+    ]
+  }
+}

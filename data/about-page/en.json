@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "story": {
+      "title": "Our Story | HireKarma",
+      "description": "How HireKarma began in Bhubaneswar and grew into a platform bridging academia and industry across India."
+    },
+    "mission": {
+      "title": "Mission & Values | HireKarma",
+      "description": "Our mission, vision, and values guiding HireKarma's work in campus recruitment and employability."
+    },
+    "people": {
+      "title": "Our People | HireKarma",
+      "description": "Meet the leadership, core team, and advisory board powering HireKarma."
+    }
+  },
+  "story": {
+    "hero": {
+      "label": "About HireKarma",
+      "heading": "Building pathways between potential and opportunity.",
+      "description": "From training a learner in rural Odisha to contributing to national digital public infrastructure, HireKarma exists to bridge the gap between where people are and where they could be.",
+      "primaryCta": {
+        "label": "Meet the Leadership Team",
+        "href": "/about-us/people"
+      },
+      "secondaryCta": {
+        "label": "Explore Our Impact",
+        "href": "/"
+      },
+      "partnersNote": "Trusted by partners and institutions across India",
+      "heroImageAlt": "HireKarma impact dashboard on tablet",
+      "partnersImageAlt": "Government and institutional partners"
+    },
+    "journey": {
+      "title": "The Journey Begins",
+      "subtitle": "Our Founding Story",
+      "beforeFounded": "Founded in ",
+      "founded": "Bhubaneswar in 2020",
+      "afterFoundedBeforeFounder1": " by ",
+      "founder1": "Sohan Kumar Dey",
+      "betweenFounders": " and ",
+      "founder2": "Rohit Samantaray",
+      "afterFounders": ", HireKarma arose from a passion to bridge the gap between academia and industry, particularly for students in tier-2 and tier-3 colleges across India.",
+      "foundedCard": {
+        "label": "Founded",
+        "value": "2020",
+        "detail": "Bhubaneswar, India"
+      },
+      "focusCard": {
+        "label": "Focus",
+        "value": "Tier-2 & 3",
+        "detail": "Colleges across India"
+      },
+      "imageAlt": "HireKarma founding story journey animation"
+    },
+    "challenge": {
+      "title": "The Challenge We Saw",
+      "subtitle": "Campus Hiring Roadblocks",
+      "beforeHighlight1": "Recognizing that many",
+      "highlight1": "talented graduates face roadblocks",
+      "betweenHighlights": "to meaningful employment, we identified the",
+      "highlight2": "critical gap",
+      "afterHighlights": "between what students learn in college and what industries actually need.",
+      "imageAlt": "Campus hiring roadblocks challenges visualization"
+    },
+    "solution": {
+      "title": "Our Transformative Solution",
+      "subtitle": "AI-Powered Innovation",
+      "beforeHighlight1": "The founders set out to",
+      "highlight1": "transform campus recruitment",
+      "betweenHighlights": "through AI automation,",
+      "highlight2": "predictive analytics",
+      "afterHighlights": ", and community-driven engagement. Our platform streamlines the entire hiring journey.",
+      "imageAlt": "AI-powered transformative solution for campus hiring"
+    }
+  },
+  "mission": {
+    "mission": {
+      "title": "OUR MISSION",
+      "subtitle": "Precision in Purpose, Excellence in Execution",
+      "body": "Our mission is to bridge the gap between academia and industry by empowering students, universities, and employers with practical skill development, data-driven insights, and automation-first recruitment workflows. We aim to create equitable access to opportunities and measurable hiring outcomes for all stakeholders.",
+      "imageAlt": "Mission animation"
+    },
+    "vision": {
+      "title": "OUR VISION",
+      "subtitle": "Illuminating Pathways to Success",
+      "body": "Our clear vision illuminates a future where every student's potential is seen and realized. We look beyond barriers of background or location, foreseeing a world where technology-driven insights, mentorship clarity, and data-powered learning light the path from education to meaningful employment.",
+      "imageAlt": "Vision animation"
+    },
+    "values": {
+      "title": "OUR VALUES",
+      "subtitle": "Guiding Stars of Our Journey",
+      "body": "Like guiding stars, our core values of inclusivity, transparency, and innovation light the way forward. We create a stellar community where excellence shines through continuous learning, and the brilliance of shared growth illuminates new opportunities for both students and partners.",
+      "imageAlt": "Values animation"
+    }
+  },
+  "people": {
+    "title": "Leadership that Inspires Growth",
+    "subtitle": "Meet the People Powering HireKarma",
+    "descriptionBefore": "The passionate people behind our success - innovators, creators, and leaders dedicated to",
+    "descriptionHighlight": "transforming campus recruitment",
+    "descriptionAfter": "across India.",
+    "tabs": {
+      "advisory": "Advisory Board",
+      "leadership": "Leadership",
+      "core": "Core Team"
+    },
+    "loading": "Loading team...",
+    "emptyTitle": "No Members Yet",
+    "emptyDescription": "Advisory board members will be announced soon.",
+    "closeAria": "Close",
+    "viewDetailsAria": "View details",
+    "linkedinAria": "LinkedIn",
+    "instagramAria": "Instagram",
+    "emailAria": "Email",
+    "culture": {
+      "title": "Our Culture",
+      "subtitle": "Inclusive, Innovative, and Collaborative",
+      "description": "We believe in fostering an inclusive, innovative, and collaborative environment where every team member can thrive and contribute to our mission of transforming campus recruitment.",
+      "values": [
+        {
+          "id": "inclusive",
+          "title": "Inclusive",
+          "description": "We celebrate diversity and ensure everyone has a voice in our mission."
+        },
+        {
+          "id": "innovative",
+          "title": "Innovative",
+          "description": "We continuously push boundaries in HRTech and recruitment solutions."
+        },
+        {
+          "id": "collaborative",
+          "title": "Collaborative",
+          "description": "We work together as one team, united by our shared vision."
+        }
+      ],
+      "imageAlts": {
+        "collaboration": "Students collaboration",
+        "celebration": "Corporate team",
+        "festival": "University campus",
+        "workspace": "Team workspace"
+      }
+    }
+  },
+  "common": {
+    "animationNotSupported": "Animation not supported",
+    "browserNoImagePlayback": "Your browser doesn't support image playback"
+  }
+}

@@ -5,8 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ChevronRight } from "lucide-react";
 
+import { useAboutLocale } from "@/contexts/AboutLocaleContext";
+
 const HeroSection: React.FC = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
+  const { content } = useAboutLocale();
+  const hero = content.story.hero;
 
   return (
     <section className="relative w-full overflow-hidden bg-[#0B0028]">
@@ -20,32 +24,30 @@ const HeroSection: React.FC = () => {
         <div className="grid min-h-[calc(75vh-7rem)] grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16 xl:gap-20">
           <div className="order-1 space-y-6 text-center lg:order-1 lg:text-left xl:space-y-8">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#A78BFA] sm:text-sm">
-              About HireKarma
+              {hero.label}
             </p>
 
             <h1 className="text-3xl font-bold leading-[1.15] tracking-tight text-white sm:text-4xl lg:text-5xl xl:text-[3.25rem]">
-              Building pathways between potential and opportunity.
+              {hero.heading}
             </h1>
 
             <p className="mx-auto max-w-xl text-base leading-relaxed text-white/75 sm:text-lg lg:mx-0">
-              From training a learner in rural Odisha to contributing to national
-              digital public infrastructure, HireKarma exists to bridge the gap
-              between where people are and where they could be.
+              {hero.description}
             </p>
 
             <div className="flex flex-col items-center justify-center gap-4 pt-2 sm:flex-row sm:justify-center lg:justify-start">
               <Link
-                href="/about-us/people"
+                href={hero.primaryCta.href}
                 className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#4D38F0] px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#5B46F5] hover:shadow-[0_8px_30px_rgba(77,56,240,0.35)] sm:w-auto"
               >
-                Meet the Leadership Team
+                {hero.primaryCta.label}
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
-                href="/"
+                href={hero.secondaryCta.href}
                 className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-white/35 bg-transparent px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:border-white/60 hover:bg-white/5 sm:w-auto"
               >
-                Explore Our Impact
+                {hero.secondaryCta.label}
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
@@ -55,7 +57,7 @@ const HeroSection: React.FC = () => {
             <div className="relative mx-auto aspect-[4/3] w-full max-w-xl lg:max-w-none lg:aspect-auto lg:h-[420px] xl:h-[480px]">
               <Image
                 src="/about-us/hero-tablet.png"
-                alt="HireKarma impact dashboard on tablet"
+                alt={hero.heroImageAlt}
                 fill
                 priority
                 quality={90}
@@ -74,7 +76,7 @@ const HeroSection: React.FC = () => {
 
         <div className="mt-10 border-t border-white/10 pt-8 lg:mt-14">
           <p className="mb-5 text-center text-sm text-white/60 lg:text-left">
-            Trusted by partners and institutions across India
+            {hero.partnersNote}
           </p>
 
           <div className="relative overflow-hidden">
@@ -88,7 +90,7 @@ const HeroSection: React.FC = () => {
                 <Image
                   key={copy}
                   src="/about-us/partner-logos.png"
-                  alt="Government and institutional partners"
+                  alt={hero.partnersImageAlt}
                   width={1024}
                   height={67}
                   className="h-10 w-auto shrink-0 object-contain sm:h-12 md:h-14"

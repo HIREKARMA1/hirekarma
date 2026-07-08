@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "title": "Partners | HireKarma",
+    "description": "HireKarma bridges academia and industry with 200+ college partners and leading corporates across India."
+  },
+  "hero": {
+    "badge": "Our Partners",
+    "title": "Building Success Together",
+    "description": "HireKarma bridges academia and industry, delivering measurable results and fostering collaborative success for all stakeholders in the talent ecosystem.",
+    "trustLine": "Trusted by over 200+ educational institutions and leading corporates across India to transform campus recruitment and early-career hiring."
+  },
+  "stats": [
+    { "value": "200+", "label": "College Partners" },
+    { "value": "50K+", "label": "Students Empowered" },
+    { "value": "100+", "label": "Corporate Partners" }
+  ],
+  "college": {
+    "badge": "College Partners",
+    "title": "Empowering Campuses. Accelerating Careers.",
+    "description": "HireKarma for Colleges is more than a tech platform—it's a strategic ally for educational institutions committed to transforming placement outcomes and student success.",
+    "detail": "Partner colleges across India trust us to automate training and placement (T&P) workflows, connect with top recruiters, and equip students with in-demand skills through data-driven, AI-powered modules.",
+    "benefits": [
+      {
+        "title": "Digital Management",
+        "description": "Seamless placement drives and student tracking"
+      },
+      {
+        "title": "Recruiter Access",
+        "description": "National and global recruiters ecosystem"
+      },
+      {
+        "title": "Advanced Analytics",
+        "description": "Skills mapping and placement reporting"
+      },
+      {
+        "title": "Skill Programs",
+        "description": "Workshops and industry counseling"
+      }
+    ],
+    "partners": [
+      {
+        "id": "aisect",
+        "name": "AISECT",
+        "description": "All India Society for Electronics & Computer Technology - India's largest education and skill development network"
+      },
+      {
+        "id": "cime",
+        "name": "College of IT and Management Education (CIME)",
+        "description": "Premier institution in Bhubaneswar delivering quality technical and management education"
+      },
+      {
+        "id": "ouat",
+        "name": "Orissa University of Agriculture and Technology",
+        "description": "Leading agricultural and technology university fostering innovation and research"
+      },
+      {
+        "id": "imit",
+        "name": "Institute of Management & Information Technology",
+        "description": "Cuttack's premier institute for management and IT excellence"
+      },
+      {
+        "id": "giet",
+        "name": "GIET Ghangapatna",
+        "description": "Gandhi Institute of Engineering and Technology - Excellence in technical education"
+      },
+      {
+        "id": "eatm",
+        "name": "Eastern Academy of Technology and Management",
+        "description": "Bhubaneswar's leading institution for technology and management studies"
+      }
+    ]
+  },
+  "corporate": {
+    "badge": "Corporate Partners",
+    "title": "Build the Workforce of Tomorrow—Today.",
+    "description": "Corporate partners choose HireKarma to unlock efficient, fair, and scalable early-career hiring.",
+    "detail": "Tap into a curated pipeline of job-ready graduates and skilled interns from top colleges, streamline campus recruitment cycles, and make hiring decisions powered by real talent data—not just resumes.",
+    "benefits": [
+      {
+        "title": "Pre-Assessed Talent",
+        "description": "Skill-verified candidates ready for hiring"
+      },
+      {
+        "title": "AI Matching",
+        "description": "Role matching and predictive analytics"
+      },
+      {
+        "title": "Fast-Track Hiring",
+        "description": "Campus drives at scale"
+      },
+      {
+        "title": "Diversity & Branding",
+        "description": "Inclusion solutions for employers"
+      }
+    ],
+    "partners": [
+      {
+        "id": "quality-austria",
+        "name": "Quality Austria Central Asia Pvt. Ltd.",
+        "description": "International quality management and certification leader partnering for campus placements"
+      },
+      {
+        "id": "ola-krutrim",
+        "name": "OLA Krutrim",
+        "description": "AI-powered innovation leader conducting campus drives across Odisha"
+      },
+      {
+        "id": "leading-mncs",
+        "name": "Leading MNCs",
+        "description": "National and global corporations hiring pre-vetted talent through our platform"
+      },
+      {
+        "id": "tech-startups",
+        "name": "Tech Startups",
+        "description": "Emerging technology companies building teams with skilled graduates"
+      },
+      {
+        "id": "fortune-500",
+        "name": "Fortune 500 Companies",
+        "description": "Industry leaders leveraging our AI-powered recruitment solutions"
+      }
+    ]
+  },
+  "mission": {
+    "title": "Our Mission",
+    "paragraph1": "Make every campus a launchpad for career impact. Join leading universities and institutes who rely on HireKarma to empower faculty, raise placement rates, and prepare students for the future of work.",
+    "paragraph2": "HireKarma helps companies build smarter teams, achieve hiring targets, and create impact where it matters. Join our network of forward-thinking employers who shape the careers of India's youth and drive business growth through data-driven talent acquisition."
+  },
+  "cta": {
+    "title": "Become a Partner",
+    "description": "Join our growing network of colleges and corporates transforming the future of campus recruitment",
+    "primary": "Partner With Us",
+    "secondary": "Contact Us"
+  }
+}

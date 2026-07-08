@@ -12,6 +12,8 @@ interface ProductCardProps {
   subtitle: string;
   description: string;
   href: string;
+  viewMoreLabel?: string;
+  productBadge?: string;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({
@@ -21,6 +23,8 @@ const ProductCard: React.FC<ProductCardProps> = ({
   subtitle,
   description,
   href,
+  viewMoreLabel = 'View More',
+  productBadge = 'Product',
 }) => {
   const [mounted, setMounted] = React.useState(false);
   const { resolvedTheme } = useTheme();
@@ -71,7 +75,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
                 : 'bg-cyan-100 text-cyan-700 border border-cyan-200'
             }`}
           >
-            Product
+            {productBadge}
           </div>
         </div>
 
@@ -116,7 +120,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
               : 'bg-cyan-100 text-cyan-700 hover:bg-cyan-200'
           }`}
         >
-          View More
+          {viewMoreLabel}
           <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         </a>
       </div>

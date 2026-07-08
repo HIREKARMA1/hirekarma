@@ -3,10 +3,13 @@
 import React, { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
+import { useHomeLocale } from '@/contexts/HomeLocaleContext';
 
 const FutureReadySection: React.FC = () => {
     const [mounted, setMounted] = useState(false);
     const { resolvedTheme } = useTheme();
+    const { content } = useHomeLocale();
+    const { futureReadySection } = content;
 
     useEffect(() => {
         setMounted(true);
@@ -24,12 +27,12 @@ const FutureReadySection: React.FC = () => {
                             ? 'text-gray-100'
                             : 'text-gray-900'
                             }`}>
-                            Future-Ready Implementation
+                            {futureReadySection.heading}
                             <span className={`block mt-2 text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl font-medium transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
                                 ? 'text-emerald-400'
                                 : 'text-emerald-600'
                                 }`}>
-                                Next-Gen Talent Solutions
+                                {futureReadySection.subheading}
                             </span>
                         </h2>
                     </div>
@@ -40,19 +43,7 @@ const FutureReadySection: React.FC = () => {
                             ? 'text-gray-300'
                             : 'text-gray-600'
                             }`}>
-                            Built on <strong className={`transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
-                                ? 'text-gray-200'
-                                : 'text-gray-700'
-                                }`}>cutting-edge technology</strong> and <strong className={`transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
-                                    ? 'text-gray-200'
-                                    : 'text-gray-700'
-                                    }`}>scalable architecture</strong>, our platform empowers institutions to adapt to the evolving landscape of recruitment and skill development. With <strong className={`transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
-                                ? 'text-gray-200'
-                                : 'text-gray-700'
-                                }`}>AI-driven matching</strong> and <strong className={`transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
-                                    ? 'text-gray-200'
-                                    : 'text-gray-700'
-                                    }`}>real-time analytics</strong>, we enable smarter decisions, faster hiring, and seamless digital transformation across campuses.
+                            {futureReadySection.description}
                         </p>
                     </div>
 
@@ -65,7 +56,7 @@ const FutureReadySection: React.FC = () => {
                                 : 'border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white'
                                 }`}
                         >
-                            <span className="relative z-10">Read More</span>
+                            <span className="relative z-10">{futureReadySection.cta}</span>
                             <svg className="relative z-10 ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                             </svg>

@@ -9,7 +9,11 @@ import React, {
   useState,
 } from "react";
 
-import { DEFAULT_LOCALE, LOCALE_STORAGE_KEY } from "@/lib/i18n/locales";
+import {
+  DEFAULT_LOCALE,
+  readStoredLocale,
+  writeStoredLocale,
+} from "@/lib/i18n/locales";
 import { getProductsPageContentSync } from "@/services/products-page";
 import type { Locale, ProductsPageContent } from "@/types/products-page";
 
@@ -32,17 +36,28 @@ export function ProductsLocaleProvider({
   const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
-    const stored = localStorage.getItem(LOCALE_STORAGE_KEY) as Locale | null;
-    if (stored && ["en", "hi", "od"].includes(stored)) {
-      setLocaleState(stored);
-    }
+    setLocaleState(readStoredLocale());
     setHydrated(true);
+
+    const onLocaleChange = (event: Event) => {
+      const detail = (event as CustomEvent<Locale>).detail;
+      if (detail) setLocaleState(detail);
+      else setLocaleState(readStoredLocale());
+    };
+
+    window.addEventListener("hirekarma-locale-change", onLocaleChange);
+    return () => window.removeEventListener("hirekarma-locale-change", onLocaleChange);
+  }, []);
+
+  useEffect(() => {
+    const onStorage = () => setLocaleState(readStoredLocale());
+    window.addEventListener("storage", onStorage);
+    return () => window.removeEventListener("storage", onStorage);
   }, []);
 
   const setLocale = useCallback((next: Locale) => {
     setLocaleState(next);
-    localStorage.setItem(LOCALE_STORAGE_KEY, next);
-    document.documentElement.lang = next === "od" ? "or" : next;
+    writeStoredLocale(next);
   }, []);
 
   const content = useMemo(

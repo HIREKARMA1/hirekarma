@@ -3,10 +3,13 @@
 import React from 'react';
 import { useTheme } from 'next-themes';
 import mapData from '../../data/locations-map.json';
+import { useHomeLocale } from '@/contexts/HomeLocaleContext';
 
 const GoogleLocationSection: React.FC = () => {
   const [mounted, setMounted] = React.useState(false);
   const { resolvedTheme } = useTheme();
+  const { content } = useHomeLocale();
+  const { googleLocationSection } = content;
 
   React.useEffect(() => {
     setMounted(true);
@@ -34,13 +37,13 @@ const GoogleLocationSection: React.FC = () => {
             isDark ? 'text-gray-100' : 'text-gray-900'
           }`}
         >
-          {mapData.heading}
+          {googleLocationSection.heading}
           <span
             className={`block mt-2 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium ${
               isDark ? 'text-cyan-400' : 'text-cyan-600'
             }`}
           >
-            {mapData.subheading}
+            {googleLocationSection.subheading}
           </span>
         </h2>
 
@@ -49,7 +52,7 @@ const GoogleLocationSection: React.FC = () => {
             isDark ? 'text-gray-300' : 'text-gray-600'
           }`}
         >
-          {mapData.description}
+          {googleLocationSection.description}
         </p>
       </div>
 

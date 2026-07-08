@@ -1,45 +1,25 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
-import { useTheme } from 'next-themes';
-import Navbar from '../../../components/layout/Navbar';
-import Footer from '../../../components/layout/Footer';
-import HeroSection from '../../../components/solutions/university/HeroSection';
-import ProblemSection from '../../../components/solutions/university/ProblemSection';
-import SolutionSection from '../../../components/solutions/university/SolutionSection';
+import React from "react";
+import { SolutionsLocaleProvider } from "@/contexts/SolutionsLocaleContext";
+import HeroSection from "@/components/solutions/university/HeroSection";
+import ProblemSection from "@/components/solutions/university/ProblemSection";
+import SolutionSection from "@/components/solutions/university/SolutionSection";
 
-const ForUniversityPage: React.FC = () => {
-    const [mounted, setMounted] = useState(false);
-    const { resolvedTheme } = useTheme();
+function ForUniversityPageInner() {
+  return (
+    <main className="relative z-0 min-h-screen w-full">
+      <HeroSection />
+      <ProblemSection />
+      <SolutionSection />
+    </main>
+  );
+}
 
-    useEffect(() => {
-        setMounted(true);
-    }, []);
-
-    return (
-        <div className={`min-h-screen flex flex-col transition-all duration-500 ${mounted && resolvedTheme === 'dark' ? 'bg-gray-900' : 'bg-white'
-            }`}>
-            <Navbar />
-
-            <main className="flex-grow">
-                <section className={`relative transition-all duration-500 ${mounted && resolvedTheme === 'dark' ? 'bg-gray-900' : 'bg-white'
-                    }`}>
-                    {/* Section 1: The Impact (Transform Placement Outcomes) */}
-                    <HeroSection />
-
-                    {/* Section 2: The Challenges (The Hurdles Universities Face) */}
-                    <ProblemSection />
-
-                    {/* Section 3: The Solution (How HireKarma Bridges the Gap) */}
-                    <SolutionSection />
-
-                </section>
-            </main>
-
-            <Footer />
-        </div>
-    );
-};
-
-export default ForUniversityPage;
-
+export default function ForUniversityPage() {
+  return (
+    <SolutionsLocaleProvider>
+      <ForUniversityPageInner />
+    </SolutionsLocaleProvider>
+  );
+}

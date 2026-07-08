@@ -20,6 +20,8 @@ import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import { env } from '@/lib/config/env';
 import { ThemeToggle } from '@/components/layout/ThemeToggle';
+import { LanguageDropdown } from '@/components/layout/LanguageDropdown';
+import { useSiteLocale } from '@/contexts/SiteLocaleContext';
 
 interface NavbarProps {
   className?: string;
@@ -43,12 +45,35 @@ interface SimpleLink {
   icon: React.ComponentType<{ className?: string }>;
 }
 
+const productIconById: Record<string, React.ComponentType<{ className?: string }>> = {
+  overview: LayoutGrid,
+  disha: Compass,
+  solviq: TrendingUp,
+  lakshya: Users,
+  shortlisted: Briefcase,
+};
+
+const productHrefById: Record<string, string> = {
+  overview: '/products',
+  disha: env.dishaUrl,
+  solviq: env.solviqUrl,
+  lakshya: env.lakshyaUrl,
+  shortlisted: '/shortlisted',
+};
+
+const aboutIconById: Record<string, React.ComponentType<{ className?: string }>> = {
+  mission: Heart,
+  people: UsersRound,
+};
+
 const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme } = useTheme();
+  const { content } = useSiteLocale();
+  const { nav } = content;
 
   useEffect(() => {
     setMounted(true);
@@ -80,28 +105,27 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
 
   // Nav order: Home, Products, Resources, About, Contact Us
   const productsItem: NavigationItem = {
-    label: 'Products',
-    href: '/products',
+    label: nav.products.label,
+    href: nav.products.href,
     icon: Zap,
     hasDropdown: true,
-    dropdownItems: [
-      { label: 'Overview', href: '/products', icon: LayoutGrid },
-      { label: 'Disha', href: env.dishaUrl, icon: Compass },
-      { label: 'SolviqAI', href: env.solviqUrl, icon: TrendingUp },
-      { label: 'Lakshya', href: env.lakshyaUrl, icon: Users },
-      { label: 'Shortlisted', href: '/shortlisted', icon: Briefcase },
-    ],
+    dropdownItems: nav.products.items.map((item) => ({
+      label: item.label,
+      href: productHrefById[item.id] ?? item.href,
+      icon: productIconById[item.id] ?? LayoutGrid,
+    })),
   };
 
   const aboutItem: NavigationItem = {
-    label: 'About',
-    href: '/about-us',
+    label: nav.about.label,
+    href: nav.about.href,
     icon: Users,
     hasDropdown: true,
-    dropdownItems: [
-      { label: 'Mission & Value', href: '/about-us/mission-value', icon: Heart },
-      { label: 'People', href: '/about-us/people', icon: UsersRound },
-    ],
+    dropdownItems: nav.about.items.map((item) => ({
+      label: item.label,
+      href: item.href,
+      icon: aboutIconById[item.id] ?? Users,
+    })),
   };
 
   type NavEntry =
@@ -109,11 +133,11 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
     | { type: 'dropdown'; item: NavigationItem };
 
   const navEntries: NavEntry[] = [
-    { type: 'link', item: { label: 'Home', href: '/', icon: LayoutGrid } },
+    { type: 'link', item: { label: nav.home.label, href: nav.home.href, icon: LayoutGrid } },
     { type: 'dropdown', item: productsItem },
-    { type: 'link', item: { label: 'Resources', href: '/resources', icon: Compass } },
+    { type: 'link', item: { label: nav.resources.label, href: nav.resources.href, icon: Compass } },
     { type: 'dropdown', item: aboutItem },
-    { type: 'link', item: { label: 'Contact Us', href: '/contact', icon: Handshake } },
+    { type: 'link', item: { label: nav.contact.label, href: nav.contact.href, icon: Handshake } },
   ];
 
   return (
@@ -253,12 +277,14 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                   );
                 })}
               </div>
-              <ThemeToggle className="ml-1" />
+              <LanguageDropdown className="ml-1" />
+              <ThemeToggle />
             </div>
 
 
             {/* Mobile Menu Button */}
             <div className="flex lg:hidden items-center gap-2 flex-shrink-0">
+              <LanguageDropdown />
               <ThemeToggle />
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

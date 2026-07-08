@@ -4,27 +4,37 @@ import React from 'react';
 import { useTheme } from 'next-themes';
 import ProductCard from './ProductCard';
 import productsData from '../../data/products.json';
+import { useHomeLocale } from '@/contexts/HomeLocaleContext';
 
-type ProductItem = {
+type ProductMedia = {
   id: string;
   logoLight: string;
   logoDark: string;
-  title: string;
-  subtitle: string;
-  description: string;
   href: string;
 };
 
 const ProductsSection: React.FC = () => {
   const [mounted, setMounted] = React.useState(false);
   const { resolvedTheme } = useTheme();
-  const products = productsData.products as ProductItem[];
+  const { content } = useHomeLocale();
+  const { productsSection } = content;
+  const productMedia = productsData.products as ProductMedia[];
 
   React.useEffect(() => {
     setMounted(true);
   }, []);
 
   const isDark = mounted && resolvedTheme === 'dark';
+
+  const products = productMedia.map((media) => {
+    const localized = productsSection.items.find((item) => item.id === media.id);
+    return {
+      ...media,
+      title: localized?.title ?? media.id,
+      subtitle: localized?.subtitle ?? '',
+      description: localized?.description ?? '',
+    };
+  });
 
   return (
     <section className="relative content-container py-12 sm:py-16 md:py-20">
@@ -34,13 +44,13 @@ const ProductsSection: React.FC = () => {
             isDark ? 'text-gray-100' : 'text-gray-900'
           }`}
         >
-          Our Products
+          {productsSection.heading}
           <span
             className={`block mt-2 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium ${
               isDark ? 'text-violet-400' : 'text-violet-600'
             }`}
           >
-            Built for Smarter Talent Outcomes
+            {productsSection.subheading}
           </span>
         </h2>
 
@@ -49,8 +59,7 @@ const ProductsSection: React.FC = () => {
             isDark ? 'text-gray-300' : 'text-gray-600'
           }`}
         >
-          Explore our focused product suite designed to improve career readiness, streamline talent
-          evaluation, and accelerate hiring outcomes.
+          {productsSection.description}
         </p>
       </div>
 
@@ -64,6 +73,8 @@ const ProductsSection: React.FC = () => {
             subtitle={product.subtitle}
             description={product.description}
             href={product.href}
+            viewMoreLabel={productsSection.viewMore}
+            productBadge={productsSection.productBadge}
           />
         ))}
       </div>

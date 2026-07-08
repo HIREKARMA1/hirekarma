@@ -3,11 +3,14 @@
 import React, { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
+import { useHomeLocale } from '@/contexts/HomeLocaleContext';
 
 const ProblemStatement: React.FC = () => {
     const [mounted, setMounted] = useState(false);
     const { resolvedTheme } = useTheme();
     const [imageLoaded, setImageLoaded] = useState(false);
+    const { content } = useHomeLocale();
+    const { problemStatement } = content;
 
     useEffect(() => {
         setMounted(true);
@@ -24,12 +27,12 @@ const ProblemStatement: React.FC = () => {
                             ? 'text-gray-100'
                             : 'text-gray-900'
                             }`}>
-                            The Problem We Solve
+                            {problemStatement.heading}
                             <span className={`block mt-1 sm:mt-2 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-medium ${mounted && resolvedTheme === 'dark'
                                 ? 'text-red-400'
                                 : 'text-red-600'
                                 }`}>
-                                Industry-Ready Skilling and Placement
+                                {problemStatement.subheading}
                             </span>
                         </h2>
                     </div>
@@ -40,24 +43,18 @@ const ProblemStatement: React.FC = () => {
                             ? 'text-gray-300'
                             : 'text-gray-600'
                             }`}>
-                            Many students have potential but miss real exposure to industry workflows, tools, and expectations. Our skilling model closes this gap through structured training at our centers, with <strong className={`${mounted && resolvedTheme === 'dark'
-                                ? 'text-gray-200'
-                                : 'text-gray-700'
-                                }`}>advanced technology labs and classroom facilities</strong> designed for practical, job-focused learning.
+                            {problemStatement.paragraph1}
                         </p>
 
                         <p className={`text-base sm:text-lg md:text-xl leading-relaxed max-w-full sm:max-w-xl md:max-w-2xl ${mounted && resolvedTheme === 'dark'
                             ? 'text-gray-300'
                             : 'text-gray-600'
                             }`}>
-                            We currently train students for three active domains: <strong className={`${mounted && resolvedTheme === 'dark'
-                                ? 'text-gray-200'
-                                : 'text-gray-700'
-                                }`}>Retail, IT, and Core Industry</strong>. From lab sessions and classroom instruction to industry-level projects, we make candidates job-ready and connect them with employment opportunities across relevant industries.
+                            {problemStatement.paragraph2}
                         </p>
 
                         <div className="flex flex-wrap gap-2.5 pt-1">
-                            {['Retail', 'IT', 'Core Industry'].map((domain) => (
+                            {problemStatement.domains.map((domain) => (
                                 <span
                                     key={domain}
                                     className={`inline-flex rounded-full border px-3 py-1 text-xs sm:text-sm font-semibold ${mounted && resolvedTheme === 'dark'

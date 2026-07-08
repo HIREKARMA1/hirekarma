@@ -1,0 +1,242 @@
+{
+  "students": {
+    "hero": {
+      "badge": "For Students",
+      "heading": "Launch a Career You Love",
+      "headingAccent": "with High-Growth Companies",
+      "description": "Imagine starting your career at a top company, equipped with the exact skills they need. HireKarma is your launchpad, connecting your academic knowledge to real-world success and placing you in roles where you can make a real impact from day one.",
+      "cta": "Get Started",
+      "imageAlt": "Students achieving success"
+    },
+    "problem": {
+      "heading": "The Campus-to-Career Gap",
+      "headingAccent": "Why Landing a Dream Job is Hard",
+      "items": [
+        {
+          "title": "The Skill Mismatch",
+          "description": "Academic courses often don't teach the specific, practical skills that top companies are hiring for right now."
+        },
+        {
+          "title": "Limited Industry Access",
+          "description": "Students from non-metro colleges lack equal access to top-tier employers and networking opportunities."
+        },
+        {
+          "title": "Fierce Competition",
+          "description": "Your resume is one in a thousand, making it nearly impossible to stand out and get noticed by recruiters."
+        },
+        {
+          "title": "Unclear Career Path",
+          "description": "Without proper guidance, it's hard to know which roles fit your skills or how to prepare for them effectively."
+        }
+      ],
+      "imageAlts": [
+        "Campus life challenges",
+        "Corporate world demands",
+        "Feeling lost in career choices",
+        "Student competition"
+      ]
+    },
+    "solution": {
+      "heading": "HireKarma Soluation",
+      "items": [
+        {
+          "title": "Real-World Skill Training",
+          "description": "Learn practical skills directly aligned with the latest industry demands through guided training and live projects."
+        },
+        {
+          "title": "Direct Industry Connect",
+          "description": "Gain exposure to hiring managers and top recruiters through our company partnerships and job placement drives."
+        },
+        {
+          "title": "Personalized Career Mentorship",
+          "description": "Receive one-on-one mentorship from industry experts to guide your career path and build your professional confidence."
+        },
+        {
+          "title": "Interview & Resume Mastery",
+          "description": "Master resume building, personal branding, and mock interview preparation to stand out confidently before recruiters."
+        }
+      ],
+      "imageAlt": "Students achieving success"
+    }
+  },
+  "university": {
+    "hero": {
+      "badge": "For Universities",
+      "heading": "Transform Placement Outcomes",
+      "headingAccent": "with AI-Driven Insights",
+      "description": "Empower your placement and training (T&P) cell with **automation, analytics, and direct industry connectivity**. HireKarma enables universities to boost placement rates, build stronger recruiter relationships, and deliver **actionable employability data** that enhances both student and institute visibility.",
+      "cta": "Get Started",
+      "imageAlt": "University campus excellence"
+    },
+    "problem": {
+      "heading": "The Placement Efficiency Gap",
+      "headingAccent": "Why Boosting Employability is Challenging",
+      "items": [
+        {
+          "title": "Manual Placement Processes",
+          "description": "Outdated, manual workflows for managing drives, eligibility, and recruiter coordination consume valuable T&P resources."
+        },
+        {
+          "title": "Low Visibility to Recruiters",
+          "description": "Limited access to top companies beyond traditional channels, reducing opportunities for high-quality placements."
+        },
+        {
+          "title": "Inadequate Skill Assessment",
+          "description": "Lack of standardized, data-driven tools to identify and bridge student skill gaps for industry readiness."
+        },
+        {
+          "title": "Fragmented Data Insights",
+          "description": "Disconnected systems make it hard to track employability trends, placement outcomes, and institutional performance."
+        }
+      ],
+      "imageAlts": [
+        "Campus placement challenges",
+        "Industry demands",
+        "Placement analytics issues",
+        "Student employability gaps"
+      ]
+    },
+    "solution": {
+      "heading": "HireKarma Solution",
+      "items": [
+        {
+          "title": "End-to-End Placement Management",
+          "description": "Automate and streamline entire placement cycles, from drive scheduling to recruiter coordination and reporting."
+        },
+        {
+          "title": "Digital Resume Banks",
+          "description": "Centralized, searchable student profiles with eligibility tracking, skill badges, and placement analytics."
+        },
+        {
+          "title": "AI-Powered Skill Assessments",
+          "description": "Comprehensive assessments with personalized learning paths to enhance student employability and readiness."
+        },
+        {
+          "title": "Direct Recruiter Connectivity",
+          "description": "Exclusive access to our corporate network, virtual drives, and HRTech resources to attract top employers."
+        }
+      ],
+      "imageAlt": "University campus excellence"
+    }
+  },
+  "corporate": {
+    "hero": {
+      "badge": "For Corporate",
+      "heading": "Hire Smarter, Faster",
+      "headingAccent": "and Fairer",
+      "description": "Revolutionize your early talent pipeline with HireKarma's **end-to-end corporate hiring suite**. Tap into a network of thousands of pre-vetted, job-ready graduates from India's top colleges, accelerate your campus hiring cycles, and leverage data for **predictive hiring**—all through one seamless HRTech gateway.",
+      "cta": "Get Started",
+      "imageAlt": "Corporate hiring excellence"
+    },
+    "problem": {
+      "heading": "The Fresher Hiring Gap",
+      "headingAccent": "Why Building Early Talent Pipelines is Hard",
+      "items": [
+        {
+          "title": "Prolonged Hiring Cycles",
+          "description": "Traditional campus recruitment processes take months, delaying your talent acquisition and increasing opportunity costs."
+        },
+        {
+          "title": "Skill Deficiencies in Graduates",
+          "description": "Many freshers lack the practical, role-specific skills required for immediate contributions in fast-paced corporate environments."
+        },
+        {
+          "title": "Limited Access to Diverse Talent",
+          "description": "Sourcing from beyond elite institutions is challenging, restricting your reach to a broader, more inclusive candidate pool."
+        },
+        {
+          "title": "High Cost of Mis-Hires",
+          "description": "Without reliable vetting, the risks of poor cultural fit and low retention lead to expensive onboarding and training losses."
+        }
+      ],
+      "imageAlts": [
+        "Campus life challenges",
+        "Corporate world demands",
+        "Feeling lost in career choices",
+        "Student competition"
+      ]
+    },
+    "solution": {
+      "heading": "HireKarma Solution",
+      "items": [
+        {
+          "title": "Pre-Vetted Talent Pool",
+          "description": "Access pre-assessed, skill-verified candidate pools ready for interviews and immediate deployment."
+        },
+        {
+          "title": "AI-Powered Matching",
+          "description": "Smart candidate matching for optimal role and culture fit using advanced AI algorithms and predictive insights."
+        },
+        {
+          "title": "Analytics Dashboard",
+          "description": "Track recruitment ROI, diversity metrics, and hiring trends with intuitive, real-time analytics tools."
+        },
+        {
+          "title": "Seamless Integration",
+          "description": "Integrate effortlessly with your existing ATS, HR systems, and onboarding workflows for a frictionless experience."
+        }
+      ],
+      "imageAlt": "Corporate hiring excellence"
+    }
+  },
+  "skillDevelopment": {
+    "hero": {
+      "badge": "For Skill Development Organizations",
+      "heading": "Drive Impactful Upskilling",
+      "headingAccent": "and Employability",
+      "description": "HireKarma equips skilling centers and development organizations with **technology to maximize training impact**, track student outcomes, and connect participants to real hiring opportunities. Our scalable, modular platform integrates **learning, skill validation, and employer connections** to ensure programs deliver measurable career transitions.",
+      "cta": "Get Started",
+      "imageAlt": "Skill development success"
+    },
+    "problem": {
+      "heading": "Skill Development",
+      "headingAccent": "Why Enhancing Employability is Challenging",
+      "items": [
+        {
+          "title": "Skills Mismatch with Industry Needs",
+          "description": "Training programs often fail to align with evolving industry demands, resulting in graduates who lack the practical, job-ready competencies required by employers."
+        },
+        {
+          "title": "Inadequate Infrastructure and Access",
+          "description": "Limited training facilities, especially in rural or underserved areas, combined with language barriers and cultural norms, restrict participation and program reach."
+        },
+        {
+          "title": "Weak Career Guidance and Tracking",
+          "description": "Absence of robust systems for monitoring participant progress, providing personalized guidance, and measuring long-term employability outcomes hinders program effectiveness."
+        },
+        {
+          "title": "Limited Employer Linkages",
+          "description": "Insufficient connections to hiring partners and outdated curricula lead to low placement rates, perpetuating the gap between skill acquisition and actual job opportunities."
+        }
+      ],
+      "imageAlts": [
+        "Training infrastructure challenges",
+        "Industry alignment issues",
+        "Tracking and assessment gaps",
+        "Participant employability barriers"
+      ]
+    },
+    "solution": {
+      "heading": "HireKarma Solution",
+      "items": [
+        {
+          "title": "AI-Powered Skill Assessments",
+          "description": "Identify skill gaps through intelligent assessments and provide personalized learning paths to bridge mismatches with industry requirements."
+        },
+        {
+          "title": "Comprehensive Participant Tracking",
+          "description": "Digital onboarding, progress monitoring, and credentialing to ensure accessibility and effective guidance for all participants, including underserved communities."
+        },
+        {
+          "title": "Direct Employer Partnerships",
+          "description": "Forge strong linkages with top companies for internships, placements, and real-world projects, boosting employability and career transitions."
+        },
+        {
+          "title": "Real-Time Impact Dashboards",
+          "description": "Analytics-driven reporting on outcomes, ROI, and trends to demonstrate value to stakeholders and refine programs for maximum impact."
+        }
+      ],
+      "imageAlt": "Skill development success"
+    }
+  }
+}

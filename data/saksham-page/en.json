@@ -1,0 +1,201 @@
+{
+  "meta": {
+    "title": "Saksham | HireKarma",
+    "description": "Saksham is your AI companion that simulates real hiring experiences, identifies skill gaps, and accelerates your journey to employment."
+  },
+  "hero": {
+    "title": "Get Placement Ready",
+    "titleHighlight": "with AI Intelligence",
+    "description": "Saksham is your AI companion that simulates real hiring experiences, identifies skill gaps, and accelerates your journey to employment.",
+    "primaryCta": "Start My Simulation",
+    "secondaryCta": "See How It Works"
+  },
+  "problem": {
+    "title": "Addressing Employability Gaps",
+    "titleHighlight": "for Students",
+    "items": [
+      {
+        "id": "unclear-skill-readiness",
+        "icon": "book-open",
+        "title": "Unclear Skill Readiness",
+        "description": "Students lack visibility into their specific strengths and weaknesses, making it difficult to focus their efforts effectively."
+      },
+      {
+        "id": "fragmented-preparation",
+        "icon": "brain",
+        "title": "Fragmented Preparation",
+        "description": "Learning resources are scattered across platforms without structured guidance, creating an overwhelming experience."
+      },
+      {
+        "id": "manual-job-discovery",
+        "icon": "briefcase",
+        "title": "Manual Job Discovery",
+        "description": "Students spend hours searching and applying manually for relevant jobs, often missing opportunities that match their skills."
+      }
+    ]
+  },
+  "solution": {
+    "title": "One AI Platform",
+    "titleHighlight": "End-to-End Employability Solutions",
+    "description": "Saksham seamlessly integrates assessment, skill enhancement, and job placement into a unified AI-driven pipeline for maximum efficiency.",
+    "cta": "Discover Saksham Today",
+    "items": [
+      {
+        "id": "ai-resume-parser",
+        "icon": "upload",
+        "title": "AI Resume Parser",
+        "description": "Effortlessly upload or generate professional resumes with intelligent AI assistance for optimal formatting and content."
+      },
+      {
+        "id": "job-role-recommendation",
+        "icon": "briefcase",
+        "title": "Job Role Recommendation",
+        "description": "Intelligent matching of user profiles to ideal career roles based on skills, experience, and market trends."
+      },
+      {
+        "id": "placement-simulation",
+        "icon": "graduation-cap",
+        "title": "Placement Simulation",
+        "description": "Realistic multi-round interview simulations to prepare users for actual placement processes."
+      },
+      {
+        "id": "ai-evaluation-engine",
+        "icon": "bar-chart",
+        "title": "AI Evaluation Engine",
+        "description": "Advanced real-time scoring, detailed insights, and comprehensive readiness analytics for skill assessment."
+      },
+      {
+        "id": "curated-learning-feed",
+        "icon": "book-open",
+        "title": "Curated Learning Feed",
+        "description": "Personalized auto-generated learning playlists targeting identified weak areas for efficient skill improvement."
+      },
+      {
+        "id": "smart-job-agent",
+        "icon": "user-check",
+        "title": "Smart Job Agent",
+        "description": "Automated application to suitable job openings when user's readiness score reaches or exceeds 50%."
+      }
+    ]
+  },
+  "journey": {
+    "title": "Your AI-Driven",
+    "titleHighlight": "Path to Success",
+    "description": "Follow this seamless 7-step journey - from uploading your resume to automated job applications.",
+    "steps": [
+      {
+        "id": "upload-resume",
+        "step": 1,
+        "icon": "upload",
+        "title": "Upload Resume",
+        "description": "AI instantly extracts your skills, education, and experience from your resume."
+      },
+      {
+        "id": "view-job-suggestions",
+        "step": 2,
+        "icon": "briefcase",
+        "title": "View Job Suggestions",
+        "description": "Discover personalized job roles that match your skills and career goals."
+      },
+      {
+        "id": "enter-simulation",
+        "step": 3,
+        "icon": "graduation-cap",
+        "title": "Enter Simulation",
+        "description": "Experience realistic AI-powered aptitude and technical interview rounds."
+      },
+      {
+        "id": "instant-insights",
+        "step": 4,
+        "icon": "bar-chart",
+        "title": "Instant Insights",
+        "description": "Receive detailed readiness reports and scores across all categories."
+      },
+      {
+        "id": "learning-playlist",
+        "step": 5,
+        "icon": "book-open",
+        "title": "Learning Playlist",
+        "description": "Get curated tutorials and resources to improve your skill gaps."
+      },
+      {
+        "id": "track-progress",
+        "step": 6,
+        "icon": "line-chart",
+        "title": "Track Progress",
+        "description": "Monitor your improvement after multiple simulated attempts."
+      },
+      {
+        "id": "auto-applications",
+        "step": 7,
+        "icon": "user-check",
+        "title": "Auto Applications",
+        "description": "AI applies to relevant job openings once your readiness reaches ≥50%."
+      }
+    ]
+  },
+  "advantages": {
+    "titleBefore": "Why Choose ",
+    "titleHighlight": "Saksham",
+    "titleAfter": "?",
+    "description": "Discover how AI-driven insights and personalized recommendations prepare you for real interviews and accelerate your career success.",
+    "items": [
+      {
+        "id": "real-time-evaluation",
+        "icon": "brain",
+        "title": "Real-Time AI Evaluation",
+        "description": "Each simulation is scored via domain-trained neural models for accurate and real-time performance insights."
+      },
+      {
+        "id": "personalized-learning",
+        "icon": "line-chart",
+        "title": "Personalized Learning Recommendations",
+        "description": "Weak areas are automatically identified, and dynamic playlists are curated from trusted public repositories."
+      },
+      {
+        "id": "automated-progression",
+        "icon": "zap",
+        "title": "Automated Career Progression",
+        "description": "When you're ready, AI matches and applies to suitable roles instantly-saving you time and effort."
+      }
+    ]
+  },
+  "analytics": {
+    "headingBefore": "Measure. ",
+    "headingHighlight": "Improve.",
+    "headingAfter": " Excel.",
+    "description": "Track your progress with AI-driven insights. From readiness evaluation to skill assessment and improvement, get a clear picture of your journey and excel in your career.",
+    "readinessLabel": "Current Readiness:",
+    "readinessSuffix": "%",
+    "readinessImprovedBefore": "Your readiness has improved by",
+    "readinessImprovedAfter": "since last simulation.",
+    "skillsTitle": "Skill Competencies",
+    "timelineTitle": "Improvement Timeline",
+    "microcopyTopSkill": "Top skill:",
+    "microcopyNeedsFocus": "Needs focus:",
+    "readiness": 76,
+    "improvement": 26,
+    "skills": [
+      { "skill": "Logical Reasoning", "score": 90 },
+      { "skill": "Technical Aptitude", "score": 75 },
+      { "skill": "Communication", "score": 60 },
+      { "skill": "Problem Solving", "score": 85 },
+      { "skill": "Quantitative", "score": 70 }
+    ],
+    "progressTimeline": [
+      { "week": "Week 1", "readiness": 40 },
+      { "week": "Week 2", "readiness": 52 },
+      { "week": "Week 3", "readiness": 64 },
+      { "week": "Week 4", "readiness": 76 }
+    ],
+    "topSkill": "Logical Reasoning",
+    "needsFocus": "Communication"
+  },
+  "cta": {
+    "titleBefore": "Take the First Step Toward Your ",
+    "titleHighlight": "Career.",
+    "description": "Begin your AI-powered career readiness journey today - real simulations, personalized insights, and instant results.",
+    "primaryCta": "Begin Free Simulation",
+    "secondaryCta": "View Student Reports"
+  }
+}

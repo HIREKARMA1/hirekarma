@@ -5,10 +5,16 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 import { Calendar, MapPin } from "lucide-react";
 
+import { useAboutLocale } from "@/contexts/AboutLocaleContext";
+import { localizeNumerals } from "@/lib/i18n/localizeNumerals";
+
 const JourneySection: React.FC = () => {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme } = useTheme();
   const [imageLoaded, setImageLoaded] = useState(false);
+  const { locale, content } = useAboutLocale();
+  const journey = content.story.journey;
+  const common = content.common;
 
   useEffect(() => {
     setMounted(true);
@@ -17,8 +23,6 @@ const JourneySection: React.FC = () => {
   return (
     <div className="relative content-container py-16 sm:py-20">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center min-h-[80vh]">
-        
-        {/* Left Content - Text */}
         <div className="order-1 lg:order-1 space-y-8 text-center lg:text-left">
           <div className="space-y-6">
             <h2
@@ -28,7 +32,7 @@ const JourneySection: React.FC = () => {
                   : "text-gray-900"
               }`}
             >
-              The Journey Begins
+              {journey.title}
               <span
                 className={`block mt-2 text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-medium ${
                   mounted && resolvedTheme === "dark"
@@ -36,7 +40,7 @@ const JourneySection: React.FC = () => {
                     : "text-blue-600"
                 }`}
               >
-                Our Founding Story
+                {journey.subtitle}
               </span>
             </h2>
           </div>
@@ -48,7 +52,7 @@ const JourneySection: React.FC = () => {
                 : "text-gray-600"
             }`}
           >
-            Founded in{" "}
+            {journey.beforeFounded}
             <strong
               className={`${
                 mounted && resolvedTheme === "dark"
@@ -56,36 +60,32 @@ const JourneySection: React.FC = () => {
                   : "text-gray-700"
               }`}
             >
-              Bhubaneswar in 2020
-            </strong>{" "}
-            by{" "}
-            <strong
-              className={`${
-                mounted && resolvedTheme === "dark"
-                  ? "text-gray-200"
-                  : "text-gray-700"
-              }`}
-            >
-              Sohan Kumar Dey
-            </strong>{" "}
-            and{" "}
-            <strong
-              className={`${
-                mounted && resolvedTheme === "dark"
-                  ? "text-gray-200"
-                  : "text-gray-700"
-              }`}
-            >
-              Rohit Samantaray
+              {journey.founded}
             </strong>
-            , HireKarma arose from a passion to bridge the gap between academia
-            and industry, particularly for students in tier-2 and tier-3
-            colleges across India.
+            {journey.afterFoundedBeforeFounder1}
+            <strong
+              className={`${
+                mounted && resolvedTheme === "dark"
+                  ? "text-gray-200"
+                  : "text-gray-700"
+              }`}
+            >
+              {journey.founder1}
+            </strong>
+            {journey.betweenFounders}
+            <strong
+              className={`${
+                mounted && resolvedTheme === "dark"
+                  ? "text-gray-200"
+                  : "text-gray-700"
+              }`}
+            >
+              {journey.founder2}
+            </strong>
+            {journey.afterFounders}
           </p>
 
-          {/* Key Info Cards */}
           <div className="grid grid-cols-2 gap-4 max-w-md mx-auto lg:mx-0">
-            {/* Founded Card */}
             <div
               className={`p-5 rounded-2xl border shadow-sm ${
                 mounted && resolvedTheme === "dark"
@@ -109,7 +109,7 @@ const JourneySection: React.FC = () => {
                         : "text-gray-700"
                     }`}
                   >
-                    Founded
+                    {journey.foundedCard.label}
                   </h3>
                 </div>
                 <div
@@ -119,7 +119,7 @@ const JourneySection: React.FC = () => {
                       : "text-blue-600"
                   }`}
                 >
-                  2020
+                  {localizeNumerals(journey.foundedCard.value, locale)}
                 </div>
                 <div
                   className={`text-sm ${
@@ -128,12 +128,11 @@ const JourneySection: React.FC = () => {
                       : "text-gray-600"
                   }`}
                 >
-                  Bhubaneswar, India
+                  {journey.foundedCard.detail}
                 </div>
               </div>
             </div>
 
-            {/* Focus Card */}
             <div
               className={`p-5 rounded-2xl border shadow-sm ${
                 mounted && resolvedTheme === "dark"
@@ -157,7 +156,7 @@ const JourneySection: React.FC = () => {
                         : "text-gray-700"
                     }`}
                   >
-                    Focus
+                    {journey.focusCard.label}
                   </h3>
                 </div>
                 <div
@@ -167,7 +166,7 @@ const JourneySection: React.FC = () => {
                       : "from-purple-600 to-pink-600"
                   }`}
                 >
-                  Tier-2 & 3
+                  {localizeNumerals(journey.focusCard.value, locale)}
                 </div>
                 <div
                   className={`text-sm ${
@@ -176,19 +175,18 @@ const JourneySection: React.FC = () => {
                       : "text-gray-600"
                   }`}
                 >
-                  Colleges across India
+                  {journey.focusCard.detail}
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Right Content - Hero GIF */}
         <div className="order-2 lg:order-2 flex justify-center mt-8 lg:mt-0">
           <div className="relative w-full sm:w-[90%] md:w-[80%] lg:w-[95%] xl:w-[100%] h-[250px] sm:h-[320px] md:h-[420px] lg:h-[520px] xl:h-[600px] overflow-hidden rounded-2xl">
             <Image
               src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/about-us/founding-story1.gif"
-              alt="HireKarma founding story journey animation"
+              alt={journey.imageAlt}
               fill
               priority
               quality={85}
@@ -199,7 +197,6 @@ const JourneySection: React.FC = () => {
               onLoad={() => setImageLoaded(true)}
             />
 
-            {/* Loading skeleton */}
             {!imageLoaded && (
               <div
                 className={`absolute inset-0 rounded-2xl animate-pulse ${
@@ -210,7 +207,6 @@ const JourneySection: React.FC = () => {
               />
             )}
 
-            {/* Fallback */}
             <div
               className={`absolute inset-0 flex items-center justify-center rounded-2xl hidden ${
                 mounted && resolvedTheme === "dark"
@@ -251,7 +247,7 @@ const JourneySection: React.FC = () => {
                       : "text-gray-600"
                   }`}
                 >
-                  Animation not supported
+                  {common.animationNotSupported}
                 </p>
                 <p
                   className={`text-xs sm:text-sm ${
@@ -260,13 +256,12 @@ const JourneySection: React.FC = () => {
                       : "text-gray-500"
                   }`}
                 >
-                  Your browser doesn&apos;t support image playback
+                  {common.browserNoImagePlayback}
                 </p>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   );

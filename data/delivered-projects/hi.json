@@ -1,0 +1,27 @@
+{
+  "heading": "वितरित परियोजनाएँ",
+  "subheading": "वास्तविक ग्राहकों के लिए वितरित सॉफ़्टवेयर",
+  "description": "हमारे ग्राहकों के लिए वितरित सॉफ़्टवेयर समाधानों की एक झलक, जो प्रदर्शन, सुरक्षा और रखरखाव को ध्यान में रखकर बनाए गए हैं।",
+  "viewMore": "और देखें",
+  "viewProject": "परियोजना देखें",
+  "items": [
+    {
+      "id": "project-1",
+      "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/delivered-projects/AmaGopalpur.png",
+      "title": "अमा गोपालपुर निर्वाचन क्षेत्र डैशबोर्ड",
+      "clientType": "सरकारी",
+      "subtitle": "सार्वजनिक शासन डैशबोर्ड",
+      "description": "अमा गोपालपुर निर्वाचन क्षेत्र की प्रगति ट्रैक करने के लिए एक डैशबोर्ड।",
+      "href": "https://mlagopalpur.org/"
+    },
+    {
+      "id": "project-2",
+      "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/delivered-projects/AARIAH.png",
+      "title": "AARIAH",
+      "clientType": "निजी",
+      "subtitle": "AARIAH NGO के लिए पोर्टल",
+      "description": "AARIAH NGO के कार्य और परियोजनाओं को प्रदर्शित करने के लिए एक पोर्टल।",
+      "href": "https://aariah.vercel.app/"
+    }
+  ]
+}
