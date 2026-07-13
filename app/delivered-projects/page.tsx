@@ -1,5 +1,5 @@
-import DeliveredProjectsSection from "@/components/home/DeliveredProjectsSection";
+import { redirect } from "next/navigation";
 
 export default function DeliveredProjectsPage() {
-  return <DeliveredProjectsSection showViewMore={false} />;
+  redirect("/other-initiatives");
 }

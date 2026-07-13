@@ -42,6 +42,11 @@
       "label": "ସମ୍ବଳ",
       "href": "/resources"
     },
+    "initiatives": {
+      "id": "initiatives",
+      "label": "ଅନ୍ୟ ପଦକ୍ଷେପ",
+      "href": "/other-initiatives"
+    },
     "about": {
       "id": "about",
       "label": "ଆମ ବିଷୟରେ",

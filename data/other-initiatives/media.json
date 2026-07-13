@@ -1,0 +1,30 @@
+{
+  "hero": {
+    "tabletSlides": [
+      {
+        "src": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/delivered-projects/AmaGopalpur.png",
+        "alt": {
+          "en": "AMA Gopalpur constituency development dashboard",
+          "hi": "AMA Gopalpur निर्वाचन क्षेत्र विकास डैशबोर्ड",
+          "od": "AMA Gopalpur ନିର୍ବାଚନ ମଣ୍ଡଳୀ ବିକାଶ ଡ୍ୟାସବୋର୍ଡ"
+        }
+      },
+      {
+        "src": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/delivered-projects/AARIAH.png",
+        "alt": {
+          "en": "AARIAH NGO portal",
+          "hi": "AARIAH NGO पोर्टल",
+          "od": "AARIAH NGO ପୋର୍ଟାଲ"
+        }
+      },
+      {
+        "src": "https://hirekarma.s3.us-east-1.amazonaws.com/Products/disha.png",
+        "alt": {
+          "en": "Custom enterprise software dashboard",
+          "hi": "कस्टम एंटरप्राइज़ सॉफ़्टवेयर डैशबोर्ड",
+          "od": "କଷ୍ଟମ ଏଣ୍ଟରପ୍ରାଇଜ ସଫ୍ଟୱେର ଡ୍ୟାସବୋର୍ଡ"
+        }
+      }
+    ]
+  }
+}

@@ -42,6 +42,11 @@
       "label": "संसाधन",
       "href": "/resources"
     },
+    "initiatives": {
+      "id": "initiatives",
+      "label": "अन्य पहल",
+      "href": "/other-initiatives"
+    },
     "about": {
       "id": "about",
       "label": "हमारे बारे में",

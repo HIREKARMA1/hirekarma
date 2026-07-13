@@ -1,0 +1,288 @@
+{
+  "meta": {
+    "title": "अन्य पहल | HireKarma",
+    "description": "HireKarma द्वारा क्लाइंट परियोजनाएँ और IT सेवाएँ — कस्टम सॉफ़्टवेयर, AI समाधान, डिजिटल शासन और एंटरप्राइज़ प्लेटफ़ॉर्म।"
+  },
+  "hero": {
+    "label": "अन्य पहल",
+    "heading": {
+      "part1": "क्लाइंट परियोजनाएँ।",
+      "gradient": "IT उत्कृष्टता।",
+      "part2": "प्रभाव के साथ वितरित।"
+    },
+    "description": "अपने उत्पाद सूट से परे, HireKarma सरकारों, संस्थानों और उद्यमों के लिए कस्टम सॉफ़्टवेयर डिज़ाइन और वितरित करता है — सार्वजनिक शासन डैशबोर्ड से लेकर AI-संचालित प्लेटफ़ॉर्म तक।",
+    "footerNote": "डिस्कवरी, डिज़ाइन, विकास, तैनाती और निरंतर समर्थन में एंड-टू-एंड डिलीवरी।"
+  },
+  "projectsSection": {
+    "label": "क्लाइंट परियोजनाएँ",
+    "heading": {
+      "part1": "ग्राहकों के लिए निर्मित।",
+      "gradient": "प्रोडक्शन में सिद्ध।",
+      "part2": ""
+    },
+    "description": "वास्तविक संगठनों के लिए वितरित सॉफ़्टवेयर समाधानों का चयन — प्रदर्शन, सुरक्षा और दीर्घकालिक रखरखाव के लिए इंजीनियर।",
+    "items": [
+      {
+        "id": "ama-gopalpur",
+        "accentKey": "amagopalpur",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/delivered-projects/AmaGopalpur.png",
+        "title": "AMA Gopalpur निर्वाचन क्षेत्र डैशबोर्ड",
+        "clientType": "सरकारी",
+        "subtitle": "निर्वाचन क्षेत्र विकास प्लेटफ़ॉर्म",
+        "description": "AMA Gopalpur निर्वाचन क्षेत्र में विभागीय संपत्तियों, परियोजनाओं और विकास प्रगति को मैप करने वाला इंटरैक्टिव जियो-विज़ुअल डैशबोर्ड — पारदर्शी शासन और नागरिक दृश्यता के लिए।",
+        "href": "https://mlagopalpur.org/",
+        "cta": {
+          "label": "लाइव प्रोजेक्ट देखें",
+          "href": "https://mlagopalpur.org/",
+          "variant": "primary"
+        }
+      },
+      {
+        "id": "aariah",
+        "accentKey": "credentials",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/delivered-projects/AARIAH.png",
+        "title": "AARIAH",
+        "clientType": "NGO / निजी",
+        "subtitle": "NGO प्रभाव पोर्टल",
+        "description": "AARIAH NGO के कार्यक्रमों, प्रभाव कहानियों और सामुदायिक पहलों को प्रदर्शित करने के लिए एक आधुनिक वेब पोर्टल।",
+        "href": "https://aariah.vercel.app/",
+        "cta": {
+          "label": "लाइव प्रोजेक्ट देखें",
+          "href": "https://aariah.vercel.app/",
+          "variant": "primary"
+        }
+      },
+      {
+        "id": "janasamadhan",
+        "accentKey": "janasamadhan",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Products/disha.png",
+        "title": "जनसमाधान",
+        "clientType": "सरकारी",
+        "subtitle": "सार्वजनिक शिकायत निवारण",
+        "description": "नागरिकों के लिए शिकायत दर्ज, ट्रैक और निवारण के लिए डिजिटल प्लेटफ़ॉर्म — विभाग-वार रूटिंग और पारदर्शी स्थिति डैशबोर्ड के साथ।",
+        "href": "/contact",
+        "cta": {
+          "label": "इस परियोजना पर चर्चा करें",
+          "href": "/contact",
+          "variant": "outline"
+        }
+      }
+    ]
+  },
+  "servicesSection": {
+    "label": "IT सेवाएँ",
+    "heading": {
+      "part1": "हम क्या बनाते हैं।",
+      "gradient": "हम कैसे वितरित करते हैं।",
+      "part2": ""
+    },
+    "description": "अवधारणा से प्रोडक्शन तक — हमारे उत्पाद इकोसिस्टम के समान इंजीनियरिंग मानकों के साथ पूर्ण-स्टैक IT क्षमताएँ।",
+    "items": [
+      {
+        "id": "custom-software",
+        "accentKey": "disha",
+        "icon": "building",
+        "title": "कस्टम सॉफ़्टवेयर विकास",
+        "subtitle": "अनुकूलित एंटरप्राइज़ समाधान",
+        "description": "आपके वर्कफ़्लो, अनुपालन और स्केल आवश्यकताओं के अनुसार बनाए गए बेस्पोक वेब और बैकएंड सिस्टम।",
+        "features": [
+          {
+            "text": "आवश्यकता विश्लेषण और समाधान आर्किटेक्चर"
+          },
+          {
+            "text": "स्केलेबल, रखरखाव योग्य कोडबेस"
+          },
+          {
+            "text": "API-फर्स्ट और एकीकरण-तैयार डिज़ाइन"
+          },
+          {
+            "text": "माइलस्टोन-आधारित एजाइल डिलीवरी"
+          }
+        ]
+      },
+      {
+        "id": "web-mobile",
+        "accentKey": "lakshya",
+        "icon": "cpu",
+        "title": "वेब और मोबाइल एप्लिकेशन",
+        "subtitle": "आधुनिक डिजिटल अनुभव",
+        "description": "प्रदर्शन, पहुँच और ब्रांड स्थिरता के साथ रेस्पॉन्सिव वेब ऐप और मोबाइल-तैयार इंटरफेस।",
+        "features": [
+          {
+            "text": "Next.js, React और आधुनिक फ्रंटएंड स्टैक"
+          },
+          {
+            "text": "क्रॉस-डिवाइस रेस्पॉन्सिव UI"
+          },
+          {
+            "text": "प्रदर्शन और SEO अनुकूलन"
+          },
+          {
+            "text": "डिज़ाइन सिस्टम और कंपोनेंट लाइब्रेरी"
+          }
+        ]
+      },
+      {
+        "id": "ai-ml",
+        "accentKey": "solviq",
+        "icon": "shield-check",
+        "title": "AI और मशीन लर्निंग",
+        "subtitle": "बुद्धिमान ऑटोमेशन",
+        "description": "रिज़्यूमे विश्लेषण, मूल्यांकन, मैचिंग इंजन और भविष्य कहने वाली एनालिटिक्स।",
+        "features": [
+          {
+            "text": "LLM एकीकरण और कस्टम AI वर्कफ़्लो"
+          },
+          {
+            "text": "स्किल मूल्यांकन और स्कोरिंग मॉडल"
+          },
+          {
+            "text": "डेटा पाइपलाइन और मॉडल तैनाती"
+          },
+          {
+            "text": "मानव-सत्यापन प्रणाली"
+          }
+        ]
+      },
+      {
+        "id": "digital-governance",
+        "accentKey": "amagopalpur",
+        "icon": "map-pin",
+        "title": "डिजिटल शासन",
+        "subtitle": "सार्वजनिक क्षेत्र प्लेटफ़ॉर्म",
+        "description": "नागरिक पोर्टल, शिकायत प्रणाली, निर्वाचन क्षेत्र डैशबोर्ड और विभागीय वर्कफ़्लो।",
+        "features": [
+          {
+            "text": "जियो-विज़ुअल डैशबोर्ड और संपत्ति मैपिंग"
+          },
+          {
+            "text": "शिकायत ट्रैकिंग और SLA वर्कफ़्लो"
+          },
+          {
+            "text": "अधिकारियों के लिए भूमिका-आधारित पहुँच"
+          },
+          {
+            "text": "ऑडिट ट्रेल और रिपोर्टिंग मॉड्यूल"
+          }
+        ]
+      },
+      {
+        "id": "hr-campus-tech",
+        "accentKey": "shortlisted",
+        "icon": "graduation-cap",
+        "title": "HR और कैंपस तकनीक",
+        "subtitle": "टैलेंट और प्लेसमेंट सिस्टम",
+        "description": "विश्वविद्यालयों और उद्यमों के लिए प्लेसमेंट प्रबंधन और हायरिंग ऑटोमेशन।",
+        "features": [
+          {
+            "text": "कैंपस ड्राइव और आवेदन प्रबंधन"
+          },
+          {
+            "text": "रिक्रूटर शॉर्टलिस्टिंग वर्कफ़्लो"
+          },
+          {
+            "text": "TPO और HR टीमों के लिए एनालिटिक्स"
+          },
+          {
+            "text": "मौजूदा ERP/LMS एकीकरण"
+          }
+        ]
+      },
+      {
+        "id": "cloud-devops",
+        "accentKey": "credentials",
+        "icon": "briefcase",
+        "title": "क्लाउड और DevOps",
+        "subtitle": "विश्वसनीय इन्फ्रास्ट्रक्चर",
+        "description": "सुरक्षित, उच्च-उपलब्धता प्रोडक्शन सिस्टम के लिए क्लाउड तैनाती, CI/CD और मॉनिटरिंग।",
+        "features": [
+          {
+            "text": "AWS और क्लाउड-नेटिव तैनाती"
+          },
+          {
+            "text": "CI/CD और स्वचालित परीक्षण पाइपलाइन"
+          },
+          {
+            "text": "सुरक्षा हार्डनिंग और बैकअप रणनीति"
+          },
+          {
+            "text": "प्रदर्शन मॉनिटरिंग और स्केलिंग"
+          }
+        ]
+      }
+    ]
+  },
+  "impact": {
+    "label": "हमारा डिलीवरी प्रभाव",
+    "heading": {
+      "part1": "विश्वसनीय डिलीवरी।",
+      "gradient": "मापने योग्य परिणाम।",
+      "part2": ""
+    },
+    "description": "सरकारी निर्वाचन क्षेत्रों से NGO और उद्यमों तक — हम वास्तविक दुनिया में काम करने वाला सॉफ़्टवेयर शिप करते हैं।",
+    "stats": [
+      {
+        "id": "projects",
+        "icon": "briefcase",
+        "value": "50+",
+        "label": "क्लाइंट परियोजनाएँ",
+        "accentKey": "primary"
+      },
+      {
+        "id": "sectors",
+        "icon": "building",
+        "value": "6+",
+        "label": "उद्योग क्षेत्र",
+        "accentKey": "disha"
+      },
+      {
+        "id": "governance",
+        "icon": "map-pin",
+        "value": "3+",
+        "label": "सरकारी प्लेटफ़ॉर्म",
+        "accentKey": "janasamadhan"
+      },
+      {
+        "id": "uptime",
+        "icon": "shield-check",
+        "value": "99.9%",
+        "label": "प्लेटफ़ॉर्म अपटाइम",
+        "accentKey": "solviq"
+      },
+      {
+        "id": "support",
+        "icon": "users",
+        "value": "24/7",
+        "label": "डिलीवरी समर्थन",
+        "accentKey": "lakshya"
+      }
+    ]
+  },
+  "cta": {
+    "heading": {
+      "part1": "कोई परियोजना है?",
+      "gradient": "आइए मिलकर बनाएं।",
+      "part2": ""
+    },
+    "description": "चाहे आपको शासन डैशबोर्ड, NGO पोर्टल या पूर्ण एंटरप्राइज़ प्लेटफ़ॉर्म चाहिए — हमारी टीम तैयार है।",
+    "buttons": [
+      {
+        "label": "संपर्क करें",
+        "href": "/contact",
+        "variant": "primary"
+      },
+      {
+        "label": "हमारे उत्पाद देखें",
+        "href": "/products",
+        "variant": "outline"
+      }
+    ]
+  },
+  "homeSection": {
+    "heading": "अन्य पहल",
+    "subheading": "क्लाइंट परियोजनाएँ और IT सेवाएँ",
+    "description": "अपने उत्पाद सूट से परे, सरकारों, NGO और उद्यमों के लिए वितरित कस्टम सॉफ़्टवेयर और हमारी IT सेवाएँ देखें।",
+    "viewMore": "सभी पहल देखें",
+    "viewProject": "परियोजना देखें"
+  }
+}

@@ -6,9 +6,9 @@ import Link from "next/link";
 
 import DeliveredProjectCard from "./DeliveredProjectCard";
 import {
-  DeliveredProjectsLocaleProvider,
-  useDeliveredProjectsLocale,
-} from "@/contexts/DeliveredProjectsLocaleContext";
+  OtherInitiativesLocaleProvider,
+  useOtherInitiativesLocale,
+} from "@/contexts/OtherInitiativesLocaleContext";
 
 interface DeliveredProjectsSectionProps {
   showViewMore?: boolean;
@@ -17,9 +17,10 @@ interface DeliveredProjectsSectionProps {
 
 function DeliveredProjectsSectionContent({
   showViewMore = true,
-  viewMoreHref = "/delivered-projects",
+  viewMoreHref = "/other-initiatives",
 }: DeliveredProjectsSectionProps) {
-  const { content } = useDeliveredProjectsLocale();
+  const { content } = useOtherInitiativesLocale();
+  const { homeSection, projectsSection } = content;
   const [mounted, setMounted] = React.useState(false);
   const { resolvedTheme } = useTheme();
 
@@ -28,6 +29,7 @@ function DeliveredProjectsSectionContent({
   }, []);
 
   const isDark = mounted && resolvedTheme === "dark";
+  const previewItems = projectsSection.items.slice(0, 3);
 
   return (
     <section className="relative content-container py-12 sm:py-16 md:py-20">
@@ -37,13 +39,13 @@ function DeliveredProjectsSectionContent({
             isDark ? "text-gray-100" : "text-gray-900"
           }`}
         >
-          {content.heading}
+          {homeSection.heading}
           <span
             className={`block mt-2 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium ${
               isDark ? "text-emerald-400" : "text-emerald-600"
             }`}
           >
-            {content.subheading}
+            {homeSection.subheading}
           </span>
         </h2>
 
@@ -52,12 +54,12 @@ function DeliveredProjectsSectionContent({
             isDark ? "text-gray-300" : "text-gray-600"
           }`}
         >
-          {content.description}
+          {homeSection.description}
         </p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
-        {content.items.map((item) => (
+        {previewItems.map((item) => (
           <DeliveredProjectCard
             key={item.id}
             image={item.image}
@@ -66,7 +68,7 @@ function DeliveredProjectsSectionContent({
             subtitle={item.subtitle}
             description={item.description}
             href={item.href}
-            viewProjectLabel={content.viewProject}
+            viewProjectLabel={homeSection.viewProject}
           />
         ))}
       </div>
@@ -81,7 +83,7 @@ function DeliveredProjectsSectionContent({
                 : "border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white"
             }`}
           >
-            <span className="relative z-10">{content.viewMore}</span>
+            <span className="relative z-10">{homeSection.viewMore}</span>
             <svg
               className="relative z-10 ml-2 w-4 h-4"
               fill="none"
@@ -109,9 +111,9 @@ function DeliveredProjectsSectionContent({
 const DeliveredProjectsSection: React.FC<DeliveredProjectsSectionProps> = (
   props
 ) => (
-  <DeliveredProjectsLocaleProvider>
+  <OtherInitiativesLocaleProvider>
     <DeliveredProjectsSectionContent {...props} />
-  </DeliveredProjectsLocaleProvider>
+  </OtherInitiativesLocaleProvider>
 );
 
 export default DeliveredProjectsSection;

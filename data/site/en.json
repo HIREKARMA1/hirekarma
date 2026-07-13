@@ -42,6 +42,11 @@
       "label": "Resources",
       "href": "/resources"
     },
+    "initiatives": {
+      "id": "initiatives",
+      "label": "Other Initiatives",
+      "href": "/other-initiatives"
+    },
     "about": {
       "id": "about",
       "label": "About",

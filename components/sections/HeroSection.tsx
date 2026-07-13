@@ -30,6 +30,10 @@ const FutureReadySection = dynamic(() => import('../home/FutureReadySection'), {
 //   loading: () => <div className="min-h-screen" />,
 //   ssr: true
 // });
+const DeliveredProjectsSection = dynamic(() => import('../home/DeliveredProjectsSection'), {
+  loading: () => <div className="min-h-[400px]" />,
+  ssr: true
+});
 
 const Testimonials = dynamic(() => import('../home/Testimonials'), {
   loading: () => <div className="min-h-screen" />,
@@ -72,9 +76,9 @@ const HeroSection: React.FC = () => {
           <ProductsSection />
         </Suspense>
         
-        {/* <Suspense fallback={<div className="min-h-screen" />}>
+        <Suspense fallback={<div className="min-h-[400px]" />}>
           <DeliveredProjectsSection />
-        </Suspense> */}
+        </Suspense>
         
         <Suspense fallback={<div className="min-h-screen" />}>
           <ProblemStatement />

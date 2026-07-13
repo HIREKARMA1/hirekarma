@@ -1,0 +1,288 @@
+{
+  "meta": {
+    "title": "ଅନ୍ୟ ପଦକ୍ଷେପ | HireKarma",
+    "description": "HireKarma ଦ୍ୱାରା କ୍ଲାଇଏଣ୍ଟ ପ୍ରକଳ୍ପ ଏବଂ IT ସେବା — କଷ୍ଟମ ସଫ୍ଟୱେର, AI ସମାଧାନ, ଡିଜିଟାଲ ଶାସନ ଏବଂ ଏଣ୍ଟରପ୍ରାଇଜ ପ୍ଲାଟଫର୍ମ।"
+  },
+  "hero": {
+    "label": "ଅନ୍ୟ ପଦକ୍ଷେପ",
+    "heading": {
+      "part1": "କ୍ଲାଇଏଣ୍ଟ ପ୍ରକଳ୍ପ।",
+      "gradient": "IT ଉତ୍କୃଷ୍ଟତା।",
+      "part2": "ପ୍ରଭାବ ସହିତ ବିତରଣ।"
+    },
+    "description": "ଆମ ଉତ୍ପାଦ ସୁଟ୍ ବ୍ୟତୀତ, HireKarma ସରକାର, ଅନୁଷ୍ଠାନ ଏବଂ ଉଦ୍ୟୋଗଗୁଡ଼ିକ ପାଇଁ କଷ୍ଟମ ସଫ୍ଟୱେର ଡିଜାଇନ୍ ଏବଂ ବିତରଣ କରେ।",
+    "footerNote": "ଆବିଷ୍କାର, ଡିଜାଇନ୍, ବିକାଶ, ତନାଖତ ଏବଂ ନିରନ୍ତର ସହାୟତା ପର୍ଯ୍ୟନ୍ତ ସମ୍ପୂର୍ଣ୍ଣ ବିତରଣ।"
+  },
+  "projectsSection": {
+    "label": "କ୍ଲାଇଏଣ୍ଟ ପ୍ରକଳ୍ପ",
+    "heading": {
+      "part1": "ଗ୍ରାହକଙ୍କ ପାଇଁ ନିର୍ମିତ।",
+      "gradient": "ପ୍ରୋଡକ୍ସନରେ ପ୍ରମାଣିତ।",
+      "part2": ""
+    },
+    "description": "ପ୍ରକୃତ ସଂଗଠନଗୁଡ଼ିକ ପାଇଁ ବିତରିତ ସଫ୍ଟୱେର ସମାଧାନଗୁଡ଼ିକର ଚୟନ।",
+    "items": [
+      {
+        "id": "ama-gopalpur",
+        "accentKey": "amagopalpur",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/delivered-projects/AmaGopalpur.png",
+        "title": "AMA Gopalpur ନିର୍ବାଚନ ମଣ୍ଡଳୀ ଡ୍ୟାସବୋର୍ଡ",
+        "clientType": "ସରକାରୀ",
+        "subtitle": "ନିର୍ବାଚନ ମଣ୍ଡଳୀ ବିକାଶ ପ୍ଲାଟଫର୍ମ",
+        "description": "AMA Gopalpur ନିର୍ବାଚନ ମଣ୍ଡଳୀରେ ବିଭାଗୀୟ ସମ୍ପତ୍ତି, ପ୍ରକଳ୍ପ ଏବଂ ବିକାଶ ପ୍ରଗତି ମ୍ୟାପ୍ କରୁଥିବା ଇଣ୍ଟରଆକ୍ଟିଭ ଜିଓ-ଭିଜୁଆଲ ଡ୍ୟାସବୋର୍ଡ।",
+        "href": "https://mlagopalpur.org/",
+        "cta": {
+          "label": "ଲାଇଭ୍ ପ୍ରକଳ୍ପ ଦେଖନ୍ତୁ",
+          "href": "https://mlagopalpur.org/",
+          "variant": "primary"
+        }
+      },
+      {
+        "id": "aariah",
+        "accentKey": "credentials",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/delivered-projects/AARIAH.png",
+        "title": "AARIAH",
+        "clientType": "NGO / ବ୍ୟକ୍ତିଗତ",
+        "subtitle": "NGO ପ୍ରଭାବ ପୋର୍ଟାଲ",
+        "description": "AARIAH NGO ପାଇଁ କାର୍ଯ୍ୟକ୍ରମ, ପ୍ରଭାବ କାହାଣୀ ଏବଂ ସମୁଦାୟ ପଦକ୍ଷେପ ପ୍ରଦର୍ଶନ ପୋର୍ଟାଲ।",
+        "href": "https://aariah.vercel.app/",
+        "cta": {
+          "label": "ଲାଇଭ୍ ପ୍ରକଳ୍ପ ଦେଖନ୍ତୁ",
+          "href": "https://aariah.vercel.app/",
+          "variant": "primary"
+        }
+      },
+      {
+        "id": "janasamadhan",
+        "accentKey": "janasamadhan",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Products/disha.png",
+        "title": "ଜନସମାଧାନ",
+        "clientType": "ସରକାରୀ",
+        "subtitle": "ଜନସାଧାରଣ ଅଭିଯୋଗ ନିବାରଣ",
+        "description": "ନାଗରିକମାନଙ୍କ ପାଇଁ ଅଭିଯୋଗ ଦାଖଲ, ଟ୍ରାକ୍ ଏବଂ ନିବାରଣ ପାଇଁ ଡିଜିଟାଲ ପ୍ଲାଟଫର୍ମ।",
+        "href": "/contact",
+        "cta": {
+          "label": "ଏହି ପ୍ରକଳ୍ପ ବିଷୟରେ ଆଲୋଚନା କରନ୍ତୁ",
+          "href": "/contact",
+          "variant": "outline"
+        }
+      }
+    ]
+  },
+  "servicesSection": {
+    "label": "IT ସେବା",
+    "heading": {
+      "part1": "ଆମେ କଣ ନିର୍ମାଣ କରୁ।",
+      "gradient": "ଆମେ କିପରି ବିତରଣ କରୁ।",
+      "part2": ""
+    },
+    "description": "ଧାରଣାରୁ ପ୍ରୋଡକ୍ସନ୍ ପର୍ଯ୍ୟନ୍ତ — ଆମ ଉତ୍ପାଦ ଇକୋସିଷ୍ଟମର ସମାନ ଇଞ୍ଜିନିୟରିଂ ମାନଦଣ୍ଡ ସହିତ ସମ୍ପୂର୍ଣ୍ଣ-ଷ୍ଟାକ୍ IT ସାମର୍ଥ୍ୟ।",
+    "items": [
+      {
+        "id": "custom-software",
+        "accentKey": "disha",
+        "icon": "building",
+        "title": "କଷ୍ଟମ ସଫ୍ଟୱେର ବିକାଶ",
+        "subtitle": "ଅନୁକୂଳିତ ଏଣ୍ଟରପ୍ରାଇଜ ସମାଧାନ",
+        "description": "ଆପଣଙ୍କ ୱର୍କଫ୍ଲୋ, ଅନୁପାଳନ ଏବଂ ସ୍କେଲ୍ ଆବଶ୍ୟକତା ଅନୁଯାୟୀ ତିଆରି ହୋଇଥିବା ବେସ୍ପୋକ୍ ୱେବ ଏବଂ ବ୍ୟାକେଣ୍ଡ ସିଷ୍ଟମ୍।",
+        "features": [
+          {
+            "text": "ଆବଶ୍ୟକତା ବିଶ୍ଳେଷଣ ଏବଂ ସମାଧାନ ଆର୍କିଟେକ୍ଚର"
+          },
+          {
+            "text": "ସ୍କେଲେବଲ, ରକ୍ଷଣାବେକ୍ଷଣଯୋଗ୍ୟ କୋଡବେସ"
+          },
+          {
+            "text": "API-ପ୍ରଥମ ଏବଂ ଏକୀକରଣ-ପ୍ରସ୍ତୁତ ଡିଜାଇନ୍"
+          },
+          {
+            "text": "ମାଇଲଷ୍ଟୋନ୍-ଆଧାରିତ ଏଜାଇଲ ବିତରଣ"
+          }
+        ]
+      },
+      {
+        "id": "web-mobile",
+        "accentKey": "lakshya",
+        "icon": "cpu",
+        "title": "ୱେବ ଏବଂ ମୋବାଇଲ ଆପ୍ଲିକେସନ୍",
+        "subtitle": "ଆଧୁନିକ ଡିଜିଟାଲ ଅଭିଜ୍ଞତା",
+        "description": "ପ୍ରଦର୍ଶନ, ପ୍ରବେଶଯୋଗ୍ୟତା ଏବଂ ବ୍ରାଣ୍ଡ ସ୍ଥିରତା ସହିତ ରେସ୍ପନସିଭ ୱେବ ଆପ୍।",
+        "features": [
+          {
+            "text": "Next.js, React ଏବଂ ଆଧୁନିକ ଫ୍ରଣ୍ଟଏଣ୍ଡ ଷ୍ଟାକ୍"
+          },
+          {
+            "text": "କ୍ରସ୍-ଡିଭାଇସ ରେସ୍ପନସିଭ UI"
+          },
+          {
+            "text": "ପ୍ରଦର୍ଶନ ଏବଂ SEO ଅନୁକୂଳନ"
+          },
+          {
+            "text": "ଡିଜାଇନ୍ ସିଷ୍ଟମ ଏବଂ କମ୍ପୋନେଣ୍ଟ ଲାଇବ୍ରେରି"
+          }
+        ]
+      },
+      {
+        "id": "ai-ml",
+        "accentKey": "solviq",
+        "icon": "shield-check",
+        "title": "AI ଏବଂ ମେସିନ ଲର୍ନିଂ",
+        "subtitle": "ବୁଦ୍ଧିମାନ ଅଟୋମେସନ୍",
+        "description": "ରିଜ୍ୟୁମେ ବିଶ୍ଳେଷଣ, ମୂଲ୍ୟାଙ୍କନ, ମ୍ୟାଚିଂ ଇଞ୍ଜିନ ଏବଂ ପୂର୍ବାନୁମାନ ଆନାଲିଟିକ୍ସ।",
+        "features": [
+          {
+            "text": "LLM ଏକୀକରଣ ଏବଂ କଷ୍ଟମ AI ୱର୍କଫ୍ଲୋ"
+          },
+          {
+            "text": "ଦକ୍ଷତା ମୂଲ୍ୟାଙ୍କନ ଏବଂ ସ୍କୋରିଂ ମଡେଲ୍"
+          },
+          {
+            "text": "ଡାଟା ପାଇପଲାଇନ ଏବଂ ମଡେଲ୍ ତନାଖତ"
+          },
+          {
+            "text": "ମାନବ-ଯାଞ୍ଚ ପ୍ରଣାଳୀ"
+          }
+        ]
+      },
+      {
+        "id": "digital-governance",
+        "accentKey": "amagopalpur",
+        "icon": "map-pin",
+        "title": "ଡିଜିଟାଲ ଶାସନ",
+        "subtitle": "ଜନସାଧାରଣ କ୍ଷେତ୍ର ପ୍ଲାଟଫର୍ମ",
+        "description": "ନାଗରିକ ପୋର୍ଟାଲ, ଅଭିଯୋଗ ପ୍ରଣାଳୀ, ନିର୍ବାଚନ ମଣ୍ଡଳୀ ଡ୍ୟାସବୋର୍ଡ ଏବଂ ବିଭାଗୀୟ ୱର୍କଫ୍ଲୋ।",
+        "features": [
+          {
+            "text": "ଜିଓ-ଭିଜୁଆଲ ଡ୍ୟାସବୋର୍ଡ ଏବଂ ସମ୍ପତ୍ତି ମ୍ୟାପିଂ"
+          },
+          {
+            "text": "ଅଭିଯୋଗ ଟ୍ରାକିଂ ଏବଂ SLA ୱର୍କଫ୍ଲୋ"
+          },
+          {
+            "text": "ଅଧିକାରୀମାନଙ୍କ ପାଇଁ ଭୂମିକା-ଆଧାରିତ ପ୍ରବେଶ"
+          },
+          {
+            "text": "ଅଡିଟ୍ ଟ୍ରେଲ ଏବଂ ରିପୋର୍ଟିଂ ମଡ୍ୟୁଲ"
+          }
+        ]
+      },
+      {
+        "id": "hr-campus-tech",
+        "accentKey": "shortlisted",
+        "icon": "graduation-cap",
+        "title": "HR ଏବଂ କ୍ୟାମ୍ପସ୍ ଟେକ୍ନୋଲୋଜି",
+        "subtitle": "ଟାଲେଣ୍ଟ ଏବଂ ପ୍ଲେସମେଣ୍ଟ ସିଷ୍ଟମ୍",
+        "description": "ବିଶ୍ୱବିଦ୍ୟାଳୟ ଏବଂ ଉଦ୍ୟୋଗଗୁଡ଼ିକ ପାଇଁ ପ୍ଲେସମେଣ୍ଟ ପରିଚାଳନା ଏବଂ ହାୟରିଂ ଅଟୋମେସନ୍।",
+        "features": [
+          {
+            "text": "କ୍ୟାମ୍ପସ୍ ଡ୍ରାଇଭ ଏବଂ ଆବେଦନ ପରିଚାଳନା"
+          },
+          {
+            "text": "ରିକ୍ରୁଟର ସର୍ଟଲିଷ୍ଟିଂ ୱର୍କଫ୍ଲୋ"
+          },
+          {
+            "text": "TPO ଏବଂ HR ଦଳମାନଙ୍କ ପାଇଁ ଆନାଲିଟିକ୍ସ"
+          },
+          {
+            "text": "ବିଦ୍ୟମାନ ERP/LMS ଏକୀକରଣ"
+          }
+        ]
+      },
+      {
+        "id": "cloud-devops",
+        "accentKey": "credentials",
+        "icon": "briefcase",
+        "title": "କ୍ଲାଉଡ୍ ଏବଂ DevOps",
+        "subtitle": "ବିଶ୍ୱାସଯୋଗ୍ୟ ଇନ୍ଫ୍ରାଷ୍ଟ୍ରକ୍ଚର",
+        "description": "ସୁରକ୍ଷିତ, ଉଚ୍ଚ-ଉପଲବ୍ଧତା ପ୍ରୋଡକ୍ସନ ସିଷ୍ଟମ୍ ପାଇଁ କ୍ଲାଉଡ୍ ତନାଖତ, CI/CD ଏବଂ ମନିଟରିଂ।",
+        "features": [
+          {
+            "text": "AWS ଏବଂ କ୍ଲାଉଡ୍-ନେଟିଭ ତନାଖତ"
+          },
+          {
+            "text": "CI/CD ଏବଂ ସ୍ୱୟଂଚାଳିତ ପରୀକ୍ଷା ପାଇପଲାଇନ"
+          },
+          {
+            "text": "ସୁରକ୍ଷା ହାର୍ଡେନିଂ ଏବଂ ବ୍ୟାକଅପ୍ କୌଶଳ"
+          },
+          {
+            "text": "ପ୍ରଦର୍ଶନ ମନିଟରିଂ ଏବଂ ସ୍କେଲିଂ"
+          }
+        ]
+      }
+    ]
+  },
+  "impact": {
+    "label": "ଆମର ବିତରଣ ପ୍ରଭାବ",
+    "heading": {
+      "part1": "ବିଶ୍ୱାସଯୋଗ୍ୟ ବିତରଣ।",
+      "gradient": "ମାପଯୋଗ୍ୟ ଫଳାଫଳ।",
+      "part2": ""
+    },
+    "description": "ସରକାରୀ ନିର୍ବାଚନ ମଣ୍ଡଳୀରୁ NGO ଏବଂ ଉଦ୍ୟୋଗଗୁଡ଼ିକ ପର୍ଯ୍ୟନ୍ତ — ଆମେ ପ୍ରକୃତ ଦୁନିଆରେ କାମ କରୁଥିବା ସଫ୍ଟୱେର ବିତରଣ କରୁ।",
+    "stats": [
+      {
+        "id": "projects",
+        "icon": "briefcase",
+        "value": "50+",
+        "label": "କ୍ଲାଇଏଣ୍ଟ ପ୍ରକଳ୍ପ",
+        "accentKey": "primary"
+      },
+      {
+        "id": "sectors",
+        "icon": "building",
+        "value": "6+",
+        "label": "ଶିଳ୍ପ କ୍ଷେତ୍ର",
+        "accentKey": "disha"
+      },
+      {
+        "id": "governance",
+        "icon": "map-pin",
+        "value": "3+",
+        "label": "ସରକାରୀ ପ୍ଲାଟଫର୍ମ",
+        "accentKey": "janasamadhan"
+      },
+      {
+        "id": "uptime",
+        "icon": "shield-check",
+        "value": "99.9%",
+        "label": "ପ୍ଲାଟଫର୍ମ ଅପଟାଇମ",
+        "accentKey": "solviq"
+      },
+      {
+        "id": "support",
+        "icon": "users",
+        "value": "24/7",
+        "label": "ବିତରଣ ସହାୟତା",
+        "accentKey": "lakshya"
+      }
+    ]
+  },
+  "cta": {
+    "heading": {
+      "part1": "କୌଣସି ପ୍ରକଳ୍ପ ଅଛି?",
+      "gradient": "ଏକାଠି ନିର୍ମାଣ କରିବା।",
+      "part2": ""
+    },
+    "description": "ଶାସନ ଡ୍ୟାସବୋର୍ଡ, NGO ପୋର୍ଟାଲ କିମ୍ବା ସମ୍ପୂର୍ଣ୍ଣ ଏଣ୍ଟରପ୍ରାଇଜ ପ୍ଲାଟଫର୍ମ — ଆମ ଦଳ ପ୍ରସ୍ତୁତ।",
+    "buttons": [
+      {
+        "label": "ଯୋଗାଯୋଗ କରନ୍ତୁ",
+        "href": "/contact",
+        "variant": "primary"
+      },
+      {
+        "label": "ଆମର ଉତ୍ପାଦ ଦେଖନ୍ତୁ",
+        "href": "/products",
+        "variant": "outline"
+      }
+    ]
+  },
+  "homeSection": {
+    "heading": "ଅନ୍ୟ ପଦକ୍ଷେପ",
+    "subheading": "କ୍ଲାଇଏଣ୍ଟ ପ୍ରକଳ୍ପ ଏବଂ IT ସେବା",
+    "description": "ଆମ ଉତ୍ପାଦ ସୁଟ୍ ବ୍ୟତୀତ, ସରକାର, NGO ଏବଂ ଉଦ୍ୟୋଗଗୁଡ଼ିକ ପାଇଁ ବିତରିତ କଷ୍ଟମ ସଫ୍ଟୱେର ଏବଂ IT ସେବା ଦେଖନ୍ତୁ।",
+    "viewMore": "ସମସ୍ତ ପଦକ୍ଷେପ ଦେଖନ୍ତୁ",
+    "viewProject": "ପ୍ରକଳ୍ପ ଦେଖନ୍ତୁ"
+  }
+}

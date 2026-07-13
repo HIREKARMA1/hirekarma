@@ -23,6 +23,7 @@ export interface SiteNavContent {
   home: NavLinkItem;
   products: NavDropdown;
   resources: NavLinkItem;
+  initiatives: NavLinkItem;
   about: NavDropdown;
   contact: NavLinkItem;
   language: string;

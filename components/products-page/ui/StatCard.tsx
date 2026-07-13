@@ -1,7 +1,7 @@
 "use client";
 
 import { theme } from "@/config/theme";
-import { useProductsLocale } from "@/contexts/ProductsLocaleContext";
+import type { Locale } from "@/types/products-page";
 
 import type { ImpactStat } from "@/types/products-page";
 import { IconBadge, getProductIcon } from "./IconBadge";
@@ -19,10 +19,10 @@ const STAT_PALETTE = [
 interface StatCardProps {
   stat: ImpactStat;
   colorIndex: number;
+  locale: Locale;
 }
 
-export function StatCard({ stat, colorIndex }: StatCardProps) {
-  const { locale } = useProductsLocale();
+export function StatCard({ stat, colorIndex, locale }: StatCardProps) {
   const Icon = getProductIcon(stat.icon);
   const color = STAT_PALETTE[colorIndex % STAT_PALETTE.length];
 

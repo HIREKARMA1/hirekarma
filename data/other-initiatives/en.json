@@ -1,0 +1,240 @@
+{
+  "meta": {
+    "title": "Other Initiatives | HireKarma",
+    "description": "Client projects and IT services by HireKarma — custom software, AI solutions, digital governance, and enterprise platforms built for measurable outcomes."
+  },
+  "hero": {
+    "label": "OTHER INITIATIVES",
+    "heading": {
+      "part1": "Client projects.",
+      "gradient": "IT excellence.",
+      "part2": "Delivered with impact."
+    },
+    "description": "Beyond our product suite, HireKarma designs and delivers custom software for governments, institutions, and enterprises — from public governance dashboards to AI-powered platforms.",
+    "footerNote": "End-to-end delivery across discovery, design, development, deployment, and ongoing support."
+  },
+  "projectsSection": {
+    "label": "CLIENT PROJECTS",
+    "heading": {
+      "part1": "Built for clients.",
+      "gradient": "Proven in production.",
+      "part2": ""
+    },
+    "description": "A selection of software solutions we have delivered for real organizations — engineered for performance, security, and long-term maintainability.",
+    "items": [
+      {
+        "id": "ama-gopalpur",
+        "accentKey": "amagopalpur",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/delivered-projects/AmaGopalpur.png",
+        "title": "AMA Gopalpur Constituency Dashboard",
+        "clientType": "Government",
+        "subtitle": "Constituency Development Platform",
+        "description": "An interactive geo-visual dashboard mapping departmental assets, projects, and development progress across the AMA Gopalpur constituency — enabling transparent governance and citizen visibility.",
+        "href": "https://mlagopalpur.org/",
+        "cta": {
+          "label": "View Live Project",
+          "href": "https://mlagopalpur.org/",
+          "variant": "primary"
+        }
+      },
+      {
+        "id": "aariah",
+        "accentKey": "credentials",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/delivered-projects/AARIAH.png",
+        "title": "AARIAH",
+        "clientType": "NGO / Private",
+        "subtitle": "NGO Impact Portal",
+        "description": "A modern web portal for the AARIAH NGO to showcase programs, impact stories, and community initiatives — designed for clarity, accessibility, and donor engagement.",
+        "href": "https://aariah.vercel.app/",
+        "cta": {
+          "label": "View Live Project",
+          "href": "https://aariah.vercel.app/",
+          "variant": "primary"
+        }
+      },
+      {
+        "id": "janasamadhan",
+        "accentKey": "janasamadhan",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Products/disha.png",
+        "title": "Janasamadhan",
+        "clientType": "Government",
+        "subtitle": "Public Grievance Redressal",
+        "description": "A digital grievance redressal platform for citizens to file, track, and resolve public complaints with department-wise routing, escalation workflows, and transparent status dashboards.",
+        "href": "/contact",
+        "cta": {
+          "label": "Discuss This Project",
+          "href": "/contact",
+          "variant": "outline"
+        }
+      }
+    ]
+  },
+  "servicesSection": {
+    "label": "IT SERVICES",
+    "heading": {
+      "part1": "What we build.",
+      "gradient": "How we deliver.",
+      "part2": ""
+    },
+    "description": "Full-stack IT capabilities to take your idea from concept to production — with the same engineering rigor behind our own product ecosystem.",
+    "items": [
+      {
+        "id": "custom-software",
+        "accentKey": "disha",
+        "icon": "building",
+        "title": "Custom Software Development",
+        "subtitle": "Tailored Enterprise Solutions",
+        "description": "Bespoke web and backend systems built around your workflows, compliance needs, and scale requirements.",
+        "features": [
+          { "text": "Requirements discovery & solution architecture" },
+          { "text": "Scalable, maintainable codebases" },
+          { "text": "API-first and integration-ready design" },
+          { "text": "Agile delivery with milestone-based releases" }
+        ]
+      },
+      {
+        "id": "web-mobile",
+        "accentKey": "lakshya",
+        "icon": "cpu",
+        "title": "Web & Mobile Applications",
+        "subtitle": "Modern Digital Experiences",
+        "description": "Responsive web apps and mobile-ready interfaces with performance, accessibility, and brand consistency at the core.",
+        "features": [
+          { "text": "Next.js, React, and modern frontend stacks" },
+          { "text": "Cross-device responsive UI" },
+          { "text": "Performance and SEO optimization" },
+          { "text": "Design systems and component libraries" }
+        ]
+      },
+      {
+        "id": "ai-ml",
+        "accentKey": "solviq",
+        "icon": "shield-check",
+        "title": "AI & Machine Learning",
+        "subtitle": "Intelligent Automation",
+        "description": "AI-powered features including resume analysis, assessments, matching engines, and predictive analytics tailored to your domain.",
+        "features": [
+          { "text": "LLM integration and custom AI workflows" },
+          { "text": "Skill assessment and scoring models" },
+          { "text": "Data pipelines and model deployment" },
+          { "text": "Human-in-the-loop validation systems" }
+        ]
+      },
+      {
+        "id": "digital-governance",
+        "accentKey": "amagopalpur",
+        "icon": "map-pin",
+        "title": "Digital Governance",
+        "subtitle": "Public Sector Platforms",
+        "description": "Citizen-facing portals, grievance systems, constituency dashboards, and department workflows for transparent public service delivery.",
+        "features": [
+          { "text": "Geo-visual dashboards and asset mapping" },
+          { "text": "Complaint tracking and SLA workflows" },
+          { "text": "Role-based access for officials" },
+          { "text": "Audit trails and reporting modules" }
+        ]
+      },
+      {
+        "id": "hr-campus-tech",
+        "accentKey": "shortlisted",
+        "icon": "graduation-cap",
+        "title": "HR & Campus Technology",
+        "subtitle": "Talent & Placement Systems",
+        "description": "Placement management, recruiter coordination, student profiling, and hiring automation for universities and enterprises.",
+        "features": [
+          { "text": "Campus drive and application management" },
+          { "text": "Recruiter shortlisting workflows" },
+          { "text": "Analytics for TPOs and HR teams" },
+          { "text": "Integration with existing ERP/LMS tools" }
+        ]
+      },
+      {
+        "id": "cloud-devops",
+        "accentKey": "credentials",
+        "icon": "briefcase",
+        "title": "Cloud & DevOps",
+        "subtitle": "Reliable Infrastructure",
+        "description": "Cloud deployment, CI/CD pipelines, monitoring, and infrastructure setup for secure, high-availability production systems.",
+        "features": [
+          { "text": "AWS and cloud-native deployments" },
+          { "text": "CI/CD and automated testing pipelines" },
+          { "text": "Security hardening and backup strategies" },
+          { "text": "Performance monitoring and scaling" }
+        ]
+      }
+    ]
+  },
+  "impact": {
+    "label": "OUR DELIVERY IMPACT",
+    "heading": {
+      "part1": "Trusted delivery.",
+      "gradient": "Measurable outcomes.",
+      "part2": ""
+    },
+    "description": "From government constituencies to NGOs and enterprises — we ship software that works in the real world.",
+    "stats": [
+      {
+        "id": "projects",
+        "icon": "briefcase",
+        "value": "50+",
+        "label": "Client Projects",
+        "accentKey": "primary"
+      },
+      {
+        "id": "sectors",
+        "icon": "building",
+        "value": "6+",
+        "label": "Industry Sectors",
+        "accentKey": "disha"
+      },
+      {
+        "id": "governance",
+        "icon": "map-pin",
+        "value": "3+",
+        "label": "Govt. Platforms",
+        "accentKey": "janasamadhan"
+      },
+      {
+        "id": "uptime",
+        "icon": "shield-check",
+        "value": "99.9%",
+        "label": "Platform Uptime",
+        "accentKey": "solviq"
+      },
+      {
+        "id": "support",
+        "icon": "users",
+        "value": "24/7",
+        "label": "Delivery Support",
+        "accentKey": "lakshya"
+      }
+    ]
+  },
+  "cta": {
+    "heading": {
+      "part1": "Have a project in mind?",
+      "gradient": "Let's build it together.",
+      "part2": ""
+    },
+    "description": "Whether you need a governance dashboard, an NGO portal, or a full-scale enterprise platform — our team is ready to scope, design, and deliver.",
+    "buttons": [
+      {
+        "label": "Get in Touch",
+        "href": "/contact",
+        "variant": "primary"
+      },
+      {
+        "label": "Explore Our Products",
+        "href": "/products",
+        "variant": "outline"
+      }
+    ]
+  },
+  "homeSection": {
+    "heading": "Other Initiatives",
+    "subheading": "Client Projects & IT Services",
+    "description": "Beyond our product suite, explore the custom software we have delivered for governments, NGOs, and enterprises — and the IT services we offer end-to-end.",
+    "viewMore": "View All Initiatives",
+    "viewProject": "View Project"
+  }
+}

@@ -136,6 +136,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
     { type: 'link', item: { label: nav.home.label, href: nav.home.href, icon: LayoutGrid } },
     { type: 'dropdown', item: productsItem },
     { type: 'link', item: { label: nav.resources.label, href: nav.resources.href, icon: Compass } },
+    { type: 'link', item: { label: nav.initiatives.label, href: nav.initiatives.href, icon: Briefcase } },
     { type: 'dropdown', item: aboutItem },
     { type: 'link', item: { label: nav.contact.label, href: nav.contact.href, icon: Handshake } },
   ];
