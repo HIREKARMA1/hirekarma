@@ -12,19 +12,19 @@
     },
     "description": "छह प्लेटफ़ॉर्म जो कैंपस हायरिंग, AI करियर तत्परता, वर्चुअल प्लेसमेंट और डिजिटल सार्वजनिक सेवाओं को कवर करते हैं - मापने योग्य परिणामों के लिए बनाए गए।",
     "primaryCta": {
-      "label": "दिशा देखें",
-      "hrefKey": "disha",
+      "label": "सभी छह उत्पाद देखें",
+      "hrefKey": "productStack",
       "variant": "primary"
     },
     "secondaryCta": {
-      "label": "सोल्विक AI देखें",
-      "hrefKey": "solviq",
+      "label": "हमसे बात करें",
+      "hrefKey": "contact",
       "variant": "outline"
     },
     "footerNote": "कॉलेज, छात्र और कंपनियों के लिए बनाया गया। खुले मानकों पर आधारित। स्केल के लिए तैयार।"
   },
   "partners": {
-    "text": "कॉलेज, कंपनियों और सरकारी भागीदारों द्वारा विश्वसनीय"
+    "text": "उन भागीदारों के साथ निर्माण जो हमारे मिशन को साझा करते हैं।"
   },
   "productsSection": {
     "label": "हमारे उत्पाद",
@@ -144,10 +144,10 @@
     ]
   },
   "testimonials": {
-    "label": "प्रशंसापत्र",
+    "label": "मैदान से आवाज़ें",
     "heading": {
-      "part1": "लोग हमें पसंद करते हैं,",
-      "gradient": "आप जानते हैं।",
+      "part1": "उन टीमों का भरोसा जो",
+      "gradient": "हायर और प्लेस करती हैं।",
       "part2": ""
     },
     "items": [
@@ -204,11 +204,10 @@
   },
   "cta": {
     "heading": { "part1": "एक इकोसिस्टम।", "gradient": "हर परिणाम, सत्यापित।", "part2": "" },
-    "description": "चाहे आप प्लेसमेंट चलाएं, छात्रों को तैयार करें, या सार्वजनिक सेवाएं दें - HireKarma उत्पाद मिलकर मापने योग्य परिणाम देते हैं।",
+    "description": "चाहे आप प्लेसमेंट चलाएं, छात्रों को तैयार करें, या सार्वजनिक सेवाएं दें — पूरा HireKarma स्टैक तैयार है।",
     "buttons": [
-      { "label": "दिशा देखें", "hrefKey": "disha", "variant": "primary" },
-      { "label": "सोल्विक AI देखें", "hrefKey": "solviq", "variant": "outline" },
-      { "label": "लक्ष्य देखें", "hrefKey": "lakshya", "variant": "outline" }
+      { "label": "सभी उत्पाद देखें", "hrefKey": "productStack", "variant": "primary" },
+      { "label": "हमसे बात करें", "hrefKey": "contact", "variant": "outline" }
     ]
   }
 }

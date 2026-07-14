@@ -3,6 +3,11 @@
     "tabletSlides": [
       {
         "src": "https://hirekarma.s3.us-east-1.amazonaws.com/Products/disha.png",
+        "label": {
+          "en": "DISHA",
+          "hi": "दिशा",
+          "od": "ଦିଶା"
+        },
         "alt": {
           "en": "DISHA campus recruitment dashboard",
           "hi": "DISHA कैंपस भर्ती डैशबोर्ड",
@@ -11,6 +16,11 @@
       },
       {
         "src": "https://hirekarma.s3.us-east-1.amazonaws.com/Products/solviq.jpeg",
+        "label": {
+          "en": "SolviqAI",
+          "hi": "सोल्विक AI",
+          "od": "ସୋଲ୍ଭିକ୍ AI"
+        },
         "alt": {
           "en": "SolviqAI resume checker dashboard",
           "hi": "SolviqAI रिज़्यूमे चेकर डैशबोर्ड",
@@ -19,6 +29,11 @@
       },
       {
         "src": "https://hirekarma.s3.us-east-1.amazonaws.com/Products/Lakshya.png",
+        "label": {
+          "en": "Lakshya",
+          "hi": "लक्ष्य",
+          "od": "ଲକ୍ଷ୍ୟ"
+        },
         "alt": {
           "en": "Lakshya campus hiring platform",
           "hi": "Lakshya कैंपस हायरिंग प्लेटफ़ॉर्म",
@@ -27,10 +42,41 @@
       },
       {
         "src": "https://hirekarma.s3.us-east-1.amazonaws.com/Products/Shortlisted.png",
+        "label": {
+          "en": "Shortlisted",
+          "hi": "शॉर्टलिस्टेड",
+          "od": "ଶର୍ଟଲିଷ୍ଟେଡ୍"
+        },
         "alt": {
           "en": "Shortlisted AI virtual placement cell",
           "hi": "Shortlisted AI वर्चुअल प्लेसमेंट सेल",
           "od": "Shortlisted AI ଭର୍ଚୁଆଲ ପ୍ଲେସମେଣ୍ଟ ସେଲ"
+        }
+      },
+      {
+        "src": "https://hirekarma.s3.us-east-1.amazonaws.com/Products/eabhijog.png",
+        "label": {
+          "en": "Janasamadhan",
+          "hi": "जनसमाधान",
+          "od": "ଜନସମାଧାନ"
+        },
+        "alt": {
+          "en": "Janasamadhan grievance redressal platform",
+          "hi": "जनसमाधान शिकायत निवारण प्लेटफ़ॉर्म",
+          "od": "ଜନସମାଧାନ ଅଭିଯୋଗ ନିବାରଣ ପ୍ଲାଟଫର୍ମ"
+        }
+      },
+      {
+        "src": "https://hirekarma.s3.us-east-1.amazonaws.com/Products/amagopalpur.png",
+        "label": {
+          "en": "AMA Gopalpur",
+          "hi": "AMA गोपालपुर",
+          "od": "AMA ଗୋପାଲପୁର"
+        },
+        "alt": {
+          "en": "AMA Gopalpur constituency development platform",
+          "hi": "AMA गोपालपुर निर्वाचन क्षेत्र विकास प्लेटफ़ॉर्म",
+          "od": "AMA ଗୋପାଲପୁର ନିର୍ବାଚନ ମଣ୍ଡଳୀ ବିକାଶ ପ୍ଲାଟଫର୍ମ"
         }
       }
     ]

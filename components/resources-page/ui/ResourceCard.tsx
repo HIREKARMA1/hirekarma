@@ -11,7 +11,7 @@ const cardShell: Record<
   { light: string; dark: string; ring: string }
 > = {
   default: {
-    light: "border-blue-200 bg-linear-to-b from-blue-50 to-white",
+    light: "border-[rgba(27,82,164,0.28)] bg-linear-to-b from-[#f6f8fb] to-white",
     dark: "dark:border-blue-400/30 dark:bg-linear-to-b dark:from-blue-950/40 dark:to-[#0c1018]",
     ring: "ring-blue-100 dark:ring-blue-500/10",
   },

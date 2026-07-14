@@ -26,13 +26,13 @@ const accentDefaults: Record<
   }
 > = {
   blue: {
-    badgeDark: 'bg-blue-600/70 text-white border border-blue-700/60',
-    badgeLight: 'bg-blue-100/80 text-blue-800 border border-blue-200/70',
+    badgeDark: 'bg-[#1b52a4]/70 text-white border border-blue-700/60',
+    badgeLight: 'bg-[rgba(27,82,164,0.08)]/80 text-blue-800 border border-[rgba(27,82,164,0.28)]/70',
     borderDark: 'border-blue-700/30',
-    borderLight: 'border-blue-200/70',
+    borderLight: 'border-[rgba(27,82,164,0.28)]/70',
     bgDark: 'bg-blue-900/15',
-    bgLight: 'bg-blue-50/40',
-    overlayFrom: 'from-blue-500/10',
+    bgLight: 'bg-[#f6f8fb]/40',
+    overlayFrom: 'from-[#f6f8fb]0/10',
     overlayTo: 'to-cyan-500/10',
   },
   emerald: {
@@ -52,7 +52,7 @@ const accentDefaults: Record<
     borderLight: 'border-purple-200/70',
     bgDark: 'bg-purple-900/15',
     bgLight: 'bg-purple-50/40',
-    overlayFrom: 'from-purple-500/10',
+    overlayFrom: 'from-[rgba(9,136,85,0.08)]0/10',
     overlayTo: 'to-indigo-500/10',
   },
   orange: {

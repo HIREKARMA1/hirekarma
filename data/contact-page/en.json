@@ -1,58 +1,67 @@
 {
   "meta": {
     "title": "Contact | HireKarma",
-    "description": "Get in touch with HireKarma for student opportunities, campus hiring, or institutional partnerships."
+    "description": "Talk to HireKarma about campus hiring, student opportunities, partnerships, or product demos."
   },
   "hero": {
-    "title": "Get In Touch",
-    "subtitle": "Let's Build the Future Together",
-    "description": "Whether you are a student seeking opportunities, a corporate leader sourcing talent, or an institution enhancing employability, we are here to help. Reach out and let us connect to explore how HireKarma can transform your journey."
+    "label": "Contact",
+    "title": "Let’s start a",
+    "titleHighlight": "conversation.",
+    "description": "Students, campuses, employers, and partners — tell us what you need. We’ll respond with clarity and next steps.",
+    "tagline": "Usually replies within one business day.",
+    "formJump": "Jump to form"
   },
   "form": {
-    "title": "Send Us a Message",
+    "title": "Send a message",
+    "subtitle": "Share a few details and our team will get back to you.",
     "name": {
-      "label": "Full Name",
+      "label": "Full name",
       "placeholder": "Your full name"
     },
     "email": {
-      "label": "Email Address",
-      "placeholder": "your@email.com"
+      "label": "Work or campus email",
+      "placeholder": "you@email.com"
     },
     "message": {
-      "label": "Your Message",
-      "placeholder": "Tell us about your inquiry or how we can help..."
+      "label": "How can we help?",
+      "placeholder": "Partnership, hiring, product demo, careers — tell us briefly…"
     },
-    "submit": "Send Message",
-    "submitting": "Sending...",
-    "errorInline": "Failed to send. Please try again later."
+    "submit": "Send message",
+    "submitting": "Sending…",
+    "errorInline": "Something went wrong. Please try again.",
+    "note": "By submitting, you agree we may contact you about this inquiry."
   },
   "toasts": {
-    "success": "Message sent successfully"
+    "success": "Message sent — we’ll be in touch soon."
   },
   "methods": {
-    "title": "The Ways to Reach Us",
-    "subtitle": "Choose Your Preferred Channel",
+    "title": "Reach us directly",
+    "subtitle": "Prefer email, phone, or a visit? Pick what works.",
     "methods": [
       {
         "id": "email",
-        "title": "Email Support",
-        "description": "For general inquiries, partnerships, or technical support.",
+        "title": "Email",
+        "description": "Partnerships, support, and general questions.",
         "value": "info@hirekarma.in",
-        "href": "mailto:hello@hirekarma.com"
+        "href": "mailto:info@hirekarma.in"
       },
       {
         "id": "phone",
-        "title": "Phone Assistance",
-        "description": "For immediate help or scheduling a call.",
+        "title": "Phone",
+        "description": "Quick calls and meeting requests.",
         "value": "+91 91243 64762",
-        "href": "tel:+919876543210"
+        "href": "tel:+919124364762"
       },
       {
         "id": "location",
-        "title": "Office Location",
-        "description": "Visit our headquarters in Bhubaneswar for in-person meetings.",
-        "value": "2nd Floor, SS Niwas, Hirekarma Private Limited, Raghunathpur, Bhubaneswar, Raghunathpurjali, Odisha 751024"
+        "title": "Head office",
+        "description": "Meet us in Bhubaneswar.",
+        "value": "2nd Floor, SS Niwas, Raghunathpur, Bhubaneswar, Odisha 751024"
       }
-    ]
+    ],
+    "officesCta": {
+      "label": "See all offices",
+      "href": "/about-us/locations"
+    }
   }
 }

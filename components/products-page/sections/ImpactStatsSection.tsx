@@ -10,15 +10,16 @@ export function ImpactStatsSection() {
   const { impact } = content;
 
   return (
-    <section className="relative border-t border-slate-200 py-14 sm:py-16 lg:py-20 dark:border-white/10">
+    <section className="relative border-t border-[#e6e8ec] bg-[#f6f8fb] py-8 sm:py-10 lg:py-12">
       <div className="relative z-10 content-container">
         <ProductsSectionHeader
           label={impact.label}
           heading={impact.heading}
           accentColor={theme.colors.orange}
+          className="mb-6 max-w-2xl space-y-2 sm:mb-8 sm:space-y-3"
         />
 
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5 lg:grid-cols-5 lg:gap-5">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-5">
           {impact.stats.map((stat, index) => (
             <StatCard key={stat.id} stat={stat} colorIndex={index} />
           ))}

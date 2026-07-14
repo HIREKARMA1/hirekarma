@@ -1,0 +1,671 @@
+{
+  "meta": {
+    "title": "Impact | HireKarma",
+    "description": "Case studies and success stories from colleges, students, partners, and clients growing with HireKarma."
+  },
+  "hero": {
+    "label": "Case studies",
+    "heading": "Real impact.",
+    "headingAccent": "Proven outcomes.",
+    "description": "We partner with colleges, empower students, and deliver for employers — stories that show what HireKarma changes on the ground.\nFrom campus placement and skill readiness to consulting engagements, every case study here is a measurable outcome — not a brochure claim.",
+    "primaryCta": {
+      "label": "Browse stories",
+      "href": "#browse-stories"
+    },
+    "secondaryCta": {
+      "label": "Talk to us",
+      "href": "/contact"
+    },
+    "note": "Stories from institutions, learners, partners, and clients who grow with HireKarma.",
+    "overviewTitle": "Case studies overview",
+    "overviewStats": [
+      {
+        "id": "stories",
+        "value": "120+",
+        "label": "Stories published"
+      },
+      {
+        "id": "colleges",
+        "value": "50+",
+        "label": "College partners"
+      },
+      {
+        "id": "corporates",
+        "value": "30+",
+        "label": "Corporate partners"
+      },
+      {
+        "id": "students",
+        "value": "15K+",
+        "label": "Students impacted"
+      }
+    ],
+    "divisionsTitle": "Stories by focus",
+    "divisions": [
+      {
+        "id": "recruitment",
+        "label": "Recruitment",
+        "count": "42",
+        "icon": "briefcase"
+      },
+      {
+        "id": "skills",
+        "label": "Skill development",
+        "count": "28",
+        "icon": "graduation"
+      },
+      {
+        "id": "consulting",
+        "label": "IT consulting",
+        "count": "18",
+        "icon": "cpu"
+      },
+      {
+        "id": "opensource",
+        "label": "Open source & DPI",
+        "count": "12",
+        "icon": "globe"
+      },
+      {
+        "id": "staffing",
+        "label": "Staff augmentation",
+        "count": "10",
+        "icon": "users"
+      },
+      {
+        "id": "training",
+        "label": "Pre-placement training",
+        "count": "10",
+        "icon": "book"
+      }
+    ],
+    "snapshotTitle": "Impact snapshot",
+    "snapshotStats": [
+      {
+        "id": "colleges-s",
+        "value": "50+",
+        "label": "Colleges strengthened"
+      },
+      {
+        "id": "students-s",
+        "value": "15K+",
+        "label": "Students transformed"
+      },
+      {
+        "id": "partners-s",
+        "value": "2K+",
+        "label": "Hiring partners"
+      },
+      {
+        "id": "projects-s",
+        "value": "20+",
+        "label": "Projects delivered"
+      }
+    ]
+  },
+  "partnersNote": "Trusted by colleges, companies, and government partners.",
+  "browse": {
+    "label": "Browse case studies",
+    "heading": "Find stories that matter to you.",
+    "divisionFiltersLabel": "Filter by focus",
+    "typeFiltersLabel": "Filter by story type",
+    "divisionFilters": [
+      {
+        "id": "all",
+        "label": "All"
+      },
+      {
+        "id": "recruitment",
+        "label": "Recruitment"
+      },
+      {
+        "id": "skills",
+        "label": "Skill development"
+      },
+      {
+        "id": "consulting",
+        "label": "IT consulting"
+      },
+      {
+        "id": "opensource",
+        "label": "Open source & DPI"
+      }
+    ],
+    "typeFilters": [
+      {
+        "id": "all",
+        "label": "All types"
+      },
+      {
+        "id": "college",
+        "label": "College partner"
+      },
+      {
+        "id": "student",
+        "label": "Student story"
+      },
+      {
+        "id": "csr",
+        "label": "CSR partner"
+      },
+      {
+        "id": "client",
+        "label": "IT consulting client"
+      }
+    ],
+    "empty": "No stories match these filters. Try another combination.",
+    "stories": [
+      {
+        "id": "gec-disha",
+        "slug": "gandhi-engineering-college",
+        "template": "college",
+        "title": "Gandhi Engineering College",
+        "location": "Bhubaneswar, Odisha",
+        "summary": "How DISHA turned a chaotic placement season into a measurable, NAAC-ready recruitment engine.",
+        "image": "/impact/gec-disha.png",
+        "imageAlt": "Gandhi Engineering College campus",
+        "divisionId": "recruitment",
+        "typeId": "college",
+        "divisionLabel": "Recruitment",
+        "typeLabel": "College partner",
+        "readMore": "Read more"
+      },
+      {
+        "id": "aliva-solviq",
+        "slug": "aliva-das",
+        "template": "student",
+        "title": "Aliva Das",
+        "location": "Odisha, India",
+        "summary": "From classroom learning to a dream IT role — powered by SolviqAI readiness and focused mentoring.",
+        "image": "/impact/aliva-solviq.png",
+        "imageAlt": "Aliva Das student success story",
+        "divisionId": "skills",
+        "typeId": "student",
+        "divisionLabel": "Skill development",
+        "typeLabel": "Student story",
+        "readMore": "Read more"
+      },
+      {
+        "id": "geometric-eng",
+        "slug": "geometric-design-services",
+        "template": "corporate",
+        "title": "Geometric Design Management Services",
+        "location": "Engineering services",
+        "summary": "Reliability engineering that cut incidents and accelerated delivery for a critical business platform.",
+        "image": "/impact/geometric-eng.png",
+        "imageAlt": "Modern corporate office building",
+        "divisionId": "consulting",
+        "typeId": "client",
+        "divisionLabel": "IT consulting",
+        "typeLabel": "IT consulting client",
+        "readMore": "Read more"
+      },
+      {
+        "id": "cime-disha",
+        "slug": "cime-bhubaneswar",
+        "template": "college",
+        "title": "CIME Bhubaneswar",
+        "location": "Bhubaneswar, Odisha",
+        "summary": "A full digital overhaul of placement workflows — with live analytics TPOs can act on every week.",
+        "image": "/impact/cime-disha.png",
+        "imageAlt": "CIME Bhubaneswar campus",
+        "divisionId": "recruitment",
+        "typeId": "college",
+        "divisionLabel": "Recruitment",
+        "typeLabel": "College partner",
+        "readMore": "Read more"
+      },
+      {
+        "id": "tulasi-skills",
+        "slug": "tulasi-lakhua",
+        "template": "student",
+        "title": "Tulasi Lakhua",
+        "location": "Odisha, India",
+        "summary": "A career pivot through structured skill building, mock interviews, and placement-ready confidence.",
+        "image": "/impact/tulasi-skills.png",
+        "imageAlt": "Tulasi Lakhua career story",
+        "divisionId": "skills",
+        "typeId": "student",
+        "divisionLabel": "Skill development",
+        "typeLabel": "Student story",
+        "readMore": "Read more"
+      },
+      {
+        "id": "aisect-csr",
+        "slug": "aisect-partnership",
+        "template": "college",
+        "title": "AISECT Partnership",
+        "location": "Pan-India",
+        "summary": "Opening employment pathways for learners in tier-3 and rural locations through direct industry connect.",
+        "image": "/impact/aisect-csr.png",
+        "imageAlt": "AISECT skill development partnership",
+        "divisionId": "skills",
+        "typeId": "csr",
+        "divisionLabel": "Skill development",
+        "typeLabel": "CSR partner",
+        "readMore": "Read more"
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Every story is a step forward.",
+    "headingAccent": "Be part of the next one.",
+    "description": "Partner with us. Grow with us. Build talent infrastructure that lasts.",
+    "primaryCta": {
+      "label": "Get in touch",
+      "href": "/contact"
+    },
+    "secondaryCta": {
+      "label": "Explore products",
+      "href": "/products"
+    }
+  },
+  "details": [
+    {
+      "slug": "gandhi-engineering-college",
+      "template": "college",
+      "breadcrumb": "Impact / College partner",
+      "label": "College partner · DISHA",
+      "heading": "Empowering institutions.",
+      "headingAccent": "Transforming placements.",
+      "description": "Gandhi Engineering College needed one system for drives, offers, and reports — not another season of spreadsheet chaos.",
+      "tags": [
+        "Recruitment",
+        "College partner",
+        "DISHA"
+      ],
+      "primaryCta": {
+        "label": "Explore DISHA",
+        "href": "https://disha.hirekarma.in/"
+      },
+      "secondaryCta": {
+        "label": "All stories",
+        "href": "/impact#browse-stories"
+      },
+      "heroImage": "/impact/gec-disha.png",
+      "heroImageAlt": "DISHA campus recruitment dashboard",
+      "columns": [
+        {
+          "title": "The situation",
+          "items": [
+            "Manual drive coordination across departments",
+            "Fragmented student and company data",
+            "Slow reporting for NAAC and AICTE cycles",
+            "Limited visibility for TPOs during peak season"
+          ]
+        },
+        {
+          "title": "What changed with DISHA",
+          "items": [
+            "Centralized drive scheduling and company tracking",
+            "Live student application pipelines",
+            "One dashboard for TPOs and leadership",
+            "Export-ready placement analytics"
+          ]
+        },
+        {
+          "title": "The impact",
+          "items": [
+            "80% less coordination time across placement teams",
+            "100% NAAC / AICTE-compatible auto-reports",
+            "Clearer recruiter experience on campus",
+            "Placement season finally under control"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "80%",
+          "label": "Less coordination time"
+        },
+        {
+          "value": "100%",
+          "label": "NAAC-ready reporting"
+        },
+        {
+          "value": "2,610",
+          "label": "Students placed tracked"
+        }
+      ],
+      "quote": "HireKarma delivers exceptional coordination and professionalism. Their platform helps us connect with skilled candidates efficiently, and the experience has always been smooth and productive.",
+      "quoteName": "Prof. (Dr.) Santosh Kumar Behera",
+      "quoteRole": "Gandhi Engineering College",
+      "quoteImage": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/testimonial/Dheeraj+KK.jpg"
+    },
+    {
+      "slug": "aliva-das",
+      "template": "student",
+      "breadcrumb": "Impact / Student story",
+      "label": "Student story · SolviqAI",
+      "heading": "From learning to landing",
+      "headingAccent": "her dream job.",
+      "description": "Aliva used SolviqAI assessments, resume scoring, and mock interviews to close the gap between classroom and shortlist.",
+      "tags": [
+        "Skill development",
+        "Student story",
+        "SolviqAI"
+      ],
+      "primaryCta": {
+        "label": "Try SolviqAI",
+        "href": "https://www.solviqai.in/"
+      },
+      "secondaryCta": {
+        "label": "All stories",
+        "href": "/impact#browse-stories"
+      },
+      "heroImage": "/impact/aliva-solviq.png",
+      "heroImageAlt": "Aliva Das",
+      "columns": [
+        {
+          "title": "My background",
+          "items": [
+            "Engineering graduate focused on IT roles",
+            "Strong academics, limited interview practice",
+            "Needed clearer feedback on resume and skills",
+            "Wanted a structured path to placement readiness"
+          ]
+        },
+        {
+          "title": "Programme completed",
+          "items": [
+            "ATS-aware resume scoring and rewrites",
+            "Aptitude and domain skill assessments",
+            "AI mock interviews with live feedback",
+            "Placement readiness score tracking"
+          ]
+        },
+        {
+          "title": "The outcome",
+          "items": [
+            "Placed at a top IT company",
+            "Offer package of 5.6 LPA",
+            "Higher confidence in technical rounds",
+            "A repeatable readiness routine for peers"
+          ]
+        }
+      ],
+      "quote": "SolviqAI helped me see exactly where I stood — and what to fix before the real interview. That clarity changed everything.",
+      "quoteName": "Aliva Das",
+      "quoteRole": "Placed graduate · Odisha",
+      "quoteImage": "/students.jpg"
+    },
+    {
+      "slug": "geometric-design-services",
+      "template": "corporate",
+      "breadcrumb": "Impact / IT consulting client",
+      "label": "IT consulting · Engineering services",
+      "heading": "Engineering reliability.",
+      "headingAccent": "Delivering business impact.",
+      "description": "A modern engineering engagement focused on uptime, faster releases, and fewer production incidents.",
+      "tags": [
+        "IT consulting",
+        "Client",
+        "Reliability"
+      ],
+      "primaryCta": {
+        "label": "Talk to us",
+        "href": "/contact"
+      },
+      "secondaryCta": {
+        "label": "All stories",
+        "href": "/impact#browse-stories"
+      },
+      "heroImage": "/impact/geometric-eng.png",
+      "heroImageAlt": "Modern glass office building",
+      "columns": [
+        {
+          "title": "The challenge",
+          "items": [
+            "Rising production incidents under load",
+            "Slow release cycles across teams",
+            "Limited observability for critical paths",
+            "Pressure to improve customer satisfaction"
+          ]
+        },
+        {
+          "title": "Our solution",
+          "items": [
+            "Reliability-first engineering roadmap",
+            "Hardened CI/CD and release discipline",
+            "Observability and incident response playbooks",
+            "Cross-functional delivery pods"
+          ]
+        },
+        {
+          "title": "Engineering approach",
+          "items": [
+            "Agile delivery with clear ownership",
+            "DevSecOps baked into every release",
+            "Performance budgets and SLOs",
+            "Continuous improvement reviews"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "99.95%",
+          "label": "System uptime"
+        },
+        {
+          "value": "↑70%",
+          "label": "Incidents reduced"
+        },
+        {
+          "value": "40%",
+          "label": "Faster delivery"
+        },
+        {
+          "value": "High",
+          "label": "Customer satisfaction"
+        }
+      ],
+      "approaches": [
+        {
+          "title": "Agile pods",
+          "description": "Small teams with clear delivery ownership."
+        },
+        {
+          "title": "DevSecOps",
+          "description": "Security and quality in every pipeline."
+        },
+        {
+          "title": "Observability",
+          "description": "SLOs, alerts, and faster recovery."
+        },
+        {
+          "title": "Continuous review",
+          "description": "Weekly learning loops that stick."
+        }
+      ],
+      "quote": "HireKarma’s engineering team brought discipline and clarity. Uptime improved, incidents dropped, and delivery finally felt predictable.",
+      "quoteName": "Director",
+      "quoteRole": "Geometric Design Management Services"
+    },
+    {
+      "slug": "cime-bhubaneswar",
+      "template": "college",
+      "breadcrumb": "Impact / College partner",
+      "label": "College partner · DISHA",
+      "heading": "Digital placement.",
+      "headingAccent": "Real-time control.",
+      "description": "CIME moved from fragmented workflows to a single placement system with live analytics.",
+      "tags": [
+        "Recruitment",
+        "College partner",
+        "DISHA"
+      ],
+      "primaryCta": {
+        "label": "Explore DISHA",
+        "href": "https://disha.hirekarma.in/"
+      },
+      "secondaryCta": {
+        "label": "All stories",
+        "href": "/impact#browse-stories"
+      },
+      "heroImage": "/impact/cime-disha.png",
+      "heroImageAlt": "DISHA placement analytics",
+      "columns": [
+        {
+          "title": "The situation",
+          "items": [
+            "Outdated placement processes",
+            "Limited industry connections",
+            "Manual reporting burden"
+          ]
+        },
+        {
+          "title": "What changed",
+          "items": [
+            "Digitized placement workflows",
+            "Broader recruiter network",
+            "Live TPO dashboards"
+          ]
+        },
+        {
+          "title": "The impact",
+          "items": [
+            "100% digital workflows",
+            "65% employability score lift",
+            "75+ company partnerships"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "100%",
+          "label": "Digital workflows"
+        },
+        {
+          "value": "65%",
+          "label": "Skill improvement"
+        },
+        {
+          "value": "75+",
+          "label": "Company partners"
+        }
+      ],
+      "quote": "We now have complete visibility into our placement ecosystem and can make data-driven decisions.",
+      "quoteName": "Prof. Anjali Nayak",
+      "quoteRole": "Dean of Placements, CIME"
+    },
+    {
+      "slug": "tulasi-lakhua",
+      "template": "student",
+      "breadcrumb": "Impact / Student story",
+      "label": "Student story · SolviqAI",
+      "heading": "Ready for the interview",
+      "headingAccent": "before it starts.",
+      "description": "Structured practice and feedback helped Tulasi turn uncertainty into a confident career move.",
+      "tags": [
+        "Skill development",
+        "Student story"
+      ],
+      "primaryCta": {
+        "label": "Try SolviqAI",
+        "href": "https://www.solviqai.in/"
+      },
+      "secondaryCta": {
+        "label": "All stories",
+        "href": "/impact#browse-stories"
+      },
+      "heroImage": "/impact/tulasi-skills.png",
+      "heroImageAlt": "Tulasi Lakhua",
+      "columns": [
+        {
+          "title": "My background",
+          "items": [
+            "Career transition mindset",
+            "Needed interview confidence",
+            "Wanted practical feedback loops"
+          ]
+        },
+        {
+          "title": "Programme completed",
+          "items": [
+            "Skill assessments",
+            "Mock interviews",
+            "Resume and profile polish"
+          ]
+        },
+        {
+          "title": "The outcome",
+          "items": [
+            "Stronger interview performance",
+            "Clearer career direction",
+            "Placement-ready portfolio"
+          ]
+        }
+      ],
+      "quote": "The mock interviews and readiness scores made me feel prepared — not just hopeful.",
+      "quoteName": "Tulasi Lakhua",
+      "quoteRole": "Career transition · Odisha",
+      "quoteImage": "/students.jpg"
+    },
+    {
+      "slug": "aisect-partnership",
+      "template": "college",
+      "breadcrumb": "Impact / CSR partner",
+      "label": "CSR partner · Skill pathways",
+      "heading": "Opportunity beyond",
+      "headingAccent": "metro job boards.",
+      "description": "A partnership that connects skilled learners in tier-3 and rural locations to real employers.",
+      "tags": [
+        "Skill development",
+        "CSR partner"
+      ],
+      "primaryCta": {
+        "label": "Partner with us",
+        "href": "/contact"
+      },
+      "secondaryCta": {
+        "label": "All stories",
+        "href": "/impact#browse-stories"
+      },
+      "heroImage": "/impact/aisect-csr.png",
+      "heroImageAlt": "Skill development partnership",
+      "columns": [
+        {
+          "title": "The situation",
+          "items": [
+            "Limited access to quality roles",
+            "Geographic opportunity gap",
+            "Need for trusted employer pathways"
+          ]
+        },
+        {
+          "title": "What changed",
+          "items": [
+            "Direct training-to-employment connect",
+            "National employer partnerships",
+            "Broader rural reach"
+          ]
+        },
+        {
+          "title": "The impact",
+          "items": [
+            "5,000+ learners connected",
+            "70% placement rate",
+            "100+ employer partners"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "5K+",
+          "label": "Learners connected"
+        },
+        {
+          "value": "70%",
+          "label": "Placement rate"
+        },
+        {
+          "value": "100+",
+          "label": "Employer partners"
+        }
+      ],
+      "quote": "Students who previously had no access to quality jobs are now working with leading companies across India.",
+      "quoteName": "Santosh Mishra",
+      "quoteRole": "Director of Partnerships, AISECT"
+    }
+  ]
+}

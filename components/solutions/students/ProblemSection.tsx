@@ -30,7 +30,7 @@ const ProblemSection: React.FC = () => {
           className={`w-6 h-6 ${
             mounted && resolvedTheme === "dark"
               ? "text-red-400"
-              : "text-red-600"
+              : "text-[#d64246]"
           }`}
         />
       </div>
@@ -119,7 +119,7 @@ const ProblemSection: React.FC = () => {
                   className={`block mt-2 text-2xl lg:text-3xl font-medium ${
                     mounted && resolvedTheme === "dark"
                       ? "text-red-400"
-                      : "text-red-600"
+                      : "text-[#d64246]"
                   }`}
                 >
                   {problem.headingAccent}

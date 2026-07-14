@@ -1,396 +1,558 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+
+import React, { useEffect, useRef, useState } from "react";
 import {
-  ChevronDown,
-  Menu,
-  X,
   ArrowRight,
-  Heart,
-  UsersRound,
-  Users,
-  Handshake,
-  TrendingUp,
-  Compass,
-  Zap,
-  LayoutGrid,
+  BookOpen,
   Briefcase,
-} from 'lucide-react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { useTheme } from 'next-themes';
-import { env } from '@/lib/config/env';
-import { ThemeToggle } from '@/components/layout/ThemeToggle';
-import { LanguageDropdown } from '@/components/layout/LanguageDropdown';
-import { useSiteLocale } from '@/contexts/SiteLocaleContext';
+  ChevronDown,
+  CircleHelp,
+  Compass,
+  Heart,
+  LayoutGrid,
+  MapPin,
+  Menu,
+  Newspaper,
+  TrendingUp,
+  Users,
+  UsersRound,
+  X,
+} from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+
+import { env } from "@/lib/config/env";
+import { LanguageDropdown } from "@/components/layout/LanguageDropdown";
+import { useSiteLocale } from "@/contexts/SiteLocaleContext";
+import { theme } from "@/config/theme";
 
 interface NavbarProps {
   className?: string;
 }
 
-interface NavigationItem {
+interface DropdownItem {
   label: string;
   href: string;
   icon: React.ComponentType<{ className?: string }>;
-  hasDropdown: boolean;
-  dropdownItems: Array<{
-    label: string;
-    href: string;
-    icon: React.ComponentType<{ className?: string }>;
-  }>;
+  accent?: string;
+  description?: string;
+}
+
+interface NavigationItem {
+  label: string;
+  href: string;
+  dropdownItems: DropdownItem[];
 }
 
 interface SimpleLink {
   label: string;
   href: string;
-  icon: React.ComponentType<{ className?: string }>;
 }
 
-const productIconById: Record<string, React.ComponentType<{ className?: string }>> = {
-  overview: LayoutGrid,
-  disha: Compass,
-  solviq: TrendingUp,
-  lakshya: Users,
-  shortlisted: Briefcase,
+const productMeta: Record<
+  string,
+  { icon: React.ComponentType<{ className?: string }>; accent: string; description: string }
+> = {
+  overview: {
+    icon: LayoutGrid,
+    accent: theme.colors.primary,
+    description: "Full product suite",
+  },
+  disha: {
+    icon: Compass,
+    accent: theme.productAccents.disha.main,
+    description: "Campus recruitment",
+  },
+  solviq: {
+    icon: TrendingUp,
+    accent: theme.productAccents.solviq.main,
+    description: "AI career readiness",
+  },
+  lakshya: {
+    icon: Users,
+    accent: theme.productAccents.lakshya.main,
+    description: "Hiring ecosystem",
+  },
+  shortlisted: {
+    icon: Briefcase,
+    accent: theme.productAccents.shortlisted.main,
+    description: "Virtual placement",
+  },
 };
 
 const productHrefById: Record<string, string> = {
-  overview: '/products',
+  overview: "/products",
   disha: env.dishaUrl,
   solviq: env.solviqUrl,
   lakshya: env.lakshyaUrl,
-  shortlisted: '/shortlisted',
+  shortlisted: "/shortlisted",
 };
 
-const aboutIconById: Record<string, React.ComponentType<{ className?: string }>> = {
-  mission: Heart,
-  people: UsersRound,
+const aboutMeta: Record<
+  string,
+  { icon: React.ComponentType<{ className?: string }>; accent: string; description: string }
+> = {
+  story: {
+    icon: BookOpen,
+    accent: theme.colors.orange,
+    description: "How HireKarma began",
+  },
+  mission: {
+    icon: Heart,
+    accent: theme.colors.primary,
+    description: "Purpose & principles",
+  },
+  people: {
+    icon: UsersRound,
+    accent: theme.colors.secondary,
+    description: "Team & leadership",
+  },
+  locations: {
+    icon: MapPin,
+    accent: theme.colors.green,
+    description: "Offices across Odisha",
+  },
 };
 
-const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
+const resourcesMeta: Record<
+  string,
+  { icon: React.ComponentType<{ className?: string }>; accent: string; description: string }
+> = {
+  overview: {
+    icon: Newspaper,
+    accent: theme.colors.primary,
+    description: "Blogs & insights",
+  },
+  faq: {
+    icon: CircleHelp,
+    accent: theme.colors.secondary,
+    description: "Common questions",
+  },
+};
+
+const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [mounted, setMounted] = useState(false);
-  const { resolvedTheme } = useTheme();
+  const desktopNavRef = useRef<HTMLDivElement>(null);
   const { content } = useSiteLocale();
   const { nav } = content;
 
   useEffect(() => {
-    setMounted(true);
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const handleScroll = () => setIsScrolled(window.scrollY > 12);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [isMobileMenuOpen]);
 
-  const handleDropdownHover = (dropdown: string) => {
-    setActiveDropdown(dropdown);
+  // Click-outside + Escape close for desktop dropdowns (no hover)
+  useEffect(() => {
+    if (!activeDropdown || isMobileMenuOpen) return;
+
+    const onPointerDown = (event: MouseEvent) => {
+      if (!desktopNavRef.current?.contains(event.target as Node)) {
+        setActiveDropdown(null);
+      }
+    };
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setActiveDropdown(null);
+    };
+
+    document.addEventListener("mousedown", onPointerDown);
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("mousedown", onPointerDown);
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [activeDropdown, isMobileMenuOpen]);
+
+  const closeDropdowns = () => setActiveDropdown(null);
+
+  const toggleDropdown = (label: string) => {
+    setActiveDropdown((current) => (current === label ? null : label));
   };
 
-  const handleDropdownLeave = () => {
-    setActiveDropdown(null);
-  };
-
-  const handleDropdownClick = (dropdown: string, event: React.MouseEvent) => {
-    event.preventDefault();
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  };
-
-  const closeDropdowns = () => {
-    setActiveDropdown(null);
-  };
-
-  // Nav order: Home, Products, Resources, About, Contact Us
   const productsItem: NavigationItem = {
     label: nav.products.label,
     href: nav.products.href,
-    icon: Zap,
-    hasDropdown: true,
-    dropdownItems: nav.products.items.map((item) => ({
-      label: item.label,
-      href: productHrefById[item.id] ?? item.href,
-      icon: productIconById[item.id] ?? LayoutGrid,
-    })),
+    dropdownItems: nav.products.items.map((item) => {
+      const meta = productMeta[item.id] ?? productMeta.overview;
+      return {
+        label: item.label,
+        href: productHrefById[item.id] ?? item.href,
+        icon: meta.icon,
+        accent: meta.accent,
+        description: meta.description,
+      };
+    }),
   };
 
   const aboutItem: NavigationItem = {
     label: nav.about.label,
     href: nav.about.href,
-    icon: Users,
-    hasDropdown: true,
-    dropdownItems: nav.about.items.map((item) => ({
-      label: item.label,
-      href: item.href,
-      icon: aboutIconById[item.id] ?? Users,
-    })),
+    dropdownItems: nav.about.items.map((item) => {
+      const meta = aboutMeta[item.id] ?? aboutMeta.people;
+      return {
+        label: item.label,
+        href: item.href,
+        icon: meta.icon,
+        accent: meta.accent,
+        description: meta.description,
+      };
+    }),
+  };
+
+  const resourcesItem: NavigationItem = {
+    label: nav.resources.label,
+    href: nav.resources.href,
+    dropdownItems: nav.resources.items.map((item) => {
+      const meta = resourcesMeta[item.id] ?? resourcesMeta.overview;
+      return {
+        label: item.label,
+        href: item.href,
+        icon: meta.icon,
+        accent: meta.accent,
+        description: meta.description,
+      };
+    }),
   };
 
   type NavEntry =
-    | { type: 'link'; item: SimpleLink }
-    | { type: 'dropdown'; item: NavigationItem };
+    | { type: "link"; item: SimpleLink }
+    | { type: "dropdown"; item: NavigationItem };
 
   const navEntries: NavEntry[] = [
-    { type: 'link', item: { label: nav.home.label, href: nav.home.href, icon: LayoutGrid } },
-    { type: 'dropdown', item: productsItem },
-    { type: 'link', item: { label: nav.resources.label, href: nav.resources.href, icon: Compass } },
-    { type: 'dropdown', item: aboutItem },
-    { type: 'link', item: { label: nav.contact.label, href: nav.contact.href, icon: Handshake } },
+    { type: "link", item: { label: nav.home.label, href: nav.home.href } },
+    { type: "dropdown", item: productsItem },
+    { type: "link", item: { label: nav.impact.label, href: nav.impact.href } },
+    { type: "dropdown", item: resourcesItem },
+    { type: "dropdown", item: aboutItem },
+    { type: "link", item: { label: nav.contact.label, href: nav.contact.href } },
   ];
+
+  const linkClass =
+    "relative px-3.5 py-2.5 text-[15px] font-semibold tracking-tight text-[#0f172a] transition-colors duration-200 hover:text-[#fec40d] xl:px-4 xl:text-base";
+
+  const renderDropdown = (item: NavigationItem, open: boolean) => (
+    <div key={item.label} className="relative">
+      <button
+        type="button"
+        aria-expanded={open}
+        aria-haspopup="menu"
+        onClick={() => toggleDropdown(item.label)}
+        className={`${linkClass} inline-flex items-center gap-1.5 ${
+          open ? "text-[#fec40d]" : ""
+        }`}
+      >
+        {item.label}
+        <ChevronDown
+          className={`h-3.5 w-3.5 transition-transform duration-200 ${
+            open ? "rotate-180" : ""
+          }`}
+        />
+      </button>
+
+      {open ? (
+        <div
+          role="menu"
+          className="absolute left-1/2 top-full z-50 mt-2 w-[320px] -translate-x-1/2 overflow-hidden rounded-2xl border border-[#e6e8ec] bg-white shadow-[0_20px_50px_rgba(15,22,34,0.14)]"
+        >
+          <div
+            className="flex items-center justify-between border-b border-[#e6e8ec] px-4 py-3"
+            style={{
+              background:
+                "linear-gradient(135deg, rgba(27,82,164,0.06), rgba(0,162,229,0.06))",
+            }}
+          >
+            <div>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#00a2e5]">
+                Explore
+              </p>
+              <Link
+                href={item.href}
+                onClick={closeDropdowns}
+                className="text-sm font-bold text-[#0f1622] transition hover:text-[#1b52a4]"
+              >
+                {item.label}
+              </Link>
+            </div>
+            <Link
+              href={item.href}
+              onClick={closeDropdowns}
+              className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[11px] font-semibold text-[#1b52a4] transition hover:bg-[#1b52a4]/08"
+            >
+              View all
+              <ArrowRight className="h-3 w-3" />
+            </Link>
+          </div>
+
+          <div className="p-2">
+            {item.dropdownItems.map((dropdownItem) => {
+              const Icon = dropdownItem.icon;
+              const accent = dropdownItem.accent ?? theme.colors.primary;
+              return (
+                <Link
+                  key={dropdownItem.label}
+                  href={dropdownItem.href}
+                  role="menuitem"
+                  onClick={closeDropdowns}
+                  className="group flex items-center gap-3 rounded-xl px-2.5 py-2.5 transition hover:bg-[#f6f8fb]"
+                >
+                  <span
+                    className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-white shadow-sm"
+                    style={{ backgroundColor: accent }}
+                  >
+                    <Icon className="h-4 w-4" />
+                  </span>
+                  <span className="min-w-0 flex-1">
+                    <span className="block text-sm font-semibold text-[#0f1622] transition group-hover:text-[#1b52a4]">
+                      {dropdownItem.label}
+                    </span>
+                    {dropdownItem.description ? (
+                      <span className="mt-0.5 block truncate text-[11px] text-[#0f1622]/45">
+                        {dropdownItem.description}
+                      </span>
+                    ) : null}
+                  </span>
+                  <ArrowRight className="h-3.5 w-3.5 shrink-0 text-[#0f1622]/25 transition group-hover:translate-x-0.5 group-hover:text-[#00a2e5]" />
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      ) : null}
+    </div>
+  );
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b ${mounted && resolvedTheme === 'dark'
-        ? (isScrolled
-          ? 'bg-gray-900 backdrop-blur-xl shadow-2xl border-gray-800'
-          : 'bg-gray-900/98 backdrop-blur-lg border-gray-800')
-        : (isScrolled
-          ? 'bg-white backdrop-blur-xl shadow-2xl border-gray-200'
-          : 'bg-white/98 backdrop-blur-lg border-gray-100')
-        } ${className}`}>
+      <nav
+        className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-300 ${
+          isScrolled
+            ? "border-[#e6e8ec]/90 bg-white/95 shadow-[0_10px_30px_rgba(15,22,34,0.08)] backdrop-blur-xl"
+            : "border-[#e6e8ec]/60 bg-gradient-to-b from-[#f7f8fc] to-white/95 backdrop-blur-md"
+        } ${className}`}
+      >
         <div className="content-container">
-          {/* Main Navbar Container */}
-          <div className="flex items-center justify-between h-16 sm:h-18 lg:h-20">
+          <div className="grid h-[4.5rem] grid-cols-[auto_1fr_auto] items-center gap-4 lg:h-[4.75rem] lg:gap-6">
+            {/* Brand */}
+            <Link
+              href="/"
+              className="flex min-w-0 flex-col justify-center"
+              onClick={closeDropdowns}
+            >
+              <Image
+                src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/HKlogoblack.png"
+                alt="HireKarma"
+                width={160}
+                height={36}
+                className="h-7 w-auto sm:h-8"
+                priority
+              />
+              <span className="mt-0.5 hidden text-[10px] font-medium tracking-wide text-[#0f1622]/45 sm:block">
+                {nav.tagline}
+              </span>
+            </Link>
 
-            {/* Logo Section - Left Aligned */}
-            <div className="flex items-center flex-shrink-0">
-              <Link href="/" className="relative">
-                <Image
-                  src={mounted && resolvedTheme === 'dark'
-                    ? "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/HKlogowhite.png"
-                    : "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/HKlogoblack.png"
-                  }
-                  alt="HireKarma Logo"
-                  width={250}
-                  height={50}
-                  className="w-32 sm:w-36 lg:w-40 h-8 sm:h-10 lg:h-12 transition-transform duration-300 hover:scale-105"
-                  priority
-                />
-                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg opacity-0 hover:opacity-20 transition-opacity duration-300 blur-sm"></div>
-              </Link>
-            </div>
-
-            {/* Desktop Navigation - Right Aligned */}
-            <div className="hidden lg:flex items-center gap-1">
-              <div className="flex items-center space-x-1">
+            {/* Center nav */}
+            <div className="hidden items-center justify-center lg:flex">
+              <div
+                ref={desktopNavRef}
+                className="flex items-center gap-1 rounded-full border border-[#e6e8ec]/80 bg-white/70 px-2.5 py-1.5 shadow-[0_1px_0_rgba(15,22,34,0.03)] backdrop-blur-sm xl:gap-1.5 xl:px-3"
+              >
                 {navEntries.map((entry) => {
-                  if (entry.type === 'link') {
-                    const link = entry.item;
+                  if (entry.type === "link") {
                     return (
                       <Link
-                        key={link.label}
-                        href={link.href}
-                        className={`flex items-center space-x-2 font-medium transition-all duration-300 py-2 px-4 rounded-lg ${mounted && resolvedTheme === 'dark'
-                          ? 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-950'
-                          : 'text-gray-700 hover:text-cyan-600 hover:bg-cyan-50'
-                          }`}
+                        key={entry.item.label}
+                        href={entry.item.href}
+                        className={linkClass}
+                        onClick={closeDropdowns}
                       >
-                        <span className="whitespace-nowrap text-base">{link.label}</span>
+                        {entry.item.label}
                       </Link>
                     );
                   }
-
-                  const item = entry.item;
-                  return (
-                    <div
-                      key={item.label}
-                      className="relative group"
-                      onMouseEnter={() => handleDropdownHover(item.label)}
-                      onMouseLeave={handleDropdownLeave}
-                    >
-                      <button
-                        onClick={(e) => handleDropdownClick(item.label, e)}
-                        className={`flex items-center justify-center space-x-1.5 font-medium transition-all duration-300 py-2 px-4 rounded-lg ${activeDropdown === item.label
-                          ? (mounted && resolvedTheme === 'dark'
-                            ? 'text-cyan-400 bg-cyan-950'
-                            : 'text-cyan-600 bg-cyan-50')
-                          : (mounted && resolvedTheme === 'dark'
-                            ? 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-950'
-                            : 'text-gray-700 hover:text-cyan-600 hover:bg-cyan-50')
-                          }`}
-                      >
-                        <span className="whitespace-nowrap text-base">{item.label}</span>
-                        <ChevronDown className={`w-3 h-3 flex-shrink-0 transition-transform duration-300 ${activeDropdown === item.label ? 'rotate-180' : 'group-hover:rotate-180'
-                          }`} />
-                      </button>
-
-                      {activeDropdown === item.label && (
-                        <div
-                          className={`absolute top-full left-1/2 transform -translate-x-1/2 mt-0 w-72 rounded-2xl shadow-2xl border backdrop-blur-xl z-50 animate-in slide-in-from-top-2 duration-300 overflow-hidden ${mounted && resolvedTheme === 'dark'
-                            ? 'bg-gray-900 border-gray-800/50'
-                            : 'bg-white border-gray-100/50'
-                            }`}
-                          onMouseEnter={() => handleDropdownHover(item.label)}
-                          onMouseLeave={handleDropdownLeave}
-                        >
-                          <div className="p-4">
-                            <div className={`flex items-center space-x-2 mb-3 pb-3 border-b ${mounted && resolvedTheme === 'dark'
-                              ? 'border-gray-800'
-                              : 'border-gray-100'
-                              }`}>
-                              <Link
-                                href={item.href}
-                                className={`font-semibold text-sm transition-colors duration-200 hover:underline ${mounted && resolvedTheme === 'dark'
-                                  ? 'text-gray-200 hover:text-cyan-400'
-                                  : 'text-gray-800 hover:text-cyan-600'
-                                  }`}
-                                onClick={closeDropdowns}
-                              >
-                                {item.label}
-                              </Link>
-                            </div>
-                            <div className="grid grid-cols-1 gap-1">
-                              {item.dropdownItems.map((dropdownItem, index) => {
-                                return (
-                                  <Link
-                                    key={dropdownItem.label}
-                                    href={dropdownItem.href}
-                                    className={`flex items-center space-x-3 p-2 rounded-lg transition-all duration-200 group ${mounted && resolvedTheme === 'dark'
-                                      ? 'hover:bg-gradient-to-r hover:from-cyan-950 hover:to-blue-950'
-                                      : 'hover:bg-gradient-to-r hover:from-cyan-50 hover:to-blue-50'
-                                      }`}
-                                    style={{ animationDelay: `${index * 50}ms` }}
-                                    onClick={closeDropdowns}
-                                  >
-                                    <div className="flex-1 min-w-0">
-                                      <span className={`font-medium text-sm transition-colors duration-200 block truncate ${mounted && resolvedTheme === 'dark'
-                                        ? 'text-gray-300 group-hover:text-cyan-400'
-                                        : 'text-gray-700 group-hover:text-cyan-600'
-                                        }`}>
-                                        {dropdownItem.label}
-                                      </span>
-                                    </div>
-                                    <ArrowRight className={`w-3 h-3 transition-all duration-200 transform group-hover:translate-x-0.5 flex-shrink-0 ${mounted && resolvedTheme === 'dark'
-                                      ? 'text-gray-500 group-hover:text-cyan-400'
-                                      : 'text-gray-400 group-hover:text-cyan-500'
-                                      }`} />
-                                  </Link>
-                                );
-                              })}
-                            </div>
-                          </div>
-                        </div>
-                      )}
-                    </div>
+                  return renderDropdown(
+                    entry.item,
+                    activeDropdown === entry.item.label
                   );
                 })}
               </div>
-              <LanguageDropdown className="ml-1" />
-              <ThemeToggle />
             </div>
 
+            {/* Right actions */}
+            <div className="flex items-center justify-end gap-2">
+              <div className="hidden items-center gap-2 lg:flex">
+                <LanguageDropdown />
+                <Link
+                  href={nav.secondaryCta.href}
+                  className="inline-flex items-center justify-center whitespace-nowrap rounded-lg border border-[#0f1622]/15 bg-white px-3.5 py-2 text-[13px] font-semibold text-[#0f1622] transition hover:border-[#1b52a4]/35 hover:text-[#1b52a4]"
+                  onClick={closeDropdowns}
+                >
+                  {nav.secondaryCta.label}
+                </Link>
+                <Link
+                  href={nav.primaryCta.href}
+                  className="inline-flex items-center justify-center gap-1.5 whitespace-nowrap rounded-lg px-4 py-2 text-[13px] font-semibold text-white shadow-sm transition hover:brightness-110"
+                  style={{ backgroundColor: theme.colors.primary }}
+                  onClick={closeDropdowns}
+                >
+                  {nav.primaryCta.label}
+                  <ArrowRight className="h-3.5 w-3.5" />
+                </Link>
+              </div>
 
-            {/* Mobile Menu Button */}
-            <div className="flex lg:hidden items-center gap-2 flex-shrink-0">
-              <LanguageDropdown />
-              <ThemeToggle />
-              <button
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className={`p-2.5 rounded-lg transition-all duration-200 ${mounted && resolvedTheme === 'dark'
-                  ? 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-950'
-                  : 'text-gray-700 hover:text-cyan-600 hover:bg-cyan-50'
-                  }`}
-              >
-                <div className="relative w-5 h-5">
-                  <Menu className={`absolute inset-0 w-5 h-5 transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0 rotate-90' : 'opacity-100 rotate-0'}`} />
-                  <X className={`absolute inset-0 w-5 h-5 transition-all duration-300 ${isMobileMenuOpen ? 'opacity-100 rotate-0' : 'opacity-0 -rotate-90'}`} />
-                </div>
-              </button>
+              <div className="flex items-center gap-1.5 lg:hidden">
+                <LanguageDropdown />
+                <button
+                  type="button"
+                  aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+                  aria-expanded={isMobileMenuOpen}
+                  onClick={() => setIsMobileMenuOpen((v) => !v)}
+                  className="flex h-10 w-10 items-center justify-center rounded-xl text-[#0f1622] transition hover:bg-[#f6f8fb]"
+                >
+                  {isMobileMenuOpen ? (
+                    <X className="h-5 w-5" />
+                  ) : (
+                    <Menu className="h-5 w-5" />
+                  )}
+                </button>
+              </div>
             </div>
           </div>
+        </div>
 
+        {/* Mobile panel */}
+        <div
+          className={`lg:hidden overflow-hidden border-t border-[#e6e8ec] bg-white transition-all duration-300 ${
+            isMobileMenuOpen
+              ? "max-h-[min(80vh,680px)] opacity-100"
+              : "max-h-0 border-transparent opacity-0"
+          }`}
+        >
+          <div className="content-container space-y-1 overflow-y-auto py-4 pb-6">
+            <p className="px-3 pb-2 text-[11px] font-medium tracking-wide text-[#0f1622]/45">
+              {nav.tagline}
+            </p>
 
-          {/* Mobile Menu - Still uses click for mobile */}
-          <div className={`lg:hidden transition-all duration-500 ${isMobileMenuOpen ? 'max-h-[calc(100vh-4rem)] opacity-100' : 'max-h-0 opacity-0'
-            }`}>
-            <div className={`border-t backdrop-blur-xl overflow-y-auto max-h-[calc(100vh-4rem)] ${mounted && resolvedTheme === 'dark'
-              ? 'border-gray-800 bg-gray-900'
-              : 'border-gray-200 bg-white'
-              }`}>
-              <div className="px-6 py-6 pb-12 space-y-2">
-                {navEntries.map((entry) => {
-                  if (entry.type === 'link') {
-                    const link = entry.item;
-                    return (
-                      <Link
-                        key={link.label}
-                        href={link.href}
-                        className={`flex items-center space-x-3 w-full text-left font-medium py-3 px-4 rounded-xl transition-all duration-200 ${mounted && resolvedTheme === 'dark'
-                          ? 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-950'
-                          : 'text-gray-700 hover:text-cyan-600 hover:bg-cyan-50'
-                          }`}
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        <span>{link.label}</span>
-                      </Link>
-                    );
-                  }
+            {navEntries.map((entry) => {
+              if (entry.type === "link") {
+                return (
+                  <Link
+                    key={entry.item.label}
+                    href={entry.item.href}
+                    className="block rounded-xl px-3 py-3 text-sm font-semibold text-[#0f1622] transition hover:bg-[#f6f8fb] hover:text-[#1b52a4]"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      closeDropdowns();
+                    }}
+                  >
+                    {entry.item.label}
+                  </Link>
+                );
+              }
 
-                  const item = entry.item;
-                  return (
-                    <div key={item.label} className="space-y-1">
-                      <button
-                        onClick={(e) => handleDropdownClick(item.label, e)}
-                        className="flex items-center justify-between w-full text-left text-gray-700 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 font-medium py-3 px-4 rounded-xl hover:bg-cyan-50 dark:hover:bg-cyan-950 transition-all duration-200"
-                      >
-                        <div className="flex items-center">
-                          <span className={`${mounted && resolvedTheme === 'dark'
-                            ? 'text-gray-300'
-                            : 'text-gray-700'
-                            }`}>{item.label}</span>
-                        </div>
-                        <ChevronDown className={`w-4 h-4 transition-transform duration-300 flex-shrink-0 ${activeDropdown === item.label ? 'rotate-180' : ''
-                          }`} />
-                      </button>
+              const item = entry.item;
+              const open = activeDropdown === item.label;
 
-                      {activeDropdown === item.label && (
-                        <div className="ml-4 space-y-1 animate-in slide-in-from-top-2 duration-300">
-                          {item.dropdownItems.map((dropdownItem) => {
-                            return (
-                              <Link
-                                key={dropdownItem.label}
-                                href={dropdownItem.href}
-                                className={`flex items-center w-full text-left font-medium py-2 px-4 rounded-lg transition-all duration-200 ${mounted && resolvedTheme === 'dark'
-                                  ? 'text-gray-400 hover:text-cyan-400 hover:bg-cyan-950'
-                                  : 'text-gray-600 hover:text-cyan-600 hover:bg-cyan-50'
-                                  }`}
-                                onClick={() => {
-                                  setIsMobileMenuOpen(false);
-                                  closeDropdowns();
-                                }}
-                              >
-                                <span className="text-sm">{dropdownItem.label}</span>
-                              </Link>
-                            );
-                          })}
-                        </div>
-                      )}
+              return (
+                <div key={item.label} className="rounded-xl">
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setActiveDropdown(open ? null : item.label)
+                    }
+                    className="flex w-full items-center justify-between rounded-xl px-3 py-3 text-left text-sm font-semibold text-[#0f1622] transition hover:bg-[#f6f8fb]"
+                  >
+                    {item.label}
+                    <ChevronDown
+                      className={`h-4 w-4 text-[#0f1622]/45 transition ${
+                        open ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+
+                  {open ? (
+                    <div className="mb-1 space-y-0.5 px-2 pb-2">
+                      {item.dropdownItems.map((dropdownItem) => {
+                        const Icon = dropdownItem.icon;
+                        const accent =
+                          dropdownItem.accent ?? theme.colors.primary;
+                        return (
+                          <Link
+                            key={dropdownItem.label}
+                            href={dropdownItem.href}
+                            className="flex items-center gap-3 rounded-xl px-3 py-2.5 transition hover:bg-[#f6f8fb]"
+                            onClick={() => {
+                              setIsMobileMenuOpen(false);
+                              closeDropdowns();
+                            }}
+                          >
+                            <span
+                              className="flex h-8 w-8 items-center justify-center rounded-lg text-white"
+                              style={{ backgroundColor: accent }}
+                            >
+                              <Icon className="h-3.5 w-3.5" />
+                            </span>
+                            <span>
+                              <span className="block text-sm font-semibold text-[#0f1622]">
+                                {dropdownItem.label}
+                              </span>
+                              {dropdownItem.description ? (
+                                <span className="block text-[11px] text-[#0f1622]/45">
+                                  {dropdownItem.description}
+                                </span>
+                              ) : null}
+                            </span>
+                          </Link>
+                        );
+                      })}
                     </div>
-                  );
-                })}
-              </div>
+                  ) : null}
+                </div>
+              );
+            })}
+
+            <div className="mt-3 grid gap-2">
+              <Link
+                href={nav.secondaryCta.href}
+                className="flex items-center justify-center rounded-xl border border-[#0f1622]/15 px-4 py-3 text-sm font-semibold text-[#0f1622]"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {nav.secondaryCta.label}
+              </Link>
+              <Link
+                href={nav.primaryCta.href}
+                className="inline-flex items-center justify-center gap-1.5 rounded-xl px-4 py-3 text-sm font-semibold text-white"
+                style={{ backgroundColor: theme.colors.primary }}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {nav.primaryCta.label}
+                <ArrowRight className="h-4 w-4" />
+              </Link>
             </div>
           </div>
         </div>
       </nav>
 
-      {/* Backdrop for mobile menu */}
-      {isMobileMenuOpen && (
+      {isMobileMenuOpen ? (
         <div
-          className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 lg:hidden"
+          className="fixed inset-0 z-40 bg-[#0f1622]/25 backdrop-blur-[2px] lg:hidden"
           onClick={() => setIsMobileMenuOpen(false)}
+          aria-hidden
         />
-      )}
-
-      {/* Backdrop for dropdowns */}
-      {activeDropdown && (
-        <div
-          className="fixed inset-0 z-40 lg:block hidden"
-          onClick={closeDropdowns}
-        />
-      )}
+      ) : null}
     </>
   );
 };

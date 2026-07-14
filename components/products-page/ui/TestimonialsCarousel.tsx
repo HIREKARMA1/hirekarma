@@ -2,13 +2,11 @@
 
 import Image from "next/image";
 import { useMemo, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 
 import { theme } from "@/config/theme";
 import { formatTestimonialQuote } from "@/lib/utils/testimonial-quote";
 import type { HeadingParts, TestimonialItem } from "@/types/products-page";
-import { GradientHeading } from "./GradientHeading";
-import { SectionLabel } from "./SectionLabel";
 
 const ITEMS_PER_PAGE = 3;
 
@@ -16,9 +14,8 @@ const CARD_ACCENTS = [
   theme.colors.primary,
   theme.colors.secondary,
   theme.colors.orange,
-  theme.colors.yellow,
   theme.colors.green,
-  theme.colors.red,
+  theme.colors.yellow,
 ] as const;
 
 interface TestimonialsWithCarouselProps {
@@ -28,36 +25,13 @@ interface TestimonialsWithCarouselProps {
   testimonials: TestimonialItem[];
 }
 
-function ChevronIcon({ direction }: { direction: "left" | "right" }) {
-  return (
-    <svg
-      aria-hidden
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      className="size-5"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      {direction === "left" ? (
-        <path d="m15 18-6-6 6-6" />
-      ) : (
-        <path d="m9 18 6-6-6-6" />
-      )}
-    </svg>
-  );
-}
-
 /**
- * Aceternity UI - Testimonials With Carousel (HireKarma brand palette)
- * @see https://ui.aceternity.com/blocks/testimonials/testimonials-with-carousel
+ * HireKarma testimonials — brand-aligned carousel (no blur/noise motion).
  */
 export function TestimonialsWithCarousel({
   label,
   heading,
-  accentColor = theme.colors.yellow,
+  accentColor = theme.colors.secondary,
   testimonials,
 }: TestimonialsWithCarouselProps) {
   const [page, setPage] = useState(0);
@@ -74,127 +48,115 @@ export function TestimonialsWithCarousel({
 
   if (!testimonials.length) return null;
 
-  const navButtonClass =
-    "flex size-10 items-center justify-center rounded-full border border-slate-300 text-slate-700 transition duration-200 hover:border-slate-400 hover:bg-slate-100 hover:text-slate-900 active:scale-[0.98] dark:border-white/15 dark:text-white/85 dark:hover:border-white/25 dark:hover:bg-white/10 dark:hover:text-white";
-
   return (
-    <div className="py-12 md:py-20">
-      <SectionLabel>{label}</SectionLabel>
-
-      <div className="mt-4 flex items-center justify-between gap-4">
-        <GradientHeading
-          heading={heading}
-          as="h2"
-          size="section"
-          layout="inline"
-          accentColor={accentColor}
-          className="min-w-0 flex-1"
-        />
+    <div className="py-8 sm:py-10 lg:py-12">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div className="min-w-0 max-w-2xl space-y-2">
+          <p
+            className="text-[10px] font-semibold uppercase tracking-[0.18em]"
+            style={{ color: accentColor }}
+          >
+            {label}
+          </p>
+          <h2 className="text-xl font-bold tracking-tight text-white sm:text-2xl lg:text-[1.75rem]">
+            {heading.part1}{" "}
+            <span style={{ color: accentColor }}>{heading.gradient}</span>
+            {heading.part2 ? ` ${heading.part2}` : null}
+          </h2>
+        </div>
 
         {totalPages > 1 ? (
-          <div className="flex shrink-0 items-center gap-2">
+          <div className="flex items-center gap-2">
             <button
               type="button"
               aria-label="Previous testimonials"
               onClick={handlePrev}
-              className={navButtonClass}
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white/80 transition hover:border-white/40 hover:bg-white/10 hover:text-white"
             >
-              <ChevronIcon direction="left" />
+              <ChevronLeft className="h-4 w-4" />
             </button>
             <button
               type="button"
               aria-label="Next testimonials"
               onClick={handleNext}
-              className={navButtonClass}
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white/80 transition hover:border-white/40 hover:bg-white/10 hover:text-white"
             >
-              <ChevronIcon direction="right" />
+              <ChevronRight className="h-4 w-4" />
             </button>
           </div>
         ) : null}
       </div>
 
-      <div className="mt-8 md:mt-12">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={page}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            variants={{
-              hidden: {},
-              visible: { transition: { staggerChildren: 0.1 } },
-              exit: { transition: { staggerChildren: 0.05, staggerDirection: -1 } },
-            }}
-            className="grid gap-4 md:grid-cols-3"
-          >
-            {visible.map((testimonial, index) => {
-              const accent = CARD_ACCENTS[(page * ITEMS_PER_PAGE + index) % CARD_ACCENTS.length];
-              const { display, full, isTruncated } = formatTestimonialQuote(testimonial.quote);
+      <div className="mt-6 grid gap-4 md:grid-cols-3">
+        {visible.map((testimonial, index) => {
+          const accent =
+            CARD_ACCENTS[(page * ITEMS_PER_PAGE + index) % CARD_ACCENTS.length];
+          const { display, full, isTruncated } = formatTestimonialQuote(
+            testimonial.quote
+          );
 
-              return (
-                <motion.div
-                  key={testimonial.id}
-                  variants={{
-                    hidden: { opacity: 0, y: 20, filter: "blur(8px)" },
-                    visible: {
-                      opacity: 1,
-                      y: 0,
-                      filter: "blur(0px)",
-                      transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] },
-                    },
-                    exit: {
-                      opacity: 0,
-                      y: -20,
-                      filter: "blur(8px)",
-                      transition: { duration: 0.3, ease: [0.22, 1, 0.36, 1] },
-                    },
-                  }}
-                  className="relative flex h-[280px] flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-4 shadow-[0_4px_24px_rgba(15,23,42,0.08)] ring-1 ring-slate-100 backdrop-blur-sm dark:border-white/10 dark:bg-white/[0.04] dark:shadow-[0_4px_24px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.05)] dark:ring-white/5 sm:h-[300px] md:rounded-2xl md:p-6"
+          return (
+            <article
+              key={`${testimonial.id}-${page}`}
+              className="flex h-full min-h-[260px] flex-col rounded-2xl border border-white/10 bg-white/[0.04] p-5 transition hover:border-white/20 hover:bg-white/[0.06]"
+            >
+              <div
+                className="mb-4 flex h-9 w-9 items-center justify-center rounded-xl text-white"
+                style={{ backgroundColor: accent }}
+              >
+                <Quote className="h-4 w-4" />
+              </div>
+
+              <p
+                className="text-[14px] leading-relaxed text-white/75"
+                title={isTruncated ? full : undefined}
+              >
+                {display}
+              </p>
+
+              <div className="mt-auto flex items-center gap-3 border-t border-white/10 pt-4">
+                <div
+                  className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full"
+                  style={{ boxShadow: `0 0 0 2px ${accent}` }}
                 >
-                  <div
-                    className="absolute inset-x-0 top-0 h-0.5 opacity-90"
-                    style={{ backgroundColor: accent }}
-                    aria-hidden
+                  <Image
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    fill
+                    className="object-cover"
+                    sizes="44px"
                   />
-
-                  <p
-                    className="line-clamp-6 text-base leading-relaxed text-slate-700 sm:text-xl sm:leading-relaxed dark:text-white/85"
-                    title={isTruncated ? full : undefined}
-                  >
-                    {display}
+                </div>
+                <div className="min-w-0">
+                  <p className="truncate text-sm font-bold text-white">
+                    {testimonial.name}
                   </p>
-
-                  <div className="mt-auto flex shrink-0 items-center gap-3 pt-6">
-                    <div
-                      className="relative size-8 shrink-0 overflow-hidden rounded-full"
-                      style={{ boxShadow: `0 0 0 2px ${accent}55` }}
-                    >
-                      <Image
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        fill
-                        className="object-cover"
-                        sizes="32px"
-                      />
-                    </div>
-                    <div className="flex min-w-0 flex-col">
-                      <span className="truncate text-sm font-medium text-gray-900 dark:text-white">
-                        {testimonial.name}
-                      </span>
-                      <span
-                        className="truncate text-xs"
-                        style={{ color: `${accent}cc` }}
-                      >
-                        {testimonial.designation}
-                      </span>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </motion.div>
-        </AnimatePresence>
+                  <p className="mt-0.5 line-clamp-2 text-[11px] leading-snug text-white/50">
+                    {testimonial.designation}
+                  </p>
+                </div>
+              </div>
+            </article>
+          );
+        })}
       </div>
+
+      {totalPages > 1 ? (
+        <div className="mt-5 flex items-center justify-center gap-1.5">
+          {Array.from({ length: totalPages }).map((_, i) => (
+            <button
+              key={i}
+              type="button"
+              aria-label={`Go to testimonials page ${i + 1}`}
+              aria-current={i === page}
+              onClick={() => setPage(i)}
+              className={`h-1.5 rounded-full transition ${
+                i === page ? "w-6 bg-white" : "w-1.5 bg-white/30 hover:bg-white/50"
+              }`}
+            />
+          ))}
+        </div>
+      ) : null}
     </div>
   );
 }

@@ -1,113 +1,90 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
-import { useTheme } from 'next-themes';
-import Image from 'next/image';
-import { useHomeLocale } from '@/contexts/HomeLocaleContext';
+import Image from "next/image";
+import Link from "next/link";
 
-const HeroBanner: React.FC = () => {
-    const [mounted, setMounted] = useState(false);
-    const { resolvedTheme } = useTheme();
-    const [imageLoaded, setImageLoaded] = useState(false);
-    const { content } = useHomeLocale();
-    const { heroBanner } = content;
+import EcosystemDiagram from "@/components/home/EcosystemDiagram";
+import footerPartners from "@/data/footer-partners.json";
+import { withHighlightMark } from "@/components/shared/HighlightMark";
+import { theme } from "@/config/theme";
+import { useHomeLocale } from "@/contexts/HomeLocaleContext";
 
-    useEffect(() => {
-        setMounted(true);
-    }, []);
+const trustLogos = footerPartners.slice(0, 5);
 
-    return (
-        <div className="relative content-container pt-20 sm:pt-16 md:pt-20 pb-12 sm:pb-16 md:pb-20">
-            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] lg:min-h-[85vh]">
+export default function HeroBanner() {
+  const { content } = useHomeLocale();
+  const { heroBanner } = content;
+  const primary = theme.colors.primary;
 
-                {/* Left Content - Clean and Modern */}
-                <div className="space-y-6 sm:space-y-8 lg:space-y-10 px-[5px] sm:px-0">
-                    {/* Main Heading */}
-                    <div className="space-y-4 sm:space-y-6">
-                        <h1 className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl font-bold leading-tight tracking-tight transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
-                            ? 'text-gray-100'
-                            : 'text-gray-900'
-                            }`}>
-                            {heroBanner.heading}
-                            <span className={`block mt-1 sm:mt-2 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
-                                ? 'text-cyan-400'
-                                : 'text-cyan-600'
-                                }`}>
-                                {heroBanner.subheading}
-                            </span>
-                        </h1>
-                    </div>
+  return (
+    <section className="relative overflow-hidden bg-white">
+      <div
+        className="pointer-events-none absolute right-0 top-0 h-[28rem] w-[28rem] rounded-full blur-[100px]"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(0,162,229,0.14) 0%, rgba(27,82,164,0.08) 40%, transparent 70%)",
+        }}
+        aria-hidden
+      />
 
-                    {/* Paragraph */}
-                    <div className="space-y-3 sm:space-y-4">
-                        <p className={`text-justify sm:text-left text-base sm:text-lg md:text-xl leading-relaxed max-w-full sm:max-w-xl md:max-w-2xl transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
-                            ? 'text-gray-300'
-                            : 'text-gray-600'
-                            }`}>
-                            {heroBanner.description}
-                        </p>
-                    </div>
-                </div>
+      <div className="relative content-container pb-10 pt-16 lg:pb-14 lg:pt-20">
+        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:gap-8 xl:gap-12">
+          <div className="min-w-0 space-y-6">
+            <h1 className="text-[2rem] font-bold leading-[1.12] tracking-tight text-[#0f1622] sm:text-[2.5rem] lg:text-[2.75rem]">
+              {withHighlightMark(
+                heroBanner.heading,
+                heroBanner.headingHighlight
+              )}
+            </h1>
 
-                {/* Right Content - Hero Image */}
-                <div className="relative px-0 sm:px-5 md:px-5">
-                    <div className="relative w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] overflow-hidden rounded-2xl">
-                        <Image
-                            src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/Landingpage.gif"
-                            alt="Hero animation - HireKarma platform showcase"
-                            fill
-                            priority
-                            quality={85}
-                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
-                            unoptimized
-                            className={`object-contain object-center transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
-                            onLoad={() => setImageLoaded(true)}
-                        />
-                        
-                        {/* Loading skeleton */}
-                        {!imageLoaded && (
-                            <div className={`absolute inset-0 rounded-2xl animate-pulse ${mounted && resolvedTheme === 'dark'
-                                ? 'bg-gray-800'
-                                : 'bg-gray-200'
-                                }`} />
-                        )}
+            <p className="max-w-xl text-[15px] leading-relaxed text-[#0f1622]/65 sm:text-base">
+              {heroBanner.description}
+            </p>
 
-                        {/* Fallback content for browsers that don't support images */}
-                        <div className={`absolute inset-0 flex items-center justify-center rounded-2xl hidden ${mounted && resolvedTheme === 'dark'
-                            ? 'bg-gray-900/50 backdrop-blur-sm'
-                            : 'bg-white/50 backdrop-blur-sm'
-                            }`}>
-                            <div className="text-center space-y-4">
-                                <div className={`w-12 sm:w-16 h-12 sm:h-16 mx-auto rounded-full flex items-center justify-center ${mounted && resolvedTheme === 'dark'
-                                    ? 'bg-gray-700/80'
-                                    : 'bg-gray-200/80'
-                                    }`}>
-                                    <svg className={`w-6 sm:w-8 h-6 sm:h-8 ${mounted && resolvedTheme === 'dark'
-                                        ? 'text-gray-300'
-                                        : 'text-gray-500'
-                                        }`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                                    </svg>
-                                </div>
-                                <p className={`font-medium text-sm sm:text-base ${mounted && resolvedTheme === 'dark'
-                                    ? 'text-gray-200'
-                                    : 'text-gray-600'
-                                    }`}>Animation not supported</p>
-                                <p className={`text-xs sm:text-sm ${mounted && resolvedTheme === 'dark'
-                                    ? 'text-gray-300'
-                                    : 'text-gray-500'
-                                    }`}>Your browser doesn&apos;t support image playback</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+              <Link
+                href={heroBanner.primaryCta.href}
+                className="inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold text-white transition hover:brightness-110"
+                style={{ backgroundColor: primary }}
+              >
+                {heroBanner.primaryCta.label}
+                <span aria-hidden>→</span>
+              </Link>
+              <Link
+                href={heroBanner.secondaryCta.href}
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#d5d9e0] bg-white px-5 py-3 text-sm font-semibold text-[#0f1622] transition hover:border-[#0f1622]/35"
+              >
+                {heroBanner.secondaryCta.label}
+                <span aria-hidden>→</span>
+              </Link>
             </div>
+
+            <div className="pt-1">
+              <p className="text-xs text-[#0f1622]/45">{heroBanner.partnersNote}</p>
+              <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-3">
+                {trustLogos.map((partner) => (
+                  <div
+                    key={partner.id}
+                    className="relative h-8 w-[4.5rem] grayscale opacity-70 transition hover:opacity-100 hover:grayscale-0 sm:h-9 sm:w-20"
+                  >
+                    <Image
+                      src={partner.logo}
+                      alt={partner.name}
+                      fill
+                      className="object-contain"
+                      sizes="80px"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="min-w-0">
+            <EcosystemDiagram />
+          </div>
         </div>
-    );
-};
-
-export default HeroBanner;
-
-
+      </div>
+    </section>
+  );
+}

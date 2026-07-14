@@ -1,85 +1,102 @@
 "use client";
 
-import React from 'react';
-import { useTheme } from 'next-themes';
-import ProductCard from './ProductCard';
-import productsData from '../../data/products.json';
-import { useHomeLocale } from '@/contexts/HomeLocaleContext';
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
-type ProductMedia = {
-  id: string;
-  logoLight: string;
-  logoDark: string;
-  href: string;
-};
+import { theme } from "@/config/theme";
+import { useHomeLocale } from "@/contexts/HomeLocaleContext";
 
-const ProductsSection: React.FC = () => {
-  const [mounted, setMounted] = React.useState(false);
-  const { resolvedTheme } = useTheme();
+export default function ProductsSection() {
   const { content } = useHomeLocale();
-  const { productsSection } = content;
-  const productMedia = productsData.products as ProductMedia[];
-
-  React.useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const isDark = mounted && resolvedTheme === 'dark';
-
-  const products = productMedia.map((media) => {
-    const localized = productsSection.items.find((item) => item.id === media.id);
-    return {
-      ...media,
-      title: localized?.title ?? media.id,
-      subtitle: localized?.subtitle ?? '',
-      description: localized?.description ?? '',
-    };
-  });
+  const { techShowcase } = content;
 
   return (
-    <section className="relative content-container py-12 sm:py-16 md:py-20">
-      <div className="mb-10 sm:mb-12 md:mb-14 space-y-6">
-        <h2
-          className={`text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight ${
-            isDark ? 'text-gray-100' : 'text-gray-900'
-          }`}
-        >
-          {productsSection.heading}
-          <span
-            className={`block mt-2 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium ${
-              isDark ? 'text-violet-400' : 'text-violet-600'
-            }`}
+    <section className="bg-white py-12 sm:py-14">
+      <div className="content-container">
+        <div className="max-w-xl">
+          <p
+            className="text-[11px] font-semibold uppercase tracking-[0.18em]"
+            style={{ color: theme.colors.secondary }}
           >
-            {productsSection.subheading}
-          </span>
-        </h2>
+            {techShowcase.label}
+          </p>
+          <h2 className="mt-2 text-2xl font-bold tracking-tight text-[#0f1622] sm:text-[1.85rem]">
+            {techShowcase.heading}
+          </h2>
+        </div>
 
-        <p
-          className={`text-lg sm:text-xl leading-relaxed max-w-3xl ${
-            isDark ? 'text-gray-300' : 'text-gray-600'
-          }`}
-        >
-          {productsSection.description}
-        </p>
-      </div>
+        <div className="mt-8 grid gap-5 lg:grid-cols-2">
+          {techShowcase.products.map((product) => {
+            const isDark = product.tone === "dark";
+            return (
+              <article
+                key={product.id}
+                className={`overflow-hidden rounded-2xl border ${
+                  isDark
+                    ? "border-white/10 bg-[#0f1622] text-white"
+                    : "border-[#e6e8ec] bg-[#f6f8fb] text-[#0f1622]"
+                }`}
+              >
+                <div className="grid gap-0 sm:grid-cols-[1.05fr_0.95fr]">
+                  <div className="flex flex-col p-5 sm:p-6">
+                    <p
+                      className="text-[10px] font-semibold uppercase tracking-[0.14em]"
+                      style={{ color: product.accent }}
+                    >
+                      {product.subtitle}
+                    </p>
+                    <h3 className="mt-2 text-xl font-bold tracking-tight">
+                      {product.title}
+                    </h3>
+                    <p
+                      className={`mt-2 flex-1 text-sm leading-relaxed ${
+                        isDark ? "text-white/65" : "text-[#0f1622]/6"
+                      }`}
+                    >
+                      {product.description}
+                    </p>
+                    <a
+                      href={product.cta.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold transition hover:gap-2"
+                      style={{ color: product.accent }}
+                    >
+                      {product.cta.label}
+                      <ArrowUpRight className="h-4 w-4" />
+                    </a>
+                  </div>
+                  <div
+                    className={`relative min-h-[180px] sm:min-h-full ${
+                      isDark ? "bg-[#121826]" : "bg-white"
+                    }`}
+                  >
+                    <Image
+                      src={product.image}
+                      alt={product.title}
+                      fill
+                      className="object-contain object-center p-3"
+                      sizes="(max-width: 1024px) 100vw, 40vw"
+                    />
+                  </div>
+                </div>
+              </article>
+            );
+          })}
+        </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 lg:gap-8">
-        {products.map((product) => (
-          <ProductCard
-            key={product.id}
-            logoLight={product.logoLight}
-            logoDark={product.logoDark}
-            title={product.title}
-            subtitle={product.subtitle}
-            description={product.description}
-            href={product.href}
-            viewMoreLabel={productsSection.viewMore}
-            productBadge={productsSection.productBadge}
-          />
-        ))}
+        <div className="mt-6 text-center">
+          <Link
+            href="/products"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold"
+            style={{ color: theme.colors.primary }}
+          >
+            See the full product stack
+            <ArrowUpRight className="h-4 w-4" />
+          </Link>
+        </div>
       </div>
     </section>
   );
-};
-
-export default ProductsSection;
+}

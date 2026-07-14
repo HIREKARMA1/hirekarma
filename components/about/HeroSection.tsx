@@ -13,17 +13,17 @@ const HeroSection: React.FC = () => {
   const hero = content.story.hero;
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#0B0028]">
+    <section className="relative w-full overflow-hidden bg-[#0f1622]">
       <div className="pointer-events-none absolute inset-0" aria-hidden>
-        <div className="absolute top-1/4 left-0 h-[420px] w-[420px] rounded-full bg-[#4D38F0]/20 blur-[120px]" />
-        <div className="absolute right-0 top-1/3 h-[360px] w-[360px] rounded-full bg-[#7C3AED]/15 blur-[100px]" />
-        <div className="absolute bottom-0 left-1/3 h-[280px] w-[280px] rounded-full bg-[#312E81]/30 blur-[90px]" />
+        <div className="absolute top-1/4 left-0 h-[420px] w-[420px] rounded-full bg-[#1b52a4]/20 blur-[120px]" />
+        <div className="absolute right-0 top-1/3 h-[360px] w-[360px] rounded-full bg-[#00a2e5]/15 blur-[100px]" />
+        <div className="absolute bottom-0 left-1/3 h-[280px] w-[280px] rounded-full bg-[#00a2e5]/15 blur-[90px]" />
       </div>
 
       <div className="relative content-container pb-10 pt-28 sm:pt-32 lg:pb-14 lg:pt-36">
         <div className="grid min-h-[calc(75vh-7rem)] grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16 xl:gap-20">
           <div className="order-1 space-y-6 text-center lg:order-1 lg:text-left xl:space-y-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#A78BFA] sm:text-sm">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#00a2e5] sm:text-sm">
               {hero.label}
             </p>
 
@@ -38,7 +38,7 @@ const HeroSection: React.FC = () => {
             <div className="flex flex-col items-center justify-center gap-4 pt-2 sm:flex-row sm:justify-center lg:justify-start">
               <Link
                 href={hero.primaryCta.href}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#4D38F0] px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#5B46F5] hover:shadow-[0_8px_30px_rgba(77,56,240,0.35)] sm:w-auto"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#1b52a4] px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#5B46F5] hover:shadow-[0_8px_30px_rgba(77,56,240,0.35)] sm:w-auto"
               >
                 {hero.primaryCta.label}
                 <ArrowRight className="h-4 w-4" />

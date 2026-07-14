@@ -30,7 +30,7 @@ const FutureReadySection: React.FC = () => {
                             {futureReadySection.heading}
                             <span className={`block mt-2 text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl font-medium transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
                                 ? 'text-emerald-400'
-                                : 'text-emerald-600'
+                                : 'text-[#098855]'
                                 }`}>
                                 {futureReadySection.subheading}
                             </span>
@@ -53,7 +53,7 @@ const FutureReadySection: React.FC = () => {
                             href="/about-us/our-story"
                             className={`group relative inline-flex items-center overflow-hidden px-5 py-2.5 sm:px-6 sm:py-3 font-semibold rounded-lg transition-all duration-500 hover:brightness-110 border-2 ${mounted && resolvedTheme === 'dark'
                                 ? 'border-emerald-600 text-emerald-400 hover:bg-emerald-600 hover:text-white'
-                                : 'border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white'
+                                : 'border-emerald-600 text-[#098855] hover:bg-emerald-600 hover:text-white'
                                 }`}
                         >
                             <span className="relative z-10">{futureReadySection.cta}</span>

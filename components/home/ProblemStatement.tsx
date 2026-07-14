@@ -30,7 +30,7 @@ const ProblemStatement: React.FC = () => {
                             {problemStatement.heading}
                             <span className={`block mt-1 sm:mt-2 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-medium ${mounted && resolvedTheme === 'dark'
                                 ? 'text-red-400'
-                                : 'text-red-600'
+                                : 'text-[#d64246]'
                                 }`}>
                                 {problemStatement.subheading}
                             </span>

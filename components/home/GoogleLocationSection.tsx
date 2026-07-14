@@ -40,7 +40,7 @@ const GoogleLocationSection: React.FC = () => {
           {googleLocationSection.heading}
           <span
             className={`block mt-2 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium ${
-              isDark ? 'text-cyan-400' : 'text-cyan-600'
+              isDark ? 'text-[#00a2e5]' : 'text-[#00a2e5]'
             }`}
           >
             {googleLocationSection.subheading}

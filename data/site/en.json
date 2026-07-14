@@ -40,22 +40,49 @@
     "resources": {
       "id": "resources",
       "label": "Resources",
-      "href": "/resources"
+      "href": "/resources",
+      "items": [
+        {
+          "id": "overview",
+          "label": "Overview",
+          "href": "/resources"
+        },
+        {
+          "id": "faq",
+          "label": "FAQ",
+          "href": "/resources/faq"
+        }
+      ]
+    },
+    "impact": {
+      "id": "impact",
+      "label": "Impact",
+      "href": "/impact"
     },
     "about": {
       "id": "about",
-      "label": "About",
+      "label": "About Us",
       "href": "/about-us",
       "items": [
         {
+          "id": "story",
+          "label": "Our Story",
+          "href": "/about-us/our-story"
+        },
+        {
           "id": "mission",
-          "label": "Mission & Value",
+          "label": "Mission & Values",
           "href": "/about-us/mission-value"
         },
         {
           "id": "people",
           "label": "People",
           "href": "/about-us/people"
+        },
+        {
+          "id": "locations",
+          "label": "Locations",
+          "href": "/about-us/locations"
         }
       ]
     },
@@ -64,14 +91,27 @@
       "label": "Contact Us",
       "href": "/contact"
     },
-    "language": "Language"
+    "language": "Language",
+    "tagline": "India's Talent Infrastructure",
+    "secondaryCta": {
+      "id": "open-positions",
+      "label": "View Open Positions",
+      "href": "/contact"
+    },
+    "primaryCta": {
+      "id": "explore-products",
+      "label": "Explore Products",
+      "href": "/products"
+    }
   },
   "footer": {
     "description": "Transform your hiring process with HireKarma's innovative platform. Find the right talent faster and more efficiently.",
+    "partnersNote": "Building with partners who share our mission.",
+    "partnersImageAlt": "Government and institutional partners",
     "connectTitle": "Connect With Us",
     "email": "info@hirekarma.in",
     "phone": "+91 91243 64762",
-    "address": "2nd Floor, SS Niwas, Hirekarma Private Limited, Raghunathpur, Bhubaneswar, Raghunathpurjali, Odisha 751024",
+    "address": "2nd Floor, SS Niwas, HireKarma Private Limited, Raghunathpur, Bhubaneswar, Odisha 751024",
     "aboutTitle": "About Us",
     "aboutLinks": [
       {
@@ -79,12 +119,20 @@
         "href": "/about-us/our-story"
       },
       {
-        "label": "Mission & Value",
+        "label": "Mission & Values",
         "href": "/about-us/mission-value"
       },
       {
         "label": "People",
         "href": "/about-us/people"
+      },
+      {
+        "label": "Locations",
+        "href": "/about-us/locations"
+      },
+      {
+        "label": "Impact",
+        "href": "/impact"
       }
     ],
     "productsTitle": "Products",
@@ -105,6 +153,10 @@
       {
         "label": "SolviqAI",
         "href": "https://solviqai.hirekarma.in/"
+      },
+      {
+        "label": "Lakshya",
+        "href": "https://lakshya.hirekarma.in/"
       }
     ]
   }

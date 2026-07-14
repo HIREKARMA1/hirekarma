@@ -2,78 +2,165 @@
   "meta": {
     "story": {
       "title": "Our Story | HireKarma",
-      "description": "How HireKarma began in Bhubaneswar and grew into a platform bridging academia and industry across India."
+      "description": "From a 2020 founding in Bhubaneswar to a connected talent platform for campuses, employers, and learners across India."
     },
     "mission": {
       "title": "Mission & Values | HireKarma",
       "description": "Our mission, vision, and values guiding HireKarma's work in campus recruitment and employability."
     },
     "people": {
-      "title": "Our People | HireKarma",
-      "description": "Meet the leadership, core team, and advisory board powering HireKarma."
+      "title": "Leadership Team | HireKarma",
+      "description": "Meet the people building India's talent infrastructure at HireKarma."
+    },
+    "locations": {
+      "title": "Our Locations | HireKarma",
+      "description": "HireKarma offices in Bhubaneswar, Barbil, and Cuttack — rooted in Odisha, connected to India."
     }
   },
   "story": {
     "hero": {
-      "label": "About HireKarma",
-      "heading": "Building pathways between potential and opportunity.",
-      "description": "From training a learner in rural Odisha to contributing to national digital public infrastructure, HireKarma exists to bridge the gap between where people are and where they could be.",
+      "label": "Our Story",
+      "heading": "From overlooked campuses to",
+      "description": "HireKarma began with a simple belief: talent is everywhere — opportunity should be too. We build the systems that connect learners, campuses, and employers.",
       "primaryCta": {
-        "label": "Meet the Leadership Team",
+        "label": "Meet the team",
         "href": "/about-us/people"
       },
       "secondaryCta": {
-        "label": "Explore Our Impact",
-        "href": "/"
+        "label": "See our impact",
+        "href": "/impact"
       },
       "partnersNote": "Trusted by partners and institutions across India",
-      "heroImageAlt": "HireKarma impact dashboard on tablet",
-      "partnersImageAlt": "Government and institutional partners"
+      "heroImageAlt": "Learners and campuses connected through HireKarma",
+      "partnersImageAlt": "Government and institutional partners",
+      "headingHighlight": "lasting opportunity."
     },
     "journey": {
-      "title": "The Journey Begins",
-      "subtitle": "Our Founding Story",
-      "beforeFounded": "Founded in ",
-      "founded": "Bhubaneswar in 2020",
-      "afterFoundedBeforeFounder1": " by ",
+      "title": "Started in Odisha. Built for India.",
+      "subtitle": "The beginning",
+      "beforeFounded": "In ",
+      "founded": "2020",
+      "afterFoundedBeforeFounder1": ", ",
       "founder1": "Sohan Kumar Dey",
       "betweenFounders": " and ",
       "founder2": "Rohit Samantaray",
-      "afterFounders": ", HireKarma arose from a passion to bridge the gap between academia and industry, particularly for students in tier-2 and tier-3 colleges across India.",
+      "afterFounders": " founded HireKarma in Bhubaneswar to open stronger pathways between campuses and careers — especially for students in tier-2 and tier-3 colleges.",
       "foundedCard": {
         "label": "Founded",
         "value": "2020",
-        "detail": "Bhubaneswar, India"
+        "detail": "Bhubaneswar"
       },
       "focusCard": {
         "label": "Focus",
         "value": "Tier-2 & 3",
-        "detail": "Colleges across India"
+        "detail": "Campuses nationwide"
       },
-      "imageAlt": "HireKarma founding story journey animation"
+      "imageAlt": "HireKarma founding story journey animation",
+      "titleHighlight": "Built for India.",
+      "closing": "We focused where talent was abundant and access was uneven — then built products to make placement outcomes clearer, faster, and fairer.",
+      "panelTitle": "Why we started",
+      "panelTitleHighlight": "started"
     },
     "challenge": {
-      "title": "The Challenge We Saw",
-      "subtitle": "Campus Hiring Roadblocks",
-      "beforeHighlight1": "Recognizing that many",
-      "highlight1": "talented graduates face roadblocks",
-      "betweenHighlights": "to meaningful employment, we identified the",
-      "highlight2": "critical gap",
-      "afterHighlights": "between what students learn in college and what industries actually need.",
-      "imageAlt": "Campus hiring roadblocks challenges visualization"
+      "title": "What held talent back",
+      "subtitle": "The gap",
+      "beforeHighlight1": "Bright graduates were ready — but",
+      "highlight1": "campus hiring was fragmented",
+      "betweenHighlights": ", skills signals were weak, and",
+      "highlight2": "recruiters struggled",
+      "afterHighlights": " to find the right people at the right time.",
+      "imageAlt": "Campus hiring roadblocks challenges visualization",
+      "titleHighlight": "talent back",
+      "summary": "Bright graduates were ready — but campus hiring was fragmented, skills signals were weak, and recruiters struggled to find the right people at the right time.",
+      "panelTitle": "What held talent back"
     },
     "solution": {
-      "title": "Our Transformative Solution",
-      "subtitle": "AI-Powered Innovation",
-      "beforeHighlight1": "The founders set out to",
-      "highlight1": "transform campus recruitment",
-      "betweenHighlights": "through AI automation,",
-      "highlight2": "predictive analytics",
-      "afterHighlights": ", and community-driven engagement. Our platform streamlines the entire hiring journey.",
-      "imageAlt": "AI-powered transformative solution for campus hiring"
+      "title": "What we created",
+      "subtitle": "The build",
+      "beforeHighlight1": "A connected stack for",
+      "highlight1": "readiness, campus placement, and hiring",
+      "betweenHighlights": " — powered by",
+      "highlight2": "AI and shared visibility",
+      "afterHighlights": ", with human support where it matters.",
+      "imageAlt": "AI-powered transformative solution for campus hiring",
+      "titleHighlight": "we created",
+      "summary": "A connected stack for readiness, campus placement, and hiring — powered by AI, shared visibility, and human support where it matters.",
+      "panelTitle": "What we created"
+    },
+    "stats": [
+      {
+        "label": "Founders",
+        "value": "2",
+        "detail": "Sohan & Rohit"
+      },
+      {
+        "label": "Home base",
+        "value": "Odisha",
+        "detail": "Serving India-wide"
+      }
+    ],
+    "timeline": {
+      "label": "Growth path",
+      "heading": "Four chapters so far",
+      "headingHighlight": "so far",
+      "description": "From a Bhubaneswar start to a product ecosystem that serves campuses, companies, and public programs.",
+      "items": [
+        {
+          "id": "founding",
+          "year": "2020",
+          "title": "HireKarma is founded",
+          "description": "We begin in Bhubaneswar with one mission: connect campus talent to real opportunity."
+        },
+        {
+          "id": "campus",
+          "year": "2021–22",
+          "title": "Campus systems take root",
+          "description": "Placement operations and student readiness tools help TPOs and learners work from one clearer flow."
+        },
+        {
+          "id": "products",
+          "year": "2023–24",
+          "title": "The product stack expands",
+          "description": "DISHA, SolviqAI, Lakshya, and Shortlisted grow into a connected ecosystem for campuses and employers."
+        },
+        {
+          "id": "dpi",
+          "year": "Today",
+          "title": "Building for national scale",
+          "description": "We keep extending the mission — from campus hiring to open digital public infrastructure."
+        }
+      ]
+    },
+    "cta": {
+      "title": "The next chapter is people.",
+      "titleHighlight": "people.",
+      "description": "Meet the team behind HireKarma, or read the mission that guides every product we ship.",
+      "primary": {
+        "label": "Meet our people",
+        "href": "/about-us/people"
+      },
+      "secondary": {
+        "label": "Mission & values",
+        "href": "/about-us/mission-value"
+      }
     }
   },
   "mission": {
+    "hero": {
+      "label": "Mission & Values",
+      "heading": "Purpose that guides every",
+      "headingHighlight": "placement and product.",
+      "description": "Our mission, vision, and values keep HireKarma focused on bridging academia and industry — with clarity, equity, and measurable outcomes.",
+      "primaryCta": {
+        "label": "Meet Our People",
+        "href": "/about-us/people"
+      },
+      "secondaryCta": {
+        "label": "Get in Touch",
+        "href": "/contact"
+      },
+      "tagline": "Precision in purpose. Excellence in execution."
+    },
     "mission": {
       "title": "OUR MISSION",
       "subtitle": "Precision in Purpose, Excellence in Execution",
@@ -91,14 +178,56 @@
       "subtitle": "Guiding Stars of Our Journey",
       "body": "Like guiding stars, our core values of inclusivity, transparency, and innovation light the way forward. We create a stellar community where excellence shines through continuous learning, and the brilliance of shared growth illuminates new opportunities for both students and partners.",
       "imageAlt": "Values animation"
+    },
+    "cta": {
+      "title": "Ready to build with purpose?",
+      "description": "Explore opportunities with a team guided by mission, vision, and values that put people first.",
+      "button": {
+        "label": "View Open Positions",
+        "href": "/contact"
+      }
     }
   },
   "people": {
-    "title": "Leadership that Inspires Growth",
-    "subtitle": "Meet the People Powering HireKarma",
-    "descriptionBefore": "The passionate people behind our success - innovators, creators, and leaders dedicated to",
-    "descriptionHighlight": "transforming campus recruitment",
-    "descriptionAfter": "across India.",
+    "hero": {
+      "label": "Leadership Team",
+      "heading": "Meet the people building India's",
+      "headingHighlight": "Talent Infrastructure.",
+      "description": "Behind every placement, training program, college partnership, technology product and open-source contribution is a team committed to creating opportunity at scale.",
+      "primaryCta": {
+        "label": "View Open Positions",
+        "href": "/contact"
+      },
+      "secondaryCta": {
+        "label": "Explore Our Mission",
+        "href": "/about-us/mission-value"
+      },
+      "tagline": "A team driven by purpose, united by impact."
+    },
+    "partnersNote": "Trusted by partners and institutions across India",
+    "partnersImageAlt": "Government and institutional partners",
+    "philosophy": {
+      "label": "Our Leadership Philosophy",
+      "title": "No one here is just a designation.",
+      "pillars": [
+        {
+          "id": "ownership",
+          "title": "Ownership",
+          "description": "We take responsibility, not just titles."
+        },
+        {
+          "id": "collaboration",
+          "title": "Collaboration",
+          "description": "We win together across teams."
+        },
+        {
+          "id": "impact",
+          "title": "Impact",
+          "description": "We measure success by opportunities created."
+        }
+      ]
+    },
+    "teamLabel": "Our People",
     "tabs": {
       "advisory": "Advisory Board",
       "leadership": "Leadership",
@@ -106,16 +235,11 @@
     },
     "loading": "Loading team...",
     "emptyTitle": "No Members Yet",
-    "emptyDescription": "Advisory board members will be announced soon.",
-    "closeAria": "Close",
-    "viewDetailsAria": "View details",
-    "linkedinAria": "LinkedIn",
-    "instagramAria": "Instagram",
-    "emailAria": "Email",
+    "emptyDescription": "Members for this group will be announced soon.",
     "culture": {
       "title": "Our Culture",
       "subtitle": "Inclusive, Innovative, and Collaborative",
-      "description": "We believe in fostering an inclusive, innovative, and collaborative environment where every team member can thrive and contribute to our mission of transforming campus recruitment.",
+      "description": "We foster an inclusive, innovative, and collaborative culture where every teammate can thrive and help transform campus recruitment.",
       "values": [
         {
           "id": "inclusive",
@@ -134,10 +258,163 @@
         }
       ],
       "imageAlts": {
-        "collaboration": "Students collaboration",
+        "collaboration": "Student collaboration",
         "celebration": "Corporate team",
         "festival": "University campus",
         "workspace": "Team workspace"
+      }
+    },
+    "openRoles": {
+      "label": "Building for Tomorrow",
+      "title": "Growing teams. Growing responsibility.",
+      "description": "As HireKarma expands across divisions, we are looking for leaders who can own outcomes and build high-performing teams.",
+      "roles": [
+        {
+          "id": "recruitment",
+          "title": "Recruitment Lead",
+          "description": "Building talent pipelines and hiring excellence."
+        },
+        {
+          "id": "it-consulting",
+          "title": "IT Consulting Lead",
+          "description": "Delivering technology solutions at scale."
+        },
+        {
+          "id": "open-source",
+          "title": "Open Source Lead",
+          "description": "Building inclusive, open and impactful solutions."
+        },
+        {
+          "id": "staff-augmentation",
+          "title": "Staff Augmentation Lead",
+          "description": "Empowering organizations with right-fit talent."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Build the future with us.",
+      "description": "Explore opportunities to work with a team that believes in purpose, people, and impact.",
+      "button": {
+        "label": "View Open Positions",
+        "href": "/contact"
+      }
+    },
+    "linkedinAria": "LinkedIn",
+    "instagramAria": "Instagram",
+    "emailAria": "Email"
+  },
+  "locations": {
+    "hero": {
+      "label": "Our three offices",
+      "headingLine1": "Rooted in Odisha",
+      "headingLine1Highlight": ".",
+      "headingLine2": "Connected to India",
+      "headingLine2Highlight": ".",
+      "description": "From our Bhubaneswar HQ to branches in Barbil and Cuttack, we stay close to campuses, employers, and communities.\nLocal presence means faster placements, stronger partnerships, and opportunity that reaches across Odisha — and into India.",
+      "primaryCta": {
+        "label": "Get in Touch",
+        "href": "/contact"
+      },
+      "secondaryCta": {
+        "label": "Explore Our Impact",
+        "href": "/impact"
+      },
+      "tagline": "3 Offices. One Mission. Limitless Impact."
+    },
+    "map": {
+      "ariaLabel": "HireKarma offices across Odisha",
+      "pins": [
+        {
+          "id": "barbil",
+          "city": "Barbil",
+          "role": "Branch Office",
+          "x": 42,
+          "y": 18
+        },
+        {
+          "id": "cuttack",
+          "city": "Cuttack",
+          "role": "Branch Office",
+          "x": 72,
+          "y": 48
+        },
+        {
+          "id": "bhubaneswar",
+          "city": "Bhubaneswar",
+          "role": "Head Office",
+          "x": 58,
+          "y": 62
+        }
+      ]
+    },
+    "section": {
+      "label": "Our footprint",
+      "heading": "Near the people we serve."
+    },
+    "pillars": [
+      {
+        "id": "colleges",
+        "title": "Campus-first reach",
+        "description": "On the ground with TPOs and students — not just another portal login."
+      },
+      {
+        "id": "communities",
+        "title": "Community impact",
+        "description": "Skilling and CSR that meet people where they live and learn."
+      },
+      {
+        "id": "clients",
+        "title": "Employer speed",
+        "description": "Local presence means faster hiring cycles and sharper delivery."
+      }
+    ],
+    "offices": [
+      {
+        "id": "bhubaneswar",
+        "badge": "Head Office",
+        "badgeTone": "primary",
+        "city": "Bhubaneswar",
+        "role": "Strategy & HQ",
+        "description": "Where product, partnerships, and placement strategy come together — our command center for talent infrastructure.",
+        "address": "2nd Floor, SS Niwas, HireKarma Private Limited, Raghunathpur, Bhubaneswar, Odisha 751024",
+        "whyTitle": "Why Bhubaneswar",
+        "whyBody": "Capital access to campuses, government partners, and Odisha’s growing tech ecosystem.",
+        "image": "/about/locations/bhubaneswar.jpg",
+        "imageAlt": "HireKarma head office in Bhubaneswar"
+      },
+      {
+        "id": "barbil",
+        "badge": "Branch Office",
+        "badgeTone": "green",
+        "city": "Barbil",
+        "role": "Industrial corridor",
+        "description": "Our northern Odisha base — closer to industry belts and talent that rarely shows up on metro job boards.",
+        "address": "HireKarma Branch Office, Barbil, Keonjhar District, Odisha",
+        "whyTitle": "Why Barbil",
+        "whyBody": "Puts skilled employment pathways next to the communities that need them most.",
+        "image": "/about/locations/barbil.jpg",
+        "imageAlt": "HireKarma branch office in Barbil"
+      },
+      {
+        "id": "cuttack",
+        "badge": "Branch Office",
+        "badgeTone": "secondary",
+        "city": "Cuttack",
+        "role": "Coastal network",
+        "description": "Extends our college and employer network across coastal Odisha — deeper coverage, tighter relationships.",
+        "address": "HireKarma Branch Office, Cuttack, Odisha",
+        "whyTitle": "Why Cuttack",
+        "whyBody": "A commercial hub that multiplies our reach beyond the capital city.",
+        "image": "/about/locations/cuttack.jpg",
+        "imageAlt": "HireKarma branch office in Cuttack"
+      }
+    ],
+    "cta": {
+      "title": "Let’s build opportunity that scales.",
+      "description": "Partner with us, visit an office, or join the team shaping India’s talent infrastructure.",
+      "button": {
+        "label": "Get in Touch",
+        "href": "/contact"
       }
     }
   },

@@ -3,19 +3,76 @@
 /* Class-based dark mode for next-themes (html.dark) */
 @custom-variant dark (&:where(.dark, .dark *));
 
+:root {
+  --hk-primary: #1b52a4;
+  --hk-secondary: #00a2e5;
+  --hk-yellow: #fec40d;
+  --hk-orange: #f58020;
+  --hk-red: #d64246;
+  --hk-green: #098855;
+  --hk-ink: #0f1622;
+  --hk-soft: #f6f8fb;
+  --hk-line: #e6e8ec;
+  --font-sans: var(--font-inter), Inter, Helvetica Neue, Arial, sans-serif;
+  --font-size-body: 15px;
+  --leading-body: 1.65;
+  --tracking-heading: -0.025em;
+}
+
 /* Smooth scrolling for the entire page */
 html {
   scroll-behavior: smooth;
 }
 
-/* Base styles for light and dark mode */
+/* Base styles — Inter + HarkX-inspired readability scale */
 body {
-  @apply bg-white text-gray-900 transition-colors duration-300;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  line-height: var(--leading-body);
+  letter-spacing: -0.011em;
+  @apply bg-white text-[#0f1622] transition-colors duration-300;
 }
 
 .dark body,
 html.dark body {
-  @apply bg-gray-950 text-gray-100;
+  @apply bg-[#0f1622] text-gray-100;
+}
+
+/* Section label utility used across pages */
+.hk-section-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--hk-secondary);
+}
+
+.hk-heading {
+  color: var(--hk-ink);
+  font-weight: 700;
+  letter-spacing: var(--tracking-heading);
+  line-height: 1.15;
+}
+
+.hk-heading-accent {
+  color: var(--hk-secondary);
+}
+
+.hk-body {
+  font-size: 15px;
+  line-height: 1.65;
+  letter-spacing: -0.011em;
+}
+
+.hk-body-sm {
+  font-size: 13px;
+  line-height: 1.6;
+  letter-spacing: -0.006em;
+}
+
+.hk-underline-accent {
+  text-decoration-color: var(--hk-yellow);
+  text-underline-offset: 4px;
 }
 
 /* Products page — prevent horizontal bleed from marquee / hero glows */
@@ -46,12 +103,12 @@ html:has(.resources-page) body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #0ea5e9, #06b6d4);
+  background: linear-gradient(to bottom, #1b52a4, #00a2e5);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #0284c7, #0891b2);
+  background: linear-gradient(to bottom, #154a8f, #0091cc);
 }
 
 /* Custom scrollbar for card content */
@@ -269,8 +326,12 @@ html:has(.resources-page) body {
 
 .animate-partners-scroll-left {
   animation: partners-scroll-left 60s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .animate-partners-scroll-right {
   animation: partners-scroll-right 60s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
 }

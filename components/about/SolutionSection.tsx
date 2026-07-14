@@ -5,6 +5,7 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 
 import { useAboutLocale } from "@/contexts/AboutLocaleContext";
+import { HighlightMark } from "@/components/shared/HighlightMark";
 
 const SolutionSection: React.FC = () => {
   const [mounted, setMounted] = useState(false);
@@ -35,7 +36,7 @@ const SolutionSection: React.FC = () => {
                 className={`block mt-2 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium ${
                   mounted && resolvedTheme === "dark"
                     ? "text-emerald-400"
-                    : "text-emerald-600"
+                    : "text-[#098855]"
                 }`}
               >
                 {solution.subtitle}
@@ -52,25 +53,9 @@ const SolutionSection: React.FC = () => {
               }`}
             >
               {solution.beforeHighlight1}{" "}
-              <strong
-                className={`${
-                  mounted && resolvedTheme === "dark"
-                    ? "text-gray-200"
-                    : "text-gray-700"
-                }`}
-              >
-                {solution.highlight1}
-              </strong>{" "}
+              <HighlightMark nowrap={false}>{solution.highlight1}</HighlightMark>{" "}
               {solution.betweenHighlights}{" "}
-              <strong
-                className={`${
-                  mounted && resolvedTheme === "dark"
-                    ? "text-gray-200"
-                    : "text-gray-700"
-                }`}
-              >
-                {solution.highlight2}
-              </strong>
+              <HighlightMark nowrap={false}>{solution.highlight2}</HighlightMark>
               {solution.afterHighlights}
             </p>
           </div>

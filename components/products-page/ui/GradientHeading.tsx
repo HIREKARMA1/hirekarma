@@ -1,4 +1,4 @@
-import { theme } from "@/config/theme";
+import { HighlightMark } from "@/components/shared/HighlightMark";
 import { cn } from "@/lib/utils/cn";
 import type { HeadingParts } from "@/types/products-page";
 
@@ -8,6 +8,7 @@ interface GradientHeadingProps {
   className?: string;
   size?: "hero" | "section" | "cta";
   layout?: "inline" | "stacked";
+  /** Kept for API compatibility; accent now uses the yellow mark treatment. */
   accentColor?: string;
 }
 
@@ -23,11 +24,8 @@ export function GradientHeading({
   className,
   size = "section",
   layout = "inline",
-  accentColor = theme.colors.secondary,
 }: GradientHeadingProps) {
-  const accentSpan = (
-    <span style={{ color: accentColor }}>{heading.gradient}</span>
-  );
+  const accentSpan = <HighlightMark nowrap={false}>{heading.gradient}</HighlightMark>;
 
   if (layout === "stacked") {
     return (

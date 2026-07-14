@@ -1,58 +1,67 @@
 {
   "meta": {
     "title": "संपर्क | HireKarma",
-    "description": "छात्र अवसरों, कैंपस हायरिंग या संस्थागत साझेदारी के लिए HireKarma से संपर्क करें।"
+    "description": "कैंपस हायरिंग, छात्र अवसर, साझेदारी या उत्पाद डेमो के लिए HireKarma से बात करें।"
   },
   "hero": {
-    "title": "संपर्क करें",
-    "subtitle": "आइए मिलकर भविष्य बनाएँ",
-    "description": "चाहे आप अवसर तलाशते छात्र हों, प्रतिभा की खोज करने वाले कॉर्पोरेट नेता हों, या रोज़गार योग्यता बढ़ाती संस्था — हम मदद के लिए यहाँ हैं। संपर्क करें और जानें कि HireKarma आपकी यात्रा को कैसे बदल सकता है।"
+    "label": "संपर्क",
+    "title": "आइए शुरू करें एक",
+    "titleHighlight": "बातचीत।",
+    "description": "छात्र, कैंपस, नियोक्ता या साझेदार — बताएँ आपको क्या चाहिए। हम स्पष्ट अगले कदमों के साथ जवाब देंगे।",
+    "tagline": "आमतौर पर एक व्यावसायिक दिन में जवाब।",
+    "formJump": "फ़ॉर्म पर जाएँ"
   },
   "form": {
-    "title": "हमें संदेश भेजें",
+    "title": "संदेश भेजें",
+    "subtitle": "कुछ विवरण साझा करें — टीम आपसे संपर्क करेगी।",
     "name": {
       "label": "पूरा नाम",
       "placeholder": "आपका पूरा नाम"
     },
     "email": {
-      "label": "ईमेल पता",
-      "placeholder": "your@email.com"
+      "label": "ईमेल",
+      "placeholder": "you@email.com"
     },
     "message": {
-      "label": "आपका संदेश",
-      "placeholder": "अपनी पूछताछ या ज़रूरत के बारे में बताएँ..."
+      "label": "हम कैसे मदद कर सकते हैं?",
+      "placeholder": "साझेदारी, हायरिंग, डेमो, करियर — संक्षेप में बताएँ…"
     },
     "submit": "संदेश भेजें",
-    "submitting": "भेजा जा रहा है...",
-    "errorInline": "भेजने में विफल। कृपया बाद में पुनः प्रयास करें।"
+    "submitting": "भेजा जा रहा है…",
+    "errorInline": "कुछ गलत हुआ। कृपया फिर कोशिश करें।",
+    "note": "भेजकर आप सहमत होते हैं कि हम इस पूछताछ पर संपर्क कर सकते हैं।"
   },
   "toasts": {
-    "success": "संदेश सफलतापूर्वक भेजा गया"
+    "success": "संदेश भेज दिया — जल्द संपर्क करेंगे।"
   },
   "methods": {
-    "title": "हमसे जुड़ने के तरीके",
-    "subtitle": "अपना पसंदीदा माध्यम चुनें",
+    "title": "सीधे जुड़ें",
+    "subtitle": "ईमेल, फ़ोन या मुलाकात — जो सुविधाजनक हो।",
     "methods": [
       {
         "id": "email",
-        "title": "ईमेल सहायता",
-        "description": "सामान्य पूछताछ, साझेदारी या तकनीकी सहायता के लिए।",
+        "title": "ईमेल",
+        "description": "साझेदारी, सहायता और सामान्य प्रश्न।",
         "value": "info@hirekarma.in",
-        "href": "mailto:hello@hirekarma.com"
+        "href": "mailto:info@hirekarma.in"
       },
       {
         "id": "phone",
-        "title": "फ़ोन सहायता",
-        "description": "तुरंत मदद या कॉल शेड्यूल करने के लिए।",
+        "title": "फ़ोन",
+        "description": "त्वरित कॉल और मीटिंग अनुरोध।",
         "value": "+91 91243 64762",
-        "href": "tel:+919876543210"
+        "href": "tel:+919124364762"
       },
       {
         "id": "location",
-        "title": "कार्यालय स्थान",
-        "description": "व्यक्तिगत बैठकों के लिए भुवनेश्वर में हमारे मुख्यालय आएँ।",
-        "value": "2nd Floor, SS Niwas, Hirekarma Private Limited, Raghunathpur, Bhubaneswar, Raghunathpurjali, Odisha 751024"
+        "title": "मुख्य कार्यालय",
+        "description": "भुवनेश्वर में मिलें।",
+        "value": "2nd Floor, SS Niwas, Raghunathpur, Bhubaneswar, Odisha 751024"
       }
-    ]
+    ],
+    "officesCta": {
+      "label": "सभी कार्यालय देखें",
+      "href": "/about-us/locations"
+    }
   }
 }

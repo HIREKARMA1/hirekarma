@@ -7,10 +7,18 @@ export interface ContactMeta {
   description: string;
 }
 
+export interface ContactCta {
+  label: string;
+  href: string;
+}
+
 export interface ContactHero {
+  label: string;
   title: string;
-  subtitle: string;
+  titleHighlight: string;
   description: string;
+  tagline: string;
+  formJump: string;
 }
 
 export interface ContactFormField {
@@ -20,12 +28,14 @@ export interface ContactFormField {
 
 export interface ContactFormContent {
   title: string;
+  subtitle: string;
   name: ContactFormField;
   email: ContactFormField;
   message: ContactFormField;
   submit: string;
   submitting: string;
   errorInline: string;
+  note: string;
 }
 
 export interface ContactToasts {
@@ -44,6 +54,7 @@ export interface ContactMethodsContent {
   title: string;
   subtitle: string;
   methods: ContactMethod[];
+  officesCta: ContactCta;
 }
 
 export interface ContactPageContent {

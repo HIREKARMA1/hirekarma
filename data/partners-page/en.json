@@ -7,12 +7,22 @@
     "badge": "Our Partners",
     "title": "Building Success Together",
     "description": "HireKarma bridges academia and industry, delivering measurable results and fostering collaborative success for all stakeholders in the talent ecosystem.",
-    "trustLine": "Trusted by over 200+ educational institutions and leading corporates across India to transform campus recruitment and early-career hiring."
+    "trustLine": "Trusted by 200+ educational institutions and leading corporates across India to transform campus recruitment and early-career hiring.",
+    "titleHighlight": "Together"
   },
   "stats": [
-    { "value": "200+", "label": "College Partners" },
-    { "value": "50K+", "label": "Students Empowered" },
-    { "value": "100+", "label": "Corporate Partners" }
+    {
+      "value": "200+",
+      "label": "College Partners"
+    },
+    {
+      "value": "50K+",
+      "label": "Students Empowered"
+    },
+    {
+      "value": "100+",
+      "label": "Corporate Partners"
+    }
   ],
   "college": {
     "badge": "College Partners",
@@ -26,7 +36,7 @@
       },
       {
         "title": "Recruiter Access",
-        "description": "National and global recruiters ecosystem"
+        "description": "A national and global recruiter ecosystem"
       },
       {
         "title": "Advanced Analytics",
@@ -34,7 +44,7 @@
       },
       {
         "title": "Skill Programs",
-        "description": "Workshops and industry counseling"
+        "description": "Workshops and career counselling"
       }
     ],
     "partners": [
@@ -68,7 +78,8 @@
         "name": "Eastern Academy of Technology and Management",
         "description": "Bhubaneswar's leading institution for technology and management studies"
       }
-    ]
+    ],
+    "titleHighlight": "Accelerating Careers."
   },
   "corporate": {
     "badge": "Corporate Partners",
@@ -119,17 +130,20 @@
         "name": "Fortune 500 Companies",
         "description": "Industry leaders leveraging our AI-powered recruitment solutions"
       }
-    ]
+    ],
+    "titleHighlight": "Tomorrow—Today."
   },
   "mission": {
     "title": "Our Mission",
-    "paragraph1": "Make every campus a launchpad for career impact. Join leading universities and institutes who rely on HireKarma to empower faculty, raise placement rates, and prepare students for the future of work.",
-    "paragraph2": "HireKarma helps companies build smarter teams, achieve hiring targets, and create impact where it matters. Join our network of forward-thinking employers who shape the careers of India's youth and drive business growth through data-driven talent acquisition."
+    "paragraph1": "Make every campus a launchpad for career impact. Join leading universities and institutes that rely on HireKarma to empower faculty, raise placement rates, and prepare students for the future of work.",
+    "paragraph2": "HireKarma helps companies build smarter teams, achieve hiring targets, and create impact where it matters. Join our network of forward-thinking employers who shape the careers of India's youth and drive business growth through data-driven talent acquisition.",
+    "titleHighlight": "Mission"
   },
   "cta": {
     "title": "Become a Partner",
     "description": "Join our growing network of colleges and corporates transforming the future of campus recruitment",
     "primary": "Partner With Us",
-    "secondary": "Contact Us"
+    "secondary": "Contact Us",
+    "titleHighlight": "Partner"
   }
 }

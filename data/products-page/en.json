@@ -1,52 +1,52 @@
 {
   "meta": {
     "title": "Products | HireKarma",
-    "description": "DISHA, SolviqAI, Lakshya, Shortlisted, Janasamadhan, and AMA Gopalpur - HireKarma's product ecosystem for hiring and public service."
+    "description": "DISHA, SolviqAI, Lakshya, Shortlisted, Janasamadhan, and AMA Gopalpur — HireKarma’s product stack for campus hiring, career readiness, and public service."
   },
   "hero": {
-    "label": "PRODUCTS OVERVIEW",
+    "label": "HireKarma products",
     "heading": {
-      "part1": "Smarter products.",
-      "gradient": "Stronger outcomes.",
-      "part2": "Proven impact."
+      "part1": "Hire smarter.",
+      "gradient": "Place faster.",
+      "part2": "Serve better."
     },
-    "description": "Six platforms spanning campus hiring, AI career readiness, virtual placement, and digital public service - built to deliver measurable outcomes at scale.",
+    "description": "Six products. One mission — opportunity for campuses, companies, students, and citizens.",
     "primaryCta": {
-      "label": "Explore DISHA",
-      "hrefKey": "disha",
+      "label": "See all six products",
+      "hrefKey": "productStack",
       "variant": "primary"
     },
     "secondaryCta": {
-      "label": "Explore SolviqAI",
-      "hrefKey": "solviq",
+      "label": "Talk to us",
+      "hrefKey": "contact",
       "variant": "outline"
     },
-    "footerNote": "Built for colleges, students and companies. Backed by open standards. Built for scale."
+    "footerNote": "Built with colleges. Proven with employers. Trusted by government partners."
   },
   "partners": {
-    "text": "Trusted by colleges, companies and government partners"
+    "text": "Building with partners who share our mission."
   },
   "productsSection": {
-    "label": "OUR PRODUCTS",
+    "label": "The stack",
     "heading": {
-      "part1": "Purpose-built.",
-      "gradient": "Outcomes-driven.",
+      "part1": "Every product.",
+      "gradient": "A clear outcome.",
       "part2": ""
     },
-    "description": "Six integrated platforms covering placement operations, AI readiness, virtual placement cells, and citizen services - designed to work together as one ecosystem.",
+    "description": "Use one platform — or run the full HireKarma ecosystem end to end.",
     "items": [
       {
         "id": "disha",
         "accentKey": "disha",
         "icon": "graduation-cap",
         "title": "Disha",
-        "subtitle": "Campus Recruitment Platform",
-        "description": "End-to-end placement management for colleges - from drive scheduling and company coordination to offer tracking and TPO analytics.",
+        "subtitle": "Campus recruitment, finally under control",
+        "description": "Run drives, track offers, and give TPOs live visibility — so placement season stops feeling like chaos.",
         "features": [
-          { "text": "End-to-end placement management" },
-          { "text": "Drive scheduling & company coordination" },
-          { "text": "Student profile & application tracking" },
-          { "text": "Real-time analytics for TPOs" }
+          { "text": "Drive scheduling that actually sticks" },
+          { "text": "Company coordination in one place" },
+          { "text": "Student applications you can follow" },
+          { "text": "Realtime analytics for TPOs" }
         ],
         "cta": {
           "label": "Explore DISHA",
@@ -59,13 +59,13 @@
         "accentKey": "solviq",
         "icon": "cpu",
         "title": "SolviqAI",
-        "subtitle": "AI Career Readiness Platform",
-        "description": "AI-powered resume analysis, skill assessments, and mock interviews that prepare students for real hiring rounds.",
+        "subtitle": "Ready for the interview before it starts",
+        "description": "AI resume checks, skill tests, and mock interviews that close the gap between classroom and shortlist.",
         "features": [
-          { "text": "AI resume checker with ATS compatibility" },
-          { "text": "Skill & aptitude assessments" },
-          { "text": "Mock interviews with real-time feedback" },
-          { "text": "Personalized placement readiness scoring" }
+          { "text": "ATS-aware resume scoring" },
+          { "text": "Aptitude & skill assessments" },
+          { "text": "Mock interviews with live feedback" },
+          { "text": "Placement readiness scores" }
         ],
         "cta": {
           "label": "Explore SolviqAI",
@@ -78,13 +78,13 @@
         "accentKey": "lakshya",
         "icon": "users",
         "title": "Lakshya",
-        "subtitle": "Campus Hiring Ecosystem",
-        "description": "One platform connecting students, universities, and recruiters - run campus drives, manage applications, and shortlist faster.",
+        "subtitle": "Students, campuses, recruiters — one flow",
+        "description": "A hiring ecosystem where applications move faster, shortlists stay clear, and every stakeholder sees the same truth.",
         "features": [
-          { "text": "Unified dashboard for all stakeholders" },
-          { "text": "Campus drive & application management" },
-          { "text": "Recruiter shortlisting workflows" },
-          { "text": "Built for students, corporates & universities" }
+          { "text": "One dashboard for every role" },
+          { "text": "Campus drives without spreadsheet chaos" },
+          { "text": "Recruiter shortlisting that scales" },
+          { "text": "Built for students & corporates" }
         ],
         "cta": {
           "label": "Explore Lakshya",
@@ -97,13 +97,13 @@
         "accentKey": "shortlisted",
         "icon": "briefcase",
         "title": "Shortlisted",
-        "subtitle": "AI Virtual Placement Cell",
-        "description": "India's first AI virtual placement cell - curated batches, AI-matched jobs, and a human coordinator focused on your placement every day.",
+        "subtitle": "Your AI virtual placement cell",
+        "description": "Small curated batches. Smart job matches. A human coordinator who owns your placement — every single day.",
         "features": [
-          { "text": "Curated batches of 12 students" },
-          { "text": "AI smart job matching" },
-          { "text": "24/7 application tracking" },
-          { "text": "Dedicated placement coordinator" }
+          { "text": "Batches of 12, not thousands" },
+          { "text": "AI job matching that fits" },
+          { "text": "Live application tracking" },
+          { "text": "Dedicated placement partner" }
         ],
         "cta": {
           "label": "Explore Shortlisted",
@@ -116,13 +116,13 @@
         "accentKey": "janasamadhan",
         "icon": "building",
         "title": "Janasamadhan",
-        "subtitle": "Public Grievance Platform",
-        "description": "Digital grievance redressal for citizens - track, route, and resolve public complaints with full transparency for government departments.",
+        "subtitle": "Grievances that get resolved",
+        "description": "Citizens submit. Departments act. Officials see status — transparent redressal built for government speed.",
         "features": [
-          { "text": "Citizen grievance submission & tracking" },
-          { "text": "Department-wise routing & escalation" },
-          { "text": "Status dashboards for officials" },
-          { "text": "Built for government of Odisha" }
+          { "text": "Submit & track in one ID" },
+          { "text": "Smart department routing" },
+          { "text": "Dashboards for officials" },
+          { "text": "Designed for Odisha gov" }
         ],
         "cta": {
           "label": "Explore Janasamadhan",
@@ -135,13 +135,13 @@
         "accentKey": "amagopalpur",
         "icon": "map-pin",
         "title": "AMA Gopalpur",
-        "subtitle": "Constituency Development Dashboard",
-        "description": "Interactive constituency dashboard mapping department assets, projects, and development progress across AMA Gopalpur.",
+        "subtitle": "Development you can see on a map",
+        "description": "Assets, projects, and progress — mapped for constituency leaders who need clarity, not another spreadsheet.",
         "features": [
-          { "text": "Department-wise asset mapping" },
-          { "text": "Interactive geo-visual dashboards" },
-          { "text": "Project & infrastructure tracking" },
-          { "text": "Built for constituency governance" }
+          { "text": "Department asset mapping" },
+          { "text": "Geo dashboards that tell a story" },
+          { "text": "Project & infra tracking" },
+          { "text": "Built for local governance" }
         ],
         "cta": {
           "label": "Explore AMA Gopalpur",
@@ -152,56 +152,56 @@
     ]
   },
   "impact": {
-    "label": "OUR IMPACT THROUGH PRODUCTS",
+    "label": "Impact you can count",
     "heading": {
-      "part1": "Measured impact.",
-      "gradient": "Proven at scale.",
+      "part1": "Numbers that",
+      "gradient": "mean careers.",
       "part2": ""
     },
-    "description": "From careers transformed to platforms live in production - HireKarma products deliver outcomes you can count on.",
+    "description": "Not vanity metrics — real people hired, trained, and served through HireKarma products.",
     "stats": [
       {
         "id": "careers",
         "icon": "users",
         "value": "32,000+",
-        "label": "Careers Impacted",
+        "label": "Careers impacted",
         "accentKey": "primary"
       },
       {
         "id": "trained",
         "icon": "graduation-cap",
         "value": "1,400+",
-        "label": "Youth Trained",
+        "label": "Youth trained",
         "accentKey": "disha"
       },
       {
         "id": "projects",
         "icon": "briefcase",
         "value": "20+",
-        "label": "Projects Delivered",
+        "label": "Projects delivered",
         "accentKey": "solviq"
       },
       {
         "id": "companies",
         "icon": "building",
-        "value": "2000+",
-        "label": "Hiring Companies",
+        "value": "2,000+",
+        "label": "Hiring companies",
         "accentKey": "lakshya"
       },
       {
         "id": "platforms",
         "icon": "shield-check",
-        "value": "4",
-        "label": "Live Products",
+        "value": "6",
+        "label": "Live products",
         "accentKey": "shortlisted"
       }
     ]
   },
   "testimonials": {
-    "label": "Testimonials",
+    "label": "From the people who use us",
     "heading": {
-      "part1": "People love us,",
-      "gradient": "you know.",
+      "part1": "Proof from campuses,",
+      "gradient": "companies, and partners.",
       "part2": ""
     },
     "items": [
@@ -258,25 +258,20 @@
   },
   "cta": {
     "heading": {
-      "part1": "One ecosystem.",
-      "gradient": "Every outcome, verified.",
+      "part1": "Ready to build",
+      "gradient": "your talent edge?",
       "part2": ""
     },
-    "description": "Whether you run placements, prepare students, or deliver public services - HireKarma products work together to deliver measurable outcomes.",
+    "description": "Whether you place students, hire at scale, or deliver public services — the full HireKarma stack is ready.",
     "buttons": [
       {
-        "label": "Explore DISHA",
-        "hrefKey": "disha",
+        "label": "Explore all products",
+        "hrefKey": "productStack",
         "variant": "primary"
       },
       {
-        "label": "Explore SolviqAI",
-        "hrefKey": "solviq",
-        "variant": "outline"
-      },
-      {
-        "label": "Explore Lakshya",
-        "hrefKey": "lakshya",
+        "label": "Talk to us",
+        "hrefKey": "contact",
         "variant": "outline"
       }
     ]

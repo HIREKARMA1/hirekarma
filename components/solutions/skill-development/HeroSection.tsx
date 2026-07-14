@@ -27,22 +27,22 @@ const HeroSection: React.FC = () => {
           <div
             className={`inline-flex items-center space-x-2 px-4 py-2 rounded-full ${
               mounted && resolvedTheme === "dark"
-                ? "bg-blue-900/30 border border-blue-700/50"
-                : "bg-blue-100 border border-blue-200"
+                ? "bg-[rgba(27,82,164,0.2)] border border-[rgba(27,82,164,0.45)]"
+                : "bg-[rgba(27,82,164,0.08)] border border-[rgba(27,82,164,0.28)]"
             }`}
           >
             <Award
               className={`w-4 h-4 ${
                 mounted && resolvedTheme === "dark"
-                  ? "text-blue-400"
-                  : "text-blue-700"
+                  ? "text-[#00a2e5]"
+                  : "text-[#1b52a4]"
               }`}
             />
             <span
               className={`text-sm font-semibold ${
                 mounted && resolvedTheme === "dark"
-                  ? "text-blue-400"
-                  : "text-blue-700"
+                  ? "text-[#00a2e5]"
+                  : "text-[#1b52a4]"
               }`}
             >
               {hero.badge}
@@ -61,8 +61,8 @@ const HeroSection: React.FC = () => {
               <span
                 className={`block mt-2 text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-medium ${
                   mounted && resolvedTheme === "dark"
-                    ? "text-cyan-400"
-                    : "text-cyan-600"
+                    ? "text-[#00a2e5]"
+                    : "text-[#00a2e5]"
                 }`}
               >
                 {hero.headingAccent}
@@ -86,8 +86,8 @@ const HeroSection: React.FC = () => {
             <button
               className={`px-8 py-4 font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 ${
                 mounted && resolvedTheme === "dark"
-                  ? "bg-blue-600 text-white hover:bg-blue-700"
-                  : "bg-blue-600 text-white hover:bg-blue-700"
+                  ? "bg-[#1b52a4] text-white hover:bg-[#154a8f]"
+                  : "bg-[#1b52a4] text-white hover:bg-[#154a8f]"
               }`}
             >
               {hero.cta}
@@ -108,15 +108,15 @@ const HeroSection: React.FC = () => {
           <div
             className={`absolute -bottom-6 -left-6 w-32 h-32 rounded-full blur-3xl ${
               mounted && resolvedTheme === "dark"
-                ? "bg-blue-500/30"
-                : "bg-blue-200/50"
+                ? "bg-[#f6f8fb]0/30"
+                : "bg-[rgba(27,82,164,0.2)]"
             }`}
           ></div>
           <div
             className={`absolute -top-6 -right-6 w-40 h-40 rounded-full blur-3xl ${
               mounted && resolvedTheme === "dark"
-                ? "bg-cyan-500/30"
-                : "bg-cyan-200/50"
+                ? "bg-[rgba(0,162,229,0.3)]"
+                : "bg-[rgba(0,162,229,0.2)]"
             }`}
           ></div>
         </div>
