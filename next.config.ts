@@ -6,6 +6,9 @@ const nextConfig: NextConfig = {
   
   // Image optimization
   images: {
+    // Serve originals directly — live host returns 402 on /_next/image for many
+    // assets (partners, testimonials), which shows as broken images in the UI.
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -46,15 +49,10 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
-    // Disable optimization for remote GIFs due to timeout issues
-    unoptimized: process.env.NODE_ENV === 'development',
-    // Optimize image sizes
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    // Add quality configuration
     qualities: [75, 85],
-    // Cache optimized images for 365 days
     minimumCacheTTL: 31536000,
   },
 
