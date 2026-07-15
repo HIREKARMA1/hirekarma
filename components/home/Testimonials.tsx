@@ -25,7 +25,8 @@ function initialsFromName(name: string) {
 
 function TestimonialCard({ item }: { item: HomeTestimonialItem }) {
   const initials = initialsFromName(item.name);
-  const hasPhoto = Boolean(item.image);
+  const [photoFailed, setPhotoFailed] = useState(false);
+  const hasPhoto = Boolean(item.image) && !photoFailed;
 
   return (
     <div
@@ -66,6 +67,7 @@ function TestimonialCard({ item }: { item: HomeTestimonialItem }) {
                   fill
                   className="object-cover"
                   sizes="56px"
+                  onError={() => setPhotoFailed(true)}
                 />
               ) : (
                 initials

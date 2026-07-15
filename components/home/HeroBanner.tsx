@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import {
   BarChart3,
@@ -76,14 +75,15 @@ export default function HeroBanner() {
                 {trustLogos.map((partner) => (
                   <div
                     key={partner.id}
-                    className="relative h-7 w-[4rem] grayscale opacity-70 transition hover:opacity-100 hover:grayscale-0 sm:h-8 sm:w-[4.5rem]"
+                    className="relative flex h-7 w-[4rem] items-center justify-center grayscale opacity-70 transition hover:opacity-100 hover:grayscale-0 sm:h-8 sm:w-[4.5rem]"
                   >
-                    <Image
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
                       src={partner.logo}
                       alt={partner.name}
-                      fill
-                      className="object-contain"
-                      sizes="72px"
+                      className="max-h-full max-w-full object-contain"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 ))}
