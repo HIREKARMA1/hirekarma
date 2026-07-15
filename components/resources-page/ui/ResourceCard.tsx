@@ -11,7 +11,7 @@ const cardShell: Record<
   { light: string; dark: string; ring: string }
 > = {
   default: {
-    light: "border-blue-200 bg-linear-to-b from-blue-50 to-white",
+    light: "border-[rgba(27,82,164,0.28)] bg-linear-to-b from-[#f6f8fb] to-white",
     dark: "dark:border-blue-400/30 dark:bg-linear-to-b dark:from-blue-950/40 dark:to-[#0c1018]",
     ring: "ring-blue-100 dark:ring-blue-500/10",
   },
@@ -92,11 +92,11 @@ export function ResourceCard({ item, readMoreLabel }: ResourceCardProps) {
           </Link>
         </h3>
 
-        <p className="mb-5 flex-1 text-sm leading-relaxed text-slate-600 dark:text-white/65">
+        <p className="mb-5 flex-1 text-sm leading-relaxed text-slate-600 dark:text-white/90">
           {item.excerpt}
         </p>
 
-        <div className="flex items-center justify-between gap-3 text-sm text-slate-500 dark:text-white/55">
+        <div className="flex items-center justify-between gap-3 text-sm text-slate-500 dark:text-white/85">
           <time dateTime={item.dateIso}>{item.date}</time>
           <Link
             href={href}

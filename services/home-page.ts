@@ -4,25 +4,18 @@ import enContent from "@/data/home-page/en.json";
 import hiContent from "@/data/home-page/hi.json";
 import odContent from "@/data/home-page/od.json";
 
-import enProducts from "@/data/home-page/products/en.json";
-import hiProducts from "@/data/home-page/products/hi.json";
-import odProducts from "@/data/home-page/products/od.json";
-
 import enTestimonials from "@/data/home-page/testimonials/en.json";
 import hiTestimonials from "@/data/home-page/testimonials/hi.json";
 import odTestimonials from "@/data/home-page/testimonials/od.json";
 
 function mergeHomeContent(
-  base: HomePageContent,
-  products: { items: HomePageContent["productsSection"]["items"] },
+  base: Omit<HomePageContent, "testimonials"> & {
+    testimonials: Omit<HomePageContent["testimonials"], "items">;
+  },
   testimonials: { items: HomePageContent["testimonials"]["items"] }
 ): HomePageContent {
   return {
-    ...base,
-    productsSection: {
-      ...base.productsSection,
-      items: products.items,
-    },
+    ...(base as HomePageContent),
     testimonials: {
       ...base.testimonials,
       items: testimonials.items,
@@ -31,26 +24,11 @@ function mergeHomeContent(
 }
 
 const contentMap: Record<Locale, HomePageContent> = {
-  en: mergeHomeContent(
-    enContent as HomePageContent,
-    enProducts,
-    enTestimonials
-  ),
-  hi: mergeHomeContent(
-    hiContent as HomePageContent,
-    hiProducts,
-    hiTestimonials
-  ),
-  od: mergeHomeContent(
-    odContent as HomePageContent,
-    odProducts,
-    odTestimonials
-  ),
+  en: mergeHomeContent(enContent as HomePageContent, enTestimonials),
+  hi: mergeHomeContent(hiContent as HomePageContent, hiTestimonials),
+  od: mergeHomeContent(odContent as HomePageContent, odTestimonials),
 };
 
-/**
- * Content loader - swap this implementation to fetch from a Python API later.
- */
 export async function fetchHomePageContent(
   locale: Locale
 ): Promise<HomePageContent> {

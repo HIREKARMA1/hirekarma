@@ -22,6 +22,7 @@ export interface FaqHelpCard {
 export interface FaqContent {
   badge: string;
   title: string;
+  titleHighlight?: string;
   description: string;
   searchPlaceholder: string;
   emptyTitle: string;
@@ -29,10 +30,12 @@ export interface FaqContent {
   categories: FaqCategory[];
   stillNeedHelp: {
     title: string;
+    titleHighlight?: string;
     cards: FaqHelpCard[];
   };
   cta: {
     title: string;
+    titleHighlight?: string;
     description: string;
     primary: string;
     secondary: string;

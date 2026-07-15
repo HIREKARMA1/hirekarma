@@ -1,0 +1,145 @@
+{
+  "slug": "digital-public-infrastructure-systems-problem",
+  "meta": {
+    "title": "Stop Building Silos. Start Building Trust at Scale: Digital Public Infrastructure Is a Systems Problem",
+    "description": "Public digital systems fail when identity, credentials, and services don't interconnect. How HireKarma contributes to open DPI and trustworthy public platforms."
+  },
+  "hero": {
+    "title": "Stop Building Silos. Start Building Trust at Scale: Digital Public Infrastructure Is a Systems Problem, Not a Portal Problem",
+    "date": "July 13, 2026",
+    "categoryLabel": "Open Source & DPI · Blogs",
+    "author": "HireKarma Editorial Team",
+    "backLink": "Back to Resources"
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "variant": "lead",
+      "text": "India's digital public ambition is unmistakable: identity at scale, credentials that travel, and services citizens can trust. Yet too many programs still ship as isolated portals - each with its own login, data model, and reporting layer - while trust leaks at every handoff."
+    },
+    {
+      "type": "paragraph",
+      "variant": "emphasis",
+      "text": "A new website is not infrastructure. Infrastructure is what makes systems interoperable, auditable, and reusable across departments and states."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "If every program reinvents identity, case workflows, and credentials from scratch, we will keep paying for the same problems in different colors."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Here is why the math simply doesn't add up anymore:"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "The Reality Check"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "listType": "default",
+      "items": [
+        "Siloed citizen journeys: A grievance, a credential, and a benefit claim often live in separate systems with no shared truth.",
+        "Trust without verifiability: Paper letters and PDF certificates don't scale across institutions the way verifiable credentials can.",
+        "Integration tax: Every new department system needs custom connectors - expensive, fragile, and slow to govern.",
+        "Open source without operations: Adopting MOSIP-class stacks still requires implementation discipline, local capacity, and long-term ownership.",
+        "Impact without shared maps: Constituency and public-service programs struggle when assets, projects, and citizen issues can't be seen together."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Why \"Another Portal\" Isn't the Answer"
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Portals can digitize forms. They rarely fix architecture:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "listType": "default",
+      "items": [
+        "Identity must be reusable: Foundational ID patterns reduce onboarding friction and fraud across services.",
+        "Credentials must travel: Skills, certificates, and status updates need verification beyond a single issuer's website.",
+        "Workflows must be auditable: Public trust depends on transparent status, SLA visibility, and accountable resolution paths.",
+        "Standards beat one-offs: Open protocols and modular platforms compound; custom monoliths decay.",
+        "Local implementation matters: National building blocks still need state and partner capacity to deliver on the ground."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "A Shift in Perspective"
+    },
+    {
+      "type": "paragraph",
+      "variant": "italic",
+      "text": "Maybe the real question isn't \"How fast can we launch the next citizen app?\""
+    },
+    {
+      "type": "paragraph",
+      "variant": "pullquote",
+      "text": "It's: \"What shared infrastructure will still work when the fifth department needs the same trust layer?\""
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Digital public infrastructure succeeds when identity, credentials, and service workflows are designed as connected systems - open where possible, operational where it counts."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "How HireKarma closes the loop"
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "HireKarma contributes to DPI and public-service outcomes through open-aligned platforms and delivery practice:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "listType": "product",
+      "items": [
+        "Open Source & DPI - Implementation and contribution around modular identity and credential ecosystems such as MOSIP and Inji-aligned patterns.",
+        "Janasamadhan - Grievance redressal architecture that treats citizen trust as a workflow system, not a complaint inbox.",
+        "AMA Gopalpur - Constituency visibility that connects assets, projects, and progress into one governed map.",
+        "Talent stack (Disha · SolviqAI · Lakshya · Shortlisted) - Proof that outcome systems - not portals - scale opportunity for people."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "variant": "emphasis",
+      "text": "The gap isn't going away. It's time we stop building silos and start building trust infrastructure that compounds."
+    }
+  ],
+  "references": {
+    "title": "References",
+    "items": [
+      "India Stack / Digital Public Infrastructure design principles",
+      "MOSIP modular identity architecture documentation",
+      "Public grievance and constituency governance implementation experience across Indian states"
+    ]
+  },
+  "authorBox": {
+    "title": "About the authors",
+    "name": "HireKarma Editorial Team",
+    "role": "Product and Impact, HireKarma Private Limited",
+    "bio": "HireKarma builds outcome-driven platforms for campus recruitment, AI career readiness, and digital public service - trusted by colleges, companies, and government partners across India."
+  },
+  "sidebar": {
+    "shareTitle": "Loved this insight?",
+    "shareDescription": "Share it with public-sector and DPI partners building trustworthy systems at scale.",
+    "relatedTitle": "Related products",
+    "relatedProducts": "Open Source & DPI · Janasamadhan · AMA Gopalpur",
+    "cta": {
+      "label": "View all products",
+      "hrefKey": "products"
+    }
+  }
+}

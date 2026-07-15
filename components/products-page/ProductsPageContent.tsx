@@ -5,6 +5,7 @@ import { ProductsHeroSection } from "./sections/ProductsHeroSection";
 import { ProductsGridSection } from "./sections/ProductsGridSection";
 import { ImpactStatsSection } from "./sections/ImpactStatsSection";
 import { ProductsTestimonialsSection } from "./sections/ProductsTestimonialsSection";
+import { ProductsCtaSection } from "./sections/ProductsCtaSection";
 
 function ProductsPageInner() {
   return (
@@ -13,6 +14,7 @@ function ProductsPageInner() {
       <ProductsGridSection />
       <ImpactStatsSection />
       <ProductsTestimonialsSection />
+      <ProductsCtaSection />
     </main>
   );
 }

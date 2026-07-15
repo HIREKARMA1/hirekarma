@@ -1,61 +1,57 @@
 "use client";
 
-import React from 'react';
-import { useTheme } from 'next-themes';
+import React from "react";
+
+import { theme } from "@/config/theme";
+import { withHighlightMark } from "@/components/shared/HighlightMark";
 
 interface SectionHeaderProps {
-    title: string;
-    subtitle?: string;
-    description?: string;
-    alignment?: 'left' | 'center';
-    className?: string;
+  title: string;
+  /** Phrase in title to wrap with the yellow highlighter. */
+  highlight?: string;
+  subtitle?: string;
+  description?: string;
+  alignment?: "left" | "center";
+  className?: string;
+  accent?: string;
 }
 
 const SectionHeader: React.FC<SectionHeaderProps> = ({
-    title,
-    subtitle,
-    description,
-    alignment = 'center',
-    className = ''
+  title,
+  highlight,
+  subtitle,
+  description,
+  alignment = "center",
+  className = "",
+  accent = theme.colors.secondary,
 }) => {
-    const [mounted, setMounted] = React.useState(false);
-    const { resolvedTheme } = useTheme();
+  const alignmentClasses =
+    alignment === "center" ? "text-center items-center" : "text-left items-start";
 
-    React.useEffect(() => {
-        setMounted(true);
-    }, []);
+  return (
+    <div
+      className={`flex flex-col space-y-3 md:space-y-4 ${alignmentClasses} ${className}`}
+    >
+      {subtitle ? (
+        <span
+          className="inline-block text-[12px] font-semibold uppercase tracking-[0.18em]"
+          style={{ color: accent }}
+        >
+          {subtitle}
+        </span>
+      ) : null}
 
-    const alignmentClasses = alignment === 'center' ? 'text-center items-center' : 'text-left items-start';
+      <h2 className="text-2xl font-bold tracking-tight text-[#0f1622] sm:text-[1.85rem] lg:text-[2rem]">
+        {withHighlightMark(title, highlight)}
+      </h2>
 
-    return (
-        <div className={`space-y-4 md:space-y-6 flex flex-col ${alignmentClasses} ${className}`}>
-            {subtitle && (
-                <span className={`inline-block px-4 py-2 rounded-full text-sm font-semibold transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
-                        ? 'bg-cyan-900/30 text-cyan-400 border border-cyan-700/50'
-                        : 'bg-cyan-50 text-cyan-600 border border-cyan-200'
-                    }`}>
-                    {subtitle}
-                </span>
-            )}
-
-            <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
-                    ? 'text-gray-100'
-                    : 'text-gray-900'
-                }`}>
-                {title}
-            </h2>
-
-            {description && (
-                <p className={`text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
-                        ? 'text-gray-300'
-                        : 'text-gray-600'
-                    }`}>
-                    {description}
-                </p>
-            )}
-        </div>
-    );
+      {description ? (
+        <p className="max-w-3xl text-[15px] leading-relaxed text-[#334155] sm:text-base">
+          {description}
+        </p>
+      ) : null}
+    </div>
+  );
 };
 
 export default SectionHeader;
-

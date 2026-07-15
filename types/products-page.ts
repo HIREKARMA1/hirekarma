@@ -113,6 +113,8 @@ export interface ProductsPageContent {
 
 export interface SlideImage {
   src: string;
+  /** Short product name shown on the hero capture */
+  label: LocalizedText;
   alt: LocalizedText;
 }
 

@@ -39,7 +39,9 @@ export type HrefKey =
   | "janasamadhan"
   | "amagopalpur"
   | "careers"
+  | "contact"
   | "products"
+  | "productStack"
   | "resources";
 
 const hrefMap: Record<HrefKey, () => string> = {
@@ -50,7 +52,9 @@ const hrefMap: Record<HrefKey, () => string> = {
   janasamadhan: () => env.janasamadhanUrl,
   amagopalpur: () => env.amagopalpurUrl,
   careers: () => getEnv("NEXT_PUBLIC_CAREERS_URL", "/contact"),
+  contact: () => "/contact",
   products: () => "/products",
+  productStack: () => "/products#product-stack",
   resources: () => "/resources",
 };
 

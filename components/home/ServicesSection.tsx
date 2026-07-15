@@ -30,7 +30,7 @@ const ServicesSection: React.FC = () => {
           {servicesData.heading}
           <span
             className={`block mt-2 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium ${
-              isDark ? 'text-blue-400' : 'text-blue-600'
+              isDark ? 'text-[#00a2e5]' : 'text-[#1b52a4]'
             }`}
           >
             {servicesData.subheading}

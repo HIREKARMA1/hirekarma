@@ -1,0 +1,145 @@
+{
+  "slug": "disha-placement-operations-systems-problem",
+  "meta": {
+    "title": "Stop Chasing Spreadsheets. Start Running Drives: Campus Placement Ops Is a Systems Problem",
+    "description": "Campus placement operations fail when drives live in spreadsheets and WhatsApp. How DISHA rebuilds TPO visibility, coordination, and outcomes as a system."
+  },
+  "hero": {
+    "title": "Stop Chasing Spreadsheets. Start Running Drives: Campus Placement Operations Is a Systems Problem, Not a Season Sprint",
+    "date": "July 13, 2026",
+    "categoryLabel": "Disha · Blogs",
+    "author": "HireKarma Editorial Team",
+    "backLink": "Back to Resources"
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "variant": "lead",
+      "text": "Every placement season starts with hope and ends with exhaustion. Companies visit. Students apply. Offers trickle in. And somewhere between the first drive email and the last offer letter, TPOs lose weeks to spreadsheets, WhatsApp forwards, and status updates that never stay current."
+    },
+    {
+      "type": "paragraph",
+      "variant": "emphasis",
+      "text": "The industry keeps diagnosing the problem as \"not enough companies\" or \"students aren't ready.\" Both matter - but neither explains why a well-run drive still collapses under coordination debt."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "If placement success depends on one person remembering which student applied where, the system is already broken."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Here is why the math simply doesn't add up anymore:"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "The Reality Check"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "listType": "default",
+      "items": [
+        "Drive logistics outrun capacity: Scheduling rooms, slots, eligibility filters, and company briefings across dozens of recruiters exceeds what a small T&P team can track manually.",
+        "Data lives in five places: Student lists, attendance sheets, shortlists, and offer trackers rarely share a single source of truth - so reports are late and often wrong.",
+        "Students chase updates, not skills: When drive details arrive through group chats, bandwidth goes to chasing links instead of preparing for interviews.",
+        "Recruiter trust erodes: Companies expect clean shortlists and fast turnaround. Spreadsheet delays make campuses look unprepared even when talent is strong.",
+        "Season ends, learning resets: Without persistent ops data, every year starts from zero - no pattern recognition, no employer memory, no continuous improvement."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Why \"Working Harder During Season\" Isn't the Answer"
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Even heroic TPO effort can't fix a structural gap:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "listType": "default",
+      "items": [
+        "Coordination is not strategy: Time spent reconciling attendance and offer status is time not spent building employer relationships or employability programs.",
+        "Visibility is not optional: Leadership, students, and recruiters need the same live picture of drives, applications, and outcomes.",
+        "Eligibility without automation creates unfairness: Manual filters miss eligible students and include ineligible ones - quietly damaging trust.",
+        "Offers without tracking create risk: Without clear offer/acceptance workflows, campuses lose control of conversion and reporting.",
+        "One season's chaos becomes next year's baseline: Without an operations system, burnout becomes culture."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "A Shift in Perspective"
+    },
+    {
+      "type": "paragraph",
+      "variant": "italic",
+      "text": "Maybe the real question isn't \"How do we invite more companies this year?\""
+    },
+    {
+      "type": "paragraph",
+      "variant": "pullquote",
+      "text": "It's: \"Why are we still running campus hiring on tools that can't show a live placement season?\""
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Placement operations need architecture: one platform for drives, applications, shortlists, offers, and analytics - so TPOs can run seasons with clarity instead of crisis."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "How HireKarma closes the loop"
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "This is exactly why HireKarma built DISHA - a campus placement operations platform designed for TPO reality:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "listType": "product",
+      "items": [
+        "Disha - End-to-end placement management: drive scheduling, company coordination, eligibility, applications, offer tracking, and TPO analytics in one place.",
+        "SolviqAI - AI readiness before drives begin - so shortlists are built on signal, not last-minute guesswork.",
+        "Lakshya - A shared hiring flow for campuses and recruiters when applications and shortlists need to move faster.",
+        "Shortlisted - Continuous placement support after season, so unplaced students don't fall off the map in May."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "variant": "emphasis",
+      "text": "The gap isn't going away. It's time we stop chasing spreadsheets and start running placement as a system."
+    }
+  ],
+  "references": {
+    "title": "References",
+    "items": [
+      "AISHE / campus placement operations field reports from Indian higher education institutions",
+      "Industry recruiter feedback on campus drive coordination quality",
+      "HireKarma campus partner outcomes across Odisha and India"
+    ]
+  },
+  "authorBox": {
+    "title": "About the authors",
+    "name": "HireKarma Editorial Team",
+    "role": "Product and Impact, HireKarma Private Limited",
+    "bio": "HireKarma builds outcome-driven platforms for campus recruitment, AI career readiness, and digital public service - trusted by colleges, companies, and government partners across India."
+  },
+  "sidebar": {
+    "shareTitle": "Loved this insight?",
+    "shareDescription": "Share it with TPOs and campus leaders who are rebuilding placement operations.",
+    "relatedTitle": "Related products",
+    "relatedProducts": "Disha · SolviqAI · Lakshya · Shortlisted",
+    "cta": {
+      "label": "View all products",
+      "hrefKey": "products"
+    }
+  }
+}

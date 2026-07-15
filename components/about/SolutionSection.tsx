@@ -5,6 +5,7 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 
 import { useAboutLocale } from "@/contexts/AboutLocaleContext";
+import { HighlightMark } from "@/components/shared/HighlightMark";
 
 const SolutionSection: React.FC = () => {
   const [mounted, setMounted] = useState(false);
@@ -19,7 +20,7 @@ const SolutionSection: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative content-container pt-16 pb-32 sm:py-20">
+    <div className="relative content-container pt-8 pb-32 sm:py-20">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 xl:gap-24 items-center">
         <div className="space-y-8 lg:space-y-10 text-center lg:text-left order-1 lg:order-1">
           <div className="space-y-6">
@@ -35,7 +36,7 @@ const SolutionSection: React.FC = () => {
                 className={`block mt-2 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium ${
                   mounted && resolvedTheme === "dark"
                     ? "text-emerald-400"
-                    : "text-emerald-600"
+                    : "text-[#098855]"
                 }`}
               >
                 {solution.subtitle}
@@ -52,25 +53,9 @@ const SolutionSection: React.FC = () => {
               }`}
             >
               {solution.beforeHighlight1}{" "}
-              <strong
-                className={`${
-                  mounted && resolvedTheme === "dark"
-                    ? "text-gray-200"
-                    : "text-gray-700"
-                }`}
-              >
-                {solution.highlight1}
-              </strong>{" "}
+              <HighlightMark nowrap={false}>{solution.highlight1}</HighlightMark>{" "}
               {solution.betweenHighlights}{" "}
-              <strong
-                className={`${
-                  mounted && resolvedTheme === "dark"
-                    ? "text-gray-200"
-                    : "text-gray-700"
-                }`}
-              >
-                {solution.highlight2}
-              </strong>
+              <HighlightMark nowrap={false}>{solution.highlight2}</HighlightMark>
               {solution.afterHighlights}
             </p>
           </div>

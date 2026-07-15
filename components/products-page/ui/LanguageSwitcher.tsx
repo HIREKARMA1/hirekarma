@@ -30,7 +30,7 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
             "rounded-full px-3 py-1.5 text-xs font-medium transition-colors",
             locale === code
               ? "bg-slate-900 text-white dark:bg-white/15 dark:text-white"
-              : "text-slate-600 hover:text-slate-900 dark:text-white/55 dark:hover:text-white/80"
+              : "text-slate-600 hover:text-slate-900 dark:text-white/85 dark:hover:text-white/80"
           )}
           aria-pressed={locale === code}
         >

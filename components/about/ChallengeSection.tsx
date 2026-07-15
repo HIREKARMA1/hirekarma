@@ -5,6 +5,7 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 
 import { useAboutLocale } from "@/contexts/AboutLocaleContext";
+import { HighlightMark } from "@/components/shared/HighlightMark";
 
 const ChallengeSection: React.FC = () => {
   const [mounted, setMounted] = useState(false);
@@ -35,7 +36,7 @@ const ChallengeSection: React.FC = () => {
                 className={`block mt-2 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium ${
                   mounted && resolvedTheme === "dark"
                     ? "text-red-400"
-                    : "text-red-600"
+                    : "text-[#d64246]"
                 }`}
               >
                 {challenge.subtitle}
@@ -52,25 +53,9 @@ const ChallengeSection: React.FC = () => {
               }`}
             >
               {challenge.beforeHighlight1}{" "}
-              <strong
-                className={`${
-                  mounted && resolvedTheme === "dark"
-                    ? "text-gray-200"
-                    : "text-gray-700"
-                }`}
-              >
-                {challenge.highlight1}
-              </strong>{" "}
+              <HighlightMark nowrap={false}>{challenge.highlight1}</HighlightMark>{" "}
               {challenge.betweenHighlights}{" "}
-              <strong
-                className={`${
-                  mounted && resolvedTheme === "dark"
-                    ? "text-gray-200"
-                    : "text-gray-700"
-                }`}
-              >
-                {challenge.highlight2}
-              </strong>{" "}
+              <HighlightMark nowrap={false}>{challenge.highlight2}</HighlightMark>{" "}
               {challenge.afterHighlights}
             </p>
           </div>

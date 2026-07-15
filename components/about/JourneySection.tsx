@@ -36,8 +36,8 @@ const JourneySection: React.FC = () => {
               <span
                 className={`block mt-2 text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-medium ${
                   mounted && resolvedTheme === "dark"
-                    ? "text-blue-400"
-                    : "text-blue-600"
+                    ? "text-[#00a2e5]"
+                    : "text-[#1b52a4]"
                 }`}
               >
                 {journey.subtitle}
@@ -90,7 +90,7 @@ const JourneySection: React.FC = () => {
               className={`p-5 rounded-2xl border shadow-sm ${
                 mounted && resolvedTheme === "dark"
                   ? "bg-gradient-to-br from-blue-900/20 to-blue-800/10 border-blue-700/40"
-                  : "bg-gradient-to-br from-blue-50 to-blue-100/40 border-blue-200"
+                  : "bg-gradient-to-br from-[#f6f8fb] to-[rgba(27,82,164,0.08)] border-[rgba(27,82,164,0.28)]"
               }`}
             >
               <div className="space-y-2">
@@ -98,8 +98,8 @@ const JourneySection: React.FC = () => {
                   <Calendar
                     className={`w-5 h-5 ${
                       mounted && resolvedTheme === "dark"
-                        ? "text-blue-400"
-                        : "text-blue-600"
+                        ? "text-[#00a2e5]"
+                        : "text-[#1b52a4]"
                     }`}
                   />
                   <h3
@@ -115,8 +115,8 @@ const JourneySection: React.FC = () => {
                 <div
                   className={`text-3xl font-bold ${
                     mounted && resolvedTheme === "dark"
-                      ? "text-blue-400"
-                      : "text-blue-600"
+                      ? "text-[#00a2e5]"
+                      : "text-[#1b52a4]"
                   }`}
                 >
                   {localizeNumerals(journey.foundedCard.value, locale)}
@@ -124,7 +124,7 @@ const JourneySection: React.FC = () => {
                 <div
                   className={`text-sm ${
                     mounted && resolvedTheme === "dark"
-                      ? "text-gray-400"
+                      ? "text-gray-600"
                       : "text-gray-600"
                   }`}
                 >
@@ -137,7 +137,7 @@ const JourneySection: React.FC = () => {
               className={`p-5 rounded-2xl border shadow-sm ${
                 mounted && resolvedTheme === "dark"
                   ? "bg-gradient-to-br from-purple-900/20 to-purple-800/10 border-purple-700/40"
-                  : "bg-gradient-to-br from-purple-50 to-pink-50/40 border-purple-200"
+                  : "bg-gradient-to-br from-[rgba(9,136,85,0.08)] to-[#f6f8fb]/40 border-purple-200"
               }`}
             >
               <div className="space-y-2">
@@ -171,7 +171,7 @@ const JourneySection: React.FC = () => {
                 <div
                   className={`text-sm ${
                     mounted && resolvedTheme === "dark"
-                      ? "text-gray-400"
+                      ? "text-gray-600"
                       : "text-gray-600"
                   }`}
                 >

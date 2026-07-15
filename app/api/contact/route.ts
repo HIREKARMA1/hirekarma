@@ -4,6 +4,7 @@ import nodemailer from 'nodemailer';
 type ContactRequest = {
   name?: string;
   email?: string;
+  phone?: string;
   message?: string;
 };
 
@@ -33,11 +34,12 @@ export async function POST(request: Request) {
     const body = (await request.json()) as ContactRequest;
     const name = body.name?.trim();
     const email = body.email?.trim();
+    const phone = body.phone?.trim();
     const message = body.message?.trim();
 
-    if (!name || !email || !message) {
+    if (!name || !email || !phone || !message) {
       return NextResponse.json(
-        { error: 'Name, email, and message are required.' },
+        { error: 'Name, email, mobile number, and message are required.' },
         { status: 400 }
       );
     }
@@ -54,6 +56,7 @@ export async function POST(request: Request) {
     const smtpPort = Number(process.env.SMTP_PORT);
     const safeName = escapeHtml(name);
     const safeEmail = escapeHtml(email);
+    const safePhone = escapeHtml(phone);
     const safeMessage = escapeHtml(message).replace(/\n/g, '<br/>');
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
@@ -70,11 +73,12 @@ export async function POST(request: Request) {
       to: process.env.CONTACT_TO_EMAIL,
       replyTo: email,
       subject: `New Contact Form Message from ${name}`,
-      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+      text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`,
       html: `
         <h2>New Contact Form Message</h2>
         <p><strong>Name:</strong> ${safeName}</p>
         <p><strong>Email:</strong> ${safeEmail}</p>
+        <p><strong>Mobile:</strong> ${safePhone}</p>
         <p><strong>Message:</strong></p>
         <p>${safeMessage}</p>
       `,

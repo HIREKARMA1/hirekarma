@@ -40,7 +40,7 @@ function DeliveredProjectsSectionContent({
           {content.heading}
           <span
             className={`block mt-2 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium ${
-              isDark ? "text-emerald-400" : "text-emerald-600"
+              isDark ? "text-emerald-400" : "text-[#098855]"
             }`}
           >
             {content.subheading}
@@ -78,7 +78,7 @@ function DeliveredProjectsSectionContent({
             className={`group relative inline-flex items-center overflow-hidden px-6 py-3 font-semibold rounded-lg transition-all duration-500 border-2 hover:brightness-110 ${
               isDark
                 ? "border-emerald-600 text-emerald-400 hover:bg-emerald-600 hover:text-white"
-                : "border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white"
+                : "border-emerald-600 text-[#098855] hover:bg-emerald-600 hover:text-white"
             }`}
           >
             <span className="relative z-10">{content.viewMore}</span>

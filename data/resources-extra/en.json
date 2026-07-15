@@ -47,7 +47,7 @@
           },
           {
             "question": "How does the AI-powered candidate matching work?",
-            "answer": "Our AI analyzes multiple parameters including technical skills, soft skills, academic performance, projects, internships, and cultural fit indicators. We match these against your job requirements, company values, and historical hiring patterns to recommend the best-fit candidates. This predictive matching has shown to improve quality-of-hire by 40% and reduce early attrition."
+            "answer": "Our AI analyzes multiple parameters including technical skills, soft skills, academic performance, projects, internships, and cultural fit indicators. We match these against your job requirements, company values, and historical hiring patterns to recommend the best-fit candidates. This predictive matching has been shown to improve quality-of-hire by 40% and reduce early attrition."
           },
           {
             "question": "Can we conduct virtual campus drives through the platform?",
@@ -130,14 +130,17 @@
           "description": "Browse our comprehensive guides and documentation",
           "cta": "Visit Help Center"
         }
-      ]
+      ],
+      "titleHighlight": "Help?"
     },
     "cta": {
       "title": "Didn't Find What You're Looking For?",
       "description": "Our team is here to help you with any questions or concerns",
       "primary": "Contact Support",
-      "secondary": "Request a Demo"
-    }
+      "secondary": "Request a Demo",
+      "titleHighlight": "Looking For?"
+    },
+    "titleHighlight": "Help You?"
   },
   "events": {
     "title": "Events",
@@ -147,13 +150,34 @@
     "allTitle": "All Events",
     "register": "Register",
     "categories": [
-      { "id": "all", "label": "All" },
-      { "id": "webinar", "label": "Webinar" },
-      { "id": "workshop", "label": "Workshop" },
-      { "id": "conference", "label": "Conference" },
-      { "id": "bootcamp", "label": "Bootcamp" },
-      { "id": "virtual", "label": "Virtual" },
-      { "id": "in-person", "label": "In-Person" }
+      {
+        "id": "all",
+        "label": "All"
+      },
+      {
+        "id": "webinar",
+        "label": "Webinar"
+      },
+      {
+        "id": "workshop",
+        "label": "Workshop"
+      },
+      {
+        "id": "conference",
+        "label": "Conference"
+      },
+      {
+        "id": "bootcamp",
+        "label": "Bootcamp"
+      },
+      {
+        "id": "virtual",
+        "label": "Virtual"
+      },
+      {
+        "id": "in-person",
+        "label": "In-Person"
+      }
     ],
     "events": [
       {
@@ -226,10 +250,22 @@
     "readCaseStudy": "Read Case Study",
     "readFullStory": "Read Full Story",
     "filters": [
-      { "id": "all", "label": "All" },
-      { "id": "education", "label": "Education" },
-      { "id": "corporate", "label": "Corporate" },
-      { "id": "skill-development", "label": "Skill Development" }
+      {
+        "id": "all",
+        "label": "All"
+      },
+      {
+        "id": "education",
+        "label": "Education"
+      },
+      {
+        "id": "corporate",
+        "label": "Corporate"
+      },
+      {
+        "id": "skill-development",
+        "label": "Skill Development"
+      }
     ],
     "studies": [
       {
@@ -251,9 +287,18 @@
         "position": "Head of Training & Placement",
         "image": "/university.jpg",
         "stats": {
-          "metric1": { "value": "85%", "label": "Increase in Placements" },
-          "metric2": { "value": "60%", "label": "Time Saved" },
-          "metric3": { "value": "50+", "label": "New Recruiters" }
+          "metric1": {
+            "value": "85%",
+            "label": "Increase in Placements"
+          },
+          "metric2": {
+            "value": "60%",
+            "label": "Time Saved"
+          },
+          "metric3": {
+            "value": "50+",
+            "label": "New Recruiters"
+          }
         },
         "featured": true
       },
@@ -276,9 +321,18 @@
         "position": "VP of Campus Recruitment",
         "image": "/corporate.jpg",
         "stats": {
-          "metric1": { "value": "3x", "label": "Hiring Efficiency" },
-          "metric2": { "value": "500+", "label": "Quality Hires" },
-          "metric3": { "value": "45%", "label": "Cost Reduction" }
+          "metric1": {
+            "value": "3x",
+            "label": "Hiring Efficiency"
+          },
+          "metric2": {
+            "value": "500+",
+            "label": "Quality Hires"
+          },
+          "metric3": {
+            "value": "45%",
+            "label": "Cost Reduction"
+          }
         },
         "featured": true
       },
@@ -301,9 +355,18 @@
         "position": "Director of Partnerships",
         "image": "/students.jpg",
         "stats": {
-          "metric1": { "value": "5000+", "label": "Students Placed" },
-          "metric2": { "value": "70%", "label": "Placement Rate" },
-          "metric3": { "value": "100+", "label": "Employer Partners" }
+          "metric1": {
+            "value": "5000+",
+            "label": "Students Placed"
+          },
+          "metric2": {
+            "value": "70%",
+            "label": "Placement Rate"
+          },
+          "metric3": {
+            "value": "100+",
+            "label": "Employer Partners"
+          }
         },
         "featured": false
       },
@@ -326,9 +389,18 @@
         "position": "Dean of Placements",
         "image": "/university.jpg",
         "stats": {
-          "metric1": { "value": "100%", "label": "Digital Transformation" },
-          "metric2": { "value": "65%", "label": "Skill Improvement" },
-          "metric3": { "value": "75+", "label": "Company Partners" }
+          "metric1": {
+            "value": "100%",
+            "label": "Digital Transformation"
+          },
+          "metric2": {
+            "value": "65%",
+            "label": "Skill Improvement"
+          },
+          "metric3": {
+            "value": "75+",
+            "label": "Company Partners"
+          }
         },
         "featured": false
       }
@@ -351,12 +423,30 @@
     "readMore": "Read More",
     "empty": "No articles found matching your criteria.",
     "categories": [
-      { "id": "all", "label": "All" },
-      { "id": "recruitment", "label": "Recruitment" },
-      { "id": "skills", "label": "Skills" },
-      { "id": "technology", "label": "Technology" },
-      { "id": "career-tips", "label": "Career Tips" },
-      { "id": "industry-insights", "label": "Industry Insights" }
+      {
+        "id": "all",
+        "label": "All"
+      },
+      {
+        "id": "recruitment",
+        "label": "Recruitment"
+      },
+      {
+        "id": "skills",
+        "label": "Skills"
+      },
+      {
+        "id": "technology",
+        "label": "Technology"
+      },
+      {
+        "id": "career-tips",
+        "label": "Career Tips"
+      },
+      {
+        "id": "industry-insights",
+        "label": "Industry Insights"
+      }
     ],
     "articles": [
       {

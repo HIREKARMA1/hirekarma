@@ -9,8 +9,12 @@
       "description": "कैंपस भर्ती और रोज़गार योग्यता में HireKarma के मार्गदर्शक मिशन, दृष्टि और मूल्य।"
     },
     "people": {
-      "title": "हमारी टीम | HireKarma",
-      "description": "HireKarma को आगे बढ़ाने वाले नेतृत्व, कोर टीम और सलाहकार मंडल से मिलें।"
+      "title": "नेतृत्व टीम | HireKarma",
+      "description": "भारत के टैलेंट इंफ्रास्ट्रक्चर का निर्माण करने वाले लोगों से मिलें।"
+    },
+    "locations": {
+      "title": "हमारे स्थान | HireKarma",
+      "description": "भुवनेश्वर, बारबिल और कटक में HireKarma कार्यालय — ओडिशा में जड़ें, भारत से जुड़े।"
     }
   },
   "story": {
@@ -24,11 +28,12 @@
       },
       "secondaryCta": {
         "label": "हमारा प्रभाव देखें",
-        "href": "/"
+        "href": "/impact"
       },
       "partnersNote": "भारत भर के भागीदारों और संस्थानों द्वारा विश्वसनीय",
       "heroImageAlt": "टैबलेट पर HireKarma प्रभाव डैशबोर्ड",
-      "partnersImageAlt": "सरकारी और संस्थागत भागीदार"
+      "partnersImageAlt": "सरकारी और संस्थागत भागीदार",
+      "headingHighlight": "potential and opportunity."
     },
     "journey": {
       "title": "यात्रा की शुरुआत",
@@ -50,7 +55,8 @@
         "value": "Tier-2 & 3",
         "detail": "भारत भर के कॉलेज"
       },
-      "imageAlt": "HireKarma स्थापना यात्रा एनिमेशन"
+      "imageAlt": "HireKarma स्थापना यात्रा एनिमेशन",
+      "closing": "What started as a conviction about overlooked campuses became a full talent stack — products, programs, and partnerships built to make placement outcomes measurable and fair."
     },
     "challenge": {
       "title": "वह चुनौती जो हमने देखी",
@@ -71,9 +77,81 @@
       "highlight2": "प्रेडिक्टिव एनालिटिक्स",
       "afterHighlights": " और समुदाय-संचालित जुड़ाव के माध्यम से। हमारा प्लेटफ़ॉर्म पूरी हायरिंग यात्रा को सरल बनाता है।",
       "imageAlt": "कैंपस हायरिंग के लिए AI-संचालित समाधान"
+    },
+    "stats": [
+      {
+        "label": "Founders",
+        "value": "2",
+        "detail": "Sohan & Rohit"
+      },
+      {
+        "label": "Rooted in",
+        "value": "Odisha",
+        "detail": "Serving campuses India-wide"
+      }
+    ],
+    "timeline": {
+      "label": "Milestones",
+      "heading": "How HireKarma grew",
+      "headingHighlight": "grew",
+      "description": "A short arc from a Bhubaneswar founding to products and public infrastructure work that scale opportunity.",
+      "items": [
+        {
+          "id": "founding",
+          "year": "2020",
+          "title": "Founded in Bhubaneswar",
+          "description": "HireKarma starts with a focus on tier-2 and tier-3 campuses — where talent is abundant and opportunity is uneven."
+        },
+        {
+          "id": "campus",
+          "year": "2021–22",
+          "title": "Campus platforms take shape",
+          "description": "Placement operations and student readiness tools begin closing the loop between colleges, students, and recruiters."
+        },
+        {
+          "id": "products",
+          "year": "2023–24",
+          "title": "Product ecosystem expands",
+          "description": "DISHA, SolviqAI, Lakshya, and Shortlisted form a connected stack for campuses and employers."
+        },
+        {
+          "id": "dpi",
+          "year": "Today",
+          "title": "Talent + digital public infrastructure",
+          "description": "HireKarma continues building for scale — from campus hiring to open digital public goods."
+        }
+      ]
+    },
+    "cta": {
+      "title": "The story continues with the people building it.",
+      "titleHighlight": "people building it.",
+      "description": "Meet the team, explore our mission, or talk to us about partnerships and open roles.",
+      "primary": {
+        "label": "Meet Our People",
+        "href": "/about-us/people"
+      },
+      "secondary": {
+        "label": "Mission & Values",
+        "href": "/about-us/mission-value"
+      }
     }
   },
   "mission": {
+    "hero": {
+      "label": "मिशन और मूल्य",
+      "heading": "हर प्लेसमेंट और उत्पाद को",
+      "headingHighlight": "मार्गदर्शक उद्देश्य।",
+      "description": "हमारा मिशन, दृष्टि और मूल्य HireKarma को शिक्षा और उद्योग को जोड़ने पर केंद्रित रखते हैं — स्पष्टता, समानता और मापने योग्य परिणामों के साथ।",
+      "primaryCta": {
+        "label": "हमारे लोग देखें",
+        "href": "/about-us/people"
+      },
+      "secondaryCta": {
+        "label": "संपर्क करें",
+        "href": "/contact"
+      },
+      "tagline": "उद्देश्य में सटीकता। निष्पादन में उत्कृष्टता।"
+    },
     "mission": {
       "title": "हमारा मिशन",
       "subtitle": "उद्देश्य में सटीकता, निष्पादन में उत्कृष्टता",
@@ -91,14 +169,56 @@
       "subtitle": "हमारी यात्रा के मार्गदर्शक तारे",
       "body": "मार्गदर्शक तारों की तरह, समावेशिता, पारदर्शिता और नवाचार के हमारे मूल मूल्य आगे का रास्ता रोशन करते हैं। हम एक ऐसी उत्कृष्ट समुदाय बनाते हैं जहाँ निरंतर सीखने से उत्कृष्टता चमकती है, और साझा विकास की चमक छात्रों व भागीदारों दोनों के लिए नए अवसर प्रकाशित करती है।",
       "imageAlt": "मूल्य एनिमेशन"
+    },
+    "cta": {
+      "title": "उद्देश्य के साथ निर्माण के लिए तैयार?",
+      "description": "मिशन, दृष्टि और मूल्यों से मार्गदर्शित टीम के साथ अवसर देखें जो लोगों को पहले रखती है।",
+      "button": {
+        "label": "खुले पद देखें",
+        "href": "/contact"
+      }
     }
   },
   "people": {
-    "title": "नेतृत्व जो विकास को प्रेरित करता है",
-    "subtitle": "HireKarma को शक्ति देने वाले लोग",
-    "descriptionBefore": "हमारी सफलता के पीछे के उत्साही लोग — नवप्रवर्तक, रचनाकार और नेता जो",
-    "descriptionHighlight": "कैंपस भर्ती को बदलने",
-    "descriptionAfter": "के लिए समर्पित हैं, पूरे भारत में।",
+    "hero": {
+      "label": "नेतृत्व टीम",
+      "heading": "भारत के",
+      "headingHighlight": "टैलेंट इंफ्रास्ट्रक्चर का निर्माण करने वाले लोगों से मिलें।",
+      "description": "हर प्लेसमेंट, प्रशिक्षण कार्यक्रम, कॉलेज साझेदारी, तकनीक उत्पाद और ओपन-सोर्स योगदान के पीछे एक ऐसी टीम है जो बड़े पैमाने पर अवसर बनाने के लिए प्रतिबद्ध है।",
+      "primaryCta": {
+        "label": "खुले पद देखें",
+        "href": "/contact"
+      },
+      "secondaryCta": {
+        "label": "हमारा मिशन देखें",
+        "href": "/about-us/mission-value"
+      },
+      "tagline": "उद्देश्य से प्रेरित, प्रभाव से एकजुट एक टीम।"
+    },
+    "partnersNote": "भारत भर के भागीदारों और संस्थानों द्वारा विश्वसनीय",
+    "partnersImageAlt": "सरकारी और संस्थागत भागीदार",
+    "philosophy": {
+      "label": "हमारा नेतृत्व दर्शन",
+      "title": "यहाँ कोई केवल पद नहीं है।",
+      "pillars": [
+        {
+          "id": "ownership",
+          "title": "स्वामित्व",
+          "description": "हम सिर्फ उपाधियाँ नहीं, ज़िम्मेदारी लेते हैं।"
+        },
+        {
+          "id": "collaboration",
+          "title": "सहयोग",
+          "description": "हम टीमों के पार मिलकर जीतते हैं।"
+        },
+        {
+          "id": "impact",
+          "title": "प्रभाव",
+          "description": "हम सफलता को सृजित अवसरों से मापते हैं।"
+        }
+      ]
+    },
+    "teamLabel": "हमारे लोग",
     "tabs": {
       "advisory": "सलाहकार मंडल",
       "leadership": "नेतृत्व",
@@ -106,16 +226,11 @@
     },
     "loading": "टीम लोड हो रही है...",
     "emptyTitle": "अभी कोई सदस्य नहीं",
-    "emptyDescription": "सलाहकार मंडल के सदस्यों की घोषणा जल्द होगी।",
-    "closeAria": "बंद करें",
-    "viewDetailsAria": "विवरण देखें",
-    "linkedinAria": "LinkedIn",
-    "instagramAria": "Instagram",
-    "emailAria": "ईमेल",
+    "emptyDescription": "इस समूह के सदस्यों की घोषणा जल्द होगी।",
     "culture": {
       "title": "हमारी संस्कृति",
       "subtitle": "समावेशी, नवोन्मेषी और सहयोगी",
-      "description": "हम एक समावेशी, नवोन्मेषी और सहयोगी माहौल को बढ़ावा देते हैं जहाँ प्रत्येक टीम सदस्य फल-फूल सके और कैंपस भर्ती को बदलने के हमारे मिशन में योगदान दे सके।",
+      "description": "हम समावेशी, नवोन्मेषी और सहयोगी संस्कृति बनाते हैं जहाँ हर सदस्य फल-फूल सके और कैंपस भर्ती को बदलने में योगदान दे।",
       "values": [
         {
           "id": "inclusive",
@@ -138,6 +253,159 @@
         "celebration": "कॉर्पोरेट टीम",
         "festival": "विश्वविद्यालय परिसर",
         "workspace": "टीम कार्यस्थल"
+      }
+    },
+    "openRoles": {
+      "label": "कल के लिए निर्माण",
+      "title": "बढ़ती टीमें। बढ़ती ज़िम्मेदारी।",
+      "description": "जैसे-जैसे HireKarma डिवीजनों में विस्तार करता है, हम ऐसे नेताओं की तलाश में हैं जो परिणामों का स्वामित्व लें और उच्च-प्रदर्शन टीमें बनाएँ।",
+      "roles": [
+        {
+          "id": "recruitment",
+          "title": "रिक्रूटमेंट लीड",
+          "description": "टैलेंट पाइपलाइन और हायरिंग उत्कृष्टता का निर्माण।"
+        },
+        {
+          "id": "it-consulting",
+          "title": "IT कंसल्टिंग लीड",
+          "description": "बड़े पैमाने पर तकनीक समाधान प्रदान करना।"
+        },
+        {
+          "id": "open-source",
+          "title": "ओपन सोर्स लीड",
+          "description": "समावेशी, खुले और प्रभावशाली समाधान बनाना।"
+        },
+        {
+          "id": "staff-augmentation",
+          "title": "स्टाफ ऑगमेंटेशन लीड",
+          "description": "संगठनों को सही प्रतिभा से सशक्त बनाना।"
+        }
+      ]
+    },
+    "cta": {
+      "title": "हमारे साथ भविष्य बनाएँ।",
+      "description": "उद्देश्य, लोगों और प्रभाव में विश्वास रखने वाली टीम के साथ काम करने के अवसर देखें।",
+      "button": {
+        "label": "खुले पद देखें",
+        "href": "/contact"
+      }
+    },
+    "linkedinAria": "LinkedIn",
+    "instagramAria": "Instagram",
+    "emailAria": "ईमेल"
+  },
+  "locations": {
+    "hero": {
+      "label": "हमारे तीन कार्यालय",
+      "headingLine1": "ओडिशा में जड़े",
+      "headingLine1Highlight": "।",
+      "headingLine2": "भारत से जुड़े",
+      "headingLine2Highlight": "।",
+      "description": "भुवनेश्वर HQ से बारबिल और कटक शाखाओं तक — हम कैंपस, नियोक्ताओं और समुदायों के करीब रहते हैं।\nस्थानीय उपस्थिति का मतलब तेज़ प्लेसमेंट, मज़बूत साझेदारियाँ, और अवसर जो ओडिशा से भारत तक पहुँचे।",
+      "primaryCta": {
+        "label": "संपर्क करें",
+        "href": "/contact"
+      },
+      "secondaryCta": {
+        "label": "हमारा प्रभाव देखें",
+        "href": "/products"
+      },
+      "tagline": "3 कार्यालय। एक मिशन। असीम प्रभाव।"
+    },
+    "map": {
+      "ariaLabel": "ओडिशा में HireKarma कार्यालय",
+      "pins": [
+        {
+          "id": "barbil",
+          "city": "बारबिल",
+          "role": "शाखा कार्यालय",
+          "x": 42,
+          "y": 18
+        },
+        {
+          "id": "cuttack",
+          "city": "कटक",
+          "role": "शाखा कार्यालय",
+          "x": 72,
+          "y": 48
+        },
+        {
+          "id": "bhubaneswar",
+          "city": "भुवनेश्वर",
+          "role": "मुख्य कार्यालय",
+          "x": 58,
+          "y": 62
+        }
+      ]
+    },
+    "section": {
+      "label": "हमारी पहुँच",
+      "heading": "जिनकी हम सेवा करते हैं, उनके पास।"
+    },
+    "pillars": [
+      {
+        "id": "colleges",
+        "title": "कैंपस-फर्स्ट पहुँच",
+        "description": "TPO और छात्रों के साथ ज़मीन पर — सिर्फ एक और पोर्टल लॉगिन नहीं।"
+      },
+      {
+        "id": "communities",
+        "title": "समुदाय प्रभाव",
+        "description": "स्किलिंग और CSR वहाँ जहाँ लोग रहते और सीखते हैं।"
+      },
+      {
+        "id": "clients",
+        "title": "नियोक्ता गति",
+        "description": "स्थानीय उपस्थिति = तेज़ हायरिंग और बेहतर डिलीवरी।"
+      }
+    ],
+    "offices": [
+      {
+        "id": "bhubaneswar",
+        "badge": "मुख्य कार्यालय",
+        "badgeTone": "primary",
+        "city": "भुवनेश्वर",
+        "role": "रणनीति और HQ",
+        "description": "उत्पाद, साझेदारियाँ और प्लेसमेंट रणनीति जहाँ मिलती हैं — टैलेंट इंफ्रास्ट्रक्चर का कमांड सेंटर।",
+        "address": "दूसरी मंजिल, एसएस निवास, HireKarma प्राइवेट लिमिटेड, रघुनाथपुर, भुवनेश्वर, ओडिशा 751024",
+        "whyTitle": "क्यों भुवनेश्वर",
+        "whyBody": "कैंपस, सरकारी भागीदारों और ओडिशा के बढ़ते टेक इकोसिस्टम तक राजधानी पहुँच।",
+        "image": "/about/locations/bhubaneswar.jpg",
+        "imageAlt": "भुवनेश्वर में HireKarma मुख्य कार्यालय"
+      },
+      {
+        "id": "barbil",
+        "badge": "शाखा कार्यालय",
+        "badgeTone": "green",
+        "city": "बारबिल",
+        "role": "औद्योगिक गलियारा",
+        "description": "उत्तरी ओडिशा का आधार — उद्योग और उस प्रतिभा के करीब जो मेट्रो जॉब बोर्ड पर कम दिखती है।",
+        "address": "HireKarma शाखा कार्यालय, बारबिल, केंदुझर जिला, ओडिशा",
+        "whyTitle": "क्यों बारबिल",
+        "whyBody": "कुशल रोज़गार के मार्ग उन्हीं समुदायों के पास जहाँ सबसे ज़्यादा ज़रूरत है।",
+        "image": "/about/locations/barbil.jpg",
+        "imageAlt": "बारबिल में HireKarma शाखा कार्यालय"
+      },
+      {
+        "id": "cuttack",
+        "badge": "शाखा कार्यालय",
+        "badgeTone": "secondary",
+        "city": "कटक",
+        "role": "तटीय नेटवर्क",
+        "description": "तटीय ओडिशा में कॉलेज और नियोक्ता नेटवर्क — गहरी पहुँच, मज़बूत रिश्ते।",
+        "address": "HireKarma शाखा कार्यालय, कटक, ओडिशा",
+        "whyTitle": "क्यों कटक",
+        "whyBody": "वाणिज्यिक केंद्र जो राजधानी से आगे हमारी पहुँच बढ़ाता है।",
+        "image": "/about/locations/cuttack.jpg",
+        "imageAlt": "कटक में HireKarma शाखा कार्यालय"
+      }
+    ],
+    "cta": {
+      "title": "आइए अवसर बनाएँ जो स्केल करे।",
+      "description": "साझेदारी करें, कार्यालय आएँ, या भारत का टैलेंट इंफ्रास्ट्रक्चर बनाने वाली टीम से जुड़ें।",
+      "button": {
+        "label": "संपर्क करें",
+        "href": "/contact"
       }
     }
   },

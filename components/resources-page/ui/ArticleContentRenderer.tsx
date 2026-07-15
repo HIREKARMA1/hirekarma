@@ -53,13 +53,13 @@ function ParagraphBlock({
   return (
     <p
       className={cn(
-        "mb-4 leading-relaxed text-slate-600 dark:text-white/75",
+        "mb-4 leading-relaxed text-slate-600 dark:text-white/90",
         variant === "lead" && "text-lg text-slate-800 dark:text-white/90",
         variant === "emphasis" &&
           "font-semibold text-slate-800 dark:text-white/90",
         variant === "pullquote" &&
           "border-l-4 pl-4 text-lg font-bold text-[#00a2e5]",
-        variant === "italic" && "italic text-slate-500 dark:text-white/60"
+        variant === "italic" && "italic text-slate-500 dark:text-white/85"
       )}
       style={
         variant === "pullquote"
@@ -89,7 +89,7 @@ function ListBlock({
         <li
           key={index}
           className={cn(
-            "text-slate-600 dark:text-white/75",
+            "text-slate-600 dark:text-white/90",
             listType === "product" &&
               "border-b border-slate-200 py-3 last:border-b-0 dark:border-white/10"
           )}

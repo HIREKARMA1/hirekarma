@@ -40,13 +40,35 @@
     "resources": {
       "id": "resources",
       "label": "ସମ୍ବଳ",
-      "href": "/resources"
+      "href": "/resources",
+      "items": [
+        {
+          "id": "overview",
+          "label": "ସମୀକ୍ଷା",
+          "href": "/resources"
+        },
+        {
+          "id": "faq",
+          "label": "FAQ",
+          "href": "/resources/faq"
+        }
+      ]
+    },
+    "impact": {
+      "id": "impact",
+      "label": "ପ୍ରଭାବ",
+      "href": "/impact"
     },
     "about": {
       "id": "about",
       "label": "ଆମ ବିଷୟରେ",
       "href": "/about-us",
       "items": [
+        {
+          "id": "story",
+          "label": "ଆମର କାହାଣୀ",
+          "href": "/about-us/our-story"
+        },
         {
           "id": "mission",
           "label": "ମିସନ୍ ଏବଂ ମୂଲ୍ୟ",
@@ -56,6 +78,11 @@
           "id": "people",
           "label": "ଟିମ୍",
           "href": "/about-us/people"
+        },
+        {
+          "id": "locations",
+          "label": "ସ୍ଥାନ",
+          "href": "/about-us/locations"
         }
       ]
     },
@@ -64,10 +91,23 @@
       "label": "ଯୋଗାଯୋଗ କରନ୍ତୁ",
       "href": "/contact"
     },
-    "language": "ଭାଷା"
+    "language": "ଭାଷା",
+    "tagline": "ଭାରତର ଟାଲେଣ୍ଟ ଇନଫ୍ରାଷ୍ଟ୍ରକଚର",
+    "secondaryCta": {
+      "id": "open-positions",
+      "label": "ଖୋଲା ପଦବୀ ଦେଖନ୍ତୁ",
+      "href": "/contact"
+    },
+    "primaryCta": {
+      "id": "explore-products",
+      "label": "ଉତ୍ପାଦ ଦେଖନ୍ତୁ",
+      "href": "/products"
+    }
   },
   "footer": {
     "description": "HireKarma ର ନବୀନ ପ୍ଲାଟଫର୍ମ ସହ ଆପଣଙ୍କ ନିଯୁକ୍ତି ପ୍ରକ୍ରିୟାକୁ ପରିବର୍ତ୍ତନ କରନ୍ତୁ। ସଠିକ୍ ପ୍ରତିଭାକୁ ଶୀଘ୍ର ଏବଂ ଅଧିକ ଦକ୍ଷତାର ସହିତ ଖୋଜନ୍ତୁ।",
+    "partnersNote": "ଆମ ମିଶନ ସାଝା କରୁଥିବା ଅଂଶୀଦାରଙ୍କ ସହିତ ନିର୍ମାଣ।",
+    "partnersImageAlt": "ସରକାରୀ ଏବଂ ଅନୁଷ୍ଠାନିକ ଅଂଶୀଦାର",
     "connectTitle": "ଆମ ସହିତ ଯୋଗାଯୋଗ କରନ୍ତୁ",
     "email": "info@hirekarma.in",
     "phone": "+91 91243 64762",
@@ -85,6 +125,14 @@
       {
         "label": "ଟିମ୍",
         "href": "/about-us/people"
+      },
+      {
+        "label": "ସ୍ଥାନ",
+        "href": "/about-us/locations"
+      },
+      {
+        "label": "ପ୍ରଭାବ",
+        "href": "/impact"
       }
     ],
     "productsTitle": "ଉତ୍ପାଦ",
@@ -105,6 +153,10 @@
       {
         "label": "ସୋଲ୍ଭିକ AI",
         "href": "https://solviqai.hirekarma.in/"
+      },
+      {
+        "label": "ଲକ୍ଷ୍ୟ",
+        "href": "https://lakshya.hirekarma.in/"
       }
     ]
   }

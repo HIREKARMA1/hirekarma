@@ -22,10 +22,14 @@ export interface NavDropdown {
 export interface SiteNavContent {
   home: NavLinkItem;
   products: NavDropdown;
-  resources: NavLinkItem;
+  impact: NavLinkItem;
+  resources: NavDropdown;
   about: NavDropdown;
   contact: NavLinkItem;
   language: string;
+  tagline: string;
+  secondaryCta: NavLinkItem;
+  primaryCta: NavLinkItem;
 }
 
 export interface FooterLink {
@@ -35,6 +39,8 @@ export interface FooterLink {
 
 export interface SiteFooterContent {
   description: string;
+  partnersNote: string;
+  partnersImageAlt: string;
   connectTitle: string;
   email: string;
   phone: string;

@@ -40,7 +40,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
       className={`group relative h-full overflow-hidden rounded-2xl border p-6 sm:p-7 transition-all duration-500 hover:brightness-110 ${
         isDark
           ? 'bg-gradient-to-br from-blue-900/25 via-slate-900/30 to-cyan-950/20 border-blue-700/30 hover:border-cyan-500/40'
-          : 'bg-gradient-to-br from-blue-50 via-white to-cyan-50 border-blue-200 hover:border-cyan-300'
+          : 'bg-gradient-to-br from-[#f6f8fb] via-white to-cyan-50 border-[rgba(27,82,164,0.28)] hover:border-cyan-300'
       }`}
     >
       <div
@@ -89,7 +89,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
           </h3>
           <p
             className={`mt-1 text-sm sm:text-base font-medium transition-colors duration-500 ${
-              isDark ? 'text-cyan-400' : 'text-cyan-600'
+              isDark ? 'text-[#00a2e5]' : 'text-[#00a2e5]'
             }`}
           >
             {subtitle}

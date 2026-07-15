@@ -9,8 +9,12 @@
       "description": "କ୍ୟାମ୍ପସ୍ ଭର୍ତ୍ତି ଏବଂ ନିଯୁକ୍ତି ଯୋଗ୍ୟତାରେ HireKarma ର ମାର୍ଗଦର୍ଶକ ମିଶନ୍, ଦୃଷ୍ଟି ଏବଂ ମୂଲ୍ୟବୋଧ।"
     },
     "people": {
-      "title": "ଆମର ଲୋକ | HireKarma",
-      "description": "HireKarma କୁ ଶକ୍ତି ଦେଉଥିବା ନେତୃତ୍ୱ, କୋର ଟିମ୍ ଏବଂ ପରାମର୍ଶଦାତା ମଣ୍ଡଳୀ ସହିତ ପରିଚିତ ହୁଅନ୍ତୁ।"
+      "title": "ନେତୃତ୍ୱ ଟିମ୍ | HireKarma",
+      "description": "ଭାରତର ଟାଲେଣ୍ଟ ଇନଫ୍ରାଷ୍ଟ୍ରକଚର୍ ନିର୍ମାଣ କରୁଥିବା ଲୋକମାନଙ୍କ ସହିତ ପରିଚିତ ହୁଅନ୍ତୁ।"
+    },
+    "locations": {
+      "title": "ଆମର ସ୍ଥାନ | HireKarma",
+      "description": "ଭୁବନେଶ୍ୱର, ବାରବିଲ୍ ଏବଂ କଟକରେ HireKarma କାର୍ଯ୍ୟାଳୟ — ଓଡ଼ିଶାରେ ମୂଳ, ଭାରତ ସହ ସଂଯୁକ୍ତ।"
     }
   },
   "story": {
@@ -24,11 +28,12 @@
       },
       "secondaryCta": {
         "label": "ଆମର ପ୍ରଭାବ ଅନୁସନ୍ଧାନ କରନ୍ତୁ",
-        "href": "/"
+        "href": "/impact"
       },
       "partnersNote": "ଭାରତରେ ଅଂଶୀଦାର ଏବଂ ଅନୁଷ୍ଠାନଗୁଡ଼ିକ ଦ୍ୱାରା ବିଶ୍ୱସ୍ତ",
       "heroImageAlt": "ଟ୍ୟାବଲେଟରେ HireKarma ପ୍ରଭାବ ଡ୍ୟାସବୋର୍ଡ",
-      "partnersImageAlt": "ସରକାରୀ ଏବଂ ଅନୁଷ୍ଠାନିକ ଅଂଶୀଦାର"
+      "partnersImageAlt": "ସରକାରୀ ଏବଂ ଅନୁଷ୍ଠାନିକ ଅଂଶୀଦାର",
+      "headingHighlight": "potential and opportunity."
     },
     "journey": {
       "title": "ଯାତ୍ରାର ଆରମ୍ଭ",
@@ -50,7 +55,8 @@
         "value": "Tier-2 & 3",
         "detail": "ଭାରତରେ ଥିବା କଲେଜଗୁଡ଼ିକ"
       },
-      "imageAlt": "HireKarma ପ୍ରତିଷ୍ଠା ଯାତ୍ରା ଆନିମେସନ୍"
+      "imageAlt": "HireKarma ପ୍ରତିଷ୍ଠା ଯାତ୍ରା ଆନିମେସନ୍",
+      "closing": "What started as a conviction about overlooked campuses became a full talent stack — products, programs, and partnerships built to make placement outcomes measurable and fair."
     },
     "challenge": {
       "title": "ଆମେ ଦେଖିଥିବା ଚ୍ୟାଲେଞ୍ଜ",
@@ -71,9 +77,81 @@
       "highlight2": "ପ୍ରେଡିକ୍ଟିଭ ଆନାଲିଟିକ୍ସ",
       "afterHighlights": " ଏବଂ ସମ୍ପ୍ରଦାୟ-ଚାଳିତ ସଂଯୋଗ ମାଧ୍ୟମରେ। ଆମର ପ୍ଲାଟଫର୍ମ ସମଗ୍ର ହାୟରିଂ ଯାତ୍ରାକୁ ସରଳ କରେ।",
       "imageAlt": "କ୍ୟାମ୍ପସ୍ ହାୟରିଂ ପାଇଁ AI-ଚାଳିତ ସମାଧାନ"
+    },
+    "stats": [
+      {
+        "label": "Founders",
+        "value": "2",
+        "detail": "Sohan & Rohit"
+      },
+      {
+        "label": "Rooted in",
+        "value": "Odisha",
+        "detail": "Serving campuses India-wide"
+      }
+    ],
+    "timeline": {
+      "label": "Milestones",
+      "heading": "How HireKarma grew",
+      "headingHighlight": "grew",
+      "description": "A short arc from a Bhubaneswar founding to products and public infrastructure work that scale opportunity.",
+      "items": [
+        {
+          "id": "founding",
+          "year": "2020",
+          "title": "Founded in Bhubaneswar",
+          "description": "HireKarma starts with a focus on tier-2 and tier-3 campuses — where talent is abundant and opportunity is uneven."
+        },
+        {
+          "id": "campus",
+          "year": "2021–22",
+          "title": "Campus platforms take shape",
+          "description": "Placement operations and student readiness tools begin closing the loop between colleges, students, and recruiters."
+        },
+        {
+          "id": "products",
+          "year": "2023–24",
+          "title": "Product ecosystem expands",
+          "description": "DISHA, SolviqAI, Lakshya, and Shortlisted form a connected stack for campuses and employers."
+        },
+        {
+          "id": "dpi",
+          "year": "Today",
+          "title": "Talent + digital public infrastructure",
+          "description": "HireKarma continues building for scale — from campus hiring to open digital public goods."
+        }
+      ]
+    },
+    "cta": {
+      "title": "The story continues with the people building it.",
+      "titleHighlight": "people building it.",
+      "description": "Meet the team, explore our mission, or talk to us about partnerships and open roles.",
+      "primary": {
+        "label": "Meet Our People",
+        "href": "/about-us/people"
+      },
+      "secondary": {
+        "label": "Mission & Values",
+        "href": "/about-us/mission-value"
+      }
     }
   },
   "mission": {
+    "hero": {
+      "label": "ମିଶନ୍ ଏବଂ ମୂଲ୍ୟବୋଧ",
+      "heading": "ପ୍ରତ୍ୟେକ ପ୍ଲେସମେଣ୍ଟ ଓ ଉତ୍ପାଦକୁ",
+      "headingHighlight": "ମାର୍ଗଦର୍ଶକ ଉଦ୍ଦେଶ୍ୟ।",
+      "description": "ଆମର ମିଶନ୍, ଦୃଷ୍ଟି ଏବଂ ମୂଲ୍ୟବୋଧ HireKarma କୁ ଶିକ୍ଷା ଓ ଶିଳ୍ପ ସଂଯୋଗରେ ଧ୍ୟାନିତ ରଖେ — ସ୍ପଷ୍ଟତା, ସମାନତା ଏବଂ ମାପନୀୟ ଫଳାଫଳ ସହିତ।",
+      "primaryCta": {
+        "label": "ଆମର ଲୋକ ଦେଖନ୍ତୁ",
+        "href": "/about-us/people"
+      },
+      "secondaryCta": {
+        "label": "ଯୋଗାଯୋଗ କରନ୍ତୁ",
+        "href": "/contact"
+      },
+      "tagline": "ଉଦ୍ଦେଶ୍ୟରେ ସଠିକତା। କାର୍ଯ୍ୟନିର୍ବାହରେ ଉତ୍କର୍ଷତା।"
+    },
     "mission": {
       "title": "ଆମର ମିଶନ୍",
       "subtitle": "ଉଦ୍ଦେଶ୍ୟରେ ସଠିକତା, କାର୍ଯ୍ୟନିର୍ବାହରେ ଉତ୍କର୍ଷତା",
@@ -91,14 +169,56 @@
       "subtitle": "ଆମ ଯାତ୍ରାର ମାର୍ଗଦର୍ଶକ ତାରା",
       "body": "ମାର୍ଗଦର୍ଶକ ତାରା ପରି, ସମାବେଶ, ପାରଦର୍ଶିତା ଏବଂ ନବାଚାରର ଆମର ମୂଳ ମୂଲ୍ୟବୋଧ ଆଗକୁ ରାସ୍ତା ଆଲୋକିତ କରେ। ଆମେ ଏପରି ଏକ ଉତ୍କୃଷ୍ଟ ସମ୍ପ୍ରଦାୟ ସୃଷ୍ଟି କରୁ ଯେଉଁଠାରେ ନିରନ୍ତର ଶିକ୍ଷା ମାଧ୍ୟମରେ ଉତ୍କର୍ଷତା ଚମକେ, ଏବଂ ସାଝା ବିକାଶର ଉଜ୍ଜ୍ୱଳତା ଛାତ୍ର ଏବଂ ଅଂଶୀଦାର ଉଭୟଙ୍କ ପାଇଁ ନୂତନ ସୁଯୋଗ ଆଲୋକିତ କରେ।",
       "imageAlt": "ମୂଲ୍ୟବୋଧ ଆନିମେସନ୍"
+    },
+    "cta": {
+      "title": "ଉଦ୍ଦେଶ୍ୟ ସହିତ ନିର୍ମାଣ ପାଇଁ ପ୍ରସ୍ତୁତ?",
+      "description": "ମିଶନ୍, ଦୃଷ୍ଟି ଏବଂ ମୂଲ୍ୟବୋଧ ଦ୍ୱାରା ମାର୍ଗଦର୍ଶିତ ଟିମ୍ ସହିତ ସୁଯୋଗ ଦେଖନ୍ତୁ ଯେଉଁମାନେ ଲୋକଙ୍କୁ ପ୍ରଥମେ ରଖନ୍ତି।",
+      "button": {
+        "label": "ଖୋଲା ପଦବୀ ଦେଖନ୍ତୁ",
+        "href": "/contact"
+      }
     }
   },
   "people": {
-    "title": "ବିକାଶକୁ ପ୍ରେରଣା ଦେଉଥିବା ନେତୃତ୍ୱ",
-    "subtitle": "HireKarma କୁ ଶକ୍ତି ଦେଉଥିବା ଲୋକମାନେ",
-    "descriptionBefore": "ଆମର ସଫଳତା ପଛରେ ଥିବା ଉତ୍ସାହୀ ଲୋକ — ନବାଚାରକ, ସୃଷ୍ଟିକର୍ତ୍ତା ଏବଂ ନେତା ଯେଉଁମାନେ",
-    "descriptionHighlight": "କ୍ୟାମ୍ପସ୍ ଭର୍ତ୍ତିକୁ ପରିବର୍ତ୍ତନ",
-    "descriptionAfter": "କରିବାରେ ସମର୍ପିତ, ସମଗ୍ର ଭାରତରେ।",
+    "hero": {
+      "label": "ନେତୃତ୍ୱ ଟିମ୍",
+      "heading": "ଭାରତର",
+      "headingHighlight": "ଟାଲେଣ୍ଟ ଇନଫ୍ରାଷ୍ଟ୍ରକଚର୍",
+      "description": "ପ୍ରତ୍ୟେକ ପ୍ଲେସମେଣ୍ଟ, ପ୍ରଶିକ୍ଷଣ କାର୍ଯ୍ୟକ୍ରମ, କଲେଜ ସହଭାଗିତା, ପ୍ରଯୁକ୍ତି ଉତ୍ପାଦ ଏବଂ ଓପନ୍-ସୋର୍ସ ଅବଦାନ ପଛରେ ବୃହତ ସ୍କେଲରେ ସୁଯୋଗ ସୃଷ୍ଟି କରିବାରେ ପ୍ରତିବଦ୍ଧ ଏକ ଟିମ୍ ଅଛି।",
+      "primaryCta": {
+        "label": "ଖୋଲା ପଦବୀ ଦେଖନ୍ତୁ",
+        "href": "/contact"
+      },
+      "secondaryCta": {
+        "label": "ଆମର ମିଶନ୍ ଦେଖନ୍ତୁ",
+        "href": "/about-us/mission-value"
+      },
+      "tagline": "ଉଦ୍ଦେଶ୍ୟ ଦ୍ୱାରା ଚାଳିତ, ପ୍ରଭାବ ଦ୍ୱାରା ଏକତ୍ରିତ ଏକ ଟିମ୍।"
+    },
+    "partnersNote": "ଭାରତ ସାରା ଅଂଶୀଦାର ଏବଂ ଅନୁଷ୍ଠାନ ଦ୍ୱାରା ବିଶ୍ୱସ୍ତ",
+    "partnersImageAlt": "ସରକାରୀ ଏବଂ ଅନୁଷ୍ଠାନିକ ଅଂଶୀଦାର",
+    "philosophy": {
+      "label": "ଆମର ନେତୃତ୍ୱ ଦର୍ଶନ",
+      "title": "ଏଠାରେ କେହି କେବଳ ପଦବୀ ନୁହଁନ୍ତି।",
+      "pillars": [
+        {
+          "id": "ownership",
+          "title": "ମାଲିକାନା",
+          "description": "ଆମେ କେବଳ ଉପାଧି ନୁହେଁ, ଦାୟିତ୍ୱ ନେଉ।"
+        },
+        {
+          "id": "collaboration",
+          "title": "ସହଯୋଗ",
+          "description": "ଆମେ ଟିମ୍ ମଧ୍ୟରେ ମିଳିତ ଭାବେ ଜିତୁ।"
+        },
+        {
+          "id": "impact",
+          "title": "ପ୍ରଭାବ",
+          "description": "ଆମେ ସୃଷ୍ଟି ହୋଇଥିବା ସୁଯୋଗ ଦ୍ୱାରା ସଫଳତା ମାପୁ।"
+        }
+      ]
+    },
+    "teamLabel": "ଆମର ଲୋକ",
     "tabs": {
       "advisory": "ପରାମର୍ଶଦାତା ମଣ୍ଡଳୀ",
       "leadership": "ନେତୃତ୍ୱ",
@@ -106,16 +226,11 @@
     },
     "loading": "ଟିମ୍ ଲୋଡ୍ ହେଉଛି...",
     "emptyTitle": "ଏପର୍ଯ୍ୟନ୍ତ କୌଣସି ସଦସ୍ୟ ନାହାନ୍ତି",
-    "emptyDescription": "ପରାମର୍ଶଦାତା ମଣ୍ଡଳୀ ସଦସ୍ୟଙ୍କ ଘୋଷଣା ଶୀଘ୍ର ହେବ।",
-    "closeAria": "ବନ୍ଦ କରନ୍ତୁ",
-    "viewDetailsAria": "ବିବରଣୀ ଦେଖନ୍ତୁ",
-    "linkedinAria": "LinkedIn",
-    "instagramAria": "Instagram",
-    "emailAria": "ଇମେଲ୍",
+    "emptyDescription": "ଏହି ଗୋଷ୍ଠୀର ସଦସ୍ୟଙ୍କ ଘୋଷଣା ଶୀଘ୍ର ହେବ।",
     "culture": {
       "title": "ଆମର ସଂସ୍କୃତି",
       "subtitle": "ସମାବେଶୀ, ନବାଚାରୀ ଏବଂ ସହଯୋଗୀ",
-      "description": "ଆମେ ଏକ ସମାବେଶୀ, ନବାଚାରୀ ଏବଂ ସହଯୋଗୀ ପରିବେଶ ଗଢ଼ିବାରେ ବିଶ୍ୱାସ କରୁ ଯେଉଁଠାରେ ପ୍ରତ୍ୟେକ ଟିମ୍ ସଦସ୍ୟ ବିକାଶ କରିପାରିବେ ଏବଂ କ୍ୟାମ୍ପସ୍ ଭର୍ତ୍ତିକୁ ପରିବର୍ତ୍ତନ କରିବାର ଆମର ମିଶନରେ ଅବଦାନ ରଖିପାରିବେ।",
+      "description": "ଆମେ ସମାବେଶୀ, ନବାଚାରୀ ଓ ସହଯୋଗୀ ସଂସ୍କୃତି ଗଢ଼ୁ ଯେଉଁଠାରେ ପ୍ରତ୍ୟେକ ସଦସ୍ୟ ବିକାଶ କରି କ୍ୟାମ୍ପସ୍ ଭର୍ତ୍ତି ପରିବର୍ତ୍ତନରେ ଅବଦାନ ରଖିପାରିବେ।",
       "values": [
         {
           "id": "inclusive",
@@ -138,6 +253,159 @@
         "celebration": "କର୍ପୋରେଟ ଟିମ୍",
         "festival": "ବିଶ୍ୱବିଦ୍ୟାଳୟ କ୍ୟାମ୍ପସ୍",
         "workspace": "ଟିମ୍ କାର୍ଯ୍ୟସ୍ଥଳ"
+      }
+    },
+    "openRoles": {
+      "label": "ଆସନ୍ତା କାଲି ପାଇଁ ନିର୍ମାଣ",
+      "title": "ବଢ଼ୁଥିବା ଟିମ୍। ବଢ଼ୁଥିବା ଦାୟିତ୍ୱ।",
+      "description": "HireKarma ଡିଭିଜନ୍ ମଧ୍ୟରେ ବିସ୍ତାର ହେଉଥିବା ବେଳେ, ଆମେ ଫଳାଫଳର ମାଲିକାନା ନେଇ ଉଚ୍ଚ-ପ୍ରଦର୍ଶନ ଟିମ୍ ଗଢ଼ିପାରୁଥିବା ନେତା ଖୋଜୁଛୁ।",
+      "roles": [
+        {
+          "id": "recruitment",
+          "title": "ରିକ୍ରୁଟମେଣ୍ଟ ଲିଡ୍",
+          "description": "ଟାଲେଣ୍ଟ ପାଇପଲାଇନ୍ ଏବଂ ହାୟରିଂ ଉତ୍କର୍ଷତା ନିର୍ମାଣ।"
+        },
+        {
+          "id": "it-consulting",
+          "title": "IT କନସଲ୍ଟିଂ ଲିଡ୍",
+          "description": "ବୃହତ ସ୍କେଲରେ ପ୍ରଯୁକ୍ତି ସମାଧାନ ପ୍ରଦାନ।"
+        },
+        {
+          "id": "open-source",
+          "title": "ଓପନ୍ ସୋର୍ସ ଲିଡ୍",
+          "description": "ସମାବେଶୀ, ଖୋଲା ଏବଂ ପ୍ରଭାବଶାଳୀ ସମାଧାନ ନିର୍ମାଣ।"
+        },
+        {
+          "id": "staff-augmentation",
+          "title": "ଷ୍ଟାଫ୍ ଅଗମେଣ୍ଟେସନ୍ ଲିଡ୍",
+          "description": "ସଂଗଠନକୁ ସଠିକ୍ ପ୍ରତିଭା ସହିତ ସଶକ୍ତ କରିବା।"
+        }
+      ]
+    },
+    "cta": {
+      "title": "ଆମ ସହିତ ଭବିଷ୍ୟତ ଗଢ଼ନ୍ତୁ।",
+      "description": "ଉଦ୍ଦେଶ୍ୟ, ଲୋକ ଏବଂ ପ୍ରଭାବରେ ବିଶ୍ୱାସ ରଖୁଥିବା ଟିମ୍ ସହିତ କାମ କରିବାର ସୁଯୋଗ ଦେଖନ୍ତୁ।",
+      "button": {
+        "label": "ଖୋଲା ପଦବୀ ଦେଖନ୍ତୁ",
+        "href": "/contact"
+      }
+    },
+    "linkedinAria": "LinkedIn",
+    "instagramAria": "Instagram",
+    "emailAria": "ଇମେଲ୍"
+  },
+  "locations": {
+    "hero": {
+      "label": "ଆମର ତିନୋଟି କାର୍ଯ୍ୟାଳୟ",
+      "headingLine1": "ଓଡ଼ିଶାରେ ଶିକଡ଼",
+      "headingLine1Highlight": "।",
+      "headingLine2": "ଭାରତ ସହିତ ସଂଯୁକ୍ତ",
+      "headingLine2Highlight": "।",
+      "description": "ଭୁବନେଶ୍ୱର HQ ରୁ ବାରବିଲ୍ ଓ କଟକ ଶାଖା ପର୍ଯ୍ୟନ୍ତ — ଆମେ କ୍ୟାମ୍ପସ୍, ନିଯୁକ୍ତିଦାତା ଓ ସମ୍ପ୍ରଦାୟ ନିକଟରେ ରହୁ।\nସ୍ଥାନୀୟ ଉପସ୍ଥିତି ଅର୍ଥ ଦ୍ରୁତ ପ୍ଲେସମେଣ୍ଟ, ଶକ୍ତିଶାଳୀ ସହଭାଗିତା, ଏବଂ ସୁଯୋଗ ଯାହା ଓଡ଼ିଶାରୁ ଭାରତକୁ ପହଞ୍ଚେ।",
+      "primaryCta": {
+        "label": "ଯୋଗାଯୋଗ କରନ୍ତୁ",
+        "href": "/contact"
+      },
+      "secondaryCta": {
+        "label": "ଆମ ପ୍ରଭାବ ଦେଖନ୍ତୁ",
+        "href": "/products"
+      },
+      "tagline": "3 କାର୍ଯ୍ୟାଳୟ। ଗୋଟିଏ ମିଶନ୍। ଅସୀମ ପ୍ରଭାବ।"
+    },
+    "map": {
+      "ariaLabel": "ଓଡ଼ିଶାରେ HireKarma କାର୍ଯ୍ୟାଳୟ",
+      "pins": [
+        {
+          "id": "barbil",
+          "city": "ବାରବିଲ୍",
+          "role": "ଶାଖା କାର୍ଯ୍ୟାଳୟ",
+          "x": 42,
+          "y": 18
+        },
+        {
+          "id": "cuttack",
+          "city": "କଟକ",
+          "role": "ଶାଖା କାର୍ଯ୍ୟାଳୟ",
+          "x": 72,
+          "y": 48
+        },
+        {
+          "id": "bhubaneswar",
+          "city": "ଭୁବନେଶ୍ୱର",
+          "role": "ମୁଖ୍ୟ କାର୍ଯ୍ୟାଳୟ",
+          "x": 58,
+          "y": 62
+        }
+      ]
+    },
+    "section": {
+      "label": "ଆମର ପହଞ୍ଚ",
+      "heading": "ଯାହାଙ୍କୁ ଆମେ ସେବା କରୁ, ସେମାନଙ୍କ ନିକଟରେ।"
+    },
+    "pillars": [
+      {
+        "id": "colleges",
+        "title": "କ୍ୟାମ୍ପସ୍-ପ୍ରଥମ ପହଞ୍ଚ",
+        "description": "TPO ଓ ଛାତ୍ରଛାତ୍ରୀଙ୍କ ସହ ଭୂମିରେ — କେବଳ ଆଉ ଏକ ପୋର୍ଟାଲ୍ ଲଗଇନ୍ ନୁହେଁ।"
+      },
+      {
+        "id": "communities",
+        "title": "ସମ୍ପ୍ରଦାୟ ପ୍ରଭାବ",
+        "description": "ସ୍କିଲିଂ ଓ CSR ଯେଉଁଠାରେ ଲୋକେ ରୁହନ୍ତି ଓ ଶିଖନ୍ତି।"
+      },
+      {
+        "id": "clients",
+        "title": "ନିଯୁକ୍ତିଦାତା ଗତି",
+        "description": "ସ୍ଥାନୀୟ ଉପସ୍ଥିତି = ଶୀଘ୍ର ନିଯୁକ୍ତି ଓ ଉତ୍ତମ ଡେଲିଭରି।"
+      }
+    ],
+    "offices": [
+      {
+        "id": "bhubaneswar",
+        "badge": "ମୁଖ୍ୟ କାର୍ଯ୍ୟାଳୟ",
+        "badgeTone": "primary",
+        "city": "ଭୁବନେଶ୍ୱର",
+        "role": "ରଣନୀତି ଓ HQ",
+        "description": "ଉତ୍ପାଦ, ସହଭାଗିତା ଓ ପ୍ଲେସମେଣ୍ଟ ରଣନୀତି ଯେଉଁଠାରେ ମିଳେ — ଟାଲେଣ୍ଟ ଇନଫ୍ରାଷ୍ଟ୍ରକଚରର କମାଣ୍ଡ ସେଣ୍ଟର।",
+        "address": "୨ୟ ମହଲା, ଏସ୍‌ଏସ୍ ନିବାସ, HireKarma ପ୍ରାଇଭେଟ୍ ଲିମିଟେଡ୍, ରଘୁନାଥପୁର, ଭୁବନେଶ୍ୱର, ଓଡ଼ିଶା 751024",
+        "whyTitle": "କାହିଁକି ଭୁବନେଶ୍ୱର",
+        "whyBody": "କ୍ୟାମ୍ପସ୍, ସରକାରୀ ସହଭାଗୀ ଓ ଓଡ଼ିଶାର ବଢ଼ୁଥିବା ଟେକ୍ ଇକୋସିଷ୍ଟମ୍ କୁ ରାଜଧାନୀ ପହଞ୍ଚ।",
+        "image": "/about/locations/bhubaneswar.jpg",
+        "imageAlt": "ଭୁବନେଶ୍ୱରରେ HireKarma ମୁଖ୍ୟ କାର୍ଯ୍ୟାଳୟ"
+      },
+      {
+        "id": "barbil",
+        "badge": "ଶାଖା କାର୍ଯ୍ୟାଳୟ",
+        "badgeTone": "green",
+        "city": "ବାରବିଲ୍",
+        "role": "ଶିଳ୍ପ କରିଡର୍",
+        "description": "ଉତ୍ତର ଓଡ଼ିଶା ଆଧାର — ଶିଳ୍ପ ଓ ସେହି ପ୍ରତିଭା ନିକଟରେ ଯାହା ମେଟ୍ରୋ ଜବ୍ ବୋର୍ଡରେ କମ୍ ଦେଖାଯାଏ।",
+        "address": "HireKarma ଶାଖା କାର୍ଯ୍ୟାଳୟ, ବାରବିଲ୍, କେନ୍ଦୁଝର ଜିଲ୍ଲା, ଓଡ଼ିଶା",
+        "whyTitle": "କାହିଁକି ବାରବିଲ୍",
+        "whyBody": "ଦକ୍ଷ ନିଯୁକ୍ତି ପଥ ସେହି ସମ୍ପ୍ରଦାୟ ନିକଟରେ ଯେଉଁଠାରେ ସବୁଠାରୁ ଅଧିକ ଦରକାର।",
+        "image": "/about/locations/barbil.jpg",
+        "imageAlt": "ବାରବିଲ୍‌ରେ HireKarma ଶାଖା କାର୍ଯ୍ୟାଳୟ"
+      },
+      {
+        "id": "cuttack",
+        "badge": "ଶାଖା କାର୍ଯ୍ୟାଳୟ",
+        "badgeTone": "secondary",
+        "city": "କଟକ",
+        "role": "ଉପକୂଳୀୟ ନେଟୱାର୍କ",
+        "description": "ଉପକୂଳୀୟ ଓଡ଼ିଶାରେ କଲେଜ ଓ ନିଯୁକ୍ତିଦାତା ନେଟୱାର୍କ — ଗଭୀର ପହଞ୍ଚ, ଦୃଢ଼ ସମ୍ପର୍କ।",
+        "address": "HireKarma ଶାଖା କାର୍ଯ୍ୟାଳୟ, କଟକ, ଓଡ଼ିଶା",
+        "whyTitle": "କାହିଁକି କଟକ",
+        "whyBody": "ବାଣିଜ୍ୟିକ କେନ୍ଦ୍ର ଯାହା ରାଜଧାନୀ ବାହାରେ ଆମ ପହଞ୍ଚ ବଢ଼ାଏ।",
+        "image": "/about/locations/cuttack.jpg",
+        "imageAlt": "କଟକରେ HireKarma ଶାଖା କାର୍ଯ୍ୟାଳୟ"
+      }
+    ],
+    "cta": {
+      "title": "ଆସନ୍ତୁ ସୁଯୋଗ ନିର୍ମାଣ କରିବା ଯାହା ସ୍କେଲ୍ ହୁଏ।",
+      "description": "ସହଭାଗିତା କରନ୍ତୁ, କାର୍ଯ୍ୟାଳୟକୁ ଆସନ୍ତୁ, କିମ୍ବା ଭାରତର ଟାଲେଣ୍ଟ ଇନଫ୍ରାଷ୍ଟ୍ରକଚର ତିଆରି କରୁଥିବା ଦଳରେ ଯୋଗ ଦିଅନ୍ତୁ।",
+      "button": {
+        "label": "ଯୋଗାଯୋଗ କରନ୍ତୁ",
+        "href": "/contact"
       }
     }
   },

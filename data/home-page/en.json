@@ -1,91 +1,300 @@
 {
   "heroBanner": {
-    "heading": "Transforming Talent Ecosystems",
-    "subheading": "with AI, Automation, and Analytics",
-    "description": "HireKarma bridges the gap between education and industry through smart technology and data-driven insights. From career readiness for students to hiring automation for companies and analytics for institutions, HireKarma connects all stakeholders in one intelligent ecosystem. Join the growing network of organizations, universities, and learners shaping the future of talent with HireKarma."
-  },
-  "impactSection": {
-    "heading": "Our Impact in Numbers",
-    "subheading": "Transforming Campus Hiring",
-    "description": "HireKarma delivers measurable results and lasting impact across India's educational ecosystem.",
-    "primaryStat": {
-      "value": "200K+",
-      "label": "Student Impacted"
+    "heading": "Where Talent Meets Opportunity",
+    "description": "HireKarma connects skill development, AI-powered placement preparation, campus recruitment, IT consulting, staff augmentation, and digital public infrastructure to build future-ready careers and stronger organisations.",
+    "primaryCta": {
+      "label": "Explore Products & Activities",
+      "href": "#what-we-do"
     },
-    "stats": [
-      { "value": "130+", "label": "Universities" },
-      { "value": "980+", "label": "Companies" },
-      { "value": "7k+", "label": "Campus Drives Conducted" },
-      { "value": "22K+", "label": "Students Placed" }
+    "secondaryCta": {
+      "label": "View Open Positions",
+      "href": "/contact"
+    },
+    "partnersNote": "Trusted by partners and institutions across India.",
+    "headingHighlight": "Opportunity"
+  },
+  "statsBar": {
+    "items": [
+      {
+        "id": "careers",
+        "value": "22,000+",
+        "label": "Careers Shaped"
+      },
+      {
+        "id": "youth",
+        "value": "5,500+",
+        "label": "Youth Trained"
+      },
+      {
+        "id": "projects",
+        "value": "100+",
+        "label": "Projects Delivered"
+      },
+      {
+        "id": "colleges",
+        "value": "60+",
+        "label": "College Partners"
+      },
+      {
+        "id": "offices",
+        "value": "3",
+        "label": "Offices"
+      },
+      {
+        "id": "simulations",
+        "value": "10K+",
+        "label": "SOLVIQ Simulations"
+      }
+    ]
+  },
+  "divisions": {
+    "label": "",
+    "heading": "Products & activities. One mission.",
+    "description": "Platforms that scale opportunity, and activities that deliver it on the ground — one connected ecosystem.",
+    "cta": {
+      "label": "Explore our products",
+      "href": "/products"
+    },
+    "items": [
+      {
+        "id": "skills",
+        "number": "01",
+        "title": "Skill Development",
+        "description": "Industry-aligned training programs that build job-ready digital skills.",
+        "kind": "activity",
+        "accent": "#5b4bdb",
+        "image": "/offerings/skill-development.png",
+        "href": "/products"
+      },
+      {
+        "id": "disha",
+        "number": "02",
+        "title": "DISHA",
+        "description": "College engagement and placement enablement platform.",
+        "kind": "product",
+        "accent": "#4c3d9a",
+        "image": "/offerings/disha.png",
+        "href": "https://disha.hirekarma.in/"
+      },
+      {
+        "id": "solviq",
+        "number": "03",
+        "title": "SOLVIQ",
+        "description": "AI-powered placement preparation platform for students.",
+        "kind": "product",
+        "accent": "#1b52a4",
+        "image": "/offerings/solviq.png",
+        "href": "https://www.solviqai.in/"
+      },
+      {
+        "id": "lakshya",
+        "number": "04",
+        "title": "Lakshya",
+        "description": "A hiring ecosystem where applications move faster and every stakeholder sees the same truth.",
+        "kind": "product",
+        "accent": "#00a2e5",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Products/Lakshya.png",
+        "href": "https://lakshya.hirekarma.in/"
+      },
+      {
+        "id": "shortlisted",
+        "number": "05",
+        "title": "Shortlisted",
+        "description": "AI virtual placement cell with curated batches, smart matches, and daily placement support.",
+        "kind": "product",
+        "accent": "#fec40d",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Products/Shortlisted.png",
+        "href": "/shortlisted"
+      },
+      {
+        "id": "consulting",
+        "number": "06",
+        "title": "IT Consulting",
+        "description": "Technology solutions and engineering services that drive real impact.",
+        "kind": "activity",
+        "accent": "#098855",
+        "image": "/offerings/it-consulting.png",
+        "href": "/contact"
+      },
+      {
+        "id": "staffing",
+        "number": "07",
+        "title": "Staff Augmentation",
+        "description": "Flexible, skilled talent to extend your teams and accelerate delivery.",
+        "kind": "activity",
+        "accent": "#f58020",
+        "image": "/offerings/staff-augmentation.png",
+        "href": "/contact"
+      },
+      {
+        "id": "dpi",
+        "number": "08",
+        "title": "Open Source & DPI",
+        "description": "Building open digital infrastructure for a more inclusive India.",
+        "kind": "activity",
+        "accent": "#d64246",
+        "image": "/offerings/open-source-dpi.png",
+        "href": "/about-us/mission-value"
+      }
     ],
-    "chartComingSoon": "Coming Soon"
+    "headingHighlight": "One mission."
   },
-  "productsSection": {
-    "heading": "Our Products",
-    "subheading": "Built for Smarter Talent Outcomes",
-    "description": "Explore our focused product suite designed to improve career readiness, streamline talent evaluation, and accelerate hiring outcomes.",
-    "viewMore": "View More",
-    "productBadge": "Product"
+  "journey": {
+    "label": "The pathway",
+    "heading": "A journey across our ecosystem",
+    "description": "From first skill to lasting opportunity — one connected flow for learners, campuses, and employers.",
+    "steps": [
+      {
+        "id": "learn",
+        "label": "Learn",
+        "description": "Build foundations with practical, job-ready skills."
+      },
+      {
+        "id": "practice",
+        "label": "Practice",
+        "description": "Simulate interviews, tests, and real hiring scenarios."
+      },
+      {
+        "id": "assess",
+        "label": "Assess",
+        "description": "Measure readiness with scores that recruiters trust."
+      },
+      {
+        "id": "connect",
+        "label": "Connect",
+        "description": "Match talent to campuses, companies, and roles."
+      },
+      {
+        "id": "hire",
+        "label": "Hire",
+        "description": "Run drives and offers with clear, shared visibility."
+      },
+      {
+        "id": "grow",
+        "label": "Grow",
+        "description": "Keep progressing after placement — not just during placement season."
+      },
+      {
+        "id": "contribute",
+        "label": "Contribute",
+        "description": "Feed impact back into communities and public systems."
+      }
+    ],
+    "headingHighlight": "our ecosystem"
   },
-  "problemStatement": {
-    "heading": "The Problem We Solve",
-    "subheading": "Industry-Ready Skilling and Placement",
-    "paragraph1": "Many students have potential but miss real exposure to industry workflows, tools, and expectations. Our skilling model closes this gap through structured training at our centers, with advanced technology labs and classroom facilities designed for practical, job-focused learning.",
-    "paragraph2": "We currently train students for three active domains: Retail, IT, and Core Industry. From lab sessions and classroom instruction to industry-level projects, we make candidates job-ready and connect them with employment opportunities across relevant industries.",
-    "domains": ["Retail", "IT", "Core Industry"]
-  },
-  "futureReadySection": {
-    "heading": "Future-Ready Implementation",
-    "subheading": "Next-Gen Talent Solutions",
-    "description": "Built on cutting-edge technology and scalable architecture, our platform empowers institutions to adapt to the evolving landscape of recruitment and skill development. With AI-driven matching and real-time analytics, we enable smarter decisions, faster hiring, and seamless digital transformation across campuses.",
-    "cta": "Read More"
+  "techShowcase": {
+    "label": "Our technology",
+    "heading": "Real platforms. Real impact.",
+    "products": [
+      {
+        "id": "disha",
+        "title": "DISHA",
+        "subtitle": "College placement enablement",
+        "description": "Run drives, track offers, and give TPOs live visibility — so placement season stays under control.",
+        "cta": {
+          "label": "Explore DISHA",
+          "href": "https://disha.hirekarma.in/"
+        },
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Products/disha.png",
+        "tone": "light",
+        "accent": "#1b52a4"
+      },
+      {
+        "id": "solviq",
+        "title": "SOLVIQ",
+        "subtitle": "AI-powered placement preparation",
+        "description": "Resume scoring, skill tests, and mock interviews that close the gap between classroom and shortlist.",
+        "cta": {
+          "label": "Explore SOLVIQ",
+          "href": "https://www.solviqai.in/"
+        },
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Products/solviq.jpeg",
+        "tone": "dark",
+        "accent": "#f58020"
+      }
+    ]
   },
   "testimonials": {
     "heading": "Testimonials",
     "subheading": "Voices of Transformation",
-    "description": "Hear from colleges, universities, and corporate partners who have transformed their hiring processes with HireKarma."
+    "description": "Hear from colleges, universities, and corporate partners who have transformed their hiring processes with HireKarma.",
+    "subheadingHighlight": "Transformation"
+  },
+  "hiringCta": {
+    "heading": "We're hiring. Build what matters.",
+    "description": "Join a team building talent infrastructure for campuses, companies, and communities across India.",
+    "primaryCta": {
+      "label": "View open positions",
+      "href": "/contact"
+    },
+    "secondaryCta": {
+      "label": "Talk to us",
+      "href": "/contact"
+    },
+    "headingHighlight": "what matters."
+  },
+  "dpi": {
+    "label": "Digital public infrastructure",
+    "heading": "Building for a billion+",
+    "description": "We contribute to open standards and identity ecosystems that make credentials and services trustworthy at scale.",
+    "cta": {
+      "label": "Explore our mission",
+      "href": "/about-us/mission-value"
+    },
+    "partners": [
+      {
+        "id": "mosip",
+        "name": "MOSIP",
+        "description": "Modular open-source identity platform.",
+        "logo": "/partners/mosip.png"
+      },
+      {
+        "id": "inji",
+        "name": "Inji",
+        "description": "Verifiable credentials for real-world trust.",
+        "logo": "/partners/inji.png"
+      },
+      {
+        "id": "digital-india",
+        "name": "Digital India",
+        "description": "Aligned with India's digital public stack.",
+        "logo": "/partners/digital-india.png"
+      }
+    ]
   },
   "faq": {
     "heading": "FAQ",
-    "subheading": "Answers to Common Questions",
-    "description": "Have questions? We've got answers. If you can't find what you're looking for, feel free to contact us directly.",
+    "subheading": "Quick answers",
+    "description": "Common questions from colleges, companies, and partners.",
     "items": [
       {
         "question": "How does HireKarma help colleges improve placement rates?",
-        "answer": "HireKarma connects colleges with top recruiters and equips students with industry-relevant skills, increasing their placement success significantly."
+        "answer": "We combine campus placement systems, student readiness tools, and recruiter networks — so TPOs spend less time on logistics and more time on outcomes."
       },
       {
-        "question": "What types of roles does HireKarma recruit for?",
-        "answer": "HireKarma recruits for entry to mid-level positions in tech, marketing, HR, operations, sales, and more across diverse industries."
+        "question": "What products should we start with?",
+        "answer": "Most campuses begin with DISHA for placement operations and SolviqAI for student readiness. Employers often start with Lakshya or Shortlisted, depending on their hiring model."
       },
       {
         "question": "Can companies hire from multiple colleges at once?",
-        "answer": "Yes. Our Centralized Placement System allows companies to post once and hire from multiple colleges in real-time."
+        "answer": "Yes. Our platforms are built for multi-campus coordination with shared visibility for recruiters and institutions."
       },
       {
-        "question": "How are the funds utilized in the platform?",
-        "answer": "Funds are primarily utilized for platform development, AI model training, infrastructure maintenance, and continuous feature enhancement. We also invest in training programs, student support services, and partnership development to ensure the platform remains cutting-edge and beneficial for all stakeholders."
-      },
-      {
-        "question": "Is the skill development program customized?",
-        "answer": "Yes, HireKarma designs skill training programs based on student profiles, industry needs, and future job trends."
+        "question": "Do you work beyond Odisha?",
+        "answer": "We are rooted in Odisha and serve partners across India — campuses, employers, and digital public infrastructure programs."
       }
     ]
   },
   "partners": {
     "heading": "Our Partners",
     "subheading": "Trusted Collaboration Network",
-    "description": "Trusted by leading companies and educational institutions across India who rely on HireKarma for their campus placement needs.",
+    "description": "Trusted by leading companies and educational institutions across India that rely on HireKarma for their campus placement needs.",
     "universityPartnersLabel": "University Partners",
-    "corporatePartnersLabel": "Corporate Partners"
-  },
-  "googleLocationSection": {
-    "heading": "Our Locations",
-    "subheading": "Serving Clients Across Key Regions",
-    "description": "Head location: Bhubaneswar. Explore our office and delivery presence across four locations on the map below."
+    "corporatePartnersLabel": "Corporate Partners",
+    "headingHighlight": "Partners"
   },
   "certificationsSection": {
-    "heading": "Recognised & Certified By",
+    "heading": "Recognized & Certified By",
     "subheading": "Trusted by Industry and Institutions",
     "description": "Our platform meets the highest industry standards and is recognized by leading certification bodies and technology partners worldwide.",
     "items": [
@@ -114,6 +323,7 @@
         "description": "National Association of Software and Service Companies",
         "category": "Technology"
       }
-    ]
+    ],
+    "headingHighlight": "Certified By"
   }
 }

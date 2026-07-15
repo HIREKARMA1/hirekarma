@@ -15,6 +15,7 @@ export interface AboutCta {
 export interface AboutStoryHero {
   label: string;
   heading: string;
+  headingHighlight?: string;
   description: string;
   primaryCta: AboutCta;
   secondaryCta: AboutCta;
@@ -31,6 +32,9 @@ export interface AboutInfoCard {
 
 export interface AboutStoryJourney {
   title: string;
+  titleHighlight?: string;
+  panelTitle?: string;
+  panelTitleHighlight?: string;
   subtitle: string;
   beforeFounded: string;
   founded: string;
@@ -39,6 +43,7 @@ export interface AboutStoryJourney {
   betweenFounders: string;
   founder2: string;
   afterFounders: string;
+  closing?: string;
   foundedCard: AboutInfoCard;
   focusCard: AboutInfoCard;
   imageAlt: string;
@@ -46,7 +51,10 @@ export interface AboutStoryJourney {
 
 export interface AboutStoryChallenge {
   title: string;
+  titleHighlight?: string;
   subtitle: string;
+  /** Short self-contained body for compact panel layouts. */
+  summary?: string;
   beforeHighlight1: string;
   highlight1: string;
   betweenHighlights: string;
@@ -57,7 +65,10 @@ export interface AboutStoryChallenge {
 
 export interface AboutStorySolution {
   title: string;
+  titleHighlight?: string;
   subtitle: string;
+  /** Short self-contained body for compact panel layouts. */
+  summary?: string;
   beforeHighlight1: string;
   highlight1: string;
   betweenHighlights: string;
@@ -66,11 +77,43 @@ export interface AboutStorySolution {
   imageAlt: string;
 }
 
+export interface AboutStoryStat {
+  label: string;
+  value: string;
+  detail: string;
+}
+
+export interface AboutStoryTimelineItem {
+  id: string;
+  year: string;
+  title: string;
+  description: string;
+}
+
+export interface AboutStoryTimeline {
+  label: string;
+  heading: string;
+  headingHighlight?: string;
+  description?: string;
+  items: AboutStoryTimelineItem[];
+}
+
+export interface AboutStoryCta {
+  title: string;
+  titleHighlight?: string;
+  description: string;
+  primary: AboutCta;
+  secondary?: AboutCta;
+}
+
 export interface AboutStoryContent {
   hero: AboutStoryHero;
   journey: AboutStoryJourney;
   challenge: AboutStoryChallenge;
   solution: AboutStorySolution;
+  stats?: AboutStoryStat[];
+  timeline?: AboutStoryTimeline;
+  cta?: AboutStoryCta;
 }
 
 export interface AboutMissionBlock {
@@ -80,10 +123,77 @@ export interface AboutMissionBlock {
   imageAlt: string;
 }
 
+export interface AboutMissionHero {
+  label: string;
+  heading: string;
+  headingHighlight: string;
+  description: string;
+  primaryCta: AboutCta;
+  secondaryCta: AboutCta;
+  tagline: string;
+}
+
+export interface AboutMissionCta {
+  title: string;
+  description: string;
+  button: AboutCta;
+}
+
 export interface AboutMissionContent {
+  hero: AboutMissionHero;
   mission: AboutMissionBlock;
   vision: AboutMissionBlock;
   values: AboutMissionBlock;
+  cta: AboutMissionCta;
+}
+
+export type LeadershipBadgeTone =
+  | "blue"
+  | "sky"
+  | "orange"
+  | "green"
+  | "yellow"
+  | "red";
+
+export interface AboutPeopleHero {
+  label: string;
+  heading: string;
+  headingHighlight: string;
+  description: string;
+  primaryCta: AboutCta;
+  secondaryCta: AboutCta;
+  tagline: string;
+}
+
+export interface AboutPhilosophyPillar {
+  id: "ownership" | "collaboration" | "impact";
+  title: string;
+  description: string;
+}
+
+export interface AboutPeoplePhilosophy {
+  label: string;
+  title: string;
+  pillars: AboutPhilosophyPillar[];
+}
+
+export interface AboutOpenRole {
+  id: string;
+  title: string;
+  description: string;
+}
+
+export interface AboutPeopleOpenRoles {
+  label: string;
+  title: string;
+  description: string;
+  roles: AboutOpenRole[];
+}
+
+export interface AboutPeopleCta {
+  title: string;
+  description: string;
+  button: AboutCta;
 }
 
 export interface AboutPeopleTabs {
@@ -112,21 +222,21 @@ export interface AboutPeopleCulture {
 }
 
 export interface AboutPeopleContent {
-  title: string;
-  subtitle: string;
-  descriptionBefore: string;
-  descriptionHighlight: string;
-  descriptionAfter: string;
+  hero: AboutPeopleHero;
+  partnersNote: string;
+  partnersImageAlt: string;
+  philosophy: AboutPeoplePhilosophy;
+  teamLabel: string;
   tabs: AboutPeopleTabs;
   loading: string;
   emptyTitle: string;
   emptyDescription: string;
-  closeAria: string;
-  viewDetailsAria: string;
+  culture: AboutPeopleCulture;
+  openRoles: AboutPeopleOpenRoles;
+  cta: AboutPeopleCta;
   linkedinAria: string;
   instagramAria: string;
   emailAria: string;
-  culture: AboutPeopleCulture;
 }
 
 export interface AboutCommonContent {
@@ -139,11 +249,67 @@ export interface AboutPageContent {
     story: AboutMeta;
     mission: AboutMeta;
     people: AboutMeta;
+    locations: AboutMeta;
   };
   story: AboutStoryContent;
   mission: AboutMissionContent;
   people: AboutPeopleContent;
+  locations: AboutLocationsContent;
   common: AboutCommonContent;
+}
+
+export interface AboutLocationPin {
+  id: string;
+  city: string;
+  role: string;
+  /** Approximate position on Odisha map visual (percent) */
+  x: number;
+  y: number;
+}
+
+export interface AboutLocationPillar {
+  id: string;
+  title: string;
+  description: string;
+}
+
+export interface AboutOfficeCard {
+  id: string;
+  badge: string;
+  badgeTone: "primary" | "green" | "secondary";
+  city: string;
+  role: string;
+  description: string;
+  address: string;
+  whyTitle: string;
+  whyBody: string;
+  image: string;
+  imageAlt: string;
+}
+
+export interface AboutLocationsContent {
+  hero: {
+    label: string;
+    headingLine1: string;
+    headingLine1Highlight: string;
+    headingLine2: string;
+    headingLine2Highlight: string;
+    description: string;
+    primaryCta: AboutCta;
+    secondaryCta: AboutCta;
+    tagline: string;
+  };
+  map: {
+    ariaLabel: string;
+    pins: AboutLocationPin[];
+  };
+  section: {
+    label: string;
+    heading: string;
+  };
+  pillars: AboutLocationPillar[];
+  offices: AboutOfficeCard[];
+  cta: AboutMissionCta;
 }
 
 export interface LocalizedText {

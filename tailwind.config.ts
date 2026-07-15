@@ -10,9 +10,10 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-roboto)', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
-        poppins: ['var(--font-poppins)', 'Poppins', 'sans-serif'],
-        display: ['var(--font-poppins)', 'Poppins', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-inter)', 'Inter', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        /** Alias kept for Shortlisted pages — maps to Inter for site-wide uniformity. */
+        poppins: ['var(--font-inter)', 'Inter', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        display: ['var(--font-inter)', 'Inter', 'Helvetica Neue', 'Arial', 'sans-serif'],
       },
       colors: {
         background: 'var(--background)',

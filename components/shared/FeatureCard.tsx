@@ -45,7 +45,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
             </h3>
 
             <p className={`text-sm sm:text-base leading-relaxed transition-colors duration-500 ${mounted && resolvedTheme === 'dark'
-                    ? 'text-gray-400'
+                    ? 'text-gray-600'
                     : 'text-gray-600'
                 }`}>
                 {description}
