@@ -131,6 +131,9 @@ export const RESOURCE_ARTICLE_SLUGS = [
   "solviqai-career-readiness-systems-problem",
   "shortlisted-virtual-placement-systems-problem",
   "ama-gopalpur-constituency-development-systems-problem",
+  "disha-placement-operations-systems-problem",
+  "skill-development-employability-systems-problem",
+  "digital-public-infrastructure-systems-problem",
 ] as const;
 
 export type ResourceArticleSlug = (typeof RESOURCE_ARTICLE_SLUGS)[number];

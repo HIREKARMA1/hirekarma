@@ -9,8 +9,8 @@ import { useSolutionsLocale } from "@/contexts/SolutionsLocaleContext";
 const ICONS = [Target, BookOpen, Users, BarChart3] as const;
 const ICON_STYLES = [
   {
-    dark: "bg-blue-500/20 text-blue-400",
-    light: "bg-blue-100 text-blue-600",
+    dark: "bg-[#f6f8fb]0/20 text-[#00a2e5]",
+    light: "bg-[rgba(27,82,164,0.08)] text-[#1b52a4]",
   },
   {
     dark: "bg-green-500/20 text-green-400",
@@ -22,7 +22,7 @@ const ICON_STYLES = [
   },
   {
     dark: "bg-red-500/20 text-red-400",
-    light: "bg-red-100 text-red-600",
+    light: "bg-red-100 text-[#d64246]",
   },
 ] as const;
 
@@ -81,7 +81,7 @@ const SolutionSection: React.FC = () => {
                       <p
                         className={`text-base ${
                           mounted && resolvedTheme === "dark"
-                            ? "text-gray-400"
+                            ? "text-gray-600"
                             : "text-gray-600"
                         }`}
                       >
@@ -107,15 +107,15 @@ const SolutionSection: React.FC = () => {
             <div
               className={`absolute -bottom-6 -left-6 w-32 h-32 rounded-full blur-3xl ${
                 mounted && resolvedTheme === "dark"
-                  ? "bg-blue-500/30"
-                  : "bg-blue-200/50"
+                  ? "bg-[#f6f8fb]0/30"
+                  : "bg-[rgba(27,82,164,0.2)]"
               }`}
             ></div>
             <div
               className={`absolute -top-6 -right-6 w-40 h-40 rounded-full blur-3xl ${
                 mounted && resolvedTheme === "dark"
-                  ? "bg-cyan-500/30"
-                  : "bg-cyan-200/50"
+                  ? "bg-[rgba(0,162,229,0.3)]"
+                  : "bg-[rgba(0,162,229,0.2)]"
               }`}
             ></div>
           </div>

@@ -54,27 +54,27 @@ function CaseStudiesPageInner() {
             mounted && resolvedTheme === "dark" ? "bg-gray-900" : "bg-white"
           }`}
         >
-          <div className="relative content-container pt-25 pb-8">
+          <div className="relative content-container pt-8 pb-8">
             <div className="text-left">
               <div
                 className={`inline-flex items-center space-x-2 px-4 py-2 rounded-full mb-4 ${
                   mounted && resolvedTheme === "dark"
-                    ? "bg-blue-900/30 border border-blue-700/50"
-                    : "bg-blue-100 border border-blue-200"
+                    ? "bg-[rgba(27,82,164,0.2)] border border-[rgba(27,82,164,0.45)]"
+                    : "bg-[rgba(27,82,164,0.08)] border border-[rgba(27,82,164,0.28)]"
                 }`}
               >
                 <FileText
                   className={`w-4 h-4 ${
                     mounted && resolvedTheme === "dark"
-                      ? "text-blue-400"
-                      : "text-blue-700"
+                      ? "text-[#00a2e5]"
+                      : "text-[#1b52a4]"
                   }`}
                 />
                 <span
                   className={`text-sm font-semibold ${
                     mounted && resolvedTheme === "dark"
                       ? "text-gray-200"
-                      : "text-blue-700"
+                      : "text-[#1b52a4]"
                   }`}
                 >
                   {caseStudiesContent.badge}
@@ -110,8 +110,8 @@ function CaseStudiesPageInner() {
                   <Search
                     className={`absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 ${
                       mounted && resolvedTheme === "dark"
-                        ? "text-gray-400"
-                        : "text-gray-400"
+                        ? "text-gray-600"
+                        : "text-gray-600"
                     }`}
                   />
                   <input
@@ -134,7 +134,7 @@ function CaseStudiesPageInner() {
                       onClick={() => setSelectedFilter(filter.id)}
                       className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
                         selectedFilter === filter.id
-                          ? "bg-blue-600 text-white shadow-lg"
+                          ? "bg-[#1b52a4] text-white shadow-lg"
                           : mounted && resolvedTheme === "dark"
                             ? "bg-gray-800 text-gray-300 hover:bg-gray-700"
                             : "bg-gray-100 text-gray-700 hover:bg-gray-200"
@@ -154,8 +154,8 @@ function CaseStudiesPageInner() {
                 <TrendingUp
                   className={`w-8 h-8 ${
                     mounted && resolvedTheme === "dark"
-                      ? "text-blue-400"
-                      : "text-blue-600"
+                      ? "text-[#00a2e5]"
+                      : "text-[#1b52a4]"
                   }`}
                 />
                 <h2
@@ -175,8 +175,8 @@ function CaseStudiesPageInner() {
                     key={study.id}
                     className={`rounded-xl border shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 p-6 group ${
                       mounted && resolvedTheme === "dark"
-                        ? "bg-gradient-to-br from-blue-900/20 to-blue-800/10 border-blue-700/30"
-                        : "bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200"
+                        ? "bg-gradient-to-br from-[rgba(27,82,164,0.2)] to-[rgba(27,82,164,0.08)] border-[rgba(27,82,164,0.35)]"
+                        : "bg-gradient-to-br from-[#f6f8fb] to-[rgba(27,82,164,0.08)] border-[rgba(27,82,164,0.28)]"
                     }`}
                   >
                     <div className="relative mb-6">
@@ -184,7 +184,7 @@ function CaseStudiesPageInner() {
                         className={`w-full h-64 rounded-xl overflow-hidden border transition-colors duration-300 ${
                           mounted && resolvedTheme === "dark"
                             ? "border-blue-600/50 group-hover:border-blue-400/70"
-                            : "border-blue-300/70 group-hover:border-blue-200"
+                            : "border-blue-300/70 group-hover:border-[rgba(27,82,164,0.28)]"
                         }`}
                       >
                         <Image
@@ -196,14 +196,14 @@ function CaseStudiesPageInner() {
                         />
                       </div>
                       <div className="absolute top-4 left-4">
-                        <span className="px-3 py-1 rounded-full text-sm font-semibold bg-blue-600 text-white">
+                        <span className="px-3 py-1 rounded-full text-sm font-semibold bg-[#1b52a4] text-white">
                           {study.industry}
                         </span>
                       </div>
                     </div>
 
                     <h3
-                      className={`text-2xl font-bold mb-3 group-hover:text-blue-600 transition-colors ${
+                      className={`text-2xl font-bold mb-3 group-hover:text-[#1b52a4] transition-colors ${
                         mounted && resolvedTheme === "dark"
                           ? "text-gray-100"
                           : "text-gray-900"
@@ -225,8 +225,8 @@ function CaseStudiesPageInner() {
                     <div
                       className={`flex items-center gap-2 font-semibold group-hover:gap-3 transition-all ${
                         mounted && resolvedTheme === "dark"
-                          ? "text-blue-400"
-                          : "text-blue-600"
+                          ? "text-[#00a2e5]"
+                          : "text-[#1b52a4]"
                       }`}
                     >
                       {caseStudiesContent.readCaseStudy}{" "}
@@ -244,8 +244,8 @@ function CaseStudiesPageInner() {
                 <FileText
                   className={`w-8 h-8 ${
                     mounted && resolvedTheme === "dark"
-                      ? "text-blue-400"
-                      : "text-blue-600"
+                      ? "text-[#00a2e5]"
+                      : "text-[#1b52a4]"
                   }`}
                 />
                 <h2
@@ -265,7 +265,7 @@ function CaseStudiesPageInner() {
                     key={study.id}
                     className={`rounded-xl border shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 p-6 group ${
                       mounted && resolvedTheme === "dark"
-                        ? "bg-gradient-to-br from-blue-900/10 to-blue-800/5 border-blue-700/20"
+                        ? "bg-gradient-to-br from-[rgba(27,82,164,0.1)] to-[rgba(27,82,164,0.05)] border-[rgba(27,82,164,0.25)]"
                         : "bg-white border-gray-200"
                     }`}
                   >
@@ -289,8 +289,8 @@ function CaseStudiesPageInner() {
                         <span
                           className={`backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold ${
                             mounted && resolvedTheme === "dark"
-                              ? "bg-gray-800/90 text-blue-400"
-                              : "bg-white/90 text-blue-600"
+                              ? "bg-gray-800/90 text-[#00a2e5]"
+                              : "bg-white/90 text-[#1b52a4]"
                           }`}
                         >
                           {study.industry}
@@ -299,7 +299,7 @@ function CaseStudiesPageInner() {
                     </div>
 
                     <h3
-                      className={`text-lg font-bold mb-2 group-hover:text-blue-600 transition-colors line-clamp-2 ${
+                      className={`text-lg font-bold mb-2 group-hover:text-[#1b52a4] transition-colors line-clamp-2 ${
                         mounted && resolvedTheme === "dark"
                           ? "text-gray-100"
                           : "text-gray-900"
@@ -319,24 +319,24 @@ function CaseStudiesPageInner() {
                     </p>
 
                     <div className="grid grid-cols-3 gap-2 mt-4">
-                      <div className="bg-blue-50 p-3 rounded-lg text-center">
-                        <div className="text-lg font-bold text-blue-700">
+                      <div className="bg-[#f6f8fb] p-3 rounded-lg text-center">
+                        <div className="text-lg font-bold text-[#1b52a4]">
                           {localizeNumerals(study.stats.metric1.value, locale)}
                         </div>
                         <div className="text-xs text-gray-600">
                           {study.stats.metric1.label}
                         </div>
                       </div>
-                      <div className="bg-blue-50 p-3 rounded-lg text-center">
-                        <div className="text-lg font-bold text-blue-700">
+                      <div className="bg-[#f6f8fb] p-3 rounded-lg text-center">
+                        <div className="text-lg font-bold text-[#1b52a4]">
                           {localizeNumerals(study.stats.metric2.value, locale)}
                         </div>
                         <div className="text-xs text-gray-600">
                           {study.stats.metric2.label}
                         </div>
                       </div>
-                      <div className="bg-blue-50 p-3 rounded-lg text-center">
-                        <div className="text-lg font-bold text-blue-700">
+                      <div className="bg-[#f6f8fb] p-3 rounded-lg text-center">
+                        <div className="text-lg font-bold text-[#1b52a4]">
                           {localizeNumerals(study.stats.metric3.value, locale)}
                         </div>
                         <div className="text-xs text-gray-600">
@@ -346,7 +346,7 @@ function CaseStudiesPageInner() {
                     </div>
 
                     <div className="mt-6">
-                      <button className="text-blue-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+                      <button className="text-[#1b52a4] font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
                         {caseStudiesContent.readFullStory}{" "}
                         <ChevronRight className="w-5 h-5" />
                       </button>
@@ -362,15 +362,15 @@ function CaseStudiesPageInner() {
               <div
                 className={`rounded-2xl border shadow-2xl p-12 ${
                   mounted && resolvedTheme === "dark"
-                    ? "bg-gradient-to-br from-blue-900/30 to-blue-800/20 border-blue-700/30"
-                    : "bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200"
+                    ? "bg-gradient-to-br from-[rgba(27,82,164,0.25)] to-[rgba(27,82,164,0.12)] border-[rgba(27,82,164,0.35)]"
+                    : "bg-gradient-to-br from-[#f6f8fb] to-[rgba(27,82,164,0.08)] border-[rgba(27,82,164,0.28)]"
                 }`}
               >
                 <h2
                   className={`text-4xl sm:text-5xl font-bold mb-6 ${
                     mounted && resolvedTheme === "dark"
-                      ? "text-blue-400"
-                      : "text-blue-700"
+                      ? "text-[#00a2e5]"
+                      : "text-[#1b52a4]"
                   }`}
                 >
                   {caseStudiesContent.cta.title}
@@ -385,10 +385,10 @@ function CaseStudiesPageInner() {
                   {caseStudiesContent.cta.description}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
-                  <button className="px-8 py-4 font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 bg-blue-600 text-white hover:bg-blue-500">
+                  <button className="px-8 py-4 font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 bg-[#1b52a4] text-white hover:bg-[rgba(27,82,164,0.06)]0">
                     {caseStudiesContent.cta.primary}
                   </button>
-                  <button className="px-8 py-4 font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 bg-white text-blue-700">
+                  <button className="px-8 py-4 font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 bg-white text-[#1b52a4]">
                     {caseStudiesContent.cta.secondary}
                   </button>
                 </div>

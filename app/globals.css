@@ -3,19 +3,84 @@
 /* Class-based dark mode for next-themes (html.dark) */
 @custom-variant dark (&:where(.dark, .dark *));
 
+:root {
+  --hk-primary: #1b52a4;
+  --hk-secondary: #00a2e5;
+  --hk-yellow: #fec40d;
+  --hk-orange: #f58020;
+  --hk-red: #d64246;
+  --hk-green: #098855;
+  --hk-ink: #0f1622;
+  --hk-soft: #f6f8fb;
+  --hk-line: #e6e8ec;
+  --font-sans: var(--font-inter), Inter, Helvetica Neue, Arial, sans-serif;
+  --font-size-body: 16px;
+  --leading-body: 1.65;
+  --tracking-heading: -0.025em;
+  --hk-text-muted: #475569;
+  --hk-text-secondary: #334155;
+}
+
 /* Smooth scrolling for the entire page */
 html {
   scroll-behavior: smooth;
 }
 
-/* Base styles for light and dark mode */
+/* Base styles — Inter + HarkX-inspired readability scale */
 body {
-  @apply bg-white text-gray-900 transition-colors duration-300;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  line-height: var(--leading-body);
+  letter-spacing: -0.011em;
+  @apply bg-white text-[#0f1622] transition-colors duration-300;
 }
 
 .dark body,
 html.dark body {
-  @apply bg-gray-950 text-gray-100;
+  @apply bg-[#0f1622] text-gray-100;
+}
+
+/* Section label utility used across pages */
+.hk-section-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--hk-secondary);
+}
+
+.hk-heading {
+  color: var(--hk-ink);
+  font-weight: 700;
+  letter-spacing: var(--tracking-heading);
+  line-height: 1.15;
+}
+
+.hk-heading-accent {
+  color: var(--hk-secondary);
+}
+
+.hk-body {
+  font-size: 16px;
+  line-height: 1.65;
+  letter-spacing: -0.011em;
+  color: var(--hk-text-secondary);
+}
+
+.hk-body-sm {
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: -0.006em;
+  color: var(--hk-text-muted);
+}
+
+.hk-muted {
+  color: var(--hk-text-muted);
+}
+
+.hk-underline-accent {
+  text-decoration-color: var(--hk-yellow);
+  text-underline-offset: 4px;
 }
 
 /* Products page — prevent horizontal bleed from marquee / hero glows */
@@ -46,12 +111,12 @@ html:has(.resources-page) body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #0ea5e9, #06b6d4);
+  background: linear-gradient(to bottom, #1b52a4, #00a2e5);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #0284c7, #0891b2);
+  background: linear-gradient(to bottom, #154a8f, #0091cc);
 }
 
 /* Custom scrollbar for card content */
@@ -267,10 +332,152 @@ html:has(.resources-page) body {
   }
 }
 
-.animate-partners-scroll-left {
-  animation: partners-scroll-left 60s linear infinite;
+.animate-partners-scroll-left,
+.hk-marquee-track.animate-partners-scroll-left {
+  animation: partners-scroll-left 60s linear infinite !important;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
-.animate-partners-scroll-right {
-  animation: partners-scroll-right 60s linear infinite;
+.animate-partners-scroll-right,
+.hk-marquee-track.animate-partners-scroll-right {
+  animation: partners-scroll-right 60s linear infinite !important;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Keep marquees out of scroll-reveal / hover transform conflicts */
+.hk-marquee-track,
+.hk-marquee-track * {
+  filter: none !important;
+}
+
+/* ——— Site-wide motion ——— */
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes hk-ripple {
+  from {
+    transform: scale(0);
+    opacity: 0.35;
+  }
+  to {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html.hk-motion-on section:not(.hk-no-reveal):not(.hk-revealed),
+  html.hk-motion-on article:not(.hk-no-reveal):not(.hk-revealed),
+  html.hk-motion-on [data-hk-animate]:not(.hk-revealed),
+  html.hk-motion-on .hk-reveal:not(.hk-revealed) {
+    opacity: 0;
+    transform: translate3d(0, 2rem, 0);
+    filter: blur(2px);
+  }
+
+  html.hk-motion-on section.hk-revealed,
+  html.hk-motion-on article.hk-revealed,
+  html.hk-motion-on [data-hk-animate].hk-revealed,
+  html.hk-motion-on .hk-reveal.hk-revealed {
+    opacity: 1;
+    /* `none` — leaving translate3d(0,0,0) breaks child marquee translateX animations */
+    transform: none;
+    filter: none;
+    transition:
+      opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+      filter 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  html.hk-motion-on .hk-stagger-child:not(.hk-marquee-track):not(:has(.hk-marquee-track)) {
+    opacity: 0;
+    transform: translate3d(0, 1.25rem, 0);
+  }
+
+  html.hk-motion-on .hk-revealed .hk-stagger-child:not(.hk-marquee-track):not(:has(.hk-marquee-track)),
+  html.hk-motion-on .hk-stagger-child.hk-revealed:not(.hk-marquee-track):not(:has(.hk-marquee-track)) {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--hk-stagger, 0ms);
+  }
+
+  /* Soft lift on bordered cards — skip marquee shells */
+  html.hk-motion-on section .rounded-2xl.border:not(:has(.hk-marquee-track)),
+  html.hk-motion-on section .rounded-xl.border:not(:has(.hk-marquee-track)) {
+    transition:
+      transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.3s ease,
+      border-color 0.3s ease,
+      background-color 0.3s ease;
+  }
+
+  html.hk-motion-on section .rounded-2xl.border:not(:has(.hk-marquee-track)):hover,
+  html.hk-motion-on section .rounded-xl.border:not(:has(.hk-marquee-track)):hover {
+    transform: translateY(-3px);
+  }
+
+  /* Smooth interactive controls */
+  button:not(:disabled),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [role="button"],
+  a[href] {
+    transition:
+      transform 0.22s cubic-bezier(0.22, 1, 0.36, 1),
+      background-color 0.22s ease,
+      color 0.22s ease,
+      border-color 0.22s ease,
+      box-shadow 0.22s ease,
+      filter 0.22s ease,
+      opacity 0.22s ease;
+  }
+
+  button:not(:disabled):hover,
+  [type="button"]:not(:disabled):hover,
+  [type="submit"]:not(:disabled):hover,
+  [role="button"]:hover {
+    transform: translateY(-1px);
+  }
+
+  button:not(:disabled).hk-pressed,
+  button:not(:disabled):active,
+  [type="button"]:not(:disabled).hk-pressed,
+  [type="button"]:not(:disabled):active,
+  [type="submit"]:not(:disabled).hk-pressed,
+  [type="submit"]:not(:disabled):active,
+  [role="button"].hk-pressed,
+  [role="button"]:active,
+  a[href].hk-pressed,
+  a[href]:active {
+    transform: scale(0.96);
+  }
+
+  .hk-ripple {
+    pointer-events: none;
+    position: absolute;
+    border-radius: 9999px;
+    background: rgba(0, 162, 229, 0.28);
+    animation: hk-ripple 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    z-index: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

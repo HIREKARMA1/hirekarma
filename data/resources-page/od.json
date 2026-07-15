@@ -98,6 +98,42 @@
       "excerpt": "ବିକାଶ ତଥ୍ୟ ଏବଂ ନାଗରିକ ଅଭିଯୋଗ ଅଲଗା ଜଗତରେ ରହନ୍ତି। ନେତାମାନଙ୍କୁ ସମ୍ପତ୍ତି, ପ୍ରକଳ୍ପ ଏବଂ ପ୍ରଗତିର ଏକ ଲାଇଭ୍ ମାନଚିତ୍ର ଦରକାର।",
       "date": "ଜୁଲାଇ 2026",
       "dateIso": "2026-07-08"
+    },
+    {
+      "id": "disha-ops",
+      "slug": "disha-placement-operations-systems-problem",
+      "category": "blogs",
+      "tag": "Disha",
+      "visualVariant": "default",
+      "image": "/resources/disha-placement-ops.png",
+      "title": "Stop Chasing Spreadsheets. Start Running Drives: Campus Placement Ops Is a Systems Problem",
+      "excerpt": "Placement seasons collapse under spreadsheet chaos and WhatsApp coordination. DISHA rebuilds drive ops, offer tracking, and TPO visibility as one system.",
+      "date": "July 2026",
+      "dateIso": "2026-07-13"
+    },
+    {
+      "id": "skill-dev-outcomes",
+      "slug": "skill-development-employability-systems-problem",
+      "category": "blogs",
+      "tag": "Skill Development",
+      "visualVariant": "warm",
+      "image": "/resources/skill-development-outcomes.png",
+      "title": "Stop Training in Isolation. Start Connecting to Jobs: Skill Development Is a Systems Problem",
+      "excerpt": "Certificates without hiring pathways are incomplete. Skill programs need readiness measurement, matching, and follow-through — not just batch completion.",
+      "date": "July 2026",
+      "dateIso": "2026-07-13"
+    },
+    {
+      "id": "dpi-systems",
+      "slug": "digital-public-infrastructure-systems-problem",
+      "category": "blogs",
+      "tag": "Open Source & DPI",
+      "visualVariant": "deep",
+      "image": "/resources/digital-public-infrastructure.png",
+      "title": "Stop Building Silos. Start Building Trust at Scale: Digital Public Infrastructure Is a Systems Problem",
+      "excerpt": "Another portal is not infrastructure. Identity, credentials, and public workflows need interoperable systems that compound trust across departments.",
+      "date": "July 2026",
+      "dateIso": "2026-07-13"
     }
   ],
   "cta": {

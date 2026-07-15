@@ -1,113 +1,74 @@
 "use client";
 
-import React, { Suspense } from 'react';
-import dynamic from 'next/dynamic';
-import { HomeLocaleProvider } from '@/contexts/HomeLocaleContext';
-import HeroBanner from '../home/HeroBanner';
+import React, { Suspense } from "react";
+import dynamic from "next/dynamic";
 
-// Lazy load below-the-fold sections for better initial load
-const ImpactSection = dynamic(() => import('../home/ImpactSection'), {
-  loading: () => <div className="min-h-screen" />,
-  ssr: true
-});
+import { HomeLocaleProvider } from "@/contexts/HomeLocaleContext";
+import HeroBanner from "../home/HeroBanner";
 
-const ProductsSection = dynamic(() => import('../home/ProductsSection'), {
+const DivisionsSection = dynamic(() => import("../home/DivisionsSection"), {
   loading: () => <div className="min-h-[400px]" />,
-  ssr: true
+  ssr: true,
 });
 
-const ProblemStatement = dynamic(() => import('../home/ProblemStatement'), {
-  loading: () => <div className="min-h-screen" />,
-  ssr: true
+const JourneySection = dynamic(() => import("../home/JourneySection"), {
+  loading: () => <div className="min-h-[100px]" />,
+  ssr: true,
 });
 
-const FutureReadySection = dynamic(() => import('../home/FutureReadySection'), {
-  loading: () => <div className="min-h-screen" />,
-  ssr: true
+const Testimonials = dynamic(() => import("../home/Testimonials"), {
+  loading: () => <div className="min-h-[300px]" />,
+  ssr: true,
 });
 
-// const DeliveredProjectsSection = dynamic(() => import('../home/DeliveredProjectsSection'), {
-//   loading: () => <div className="min-h-screen" />,
-//   ssr: true
-// });
-
-const Testimonials = dynamic(() => import('../home/Testimonials'), {
-  loading: () => <div className="min-h-screen" />,
-  ssr: true
+const HiringCtaSection = dynamic(() => import("../home/HiringCtaSection"), {
+  loading: () => <div className="min-h-[160px]" />,
+  ssr: true,
 });
 
-const FAQ = dynamic(() => import('../home/FAQ'), {
-  loading: () => <div className="min-h-screen" />,
-  ssr: true
+const Partners = dynamic(() => import("../home/Partners"), {
+  loading: () => <div className="min-h-[320px]" />,
+  ssr: true,
 });
 
-const Partners = dynamic(() => import('../home/Partners'), {
-  loading: () => <div className="min-h-screen" />,
-  ssr: true
-});
+const CertificationsSection = dynamic(
+  () => import("../home/CertificationsSection"),
+  {
+    loading: () => <div className="min-h-[280px]" />,
+    ssr: true,
+  }
+);
 
-const GoogleLocationSection = dynamic(() => import('../home/GoogleLocationSection'), {
-  loading: () => <div className="min-h-screen" />,
-  ssr: true
-});
-
-const CertificationsSection = dynamic(() => import('../home/CertificationsSection'), {
-  loading: () => <div className="min-h-screen" />,
-  ssr: true
-});
-
-const HeroSection: React.FC = () => {
+export default function HeroSection() {
   return (
     <HomeLocaleProvider>
-      <section className={`relative min-h-screen transition-all duration-500`}>
-        {/* Hero Banner loads immediately (above the fold) */}
+      <div className="relative">
         <HeroBanner />
-        
-        {/* Lazy loaded sections (below the fold) */}
-        <Suspense fallback={<div className="min-h-screen" />}>
-          <ImpactSection />
-        </Suspense>
 
         <Suspense fallback={<div className="min-h-[400px]" />}>
-          <ProductsSection />
-        </Suspense>
-        
-        {/* <Suspense fallback={<div className="min-h-screen" />}>
-          <DeliveredProjectsSection />
-        </Suspense> */}
-        
-        <Suspense fallback={<div className="min-h-screen" />}>
-          <ProblemStatement />
-        </Suspense>
-        
-        <Suspense fallback={<div className="min-h-screen" />}>
-          <FutureReadySection />
+          <DivisionsSection />
         </Suspense>
 
-        
-        <Suspense fallback={<div className="min-h-screen" />}>
+        <Suspense fallback={<div className="min-h-[100px]" />}>
+          <JourneySection />
+        </Suspense>
+
+        <Suspense fallback={<div className="min-h-[300px]" />}>
           <Testimonials />
         </Suspense>
-        
-        <Suspense fallback={<div className="min-h-screen" />}>
-          <FAQ />
+
+        <Suspense fallback={<div className="min-h-[160px]" />}>
+          <HiringCtaSection />
         </Suspense>
-        
-        <Suspense fallback={<div className="min-h-screen" />}>
+
+        <Suspense fallback={<div className="min-h-[320px]" />}>
           <Partners />
         </Suspense>
-  {/* 
-        <Suspense fallback={<div className="min-h-screen" />}>
-          <GoogleLocationSection />
-        </Suspense> */}
-        
-        <Suspense fallback={<div className="min-h-screen" />}>
+
+        <Suspense fallback={<div className="min-h-[280px]" />}>
           <CertificationsSection />
         </Suspense>
-      </section>
+      </div>
     </HomeLocaleProvider>
   );
-};
-
-export default HeroSection;
-
+}

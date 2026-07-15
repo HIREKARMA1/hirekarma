@@ -1,236 +1,123 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
-import { useTheme } from 'next-themes';
-import { Twitter, Linkedin, Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
-import footerPrograms from '@/data/footer-programs.json';
-import { useSiteLocale } from '@/contexts/SiteLocaleContext';
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Mail,
+  Phone,
+  Twitter,
+} from "lucide-react";
 
-const Footer: React.FC = () => {
-  const [mounted, setMounted] = useState(false);
-  const { resolvedTheme } = useTheme();
+import footerPrograms from "@/data/footer-programs.json";
+import { useSiteLocale } from "@/contexts/SiteLocaleContext";
+import { theme } from "@/config/theme";
+import PartnersMarquee from "@/components/layout/PartnersMarquee";
+
+const socials = [
+  { href: "https://x.com/hirekarma", label: "Twitter", Icon: Twitter },
+  {
+    href: "https://www.linkedin.com/company/hirekarma-pvt-ltd",
+    label: "LinkedIn",
+    Icon: Linkedin,
+  },
+  { href: "https://facebook.com/hirekarma", label: "Facebook", Icon: Facebook },
+  {
+    href: "https://instagram.com/hirekarma",
+    label: "Instagram",
+    Icon: Instagram,
+  },
+] as const;
+
+export default function Footer() {
   const { content } = useSiteLocale();
-  const { footer } = content;
+  const { footer, nav } = content;
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const productLinks = [
+    ...footer.productLinks,
+    ...footerPrograms.map((p) => ({ label: p.name, href: p.href })),
+  ];
+
+  const year = String(new Date().getFullYear());
+  const ink = theme.colors.ink;
 
   return (
-    <footer className={`relative overflow-hidden border-t transition-colors duration-300 ${mounted && resolvedTheme === 'dark'
-      ? 'bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-100 border-gray-700'
-      : 'bg-gradient-to-br from-gray-50 via-white to-gray-50 text-gray-900 border-gray-200/80'
-      }`}>
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.03]">
-        <div className="w-full h-full" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23059669' fill-opacity='1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          backgroundRepeat: 'repeat'
-        }}></div>
+    <footer className="text-white" style={{ backgroundColor: ink }}>
+      <div className="border-b border-white/10">
+        <div className="content-container flex flex-col gap-3 py-4 sm:flex-row sm:items-center sm:gap-5 sm:py-5">
+          <p className="shrink-0 text-sm font-medium leading-snug text-white/85 sm:max-w-[200px] lg:max-w-[220px]">
+            {footer.partnersNote}
+          </p>
+          <PartnersMarquee />
+        </div>
       </div>
 
-      <div className="relative z-10 content-container py-16 lg:py-20">
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-8 xl:gap-12 mb-16">
-          {/* Company Info */}
-          <div className="col-span-1 md:col-span-2 lg:col-span-2 space-y-6">
-            <div className="space-y-4">
-              <Image
-                src={mounted && resolvedTheme === 'dark'
-                  ? "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/HKlogowhite.png"
-                  : "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/HKlogoblack.png"
-                }
-                alt="HireKarma Logo"
-                width={250}
-                height={50}
-                className="w-32 sm:w-36 lg:w-40 h-8 sm:h-10 lg:h-12"
-              />
-              <p className={`text-base leading-relaxed max-w-sm ${mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'
-                }`}>
-                {footer.description}
-              </p>
-            </div>
-
-            {/* Contact Info */}
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Mail className={`w-4 h-4 ${mounted && resolvedTheme === 'dark' ? 'text-emerald-400' : 'text-emerald-600'
-                  }`} />
-                <span className={`text-sm ${mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'
-                  }`}>
-                  {footer.email}
-                </span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Phone className={`w-4 h-4 ${mounted && resolvedTheme === 'dark' ? 'text-emerald-400' : 'text-emerald-600'
-                  }`} />
-                <span className={`text-sm ${mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'
-                  }`}>
-                  {footer.phone}
-                </span>
-              </div>
-              <div className="flex items-start space-x-3">
-                <MapPin className={`w-4 h-4 mt-0.5 ${mounted && resolvedTheme === 'dark' ? 'text-emerald-400' : 'text-emerald-600'
-                  }`} />
-                <span className={`text-sm ${mounted && resolvedTheme === 'dark' ? 'text-gray-300' : 'text-gray-600'
-                  }`}>
-                  {footer.address}
-                </span>
-              </div>
-            </div>
-
-            {/* Social Media */}
-            <div className="space-y-4">
-              <h4 className={`text-sm font-semibold uppercase tracking-wider ${mounted && resolvedTheme === 'dark' ? 'text-gray-200' : 'text-gray-900'
-                }`}>
-                {footer.connectTitle}
-              </h4>
-              <div className="flex flex-wrap gap-3">
+      <div className="content-container py-8 sm:py-10">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+          <div className="space-y-4 md:pr-6">
+            <Image
+              src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/HKlogowhite.png"
+              alt="HireKarma"
+              width={160}
+              height={36}
+              className="h-8 w-auto sm:h-9"
+            />
+            <p className="max-w-sm text-sm leading-relaxed text-white/85">
+              {footer.description}
+            </p>
+            <div className="flex gap-2">
+              {socials.map(({ href, label, Icon }) => (
                 <a
-                  href="https://twitter.com/hirekarma"
+                  key={label}
+                  href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`relative flex items-center justify-center w-10 h-10 rounded-lg transition-all duration-500 group border shadow-sm ${mounted && resolvedTheme === 'dark'
-                    ? 'bg-gray-800 border-gray-700'
-                    : 'bg-white border-gray-200'
-                    } hover:brightness-110`}
-                  aria-label="Twitter"
+                  aria-label={label}
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-white/85 transition hover:border-[#00a2e5] hover:bg-[#00a2e5] hover:text-white"
                 >
-                  <div className="pointer-events-none absolute inset-0 rounded-lg bg-gradient-to-br from-emerald-500/5 to-blue-500/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                  <Twitter className={`relative z-10 w-4 h-4 transition-colors duration-200 ${mounted && resolvedTheme === 'dark'
-                    ? 'text-gray-400 group-hover:text-white'
-                    : 'text-gray-600 group-hover:text-white'
-                    }`} />
+                  <Icon className="h-4 w-4" />
                 </a>
-
-                <a
-                  href="https://www.linkedin.com/company/hirekarma-pvt-ltd"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`relative flex items-center justify-center w-10 h-10 rounded-lg transition-all duration-500 group border shadow-sm ${mounted && resolvedTheme === 'dark'
-                    ? 'bg-gray-800 border-gray-700'
-                    : 'bg-white border-gray-200'
-                    } hover:brightness-110`}
-                  aria-label="LinkedIn"
-                >
-                  <div className="pointer-events-none absolute inset-0 rounded-lg bg-gradient-to-br from-emerald-500/5 to-blue-500/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                  <Linkedin className={`relative z-10 w-4 h-4 transition-colors duration-200 ${mounted && resolvedTheme === 'dark'
-                    ? 'text-gray-400 group-hover:text-white'
-                    : 'text-gray-600 group-hover:text-white'
-                    }`} />
-                </a>
-
-                <a
-                  href="https://facebook.com/hirekarma"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`relative flex items-center justify-center w-10 h-10 rounded-lg transition-all duration-500 group border shadow-sm ${mounted && resolvedTheme === 'dark'
-                    ? 'bg-gray-800 border-gray-700'
-                    : 'bg-white border-gray-200'
-                    } hover:brightness-110`}
-                  aria-label="Facebook"
-                >
-                  <div className="pointer-events-none absolute inset-0 rounded-lg bg-gradient-to-br from-emerald-500/5 to-blue-500/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                  <Facebook className={`relative z-10 w-4 h-4 transition-colors duration-200 ${mounted && resolvedTheme === 'dark'
-                    ? 'text-gray-400 group-hover:text-white'
-                    : 'text-gray-600 group-hover:text-white'
-                    }`} />
-                </a>
-
-                <a
-                  href="https://instagram.com/hirekarma"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`relative flex items-center justify-center w-10 h-10 rounded-lg transition-all duration-500 group border shadow-sm ${mounted && resolvedTheme === 'dark'
-                    ? 'bg-gray-800 border-gray-700'
-                    : 'bg-white border-gray-200'
-                    } hover:brightness-110`}
-                  aria-label="Instagram"
-                >
-                  <div className="pointer-events-none absolute inset-0 rounded-lg bg-gradient-to-br from-emerald-500/5 to-blue-500/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                  <Instagram className={`relative z-10 w-4 h-4 transition-colors duration-200 ${mounted && resolvedTheme === 'dark'
-                    ? 'text-gray-400 group-hover:text-white'
-                    : 'text-gray-600 group-hover:text-white'
-                    }`} />
-                </a>
-              </div>
+              ))}
             </div>
           </div>
 
-          {/* About Us */}
-          <div className="space-y-5">
-            <h3 className={`text-sm font-bold uppercase tracking-wider ${mounted && resolvedTheme === 'dark' ? 'text-gray-200' : 'text-gray-900'
-              }`}>
+          <div>
+            <h3 className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-white/90">
               {footer.aboutTitle}
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               {footer.aboutLinks.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
-                    ? 'text-gray-300 hover:text-emerald-400'
-                    : 'text-gray-600 hover:text-emerald-600'
-                    }`}>
-                    <span className="relative">
-                      {link.label}
-                      <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${mounted && resolvedTheme === 'dark' ? 'bg-emerald-400' : 'bg-emerald-600'
-                        }`}></span>
-                    </span>
-                  </a>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-white/80 transition hover:text-[#00a2e5]"
+                  >
+                    {link.label}
+                  </Link>
                 </li>
               ))}
-              {/* <li>
-                <a href="#" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
-                  ? 'text-gray-300 hover:text-emerald-400'
-                  : 'text-gray-600 hover:text-emerald-600'
-                  }`}>
-                  <span className="relative">
-                    Partners
-                    <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${mounted && resolvedTheme === 'dark' ? 'bg-emerald-400' : 'bg-emerald-600'
-                      }`}></span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="#" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
-                  ? 'text-gray-300 hover:text-emerald-400'
-                  : 'text-gray-600 hover:text-emerald-600'
-                  }`}>
-                  <span className="relative">
-                    Careers
-                    <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${mounted && resolvedTheme === 'dark' ? 'bg-emerald-400' : 'bg-emerald-600'
-                      }`}></span>
-                  </span>
-                </a>
-              </li> */}
             </ul>
           </div>
 
-          {/* Products */}
-          <div className="space-y-5">
-            <h3 className={`text-sm font-bold uppercase tracking-wider ${mounted && resolvedTheme === 'dark' ? 'text-gray-200' : 'text-gray-900'
-              }`}>
+          <div>
+            <h3 className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-white/90">
               {footer.productsTitle}
             </h3>
-            <ul className="space-y-3">
-              {footer.productLinks.map((product) => {
-                const isExternal = product.href.startsWith('http');
+            <ul className="space-y-2">
+              {productLinks.map((link) => {
+                const external = link.href.startsWith("http");
                 return (
-                  <li key={product.label}>
+                  <li key={`${link.label}-${link.href}`}>
                     <a
-                      href={product.href}
-                      target={isExternal ? '_blank' : undefined}
-                      rel={isExternal ? 'noopener noreferrer' : undefined}
-                      className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
-                        ? 'text-gray-300 hover:text-emerald-400'
-                        : 'text-gray-600 hover:text-emerald-600'
-                        }`}
+                      href={link.href}
+                      target={external ? "_blank" : undefined}
+                      rel={external ? "noopener noreferrer" : undefined}
+                      className="text-sm text-white/80 transition hover:text-[#00a2e5]"
                     >
-                      <span className="relative">
-                        {product.label}
-                        <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${mounted && resolvedTheme === 'dark' ? 'bg-emerald-400' : 'bg-emerald-600'
-                          }`}></span>
-                      </span>
+                      {link.label}
                     </a>
                   </li>
                 );
@@ -238,213 +125,75 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Programs */}
-          <div className="space-y-5">
-            <h3 className={`text-sm font-bold uppercase tracking-wider ${mounted && resolvedTheme === 'dark' ? 'text-gray-200' : 'text-gray-900'
-              }`}>
-              {footer.programsTitle}
-            </h3>
-            <ul className="space-y-3">
-              {footerPrograms.map((program) => (
-                <li key={program.name}>
-                  <a
-                    href={program.href}
-                    className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
-                      ? 'text-gray-300 hover:text-emerald-400'
-                      : 'text-gray-600 hover:text-emerald-600'
-                      }`}
-                  >
-                    <span className="relative">
-                      {program.name}
-                      <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${mounted && resolvedTheme === 'dark' ? 'bg-emerald-400' : 'bg-emerald-600'
-                        }`} />
-                    </span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div className="space-y-5">
-            <h3 className={`text-sm font-bold uppercase tracking-wider ${mounted && resolvedTheme === 'dark' ? 'text-gray-200' : 'text-gray-900'
-              }`}>
+          <div>
+            <h3 className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-white/90">
               {footer.contactTitle}
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-2.5">
               <li>
-                <a href="/contact" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
-                  ? 'text-gray-300 hover:text-emerald-400'
-                  : 'text-gray-600 hover:text-emerald-600'
-                  }`}>
-                  <span className="relative">
-                    {footer.contactLink}
-                    <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${mounted && resolvedTheme === 'dark' ? 'bg-emerald-400' : 'bg-emerald-600'
-                      }`}></span>
-                  </span>
+                <Link
+                  href="/contact"
+                  className="text-sm text-white/80 transition hover:text-[#00a2e5]"
+                >
+                  {footer.contactLink}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={nav.resources.href}
+                  className="text-sm text-white/80 transition hover:text-[#00a2e5]"
+                >
+                  {nav.resources.label}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/resources/faq"
+                  className="text-sm text-white/80 transition hover:text-[#00a2e5]"
+                >
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <a
+                  href={`mailto:${footer.email}`}
+                  className="inline-flex items-center gap-2 text-sm text-white/80 transition hover:text-[#00a2e5]"
+                >
+                  <Mail
+                    className="h-3.5 w-3.5"
+                    style={{ color: theme.colors.secondary }}
+                  />
+                  {footer.email}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`tel:${footer.phone.replace(/\s/g, "")}`}
+                  className="inline-flex items-center gap-2 text-sm text-white/80 transition hover:text-[#00a2e5]"
+                >
+                  <Phone
+                    className="h-3.5 w-3.5"
+                    style={{ color: theme.colors.secondary }}
+                  />
+                  {footer.phone}
                 </a>
               </li>
             </ul>
           </div>
-
-          {/* Solutions */}
-          {/* <div className="space-y-5">
-            <h3 className={`text-sm font-bold uppercase tracking-wider ${mounted && resolvedTheme === 'dark' ? 'text-gray-200' : 'text-gray-900'
-              }`}>
-              Solutions
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
-                  ? 'text-gray-300 hover:text-emerald-400'
-                  : 'text-gray-600 hover:text-emerald-600'
-                  }`}>
-                  <span className="relative">
-                    Corporate
-                    <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${mounted && resolvedTheme === 'dark' ? 'bg-emerald-400' : 'bg-emerald-600'
-                      }`}></span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="#" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
-                  ? 'text-gray-300 hover:text-emerald-400'
-                  : 'text-gray-600 hover:text-emerald-600'
-                  }`}>
-                  <span className="relative">
-                    Students
-                    <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${mounted && resolvedTheme === 'dark' ? 'bg-emerald-400' : 'bg-emerald-600'
-                      }`}></span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="#" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
-                  ? 'text-gray-300 hover:text-emerald-400'
-                  : 'text-gray-600 hover:text-emerald-600'
-                  }`}>
-                  <span className="relative">
-                    Universities
-                    <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${mounted && resolvedTheme === 'dark' ? 'bg-emerald-400' : 'bg-emerald-600'
-                      }`}></span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="#" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
-                  ? 'text-gray-300 hover:text-emerald-400'
-                  : 'text-gray-600 hover:text-emerald-600'
-                  }`}>
-                  <span className="relative">
-                    Skill Development
-                    <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${mounted && resolvedTheme === 'dark' ? 'bg-emerald-400' : 'bg-emerald-600'
-                      }`}></span>
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </div>  */}
-
-          {/* Resources */}
-          {/* <div className="space-y-5">
-            <h3 className={`text-sm font-bold uppercase tracking-wider ${mounted && resolvedTheme === 'dark' ? 'text-gray-200' : 'text-gray-900'
-              }`}>
-              Resources
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
-                  ? 'text-gray-300 hover:text-emerald-400'
-                  : 'text-gray-600 hover:text-emerald-600'
-                  }`}>
-                  <span className="relative">
-                    Knowledge Hub
-                    <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${mounted && resolvedTheme === 'dark' ? 'bg-emerald-400' : 'bg-emerald-600'
-                      }`}></span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="#" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
-                  ? 'text-gray-300 hover:text-emerald-400'
-                  : 'text-gray-600 hover:text-emerald-600'
-                  }`}>
-                  <span className="relative">
-                    Case Studies
-                    <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${mounted && resolvedTheme === 'dark' ? 'bg-emerald-400' : 'bg-emerald-600'
-                      }`}></span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="#" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
-                  ? 'text-gray-300 hover:text-emerald-400'
-                  : 'text-gray-600 hover:text-emerald-600'
-                  }`}>
-                  <span className="relative">
-                    Events
-                    <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${mounted && resolvedTheme === 'dark' ? 'bg-emerald-400' : 'bg-emerald-600'
-                      }`}></span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="#" className={`transition-colors duration-200 text-base inline-flex items-center group ${mounted && resolvedTheme === 'dark'
-                  ? 'text-gray-300 hover:text-emerald-400'
-                  : 'text-gray-600 hover:text-emerald-600'
-                  }`}>
-                  <span className="relative">
-                    FAQ
-                    <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${mounted && resolvedTheme === 'dark' ? 'bg-emerald-400' : 'bg-emerald-600'
-                      }`}></span>
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </div> */}
         </div>
 
-        {/* Bottom Section */}
-        <div className={`border-t pt-8 ${mounted && resolvedTheme === 'dark' ? 'border-gray-700' : 'border-gray-200/80'
-          }`}>
-          <div className="flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-0">
-            <div className={`text-sm text-center lg:text-left order-2 lg:order-1 ${mounted && resolvedTheme === 'dark' ? 'text-gray-400' : 'text-gray-600'
-              }`}>
-              {footer.copyright.replace('{year}', String(new Date().getFullYear()))}
-            </div>
-
-            <div className="flex flex-wrap items-center justify-center gap-3 text-sm order-1 lg:order-2">
-              <a href="/PrivacyPolicy" className={`transition-colors duration-200 ${mounted && resolvedTheme === 'dark'
-                ? 'text-gray-400 hover:text-emerald-400'
-                : 'text-gray-600 hover:text-emerald-600'
-                }`}>
-                {footer.privacyPolicy}
-              </a>
-              <span className={mounted && resolvedTheme === 'dark' ? 'text-gray-600' : 'text-gray-300'}>•</span>
-              <a href="/TermsofService" className={`transition-colors duration-200 ${mounted && resolvedTheme === 'dark'
-                ? 'text-gray-400 hover:text-emerald-400'
-                : 'text-gray-600 hover:text-emerald-600'
-                }`}>
-                {footer.termsOfService}
-              </a>
-            </div>
-
-            <div className={`text-sm text-center lg:text-right order-3 ${mounted && resolvedTheme === 'dark' ? 'text-gray-400' : 'text-gray-600'
-              }`}>
-              {footer.poweredByPrefix && `${footer.poweredByPrefix} `}
-              <a href="https://www.linkedin.com/company/hirekarma-pvt-ltd/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className={`transition-colors duration-200 ${mounted && resolvedTheme === 'dark'
-                ? 'text-gray-400 hover:text-emerald-400'
-                : 'text-gray-600 hover:text-emerald-600'
-                }`}>
-                {footer.poweredByCompany}
-              </a>
-              {footer.poweredBySuffix && ` ${footer.poweredBySuffix}`}
-            </div>
+        <div className="mt-8 flex flex-col gap-3 border-t border-white/10 pt-5 text-sm text-white/90 sm:flex-row sm:items-center sm:justify-between">
+          <p>{footer.copyright.replace("{year}", year)}</p>
+          <div className="flex flex-wrap gap-x-4 gap-y-1">
+            <a href="/PrivacyPolicy" className="transition hover:text-[#00a2e5]">
+              {footer.privacyPolicy}
+            </a>
+            <a href="/TermsofService" className="transition hover:text-[#00a2e5]">
+              {footer.termsOfService}
+            </a>
           </div>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

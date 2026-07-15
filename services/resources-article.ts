@@ -11,6 +11,9 @@ import hyperlocalWorkforceEn from "@/data/resources-page/articles/en/hyperlocal-
 import solviqaiEn from "@/data/resources-page/articles/en/solviqai-career-readiness-systems-problem.json";
 import shortlistedEn from "@/data/resources-page/articles/en/shortlisted-virtual-placement-systems-problem.json";
 import amaGopalpurEn from "@/data/resources-page/articles/en/ama-gopalpur-constituency-development-systems-problem.json";
+import dishaOpsEn from "@/data/resources-page/articles/en/disha-placement-operations-systems-problem.json";
+import skillDevEn from "@/data/resources-page/articles/en/skill-development-employability-systems-problem.json";
+import dpiEn from "@/data/resources-page/articles/en/digital-public-infrastructure-systems-problem.json";
 
 import campusPlacementHi from "@/data/resources-page/articles/hi/campus-placement-systems-problem.json";
 import publicGrievanceHi from "@/data/resources-page/articles/hi/public-grievance-systems-problem.json";
@@ -18,6 +21,9 @@ import hyperlocalWorkforceHi from "@/data/resources-page/articles/hi/hyperlocal-
 import solviqaiHi from "@/data/resources-page/articles/hi/solviqai-career-readiness-systems-problem.json";
 import shortlistedHi from "@/data/resources-page/articles/hi/shortlisted-virtual-placement-systems-problem.json";
 import amaGopalpurHi from "@/data/resources-page/articles/hi/ama-gopalpur-constituency-development-systems-problem.json";
+import dishaOpsHi from "@/data/resources-page/articles/hi/disha-placement-operations-systems-problem.json";
+import skillDevHi from "@/data/resources-page/articles/hi/skill-development-employability-systems-problem.json";
+import dpiHi from "@/data/resources-page/articles/hi/digital-public-infrastructure-systems-problem.json";
 
 import campusPlacementOd from "@/data/resources-page/articles/od/campus-placement-systems-problem.json";
 import publicGrievanceOd from "@/data/resources-page/articles/od/public-grievance-systems-problem.json";
@@ -25,6 +31,9 @@ import hyperlocalWorkforceOd from "@/data/resources-page/articles/od/hyperlocal-
 import solviqaiOd from "@/data/resources-page/articles/od/solviqai-career-readiness-systems-problem.json";
 import shortlistedOd from "@/data/resources-page/articles/od/shortlisted-virtual-placement-systems-problem.json";
 import amaGopalpurOd from "@/data/resources-page/articles/od/ama-gopalpur-constituency-development-systems-problem.json";
+import dishaOpsOd from "@/data/resources-page/articles/od/disha-placement-operations-systems-problem.json";
+import skillDevOd from "@/data/resources-page/articles/od/skill-development-employability-systems-problem.json";
+import dpiOd from "@/data/resources-page/articles/od/digital-public-infrastructure-systems-problem.json";
 
 const articleMapEn: Record<ResourceArticleSlug, ResourceArticleContent> = {
   "campus-placement-systems-problem":
@@ -39,6 +48,12 @@ const articleMapEn: Record<ResourceArticleSlug, ResourceArticleContent> = {
     shortlistedEn as ResourceArticleContent,
   "ama-gopalpur-constituency-development-systems-problem":
     amaGopalpurEn as ResourceArticleContent,
+  "disha-placement-operations-systems-problem":
+    dishaOpsEn as ResourceArticleContent,
+  "skill-development-employability-systems-problem":
+    skillDevEn as ResourceArticleContent,
+  "digital-public-infrastructure-systems-problem":
+    dpiEn as ResourceArticleContent,
 };
 
 const articleMapHi: Record<ResourceArticleSlug, ResourceArticleContent> = {
@@ -54,6 +69,12 @@ const articleMapHi: Record<ResourceArticleSlug, ResourceArticleContent> = {
     shortlistedHi as ResourceArticleContent,
   "ama-gopalpur-constituency-development-systems-problem":
     amaGopalpurHi as ResourceArticleContent,
+  "disha-placement-operations-systems-problem":
+    dishaOpsHi as ResourceArticleContent,
+  "skill-development-employability-systems-problem":
+    skillDevHi as ResourceArticleContent,
+  "digital-public-infrastructure-systems-problem":
+    dpiHi as ResourceArticleContent,
 };
 
 const articleMapOd: Record<ResourceArticleSlug, ResourceArticleContent> = {
@@ -69,6 +90,12 @@ const articleMapOd: Record<ResourceArticleSlug, ResourceArticleContent> = {
     shortlistedOd as ResourceArticleContent,
   "ama-gopalpur-constituency-development-systems-problem":
     amaGopalpurOd as ResourceArticleContent,
+  "disha-placement-operations-systems-problem":
+    dishaOpsOd as ResourceArticleContent,
+  "skill-development-employability-systems-problem":
+    skillDevOd as ResourceArticleContent,
+  "digital-public-infrastructure-systems-problem":
+    dpiOd as ResourceArticleContent,
 };
 
 const localeArticleMaps: Record<

@@ -79,7 +79,7 @@ const DeliveredProjectCard: React.FC<DeliveredProjectCardProps> = ({
           </h3>
           <p
             className={`text-sm sm:text-base font-medium ${
-              isDark ? "text-emerald-400" : "text-emerald-600"
+              isDark ? "text-emerald-400" : "text-[#098855]"
             }`}
           >
             {subtitle}

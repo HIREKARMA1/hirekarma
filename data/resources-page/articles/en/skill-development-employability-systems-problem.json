@@ -1,0 +1,145 @@
+{
+  "slug": "skill-development-employability-systems-problem",
+  "meta": {
+    "title": "Stop Training in Isolation. Start Connecting to Jobs: Skill Development Is a Systems Problem",
+    "description": "Skill programs fail when training ends without verified hiring pathways. How HireKarma connects skilling, readiness, and placement into one outcomes system."
+  },
+  "hero": {
+    "title": "Stop Training in Isolation. Start Connecting to Jobs: Skill Development Outcomes Are a Systems Problem, Not a Certificate Problem",
+    "date": "July 13, 2026",
+    "categoryLabel": "Skill Development · Blogs",
+    "author": "HireKarma Editorial Team",
+    "backLink": "Back to Resources"
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "variant": "lead",
+      "text": "India runs thousands of skill programs every year. Certificates are issued. Batches close. Dashboards report \"youth trained.\" And then too many learners still wait - without a clear job pathway, employer signal, or follow-through after the classroom ends."
+    },
+    {
+      "type": "paragraph",
+      "variant": "emphasis",
+      "text": "Training volume is not the same as employability. If skilling doesn't connect to readiness measurement and hiring workflows, we are measuring activity, not outcomes."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "If a learner's journey ends at a certificate, the system never finished its job."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Here is why the math simply doesn't add up anymore:"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "The Reality Check"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "listType": "default",
+      "items": [
+        "Training without market signal: Curricula often update slower than role requirements - especially in digital, services, and entry-level tech-adjacent jobs.",
+        "Completion is celebrated; placement is optional: Many programs optimize for attendance and assessment completion, not verified employment.",
+        "Employers can't see readiness: Certificates don't answer \"Can this candidate clear our interview loop?\" without shared assessments and evidence.",
+        "Learner drop-off after batch end: Without continuous coaching, job matching, and human follow-up, momentum collapses within weeks.",
+        "Partners operate in silos: Training partners, colleges, and employers rarely share one operational loop for referrals, interviews, and offers."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Why \"More Batches\" Isn't the Answer"
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Scaling seats without closing the outcomes loop only scales disappointment:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "listType": "default",
+      "items": [
+        "Skill without proof: Employers need evidence - assessments, mock interviews, project signals - not attendance sheets.",
+        "Jobs without matching: Generic job boards don't respect locality, batch profile, or readiness stage.",
+        "Coaching without continuity: One workshop can't replace sustained preparation tied to real openings.",
+        "Reporting without truth: Impact claims need placement visibility, not only training throughput.",
+        "Equity without access: Tier-2 and tier-3 learners need pathways that don't depend on metro networks and informal referrals."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "A Shift in Perspective"
+    },
+    {
+      "type": "paragraph",
+      "variant": "italic",
+      "text": "Maybe the real question isn't \"How many youth did we train this quarter?\""
+    },
+    {
+      "type": "paragraph",
+      "variant": "pullquote",
+      "text": "It's: \"How many trained learners entered a measurable path to interviews and offers?\""
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Skill development becomes real when training, readiness, and hiring are designed as one system - with shared visibility for learners, partners, and employers."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "How HireKarma closes the loop"
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "HireKarma connects skilling outcomes to the same talent infrastructure campuses and employers already use:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "listType": "product",
+      "items": [
+        "SolviqAI - Measures readiness with résumé intelligence, assessments, and mock interviews so training converts into interview performance.",
+        "Shortlisted - Keeps placement momentum alive with curated batches, AI-matched jobs, and daily human coordination.",
+        "Lakshya - Connects learners, institutions, and employers in one hiring flow when applications and shortlists need to move.",
+        "Disha - Gives partner campuses operational visibility when drives and outcomes need to be tracked end to end."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "variant": "emphasis",
+      "text": "The gap isn't going away. It's time we stop training in isolation and start connecting skills to jobs by design."
+    }
+  ],
+  "references": {
+    "title": "References",
+    "items": [
+      "India Skills Report / national employability benchmarks",
+      "Skill India / NSDC outcome discussions on placement-linked skilling",
+      "HireKarma partner programs with training institutions across Odisha and India"
+    ]
+  },
+  "authorBox": {
+    "title": "About the authors",
+    "name": "HireKarma Editorial Team",
+    "role": "Product and Impact, HireKarma Private Limited",
+    "bio": "HireKarma builds outcome-driven platforms for campus recruitment, AI career readiness, and digital public service - trusted by colleges, companies, and government partners across India."
+  },
+  "sidebar": {
+    "shareTitle": "Loved this insight?",
+    "shareDescription": "Share it with skilling partners and campus leaders focused on real employability outcomes.",
+    "relatedTitle": "Related products",
+    "relatedProducts": "SolviqAI · Shortlisted · Lakshya · Disha",
+    "cta": {
+      "label": "View all products",
+      "hrefKey": "products"
+    }
+  }
+}

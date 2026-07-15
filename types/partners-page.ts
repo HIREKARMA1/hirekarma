@@ -26,6 +26,7 @@ export interface PartnersPageContent {
   hero: {
     badge: string;
     title: string;
+    titleHighlight?: string;
     description: string;
     trustLine: string;
   };
@@ -33,6 +34,7 @@ export interface PartnersPageContent {
   college: {
     badge: string;
     title: string;
+    titleHighlight?: string;
     description: string;
     detail: string;
     benefits: PartnerBenefit[];
@@ -41,6 +43,7 @@ export interface PartnersPageContent {
   corporate: {
     badge: string;
     title: string;
+    titleHighlight?: string;
     description: string;
     detail: string;
     benefits: PartnerBenefit[];
@@ -48,11 +51,13 @@ export interface PartnersPageContent {
   };
   mission: {
     title: string;
+    titleHighlight?: string;
     paragraph1: string;
     paragraph2: string;
   };
   cta: {
     title: string;
+    titleHighlight?: string;
     description: string;
     primary: string;
     secondary: string;

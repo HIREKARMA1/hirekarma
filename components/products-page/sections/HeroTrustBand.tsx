@@ -1,31 +1,18 @@
 "use client";
 
+import PartnersMarquee from "@/components/layout/PartnersMarquee";
 import { useProductsLocale } from "@/contexts/ProductsLocaleContext";
-import { getTrustConfig, getTrustLogos } from "@/services/trust";
-import { LogoMarquee } from "../ui/LogoMarquee";
 
-/** Trust logos row - rendered inside the hero, not as a separate section. */
+/** Same partners scroll as the site footer — uniform cards, smooth pace. */
 export function HeroTrustBand() {
   const { content } = useProductsLocale();
-  const logos = getTrustLogos();
-  const { settings } = getTrustConfig();
 
   return (
-    <div className="border-t border-slate-200 pt-5 sm:pt-6 lg:pt-5 dark:border-white/10">
-      <div className="flex min-w-0 flex-col gap-4 sm:gap-5 lg:flex-row lg:items-center lg:gap-8">
-        <p className="w-full shrink-0 text-left text-sm font-medium leading-relaxed text-gray-700 sm:text-base lg:max-w-[220px] dark:text-white/90">
-          {content.partners.text}
-        </p>
-
-        <div className="min-w-0 flex-1 overflow-hidden">
-          <LogoMarquee
-            logos={logos}
-            direction="left"
-            speedSeconds={settings.marqueeSpeedSeconds}
-            variant={settings.variant}
-          />
-        </div>
-      </div>
+    <div className="flex min-w-0 flex-col gap-3 sm:flex-row sm:items-center sm:gap-5">
+      <p className="w-full shrink-0 text-left text-[15px] font-medium leading-relaxed text-[#334155] sm:max-w-[200px] lg:max-w-[220px]">
+        {content.partners.text}
+      </p>
+      <PartnersMarquee edgeColor="#ffffff" />
     </div>
   );
 }

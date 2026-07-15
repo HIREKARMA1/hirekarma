@@ -1,0 +1,37 @@
+[
+  {
+    "id": "meity",
+    "name": "MeitY",
+    "logo": "/partners/meity.png"
+  },
+  {
+    "id": "digital-india",
+    "name": "Digital India",
+    "logo": "/partners/digital-india.png"
+  },
+  {
+    "id": "niti-aayog",
+    "name": "NITI Aayog",
+    "logo": "/partners/niti-aayog.png"
+  },
+  {
+    "id": "meity-startup-hub",
+    "name": "MeitY Startup Hub",
+    "logo": "/partners/meity-startup-hub.png"
+  },
+  {
+    "id": "aim",
+    "name": "Atal Innovation Mission",
+    "logo": "/partners/aim.png"
+  },
+  {
+    "id": "inji",
+    "name": "Inji",
+    "logo": "/partners/inji.png"
+  },
+  {
+    "id": "mosip",
+    "name": "MOSIP",
+    "logo": "/partners/mosip.png"
+  }
+]

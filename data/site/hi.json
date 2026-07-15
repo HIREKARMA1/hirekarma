@@ -40,13 +40,35 @@
     "resources": {
       "id": "resources",
       "label": "संसाधन",
-      "href": "/resources"
+      "href": "/resources",
+      "items": [
+        {
+          "id": "overview",
+          "label": "अवलोकन",
+          "href": "/resources"
+        },
+        {
+          "id": "faq",
+          "label": "FAQ",
+          "href": "/resources/faq"
+        }
+      ]
+    },
+    "impact": {
+      "id": "impact",
+      "label": "प्रभाव",
+      "href": "/impact"
     },
     "about": {
       "id": "about",
       "label": "हमारे बारे में",
       "href": "/about-us",
       "items": [
+        {
+          "id": "story",
+          "label": "हमारी कहानी",
+          "href": "/about-us/our-story"
+        },
         {
           "id": "mission",
           "label": "मिशन और मूल्य",
@@ -56,6 +78,11 @@
           "id": "people",
           "label": "टीम",
           "href": "/about-us/people"
+        },
+        {
+          "id": "locations",
+          "label": "स्थान",
+          "href": "/about-us/locations"
         }
       ]
     },
@@ -64,10 +91,23 @@
       "label": "संपर्क करें",
       "href": "/contact"
     },
-    "language": "भाषा"
+    "language": "भाषा",
+    "tagline": "भारत का टैलेंट इंफ्रास्ट्रक्चर",
+    "secondaryCta": {
+      "id": "open-positions",
+      "label": "खुले पद देखें",
+      "href": "/contact"
+    },
+    "primaryCta": {
+      "id": "explore-products",
+      "label": "उत्पाद देखें",
+      "href": "/products"
+    }
   },
   "footer": {
     "description": "HireKarma के नवोन्मेषी प्लेटफ़ॉर्म से अपनी हायरिंग प्रक्रिया को बदलें। सही प्रतिभा को तेज़ी से और अधिक कुशलता से खोजें।",
+    "partnersNote": "उन भागीदारों के साथ निर्माण जो हमारे मिशन को साझा करते हैं।",
+    "partnersImageAlt": "सरकारी और संस्थागत भागीदार",
     "connectTitle": "हमसे जुड़ें",
     "email": "info@hirekarma.in",
     "phone": "+91 91243 64762",
@@ -85,6 +125,14 @@
       {
         "label": "टीम",
         "href": "/about-us/people"
+      },
+      {
+        "label": "स्थान",
+        "href": "/about-us/locations"
+      },
+      {
+        "label": "प्रभाव",
+        "href": "/impact"
       }
     ],
     "productsTitle": "उत्पाद",
@@ -105,6 +153,10 @@
       {
         "label": "सोल्विक AI",
         "href": "https://solviqai.hirekarma.in/"
+      },
+      {
+        "label": "लक्ष्य",
+        "href": "https://lakshya.hirekarma.in/"
       }
     ]
   }

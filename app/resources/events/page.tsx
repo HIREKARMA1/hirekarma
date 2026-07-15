@@ -48,7 +48,7 @@ function EventsPageInner() {
             mounted && resolvedTheme === "dark" ? "bg-gray-900" : "bg-white"
           }`}
         >
-          <div className="relative content-container pt-20 pb-8">
+          <div className="relative content-container pt-8 pb-8">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div className="space-y-2 lg:space-y-1">
                 <div className="space-y-4">
@@ -85,8 +85,8 @@ function EventsPageInner() {
                   <Search
                     className={`absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 ${
                       mounted && resolvedTheme === "dark"
-                        ? "text-gray-400"
-                        : "text-gray-400"
+                        ? "text-gray-600"
+                        : "text-gray-600"
                     }`}
                   />
                   <input
@@ -109,7 +109,7 @@ function EventsPageInner() {
                       onClick={() => setSelectedCategory(cat.id)}
                       className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
                         selectedCategory === cat.id
-                          ? "bg-blue-600 text-white shadow-lg"
+                          ? "bg-[#1b52a4] text-white shadow-lg"
                           : mounted && resolvedTheme === "dark"
                             ? "bg-gray-800 text-gray-300 hover:bg-gray-700"
                             : "bg-gray-100 text-gray-700 hover:bg-gray-200"
@@ -129,8 +129,8 @@ function EventsPageInner() {
                 <Calendar
                   className={`w-8 h-8 ${
                     mounted && resolvedTheme === "dark"
-                      ? "text-blue-400"
-                      : "text-blue-600"
+                      ? "text-[#00a2e5]"
+                      : "text-[#1b52a4]"
                   }`}
                 />
                 <h2
@@ -150,8 +150,8 @@ function EventsPageInner() {
                     key={ev.id}
                     className={`rounded-xl border shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 p-6 group ${
                       mounted && resolvedTheme === "dark"
-                        ? "bg-gradient-to-br from-blue-900/20 to-blue-800/10 border-blue-700/30"
-                        : "bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200"
+                        ? "bg-gradient-to-br from-[rgba(27,82,164,0.2)] to-[rgba(27,82,164,0.08)] border-[rgba(27,82,164,0.35)]"
+                        : "bg-gradient-to-br from-[#f6f8fb] to-[rgba(27,82,164,0.08)] border-[rgba(27,82,164,0.28)]"
                     }`}
                   >
                     <div className="relative mb-6">
@@ -159,7 +159,7 @@ function EventsPageInner() {
                         className={`w-full h-64 rounded-xl overflow-hidden border transition-colors duration-300 ${
                           mounted && resolvedTheme === "dark"
                             ? "border-blue-600/50 group-hover:border-blue-400/70"
-                            : "border-blue-300/70 group-hover:border-blue-200"
+                            : "border-blue-300/70 group-hover:border-[rgba(27,82,164,0.28)]"
                         }`}
                       >
                         <Image
@@ -171,7 +171,7 @@ function EventsPageInner() {
                         />
                       </div>
                       <div className="absolute top-4 left-4">
-                        <span className="px-3 py-1 rounded-full text-sm font-semibold bg-blue-600 text-white">
+                        <span className="px-3 py-1 rounded-full text-sm font-semibold bg-[#1b52a4] text-white">
                           {categoryLabelById[ev.categoryId] ?? ev.categoryId}
                         </span>
                       </div>
@@ -180,7 +180,7 @@ function EventsPageInner() {
                     <div
                       className={`flex items-center gap-4 text-sm mb-4 ${
                         mounted && resolvedTheme === "dark"
-                          ? "text-gray-400"
+                          ? "text-gray-600"
                           : "text-gray-500"
                       }`}
                     >
@@ -190,7 +190,7 @@ function EventsPageInner() {
                     </div>
 
                     <h3
-                      className={`text-2xl font-bold mb-3 group-hover:text-blue-600 transition-colors ${
+                      className={`text-2xl font-bold mb-3 group-hover:text-[#1b52a4] transition-colors ${
                         mounted && resolvedTheme === "dark"
                           ? "text-gray-100"
                           : "text-gray-900"
@@ -212,8 +212,8 @@ function EventsPageInner() {
                     <div
                       className={`flex items-center gap-2 font-semibold group-hover:gap-3 transition-all ${
                         mounted && resolvedTheme === "dark"
-                          ? "text-blue-400"
-                          : "text-blue-600"
+                          ? "text-[#00a2e5]"
+                          : "text-[#1b52a4]"
                       }`}
                     >
                       {eventsContent.register} <ArrowRight className="w-5 h-5" />
@@ -230,8 +230,8 @@ function EventsPageInner() {
                 <Calendar
                   className={`w-8 h-8 ${
                     mounted && resolvedTheme === "dark"
-                      ? "text-blue-400"
-                      : "text-blue-600"
+                      ? "text-[#00a2e5]"
+                      : "text-[#1b52a4]"
                   }`}
                 />
                 <h2
@@ -251,8 +251,8 @@ function EventsPageInner() {
                     key={ev.id}
                     className={`rounded-xl border shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 p-6 group ${
                       mounted && resolvedTheme === "dark"
-                        ? "bg-gradient-to-br from-blue-900/20 to-blue-800/10 border-blue-700/30"
-                        : "bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200"
+                        ? "bg-gradient-to-br from-[rgba(27,82,164,0.2)] to-[rgba(27,82,164,0.08)] border-[rgba(27,82,164,0.35)]"
+                        : "bg-gradient-to-br from-[#f6f8fb] to-[rgba(27,82,164,0.08)] border-[rgba(27,82,164,0.28)]"
                     }`}
                   >
                     <div className="relative mb-6">
@@ -260,7 +260,7 @@ function EventsPageInner() {
                         className={`w-full h-48 rounded-xl overflow-hidden border transition-colors duration-300 ${
                           mounted && resolvedTheme === "dark"
                             ? "border-blue-600/50 group-hover:border-blue-400/70"
-                            : "border-blue-300/70 group-hover:border-blue-200"
+                            : "border-blue-300/70 group-hover:border-[rgba(27,82,164,0.28)]"
                         }`}
                       >
                         <Image
@@ -275,8 +275,8 @@ function EventsPageInner() {
                         <span
                           className={`backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold ${
                             mounted && resolvedTheme === "dark"
-                              ? "bg-gray-800/90 text-blue-400"
-                              : "bg-white/90 text-blue-600"
+                              ? "bg-gray-800/90 text-[#00a2e5]"
+                              : "bg-white/90 text-[#1b52a4]"
                           }`}
                         >
                           {categoryLabelById[ev.categoryId] ?? ev.categoryId}
@@ -287,7 +287,7 @@ function EventsPageInner() {
                     <div
                       className={`flex items-center gap-3 text-xs mb-3 ${
                         mounted && resolvedTheme === "dark"
-                          ? "text-gray-400"
+                          ? "text-gray-600"
                           : "text-gray-500"
                       }`}
                     >
@@ -297,7 +297,7 @@ function EventsPageInner() {
                     </div>
 
                     <h3
-                      className={`text-lg font-bold mb-2 group-hover:text-blue-600 transition-colors line-clamp-2 ${
+                      className={`text-lg font-bold mb-2 group-hover:text-[#1b52a4] transition-colors line-clamp-2 ${
                         mounted && resolvedTheme === "dark"
                           ? "text-gray-100"
                           : "text-gray-900"
@@ -326,15 +326,15 @@ function EventsPageInner() {
               <div
                 className={`rounded-2xl border shadow-2xl p-12 ${
                   mounted && resolvedTheme === "dark"
-                    ? "bg-gradient-to-br from-blue-900/30 to-blue-800/20 border-blue-700/30"
-                    : "bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200"
+                    ? "bg-gradient-to-br from-[rgba(27,82,164,0.25)] to-[rgba(27,82,164,0.12)] border-[rgba(27,82,164,0.35)]"
+                    : "bg-gradient-to-br from-[#f6f8fb] to-[rgba(27,82,164,0.08)] border-[rgba(27,82,164,0.28)]"
                 }`}
               >
                 <h2
                   className={`text-4xl sm:text-5xl font-bold mb-6 ${
                     mounted && resolvedTheme === "dark"
-                      ? "text-blue-400"
-                      : "text-blue-700"
+                      ? "text-[#00a2e5]"
+                      : "text-[#1b52a4]"
                   }`}
                 >
                   {eventsContent.subscribe.title}
@@ -358,7 +358,7 @@ function EventsPageInner() {
                         : "border-gray-300 focus:ring-blue-500 focus:border-transparent"
                     }`}
                   />
-                  <button className="px-8 py-4 font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 bg-blue-600 text-white hover:bg-blue-500">
+                  <button className="px-8 py-4 font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 bg-[#1b52a4] text-white hover:bg-[rgba(27,82,164,0.06)]0">
                     {eventsContent.subscribe.cta}
                   </button>
                 </div>

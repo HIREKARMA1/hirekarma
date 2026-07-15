@@ -3,15 +3,15 @@
 import { Users } from "lucide-react";
 
 import { useProductsLocale } from "@/contexts/ProductsLocaleContext";
+import { theme } from "@/config/theme";
 import {
   getProductsPageMediaSync,
   getSlideAlt,
+  getSlideLabel,
   resolveMediaSrc,
 } from "@/services/products-page-media";
 import { AutoSlideGallery } from "../ui/AutoSlideGallery";
-import { ContainerScroll } from "../container-scroll/ContainerScroll";
-import { GradientHeading } from "../ui/GradientHeading";
-import { SectionLabel } from "../ui/SectionLabel";
+import { ProductButton } from "../ui/ProductButton";
 import { HeroTrustBand } from "./HeroTrustBand";
 
 export function ProductsHeroSection() {
@@ -22,52 +22,73 @@ export function ProductsHeroSection() {
   const slides = media.hero.tabletSlides.map((slide) => ({
     src: resolveMediaSrc(slide.src),
     alt: getSlideAlt(slide, locale),
+    label: getSlideLabel(slide, locale),
   }));
 
   return (
-    <section className="relative flex w-full max-w-full flex-col">
-      <div className="relative z-10 flex w-full min-w-0 max-w-full flex-col content-container pb-4 pt-20 sm:pb-5 sm:pt-24 lg:pb-5 lg:pt-28">
-        <div className="relative flex flex-col gap-5 max-lg:gap-4 lg:grid lg:grid-cols-[1fr_1.15fr] lg:items-center lg:gap-8 xl:gap-12">
-          <div className="order-1 flex min-w-0 flex-col text-left max-lg:flex-none lg:justify-center">
-            <div className="space-y-5 max-lg:rounded-2xl max-lg:border max-lg:border-slate-200/80 max-lg:bg-white/70 max-lg:px-5 max-lg:py-6 max-lg:backdrop-blur-md max-lg:dark:border-white/10 max-lg:dark:bg-black/30 sm:max-lg:space-y-6 sm:max-lg:px-6 lg:space-y-5">
-              <SectionLabel>{hero.label}</SectionLabel>
+    <section className="relative w-full overflow-hidden">
+      <div className="relative z-10 content-container pb-5 pt-6 lg:pb-6 lg:pt-8">
+        <div className="flex flex-col items-start gap-5 lg:flex-row lg:items-center lg:gap-6 xl:gap-8">
+          {/* Copy */}
+          <div className="min-w-0 flex-1 space-y-3.5 lg:max-w-[42rem]">
+            <p
+              className="text-xs font-semibold uppercase tracking-[0.16em]"
+              style={{ color: theme.colors.secondary }}
+            >
+              {hero.label}
+            </p>
 
-              <GradientHeading
-                heading={hero.heading}
-                as="h1"
-                size="hero"
-                layout="stacked"
-                className="font-extrabold lg:font-bold"
+            <h1 className="text-[1.65rem] font-bold leading-[1.2] tracking-tight text-[#0f1622] sm:text-[1.9rem] xl:text-[2.1rem] xl:whitespace-nowrap">
+              <span>{hero.heading.part1} </span>
+              <span style={{ color: theme.colors.primary }}>
+                {hero.heading.gradient}
+              </span>
+              {hero.heading.part2 ? (
+                <span> {hero.heading.part2}</span>
+              ) : null}
+            </h1>
+
+            <p className="max-w-xl text-base leading-relaxed text-[#334155]">
+              {hero.description}
+            </p>
+
+            <div className="flex flex-col gap-2.5 sm:flex-row sm:items-center">
+              <ProductButton
+                cta={hero.primaryCta}
+                accentColor={theme.colors.primary}
+                className="rounded-lg px-4 py-2.5"
               />
+              <ProductButton
+                cta={hero.secondaryCta}
+                className="rounded-lg px-4 py-2.5"
+              />
+            </div>
 
-              <p className="max-w-lg text-left text-lg font-medium leading-[1.7] text-gray-700 sm:text-xl lg:text-lg lg:font-normal lg:leading-[1.75] dark:text-white/92 lg:dark:text-white/90">
-                {hero.description}
-              </p>
-
-              <div className="flex max-w-lg items-start gap-3">
-                <Users
-                  className="mt-1 h-5 w-5 shrink-0 text-gray-600 dark:text-white/85"
-                  strokeWidth={1.75}
-                  aria-hidden
-                />
-                <p className="text-left text-base font-medium leading-[1.65] text-gray-600 sm:text-lg lg:text-base lg:font-normal dark:text-white/88 lg:dark:text-white/80">
-                  {hero.footerNote}
-                </p>
-              </div>
+            <div className="flex items-start gap-2 pt-0.5 text-sm text-[#475569]">
+              <Users
+                className="mt-0.5 h-4 w-4 shrink-0"
+                style={{ color: theme.colors.secondary }}
+              />
+              <p className="leading-relaxed">{hero.footerNote}</p>
             </div>
           </div>
 
-          <div className="order-2 w-full min-w-0 max-lg:mt-1 lg:py-4 xl:py-6">
-            <ContainerScroll compact showTablet>
-              <AutoSlideGallery
-                images={slides}
-                imageClassName="max-lg:object-[78%_center] lg:object-center"
-              />
-            </ContainerScroll>
+          {/* Product preview — sits beside copy, no empty mid-column */}
+          <div className="w-full shrink-0 lg:w-[min(100%,400px)] xl:w-[440px]">
+            <div className="overflow-hidden rounded-2xl border-[3px] border-[#2a3140] bg-[#1a1f2e] p-2 shadow-[0_20px_50px_rgba(15,22,34,0.2)]">
+              <div className="overflow-hidden rounded-xl bg-[#0d1117]">
+                <div className="relative aspect-[16/10] w-full overflow-hidden">
+                  <AutoSlideGallery
+                    images={slides}
+                    imageClassName="object-contain object-center bg-[#0d1117]"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="mt-auto shrink-0 pt-2">
+        <div className="mt-6 border-t border-[#e6e8ec] pt-4">
           <HeroTrustBand />
         </div>
       </div>

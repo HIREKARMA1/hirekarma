@@ -1,273 +1,331 @@
 "use client";
 
-import React from "react";
-import { GraduationCap, Briefcase, Award, Handshake } from "lucide-react";
+import Link from "next/link";
+import {
+  ArrowRight,
+  Award,
+  Briefcase,
+  GraduationCap,
+  Handshake,
+} from "lucide-react";
 
+import PartnersMarquee from "@/components/layout/PartnersMarquee";
+import { withHighlightMark } from "@/components/shared/HighlightMark";
 import {
   PartnersLocaleProvider,
   usePartnersLocale,
 } from "@/contexts/PartnersLocaleContext";
 import { localizeNumerals } from "@/lib/i18n/localizeNumerals";
+import corporateData from "@/data/corporate.json";
+import companyData from "@/data/company.json";
+import { theme } from "@/config/theme";
+
+type LogoPartner = { id: number | string; name: string; logo: string };
 
 function PartnersPageInner() {
   const { locale, content } = usePartnersLocale();
   const { hero, stats, college, corporate, mission, cta } = content;
+  const ink = theme.colors.ink;
+  const primary = theme.colors.primary;
+  const accent = theme.colors.secondary;
+  const universities = corporateData.corpo as LogoPartner[];
+  const corporates = companyData.conpanies as LogoPartner[];
 
   return (
-    <div className="min-h-screen flex flex-col bg-white">
-      <main className="flex-grow">
-        {/* Header Section */}
-        <section className="relative py-16 lg:py-24 bg-gradient-to-br from-blue-50 to-white dark:from-gray-900 dark:to-gray-800">
-          <div className="content-container">
-            <div className="max-w-5xl mx-auto text-center">
-              <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full mb-6">
-                <Handshake className="w-4 h-4" />
-                <span className="text-sm font-semibold">{hero.badge}</span>
-              </div>
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-blue-700 leading-tight mb-8">
-                {hero.title}
-              </h1>
-              <p className="text-xl sm:text-2xl text-gray-600 leading-relaxed max-w-4xl mx-auto mb-6">
-                {hero.description}
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                {hero.trustLine}
-              </p>
-            </div>
-          </div>
-        </section>
+    <main className="min-h-screen bg-white">
+      {/* Hero */}
+      <section className="relative overflow-hidden" style={{ backgroundColor: ink }}>
+        <div className="pointer-events-none absolute inset-0" aria-hidden>
+          <div
+            className="absolute inset-0 opacity-35"
+            style={{
+              backgroundImage:
+                "linear-gradient(rgba(0,162,229,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,162,229,0.05) 1px, transparent 1px)",
+              backgroundSize: "48px 48px",
+            }}
+          />
+          <div
+            className="absolute -left-20 top-0 h-72 w-72 rounded-full blur-[110px]"
+            style={{ backgroundColor: "rgba(27,82,164,0.4)" }}
+          />
+          <div
+            className="absolute right-0 top-1/4 h-64 w-64 rounded-full blur-[100px]"
+            style={{ backgroundColor: "rgba(0,162,229,0.22)" }}
+          />
+        </div>
 
-        {/* Stats Section */}
-        <section className="relative py-12 bg-white dark:bg-gray-900">
-          <div className="content-container">
-            <div className="max-w-7xl mx-auto">
-              <div className="grid md:grid-cols-3 gap-8">
-                {stats.map((stat) => (
-                  <div key={stat.label} className="text-center p-6">
-                    <div className="text-5xl font-bold text-blue-700 mb-3">
-                      {localizeNumerals(stat.value, locale)}
-                    </div>
-                    <p className="text-lg text-gray-700 font-medium">
-                      {stat.label}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
+        <div className="relative content-container pb-10 pt-6 lg:pb-12 lg:pt-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <p
+              className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.2em]"
+              style={{ color: accent }}
+            >
+              <Handshake className="h-3.5 w-3.5" />
+              {hero.badge}
+            </p>
+            <h1 className="mt-3 text-[1.9rem] font-bold leading-[1.15] tracking-tight text-white sm:text-[2.35rem] lg:text-[2.6rem]">
+              {withHighlightMark(hero.title, hero.titleHighlight)}
+            </h1>
+            <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-white/90 sm:text-[15px]">
+              {hero.description}
+            </p>
+            <p className="mx-auto mt-3 max-w-xl text-xs leading-relaxed text-white/80 sm:text-sm">
+              {hero.trustLine}
+            </p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* College Partners Section */}
-        <section className="relative py-16 lg:py-24 bg-white dark:bg-gray-900">
-          <div className="content-container">
-            <div className="max-w-7xl mx-auto mb-12">
-              <div className="text-center mb-8">
-                <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full mb-4">
-                  <GraduationCap className="w-4 h-4" />
-                  <span className="text-sm font-semibold">{college.badge}</span>
-                </div>
-                <h2 className="text-4xl sm:text-5xl font-bold text-blue-700 mb-6">
-                  {college.title}
-                </h2>
-                <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto mb-4">
-                  {college.description}
+      {/* Stats */}
+      <section style={{ backgroundColor: ink }}>
+        <div className="content-container border-t border-white/10 py-7 sm:py-8">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+            {stats.map((stat) => (
+              <div key={stat.label} className="text-center sm:text-left">
+                <p className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
+                  {localizeNumerals(stat.value, locale)}
                 </p>
-                <p className="text-lg text-gray-600 leading-relaxed max-w-4xl mx-auto">
-                  {college.detail}
+                <p className="mt-1.5 text-sm text-white/85">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* University partners */}
+      <section className="bg-[#f6f8fb] py-12 sm:py-16">
+        <div className="content-container">
+          <div className="mx-auto max-w-3xl text-center">
+            <p
+              className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em]"
+              style={{ color: accent }}
+            >
+              <GraduationCap className="h-3.5 w-3.5" />
+              {college.badge}
+            </p>
+            <h2 className="mt-2 text-2xl font-bold tracking-tight text-[#0f1622] sm:text-[1.85rem] lg:text-[2rem]">
+              {withHighlightMark(college.title, college.titleHighlight, {
+                nowrap: false,
+              })}
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-[#334155]">
+              {college.description}
+            </p>
+            <p className="mt-2 text-sm leading-relaxed text-[#475569]">
+              {college.detail}
+            </p>
+          </div>
+
+          <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {college.benefits.map((benefit) => (
+              <div
+                key={benefit.title}
+                className="rounded-2xl border border-[#e6e8ec] bg-white p-5"
+              >
+                <h3 className="text-sm font-bold text-[#0f1622]">
+                  {benefit.title}
+                </h3>
+                <p className="mt-1.5 text-[13px] leading-snug text-[#334155]">
+                  {benefit.description}
                 </p>
               </div>
-
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-                {college.benefits.map((benefit) => (
-                  <div
-                    key={benefit.title}
-                    className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl"
-                  >
-                    <h3 className="font-bold text-gray-900 mb-2">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-sm text-gray-600">
-                      {benefit.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
 
-          <div className="relative overflow-hidden py-8 bg-gradient-to-r from-blue-50 via-white to-blue-50">
-            <div className="flex animate-scroll">
-              {[...college.partners, ...college.partners].map(
-                (partner, index) => (
-                  <div
-                    key={`${partner.id}-${index}`}
-                    className="flex-shrink-0 w-96 mx-4"
-                  >
-                    <div className="bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 h-full">
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl flex items-center justify-center flex-shrink-0">
-                          <GraduationCap className="w-8 h-8 text-blue-600" />
-                        </div>
-                        <h3 className="text-lg font-bold text-gray-900 line-clamp-2">
-                          {partner.name}
-                        </h3>
-                      </div>
-                      <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
-                        {partner.description}
-                      </p>
-                    </div>
-                  </div>
-                )
-              )}
-            </div>
+          <div className="mt-8 overflow-hidden rounded-2xl border border-[#e6e8ec] bg-white px-3 py-5 sm:px-5">
+            <PartnersMarquee
+              partners={universities.map((p) => ({
+                id: String(p.id),
+                name: p.name,
+                logo: p.logo,
+              }))}
+              durationSeconds={100}
+              uniformChips
+              edgeColor="#ffffff"
+            />
           </div>
-        </section>
 
-        {/* Corporate Partners Section */}
-        <section className="relative py-16 lg:py-24 bg-gradient-to-br from-blue-50 to-white dark:from-gray-800 dark:to-gray-900">
-          <div className="content-container">
-            <div className="max-w-7xl mx-auto mb-12">
-              <div className="text-center mb-8">
-                <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full mb-4">
-                  <Briefcase className="w-4 h-4" />
-                  <span className="text-sm font-semibold">
-                    {corporate.badge}
+          <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {college.partners.map((partner) => (
+              <article
+                key={partner.id}
+                className="rounded-2xl border border-[#e6e8ec] bg-white p-5"
+              >
+                <div className="flex items-start gap-3">
+                  <span
+                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-white"
+                    style={{ backgroundColor: primary }}
+                  >
+                    <GraduationCap className="h-5 w-5" />
                   </span>
-                </div>
-                <h2 className="text-4xl sm:text-5xl font-bold text-blue-700 mb-6">
-                  {corporate.title}
-                </h2>
-                <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto mb-4">
-                  {corporate.description}
-                </p>
-                <p className="text-lg text-gray-600 leading-relaxed max-w-4xl mx-auto">
-                  {corporate.detail}
-                </p>
-              </div>
-
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-                {corporate.benefits.map((benefit) => (
-                  <div
-                    key={benefit.title}
-                    className="bg-white p-6 rounded-xl border border-gray-200 shadow-md"
-                  >
-                    <h3 className="font-bold text-gray-900 mb-2">
-                      {benefit.title}
+                  <div className="min-w-0">
+                    <h3 className="text-sm font-bold leading-snug text-[#0f1622]">
+                      {partner.name}
                     </h3>
-                    <p className="text-sm text-gray-600">
-                      {benefit.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="relative overflow-hidden py-8 bg-white">
-            <div className="flex animate-scroll-reverse">
-              {[
-                ...corporate.partners,
-                ...corporate.partners,
-                ...corporate.partners,
-              ].map((partner, index) => (
-                <div
-                  key={`${partner.id}-${index}`}
-                  className="flex-shrink-0 w-96 mx-4"
-                >
-                  <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl border border-blue-200 shadow-lg hover:shadow-xl transition-all duration-300 h-full">
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <Briefcase className="w-8 h-8 text-white" />
-                      </div>
-                      <h3 className="text-lg font-bold text-gray-900 line-clamp-2">
-                        {partner.name}
-                      </h3>
-                    </div>
-                    <p className="text-gray-700 text-sm leading-relaxed line-clamp-3">
+                    <p className="mt-1.5 text-[13px] leading-snug text-[#334155]">
                       {partner.description}
                     </p>
                   </div>
                 </div>
-              ))}
-            </div>
+              </article>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Mission Statement */}
-        <section className="relative py-16 lg:py-24 bg-white dark:bg-gray-900">
-          <div className="content-container">
-            <div className="max-w-4xl mx-auto text-center">
-              <Award className="w-16 h-16 text-blue-600 mx-auto mb-6" />
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                {mission.title}
-              </h2>
-              <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                {mission.paragraph1}
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                {mission.paragraph2}
-              </p>
-            </div>
+      {/* Corporate partners */}
+      <section className="bg-white py-12 sm:py-16">
+        <div className="content-container">
+          <div className="mx-auto max-w-3xl text-center">
+            <p
+              className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em]"
+              style={{ color: accent }}
+            >
+              <Briefcase className="h-3.5 w-3.5" />
+              {corporate.badge}
+            </p>
+            <h2 className="mt-2 text-2xl font-bold tracking-tight text-[#0f1622] sm:text-[1.85rem] lg:text-[2rem]">
+              {withHighlightMark(corporate.title, corporate.titleHighlight, {
+                nowrap: false,
+              })}
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-[#334155]">
+              {corporate.description}
+            </p>
+            <p className="mt-2 text-sm leading-relaxed text-[#475569]">
+              {corporate.detail}
+            </p>
           </div>
-        </section>
 
-        {/* CTA Section */}
-        <section className="relative py-16 lg:py-24 bg-gradient-to-br from-blue-700 to-blue-900 dark:from-blue-800 dark:to-blue-950">
-          <div className="content-container">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-                {cta.title}
-              </h2>
-              <p className="text-xl text-blue-100 mb-10">{cta.description}</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-white text-blue-700 font-bold rounded-xl hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
+          <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {corporate.benefits.map((benefit) => (
+              <div
+                key={benefit.title}
+                className="rounded-2xl border border-[#e6e8ec] bg-[#f8f9fb] p-5"
+              >
+                <h3 className="text-sm font-bold text-[#0f1622]">
+                  {benefit.title}
+                </h3>
+                <p className="mt-1.5 text-[13px] leading-snug text-[#334155]">
+                  {benefit.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 overflow-hidden rounded-2xl border border-[#e6e8ec] bg-[#f8f9fb] px-3 py-5 sm:px-5">
+            <PartnersMarquee
+              partners={corporates.map((p) => ({
+                id: String(p.id),
+                name: p.name,
+                logo: p.logo,
+              }))}
+              durationSeconds={140}
+              uniformChips
+              edgeColor="#f8f9fb"
+            />
+          </div>
+
+          <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {corporate.partners.map((partner) => (
+              <article
+                key={partner.id}
+                className="rounded-2xl border border-[#e6e8ec] bg-white p-5"
+              >
+                <div className="flex items-start gap-3">
+                  <span
+                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-white"
+                    style={{ backgroundColor: theme.colors.orange }}
+                  >
+                    <Briefcase className="h-5 w-5" />
+                  </span>
+                  <div className="min-w-0">
+                    <h3 className="text-sm font-bold leading-snug text-[#0f1622]">
+                      {partner.name}
+                    </h3>
+                    <p className="mt-1.5 text-[13px] leading-snug text-[#334155]">
+                      {partner.description}
+                    </p>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Mission */}
+      <section className="bg-[#f6f8fb] py-12 sm:py-14">
+        <div className="content-container">
+          <div className="mx-auto max-w-3xl text-center">
+            <span
+              className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl text-white"
+              style={{ backgroundColor: primary }}
+            >
+              <Award className="h-6 w-6" />
+            </span>
+            <h2 className="mt-4 text-2xl font-bold tracking-tight text-[#0f1622] sm:text-[1.75rem]">
+              {withHighlightMark(mission.title, mission.titleHighlight)}
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-[#334155] sm:text-[15px]">
+              {mission.paragraph1}
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-[#475569]">
+              {mission.paragraph2}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-white py-10 sm:py-12">
+        <div className="content-container">
+          <div
+            className="relative overflow-hidden rounded-2xl px-6 py-8 sm:px-10 sm:py-10"
+            style={{
+              background: `linear-gradient(135deg, ${primary} 0%, #143a7a 48%, ${accent} 140%)`,
+            }}
+          >
+            <div
+              className="pointer-events-none absolute inset-0 opacity-25"
+              style={{
+                backgroundImage:
+                  "linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)",
+                backgroundSize: "32px 32px",
+              }}
+              aria-hidden
+            />
+            <div className="relative flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
+              <div className="max-w-xl">
+                <h2 className="text-xl font-bold tracking-tight text-white sm:text-2xl">
+                  {withHighlightMark(cta.title, cta.titleHighlight)}
+                </h2>
+                <p className="mt-2 text-sm leading-snug text-white/80">
+                  {cta.description}
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-2.5">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 rounded-xl bg-white px-4 py-2.5 text-sm font-semibold transition hover:bg-white/90"
+                  style={{ color: primary }}
+                >
                   {cta.primary}
-                </button>
-                <button className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-xl hover:bg-white/10 transition-all duration-300">
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 rounded-xl border border-white/40 px-4 py-2.5 text-sm font-semibold text-white transition hover:border-white hover:bg-white/10"
+                >
                   {cta.secondary}
-                </button>
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
               </div>
             </div>
           </div>
-        </section>
-      </main>
-
-      <style jsx>{`
-        @keyframes scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-
-        @keyframes scroll-reverse {
-          0% {
-            transform: translateX(-50%);
-          }
-          100% {
-            transform: translateX(0);
-          }
-        }
-
-        .animate-scroll {
-          animation: scroll 40s linear infinite;
-        }
-
-        .animate-scroll:hover {
-          animation-play-state: paused;
-        }
-
-        .animate-scroll-reverse {
-          animation: scroll-reverse 40s linear infinite;
-        }
-
-        .animate-scroll-reverse:hover {
-          animation-play-state: paused;
-        }
-      `}</style>
-    </div>
+        </div>
+      </section>
+    </main>
   );
 }
 

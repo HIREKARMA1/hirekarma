@@ -19,6 +19,10 @@ export function getSlideAlt(slide: SlideImage, locale: Locale): string {
   return slide.alt[locale] ?? slide.alt.en;
 }
 
+export function getSlideLabel(slide: SlideImage, locale: Locale): string {
+  return slide.label?.[locale] ?? slide.label?.en ?? "";
+}
+
 export function resolveMediaSrc(path: string): string {
   return resolveAssetPath(path);
 }
