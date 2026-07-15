@@ -22,6 +22,10 @@
       "label": "Work or campus email",
       "placeholder": "you@email.com"
     },
+    "phone": {
+      "label": "Mobile number",
+      "placeholder": "+91 98765 43210"
+    },
     "message": {
       "label": "How can we help?",
       "placeholder": "Partnership, hiring, product demo, careers — tell us briefly…"

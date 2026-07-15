@@ -48,7 +48,7 @@ export default function Footer() {
     <footer className="text-white" style={{ backgroundColor: ink }}>
       <div className="border-b border-white/10">
         <div className="content-container flex flex-col gap-3 py-4 sm:flex-row sm:items-center sm:gap-5 sm:py-5">
-          <p className="shrink-0 text-sm font-medium leading-snug text-white/70 sm:max-w-[200px] lg:max-w-[220px]">
+          <p className="shrink-0 text-sm font-medium leading-snug text-white/85 sm:max-w-[200px] lg:max-w-[220px]">
             {footer.partnersNote}
           </p>
           <PartnersMarquee />
@@ -65,7 +65,7 @@ export default function Footer() {
               height={36}
               className="h-8 w-auto sm:h-9"
             />
-            <p className="max-w-sm text-sm leading-relaxed text-white/60">
+            <p className="max-w-sm text-sm leading-relaxed text-white/85">
               {footer.description}
             </p>
             <div className="flex gap-2">
@@ -76,7 +76,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-white/70 transition hover:border-[#00a2e5] hover:bg-[#00a2e5] hover:text-white"
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-white/85 transition hover:border-[#00a2e5] hover:bg-[#00a2e5] hover:text-white"
                 >
                   <Icon className="h-4 w-4" />
                 </a>
@@ -93,7 +93,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/55 transition hover:text-[#00a2e5]"
+                    className="text-sm text-white/80 transition hover:text-[#00a2e5]"
                   >
                     {link.label}
                   </Link>
@@ -115,7 +115,7 @@ export default function Footer() {
                       href={link.href}
                       target={external ? "_blank" : undefined}
                       rel={external ? "noopener noreferrer" : undefined}
-                      className="text-sm text-white/55 transition hover:text-[#00a2e5]"
+                      className="text-sm text-white/80 transition hover:text-[#00a2e5]"
                     >
                       {link.label}
                     </a>
@@ -133,7 +133,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="text-sm text-white/55 transition hover:text-[#00a2e5]"
+                  className="text-sm text-white/80 transition hover:text-[#00a2e5]"
                 >
                   {footer.contactLink}
                 </Link>
@@ -141,7 +141,7 @@ export default function Footer() {
               <li>
                 <Link
                   href={nav.resources.href}
-                  className="text-sm text-white/55 transition hover:text-[#00a2e5]"
+                  className="text-sm text-white/80 transition hover:text-[#00a2e5]"
                 >
                   {nav.resources.label}
                 </Link>
@@ -149,7 +149,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/resources/faq"
-                  className="text-sm text-white/55 transition hover:text-[#00a2e5]"
+                  className="text-sm text-white/80 transition hover:text-[#00a2e5]"
                 >
                   FAQ
                 </Link>
@@ -157,7 +157,7 @@ export default function Footer() {
               <li>
                 <a
                   href={`mailto:${footer.email}`}
-                  className="inline-flex items-center gap-2 text-sm text-white/55 transition hover:text-[#00a2e5]"
+                  className="inline-flex items-center gap-2 text-sm text-white/80 transition hover:text-[#00a2e5]"
                 >
                   <Mail
                     className="h-3.5 w-3.5"
@@ -169,7 +169,7 @@ export default function Footer() {
               <li>
                 <a
                   href={`tel:${footer.phone.replace(/\s/g, "")}`}
-                  className="inline-flex items-center gap-2 text-sm text-white/55 transition hover:text-[#00a2e5]"
+                  className="inline-flex items-center gap-2 text-sm text-white/80 transition hover:text-[#00a2e5]"
                 >
                   <Phone
                     className="h-3.5 w-3.5"
@@ -182,7 +182,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 flex flex-col gap-3 border-t border-white/10 pt-5 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between sm:text-sm">
+        <div className="mt-8 flex flex-col gap-3 border-t border-white/10 pt-5 text-sm text-white/90 sm:flex-row sm:items-center sm:justify-between">
           <p>{footer.copyright.replace("{year}", year)}</p>
           <div className="flex flex-wrap gap-x-4 gap-y-1">
             <a href="/PrivacyPolicy" className="transition hover:text-[#00a2e5]">

@@ -433,11 +433,11 @@ export default function EcosystemDiagram() {
               animate={{ opacity: 1, scale: 1, x: "-50%", y: "-50%" }}
               transition={{ duration: 0.45, delay: delay + 0.55, ease: easeOut }}
             >
-              <span className="block text-[11px] font-bold leading-tight text-[#0f1622] sm:text-[12px]">
+              <span className="block text-[12px] font-bold leading-tight text-[#0f1622] sm:text-[13px]">
                 {meta.shortLabel}
               </span>
               <span
-                className="mt-1 inline-block rounded-full px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wide"
+                className="mt-1 inline-block rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide"
                 style={{
                   color: primary,
                   backgroundColor: "rgba(27,82,164,0.08)",

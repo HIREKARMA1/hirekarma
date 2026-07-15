@@ -230,7 +230,7 @@ export default function LeadershipProfilesSection() {
             <p className="mt-2 text-sm text-gray-500">{loading}</p>
           </div>
         ) : members.length > 0 ? (
-          <div className={`grid gap-3 sm:gap-4 ${gridClass}`}>
+          <div data-hk-stagger className={`grid gap-3 sm:gap-4 ${gridClass}`}>
             {members.map((member, index) => {
               const tone = tones[index % tones.length];
               const accent = toneColor[tone];
@@ -298,7 +298,7 @@ export default function LeadershipProfilesSection() {
           </div>
         ) : (
           <div className="py-8 text-center">
-            <Users className="mx-auto mb-2 h-8 w-8 text-gray-400" />
+            <Users className="mx-auto mb-2 h-8 w-8 text-gray-600" />
             <h3 className="text-sm font-bold text-gray-700">{emptyTitle}</h3>
             <p className="mt-1 text-xs text-gray-500">{emptyDescription}</p>
           </div>

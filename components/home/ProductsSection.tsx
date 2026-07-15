@@ -16,7 +16,7 @@ export default function ProductsSection() {
       <div className="content-container">
         <div className="max-w-xl">
           <p
-            className="text-[11px] font-semibold uppercase tracking-[0.18em]"
+            className="text-[12px] font-semibold uppercase tracking-[0.18em]"
             style={{ color: theme.colors.secondary }}
           >
             {techShowcase.label}
@@ -41,7 +41,7 @@ export default function ProductsSection() {
                 <div className="grid gap-0 sm:grid-cols-[1.05fr_0.95fr]">
                   <div className="flex flex-col p-5 sm:p-6">
                     <p
-                      className="text-[10px] font-semibold uppercase tracking-[0.14em]"
+                      className="text-[12px] font-semibold uppercase tracking-[0.14em]"
                       style={{ color: product.accent }}
                     >
                       {product.subtitle}
@@ -51,7 +51,7 @@ export default function ProductsSection() {
                     </h3>
                     <p
                       className={`mt-2 flex-1 text-sm leading-relaxed ${
-                        isDark ? "text-white/65" : "text-[#0f1622]/6"
+                        isDark ? "text-white/85" : "text-[#334155]"
                       }`}
                     >
                       {product.description}

@@ -14,7 +14,7 @@ export function ArticleSidebar({ sidebar }: ArticleSidebarProps) {
       <h4 className="text-sm font-bold text-gray-900 dark:text-white">
         {sidebar.shareTitle}
       </h4>
-      <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-white/65">
+      <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-white/90">
         {sidebar.shareDescription}
       </p>
 
@@ -44,7 +44,7 @@ export function ArticleSidebar({ sidebar }: ArticleSidebarProps) {
       <h4 className="text-sm font-bold text-gray-900 dark:text-white">
         {sidebar.relatedTitle}
       </h4>
-      <p className="mt-2 text-sm text-slate-600 dark:text-white/65">
+      <p className="mt-2 text-sm text-slate-600 dark:text-white/90">
         {sidebar.relatedProducts}
       </p>
 
@@ -84,10 +84,10 @@ export function ArticleAuthorBox({ authorBox }: ArticleAuthorBoxProps) {
           <h3 className="font-semibold text-gray-900 dark:text-white">
             {authorBox.name}
           </h3>
-          <p className="text-sm italic text-slate-500 dark:text-white/55">
+          <p className="text-sm italic text-slate-500 dark:text-white/85">
             {authorBox.role}
           </p>
-          <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-white/65">
+          <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-white/90">
             {authorBox.bio}
           </p>
         </div>
@@ -106,7 +106,7 @@ export function ArticleReferences({ references }: ArticleReferencesProps) {
       <h2 className="text-xl font-bold text-gray-900 dark:text-white">
         {references.title}
       </h2>
-      <ol className="mt-4 list-decimal space-y-2 pl-5 text-sm text-slate-600 dark:text-white/60">
+      <ol className="mt-4 list-decimal space-y-2 pl-5 text-sm text-slate-600 dark:text-white/85">
         {references.items.map((item, index) => (
           <li key={index}>{item}</li>
         ))}
@@ -123,7 +123,7 @@ export function ArticleBackLink({ label }: ArticleBackLinkProps) {
   return (
     <Link
       href="/resources"
-      className="inline-flex items-center gap-1 text-sm font-semibold text-slate-500 transition hover:text-[#00a2e5] dark:text-white/60"
+      className="inline-flex items-center gap-1 text-sm font-semibold text-slate-500 transition hover:text-[#00a2e5] dark:text-white/85"
     >
       ← {label}
     </Link>

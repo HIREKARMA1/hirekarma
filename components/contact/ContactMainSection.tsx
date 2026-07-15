@@ -33,6 +33,7 @@ export default function ContactMainSection() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     message: "",
   });
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">(
@@ -59,7 +60,7 @@ export default function ContactMainSection() {
       if (!response.ok) throw new Error("Failed to send message");
 
       setStatus("success");
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ name: "", email: "", phone: "", message: "" });
       toast.success(toasts.success);
     } catch (error: unknown) {
       console.error("Contact form error:", error);
@@ -68,7 +69,7 @@ export default function ContactMainSection() {
   };
 
   const fieldClass =
-    "w-full rounded-xl border border-[#e6e8ec] bg-[#f6f8fb] px-3.5 py-2.5 text-sm text-[#0f1622] outline-none transition placeholder:text-[#0f1622]/35 focus:border-[#00a2e5] focus:bg-white focus:ring-2 focus:ring-[#00a2e5]/20";
+    "w-full rounded-xl border border-[#e6e8ec] bg-[#f6f8fb] px-3.5 py-3 text-[15px] font-medium text-[#0f1622] outline-none transition placeholder:text-[#64748b] focus:border-[#00a2e5] focus:bg-white focus:ring-2 focus:ring-[#00a2e5]/20";
 
   return (
     <section className="bg-white py-8 sm:py-10">
@@ -86,7 +87,9 @@ export default function ContactMainSection() {
               >
                 {form.title}
               </h2>
-              <p className="mt-1 text-sm text-[#0f1622]/55">{form.subtitle}</p>
+              <p className="mt-1.5 text-[15px] leading-relaxed text-[#334155]">
+                {form.subtitle}
+              </p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -94,7 +97,7 @@ export default function ContactMainSection() {
                 <div>
                   <label
                     htmlFor="name"
-                    className="mb-1.5 block text-[12px] font-semibold text-[#0f1622]/70"
+                    className="mb-1.5 block text-sm font-semibold text-[#0f1622]"
                   >
                     {form.name.label}
                   </label>
@@ -112,7 +115,7 @@ export default function ContactMainSection() {
                 <div>
                   <label
                     htmlFor="email"
-                    className="mb-1.5 block text-[12px] font-semibold text-[#0f1622]/70"
+                    className="mb-1.5 block text-sm font-semibold text-[#0f1622]"
                   >
                     {form.email.label}
                   </label>
@@ -129,10 +132,31 @@ export default function ContactMainSection() {
                 </div>
               </div>
 
+              <div className="sm:max-w-[calc(50%-0.5rem)]">
+                <label
+                  htmlFor="phone"
+                  className="mb-1.5 block text-sm font-semibold text-[#0f1622]"
+                >
+                  {form.phone.label}
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                  autoComplete="tel"
+                  inputMode="tel"
+                  className={fieldClass}
+                  placeholder={form.phone.placeholder}
+                />
+              </div>
+
               <div>
                 <label
                   htmlFor="message"
-                  className="mb-1.5 block text-[12px] font-semibold text-[#0f1622]/70"
+                  className="mb-1.5 block text-sm font-semibold text-[#0f1622]"
                 >
                   {form.message.label}
                 </label>
@@ -151,7 +175,7 @@ export default function ContactMainSection() {
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold text-white transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-xl px-5 py-3 text-[15px] font-semibold text-white transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
                 style={{ backgroundColor: theme.colors.primary }}
               >
                 <Send className="h-4 w-4" />
@@ -162,7 +186,7 @@ export default function ContactMainSection() {
                 <p className="text-sm text-red-600">{form.errorInline}</p>
               ) : null}
 
-              <p className="text-[11px] leading-snug text-[#0f1622]/40">
+              <p className="text-sm leading-relaxed text-[#475569]">
                 {form.note}
               </p>
             </form>
@@ -177,10 +201,12 @@ export default function ContactMainSection() {
               >
                 {methods.title}
               </h2>
-              <p className="mt-1 text-sm text-[#0f1622]/55">{methods.subtitle}</p>
+              <p className="mt-1.5 text-[15px] leading-relaxed text-[#334155]">
+                {methods.subtitle}
+              </p>
             </div>
 
-            <div className="space-y-3">
+            <div data-hk-stagger className="space-y-3">
               {methods.methods.map((method) => {
                 const Icon = methodIcons[method.id];
                 const accent = methodAccent[method.id];
@@ -198,25 +224,25 @@ export default function ContactMainSection() {
                       </span>
                       <div className="min-w-0">
                         <h3
-                          className="text-sm font-bold"
+                          className="text-[15px] font-bold"
                           style={{ color: theme.colors.ink }}
                         >
                           {method.title}
                         </h3>
-                        <p className="mt-0.5 text-[12px] text-[#0f1622]/55">
+                        <p className="mt-1 text-sm leading-relaxed text-[#334155]">
                           {method.description}
                         </p>
                         {method.href ? (
                           <a
                             href={method.href}
-                            className="mt-2 inline-flex text-sm font-semibold transition hover:underline"
+                            className="mt-2 inline-flex text-[15px] font-semibold transition hover:underline"
                             style={{ color: accent }}
                           >
                             {method.value}
                           </a>
                         ) : (
                           <p
-                            className="mt-2 text-sm font-semibold leading-snug"
+                            className="mt-2 text-[15px] font-semibold leading-snug"
                             style={{ color: theme.colors.ink }}
                           >
                             {method.value}
@@ -231,7 +257,7 @@ export default function ContactMainSection() {
 
             <Link
               href={methods.officesCta.href}
-              className="inline-flex items-center gap-1.5 text-sm font-semibold transition hover:gap-2"
+              className="inline-flex items-center gap-1.5 text-[15px] font-semibold transition hover:gap-2"
               style={{ color: theme.colors.primary }}
             >
               {methods.officesCta.label}

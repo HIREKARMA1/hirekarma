@@ -108,7 +108,7 @@ export function TestimonialsWithCarousel({
               </div>
 
               <p
-                className="text-[14px] leading-relaxed text-white/75"
+                className="text-[14px] leading-relaxed text-white/90"
                 title={isTruncated ? full : undefined}
               >
                 {display}
@@ -131,7 +131,7 @@ export function TestimonialsWithCarousel({
                   <p className="truncate text-sm font-bold text-white">
                     {testimonial.name}
                   </p>
-                  <p className="mt-0.5 line-clamp-2 text-[11px] leading-snug text-white/50">
+                  <p className="mt-0.5 line-clamp-2 text-xs leading-snug text-white/85">
                     {testimonial.designation}
                   </p>
                 </div>

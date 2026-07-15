@@ -106,7 +106,7 @@ function StoryHeroVisual() {
         {/* Header */}
         <div className="flex items-center justify-between border-b border-white/10 px-4 py-3">
           <div>
-            <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-white/45">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-white/80">
               Origin snapshot
             </p>
             <p className="mt-0.5 text-sm font-bold text-white">How HireKarma started</p>
@@ -123,7 +123,7 @@ function StoryHeroVisual() {
           {/* Founding facts */}
           <div className="grid grid-cols-2 gap-2">
             <div className="rounded-xl border border-white/10 bg-[#0f1622]/55 px-3 py-2.5">
-              <div className="flex items-center gap-1.5 text-white/50">
+              <div className="flex items-center gap-1.5 text-white/85">
                 <MapPin className="h-3.5 w-3.5" style={{ color: theme.colors.secondary }} />
                 <span className="text-[10px] font-semibold uppercase tracking-[0.12em]">
                   {journey.foundedCard.label}
@@ -132,10 +132,10 @@ function StoryHeroVisual() {
               <p className="mt-1 text-[15px] font-bold text-white">
                 {localizeNumerals(journey.foundedCard.value, locale)}
               </p>
-              <p className="text-[11px] text-white/55">{journey.foundedCard.detail}</p>
+              <p className="text-[11px] text-white/85">{journey.foundedCard.detail}</p>
             </div>
             <div className="rounded-xl border border-white/10 bg-[#0f1622]/55 px-3 py-2.5">
-              <div className="flex items-center gap-1.5 text-white/50">
+              <div className="flex items-center gap-1.5 text-white/85">
                 <Target className="h-3.5 w-3.5" style={{ color: theme.colors.orange }} />
                 <span className="text-[10px] font-semibold uppercase tracking-[0.12em]">
                   {journey.focusCard.label}
@@ -144,22 +144,22 @@ function StoryHeroVisual() {
               <p className="mt-1 text-[15px] font-bold text-white">
                 {localizeNumerals(journey.focusCard.value, locale)}
               </p>
-              <p className="text-[11px] text-white/55">{journey.focusCard.detail}</p>
+              <p className="text-[11px] text-white/85">{journey.focusCard.detail}</p>
             </div>
           </div>
 
           <div className="rounded-xl border border-white/10 bg-white/[0.04] px-3 py-2.5">
-            <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-white/45">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-white/80">
               Founders
             </p>
             <div className="mt-1.5 flex flex-wrap items-center gap-2">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-2.5 py-1 text-[12px] font-semibold text-white">
-                <Users className="h-3.5 w-3.5 text-white/70" />
+                <Users className="h-3.5 w-3.5 text-white/90" />
                 {journey.founder1}
               </span>
-              <span className="text-[11px] text-white/35">&</span>
+              <span className="text-[11px] text-white/90">&</span>
               <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-2.5 py-1 text-[12px] font-semibold text-white">
-                <Users className="h-3.5 w-3.5 text-white/70" />
+                <Users className="h-3.5 w-3.5 text-white/90" />
                 {journey.founder2}
               </span>
             </div>
@@ -168,10 +168,10 @@ function StoryHeroVisual() {
           {/* Animated pathway */}
           <div>
             <div className="mb-2 flex items-center justify-between">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-white/45">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-white/80">
                 The pathway we built
               </p>
-              <p className="text-[11px] font-medium text-white/55">
+              <p className="text-[11px] font-medium text-white/85">
                 {activePath.label}: {activePath.detail}
               </p>
             </div>
@@ -187,7 +187,7 @@ function StoryHeroVisual() {
                     className={`relative rounded-xl border px-1.5 py-2.5 text-center transition duration-300 ${
                       active
                         ? "border-transparent text-white shadow-[0_10px_24px_rgba(0,0,0,0.25)]"
-                        : "border-white/10 bg-white/[0.04] text-white/55 hover:bg-white/[0.08]"
+                        : "border-white/10 bg-white/[0.04] text-white/85 hover:bg-white/[0.08]"
                     }`}
                     style={
                       active
@@ -217,7 +217,7 @@ function StoryHeroVisual() {
           {/* Milestone + product row */}
           <div className="grid gap-2 sm:grid-cols-2">
             <div className="rounded-xl border border-white/10 bg-[#0f1622]/55 px-3 py-2.5">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-white/45">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-white/80">
                 Milestone
               </p>
               {activeMilestone ? (
@@ -258,7 +258,7 @@ function StoryHeroVisual() {
             </div>
 
             <div className="rounded-xl border border-white/10 bg-[#0f1622]/55 px-3 py-2.5">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-white/45">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-white/80">
                 Now shipping
               </p>
               <motion.div
@@ -270,7 +270,7 @@ function StoryHeroVisual() {
                 <p className="mt-1 text-[15px] font-bold text-white">
                   {activeProduct.name}
                 </p>
-                <p className="text-[11px] text-white/55">{activeProduct.role}</p>
+                <p className="text-[11px] text-white/85">{activeProduct.role}</p>
               </motion.div>
               <div className="mt-2 flex flex-wrap gap-1">
                 {LIVE_PRODUCTS.map((item, index) => (
@@ -281,7 +281,7 @@ function StoryHeroVisual() {
                     className={`rounded-full px-2 py-0.5 text-[9px] font-semibold transition ${
                       index === product
                         ? "bg-white text-[#0f1622]"
-                        : "bg-white/10 text-white/55 hover:bg-white/15"
+                        : "bg-white/10 text-white/85 hover:bg-white/15"
                     }`}
                   >
                     {item.name}
@@ -302,7 +302,7 @@ function StoryHeroVisual() {
                 <p className="text-sm font-bold text-white sm:text-[15px]">
                   {localizeNumerals(stat.value, locale)}
                 </p>
-                <p className="mt-0.5 text-[9px] leading-tight text-white/50 sm:text-[10px]">
+                <p className="mt-0.5 text-[9px] leading-tight text-white/85 sm:text-[10px]">
                   {stat.label}
                 </p>
               </div>
@@ -352,7 +352,7 @@ function AnimatedPanel({
           >
             {label}
           </p>
-          <div className="mt-1.5 text-sm leading-relaxed text-[#0f1622]/7">
+          <div className="mt-1.5 text-sm leading-relaxed text-[#334155]">
             {children}
           </div>
         </div>
@@ -381,7 +381,7 @@ export function StoryHeroSection() {
         />
       </div>
 
-      <div className="relative content-container pb-8 pt-14 sm:pb-10 lg:pt-16">
+      <div className="relative content-container pb-8 pt-6 sm:pb-10 lg:pt-8">
         <div className="grid items-center gap-7 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-10">
           <div className="min-w-0 space-y-3">
             <p
@@ -396,7 +396,7 @@ export function StoryHeroSection() {
                 highlight={hero.headingHighlight}
               />
             </h1>
-            <p className="max-w-lg text-[13px] leading-relaxed text-white/68 sm:text-sm">
+            <p className="max-w-lg text-[13px] leading-relaxed text-white/90 sm:text-sm">
               {hero.description}
             </p>
             <div className="flex flex-wrap gap-2 pt-1">
@@ -494,7 +494,7 @@ export function StoryNarrativeSection() {
               nowrap: false,
             })}
           </h2>
-          <p className="mt-2 text-[13px] leading-relaxed text-[#0f1622]/62 sm:text-sm">
+          <p className="mt-2 text-[13px] leading-relaxed text-[#334155] sm:text-sm">
             {journey.beforeFounded}
             <HighlightMark>{journey.founded}</HighlightMark>
             {journey.afterFoundedBeforeFounder1}
@@ -522,7 +522,7 @@ export function StoryNarrativeSection() {
                   nowrap: false,
                 })}
               </p>
-              <p className="text-[13px] leading-relaxed text-[#0f1622]/65">
+              <p className="text-[13px] leading-relaxed text-[#334155]">
                 {"fallback" in panel && !panel.body
                   ? panel.fallback
                   : panel.body}
@@ -596,12 +596,12 @@ export function StoryTimelineSection() {
               })}
             </h2>
             {timeline.description ? (
-              <p className="mt-2 text-[13px] leading-relaxed text-[#0f1622]/58 sm:text-sm">
+              <p className="mt-2 text-[13px] leading-relaxed text-[#334155] sm:text-sm">
                 {timeline.description}
               </p>
             ) : null}
           </div>
-          <p className="hidden text-[12px] text-[#0f1622]/45 sm:block">
+          <p className="hidden text-[12px] text-[#475569] sm:block">
             {timeline.items.length} milestones
           </p>
         </div>
@@ -644,7 +644,7 @@ export function StoryTimelineSection() {
 
                     <p
                       className={`mt-3 text-[11px] font-bold uppercase tracking-[0.14em] ${
-                        isActive ? "text-white/55" : ""
+                        isActive ? "text-white/85" : ""
                       }`}
                       style={isActive ? undefined : { color: accent }}
                     >
@@ -659,7 +659,7 @@ export function StoryTimelineSection() {
                     </h3>
                     <p
                       className={`mt-1.5 text-[12px] leading-relaxed ${
-                        isActive ? "text-white/70" : "text-[#0f1622]/58"
+                        isActive ? "text-white/90" : "text-[#334155]"
                       }`}
                     >
                       {item.description}
@@ -708,7 +708,7 @@ export function StoryTimelineSection() {
                   <h3 className="mt-1 text-sm font-bold text-[#0f1622]">
                     {item.title}
                   </h3>
-                  <p className="mt-1 text-[12px] leading-relaxed text-[#0f1622]/6">
+                  <p className="mt-1 text-[12px] leading-relaxed text-[#334155]">
                     {item.description}
                   </p>
                 </div>
@@ -747,7 +747,7 @@ export function StoryCtaSection() {
               <h2 className="text-lg font-bold tracking-tight text-white sm:text-xl">
                 {withHighlightMark(cta.title, cta.titleHighlight)}
               </h2>
-              <p className="mt-1.5 text-[13px] leading-snug text-white/78">
+              <p className="mt-1.5 text-[13px] leading-snug text-white/90">
                 {cta.description}
               </p>
             </div>

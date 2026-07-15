@@ -68,7 +68,7 @@ export function AutoSlideGallery({
       {activeLabel ? (
         <div className="pointer-events-none absolute left-3 top-3 z-10 rounded-md bg-[#0f1622]/75 px-2.5 py-1 text-[11px] font-semibold tracking-wide text-white backdrop-blur-sm sm:left-3.5 sm:top-3.5 sm:text-xs">
           {activeLabel}
-          <span className="ml-1.5 font-medium text-white/55">
+          <span className="ml-1.5 font-medium text-white/85">
             {activeIndex + 1}/{images.length}
           </span>
         </div>

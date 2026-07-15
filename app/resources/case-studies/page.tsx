@@ -54,7 +54,7 @@ function CaseStudiesPageInner() {
             mounted && resolvedTheme === "dark" ? "bg-gray-900" : "bg-white"
           }`}
         >
-          <div className="relative content-container pt-25 pb-8">
+          <div className="relative content-container pt-8 pb-8">
             <div className="text-left">
               <div
                 className={`inline-flex items-center space-x-2 px-4 py-2 rounded-full mb-4 ${
@@ -110,8 +110,8 @@ function CaseStudiesPageInner() {
                   <Search
                     className={`absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 ${
                       mounted && resolvedTheme === "dark"
-                        ? "text-gray-400"
-                        : "text-gray-400"
+                        ? "text-gray-600"
+                        : "text-gray-600"
                     }`}
                   />
                   <input

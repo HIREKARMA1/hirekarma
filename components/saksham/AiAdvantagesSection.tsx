@@ -88,7 +88,7 @@ const AIAdvantageSection: React.FC = () => {
                 <p
                   className={`text-base leading-relaxed ${
                     resolvedTheme === "dark"
-                      ? "text-gray-400"
+                      ? "text-gray-600"
                       : "text-gray-600"
                   }`}
                 >

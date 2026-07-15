@@ -22,7 +22,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { env } from "@/lib/config/env";
-import { LanguageDropdown } from "@/components/layout/LanguageDropdown";
+// import { LanguageDropdown } from "@/components/layout/LanguageDropdown";
 import { useSiteLocale } from "@/contexts/SiteLocaleContext";
 import { theme } from "@/config/theme";
 
@@ -241,7 +241,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
   ];
 
   const linkClass =
-    "relative px-3.5 py-2.5 text-[15px] font-semibold tracking-tight text-[#0f172a] transition-colors duration-200 hover:text-[#fec40d] xl:px-4 xl:text-base";
+    "relative px-3.5 py-2.5 text-base font-semibold tracking-tight text-[#0f172a] transition-colors duration-200 hover:text-[#fec40d] xl:px-4 xl:text-[17px]";
 
   const renderDropdown = (item: NavigationItem, open: boolean) => (
     <div key={item.label} className="relative">
@@ -275,7 +275,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
             }}
           >
             <div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#00a2e5]">
+              <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-[#00a2e5]">
                 Explore
               </p>
               <Link
@@ -289,7 +289,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
             <Link
               href={item.href}
               onClick={closeDropdowns}
-              className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[11px] font-semibold text-[#1b52a4] transition hover:bg-[#1b52a4]/08"
+              className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[12px] font-semibold text-[#1b52a4] transition hover:bg-[#1b52a4]/08"
             >
               View all
               <ArrowRight className="h-3 w-3" />
@@ -319,7 +319,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
                       {dropdownItem.label}
                     </span>
                     {dropdownItem.description ? (
-                      <span className="mt-0.5 block truncate text-[11px] text-[#0f1622]/45">
+                      <span className="mt-0.5 block truncate text-[12px] text-[#475569]">
                         {dropdownItem.description}
                       </span>
                     ) : null}
@@ -348,7 +348,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
             {/* Brand */}
             <Link
               href="/"
-              className="flex min-w-0 flex-col justify-center"
+              className="flex min-w-0 items-center"
               onClick={closeDropdowns}
             >
               <Image
@@ -359,9 +359,9 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
                 className="h-7 w-auto sm:h-8"
                 priority
               />
-              <span className="mt-0.5 hidden text-[10px] font-medium tracking-wide text-[#0f1622]/45 sm:block">
+              {/* <span className="mt-0.5 hidden text-[10px] font-medium tracking-wide text-[#475569] sm:block">
                 {nav.tagline}
-              </span>
+              </span> */}
             </Link>
 
             {/* Center nav */}
@@ -394,17 +394,17 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
             {/* Right actions */}
             <div className="flex items-center justify-end gap-2">
               <div className="hidden items-center gap-2 lg:flex">
-                <LanguageDropdown />
-                <Link
+                {/* <LanguageDropdown /> */}
+                {/* <Link
                   href={nav.secondaryCta.href}
                   className="inline-flex items-center justify-center whitespace-nowrap rounded-lg border border-[#0f1622]/15 bg-white px-3.5 py-2 text-[13px] font-semibold text-[#0f1622] transition hover:border-[#1b52a4]/35 hover:text-[#1b52a4]"
                   onClick={closeDropdowns}
                 >
                   {nav.secondaryCta.label}
-                </Link>
+                </Link> */}
                 <Link
                   href={nav.primaryCta.href}
-                  className="inline-flex items-center justify-center gap-1.5 whitespace-nowrap rounded-lg px-4 py-2 text-[13px] font-semibold text-white shadow-sm transition hover:brightness-110"
+                  className="inline-flex items-center justify-center gap-1.5 whitespace-nowrap rounded-lg px-4 py-2 text-[14px] font-semibold text-white shadow-sm transition hover:brightness-110"
                   style={{ backgroundColor: theme.colors.primary }}
                   onClick={closeDropdowns}
                 >
@@ -414,7 +414,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
               </div>
 
               <div className="flex items-center gap-1.5 lg:hidden">
-                <LanguageDropdown />
+                {/* <LanguageDropdown /> */}
                 <button
                   type="button"
                   aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
@@ -442,9 +442,9 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
           }`}
         >
           <div className="content-container space-y-1 overflow-y-auto py-4 pb-6">
-            <p className="px-3 pb-2 text-[11px] font-medium tracking-wide text-[#0f1622]/45">
+            {/* <p className="px-3 pb-2 text-[11px] font-medium tracking-wide text-[#475569]">
               {nav.tagline}
-            </p>
+            </p> */}
 
             {navEntries.map((entry) => {
               if (entry.type === "link") {
@@ -477,7 +477,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
                   >
                     {item.label}
                     <ChevronDown
-                      className={`h-4 w-4 text-[#0f1622]/45 transition ${
+                      className={`h-4 w-4 text-[#475569] transition ${
                         open ? "rotate-180" : ""
                       }`}
                     />
@@ -510,7 +510,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
                                 {dropdownItem.label}
                               </span>
                               {dropdownItem.description ? (
-                                <span className="block text-[11px] text-[#0f1622]/45">
+                                <span className="block text-[12px] text-[#475569]">
                                   {dropdownItem.description}
                                 </span>
                               ) : null}
@@ -525,13 +525,13 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
             })}
 
             <div className="mt-3 grid gap-2">
-              <Link
+              {/* <Link
                 href={nav.secondaryCta.href}
                 className="flex items-center justify-center rounded-xl border border-[#0f1622]/15 px-4 py-3 text-sm font-semibold text-[#0f1622]"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {nav.secondaryCta.label}
-              </Link>
+              </Link> */}
               <Link
                 href={nav.primaryCta.href}
                 className="inline-flex items-center justify-center gap-1.5 rounded-xl px-4 py-3 text-sm font-semibold text-white"

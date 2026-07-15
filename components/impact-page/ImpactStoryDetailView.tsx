@@ -65,7 +65,7 @@ export function ImpactStoryDetailView({
   return (
     <main className="relative min-h-screen w-full overflow-x-clip bg-[#f6f8fb]">
       {/* Editorial header — same rhythm as blog articles */}
-      <section className="relative bg-white pt-24 pb-8 sm:pt-28 sm:pb-10 lg:pt-32">
+      <section className="relative bg-white pt-8 pb-8 sm:pt-10 sm:pb-10 lg:pt-12">
         <div className="content-container">
           <Link
             href="/impact#browse-stories"
@@ -96,7 +96,7 @@ export function ImpactStoryDetailView({
             {story.tags.map((tag) => (
               <span
                 key={tag}
-                className="rounded-full border border-[#e6e8ec] bg-[#f6f8fb] px-3 py-1 text-[12px] font-semibold text-[#0f1622]/7"
+                className="rounded-full border border-[#e6e8ec] bg-[#f6f8fb] px-3 py-1 text-[12px] font-semibold text-[#334155]"
               >
                 {tag}
               </span>
@@ -201,7 +201,7 @@ export function ImpactStoryDetailView({
                   className="h-8 w-8"
                   style={{ color: theme.colors.primary }}
                 />
-                <blockquote className="mt-3 text-lg leading-relaxed text-[#0f1622]/85 sm:text-xl">
+                <blockquote className="mt-3 text-lg leading-relaxed text-[#0f1622] sm:text-xl">
                   “{story.quote}”
                 </blockquote>
                 <div className="mt-5 flex items-center gap-3">
@@ -263,7 +263,7 @@ export function ImpactStoryDetailView({
                 {story.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-full bg-[#f6f8fb] px-2.5 py-1 text-[11px] font-semibold text-[#0f1622]/7"
+                    className="rounded-full bg-[#f6f8fb] px-2.5 py-1 text-[11px] font-semibold text-[#334155]"
                   >
                     {tag}
                   </span>

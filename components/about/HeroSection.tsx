@@ -20,7 +20,7 @@ const HeroSection: React.FC = () => {
         <div className="absolute bottom-0 left-1/3 h-[280px] w-[280px] rounded-full bg-[#00a2e5]/15 blur-[90px]" />
       </div>
 
-      <div className="relative content-container pb-10 pt-28 sm:pt-32 lg:pb-14 lg:pt-36">
+      <div className="relative content-container pb-10 pt-8 sm:pt-10 lg:pb-14 lg:pt-12">
         <div className="grid min-h-[calc(75vh-7rem)] grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16 xl:gap-20">
           <div className="order-1 space-y-6 text-center lg:order-1 lg:text-left xl:space-y-8">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#00a2e5] sm:text-sm">
@@ -31,7 +31,7 @@ const HeroSection: React.FC = () => {
               {hero.heading}
             </h1>
 
-            <p className="mx-auto max-w-xl text-base leading-relaxed text-white/75 sm:text-lg lg:mx-0">
+            <p className="mx-auto max-w-xl text-base leading-relaxed text-white/90 sm:text-lg lg:mx-0">
               {hero.description}
             </p>
 
@@ -75,14 +75,14 @@ const HeroSection: React.FC = () => {
         </div>
 
         <div className="mt-10 border-t border-white/10 pt-8 lg:mt-14">
-          <p className="mb-5 text-center text-sm text-white/60 lg:text-left">
+          <p className="mb-5 text-center text-sm text-white/85 lg:text-left">
             {hero.partnersNote}
           </p>
 
           <div className="relative overflow-hidden">
             <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-[#0B0028] to-transparent" />
             <div className="pointer-events-none absolute inset-y-0 right-0 z-10 flex w-12 items-center justify-end bg-gradient-to-l from-[#0B0028] to-transparent">
-              <ChevronRight className="h-5 w-5 text-white/50" aria-hidden />
+              <ChevronRight className="h-5 w-5 text-white/85" aria-hidden />
             </div>
 
             <div className="flex w-max animate-partners-scroll-left items-center gap-16 opacity-90">

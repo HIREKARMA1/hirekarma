@@ -20,7 +20,7 @@ const SolutionSection: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative content-container pt-16 pb-32 sm:py-20">
+    <div className="relative content-container pt-8 pb-32 sm:py-20">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 xl:gap-24 items-center">
         <div className="space-y-8 lg:space-y-10 text-center lg:text-left order-1 lg:order-1">
           <div className="space-y-6">

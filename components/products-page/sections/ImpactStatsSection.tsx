@@ -19,7 +19,7 @@ export function ImpactStatsSection() {
           className="mb-6 max-w-2xl space-y-2 sm:mb-8 sm:space-y-3"
         />
 
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-5">
+        <div data-hk-stagger className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-5">
           {impact.stats.map((stat, index) => (
             <StatCard key={stat.id} stat={stat} colorIndex={index} />
           ))}

@@ -71,28 +71,29 @@
       "email": "mailto:swapnajit@hirekarma.in"
     }
   },
+  
   {
     "name": {
-      "en": "SAMBASIVARAO K",
-      "hi": "सम्बाशिवराव के",
-      "od": "ସାମ୍ବାଶିବରାଓ କେ"
+      "en": "Lokanath Panda",
+      "hi": "लोकनाथ पांडा",
+      "od": "ଲୋକନାଥ ପଣ୍ଡା"
     },
     "role": {
-      "en": "Team Lead - Operations",
-      "hi": "टीम लीड - ऑपरेशन्स",
-      "od": "ଟିମ୍ ଲିଡ୍ - ଅପରେସନ୍ସ"
+      "en": "Lead Engineer",
+      "hi": "लीड इंजीनियर",
+      "od": "ଲିଡ୍ ଇଞ୍ଜିନିୟର୍"
     },
     "category": "core",
-    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/sambasivarao.jpg",
+    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/LokanathPanda.jpg",
     "description": {
-      "en": "As branch head, I oversee Bhubaneswar office, guide teams, track.",
-      "hi": "शाखा प्रमुख के रूप में भुवनेश्वर कार्यालय का पर्यवेक्षण, टीम मार्गदर्शन और ट्रैकिंग।",
-      "od": "ଶାଖା ମୁଖ୍ୟ ଭାବରେ ଭୁବନେଶ୍ୱର କାର୍ଯ୍ୟାଳୟ ତଦାରଖ, ଟିମ୍ ମାର୍ଗଦର୍ଶନ ଏବଂ ଟ୍ରାକିଂ।"
+      "en": "Leading the development team with a focus on building scalable softwares, integrating innovative technologies, and ensuring smooth digital transformation for Hirekarma's platform.",
+      "hi": "डेवलपमेंट टीम का नेतृत्व — स्केलेबल सॉफ़्टवेयर निर्माण, नवीन तकनीक एकीकरण, और HireKarma प्लेटफ़ॉर्म के सुचारू डिजिटल ट्रांसफ़ॉर्मेशन पर ध्यान।",
+      "od": "ଡେଭଲପମେଣ୍ଟ ଟିମର ନେତୃତ୍ୱ — ସ୍କେଲେବଲ ସଫ୍ଟୱେର ନିର୍ମାଣ, ନବାଚାର ପ୍ରଯୁକ୍ତି ଏକୀକରଣ, ଏବଂ HireKarma ପ୍ଲାଟଫର୍ମର ସୁଚାରୁ ଡିଜିଟାଲ ରୂପାନ୍ତରଣ ଉପରେ ଧ୍ୟାନ।"
     },
     "socialLinks": {
-      "linkedin": "https://www.linkedin.com/in/shankar-kesanupalli-31a33693/",
-      "instagram": "",
-      "email": "mailto:sambasiva@hirekarma.in"
+      "linkedin": "https://www.linkedin.com/in/lokanath-panda-642193238/",
+      "instagram": "https://www.instagram.com/lokanathpanda7/",
+      "email": "mailto:lokanath@hirekarma.in"
     }
   },
   {
@@ -117,30 +118,6 @@
       "linkedin": "",
       "instagram": "",
       "email": "mailto:gcdey98@gmail.com"
-    }
-  },
-  {
-    "name": {
-      "en": "Lokanath Panda",
-      "hi": "लोकनाथ पांडा",
-      "od": "ଲୋକନାଥ ପଣ୍ଡା"
-    },
-    "role": {
-      "en": "Lead Engineer",
-      "hi": "लीड इंजीनियर",
-      "od": "ଲିଡ୍ ଇଞ୍ଜିନିୟର୍"
-    },
-    "category": "core",
-    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/LokanathPanda.jpg",
-    "description": {
-      "en": "Leading the development team with a focus on building scalable softwares, integrating innovative technologies, and ensuring smooth digital transformation for Hirekarma's platform.",
-      "hi": "डेवलपमेंट टीम का नेतृत्व — स्केलेबल सॉफ़्टवेयर निर्माण, नवीन तकनीक एकीकरण, और HireKarma प्लेटफ़ॉर्म के सुचारू डिजिटल ट्रांसफ़ॉर्मेशन पर ध्यान।",
-      "od": "ଡେଭଲପମେଣ୍ଟ ଟିମର ନେତୃତ୍ୱ — ସ୍କେଲେବଲ ସଫ୍ଟୱେର ନିର୍ମାଣ, ନବାଚାର ପ୍ରଯୁକ୍ତି ଏକୀକରଣ, ଏବଂ HireKarma ପ୍ଲାଟଫର୍ମର ସୁଚାରୁ ଡିଜିଟାଲ ରୂପାନ୍ତରଣ ଉପରେ ଧ୍ୟାନ।"
-    },
-    "socialLinks": {
-      "linkedin": "https://www.linkedin.com/in/lokanath-panda-642193238/",
-      "instagram": "https://www.instagram.com/lokanathpanda7/",
-      "email": "mailto:lokanath@hirekarma.in"
     }
   },
   {
@@ -178,7 +155,7 @@
       "hi": "हेड, कैंपस ड्राइव",
       "od": "ହେଡ୍, କ୍ୟାମ୍ପସ୍ ଡ୍ରାଇଭ୍"
     },
-    "category": "leadership",
+    "category": "core",
     "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Sagarika+Padhy.jpg",
     "description": {
       "en": "Leads campus hiring and college partnerships that turn relationships into placements.",
@@ -189,6 +166,30 @@
       "linkedin": "https://www.linkedin.com/in/shankar-kesanupalli-31a33693/",
       "instagram": "",
       "email": "mailto:sushree@hirekarma.in"
+    }
+  },
+  {
+    "name": {
+      "en": "Shiladitya Sinha",
+      "hi": "शिलादित्य सिन्हा",
+      "od": "ଶିଳାଦିତ୍ୟ ସିନ୍ହା"
+    },
+    "role": {
+      "en": "Lead Training Division",
+      "hi": "लीड ट्रेनिंग डिवीजन",
+      "od": "ଲିଡ୍ ଟ୍ରେନିଂ ଡିଭିଜନ୍"
+    },
+    "category": "core",
+    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Siladitya-sinha.jpeg",
+    "description": {
+      "en": "Heading the team for pre-placement training and leading activity to transform freshers.",
+      "hi": "प्री-प्लेसमेंट ट्रेनिंग टीम का नेतृत्व और फ्रेशर ट्रांसफ़ॉर्मेशन गतिविधियों का संचालन।",
+      "od": "ପ୍ରି-ପ୍ଲେସମେଣ୍ଟ ଟ୍ରେନିଂ ଟିମର ନେତୃତ୍ୱ ଏବଂ ଫ୍ରେଶର ରୂପାନ୍ତରଣ କାର୍ଯ୍ୟକଳାପର ପରିଚାଳନା।"
+    },
+    "socialLinks": {
+      "linkedin": "https://www.linkedin.com/in/shiladitya-sinha-5aa68495/",
+      "instagram": "",
+      "email": "mailto:shiladitya.sinha@hirekarma.in"
     }
   },
   {

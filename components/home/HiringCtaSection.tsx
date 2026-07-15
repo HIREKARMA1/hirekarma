@@ -37,7 +37,7 @@ export default function HiringCtaSection() {
                   hiringCta.headingHighlight
                 )}
               </h2>
-              <p className="mt-2 text-sm leading-snug text-white/80">
+              <p className="mt-2 text-sm leading-snug text-white/85">
                 {hiringCta.description}
               </p>
             </div>

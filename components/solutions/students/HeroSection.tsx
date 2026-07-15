@@ -17,7 +17,7 @@ const HeroSection: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative content-container pt-20 pb-20">
+    <div className="relative content-container pt-8 pb-20">
       <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center min-h-[85vh]">
         <div className="space-y-8 lg:space-y-10">
           <div

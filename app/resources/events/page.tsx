@@ -48,7 +48,7 @@ function EventsPageInner() {
             mounted && resolvedTheme === "dark" ? "bg-gray-900" : "bg-white"
           }`}
         >
-          <div className="relative content-container pt-20 pb-8">
+          <div className="relative content-container pt-8 pb-8">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div className="space-y-2 lg:space-y-1">
                 <div className="space-y-4">
@@ -85,8 +85,8 @@ function EventsPageInner() {
                   <Search
                     className={`absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 ${
                       mounted && resolvedTheme === "dark"
-                        ? "text-gray-400"
-                        : "text-gray-400"
+                        ? "text-gray-600"
+                        : "text-gray-600"
                     }`}
                   />
                   <input
@@ -180,7 +180,7 @@ function EventsPageInner() {
                     <div
                       className={`flex items-center gap-4 text-sm mb-4 ${
                         mounted && resolvedTheme === "dark"
-                          ? "text-gray-400"
+                          ? "text-gray-600"
                           : "text-gray-500"
                       }`}
                     >
@@ -287,7 +287,7 @@ function EventsPageInner() {
                     <div
                       className={`flex items-center gap-3 text-xs mb-3 ${
                         mounted && resolvedTheme === "dark"
-                          ? "text-gray-400"
+                          ? "text-gray-600"
                           : "text-gray-500"
                       }`}
                     >

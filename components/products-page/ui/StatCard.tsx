@@ -47,7 +47,7 @@ export function StatCard({ stat, colorIndex }: StatCardProps) {
         className="text-xl font-bold tabular-nums tracking-tight sm:text-2xl lg:text-3xl"
         style={{ color }}
       />
-      <p className="mt-1.5 text-[11px] font-medium leading-snug text-slate-600 sm:text-xs dark:text-white/60 sm:dark:text-white/55">
+      <p className="mt-1.5 text-xs font-medium leading-snug text-slate-700 sm:text-sm dark:text-white/85">
         {stat.label}
       </p>
     </div>

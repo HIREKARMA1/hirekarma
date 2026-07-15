@@ -16,7 +16,7 @@ export default function DpiSection() {
       <div className="content-container">
         <div className="max-w-2xl">
           <p
-            className="text-[11px] font-semibold uppercase tracking-[0.18em]"
+            className="text-[12px] font-semibold uppercase tracking-[0.18em]"
             style={{ color: theme.colors.secondary }}
           >
             {dpi.label}
@@ -24,7 +24,7 @@ export default function DpiSection() {
           <h2 className="mt-2 text-2xl font-bold tracking-tight text-[#0f1622] sm:text-[1.85rem]">
             {dpi.heading}
           </h2>
-          <p className="mt-2 text-sm leading-relaxed text-[#0f1622]/6">
+          <p className="mt-2 text-sm leading-relaxed text-[#334155]">
             {dpi.description}
           </p>
           <Link
@@ -53,7 +53,7 @@ export default function DpiSection() {
                 />
               </div>
               <h3 className="text-sm font-bold text-[#0f1622]">{partner.name}</h3>
-              <p className="mt-1 text-[13px] leading-snug text-[#0f1622]/6">
+              <p className="mt-1 text-[14px] leading-snug text-[#475569]">
                 {partner.description}
               </p>
             </div>

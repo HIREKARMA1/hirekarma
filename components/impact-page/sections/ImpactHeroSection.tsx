@@ -53,7 +53,7 @@ export function ImpactHeroSection() {
         />
       </div>
 
-      <div className="relative content-container pb-8 pt-16 lg:pb-10 lg:pt-20">
+      <div className="relative content-container pb-8 pt-6 lg:pb-10 lg:pt-8">
         <div className="flex flex-col items-start gap-5 lg:flex-row lg:items-center lg:gap-5 xl:gap-6">
           <div className="min-w-0 flex-1 space-y-4">
             <p
@@ -68,7 +68,7 @@ export function ImpactHeroSection() {
               <span style={{ color: accent }}>{hero.headingAccent}</span>
             </h1>
 
-            <p className="max-w-2xl whitespace-pre-line text-sm leading-snug text-white/70 sm:text-[15px]">
+            <p className="max-w-2xl whitespace-pre-line text-sm leading-snug text-white/90 sm:text-[15px]">
               {hero.description}
             </p>
 
@@ -90,7 +90,7 @@ export function ImpactHeroSection() {
               </Link>
             </div>
 
-            <div className="flex items-start gap-2.5 pt-1 text-sm text-white/55">
+            <div className="flex items-start gap-2.5 pt-1 text-sm text-white/85">
               <span
                 className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full"
                 style={{ backgroundColor: "rgba(0,162,229,0.15)" }}
@@ -105,7 +105,7 @@ export function ImpactHeroSection() {
           <div className="w-full shrink-0 sm:mx-auto sm:max-w-[400px] lg:mx-0 lg:w-[min(100%,400px)] xl:w-[420px]">
             <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#121826] p-3 shadow-[0_24px_60px_rgba(0,0,0,0.35)]">
               <div className="rounded-xl bg-[#0d121c] p-3.5 sm:p-4">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-white/45">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-white/80">
                   {hero.overviewTitle}
                 </p>
 
@@ -121,14 +121,14 @@ export function ImpactHeroSection() {
                       >
                         {stat.value}
                       </p>
-                      <p className="mt-1 text-[10px] leading-snug text-white/50">
+                      <p className="mt-1 text-[10px] leading-snug text-white/85">
                         {stat.label}
                       </p>
                     </div>
                   ))}
                 </div>
 
-                <p className="mt-3.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-white/40">
+                <p className="mt-3.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-white/90">
                   {hero.divisionsTitle}
                 </p>
                 <div className="mt-2 grid grid-cols-3 gap-1.5">
@@ -143,7 +143,7 @@ export function ImpactHeroSection() {
                           className="mx-auto h-3.5 w-3.5"
                           style={{ color: accent }}
                         />
-                        <p className="mt-1 truncate text-[9px] text-white/55">
+                        <p className="mt-1 truncate text-[9px] text-white/85">
                           {div.label}
                         </p>
                         <p className="text-[11px] font-bold text-white">
@@ -154,14 +154,14 @@ export function ImpactHeroSection() {
                   })}
                 </div>
 
-                <p className="mt-3.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-white/40">
+                <p className="mt-3.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-white/90">
                   {hero.snapshotTitle}
                 </p>
                 <div className="mt-2 flex flex-wrap gap-1.5">
                   {hero.snapshotStats.map((stat) => (
                     <span
                       key={stat.id}
-                      className="rounded-full border border-white/10 bg-white/[0.03] px-2 py-1 text-[10px] text-white/65"
+                      className="rounded-full border border-white/10 bg-white/[0.03] px-2 py-1 text-[10px] text-white/90"
                     >
                       <span className="font-bold text-white">{stat.value}</span>{" "}
                       {stat.label}

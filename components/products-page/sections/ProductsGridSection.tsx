@@ -20,12 +20,12 @@ export function ProductsGridSection() {
         />
 
         {productsSection.description ? (
-          <p className="-mt-3 mb-6 max-w-2xl text-sm leading-snug text-[#0f1622]/55 sm:-mt-4 sm:mb-7">
+          <p className="-mt-3 mb-6 max-w-2xl text-base leading-relaxed text-[#334155] sm:-mt-4 sm:mb-7">
             {productsSection.description}
           </p>
         ) : null}
 
-        <div className="grid grid-cols-1 items-stretch gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div data-hk-stagger className="grid grid-cols-1 items-stretch gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
           {productsSection.items.map((product) => (
             <ProductDetailCard key={product.id} product={product} />
           ))}

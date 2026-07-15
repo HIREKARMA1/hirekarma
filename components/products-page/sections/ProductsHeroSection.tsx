@@ -27,12 +27,12 @@ export function ProductsHeroSection() {
 
   return (
     <section className="relative w-full overflow-hidden">
-      <div className="relative z-10 content-container pb-5 pt-16 lg:pb-6 lg:pt-[4.5rem]">
+      <div className="relative z-10 content-container pb-5 pt-6 lg:pb-6 lg:pt-8">
         <div className="flex flex-col items-start gap-5 lg:flex-row lg:items-center lg:gap-6 xl:gap-8">
           {/* Copy */}
           <div className="min-w-0 flex-1 space-y-3.5 lg:max-w-[42rem]">
             <p
-              className="text-[10px] font-semibold uppercase tracking-[0.18em]"
+              className="text-xs font-semibold uppercase tracking-[0.16em]"
               style={{ color: theme.colors.secondary }}
             >
               {hero.label}
@@ -48,7 +48,7 @@ export function ProductsHeroSection() {
               ) : null}
             </h1>
 
-            <p className="max-w-xl text-sm leading-snug text-[#0f1622]/65">
+            <p className="max-w-xl text-base leading-relaxed text-[#334155]">
               {hero.description}
             </p>
 
@@ -64,12 +64,12 @@ export function ProductsHeroSection() {
               />
             </div>
 
-            <div className="flex items-start gap-2 pt-0.5 text-xs text-[#0f1622]/55">
+            <div className="flex items-start gap-2 pt-0.5 text-sm text-[#475569]">
               <Users
-                className="mt-0.5 h-3.5 w-3.5 shrink-0"
+                className="mt-0.5 h-4 w-4 shrink-0"
                 style={{ color: theme.colors.secondary }}
               />
-              <p className="leading-snug">{hero.footerNote}</p>
+              <p className="leading-relaxed">{hero.footerNote}</p>
             </div>
           </div>
 

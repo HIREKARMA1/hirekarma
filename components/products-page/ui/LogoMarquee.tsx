@@ -68,7 +68,7 @@ export function LogoMarquee({
       />
 
       <div
-        className={cn("flex w-max items-center", gap, animationClass)}
+        className={cn("hk-marquee-track flex w-max items-center", gap, animationClass)}
         style={{
           animationDuration: `${speedSeconds}s`,
           animationPlayState: isPaused ? "paused" : "running",

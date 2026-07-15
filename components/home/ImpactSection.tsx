@@ -36,7 +36,7 @@ export default function ImpactSection() {
                   <p className="text-xl font-bold leading-none tracking-tight text-white sm:text-2xl">
                     {item.value}
                   </p>
-                  <p className="mt-1.5 text-[12px] leading-snug text-white/65 sm:text-[13px]">
+                  <p className="mt-1.5 text-[12px] leading-snug text-white/90 sm:text-[13px]">
                     {item.label}
                   </p>
                 </div>

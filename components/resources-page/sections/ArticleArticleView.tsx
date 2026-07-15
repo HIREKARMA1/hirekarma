@@ -18,7 +18,7 @@ interface ArticleArticleViewProps {
 export function ArticleArticleView({ article }: ArticleArticleViewProps) {
   return (
     <>
-      <section className="relative pt-24 pb-10 sm:pt-28 lg:pt-32">
+      <section className="relative pt-8 pb-10 sm:pt-10 lg:pt-12">
         <div className="relative z-10 content-container">
           <ArticleBackLink label={article.hero.backLink} />
 
@@ -26,7 +26,7 @@ export function ArticleArticleView({ article }: ArticleArticleViewProps) {
             {article.hero.title}
           </h1>
 
-          <div className="mt-5 flex flex-wrap items-center gap-4 text-sm text-slate-600 dark:text-white/60">
+          <div className="mt-5 flex flex-wrap items-center gap-4 text-sm text-slate-600 dark:text-white/85">
             <div className="flex items-center gap-3">
               <span
                 className="grid size-10 place-items-center rounded-full text-xs font-bold text-white"

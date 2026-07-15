@@ -52,7 +52,7 @@ export function LanguageDropdown({ className }: LanguageDropdownProps) {
         aria-label={content.nav.language}
         onClick={() => setOpen((value) => !value)}
         className={cn(
-          "inline-flex items-center gap-1.5 rounded-lg px-2.5 py-2 text-[13px] font-semibold text-[#0f1622]/70 transition hover:bg-[#f6f8fb] hover:text-[#1b52a4]",
+          "inline-flex items-center gap-1.5 rounded-lg px-2.5 py-2 text-[13px] font-semibold text-[#334155] transition hover:bg-[#f6f8fb] hover:text-[#1b52a4]",
           open && "bg-[#f6f8fb] text-[#1b52a4]"
         )}
       >
@@ -87,7 +87,7 @@ export function LanguageDropdown({ className }: LanguageDropdownProps) {
                     "flex w-full items-center justify-between gap-3 rounded-lg px-3 py-2 text-left text-sm font-medium transition-colors",
                     active
                       ? "bg-[#e8f6fc] text-[#1b52a4]"
-                      : "text-[#0f1622]/75 hover:bg-[#f6f8fb] hover:text-[#1b52a4]"
+                      : "text-[#334155] hover:bg-[#f6f8fb] hover:text-[#1b52a4]"
                   )}
                 >
                   <span>{LOCALE_LABELS[code]}</span>

@@ -24,7 +24,7 @@ function FilterPill({
       className={`rounded-full border px-3 py-1.5 text-[12px] font-semibold transition ${
         active
           ? "border-transparent text-white"
-          : "border-[#e6e8ec] bg-white text-[#0f1622]/70 hover:border-[#00a2e5]/40"
+          : "border-[#e6e8ec] bg-white text-[#334155] hover:border-[#00a2e5]/40"
       }`}
       style={
         active
@@ -69,7 +69,7 @@ export function ImpactBrowseSection() {
 
         <div className="mt-6 space-y-3">
           <div>
-            <p className="mb-2 text-[11px] font-semibold uppercase tracking-wide text-[#0f1622]/45">
+            <p className="mb-2 text-[11px] font-semibold uppercase tracking-wide text-[#475569]">
               {browse.divisionFiltersLabel}
             </p>
             <div className="flex flex-wrap gap-2">
@@ -84,7 +84,7 @@ export function ImpactBrowseSection() {
             </div>
           </div>
           <div>
-            <p className="mb-2 text-[11px] font-semibold uppercase tracking-wide text-[#0f1622]/45">
+            <p className="mb-2 text-[11px] font-semibold uppercase tracking-wide text-[#475569]">
               {browse.typeFiltersLabel}
             </p>
             <div className="flex flex-wrap gap-2">
@@ -101,7 +101,7 @@ export function ImpactBrowseSection() {
         </div>
 
         {stories.length === 0 ? (
-          <p className="mt-10 text-sm text-[#0f1622]/55">{browse.empty}</p>
+          <p className="mt-10 text-sm text-[#475569]">{browse.empty}</p>
         ) : (
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {stories.map((story) => (
@@ -134,11 +134,11 @@ export function ImpactBrowseSection() {
                   <h3 className="text-[1.05rem] font-bold tracking-tight text-[#0f1622]">
                     {story.title}
                   </h3>
-                  <p className="mt-1 flex items-center gap-1 text-[12px] text-[#0f1622]/50">
+                  <p className="mt-1 flex items-center gap-1 text-[12px] text-[#475569]0">
                     <MapPin className="h-3 w-3 shrink-0" style={{ color: accent }} />
                     {story.location}
                   </p>
-                  <p className="mt-2 line-clamp-3 text-[13px] leading-snug text-[#0f1622]/60">
+                  <p className="mt-2 line-clamp-3 text-[13px] leading-snug text-[#334155]">
                     {story.summary}
                   </p>
                   <Link

@@ -52,7 +52,7 @@ function TestimonialCard({ item }: { item: HomeTestimonialItem }) {
         <div className="relative z-10 flex h-full flex-col">
           <div className="mb-4 flex items-center gap-3.5">
             <div
-              className="relative grid h-14 w-14 shrink-0 place-items-center overflow-hidden rounded-full border-2 text-[13px] font-bold text-sky-100"
+              className="relative grid h-14 w-14 shrink-0 place-items-center overflow-hidden rounded-full border-2 text-[14px] font-bold text-sky-100"
               style={{
                 borderColor: "rgba(0,162,229,0.35)",
                 background:
@@ -78,7 +78,7 @@ function TestimonialCard({ item }: { item: HomeTestimonialItem }) {
           <p className="mt-0.5 truncate text-[13px] text-white/90">
                         {item.designation}
                       </p>
-              <p className="mt-0.5 truncate text-[13px] text-white/45">
+              <p className="mt-0.5 truncate text-[13px] text-white/80">
                 {item.institution}
               </p>
             </div>
@@ -86,7 +86,7 @@ function TestimonialCard({ item }: { item: HomeTestimonialItem }) {
 
           <div className="min-h-0 flex-1 border-t border-white/10 pt-4">
             <p
-              className="text-sm leading-relaxed text-white/70"
+              className="text-sm leading-relaxed text-white/85"
               style={{
                 display: "-webkit-box",
                 WebkitBoxOrient: "vertical",
@@ -148,7 +148,7 @@ export default function Testimonials() {
                 )}
               </span>
             </h2>
-            <p className="mx-auto mt-2 max-w-2xl text-sm leading-relaxed text-white/60">
+            <p className="mx-auto mt-2 max-w-2xl text-sm leading-relaxed text-white/85">
               {testimonials.description}
             </p>
           </div>

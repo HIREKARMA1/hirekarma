@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import footerPartners from "@/data/footer-partners.json";
 import { theme } from "@/config/theme";
@@ -81,21 +81,65 @@ function PartnerLogo({
 
 /**
  * Horizontal partners marquee — logo only.
- * Add companies in `data/footer-partners.json` (+ logo file under /public/partners).
+ * RAF-driven so scroll-reveal / CSS transforms cannot freeze it.
  */
 export default function PartnersMarquee({
   partners = footerPartners as FooterPartner[],
   edgeColor = theme.colors.ink,
-  baseSpeedSeconds = 8,
+  baseSpeedSeconds = 5,
   durationSeconds,
   uniformChips = false,
 }: PartnersMarqueeProps) {
   const [paused, setPaused] = useState(false);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const firstSetRef = useRef<HTMLDivElement>(null);
+  const pausedRef = useRef(false);
+  const offsetRef = useRef(0);
+
+  pausedRef.current = paused;
+
+  const speedSeconds = Math.min(
+    55,
+    durationSeconds ?? Math.max(28, partners.length * baseSpeedSeconds)
+  );
+
+  useEffect(() => {
+    const track = trackRef.current;
+    const firstSet = firstSetRef.current;
+    if (!track || !firstSet || !partners.length) return;
+
+    let raf = 0;
+    let last = performance.now();
+
+    const tick = (now: number) => {
+      const dt = Math.min(48, now - last);
+      last = now;
+
+      if (!pausedRef.current) {
+        const setWidth = firstSet.offsetWidth;
+        if (setWidth > 0) {
+          // gap-2 / sm:gap-2.5 between the duplicated sets
+          const gap =
+            typeof window !== "undefined" && window.matchMedia("(min-width: 640px)").matches
+              ? 10
+              : 8;
+          const loopWidth = setWidth + gap;
+          offsetRef.current -= (dt / 1000) * (loopWidth / speedSeconds);
+          if (offsetRef.current <= -loopWidth) {
+            offsetRef.current += loopWidth;
+          }
+          track.style.transform = `translate3d(${offsetRef.current}px,0,0)`;
+        }
+      }
+
+      raf = requestAnimationFrame(tick);
+    };
+
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [partners, speedSeconds]);
 
   if (!partners.length) return null;
-
-  const speedSeconds =
-    durationSeconds ?? Math.max(24, partners.length * baseSpeedSeconds);
 
   return (
     <div
@@ -129,16 +173,13 @@ export default function PartnersMarquee({
       ) : null}
 
       <div
-        className="flex w-max animate-partners-scroll-left items-center gap-2 sm:gap-2.5"
-        style={{
-          animationDuration: `${speedSeconds}s`,
-          animationPlayState: paused ? "paused" : "running",
-          transform: "translateZ(0)",
-        }}
+        ref={trackRef}
+        className="hk-marquee-track flex w-max items-center gap-2 will-change-transform sm:gap-2.5"
       >
         {[0, 1].map((copy) => (
           <div
             key={copy}
+            ref={copy === 0 ? firstSetRef : undefined}
             className="flex items-center gap-2 sm:gap-2.5"
             aria-hidden={copy === 1}
           >

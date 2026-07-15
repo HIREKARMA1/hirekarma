@@ -40,12 +40,12 @@ const categoryAccents: Record<string, string> = {
 const helpCardMeta = [
   {
     Icon: MessageCircle,
-    href: "/contact",
+    href: "https://wa.me/919124364764",
     accent: theme.colors.secondary,
   },
   {
     Icon: Mail,
-    href: "mailto:info@hirekarma.in",
+    href: "/contact",
     accent: theme.colors.primary,
   },
   {
@@ -120,10 +120,10 @@ function FAQPageInner() {
           />
         </div>
 
-        <div className="relative content-container pb-12 pt-16 lg:pb-14 lg:pt-20">
+        <div className="relative content-container pb-12 pt-6 lg:pb-14 lg:pt-8">
           <div className="grid items-end gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:gap-12">
             <div>
-              <div className="flex flex-wrap items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/45">
+              <div className="flex flex-wrap items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/80">
                 <Link href="/resources" className="transition hover:text-white/80">
                   Resources
                 </Link>
@@ -134,11 +134,11 @@ function FAQPageInner() {
               <h1 className="mt-4 max-w-xl text-[2rem] font-bold leading-[1.12] tracking-tight text-white sm:text-[2.5rem] lg:text-[2.75rem]">
                 {withHighlightMark(faq.title, faq.titleHighlight)}
               </h1>
-              <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/65 sm:text-[15px]">
+              <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/90 sm:text-[15px]">
                 {faq.description}
               </p>
 
-              <div className="mt-6 flex flex-wrap gap-4 text-sm text-white/55">
+              <div className="mt-6 flex flex-wrap gap-4 text-sm text-white/85">
                 <span className="inline-flex items-center gap-2">
                   <span
                     className="h-1.5 w-1.5 rounded-full"
@@ -161,17 +161,17 @@ function FAQPageInner() {
                 {faq.searchPlaceholder}
               </label>
               <div className="relative">
-                <Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-[#0f1622]/4" />
+                <Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-[#64748b]" />
                 <input
                   id="faq-search"
                   type="search"
                   placeholder={faq.searchPlaceholder}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full rounded-xl border border-transparent bg-white py-3.5 pl-10 pr-4 text-sm text-[#0f1622] outline-none placeholder:text-[#0f1622]/4 focus:border-[#00a2e5]/40"
+                  className="w-full rounded-xl border border-transparent bg-white py-3.5 pl-10 pr-4 text-sm text-[#0f1622] outline-none placeholder:text-[#64748b] focus:border-[#00a2e5]/40"
                 />
               </div>
-              <p className="mt-3 text-xs text-white/45">
+              <p className="mt-3 text-xs text-white/80">
                 Tip: try “assessment”, “pricing”, or “integration”.
               </p>
             </div>
@@ -186,7 +186,7 @@ function FAQPageInner() {
             {/* Category rail */}
             <aside className="lg:sticky lg:top-24 lg:self-start">
               <div className="rounded-2xl border border-[#e6e8ec] bg-white p-3 sm:p-4">
-                <p className="px-2 pb-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#0f1622]/4">
+                <p className="px-2 pb-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#64748b]">
                   Browse by audience
                 </p>
                 <div className="flex gap-2 overflow-x-auto pb-1 lg:flex-col lg:overflow-visible lg:pb-0">
@@ -218,7 +218,7 @@ function FAQPageInner() {
                           </span>
                           <span
                             className={`mt-0.5 block text-[11px] ${
-                              active ? "text-white/55" : "text-[#0f1622]/45"
+                              active ? "text-white/85" : "text-[#475569]"
                             }`}
                           >
                             {category.faqs.length} questions
@@ -294,7 +294,7 @@ function FAQPageInner() {
                             className={`mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition ${
                               isOpen
                                 ? "text-white"
-                                : "bg-[#f6f8fb] text-[#0f1622]/5"
+                                : "bg-[#f6f8fb] text-[#475569]"
                             }`}
                             style={
                               isOpen
@@ -317,7 +317,7 @@ function FAQPageInner() {
                         >
                           <div className="overflow-hidden">
                             <div className="border-t border-[#e6e8ec] px-4 pb-5 pt-0 sm:px-5 sm:pb-6">
-                              <p className="ml-0 pl-0 text-sm leading-relaxed text-[#0f1622]/65 sm:ml-11 sm:pl-1">
+                              <p className="ml-0 pl-0 text-sm leading-relaxed text-[#334155] sm:ml-11 sm:pl-1">
                                 {item.answer}
                               </p>
                             </div>
@@ -336,7 +336,7 @@ function FAQPageInner() {
                   <p className="mt-4 text-base font-semibold text-[#0f1622]">
                     {faq.emptyTitle}
                   </p>
-                  <p className="mt-1 text-sm text-[#0f1622]/5">{faq.emptyHint}</p>
+                  <p className="mt-1 text-sm text-[#475569]">{faq.emptyHint}</p>
                   <button
                     type="button"
                     onClick={() => setSearchQuery("")}
@@ -376,11 +376,14 @@ function FAQPageInner() {
             {faq.stillNeedHelp.cards.map((card, index) => {
               const meta = helpCardMeta[index] ?? helpCardMeta[0];
               const Icon = meta.Icon;
+              const isExternal = meta.href.startsWith("http");
 
               return (
                 <Link
                   key={card.title}
                   href={meta.href}
+                  target={isExternal ? "_blank" : undefined}
+                  rel={isExternal ? "noopener noreferrer" : undefined}
                   className="group flex items-start gap-4 rounded-2xl border border-[#e6e8ec] bg-[#f8f9fb] p-5 transition hover:border-[#00a2e5]/35 hover:bg-white hover:shadow-[0_12px_32px_rgba(15,22,34,0.06)]"
                 >
                   <span
@@ -394,9 +397,9 @@ function FAQPageInner() {
                       <span className="text-base font-bold text-[#0f1622]">
                         {card.title}
                       </span>
-                      <ArrowRight className="h-4 w-4 shrink-0 text-[#0f1622]/3 transition group-hover:translate-x-0.5 group-hover:text-[#00a2e5]" />
+                      <ArrowRight className="h-4 w-4 shrink-0 text-[#64748b] transition group-hover:translate-x-0.5 group-hover:text-[#00a2e5]" />
                     </span>
-                    <span className="mt-1 block text-sm leading-relaxed text-[#0f1622]/6">
+                    <span className="mt-1 block text-[15px] leading-relaxed text-[#334155]">
                       {card.description}
                     </span>
                     <span

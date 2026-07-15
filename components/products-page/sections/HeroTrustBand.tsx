@@ -9,7 +9,7 @@ export function HeroTrustBand() {
 
   return (
     <div className="flex min-w-0 flex-col gap-3 sm:flex-row sm:items-center sm:gap-5">
-      <p className="w-full shrink-0 text-left text-sm font-medium leading-snug text-[#0f1622]/55 sm:max-w-[200px] lg:max-w-[220px]">
+      <p className="w-full shrink-0 text-left text-[15px] font-medium leading-relaxed text-[#334155] sm:max-w-[200px] lg:max-w-[220px]">
         {content.partners.text}
       </p>
       <PartnersMarquee edgeColor="#ffffff" />

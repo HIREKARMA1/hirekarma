@@ -1,10 +1,5 @@
-import { Loader } from "@/components/shortlisted/ui/loader"
+﻿import { PageLoader } from "@/components/shared/PageLoader";
 
 export default function Loading() {
-    return (
-        <div className="fixed inset-0 flex items-center justify-center bg-white dark:bg-[#1a1f2e] z-50">
-            <Loader size="lg" className="border-[#00a2e5] border-t-transparent" />
-        </div>
-    )
+  return <PageLoader label="Loading" />;
 }
-

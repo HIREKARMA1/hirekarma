@@ -13,7 +13,7 @@ export function ImpactPartnersBand() {
   return (
     <div style={{ backgroundColor: theme.colors.ink }}>
       <div className="content-container flex flex-col gap-3 border-t border-white/10 py-4 sm:flex-row sm:items-center sm:gap-5 sm:py-5">
-        <p className="shrink-0 text-sm font-medium leading-snug text-white/70 sm:max-w-[220px]">
+        <p className="shrink-0 text-sm font-medium leading-snug text-white/90 sm:max-w-[220px]">
           {content.partnersNote}
         </p>
         <PartnersMarquee edgeColor={theme.colors.ink} />

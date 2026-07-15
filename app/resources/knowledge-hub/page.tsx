@@ -60,8 +60,8 @@ function KnowledgeHubPageInner() {
                   <Search
                     className={`absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 ${
                       mounted && resolvedTheme === "dark"
-                        ? "text-gray-400"
-                        : "text-gray-400"
+                        ? "text-gray-600"
+                        : "text-gray-600"
                     }`}
                   />
                   <input
@@ -156,7 +156,7 @@ function KnowledgeHubPageInner() {
                     <div
                       className={`flex items-center gap-4 text-sm mb-4 ${
                         mounted && resolvedTheme === "dark"
-                          ? "text-gray-400"
+                          ? "text-gray-600"
                           : "text-gray-500"
                       }`}
                     >
@@ -265,7 +265,7 @@ function KnowledgeHubPageInner() {
                       <div
                         className={`flex items-center gap-3 text-xs mb-3 ${
                           mounted && resolvedTheme === "dark"
-                            ? "text-gray-400"
+                            ? "text-gray-600"
                             : "text-gray-500"
                         }`}
                       >
@@ -302,13 +302,13 @@ function KnowledgeHubPageInner() {
                     className={`w-16 h-16 mx-auto mb-4 ${
                       mounted && resolvedTheme === "dark"
                         ? "text-gray-600"
-                        : "text-gray-400"
+                        : "text-gray-600"
                     }`}
                   />
                   <p
                     className={`text-xl ${
                       mounted && resolvedTheme === "dark"
-                        ? "text-gray-400"
+                        ? "text-gray-600"
                         : "text-gray-500"
                     }`}
                   >

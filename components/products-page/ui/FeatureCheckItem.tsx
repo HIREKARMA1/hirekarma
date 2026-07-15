@@ -26,7 +26,7 @@ export function FeatureCheckItem({
       <span
         className={
           variant === "dark"
-            ? "text-slate-600 dark:text-white/75"
+            ? "text-slate-600 dark:text-white/90"
             : "text-gray-600"
         }
       >

@@ -47,7 +47,7 @@ const ProblemSection: React.FC = () => {
         <p
           className={`${
             mounted && resolvedTheme === "dark"
-              ? "text-gray-400"
+              ? "text-gray-600"
               : "text-gray-600"
           }`}
         >

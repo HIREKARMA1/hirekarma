@@ -92,11 +92,11 @@ export function ResourceCard({ item, readMoreLabel }: ResourceCardProps) {
           </Link>
         </h3>
 
-        <p className="mb-5 flex-1 text-sm leading-relaxed text-slate-600 dark:text-white/65">
+        <p className="mb-5 flex-1 text-sm leading-relaxed text-slate-600 dark:text-white/90">
           {item.excerpt}
         </p>
 
-        <div className="flex items-center justify-between gap-3 text-sm text-slate-500 dark:text-white/55">
+        <div className="flex items-center justify-between gap-3 text-sm text-slate-500 dark:text-white/85">
           <time dateTime={item.dateIso}>{item.date}</time>
           <Link
             href={href}

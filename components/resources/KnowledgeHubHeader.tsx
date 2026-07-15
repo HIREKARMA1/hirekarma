@@ -17,7 +17,7 @@ const KnowledgeHubHeader: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative content-container pt-20 pb-8">
+    <div className="relative content-container pt-8 pb-8">
       <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         <div className="space-y-2 lg:space-y-1">
           <div className="space-y-4">

@@ -23,7 +23,7 @@ export default function DivisionsSection() {
                 { nowrap: false }
               )}
             </h2>
-            <p className="mt-3 text-sm leading-relaxed text-[#0f1622]/6 lg:text-[13px]">
+            <p className="mt-3 text-[15px] leading-relaxed text-[#334155] lg:text-sm">
               {divisions.description}
             </p>
             <Link
@@ -36,7 +36,7 @@ export default function DivisionsSection() {
             </Link>
           </div>
 
-          <div className="-mx-4 flex gap-2.5 overflow-x-auto px-4 pb-2 lg:mx-0 lg:grid lg:flex-1 lg:grid-cols-8 lg:gap-2 lg:overflow-visible lg:px-0 lg:pb-0 xl:gap-2.5">
+          <div data-hk-stagger className="-mx-4 flex gap-2.5 overflow-x-auto px-4 pb-2 lg:mx-0 lg:grid lg:flex-1 lg:grid-cols-8 lg:gap-2 lg:overflow-visible lg:px-0 lg:pb-0 xl:gap-2.5">
             {divisions.items.map((item) => {
               const isExternal = item.href.startsWith("http");
               const kindLabel = item.kind === "product" ? "Product" : "Activity";
@@ -45,13 +45,8 @@ export default function DivisionsSection() {
 
               const card = (
                 <>
-                  <div
-                    className="absolute inset-0"
-                    style={{
-                      background: `linear-gradient(180deg, ${item.accent} 0%, ${item.accent} 42%, transparent 72%)`,
-                    }}
-                  />
-                  <div className="absolute inset-x-0 bottom-0 h-[58%]">
+                  {/* Full-bleed image so hover scale never exposes a mid-card seam */}
+                  <div className="absolute inset-0">
                     <Image
                       src={item.image}
                       alt={item.title}
@@ -59,27 +54,29 @@ export default function DivisionsSection() {
                       className="object-cover transition duration-500 group-hover:scale-[1.04]"
                       sizes="(max-width: 1024px) 168px, 11vw"
                     />
-                    <div
-                      className="absolute inset-0"
-                      style={{
-                        background: `linear-gradient(180deg, ${item.accent} 0%, ${hexToRgba(item.accent, 0.55)} 28%, transparent 58%)`,
-                      }}
-                    />
                   </div>
+
+                  {/* Continuous wash — no hard edge between color and photo */}
+                  <div
+                    className="absolute inset-0"
+                    style={{
+                      background: `linear-gradient(180deg, ${item.accent} 0%, ${item.accent} 32%, ${hexToRgba(item.accent, 0.88)} 48%, ${hexToRgba(item.accent, 0.35)} 68%, transparent 88%)`,
+                    }}
+                  />
 
                   <div className="relative z-10 flex h-full flex-col px-2.5 pb-3 pt-3 text-white sm:px-3 lg:px-2.5 xl:px-3">
                     <div className="flex items-center justify-between gap-1">
-                      <span className="text-[10px] font-semibold tracking-wide text-white/80">
+                      <span className="text-[12px] font-semibold tracking-wide text-white/85">
                         {item.number}
                       </span>
-                      <span className="rounded-full bg-white/20 px-1.5 py-0.5 text-[8px] font-semibold uppercase tracking-wide text-white xl:text-[9px]">
+                      <span className="rounded-full bg-white/20 px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-white xl:text-[10px]">
                         {kindLabel}
                       </span>
                     </div>
-                    <h3 className="mt-2.5 text-[13px] font-bold leading-snug sm:text-[14px] xl:text-[15px]">
+                    <h3 className="mt-2.5 text-[15px] font-bold leading-snug sm:text-[16px] xl:text-[17px]">
                       {item.title}
                     </h3>
-                    <p className="mt-1.5 line-clamp-4 text-[11px] leading-snug text-white/90 sm:text-[12px]">
+                    <p className="mt-1.5 line-clamp-4 text-[13px] leading-snug text-white sm:text-[14px]">
                       {item.description}
                     </p>
                   </div>

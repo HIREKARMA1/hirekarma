@@ -50,10 +50,10 @@ function OfficeCard({ office }: { office: AboutOfficeCard }) {
             <MapPin className="h-4 w-4" style={{ color: accent }} />
             <h3 className="text-lg font-bold text-white">{office.city}</h3>
           </div>
-          <p className="mt-1 text-xs font-semibold uppercase tracking-wide text-white/45">
+          <p className="mt-1 text-xs font-semibold uppercase tracking-wide text-white/80">
             {office.role}
           </p>
-          <p className="mt-3 text-[13px] leading-relaxed text-white/65">
+          <p className="mt-3 text-[13px] leading-relaxed text-white/90">
             {office.description}
           </p>
         </div>
@@ -64,7 +64,7 @@ function OfficeCard({ office }: { office: AboutOfficeCard }) {
               className="mt-0.5 h-4 w-4 shrink-0"
               style={{ color: theme.colors.secondary }}
             />
-            <p className="text-[12px] leading-relaxed text-white/70">
+            <p className="text-[12px] leading-relaxed text-white/90">
               {office.address}
             </p>
           </div>
@@ -77,10 +77,10 @@ function OfficeCard({ office }: { office: AboutOfficeCard }) {
               style={{ color: accent }}
             />
             <div>
-              <p className="text-[11px] font-semibold uppercase tracking-wide text-white/45">
+              <p className="text-[11px] font-semibold uppercase tracking-wide text-white/80">
                 {office.whyTitle}
               </p>
-              <p className="mt-1 text-[12px] leading-relaxed text-white/70">
+              <p className="mt-1 text-[12px] leading-relaxed text-white/90">
                 {office.whyBody}
               </p>
             </div>
@@ -131,7 +131,7 @@ export default function LocationsOfficesSection() {
                   <Icon className="h-4 w-4" />
                 </span>
                 <h3 className="text-sm font-bold text-white">{pillar.title}</h3>
-                <p className="mt-1 text-[12px] leading-snug text-white/55">
+                <p className="mt-1 text-[12px] leading-snug text-white/85">
                   {pillar.description}
                 </p>
               </div>

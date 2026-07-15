@@ -34,7 +34,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
     >
       {subtitle ? (
         <span
-          className="inline-block text-[11px] font-semibold uppercase tracking-[0.18em]"
+          className="inline-block text-[12px] font-semibold uppercase tracking-[0.18em]"
           style={{ color: accent }}
         >
           {subtitle}
@@ -46,7 +46,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
       </h2>
 
       {description ? (
-        <p className="max-w-3xl text-sm leading-relaxed text-[#0f1622]/65 sm:text-[15px]">
+        <p className="max-w-3xl text-[15px] leading-relaxed text-[#334155] sm:text-base">
           {description}
         </p>
       ) : null}

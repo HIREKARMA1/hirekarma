@@ -31,6 +31,7 @@ export interface ContactFormContent {
   subtitle: string;
   name: ContactFormField;
   email: ContactFormField;
+  phone: ContactFormField;
   message: ContactFormField;
   submit: string;
   submitting: string;

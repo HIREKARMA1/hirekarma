@@ -274,7 +274,7 @@ function MissionHeroVisual({ alt }: { alt: string }) {
           aria-hidden
         />
         <div className="absolute bottom-3 left-3 right-3">
-          <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-white/65">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-white/90">
             Product ecosystem
           </p>
           <p className="text-sm font-bold text-white">
@@ -304,7 +304,7 @@ function MissionHeroVisual({ alt }: { alt: string }) {
           <p className="text-[10px] font-bold leading-none text-white">
             HireKarma
           </p>
-          <p className="mt-0.5 text-[9px] text-white/60">platforms live</p>
+          <p className="mt-0.5 text-[9px] text-white/85">platforms live</p>
         </div>
       </div>
 
@@ -342,7 +342,7 @@ function MissionHeroVisual({ alt }: { alt: string }) {
               </span>
               <span
                 className={`max-w-full truncate text-[9px] font-bold leading-none ${
-                  isActive ? "text-[#0f1622]" : "text-white/75"
+                  isActive ? "text-[#0f1622]" : "text-white/90"
                 }`}
               >
                 {item.name.split(" ")[0]}
@@ -376,7 +376,7 @@ export default function MissionHeroSection() {
         />
       </div>
 
-      <div className="relative content-container pb-6 pt-16 lg:pb-7 lg:pt-20">
+      <div className="relative content-container pb-6 pt-6 lg:pb-7 lg:pt-8">
         <div className="grid items-center gap-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:gap-8">
           <div className="min-w-0 space-y-3">
             <p
@@ -393,7 +393,7 @@ export default function MissionHeroSection() {
               />
             </h1>
 
-            <p className="max-w-2xl text-sm leading-snug text-white/70 lg:text-[15px]">
+            <p className="max-w-2xl text-sm leading-snug text-white/90 lg:text-[15px]">
               {hero.description}
             </p>
 
@@ -415,7 +415,7 @@ export default function MissionHeroSection() {
               </Link>
             </div>
 
-            <div className="flex items-center gap-2 text-xs text-white/55">
+            <div className="flex items-center gap-2 text-xs text-white/85">
               <span
                 className="flex h-6 w-6 items-center justify-center rounded-full"
                 style={{ backgroundColor: "rgba(0,162,229,0.15)" }}

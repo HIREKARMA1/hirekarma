@@ -24,7 +24,7 @@ export default function CertificationsSection() {
         <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:gap-8">
           <div className="shrink-0 lg:max-w-[240px]">
             <p
-              className="text-[11px] font-semibold uppercase tracking-[0.18em]"
+              className="text-[12px] font-semibold uppercase tracking-[0.18em]"
               style={{ color: theme.colors.secondary }}
             >
               {certificationsSection.subheading}
@@ -62,10 +62,10 @@ export default function CertificationsSection() {
                       />
                     </div>
                     <div className="min-w-0">
-                      <p className="truncate text-[12px] font-bold leading-tight text-[#0f1622]">
+                      <p className="truncate text-[13px] font-bold leading-tight text-[#0f1622]">
                         {item.name}
                       </p>
-                      <p className="mt-0.5 truncate text-[10px] font-medium uppercase tracking-wide text-[#0f1622]/45">
+                      <p className="mt-0.5 truncate text-[11px] font-medium uppercase tracking-wide text-[#475569]">
                         {item.category}
                       </p>
                     </div>

@@ -116,7 +116,7 @@ function OdishaMapVisual() {
       />
 
       <p
-        className="pointer-events-none absolute left-1/2 top-[46%] z-10 -translate-x-1/2 text-[11px] font-semibold uppercase tracking-[0.55em] text-white/70 sm:text-xs"
+        className="pointer-events-none absolute left-1/2 top-[46%] z-10 -translate-x-1/2 text-[11px] font-semibold uppercase tracking-[0.55em] text-white/90 sm:text-xs"
         aria-hidden
       >
         Odisha
@@ -171,7 +171,7 @@ function OdishaMapVisual() {
               >
                 {pin.city}
               </p>
-              <p className="mt-1 text-[10px] font-medium text-white/50">
+              <p className="mt-1 text-[10px] font-medium text-white/85">
                 {pin.role}
               </p>
             </div>
@@ -212,7 +212,7 @@ export default function LocationsHeroSection() {
         />
       </div>
 
-      <div className="relative content-container pb-8 pt-16 lg:pb-10 lg:pt-20">
+      <div className="relative content-container pb-8 pt-6 lg:pb-10 lg:pt-8">
         <div className="flex flex-col items-start gap-6 lg:flex-row lg:items-center lg:gap-5 xl:gap-6">
           {/* Copy — wide enough to cut wrap + fill the mid gap */}
           <div className="min-w-0 flex-1 space-y-4 lg:max-w-none">
@@ -238,7 +238,7 @@ export default function LocationsHeroSection() {
               </span>
             </h1>
 
-            <p className="max-w-3xl whitespace-pre-line text-sm leading-snug text-white/70 sm:text-[15px]">
+            <p className="max-w-3xl whitespace-pre-line text-sm leading-snug text-white/90 sm:text-[15px]">
               {hero.description}
             </p>
 
@@ -260,7 +260,7 @@ export default function LocationsHeroSection() {
               </Link>
             </div>
 
-            <div className="flex items-center gap-2.5 text-sm text-white/60">
+            <div className="flex items-center gap-2.5 text-sm text-white/85">
               <span
                 className="flex h-8 w-8 items-center justify-center rounded-full"
                 style={{ backgroundColor: "rgba(0,162,229,0.15)" }}

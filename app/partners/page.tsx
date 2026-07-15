@@ -54,7 +54,7 @@ function PartnersPageInner() {
           />
         </div>
 
-        <div className="relative content-container pb-10 pt-16 lg:pb-12 lg:pt-20">
+        <div className="relative content-container pb-10 pt-6 lg:pb-12 lg:pt-8">
           <div className="mx-auto max-w-3xl text-center">
             <p
               className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.2em]"
@@ -66,10 +66,10 @@ function PartnersPageInner() {
             <h1 className="mt-3 text-[1.9rem] font-bold leading-[1.15] tracking-tight text-white sm:text-[2.35rem] lg:text-[2.6rem]">
               {withHighlightMark(hero.title, hero.titleHighlight)}
             </h1>
-            <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-white/65 sm:text-[15px]">
+            <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-white/90 sm:text-[15px]">
               {hero.description}
             </p>
-            <p className="mx-auto mt-3 max-w-xl text-xs leading-relaxed text-white/45 sm:text-sm">
+            <p className="mx-auto mt-3 max-w-xl text-xs leading-relaxed text-white/80 sm:text-sm">
               {hero.trustLine}
             </p>
           </div>
@@ -85,7 +85,7 @@ function PartnersPageInner() {
                 <p className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
                   {localizeNumerals(stat.value, locale)}
                 </p>
-                <p className="mt-1.5 text-sm text-white/55">{stat.label}</p>
+                <p className="mt-1.5 text-sm text-white/85">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -108,10 +108,10 @@ function PartnersPageInner() {
                 nowrap: false,
               })}
             </h2>
-            <p className="mt-3 text-sm leading-relaxed text-[#0f1622]/65">
+            <p className="mt-3 text-sm leading-relaxed text-[#334155]">
               {college.description}
             </p>
-            <p className="mt-2 text-sm leading-relaxed text-[#0f1622]/5">
+            <p className="mt-2 text-sm leading-relaxed text-[#475569]">
               {college.detail}
             </p>
           </div>
@@ -125,7 +125,7 @@ function PartnersPageInner() {
                 <h3 className="text-sm font-bold text-[#0f1622]">
                   {benefit.title}
                 </h3>
-                <p className="mt-1.5 text-[13px] leading-snug text-[#0f1622]/6">
+                <p className="mt-1.5 text-[13px] leading-snug text-[#334155]">
                   {benefit.description}
                 </p>
               </div>
@@ -162,7 +162,7 @@ function PartnersPageInner() {
                     <h3 className="text-sm font-bold leading-snug text-[#0f1622]">
                       {partner.name}
                     </h3>
-                    <p className="mt-1.5 text-[13px] leading-snug text-[#0f1622]/6">
+                    <p className="mt-1.5 text-[13px] leading-snug text-[#334155]">
                       {partner.description}
                     </p>
                   </div>
@@ -189,10 +189,10 @@ function PartnersPageInner() {
                 nowrap: false,
               })}
             </h2>
-            <p className="mt-3 text-sm leading-relaxed text-[#0f1622]/65">
+            <p className="mt-3 text-sm leading-relaxed text-[#334155]">
               {corporate.description}
             </p>
-            <p className="mt-2 text-sm leading-relaxed text-[#0f1622]/5">
+            <p className="mt-2 text-sm leading-relaxed text-[#475569]">
               {corporate.detail}
             </p>
           </div>
@@ -206,7 +206,7 @@ function PartnersPageInner() {
                 <h3 className="text-sm font-bold text-[#0f1622]">
                   {benefit.title}
                 </h3>
-                <p className="mt-1.5 text-[13px] leading-snug text-[#0f1622]/6">
+                <p className="mt-1.5 text-[13px] leading-snug text-[#334155]">
                   {benefit.description}
                 </p>
               </div>
@@ -243,7 +243,7 @@ function PartnersPageInner() {
                     <h3 className="text-sm font-bold leading-snug text-[#0f1622]">
                       {partner.name}
                     </h3>
-                    <p className="mt-1.5 text-[13px] leading-snug text-[#0f1622]/6">
+                    <p className="mt-1.5 text-[13px] leading-snug text-[#334155]">
                       {partner.description}
                     </p>
                   </div>
@@ -267,10 +267,10 @@ function PartnersPageInner() {
             <h2 className="mt-4 text-2xl font-bold tracking-tight text-[#0f1622] sm:text-[1.75rem]">
               {withHighlightMark(mission.title, mission.titleHighlight)}
             </h2>
-            <p className="mt-3 text-sm leading-relaxed text-[#0f1622]/65 sm:text-[15px]">
+            <p className="mt-3 text-sm leading-relaxed text-[#334155] sm:text-[15px]">
               {mission.paragraph1}
             </p>
-            <p className="mt-3 text-sm leading-relaxed text-[#0f1622]/55">
+            <p className="mt-3 text-sm leading-relaxed text-[#475569]">
               {mission.paragraph2}
             </p>
           </div>

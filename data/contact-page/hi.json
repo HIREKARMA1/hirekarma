@@ -22,6 +22,10 @@
       "label": "ईमेल",
       "placeholder": "you@email.com"
     },
+    "phone": {
+      "label": "मोबाइल नंबर",
+      "placeholder": "+91 98765 43210"
+    },
     "message": {
       "label": "हम कैसे मदद कर सकते हैं?",
       "placeholder": "साझेदारी, हायरिंग, डेमो, करियर — संक्षेप में बताएँ…"

@@ -6,11 +6,6 @@ import dynamic from "next/dynamic";
 import { HomeLocaleProvider } from "@/contexts/HomeLocaleContext";
 import HeroBanner from "../home/HeroBanner";
 
-const ImpactSection = dynamic(() => import("../home/ImpactSection"), {
-  loading: () => <div className="min-h-[120px]" />,
-  ssr: true,
-});
-
 const DivisionsSection = dynamic(() => import("../home/DivisionsSection"), {
   loading: () => <div className="min-h-[400px]" />,
   ssr: true,
@@ -47,12 +42,8 @@ const CertificationsSection = dynamic(
 export default function HeroSection() {
   return (
     <HomeLocaleProvider>
-      <div className="relative min-h-screen">
+      <div className="relative">
         <HeroBanner />
-
-        <Suspense fallback={<div className="min-h-[120px]" />}>
-          <ImpactSection />
-        </Suspense>
 
         <Suspense fallback={<div className="min-h-[400px]" />}>
           <DivisionsSection />

@@ -124,7 +124,7 @@ const JourneySection: React.FC = () => {
                 <div
                   className={`text-sm ${
                     mounted && resolvedTheme === "dark"
-                      ? "text-gray-400"
+                      ? "text-gray-600"
                       : "text-gray-600"
                   }`}
                 >
@@ -171,7 +171,7 @@ const JourneySection: React.FC = () => {
                 <div
                   className={`text-sm ${
                     mounted && resolvedTheme === "dark"
-                      ? "text-gray-400"
+                      ? "text-gray-600"
                       : "text-gray-600"
                   }`}
                 >

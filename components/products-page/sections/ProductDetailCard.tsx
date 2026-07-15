@@ -62,7 +62,7 @@ export function ProductDetailCard({ product }: ProductDetailCardProps) {
           {product.title}
         </h3>
         <p
-          className="mt-0.5 text-[10px] font-semibold uppercase tracking-[0.12em]"
+          className="mt-0.5 text-xs font-semibold uppercase tracking-[0.12em]"
           style={{ color: accent.main }}
         >
           {product.subtitle}
@@ -90,7 +90,7 @@ export function ProductDetailCard({ product }: ProductDetailCardProps) {
       </div>
 
       <div className="flex flex-1 flex-col px-4 pb-4 pt-3">
-        <p className="line-clamp-3 text-[13px] leading-snug text-[#0f1622]/60">
+        <p className="line-clamp-3 text-[15px] leading-relaxed text-[#334155]">
           {product.description}
         </p>
 

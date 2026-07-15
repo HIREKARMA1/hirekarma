@@ -51,7 +51,7 @@ export default function JourneySection() {
       <div className="relative content-container">
         <div className="mx-auto max-w-2xl text-center">
           <p
-            className="text-[11px] font-semibold uppercase tracking-[0.2em]"
+            className="text-[12px] font-semibold uppercase tracking-[0.2em]"
             style={{ color: theme.colors.secondary }}
           >
             {journey.label}
@@ -59,7 +59,7 @@ export default function JourneySection() {
           <h2 className="mt-2 text-2xl font-bold tracking-tight text-white sm:text-[1.85rem]">
             {withHighlightMark(journey.heading, journey.headingHighlight)}
           </h2>
-          <p className="mt-2 text-sm leading-relaxed text-white/60">
+          <p className="mt-2 text-sm leading-relaxed text-white/85">
             {journey.description}
           </p>
         </div>
@@ -86,7 +86,7 @@ export default function JourneySection() {
                     style={{ boxShadow: `0 0 0 1px ${color}33, 0 12px 30px rgba(0,0,0,0.35)` }}
                   >
                     <span
-                      className="mb-1 text-[10px] font-bold tracking-wide"
+                      className="mb-1 text-[12px] font-bold tracking-wide"
                       style={{ color }}
                     >
                       {String(index + 1).padStart(2, "0")}
@@ -94,7 +94,7 @@ export default function JourneySection() {
                     <Icon className="h-5 w-5" style={{ color }} />
                   </span>
                   <p className="mt-3 text-sm font-bold text-white">{step.label}</p>
-                  <p className="mt-1 text-[11px] leading-snug text-white/50">
+                  <p className="mt-1 text-[12px] leading-snug text-white/80">
                     {step.description}
                   </p>
                 </li>
@@ -122,13 +122,13 @@ export default function JourneySection() {
                       <Icon className="h-4 w-4" />
                     </span>
                     <div>
-                      <p className="text-[10px] font-bold" style={{ color }}>
+                      <p className="text-[12px] font-bold" style={{ color }}>
                         {String(index + 1).padStart(2, "0")}
                       </p>
                       <p className="text-sm font-bold text-white">{step.label}</p>
                     </div>
                   </div>
-                  <p className="mt-3 text-[12px] leading-snug text-white/55">
+                  <p className="mt-3 text-[13px] leading-snug text-white/80">
                     {step.description}
                   </p>
                 </li>

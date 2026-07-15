@@ -70,7 +70,7 @@ const FAQ: React.FC = () => {
                                     <svg
                                         className={`w-4 h-4 sm:w-5 sm:h-5 transition-all duration-500 ${openFAQ === index ? 'rotate-45' : ''
                                             } ${mounted && resolvedTheme === 'dark'
-                                                ? 'text-gray-400'
+                                                ? 'text-gray-600'
                                                 : 'text-gray-600'
                                             }`}
                                         fill="none"

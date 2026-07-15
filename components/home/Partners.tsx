@@ -22,7 +22,7 @@ function PartnerScrollBand({
 }) {
   return (
     <div className="space-y-3">
-      <p className="text-center text-sm font-semibold text-white/75">{label}</p>
+      <p className="text-center text-sm font-semibold text-white/85">{label}</p>
       <PartnersMarquee
         partners={partners.map((p) => ({
           id: String(p.id),
@@ -55,7 +55,7 @@ export default function Partners() {
       <div className="relative content-container">
         <div className="mx-auto max-w-2xl text-center">
           <p
-            className="text-[11px] font-semibold uppercase tracking-[0.18em]"
+            className="text-[12px] font-semibold uppercase tracking-[0.18em]"
             style={{ color: theme.colors.secondary }}
           >
             {partners.subheading}
@@ -63,7 +63,7 @@ export default function Partners() {
           <h2 className="mt-2 text-2xl font-bold tracking-tight text-white sm:text-[1.85rem]">
             {withHighlightMark(partners.heading, partners.headingHighlight)}
           </h2>
-          <p className="mt-2 text-sm leading-relaxed text-white/60">
+          <p className="mt-2 text-sm leading-relaxed text-white/85">
             {partners.description}
           </p>
         </div>
@@ -72,13 +72,13 @@ export default function Partners() {
           <PartnerScrollBand
             label={partners.universityPartnersLabel}
             partners={universities}
-            durationSeconds={100}
+            durationSeconds={45}
           />
           <div className="border-t border-white/10" />
           <PartnerScrollBand
             label={partners.corporatePartnersLabel}
             partners={corporates}
-            durationSeconds={140}
+            durationSeconds={55}
           />
           <div className="flex justify-center pt-1">
             <Link

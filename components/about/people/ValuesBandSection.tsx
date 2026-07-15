@@ -74,7 +74,7 @@ export default function ValuesBandSection() {
                 style={{ backgroundColor: theme.colors.yellow }}
                 aria-hidden
               />
-              <p className="relative mt-2.5 text-[13px] leading-snug text-white/70">
+              <p className="relative mt-2.5 text-[13px] leading-snug text-white/90">
                 {culture.description}
               </p>
             </div>

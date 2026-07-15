@@ -144,7 +144,7 @@ function HeroPhotoComposition() {
             </span>
             <div className="min-w-0">
               <p className="text-sm font-bold leading-none text-white">{title}</p>
-              <p className="mt-1 truncate text-[11px] leading-none text-white/55">
+              <p className="mt-1 truncate text-[11px] leading-none text-white/85">
                 {caption}
               </p>
             </div>
@@ -176,7 +176,7 @@ export default function LeadershipHeroSection() {
         />
       </div>
 
-      <div className="relative content-container pb-6 pt-16 lg:pb-7 lg:pt-20">
+      <div className="relative content-container pb-6 pt-6 lg:pb-7 lg:pt-8">
         <div className="grid items-center gap-5 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,0.85fr)] lg:gap-6 xl:gap-8">
           <div className="min-w-0 space-y-3">
             <p
@@ -193,7 +193,7 @@ export default function LeadershipHeroSection() {
               />
             </h1>
 
-            <p className="text-sm leading-snug text-white/70 lg:text-[15px]">
+            <p className="text-sm leading-snug text-white/90 lg:text-[15px]">
               {hero.description}
             </p>
 
@@ -215,7 +215,7 @@ export default function LeadershipHeroSection() {
               </Link>
             </div>
 
-            <div className="flex items-center gap-2 text-xs text-white/55">
+            <div className="flex items-center gap-2 text-xs text-white/85">
               <span
                 className="flex h-6 w-6 items-center justify-center rounded-full"
                 style={{ backgroundColor: "rgba(0,162,229,0.15)" }}
