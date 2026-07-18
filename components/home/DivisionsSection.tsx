@@ -36,12 +36,12 @@ export default function DivisionsSection() {
             </Link>
           </div>
 
-          <div data-hk-stagger className="-mx-4 flex gap-2.5 overflow-x-auto px-4 pb-2 lg:mx-0 lg:grid lg:flex-1 lg:grid-cols-8 lg:gap-2 lg:overflow-visible lg:px-0 lg:pb-0 xl:gap-2.5">
+          <div data-hk-stagger className="-mx-4 flex gap-2.5 overflow-x-auto px-4 pb-2 lg:mx-0 lg:flex-1 lg:gap-2 lg:px-0 lg:pb-0 xl:gap-2.5">
             {divisions.items.map((item) => {
               const isExternal = item.href.startsWith("http");
               const kindLabel = item.kind === "product" ? "Product" : "Activity";
               const className =
-                "group relative flex h-[400px] w-[156px] shrink-0 flex-col overflow-hidden rounded-2xl sm:w-[168px] lg:h-[420px] lg:w-auto lg:min-w-0";
+                "group relative flex h-[400px] w-[156px] shrink-0 flex-col overflow-hidden rounded-2xl sm:w-[168px] lg:h-[420px] lg:w-auto lg:min-w-29 lg:flex-1";
 
               const card = (
                 <>

@@ -64,7 +64,7 @@
         "kind": "activity",
         "accent": "#5b4bdb",
         "image": "/offerings/skill-development.png",
-        "href": "/products"
+        "href": "/services/skill-development"
       },
       {
         "id": "disha",
@@ -114,7 +114,7 @@
         "kind": "activity",
         "accent": "#098855",
         "image": "/offerings/it-consulting.png",
-        "href": "/contact"
+        "href": "/services/it-consulting"
       },
       {
         "id": "staffing",
@@ -124,7 +124,7 @@
         "kind": "activity",
         "accent": "#f58020",
         "image": "/offerings/staff-augmentation.png",
-        "href": "/contact"
+        "href": "/services/staff-augmentation"
       },
       {
         "id": "dpi",
@@ -134,7 +134,17 @@
         "kind": "activity",
         "accent": "#d64246",
         "image": "/offerings/open-source-dpi.png",
-        "href": "/about-us/mission-value"
+        "href": "/services/open-source-dpi"
+      },
+      {
+        "id": "ppt",
+        "number": "09",
+        "title": "Pre-Placement Training",
+        "description": "Practitioner-led on-campus training that runs before every placement season.",
+        "kind": "activity",
+        "accent": "#00a2e5",
+        "image": "/offerings/skill-development.png",
+        "href": "/services/pre-placement-training"
       }
     ],
     "headingHighlight": "One mission."

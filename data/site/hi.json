@@ -37,6 +37,48 @@
         }
       ]
     },
+    "services": {
+      "id": "services",
+      "label": "सेवाएँ",
+      "href": "/services",
+      "items": [
+        {
+          "id": "overview",
+          "label": "सभी सेवाएँ",
+          "href": "/services"
+        },
+        {
+          "id": "recruitment",
+          "label": "Recruitment",
+          "href": "/services/recruitment"
+        },
+        {
+          "id": "skill-development",
+          "label": "Skill Development",
+          "href": "/services/skill-development"
+        },
+        {
+          "id": "pre-placement-training",
+          "label": "Pre-Placement Training",
+          "href": "/services/pre-placement-training"
+        },
+        {
+          "id": "it-consulting",
+          "label": "IT Consulting",
+          "href": "/services/it-consulting"
+        },
+        {
+          "id": "open-source-dpi",
+          "label": "Open Source & DPI",
+          "href": "/services/open-source-dpi"
+        },
+        {
+          "id": "staff-augmentation",
+          "label": "Staff Augmentation",
+          "href": "/services/staff-augmentation"
+        }
+      ]
+    },
     "resources": {
       "id": "resources",
       "label": "संसाधन",

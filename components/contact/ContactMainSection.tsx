@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -8,11 +8,23 @@ import {
   MapPin,
   Phone,
   Send,
+  Tag,
 } from "lucide-react";
 import toast from "react-hot-toast";
 
 import { useContactLocale } from "@/contexts/ContactLocaleContext";
 import { theme } from "@/config/theme";
+
+/** Maps the ?service= tag from a service page to a human label + routing owner. */
+const SERVICE_LABELS: Record<string, string> = {
+  recruitment: "Recruitment (DISHA + SOLVIQ)",
+  "skill-development": "Skill Development (CSR)",
+  ppt: "Pre-Placement Training",
+  "it-consulting": "IT Consulting",
+  "open-source-dpi": "Open Source & DPI",
+  "staff-augmentation": "Staff Augmentation",
+  "services-overview": "Services (general enquiry)",
+};
 
 const methodIcons = {
   email: Mail,
@@ -35,10 +47,24 @@ export default function ContactMainSection() {
     email: "",
     phone: "",
     message: "",
+    service: "",
   });
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">(
     "idle"
   );
+
+  // Pre-fill the service tag from the URL (?service=...) so leads from each
+  // service page are captured and routable to the right internal owner.
+  useEffect(() => {
+    const param = new URLSearchParams(window.location.search).get("service");
+    if (param) {
+      setFormData((prev) => ({ ...prev, service: param }));
+    }
+  }, []);
+
+  const serviceLabel = formData.service
+    ? SERVICE_LABELS[formData.service] ?? formData.service
+    : "";
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -60,7 +86,7 @@ export default function ContactMainSection() {
       if (!response.ok) throw new Error("Failed to send message");
 
       setStatus("success");
-      setFormData({ name: "", email: "", phone: "", message: "" });
+      setFormData({ name: "", email: "", phone: "", message: "", service: formData.service });
       toast.success(toasts.success);
     } catch (error: unknown) {
       console.error("Contact form error:", error);
@@ -92,7 +118,22 @@ export default function ContactMainSection() {
               </p>
             </div>
 
+            {serviceLabel ? (
+              <div
+                className="mb-4 flex items-center gap-2 rounded-xl border px-3.5 py-2.5 text-sm font-semibold"
+                style={{
+                  borderColor: `${theme.colors.secondary}33`,
+                  backgroundColor: `${theme.colors.secondary}12`,
+                  color: theme.colors.primary,
+                }}
+              >
+                <Tag className="h-4 w-4" />
+                <span>Interested in: {serviceLabel}</span>
+              </div>
+            ) : null}
+
             <form onSubmit={handleSubmit} className="space-y-4">
+              <input type="hidden" name="service" value={formData.service} />
               <div className="grid gap-4 sm:grid-cols-2">
                 <div>
                   <label

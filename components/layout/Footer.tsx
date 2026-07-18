@@ -56,8 +56,8 @@ export default function Footer() {
       </div>
 
       <div className="content-container py-8 sm:py-10">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
-          <div className="space-y-4 md:pr-6">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+          <div className="col-span-2 space-y-4 md:col-span-1 md:pr-6">
             <Image
               src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/HKlogowhite.png"
               alt="HireKarma"
