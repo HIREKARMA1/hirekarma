@@ -22,6 +22,7 @@ export interface NavDropdown {
 export interface SiteNavContent {
   home: NavLinkItem;
   products: NavDropdown;
+  services: NavDropdown;
   impact: NavLinkItem;
   resources: NavDropdown;
   about: NavDropdown;

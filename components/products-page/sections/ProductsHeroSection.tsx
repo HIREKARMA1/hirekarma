@@ -38,9 +38,9 @@ export function ProductsHeroSection() {
               {hero.label}
             </p>
 
-            <h1 className="text-[1.65rem] font-bold leading-[1.2] tracking-tight text-[#0f1622] sm:text-[1.9rem] xl:text-[2.1rem] xl:whitespace-nowrap">
+            <h1 className="text-[1.65rem] font-bold leading-[1.2] tracking-tight text-[#0f1622] dark:text-white sm:text-[1.9rem] xl:text-[2.1rem] xl:whitespace-nowrap">
               <span>{hero.heading.part1} </span>
-              <span style={{ color: theme.colors.primary }}>
+              <span className="text-[#1b52a4] dark:text-[#4da6ff]">
                 {hero.heading.gradient}
               </span>
               {hero.heading.part2 ? (
@@ -48,7 +48,7 @@ export function ProductsHeroSection() {
               ) : null}
             </h1>
 
-            <p className="max-w-xl text-base leading-relaxed text-[#334155]">
+            <p className="max-w-xl text-base leading-relaxed text-[#334155] dark:text-white/80">
               {hero.description}
             </p>
 
@@ -64,7 +64,7 @@ export function ProductsHeroSection() {
               />
             </div>
 
-            <div className="flex items-start gap-2 pt-0.5 text-sm text-[#475569]">
+            <div className="flex items-start gap-2 pt-0.5 text-sm text-[#475569] dark:text-white/70">
               <Users
                 className="mt-0.5 h-4 w-4 shrink-0"
                 style={{ color: theme.colors.secondary }}
@@ -88,7 +88,7 @@ export function ProductsHeroSection() {
           </div>
         </div>
 
-        <div className="mt-6 border-t border-[#e6e8ec] pt-4">
+        <div className="mt-6 border-t border-[#e6e8ec] pt-4 dark:border-white/10">
           <HeroTrustBand />
         </div>
       </div>

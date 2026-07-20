@@ -7,12 +7,16 @@ import {
   Briefcase,
   ChevronDown,
   CircleHelp,
+  Code2,
   Compass,
+  GraduationCap,
   Heart,
   LayoutGrid,
   MapPin,
   Menu,
+  Network,
   Newspaper,
+  Target,
   TrendingUp,
   Users,
   UsersRound,
@@ -86,6 +90,47 @@ const productHrefById: Record<string, string> = {
   solviq: env.solviqUrl,
   lakshya: env.lakshyaUrl,
   shortlisted: "/shortlisted",
+};
+
+const servicesMeta: Record<
+  string,
+  { icon: React.ComponentType<{ className?: string }>; accent: string; description: string }
+> = {
+  overview: {
+    icon: LayoutGrid,
+    accent: theme.colors.primary,
+    description: "All divisions",
+  },
+  recruitment: {
+    icon: Compass,
+    accent: "#1b52a4",
+    description: "DISHA + SOLVIQ",
+  },
+  "skill-development": {
+    icon: GraduationCap,
+    accent: "#5b4bdb",
+    description: "CSR livelihood training",
+  },
+  "pre-placement-training": {
+    icon: Target,
+    accent: "#00a2e5",
+    description: "On-campus PPT",
+  },
+  "it-consulting": {
+    icon: Code2,
+    accent: "#098855",
+    description: "Software engineering",
+  },
+  "open-source-dpi": {
+    icon: Network,
+    accent: "#d64246",
+    description: "MOSIP · INJI · VC",
+  },
+  "staff-augmentation": {
+    icon: UsersRound,
+    accent: "#f58020",
+    description: "Bench & deployment",
+  },
 };
 
 const aboutMeta: Record<
@@ -197,6 +242,21 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
     }),
   };
 
+  const servicesItem: NavigationItem = {
+    label: nav.services.label,
+    href: nav.services.href,
+    dropdownItems: nav.services.items.map((item) => {
+      const meta = servicesMeta[item.id] ?? servicesMeta.overview;
+      return {
+        label: item.label,
+        href: item.href,
+        icon: meta.icon,
+        accent: meta.accent,
+        description: meta.description,
+      };
+    }),
+  };
+
   const aboutItem: NavigationItem = {
     label: nav.about.label,
     href: nav.about.href,
@@ -234,6 +294,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
   const navEntries: NavEntry[] = [
     { type: "link", item: { label: nav.home.label, href: nav.home.href } },
     { type: "dropdown", item: productsItem },
+    { type: "dropdown", item: servicesItem },
     { type: "link", item: { label: nav.impact.label, href: nav.impact.href } },
     { type: "dropdown", item: resourcesItem },
     { type: "dropdown", item: aboutItem },
