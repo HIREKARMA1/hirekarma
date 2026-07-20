@@ -1,0 +1,561 @@
+{
+  "landing": {
+    "meta": {
+      "title": "Services & Divisions | HireKarma",
+      "description": "Recruitment, Skill Development, Pre-Placement Training, IT Consulting, Open Source & DPI, and Staff Augmentation — six divisions solving distinct problems with one purpose."
+    },
+    "hero": {
+      "eyebrow": "What we do",
+      "heading": "Each division solves a distinct problem.",
+      "headingHighlight": "distinct problem.",
+      "description": "They're connected by the same people and the same purpose — building opportunity for students, campuses, communities, and companies across India."
+    },
+    "supportingLine": "A student trained in our Skill Development division might prepare for interviews on SOLVIQ, get placed through DISHA, and later carry a verifiable credential built on our DPI work. The divisions are separate offerings, but one ecosystem.",
+    "cards": [
+      {
+        "id": "recruitment",
+        "slug": "recruitment",
+        "icon": "compass",
+        "title": "Recruitment",
+        "description": "DISHA and SOLVIQ — the platform that runs the drive and the AI that prepares students for it.",
+        "stat": "22,000+ careers shaped",
+        "accent": "#1b52a4"
+      },
+      {
+        "id": "skill-development",
+        "slug": "skill-development",
+        "icon": "graduation",
+        "title": "Skill Development",
+        "description": "CSR-funded livelihood training that reaches young people where quality training was never built.",
+        "stat": "5,880+ youth trained",
+        "accent": "#5b4bdb"
+      },
+      {
+        "id": "pre-placement-training",
+        "slug": "pre-placement-training",
+        "icon": "target",
+        "title": "Pre-Placement Training",
+        "description": "Practitioner-led on-campus programmes that run for 4–8 weeks before placement season.",
+        "stat": "75% avg placement uplift",
+        "accent": "#00a2e5"
+      },
+      {
+        "id": "it-consulting",
+        "slug": "it-consulting",
+        "icon": "code",
+        "title": "IT Consulting",
+        "description": "The engineering culture that built DISHA and SOLVIQ, available to clients who need it done right.",
+        "stat": "Product-grade engineering",
+        "accent": "#098855"
+      },
+      {
+        "id": "open-source-dpi",
+        "slug": "open-source-dpi",
+        "icon": "network",
+        "title": "Open Source & DPI",
+        "description": "We contribute to MOSIP, INJI and W3C Verifiable Credentials — and build on top of them.",
+        "stat": "MOSIP · INJI · W3C VC",
+        "accent": "#d64246"
+      },
+      {
+        "id": "staff-augmentation",
+        "slug": "staff-augmentation",
+        "icon": "users",
+        "title": "Staff Augmentation",
+        "description": "Trained, vetted, deployment-ready professionals at client sites — quickly and reliably.",
+        "stat": "48hr deployment turnaround",
+        "accent": "#f58020"
+      }
+    ],
+    "footerCta": {
+      "heading": "Not sure which service fits?",
+      "description": "Tell us what you're trying to solve and we'll point you to the right division — or the right combination of them.",
+      "buttonLabel": "Talk to us"
+    }
+  },
+  "divisions": {
+    "recruitment": {
+      "slug": "recruitment",
+      "accent": "#1b52a4",
+      "order": ["stats", "subCards", "modules", "bulletGroups", "testimonial", "crossLinks"],
+      "meta": {
+        "title": "Recruitment Division — DISHA + SOLVIQ | HireKarma",
+        "description": "Campus placement, fixed from both ends. DISHA runs the placement drive; SOLVIQ prepares students for the interviews they haven't had yet."
+      },
+      "hero": {
+        "eyebrow": "Recruitment Division",
+        "heading": "Campus placement is broken in most of India.",
+        "headingHighlight": "broken",
+        "description": "We built two products to fix it from both ends — DISHA runs the placement drive from job posting to offer letter, and SOLVIQ prepares students for the interviews they have not yet had."
+      },
+      "stats": [
+        { "value": "22,000+", "label": "Careers Shaped" },
+        { "value": "1,400+", "label": "Youth Trained" },
+        { "value": "100+", "label": "Projects Delivered" },
+        { "value": "20+", "label": "College Partners" }
+      ],
+      "subCards": {
+        "heading": "Two products, one division",
+        "description": "The brochure frames DISHA and SOLVIQ as the outputs of our Recruitment Division — one runs the operation, the other builds the candidate.",
+        "items": [
+          {
+            "id": "disha",
+            "name": "DISHA",
+            "tagline": "The platform that runs the placement drive — from job posting to offer letter.",
+            "description": "College engagement and placement enablement, with live visibility for TPOs across every drive.",
+            "href": "https://disha.hirekarma.in/",
+            "accent": "#1b52a4",
+            "external": true,
+            "cta": "Visit DISHA"
+          },
+          {
+            "id": "solviq",
+            "name": "SOLVIQ",
+            "tagline": "The AI that prepares students for the interviews they have not yet had.",
+            "description": "Resume scoring, skill tests, and mock interviews that close the gap between classroom and shortlist.",
+            "href": "https://www.solviqai.in/",
+            "accent": "#f58020",
+            "external": true,
+            "cta": "Visit SOLVIQ"
+          }
+        ]
+      },
+      "modules": {
+        "label": "Core modules",
+        "heading": "Everything a placement cell needs, in one platform",
+        "columns": 3,
+        "items": [
+          { "icon": "briefcase", "title": "Job & JD Management", "description": "Post roles, manage job descriptions, and keep every opening in one place." },
+          { "icon": "calendar", "title": "Drive Scheduling", "description": "Plan and run placement drives without spreadsheets and WhatsApp chaos." },
+          { "icon": "users", "title": "Student Profiles", "description": "A single, verified profile for every student across every drive." },
+          { "icon": "clipboard", "title": "Result & Offer Tracking", "description": "Track shortlists, results, and offer letters end to end." },
+          { "icon": "bell", "title": "Smart Notifications", "description": "Automated alerts so students and recruiters never miss a step." },
+          { "icon": "chart", "title": "Analytics Dashboard", "description": "Placement analytics that TPOs and management can actually act on." }
+        ]
+      },
+      "bulletGroups": [
+        {
+          "heading": "What changes when a college uses DISHA",
+          "items": [
+            "Up to 80% less coordination time for placement cells during peak season.",
+            "NAAC / AICTE-compatible placement reports generated from real data.",
+            "A single source of truth shared by students, TPOs, and recruiters.",
+            "Faster offer cycles with automated tracking and notifications.",
+            "Live visibility for management — no more chasing scattered updates."
+          ]
+        }
+      ],
+      "testimonial": {
+        "quote": "HireKarma has been invaluable in bridging academia and industry for our students. The platform equips computer science learners with practical career insights and connects them with the right opportunities. A trusted partner for employability-focused institutions.",
+        "name": "Dr. Suvendra Kumar Jayasingh",
+        "role": "Associate Professor (Computer Science)",
+        "org": "Institute of Management and Information Technology, Cuttack",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/testimonials/images/suvendu-jayasingh.jpg"
+      },
+      "cta": {
+        "heading": "Bring DISHA + SOLVIQ to your campus",
+        "description": "See how the Recruitment Division can run your placement season end to end.",
+        "buttonLabel": "Talk to the recruitment team",
+        "service": "recruitment"
+      },
+      "crossLinks": [
+        { "text": "Pre-Placement Training runs alongside SOLVIQ before every drive.", "href": "/services/pre-placement-training", "label": "Explore Pre-Placement Training" }
+      ]
+    },
+    "skill-development": {
+      "slug": "skill-development",
+      "accent": "#5b4bdb",
+      "order": ["stats", "process", "cardSections", "caseStudies", "testimonial"],
+      "meta": {
+        "title": "Skill Development Division — CSR Livelihood Training | HireKarma",
+        "description": "CSR-funded skilling that reaches young people where quality training was never built. 5,880+ youth trained across 20+ districts with a 78%+ placement rate."
+      },
+      "hero": {
+        "eyebrow": "Skill Development Division",
+        "heading": "Some of the most capable young people in India have no access to quality training.",
+        "headingHighlight": "no access",
+        "description": "Not because they don't want to learn, but because it was never built for where they live. We partner with CSR and government funders to change that — community by community."
+      },
+      "stats": [
+        { "value": "5,880+", "label": "Youth Trained" },
+        { "value": "78%+", "label": "Placement Rate" },
+        { "value": "6+", "label": "CSR Partners" },
+        { "value": "20+", "label": "Districts Covered" }
+      ],
+      "process": {
+        "label": "How it works",
+        "heading": "From community to career, in six steps",
+        "description": "A repeatable model that turns CSR funding into measurable livelihoods.",
+        "steps": [
+          { "title": "Identify communities", "description": "Find the districts and communities where capable youth lack access to training." },
+          { "title": "CSR partnership", "description": "Partner with corporate and PSU funders to underwrite the programme." },
+          { "title": "Curriculum design", "description": "Build industry-aligned curricula for the roles that are actually hiring." },
+          { "title": "Run batches", "description": "Deliver hands-on training close to where learners live." },
+          { "title": "Issue verifiable certificates", "description": "Certify completion with credentials that travel with the learner." },
+          { "title": "Post-placement follow-up", "description": "Track outcomes and support learners after they're placed." }
+        ]
+      },
+      "cardSections": [
+        {
+          "label": "Training tracks",
+          "heading": "Verticals we train for",
+          "columns": 4,
+          "items": [
+            { "icon": "code", "title": "IT & Digital Literacy", "description": "Foundational and job-ready digital skills." },
+            { "icon": "store", "title": "Retail & Customer Service", "description": "Frontline retail and service readiness." },
+            { "icon": "heart", "title": "Healthcare Support", "description": "Entry roles across the healthcare support chain." },
+            { "icon": "wrench", "title": "Skilled Service Technician", "description": "Hands-on technical trades in demand locally." }
+          ]
+        }
+      ],
+      "caseStudies": {
+        "heading": "Stories from the ground",
+        "description": "Behind every statistic is a person whose options changed.",
+        "items": [
+          {
+            "name": "Tulasi Lakhua",
+            "role": "Skill Development graduate",
+            "quote": "The training reached my community when nothing else did — and it changed what I thought was possible for me."
+          },
+          {
+            "name": "Kalpana Minz",
+            "role": "Skill Development graduate",
+            "quote": "I learned a job-ready skill close to home and was placed soon after the programme."
+          },
+          {
+            "name": "Chiranjeet Patra",
+            "role": "Skill Development graduate",
+            "quote": "A verifiable certificate I could show any employer made all the difference in getting hired."
+          }
+        ]
+      },
+      "testimonial": {
+        "quote": "HireKarma's skilling programmes reach communities that are usually left out, and they run them with the rigour a CSR partner needs — clear curricula, real placements, and honest reporting.",
+        "name": "Swastik Samant",
+        "role": "Lighthouse Communities Foundation"
+      },
+      "cta": {
+        "heading": "Partner with us on CSR skilling",
+        "description": "Turn your CSR budget into measurable livelihoods, with transparent reporting at every step.",
+        "buttonLabel": "Start a CSR conversation",
+        "service": "skill-development"
+      }
+    },
+    "pre-placement-training": {
+      "slug": "pre-placement-training",
+      "accent": "#00a2e5",
+      "order": ["stats", "cardSections", "callout", "bulletGroups", "partners", "testimonial", "crossLinks"],
+      "meta": {
+        "title": "Pre-Placement Training Division | HireKarma",
+        "description": "Practitioner-led, on-campus pre-placement training that runs 4–8 weeks before placement season — aptitude, technical prep, communication, and mock interviews."
+      },
+      "hero": {
+        "eyebrow": "Pre-Placement Training Division",
+        "heading": "We embed inside colleges for 4–8 weeks before placement season.",
+        "headingHighlight": "4–8 weeks",
+        "description": "Our trainers are practitioners, not visiting lecturers — so students walk into placement drives ready for the questions that actually get asked."
+      },
+      "stats": [
+        { "value": "1,000+", "label": "Students Trained" },
+        { "value": "75%", "label": "Avg Placement Uplift" },
+        { "value": "900+", "label": "Hiring Companies" },
+        { "value": "3+", "label": "Years Running" }
+      ],
+      "cardSections": [
+        {
+          "label": "Programme structure",
+          "heading": "Four modules that cover the whole funnel",
+          "columns": 4,
+          "items": [
+            { "icon": "brain", "title": "Aptitude & Reasoning", "description": "Quantitative, logical, and verbal reasoning for placement tests." },
+            { "icon": "code", "title": "Technical Interview Prep", "description": "Core CS and role-specific technical rounds." },
+            { "icon": "message", "title": "Communication & Soft Skills", "description": "Clear, confident communication under pressure." },
+            { "icon": "users", "title": "HR Rounds & Mock Interviews", "description": "Realistic HR rounds and full mock interviews." }
+          ]
+        }
+      ],
+      "callout": {
+        "heading": "Every PPT programme runs alongside SOLVIQ",
+        "text": "Classroom coaching is reinforced with AI-driven practice — students get unlimited mock interviews and instant feedback between sessions.",
+        "href": "/services/recruitment",
+        "linkLabel": "See how SOLVIQ fits in"
+      },
+      "bulletGroups": [
+        {
+          "heading": "How a typical engagement runs",
+          "items": [
+            "30–60 hours of training delivered over 4–6 weeks.",
+            "Parallel SOLVIQ sessions for unlimited practice between classes.",
+            "1:1 coaching for students who need targeted support.",
+            "Post-programme analytics so the college can see readiness improve."
+          ]
+        }
+      ],
+      "partners": {
+        "label": "Partner colleges",
+        "heading": "Where we've run PPT",
+        "columns": 3,
+        "items": [
+          { "icon": "school", "title": "IGIT Sarang" },
+          { "icon": "school", "title": "CIME" },
+          { "icon": "school", "title": "CUPGS" }
+        ]
+      },
+      "testimonial": {
+        "quote": "The HireKarma PPT team embedded with our final-year batch for six weeks. Because their trainers are practitioners, students walked into drives ready for the questions that actually get asked — and it showed in our placement numbers.",
+        "name": "Prof. Sanjaya Kumar Panda",
+        "role": "Training & Placement Officer",
+        "org": "IGIT Sarang"
+      },
+      "cta": {
+        "heading": "Bring PPT to your final-year batch",
+        "description": "Give your students a practitioner-led head start before placement season begins.",
+        "buttonLabel": "Plan a PPT programme",
+        "service": "ppt"
+      },
+      "crossLinks": [
+        { "text": "PPT is strongest paired with the Recruitment Division's SOLVIQ.", "href": "/services/recruitment", "label": "Explore Recruitment" }
+      ]
+    },
+    "it-consulting": {
+      "slug": "it-consulting",
+      "accent": "#098855",
+      "order": ["stats", "cardSections", "projects", "process", "testimonial"],
+      "meta": {
+        "title": "IT Consulting Division | HireKarma",
+        "description": "The engineering culture that built DISHA and SOLVIQ, available to clients — custom software, campaign technology, enterprise solutions, and product consulting."
+      },
+      "hero": {
+        "eyebrow": "IT Consulting Division",
+        "heading": "The same engineering culture that built DISHA and SOLVIQ is available to clients.",
+        "headingHighlight": "DISHA and SOLVIQ",
+        "description": "For teams who need technology done right — from first architecture decision to long-term support."
+      },
+      "stats": [
+        { "value": "50+", "label": "Projects Delivered" },
+        { "value": "15+", "label": "Enterprise Clients" },
+        { "value": "6+", "label": "Industries Served" },
+        { "value": "12+", "label": "Engineers On Team" }
+      ],
+      "cardSections": [
+        {
+          "label": "What we build",
+          "heading": "Four ways we deliver",
+          "columns": 4,
+          "items": [
+            { "icon": "code", "title": "Custom Software Products", "description": "Product-grade software built the way we build our own." },
+            { "icon": "megaphone", "title": "Political Campaign Technology", "description": "Field-tested tools for large-scale campaign operations." },
+            { "icon": "building", "title": "Enterprise Digital Solutions", "description": "Digital systems that fit how enterprises actually work." },
+            { "icon": "compass", "title": "Product Consulting & Architecture", "description": "Architecture and product direction for teams scaling up." }
+          ]
+        }
+      ],
+      "projects": {
+        "label": "Selected work",
+        "heading": "Projects we've shipped",
+        "description": "A selection of platforms and products our IT Consulting team has designed, built, and deployed.",
+        "items": [
+          {
+            "name": "Ama Gopalpur",
+            "description": "Digital governance and citizen services platform for the Gopalpur region.",
+            "image": "https://hirekarma.s3.us-east-1.amazonaws.com/it-consulting/ama-gopalpur.png",
+            "href": "https://amagopalpur.org/",
+            "live": true
+          },
+          {
+            "name": "Jana Samadhan",
+            "description": "Grievance redressal and citizen feedback system for local administration.",
+            "image": "https://hirekarma.s3.us-east-1.amazonaws.com/it-consulting/jana-samadhan.png",
+            "href": "https://eabhijog.amagopalpur.org/",
+            "live": true
+          },
+          {
+            "name": "GDMSPL",
+            "description": "Corporate web platform for Geometric Design Management Services.",
+            "image": "https://hirekarma.s3.us-east-1.amazonaws.com/it-consulting/GDMSPL.png",
+            "href": "https://gdmspl.vercel.app/",
+            "live": true
+          },
+          {
+            "name": "Atal Yuva Vikas 2026",
+            "description": "Youth development and engagement platform for the 2026 programme.",
+            "image": "https://hirekarma.s3.us-east-1.amazonaws.com/it-consulting/atal-yuva-vikas.png",
+            "href": "https://atalyuvavikas.amagopalpur.org/",
+            "live": true
+          },
+          {
+            "name": "Maa Tara Tarini",
+            "description": "Digital experience platform built for the Maa Tara Tarini initiative.",
+            "image": "https://hirekarma.s3.us-east-1.amazonaws.com/it-consulting/maa-tara-tarini.png",
+            "href": "https://maataratarini.hirekarma.in/",
+            "live": true
+          },
+          {
+            "name": "AARIAH",
+            "description": "Product platform delivered end to end by our engineering team.",
+            "image": "https://hirekarma.s3.us-east-1.amazonaws.com/it-consulting/aariah.png",
+            "href": "https://aariah.vercel.app/",
+            "live": true
+          },
+          {
+            "name": "BPUT'O'JOB",
+            "description": "Placement and job discovery platform for BPUT students.",
+            "image": "https://hirekarma.s3.us-east-1.amazonaws.com/it-consulting/bput-o-job.avif",
+            "live": false
+          },
+          {
+            "name": "MLA Gopalpur",
+            "description": "Constituency engagement and information portal for MLA Gopalpur.",
+            "image": "https://hirekarma.s3.us-east-1.amazonaws.com/it-consulting/mlagopalpur.webp",
+            "live": false
+          }
+        ]
+      },
+      "process": {
+        "label": "Engagement process",
+        "heading": "How we take a project from idea to production",
+        "steps": [
+          { "title": "Discovery", "description": "Understand the problem, users, and constraints before writing code." },
+          { "title": "Architecture", "description": "Design a system that scales and won't need rebuilding in a year." },
+          { "title": "Agile Build", "description": "Ship in tight iterations with visibility at every sprint." },
+          { "title": "QA", "description": "Test rigorously so quality is built in, not bolted on." },
+          { "title": "Deployment", "description": "Release smoothly with the right infrastructure in place." },
+          { "title": "Support", "description": "Stay on after launch to keep the product healthy and evolving." }
+        ]
+      },
+      "testimonial": {
+        "quote": "HireKarma's engineering team delivered with the discipline and clarity we expect from a serious technology partner. They understood the problem, proposed the right architecture, and shipped.",
+        "name": "Nabin Patra",
+        "role": "Director",
+        "org": "Geometric Design Management Services"
+      },
+      "cta": {
+        "heading": "Talk to us about your project",
+        "description": "Tell us what you're building and we'll tell you how we'd approach it.",
+        "buttonLabel": "Start a project conversation",
+        "service": "it-consulting"
+      }
+    },
+    "open-source-dpi": {
+      "slug": "open-source-dpi",
+      "accent": "#d64246",
+      "order": ["cardSections", "bulletGroups", "flow", "callout", "crossLinks"],
+      "meta": {
+        "title": "Open Source & Digital Public Infrastructure | HireKarma",
+        "description": "We don't just consume DPI — we contribute to MOSIP, INJI, and W3C Verifiable Credentials, build on top of them, and help other organisations adopt them."
+      },
+      "hero": {
+        "eyebrow": "Open Source & DPI",
+        "heading": "We don't just consume DPI — we contribute to it.",
+        "headingHighlight": "contribute to it.",
+        "description": "We build on top of open digital public infrastructure, and help other organisations adopt it — so trust and credentials work at national scale."
+      },
+      "cardSections": [
+        {
+          "label": "Platforms we work on",
+          "heading": "The open standards we build with",
+          "columns": 3,
+          "items": [
+            { "icon": "fingerprint", "title": "MOSIP", "description": "Modular Open Source Identity Platform for foundational ID." },
+            { "icon": "shield", "title": "INJI", "description": "Verifiable credentials for real-world, offline-capable trust." },
+            { "icon": "badge", "title": "W3C Verifiable Credentials", "description": "Open standards for portable, tamper-evident credentials." }
+          ]
+        }
+      ],
+      "bulletGroups": [
+        {
+          "heading": "What we have built on MOSIP",
+          "items": [
+            "State-level MOSIP integrations for real deployments.",
+            "Biometric and OTP-based authentication flows.",
+            "An offline field-verification app for low-connectivity areas.",
+            "Admin dashboards for programme operators and officials."
+          ]
+        }
+      ],
+      "flow": {
+        "label": "Products built on INJI",
+        "heading": "Credentials that travel with the person",
+        "description": "A connected flow from training to lifelong, verifiable proof.",
+        "steps": [
+          { "title": "Training Completion Credentials", "description": "Every completed programme becomes a verifiable credential." },
+          { "title": "Academic Credential Issuance", "description": "Institutions issue tamper-evident academic records." },
+          { "title": "Employment Verification VC", "description": "Employment and experience, verifiable without back-and-forth." },
+          { "title": "Skill Badges & Micro-Credentials", "description": "Granular, portable proof of specific skills." }
+        ]
+      },
+      "callout": {
+        "heading": "Our long-term goal",
+        "text": "Every certificate HireKarma issues should travel with the person as a W3C-compliant Verifiable Credential — owned by them, verifiable by anyone, forever."
+      },
+      "cta": {
+        "heading": "Collaborate with our DPI team",
+        "description": "Building on MOSIP, INJI, or verifiable credentials? Let's work together.",
+        "buttonLabel": "Talk to the DPI team",
+        "service": "open-source-dpi"
+      },
+      "crossLinks": [
+        { "text": "MOSIP, INJI and Digital India are part of the ecosystem we build with.", "href": "/#what-we-do", "label": "See our partner ecosystem" }
+      ]
+    },
+    "staff-augmentation": {
+      "slug": "staff-augmentation",
+      "accent": "#f58020",
+      "order": ["stats", "cardSections", "callout", "cardSections2"],
+      "meta": {
+        "title": "Staff Augmentation Division | HireKarma",
+        "description": "Trained, vetted, deployment-ready professionals at client sites — quickly and reliably. 48-hour deployment turnaround with a 100% pre-vetted bench."
+      },
+      "hero": {
+        "eyebrow": "Staff Augmentation Division",
+        "heading": "Trained, vetted, deployment-ready professionals at client sites.",
+        "headingHighlight": "deployment-ready",
+        "description": "Extend your team quickly and reliably — with people who are ready to contribute from day one."
+      },
+      "stats": [
+        { "value": "48HRS", "label": "Deployment Turnaround" },
+        { "value": "20+", "label": "Bench Strength" },
+        { "value": "100%", "label": "Pre-Vetted" },
+        { "value": "10+", "label": "Skills Certified" }
+      ],
+      "cardSections": [
+        {
+          "label": "Engagement models",
+          "heading": "Four ways to work with our bench",
+          "columns": 4,
+          "items": [
+            { "icon": "user", "title": "Dedicated Resource Deployment", "description": "A dedicated professional embedded in your team." },
+            { "icon": "layers", "title": "Active Bench Programme", "description": "Ready talent you can draw on as needs shift." },
+            { "icon": "users", "title": "Project-Based Teams", "description": "A full team assembled around a specific project." },
+            { "icon": "network", "title": "Open Source Specialists", "description": "MOSIP / INJI / DPI specialists for niche needs." }
+          ]
+        }
+      ],
+      "callout": {
+        "heading": "Bench isn't idle",
+        "text": "Between deployments, our bench keeps training — so the people you get are current, not rusty.",
+        "href": "/services/skill-development",
+        "linkLabel": "See how we train"
+      },
+      "cardSections2": [
+        {
+          "label": "Continuous training tracks",
+          "heading": "What the bench trains on",
+          "columns": 4,
+          "items": [
+            { "icon": "code", "title": "Full Stack Engineering" },
+            { "icon": "cloud", "title": "Cloud & DevOps" },
+            { "icon": "brain", "title": "AI & Data Engineering" },
+            { "icon": "network", "title": "MOSIP / INJI / DPI" }
+          ]
+        }
+      ],
+      "cta": {
+        "heading": "Request bench availability",
+        "description": "Tell us the skills and timeline — we'll tell you who's ready to deploy.",
+        "buttonLabel": "Request bench availability",
+        "service": "staff-augmentation"
+      }
+    }
+  }
+}

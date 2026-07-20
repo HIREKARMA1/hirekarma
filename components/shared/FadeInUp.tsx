@@ -26,6 +26,7 @@ interface FadeInUpProps {
   className?: string;
   delay?: number;
   as?: "div" | "section";
+  style?: React.CSSProperties;
 }
 
 export function FadeInUp({
@@ -33,11 +34,13 @@ export function FadeInUp({
   className,
   delay = 0,
   as = "div",
+  style,
 }: FadeInUpProps) {
   const Comp = as === "section" ? motion.section : motion.div;
   return (
     <Comp
       className={className}
+      style={style}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.18 }}
