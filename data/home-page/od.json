@@ -104,7 +104,7 @@
         "kind": "product",
         "accent": "#fec40d",
         "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Products/Shortlisted.png",
-        "href": "/shortlisted"
+        "href": "https://shortlisted.hirekarma.in/"
       },
       {
         "id": "consulting",
