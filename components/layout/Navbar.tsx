@@ -89,8 +89,47 @@ const productHrefById: Record<string, string> = {
   disha: env.dishaUrl,
   solviq: env.solviqUrl,
   lakshya: env.lakshyaUrl,
-  shortlisted: "/shortlisted",
+  shortlisted: env.shortlistedUrl,
 };
+
+function isExternalHref(href: string) {
+  return href.startsWith("http");
+}
+
+function DropdownNavLink({
+  href,
+  className,
+  onClick,
+  children,
+  role,
+}: {
+  href: string;
+  className?: string;
+  onClick?: () => void;
+  children: React.ReactNode;
+  role?: string;
+}) {
+  if (isExternalHref(href)) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={className}
+        onClick={onClick}
+        role={role}
+      >
+        {children}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={href} className={className} onClick={onClick} role={role}>
+      {children}
+    </Link>
+  );
+}
 
 const servicesMeta: Record<
   string,
@@ -362,7 +401,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
               const Icon = dropdownItem.icon;
               const accent = dropdownItem.accent ?? theme.colors.primary;
               return (
-                <Link
+                <DropdownNavLink
                   key={dropdownItem.label}
                   href={dropdownItem.href}
                   role="menuitem"
@@ -386,7 +425,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
                     ) : null}
                   </span>
                   <ArrowRight className="h-3.5 w-3.5 shrink-0 text-[#0f1622]/25 transition group-hover:translate-x-0.5 group-hover:text-[#00a2e5]" />
-                </Link>
+                </DropdownNavLink>
               );
             })}
           </div>
@@ -551,7 +590,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
                         const accent =
                           dropdownItem.accent ?? theme.colors.primary;
                         return (
-                          <Link
+                          <DropdownNavLink
                             key={dropdownItem.label}
                             href={dropdownItem.href}
                             className="flex items-center gap-3 rounded-xl px-3 py-2.5 transition hover:bg-[#f6f8fb]"
@@ -576,7 +615,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
                                 </span>
                               ) : null}
                             </span>
-                          </Link>
+                          </DropdownNavLink>
                         );
                       })}
                     </div>
