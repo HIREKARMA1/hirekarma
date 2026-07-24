@@ -26,6 +26,7 @@ export interface SiteNavContent {
   impact: NavLinkItem;
   resources: NavDropdown;
   about: NavDropdown;
+  events: NavLinkItem;
   contact: NavLinkItem;
   language: string;
   tagline: string;
