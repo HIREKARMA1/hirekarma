@@ -128,6 +128,11 @@
         }
       ]
     },
+    "events": {
+      "id": "events",
+      "label": "इवेंट्स",
+      "href": "https://disha.hirekarma.in/events"
+    },
     "contact": {
       "id": "contact",
       "label": "संपर्क करें",
