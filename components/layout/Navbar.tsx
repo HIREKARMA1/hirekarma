@@ -337,6 +337,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
     { type: "link", item: { label: nav.impact.label, href: nav.impact.href } },
     { type: "dropdown", item: resourcesItem },
     { type: "dropdown", item: aboutItem },
+    { type: "link", item: { label: nav.events.label, href: nav.events.href } },
     { type: "link", item: { label: nav.contact.label, href: nav.contact.href } },
   ];
 
