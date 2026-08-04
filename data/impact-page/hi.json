@@ -171,14 +171,14 @@
         "readMore": "Read more"
       },
       {
-        "id": "aliva-solviq",
-        "slug": "aliva-das",
+        "id": "suvam-shortlisted",
+        "slug": "suvam-s-mishra",
         "template": "student",
-        "title": "Aliva Das",
-        "location": "Odisha, India",
-        "summary": "From classroom learning to a dream IT role — powered by SolviqAI readiness and focused mentoring.",
-        "image": "/impact/aliva-solviq.png",
-        "imageAlt": "Aliva Das student success story",
+        "title": "Suvam S. Mishra",
+        "location": "Authority Entrepreneurs",
+        "summary": "From Aspiration to Achievement: How HireKarma's Shortlisted program helped Suvam gain skill readiness and land his role as AI Engineer at Authority Entrepreneurs.",
+        "image": "/impact/2f840f8b-a730-4cdc-ba63-860e52df7513.webp",
+        "imageAlt": "Suvam S. Mishra placement journey with HireKarma",
         "divisionId": "skills",
         "typeId": "student",
         "divisionLabel": "Skill development",
@@ -216,14 +216,14 @@
         "readMore": "Read more"
       },
       {
-        "id": "tulasi-skills",
-        "slug": "tulasi-lakhua",
+        "id": "devi-shortlisted",
+        "slug": "devi-prasad-patra",
         "template": "student",
-        "title": "Tulasi Lakhua",
-        "location": "Odisha, India",
-        "summary": "A career pivot through structured skill building, mock interviews, and placement-ready confidence.",
-        "image": "/impact/tulasi-skills.png",
-        "imageAlt": "Tulasi Lakhua career story",
+        "title": "Devi Prasad Patra",
+        "location": "Trayi Consulting Pvt. Ltd.",
+        "summary": "Where Preparation Meets Opportunity: How HireKarma's Shortlisted program supported Devi Prasad Patra to land his role as QA Engineer at Trayi Consulting Pvt. Ltd.",
+        "image": "/impact/161de7ce-0c48-4133-a9ff-1d9b65d7f031.webp",
+        "imageAlt": "Devi Prasad Patra placement journey with HireKarma",
         "divisionId": "skills",
         "typeId": "student",
         "divisionLabel": "Skill development",
@@ -243,6 +243,51 @@
         "typeId": "csr",
         "divisionLabel": "Skill development",
         "typeLabel": "CSR partner",
+        "readMore": "Read more"
+      },
+      {
+        "id": "satyabrata-shortlisted",
+        "slug": "satyabrata-kulhari",
+        "template": "student",
+        "title": "Satyabrata Kulhari",
+        "location": "Corporate Ranking",
+        "summary": "Where Determination Meets Growth: How HireKarma's Shortlisted program guided Satyabrata Kulhari to land his role as Data Analyst at Corporate Ranking.",
+        "image": "/impact/8e8103a5-3559-4bf3-b127-aad93aacc195.webp",
+        "imageAlt": "Satyabrata Kulhari placement journey with HireKarma",
+        "divisionId": "skills",
+        "typeId": "student",
+        "divisionLabel": "Skill development",
+        "typeLabel": "Student story",
+        "readMore": "Read more"
+      },
+      {
+        "id": "rakesh-shortlisted",
+        "slug": "rakesh-nath-sharma",
+        "template": "student",
+        "title": "Rakesh Nath Sharma",
+        "location": "SEOCZAR IT SERVICES PVT. LTD.",
+        "summary": "From Job Seeker to SEO Executive: How HireKarma's Shortlisted program guided Rakesh Nath Sharma to land his role as SEO Executive at SEOCZAR IT SERVICES PVT. LTD.",
+        "image": "/impact/f93da89e-7967-4cd7-849c-e31790dcf6ea.webp",
+        "imageAlt": "Rakesh Nath Sharma placement journey with HireKarma",
+        "divisionId": "skills",
+        "typeId": "student",
+        "divisionLabel": "Skill development",
+        "typeLabel": "Student story",
+        "readMore": "Read more"
+      },
+      {
+        "id": "sanchita-shortlisted",
+        "slug": "sanchita-rani-nayak",
+        "template": "student",
+        "title": "Sanchita Rani Nayak",
+        "location": "Luminous Infoways",
+        "summary": "Transforming Potential into Success: How HireKarma's Shortlisted program guided Sanchita Rani Nayak to land her role as AI/ML Engineer at Luminous Infoways.",
+        "image": "/impact/ff494e6e-cc87-40af-adb8-0061858cf650.webp",
+        "imageAlt": "Sanchita Rani Nayak placement journey with HireKarma",
+        "divisionId": "skills",
+        "typeId": "student",
+        "divisionLabel": "Skill development",
+        "typeLabel": "Student story",
         "readMore": "Read more"
       }
     ]
@@ -333,61 +378,70 @@
       "quoteImage": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/testimonial/Dheeraj+KK.jpg"
     },
     {
-      "slug": "aliva-das",
+      "slug": "suvam-s-mishra",
       "template": "student",
       "breadcrumb": "Impact / Student story",
-      "label": "Student story · SolviqAI",
-      "heading": "From learning to landing",
-      "headingAccent": "her dream job.",
-      "description": "Aliva used SolviqAI assessments, resume scoring, and mock interviews to close the gap between classroom and shortlist.",
+      "label": "Student story · Shortlisted Program",
+      "heading": "From Aspiration to Achievement:",
+      "headingAccent": "Suvam S. Mishra's Placement Journey",
+      "description": "When Suvam S. Mishra began his job search, he was looking for more than just an opportunity—he wanted a platform that could help him showcase his skills, prepare for industry expectations, and connect with the right employers.",
       "tags": [
         "Skill development",
         "Student story",
-        "SolviqAI"
+        "Shortlisted Program",
+        "AI Engineer"
       ],
       "primaryCta": {
-        "label": "Try SolviqAI",
-        "href": "https://www.solviqai.in/"
+        "label": "Explore Shortlisted",
+        "href": "/shortlisted"
       },
       "secondaryCta": {
         "label": "All stories",
         "href": "/impact#browse-stories"
       },
-      "heroImage": "/impact/aliva-solviq.png",
-      "heroImageAlt": "Aliva Das",
+      "heroImage": "/impact/2f840f8b-a730-4cdc-ba63-860e52df7513.webp",
+      "heroImageAlt": "Suvam S. Mishra - AI Engineer at Authority Entrepreneurs",
       "columns": [
         {
-          "title": "My background",
-          "items": [
-            "Engineering graduate focused on IT roles",
-            "Strong academics, limited interview practice",
-            "Needed clearer feedback on resume and skills",
-            "Wanted a structured path to placement readiness"
+          "title": "The Journey & Aspirations",
+          "paragraphs": [
+            "When Suvam S. Mishra began his job search, he was looking for more than just an opportunity—he wanted a platform that could help him showcase his technical skills, prepare for industry expectations, and connect directly with top hiring employers.",
+            "He sought structured guidance to elevate his profile and gain direct exposure to leading companies, leading him to join HireKarma's Shortlisted program ecosystem."
           ]
         },
         {
-          "title": "Programme completed",
-          "items": [
-            "ATS-aware resume scoring and rewrites",
-            "Aptitude and domain skill assessments",
-            "AI mock interviews with live feedback",
-            "Placement readiness score tracking"
+          "title": "Preparation & Shortlisted Ecosystem",
+          "paragraphs": [
+            "Through HireKarma's Shortlisted program, Suvam gained access to a structured placement ecosystem designed to bridge the gap between talent and opportunity.",
+            "He completed comprehensive skill assessments to validate his technical capabilities, strengthened his interview readiness through structured feedback, and participated in active recruitment drives facilitated through the platform. The personalized guidance and streamlined hiring process enabled him to confidently present his technical capabilities to recruiters."
           ]
         },
         {
-          "title": "The outcome",
-          "items": [
-            "Placed at a top IT company",
-            "Offer package of 5.6 LPA",
-            "Higher confidence in technical rounds",
-            "A repeatable readiness routine for peers"
+          "title": "Placement & Impact",
+          "paragraphs": [
+            "His dedication, combined with the support of the Shortlisted program, led to a successful placement as an AI Engineer at Authority Entrepreneurs.",
+            "Suvam's story reflects the mission of HireKarma—to empower talented individuals with the right preparation, industry exposure, and employment opportunities. Every successful placement is a testament to the impact of connecting skilled candidates with organizations that value their potential."
           ]
         }
       ],
-      "quote": "SolviqAI helped me see exactly where I stood — and what to fix before the real interview. That clarity changed everything.",
-      "quoteName": "Aliva Das",
-      "quoteRole": "Placed graduate · Odisha",
-      "quoteImage": "/students.jpg"
+      "metrics": [
+        {
+          "value": "AI Engineer",
+          "label": "Placed Role"
+        },
+        {
+          "value": "Authority Entrepreneurs",
+          "label": "Employer"
+        },
+        {
+          "value": "Shortlisted",
+          "label": "Program Completed"
+        }
+      ],
+      "quote": "The Shortlisted program gave me the confidence and direction I needed during my placement journey. From preparing for interviews to connecting with the right employer, every step was well organized and focused on helping candidates succeed. I'm grateful to HireKarma for helping me begin my professional career as an AI Engineer at Authority Entrepreneurs.",
+      "quoteName": "Suvam S. Mishra",
+      "quoteRole": "AI Engineer at Authority Entrepreneurs",
+      "quoteImage": "/impact/2f840f8b-a730-4cdc-ba63-860e52df7513.webp"
     },
     {
       "slug": "geometric-design-services",
@@ -549,57 +603,70 @@
       "quoteRole": "Dean of Placements, CIME"
     },
     {
-      "slug": "tulasi-lakhua",
+      "slug": "devi-prasad-patra",
       "template": "student",
       "breadcrumb": "Impact / Student story",
-      "label": "Student story · SolviqAI",
-      "heading": "Ready for the interview",
-      "headingAccent": "before it starts.",
-      "description": "Structured practice and feedback helped Tulasi turn uncertainty into a confident career move.",
+      "label": "Student story · Shortlisted Program",
+      "heading": "Where Preparation Meets Opportunity:",
+      "headingAccent": "Devi Prasad Patra's Career Journey",
+      "description": "For Devi Prasad Patra, securing the right career opportunity meant continuously improving, learning from every experience, and staying committed to his goal despite the challenges of a competitive job market.",
       "tags": [
         "Skill development",
-        "Student story"
+        "Student story",
+        "Shortlisted Program",
+        "QA Engineer"
       ],
       "primaryCta": {
-        "label": "Try SolviqAI",
-        "href": "https://www.solviqai.in/"
+        "label": "Explore Shortlisted",
+        "href": "/shortlisted"
       },
       "secondaryCta": {
         "label": "All stories",
         "href": "/impact#browse-stories"
       },
-      "heroImage": "/impact/tulasi-skills.png",
-      "heroImageAlt": "Tulasi Lakhua",
+      "heroImage": "/impact/161de7ce-0c48-4133-a9ff-1d9b65d7f031.webp",
+      "heroImageAlt": "Devi Prasad Patra - QA Engineer at Trayi Consulting Pvt. Ltd.",
       "columns": [
         {
-          "title": "My background",
-          "items": [
-            "Career transition mindset",
-            "Needed interview confidence",
-            "Wanted practical feedback loops"
+          "title": "The Journey & Growth",
+          "paragraphs": [
+            "For Devi Prasad Patra, securing the right career opportunity meant continuously improving, learning from every experience, and staying committed to his goal despite the challenges of a competitive job market.",
+            "Through HireKarma's Shortlisted program, Devi found an environment that encouraged growth beyond technical knowledge. The platform helped him understand industry expectations, identify areas for improvement, and participate in hiring opportunities that matched his skills and career aspirations."
           ]
         },
         {
-          "title": "Programme completed",
-          "items": [
-            "Skill assessments",
-            "Mock interviews",
-            "Resume and profile polish"
+          "title": "Preparation & Shortlisted Ecosystem",
+          "paragraphs": [
+            "Each stage of the journey strengthened his confidence and prepared him to perform at his best.",
+            "The structured support from the Shortlisted program allowed Devi to refine his capabilities and approach recruitment drives with purpose, focus, and interview-ready confidence."
           ]
         },
         {
-          "title": "The outcome",
-          "items": [
-            "Stronger interview performance",
-            "Clearer career direction",
-            "Placement-ready portfolio"
+          "title": "Placement & Impact",
+          "paragraphs": [
+            "His persistence and dedication were rewarded when he was selected as a QA Engineer at Trayi Consulting Pvt. Ltd., marking the beginning of an exciting professional career in software quality assurance.",
+            "Devi's journey demonstrates that career success is built through preparation, resilience, and the right opportunities. At HireKarma, we are committed to helping aspiring professionals transform their potential into meaningful careers by connecting them with employers who recognize their talent."
           ]
         }
       ],
-      "quote": "The mock interviews and readiness scores made me feel prepared — not just hopeful.",
-      "quoteName": "Tulasi Lakhua",
-      "quoteRole": "Career transition · Odisha",
-      "quoteImage": "/students.jpg"
+      "metrics": [
+        {
+          "value": "QA Engineer",
+          "label": "Placed Role"
+        },
+        {
+          "value": "Trayi Consulting",
+          "label": "Employer"
+        },
+        {
+          "value": "Shortlisted",
+          "label": "Program Completed"
+        }
+      ],
+      "quote": "What made the biggest difference for me was the continuous support and the opportunity to learn throughout the placement journey. The Shortlisted program helped me become more confident in my abilities and connected me with an organization where I could begin my career with purpose. I am thankful to HireKarma for being a part of this important milestone.",
+      "quoteName": "Devi Prasad Patra",
+      "quoteRole": "QA Engineer at Trayi Consulting Pvt. Ltd.",
+      "quoteImage": "/impact/161de7ce-0c48-4133-a9ff-1d9b65d7f031.webp"
     },
     {
       "slug": "aisect-partnership",
@@ -666,6 +733,204 @@
       "quote": "Students who previously had no access to quality jobs are now working with leading companies across India.",
       "quoteName": "Santosh Mishra",
       "quoteRole": "Director of Partnerships, AISECT"
+    },
+    {
+      "slug": "satyabrata-kulhari",
+      "template": "student",
+      "breadcrumb": "Impact / Student story",
+      "label": "Student story · Shortlisted Program",
+      "heading": "Where Determination Meets Growth:",
+      "headingAccent": "Satyabrata Kulhari's Career Journey",
+      "description": "For Satyabrata Kulhari, building a successful career in data analytics required dedication, continuous learning, and the willingness to adapt in an ever-evolving job market.",
+      "tags": [
+        "Skill development",
+        "Student story",
+        "Shortlisted Program",
+        "Data Analyst"
+      ],
+      "primaryCta": {
+        "label": "Explore Shortlisted",
+        "href": "/shortlisted"
+      },
+      "secondaryCta": {
+        "label": "All stories",
+        "href": "/impact#browse-stories"
+      },
+      "heroImage": "/impact/8e8103a5-3559-4bf3-b127-aad93aacc195.webp",
+      "heroImageAlt": "Satyabrata Kulhari - Data Analyst at Corporate Ranking",
+      "columns": [
+        {
+          "title": "The Journey & Aspirations",
+          "paragraphs": [
+            "For Satyabrata Kulhari, building a successful career in data analytics required dedication, continuous learning, and the willingness to adapt in an ever-evolving job market.",
+            "With a strong interest in working with data and uncovering meaningful insights, he remained focused on enhancing his skills and preparing himself for the right opportunity."
+          ]
+        },
+        {
+          "title": "Preparation & Shortlisted Ecosystem",
+          "paragraphs": [
+            "Through HireKarma's Shortlisted program, Satyabrata gained valuable guidance that extended beyond technical training. The program helped him better understand industry requirements, strengthen his analytical capabilities, and confidently navigate the recruitment process.",
+            "With access to relevant opportunities and continuous support, he was able to showcase his potential to prospective employers."
+          ]
+        },
+        {
+          "title": "Placement & Impact",
+          "paragraphs": [
+            "His efforts and perseverance led to a significant achievement when he was selected as a Data Analyst at Corporate Ranking, marking an important milestone in his professional journey.",
+            "Satyabrata's success story highlights the importance of consistent effort, skill development, and access to the right opportunities. At HireKarma, we remain committed to empowering aspiring professionals by helping them bridge the gap between talent and career success."
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "Data Analyst",
+          "label": "Placed Role"
+        },
+        {
+          "value": "Corporate Ranking",
+          "label": "Employer"
+        },
+        {
+          "value": "Shortlisted",
+          "label": "Program Completed"
+        }
+      ],
+      "quote": "The Shortlisted program provided me with the direction and confidence I needed during my job search. The mentorship, learning opportunities, and placement support helped me prepare for industry expectations and connect with the right opportunity. I am grateful to HireKarma for supporting me throughout this journey.",
+      "quoteName": "Satyabrata Kulhari",
+      "quoteRole": "Data Analyst at Corporate Ranking",
+      "quoteImage": "/impact/8e8103a5-3559-4bf3-b127-aad93aacc195.webp"
+    },
+    {
+      "slug": "rakesh-nath-sharma",
+      "template": "student",
+      "breadcrumb": "Impact / Student story",
+      "label": "Student story · Shortlisted Program",
+      "heading": "From Job Seeker to SEO Executive:",
+      "headingAccent": "Rakesh Nath Sharma's Journey",
+      "description": "Every successful career begins with a goal and the determination to achieve it. For Rakesh Nath Sharma, the journey to securing the right opportunity was built on continuous learning, patience, and professional growth.",
+      "tags": [
+        "Skill development",
+        "Student story",
+        "Shortlisted Program",
+        "SEO Executive"
+      ],
+      "primaryCta": {
+        "label": "Explore Shortlisted",
+        "href": "/shortlisted"
+      },
+      "secondaryCta": {
+        "label": "All stories",
+        "href": "/impact#browse-stories"
+      },
+      "heroImage": "/impact/f93da89e-7967-4cd7-849c-e31790dcf6ea.webp",
+      "heroImageAlt": "Rakesh Nath Sharma - SEO Executive at SEOCZAR IT SERVICES PVT. LTD.",
+      "columns": [
+        {
+          "title": "The Journey & Growth",
+          "paragraphs": [
+            "Every successful career begins with a goal and the determination to achieve it. For Rakesh Nath Sharma, the journey to securing the right opportunity was built on continuous learning, patience, and a commitment to professional growth.",
+            "Like many job seekers, Rakesh faced the challenge of standing out in a competitive market. Instead of giving up, he focused on improving his skills, understanding industry requirements, and preparing himself for opportunities that aligned with his career ambitions."
+          ]
+        },
+        {
+          "title": "Preparation & Shortlisted Ecosystem",
+          "paragraphs": [
+            "Through HireKarma's Shortlisted program, Rakesh gained access to structured guidance, career support, and hiring opportunities that helped him move closer to his goal.",
+            "The program not only enhanced his understanding of the recruitment process but also helped him build the confidence needed to showcase his abilities effectively."
+          ]
+        },
+        {
+          "title": "Placement & Impact",
+          "paragraphs": [
+            "His dedication was rewarded when he was selected as an SEO Executive at SEOCZAR IT SERVICES PVT. LTD. This achievement marked the beginning of an exciting chapter in his professional journey and a significant step toward building a successful career in digital marketing.",
+            "Rakesh's success story shows that with the right mindset, consistent effort, and access to the right opportunities, career goals can become reality. At HireKarma, we are proud to support talented individuals like Rakesh as they take meaningful steps toward a brighter professional future."
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "SEO Executive",
+          "label": "Placed Role"
+        },
+        {
+          "value": "SEOCZAR IT SERVICES",
+          "label": "Employer"
+        },
+        {
+          "value": "Shortlisted",
+          "label": "Program Completed"
+        }
+      ],
+      "quote": "The support and guidance I received throughout the placement journey played a crucial role in helping me secure this opportunity. The Shortlisted program helped me improve my confidence, prepare for interviews, and connect with the right employer. I am grateful to HireKarma for being a part of my career journey.",
+      "quoteName": "Rakesh Nath Sharma",
+      "quoteRole": "SEO Executive at SEOCZAR IT SERVICES PVT. LTD.",
+      "quoteImage": "/impact/f93da89e-7967-4cd7-849c-e31790dcf6ea.webp"
+    },
+    {
+      "slug": "sanchita-rani-nayak",
+      "template": "student",
+      "breadcrumb": "Impact / Student story",
+      "label": "Student story · Shortlisted Program",
+      "heading": "Transforming Potential into Success:",
+      "headingAccent": "Sanchita Rani Nayak's Career Journey",
+      "description": "For Sanchita Rani Nayak, pursuing a career in Artificial Intelligence and Machine Learning was driven by curiosity, determination, and a passion for technology.",
+      "tags": [
+        "Skill development",
+        "Student story",
+        "Shortlisted Program",
+        "AI/ML Engineer"
+      ],
+      "primaryCta": {
+        "label": "Explore Shortlisted",
+        "href": "/shortlisted"
+      },
+      "secondaryCta": {
+        "label": "All stories",
+        "href": "/impact#browse-stories"
+      },
+      "heroImage": "/impact/ff494e6e-cc87-40af-adb8-0061858cf650.webp",
+      "heroImageAlt": "Sanchita Rani Nayak - AI/ML Engineer at Luminous Infoways",
+      "columns": [
+        {
+          "title": "The Journey & Passion",
+          "paragraphs": [
+            "For Sanchita Rani Nayak, pursuing a career in Artificial Intelligence and Machine Learning was driven by curiosity, determination, and a passion for technology.",
+            "With a clear vision for her future, she remained committed to developing her skills and preparing herself for opportunities in one of the fastest-growing fields in the industry."
+          ]
+        },
+        {
+          "title": "Preparation & Shortlisted Ecosystem",
+          "paragraphs": [
+            "Through HireKarma's Shortlisted program, Sanchita received the guidance, support, and exposure needed to strengthen her technical foundation and understand industry expectations.",
+            "The program helped her identify areas for growth, build confidence in her abilities, and participate in opportunities that aligned with her career goals."
+          ]
+        },
+        {
+          "title": "Placement & Impact",
+          "paragraphs": [
+            "Her dedication and continuous efforts led to a significant achievement when she was selected as an AI/ML Engineer at Luminous Infoways, marking the beginning of an exciting chapter in her professional journey.",
+            "Sanchita's story is a testament to the impact of continuous learning, perseverance, and the right opportunities. At HireKarma, we are proud to support aspiring professionals as they transform their potential into meaningful and successful careers."
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "AI/ML Engineer",
+          "label": "Placed Role"
+        },
+        {
+          "value": "Luminous Infoways",
+          "label": "Employer"
+        },
+        {
+          "value": "Shortlisted",
+          "label": "Program Completed"
+        }
+      ],
+      "quote": "The Shortlisted program played an important role in my placement journey. The guidance, learning opportunities, and support throughout the process helped me improve my confidence and prepare for industry requirements. I am grateful to HireKarma for helping me take this important step in my career.",
+      "quoteName": "Sanchita Rani Nayak",
+      "quoteRole": "AI/ML Engineer at Luminous Infoways",
+      "quoteImage": "/impact/ff494e6e-cc87-40af-adb8-0061858cf650.webp"
     }
   ]
 }
