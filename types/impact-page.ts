@@ -43,7 +43,8 @@ export interface ImpactStoryCard {
 
 export interface ImpactDetailColumn {
   title: string;
-  items: string[];
+  items?: string[];
+  paragraphs?: string[];
 }
 
 export interface ImpactDetailMetric {

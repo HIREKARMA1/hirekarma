@@ -134,9 +134,9 @@ export function ImpactBrowseSection() {
                   <h3 className="text-[1.05rem] font-bold tracking-tight text-[#0f1622]">
                     {story.title}
                   </h3>
-                  <p className="mt-1 flex items-center gap-1 text-[12px] text-[#475569]0">
-                    <MapPin className="h-3 w-3 shrink-0" style={{ color: accent }} />
-                    {story.location}
+                  <p className="mt-1 flex items-center gap-1.5 text-[12px] font-medium text-[#475569]">
+                    <MapPin className="h-3.5 w-3.5 shrink-0" style={{ color: accent }} />
+                    <span>{story.location}</span>
                   </p>
                   <p className="mt-2 line-clamp-3 text-[13px] leading-snug text-[#334155]">
                     {story.summary}
