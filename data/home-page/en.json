@@ -63,7 +63,7 @@
         "description": "Industry-aligned training programs that build job-ready digital skills.",
         "kind": "activity",
         "accent": "#5b4bdb",
-        "image": "/offerings/skill-development.png",
+        "image": "/offerings/Picture3.png",
         "href": "/services/skill-development"
       },
       {
@@ -73,7 +73,7 @@
         "description": "College engagement and placement enablement platform.",
         "kind": "product",
         "accent": "#4c3d9a",
-        "image": "/offerings/disha.png",
+        "image": "/offerings/Picture4.png",
         "href": "https://disha.hirekarma.in/"
       },
       {
@@ -83,7 +83,7 @@
         "description": "AI-powered placement preparation platform for students.",
         "kind": "product",
         "accent": "#1b52a4",
-        "image": "/offerings/solviq.png",
+        "image": "/offerings/Picture5.png",
         "href": "https://www.solviqai.in/"
       },
       {
@@ -93,7 +93,7 @@
         "description": "A hiring ecosystem where applications move faster and every stakeholder sees the same truth.",
         "kind": "product",
         "accent": "#00a2e5",
-        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Products/Lakshya.png",
+        "image": "/offerings/Picture7.png",
         "href": "https://lakshya.hirekarma.in/"
       },
       {
@@ -103,7 +103,7 @@
         "description": "AI virtual placement cell with curated batches, smart matches, and daily placement support.",
         "kind": "product",
         "accent": "#fec40d",
-        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Products/Shortlisted.png",
+        "image": "/offerings/Picture8.png",
         "href": "https://shortlisted.hirekarma.in/"
       },
       {
@@ -113,7 +113,7 @@
         "description": "Technology solutions and engineering services that drive real impact.",
         "kind": "activity",
         "accent": "#098855",
-        "image": "/offerings/it-consulting.png",
+        "image": "/offerings/Picture9.png",
         "href": "/services/it-consulting"
       },
       {
@@ -123,7 +123,7 @@
         "description": "Flexible, skilled talent to extend your teams and accelerate delivery.",
         "kind": "activity",
         "accent": "#f58020",
-        "image": "/offerings/staff-augmentation.png",
+        "image": "/offerings/Picture10.png",
         "href": "/services/staff-augmentation"
       },
       {
@@ -133,7 +133,7 @@
         "description": "Building open digital infrastructure for a more inclusive India.",
         "kind": "activity",
         "accent": "#d64246",
-        "image": "/offerings/open-source-dpi.png",
+        "image": "/offerings/Picture11.png",
         "href": "/services/open-source-dpi"
       },
       {
@@ -143,7 +143,7 @@
         "description": "Practitioner-led on-campus training that runs before every placement season.",
         "kind": "activity",
         "accent": "#00a2e5",
-        "image": "/offerings/skill-development.png",
+        "image": "/offerings/Picture12.png",
         "href": "/services/pre-placement-training"
       }
     ],
