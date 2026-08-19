@@ -87,8 +87,8 @@
     "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/LokanathPanda.jpg",
     "description": {
       "en": "Leading the development team with a focus on building scalable softwares, integrating innovative technologies, and ensuring smooth digital transformation for Hirekarma's platform.",
-      "hi": "डेवलपमेंट टीम का नेतृत्व — स्केलेबल सॉफ़्टवेयर निर्माण, नवीन तकनीक एकीकरण, और HireKarma प्लेटफ़ॉर्म के सुचारू डिजिटल ट्रांसफ़ॉर्मेशन पर ध्यान।",
-      "od": "ଡେଭଲପମେଣ୍ଟ ଟିମର ନେତୃତ୍ୱ — ସ୍କେଲେବଲ ସଫ୍ଟୱେର ନିର୍ମାଣ, ନବାଚାର ପ୍ରଯୁକ୍ତି ଏକୀକରଣ, ଏବଂ HireKarma ପ୍ଲାଟଫର୍ମର ସୁଚାରୁ ଡିଜିଟାଲ ରୂପାନ୍ତରଣ ଉପରେ ଧ୍ୟାନ।"
+      "hi": "डेवलपमेंट टीम का नेतृत्व - स्केलेबल सॉफ़्टवेयर निर्माण, नवीन तकनीक एकीकरण, और HireKarma प्लेटफ़ॉर्म के सुचारू डिजिटल ट्रांसफ़ॉर्मेशन पर ध्यान।",
+      "od": "ଡେଭଲପମେଣ୍ଟ ଟିମର ନେତୃତ୍ୱ - ସ୍କେଲେବଲ ସଫ୍ଟୱେର ନିର୍ମାଣ, ନବାଚାର ପ୍ରଯୁକ୍ତି ଏକୀକରଣ, ଏବଂ HireKarma ପ୍ଲାଟଫର୍ମର ସୁଚାରୁ ଡିଜିଟାଲ ରୂପାନ୍ତରଣ ଉପରେ ଧ୍ୟାନ।"
     },
     "socialLinks": {
       "linkedin": "https://www.linkedin.com/in/lokanath-panda-642193238/",
@@ -122,30 +122,6 @@
   },
   {
     "name": {
-      "en": "Sneha Parida",
-      "hi": "स्नेहा परिडा",
-      "od": "ସ୍ନେହା ପରିଡା"
-    },
-    "role": {
-      "en": "HR Executive",
-      "hi": "एचआर कार्यकारी",
-      "od": "HR କାର୍ଯ୍ୟନିର୍ବାହୀ"
-    },
-    "category": "core",
-    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Sneha+Parida.jpg",
-    "description": {
-      "en": "Recruit, manage employees, ensure compliance, support organizational growth.",
-      "hi": "भर्ती, कर्मचारी प्रबंधन, अनुपालन सुनिश्चित करना और संगठनात्मक विकास में सहयोग।",
-      "od": "ନିଯୁକ୍ତି, କର୍ମଚାରୀ ପରିଚାଳନା, ଅନୁପାଳନ ନିଶ୍ଚିତ କରିବା ଏବଂ ସଂଗଠନିକ ବିକାଶରେ ସହାୟତା।"
-    },
-    "socialLinks": {
-      "linkedin": "https://www.linkedin.com/in/sneha-parida-865529268/",
-      "instagram": "",
-      "email": "mailto:hr@hirekarma.in"
-    }
-  },
-  {
-    "name": {
       "en": "Sushree Sagarika Padhy",
       "hi": "सुश्री सागरिका पढ़ी",
       "od": "ସୁଶ୍ରୀ ସାଗରିକା ପାଢ଼ୀ"
@@ -159,8 +135,8 @@
     "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Sagarika+Padhy.jpg",
     "description": {
       "en": "Leads campus hiring and college partnerships that turn relationships into placements.",
-      "hi": "कैंपस हायरिंग और कॉलेज साझेदारियों का नेतृत्व — संबंधों को प्लेसमेंट में बदलना।",
-      "od": "କ୍ୟାମ୍ପସ୍ ହାୟରିଂ ଏବଂ କଲେଜ ସହଭାଗିତାର ନେତୃତ୍ୱ — ସମ୍ପର୍କକୁ ପ୍ଲେସମେଣ୍ଟରେ ରୂପାନ୍ତର।"
+      "hi": "कैंपस हायरिंग और कॉलेज साझेदारियों का नेतृत्व - संबंधों को प्लेसमेंट में बदलना।",
+      "od": "କ୍ୟାମ୍ପସ୍ ହାୟରିଂ ଏବଂ କଲେଜ ସହଭାଗିତାର ନେତୃତ୍ୱ - ସମ୍ପର୍କକୁ ପ୍ଲେସମେଣ୍ଟରେ ରୂପାନ୍ତର।"
     },
     "socialLinks": {
       "linkedin": "https://www.linkedin.com/in/shankar-kesanupalli-31a33693/",
@@ -192,6 +168,55 @@
       "email": "mailto:shiladitya.sinha@hirekarma.in"
     }
   },
+  
+  {
+    "name": {
+      "en": "Anushka Dash",
+      "hi": "अनुष्का दाश",
+      "od": "ଅନୁଷ୍କା ଦାଶ"
+    },
+    "role": {
+      "en": "HR Executive",
+      "hi": "एचआर कार्यकारी",
+      "od": "HR କାର୍ଯ୍ୟନିର୍ବାହୀ"
+    },
+    "category": "core",
+    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Anushka_Dash.jpeg",
+    "description": {
+      "en": "Recruit, manage employees, ensure compliance, support organizational growth.",
+      "hi": "भर्ती, कर्मचारी प्रबंधन, अनुपालन सुनिश्चित करना और संगठनात्मक विकास में सहयोग।",
+      "od": "ନିଯୁକ୍ତି, କର୍ମଚାରୀ ପରିଚାଳନା, ଅନୁପାଳନ ନିଶ୍ଚିତ କରିବା ଏବଂ ସଂଗଠନିକ ବିକାଶରେ ସହାୟତା।"
+    },
+    "socialLinks": {
+      "linkedin": "",
+      "instagram": "",
+      "email": "mailto:hr@hirekarma.in"
+    }
+  },
+  {
+    "name": {
+      "en": "Ashutosh Behera",
+      "hi": "आशुतोष बेहेरा",
+      "od": "ଆଶୁତୋଷ ବେହେରା"
+    },
+    "role": {
+      "en": "Operation Associate",
+      "hi": "ऑपरेशन एसोसिएट",
+      "od": "ଅପରେସନ୍ ଆସୋସିଏଟ୍"
+    },
+    "category": "core",
+    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/AshutoshBehera.jpeg",
+    "description": {
+      "en": "HR Operations and Recruitment professional managing end-to-end recruitment, employer relationships, candidate coordination, team leadership, and placement activities across multiple training centres.",
+      "hi": "एचआर ऑपरेशन्स और रिक्रूटमेंट पेशेवर - एंड-टू-एंड भर्ती, नियोक्ता संबंध, उम्मीदवार समन्वय, टीम लीडरशिप और कई ट्रेनिंग सेंटरों में प्लेसमेंट गतिविधियाँ।",
+      "od": "HR ଅପରେସନ୍ସ ଏବଂ ରିକ୍ରୁଟମେଣ୍ଟ ପେସାଦାର - ଏଣ୍ଡ-ଟୁ-ଏଣ୍ଡ ନିଯୁକ୍ତି, ନିଯୁକ୍ତିଦାତା ସମ୍ପର୍କ, ପ୍ରାର୍ଥୀ ସମନ୍ୱୟ, ଟିମ୍ ନେତୃତ୍ୱ ଏବଂ ଏକାଧିକ ଟ୍ରେନିଂ ସେଣ୍ଟରରେ ପ୍ଲେସମେଣ୍ଟ କାର୍ଯ୍ୟକଳାପ।"
+    },
+    "socialLinks": {
+      "linkedin": "https://www.linkedin.com/in/ashutosh-behera-5b3bb9210/",
+      "instagram": "https://www.instagram.com/rajashutosh1528/",
+      "email": "mailto:ashutosh@hirekarma.in"
+    }
+  },
   {
     "name": {
       "en": "Rama Devi Lanka",
@@ -200,15 +225,15 @@
     },
     "role": {
       "en": "Former Director Emerging Technologies Information Technology, Electronics & Communications Department, Government of Telangana",
-      "hi": "पूर्व निदेशक, इमर्जिंग टेक्नोलॉजीज — सूचना प्रौद्योगिकी, इलेक्ट्रॉनिक्स एवं संचार विभाग, तेलंगाना सरकार",
-      "od": "ପୂର୍ବତନ ନିର୍ଦ୍ଦେଶକ, ଇମର୍ଜିଂ ଟେକ୍ନୋଲୋଜି — ସୂଚନା ପ୍ରଯୁକ୍ତି, ଇଲେକ୍ଟ୍ରୋନିକ୍ସ ଏବଂ ଯୋଗାଯୋଗ ବିଭାଗ, ତେଲେଙ୍ଗାନା ସରକାର"
+      "hi": "पूर्व निदेशक, इमर्जिंग टेक्नोलॉजीज -सूचना प्रौद्योगिकी, इलेक्ट्रॉनिक्स एवं संचार विभाग, तेलंगाना सरकार",
+      "od": "ପୂର୍ବତନ ନିର୍ଦ୍ଦେଶକ, ଇମର୍ଜିଂ ଟେକ୍ନୋଲୋଜି - ସୂଚନା ପ୍ରଯୁକ୍ତି, ଇଲେକ୍ଟ୍ରୋନିକ୍ସ ଏବଂ ଯୋଗାଯୋଗ ବିଭାଗ, ତେଲେଙ୍ଗାନା ସରକାର"
     },
     "category": "advisory",
     "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/ramadevi.jpg",
     "description": {
       "en": "Pioneering leader in emerging technologies and e-Governance with over 25 years of experience in tech-led transformation and policy frameworks for AI, blockchain, and digital governance.",
-      "hi": "इमर्जिंग टेक्नोलॉजी और ई-गवर्नेंस में अग्रणी — AI, ब्लॉकचेन और डिजिटल गवर्नेंस के लिए टेक्नोलॉजी-नेतृत्व वाले परिवर्तन व नीति ढाँचों में 25+ वर्षों का अनुभव।",
-      "od": "ଇମର୍ଜିଂ ଟେକ୍ନୋଲୋଜି ଏବଂ ଇ-ଗଭର୍ନାନ୍ସରେ ଅଗ୍ରଣୀ — AI, ବ୍ଲକଚେନ୍ ଏବଂ ଡିଜିଟାଲ ଶାସନ ପାଇଁ ପ୍ରଯୁକ୍ତି-ଚାଳିତ ରୂପାନ୍ତରଣ ଓ ନୀତି ଢାଞ୍ଚାରେ ୨୫+ ବର୍ଷର ଅନୁଭବ।"
+      "hi": "इमर्जिंग टेक्नोलॉजी और ई-गवर्नेंस में अग्रणी - AI, ब्लॉकचेन और डिजिटल गवर्नेंस के लिए टेक्नोलॉजी-नेतृत्व वाले परिवर्तन व नीति ढाँचों में 25+ वर्षों का अनुभव।",
+      "od": "ଇମର୍ଜିଂ ଟେକ୍ନୋଲୋଜି ଏବଂ ଇ-ଗଭର୍ନାନ୍ସରେ ଅଗ୍ରଣୀ - AI, ବ୍ଲକଚେନ୍ ଏବଂ ଡିଜିଟାଲ ଶାସନ ପାଇଁ ପ୍ରଯୁକ୍ତି-ଚାଳିତ ରୂପାନ୍ତରଣ ଓ ନୀତି ଢାଞ୍ଚାରେ ୨୫+ ବର୍ଷର ଅନୁଭବ।"
     },
     "socialLinks": {
       "linkedin": "https://www.linkedin.com/in/ramadevi-lanka/",
