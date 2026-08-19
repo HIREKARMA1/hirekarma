@@ -33,7 +33,7 @@
         {
           "id": "shortlisted",
           "label": "ଶର୍ଟଲିଷ୍ଟେଡ୍",
-          "href": "/shortlisted"
+          "href": "https://shortlisted.hirekarma.in/"
         }
       ]
     },
@@ -127,6 +127,11 @@
           "href": "/about-us/locations"
         }
       ]
+    },
+    "events": {
+      "id": "events",
+      "label": "ଇଭେଣ୍ଟ୍ସ",
+      "href": "https://disha.hirekarma.in/events"
     },
     "contact": {
       "id": "contact",

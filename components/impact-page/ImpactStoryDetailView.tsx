@@ -129,20 +129,34 @@ export function ImpactStoryDetailView({
                     <h2 className="text-xl font-bold tracking-tight text-[#0f1622]">
                       {column.title}
                     </h2>
-                    <ul className="mt-4 space-y-3">
-                      {column.items.map((item) => (
-                        <li
-                          key={item}
-                          className="flex items-start gap-3 text-[15px] leading-relaxed text-slate-600"
-                        >
-                          <CheckCircle2
-                            className="mt-0.5 h-5 w-5 shrink-0"
-                            style={{ color: accent }}
-                          />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
+                    {column.paragraphs && column.paragraphs.length > 0 ? (
+                      <div className="mt-3 space-y-3">
+                        {column.paragraphs.map((p, idx) => (
+                          <p
+                            key={idx}
+                            className="text-base leading-relaxed text-slate-700 sm:text-[17px]"
+                          >
+                            {p}
+                          </p>
+                        ))}
+                      </div>
+                    ) : null}
+                    {column.items && column.items.length > 0 ? (
+                      <ul className="mt-4 space-y-3">
+                        {column.items.map((item) => (
+                          <li
+                            key={item}
+                            className="flex items-start gap-3 text-[15px] leading-relaxed text-slate-600"
+                          >
+                            <CheckCircle2
+                              className="mt-0.5 h-5 w-5 shrink-0"
+                              style={{ color: accent }}
+                            />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    ) : null}
                   </section>
                 ))}
 
