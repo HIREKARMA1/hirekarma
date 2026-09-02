@@ -112,16 +112,18 @@ export function ImpactStoryDetailView({
         <div className="content-container">
           <div className="grid gap-8 xl:grid-cols-[minmax(0,1fr)_280px] xl:gap-10">
             <article className="min-w-0">
-              <div className="relative aspect-[16/9] overflow-hidden rounded-2xl border border-[#e6e8ec] bg-white shadow-[0_12px_40px_rgba(15,22,34,0.06)]">
-                <Image
-                  src={story.heroImage}
-                  alt={story.heroImageAlt}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1280px) 100vw, 820px"
-                  priority
-                />
-              </div>
+              {story.heroImage ? (
+                <div className="relative aspect-[16/9] overflow-hidden rounded-2xl border border-[#e6e8ec] bg-white shadow-[0_12px_40px_rgba(15,22,34,0.06)]">
+                  <Image
+                    src={story.heroImage}
+                    alt={story.heroImageAlt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1280px) 100vw, 820px"
+                    priority
+                  />
+                </div>
+              ) : null}
 
               <div className="mt-8 space-y-8 rounded-2xl border border-[#e6e8ec] bg-white p-5 ring-1 ring-slate-100 sm:p-8">
                 {story.columns.map((column) => (

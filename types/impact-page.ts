@@ -32,7 +32,7 @@ export interface ImpactStoryCard {
   title: string;
   location: string;
   summary: string;
-  image: string;
+  image?: string;
   imageAlt: string;
   divisionId: string;
   typeId: string;
@@ -68,7 +68,7 @@ export interface ImpactStoryDetail {
   tags: string[];
   primaryCta: ImpactCta;
   secondaryCta: ImpactCta;
-  heroImage: string;
+  heroImage?: string;
   heroImageAlt: string;
   columns: ImpactDetailColumn[];
   metrics?: ImpactDetailMetric[];

@@ -36,15 +36,33 @@ export function ImpactBrowseSection() {
                 key={story.id}
                 className="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e6e8ec] bg-white shadow-[0_8px_28px_rgba(15,22,34,0.06)] transition hover:border-[#00a2e5]/35 hover:shadow-[0_14px_36px_rgba(15,22,34,0.1)]"
               >
-                <div className="relative h-44 overflow-hidden bg-[#f6f8fb]">
-                  <Image
-                    src={story.image}
-                    alt={story.imageAlt}
-                    fill
-                    className="object-cover transition duration-500 group-hover:scale-[1.03]"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                  <div className="absolute right-2.5 top-2.5 flex flex-wrap justify-end gap-1.5">
+                <div className="relative aspect-video overflow-hidden bg-[#f6f8fb]">
+                  {story.image ? (
+                    <Image
+                      src={story.image}
+                      alt={story.imageAlt}
+                      fill
+                      className="object-cover object-center"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  ) : (
+                    <div
+                      className="flex h-full w-full items-center justify-center"
+                      style={{ background: theme.gradients.brand }}
+                      aria-hidden
+                    >
+                      <span className="text-4xl font-bold tracking-tight text-white/90">
+                        {story.title
+                          .split(/\s+/)
+                          .filter(Boolean)
+                          .slice(0, 2)
+                          .map((part) => part[0])
+                          .join("")
+                          .toUpperCase()}
+                      </span>
+                    </div>
+                  )}
+                  <div className="absolute bottom-2.5 left-2.5 flex flex-wrap gap-1.5">
                     <span
                       className="rounded-full px-2.5 py-0.5 text-[10px] font-bold text-white shadow-sm"
                       style={{ backgroundColor: theme.colors.primary }}
