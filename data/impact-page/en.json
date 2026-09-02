@@ -156,64 +156,244 @@
     "empty": "No stories match these filters. Try another combination.",
     "stories": [
       {
+        "template": "student",
+        "divisionId": "skills",
+        "typeId": "student",
+        "divisionLabel": "Skill development",
+        "typeLabel": "Student story",
+        "readMore": "Read more",
+        "id": "swarnasikha-shortlisted",
+        "slug": "swarnasikha-behera",
+        "title": "Swarnasikha Behera",
+        "location": "Tech Mahindra",
+        "summary": "From Being Overlooked to a Big Achievement: How HireKarma's Shortlisted Program helped Swarnasikha Behera land her role in Technical Support at Tech Mahindra.",
+        "imageAlt": "Swarnasikha Behera placement journey with HireKarma",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/1_HK.png"
+      },
+      {
+        "template": "student",
+        "divisionId": "skills",
+        "typeId": "student",
+        "divisionLabel": "Skill development",
+        "typeLabel": "Student story",
+        "readMore": "Read more",
+        "id": "sahil-shortlisted",
+        "slug": "sahil-kumar-sahoo",
+        "title": "Sahil Kumar Sahoo",
+        "location": "Tech Mahindra",
+        "summary": "From Doubt to Direction: How HireKarma's Shortlisted Program helped Sahil Kumar Sahoo land his role in Technical Support at Tech Mahindra.",
+        "imageAlt": "Sahil Kumar Sahoo placement journey with HireKarma",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/2_HK.png"
+      },
+      {
+        "template": "student",
+        "divisionId": "skills",
+        "typeId": "student",
+        "divisionLabel": "Skill development",
+        "typeLabel": "Student story",
+        "readMore": "Read more",
+        "id": "karan-shortlisted",
+        "slug": "karan-nayak",
+        "title": "Karan Nayak",
+        "location": "WeIntern Pvt. Ltd.",
+        "summary": "From Ambition to Opportunity: How HireKarma's Shortlisted Program helped Karan Nayak begin as a Full Stack Web Developer Intern at WeIntern Pvt. Ltd.",
+        "imageAlt": "Karan Nayak placement journey with HireKarma",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/3_HK.png"
+      },
+      {
+        "template": "student",
+        "divisionId": "skills",
+        "typeId": "student",
+        "divisionLabel": "Skill development",
+        "typeLabel": "Student story",
+        "readMore": "Read more",
+        "id": "nikeeta-shortlisted",
+        "slug": "nikeeta-sahoo",
+        "title": "Nikeeta Sahoo",
+        "location": "WeIntern Pvt. Ltd.",
+        "summary": "Turning Data into Possibilities: How HireKarma's Shortlisted Program helped Nikeeta Sahoo begin as a Data Science Intern at WeIntern Pvt. Ltd.",
+        "imageAlt": "Nikeeta Sahoo placement journey with HireKarma",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/4_HK.png"
+      },
+      {
+        "template": "student",
+        "divisionId": "skills",
+        "typeId": "student",
+        "divisionLabel": "Skill development",
+        "typeLabel": "Student story",
+        "readMore": "Read more",
         "id": "suvam-shortlisted",
         "slug": "suvam-s-mishra",
-        "template": "student",
         "title": "Suvam S. Mishra",
         "location": "Authority Entrepreneurs",
-        "summary": "From Aspiration to Achievement: How HireKarma's Shortlisted program helped Suvam gain skill readiness and land his role as AI Engineer at Authority Entrepreneurs.",
-        "image": "/impact/2f840f8b-a730-4cdc-ba63-860e52df7513.webp",
+        "summary": "From Aspiration to Achievement: How HireKarma's Shortlisted Program helped Suvam S. Mishra land his role as AI Engineer at Authority Entrepreneurs.",
         "imageAlt": "Suvam S. Mishra placement journey with HireKarma",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/5_HK.png"
+      },
+      {
+        "template": "student",
         "divisionId": "skills",
         "typeId": "student",
         "divisionLabel": "Skill development",
         "typeLabel": "Student story",
-        "readMore": "Read more"
-      },
-      {
+        "readMore": "Read more",
         "id": "devi-shortlisted",
         "slug": "devi-prasad-patra",
-        "template": "student",
         "title": "Devi Prasad Patra",
         "location": "Trayi Consulting Pvt. Ltd.",
-        "summary": "Where Preparation Meets Opportunity: How HireKarma's Shortlisted program supported Devi Prasad Patra to land his role as QA Engineer at Trayi Consulting Pvt. Ltd.",
-        "image": "/impact/161de7ce-0c48-4133-a9ff-1d9b65d7f031.webp",
+        "summary": "Where Preparation Meets Opportunity: How HireKarma's Shortlisted Program helped Devi Prasad Patra land his role as QA Engineer at Trayi Consulting Pvt. Ltd.",
         "imageAlt": "Devi Prasad Patra placement journey with HireKarma",
-        "divisionId": "skills",
-        "typeId": "student",
-        "divisionLabel": "Skill development",
-        "typeLabel": "Student story",
-        "readMore": "Read more"
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/6_HK.png"
       },
       {
-        "id": "rakesh-shortlisted",
-        "slug": "rakesh-nath-sharma",
         "template": "student",
-        "title": "Rakesh Nath Sharma",
-        "location": "SEOCZAR IT SERVICES PVT. LTD.",
-        "summary": "From Job Seeker to SEO Executive: How HireKarma's Shortlisted program guided Rakesh Nath Sharma to land his role as SEO Executive at SEOCZAR IT SERVICES PVT. LTD.",
-        "image": "/impact/f93da89e-7967-4cd7-849c-e31790dcf6ea.webp",
-        "imageAlt": "Rakesh Nath Sharma placement journey with HireKarma",
         "divisionId": "skills",
         "typeId": "student",
         "divisionLabel": "Skill development",
         "typeLabel": "Student story",
-        "readMore": "Read more"
+        "readMore": "Read more",
+        "id": "shridhar-shortlisted",
+        "slug": "shridhar-shekhar",
+        "title": "Shridhar Shekhar",
+        "location": "WeIntern Pvt. Ltd.",
+        "summary": "Turning Potential into Opportunity: How HireKarma's Shortlisted Program helped Shridhar Shekhar begin as an AI Intern at WeIntern Pvt. Ltd.",
+        "imageAlt": "Shridhar Shekhar placement journey with HireKarma",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/7_HK.png"
       },
       {
+        "template": "student",
+        "divisionId": "skills",
+        "typeId": "student",
+        "divisionLabel": "Skill development",
+        "typeLabel": "Student story",
+        "readMore": "Read more",
         "id": "sanchita-shortlisted",
         "slug": "sanchita-rani-nayak",
-        "template": "student",
         "title": "Sanchita Rani Nayak",
         "location": "Luminous Infoways",
-        "summary": "Transforming Potential into Success: How HireKarma's Shortlisted program guided Sanchita Rani Nayak to land her role as AI/ML Engineer at Luminous Infoways.",
-        "image": "/impact/ff494e6e-cc87-40af-adb8-0061858cf650.webp",
+        "summary": "Transforming Potential into Success: How HireKarma's Shortlisted Program helped Sanchita Rani Nayak land her role as AI/ML Engineer at Luminous Infoways.",
         "imageAlt": "Sanchita Rani Nayak placement journey with HireKarma",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/8_HK.png"
+      },
+      {
+        "template": "student",
         "divisionId": "skills",
         "typeId": "student",
         "divisionLabel": "Skill development",
         "typeLabel": "Student story",
-        "readMore": "Read more"
+        "readMore": "Read more",
+        "id": "vamsi-shortlisted",
+        "slug": "nalla-vamsi-krishna",
+        "title": "Nalla Vamsi Krishna",
+        "location": "Jowib Technology",
+        "summary": "From Taking the First Step to Finding the Right Fit: How HireKarma's Shortlisted Program helped Nalla Vamsi Krishna land his role as Software Developer at Jowib Technology.",
+        "imageAlt": "Nalla Vamsi Krishna placement journey with HireKarma",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/9_HK.png"
+      },
+      {
+        "template": "student",
+        "divisionId": "skills",
+        "typeId": "student",
+        "divisionLabel": "Skill development",
+        "typeLabel": "Student story",
+        "readMore": "Read more",
+        "id": "atasi-shortlisted",
+        "slug": "atasi-pradhan",
+        "title": "Atasi Pradhan",
+        "location": "WeIntern Pvt. Ltd.",
+        "summary": "One Opportunity, A New Chapter: How HireKarma's Shortlisted Program helped Atasi Pradhan begin as an AI Intern at WeIntern Pvt. Ltd.",
+        "imageAlt": "Atasi Pradhan placement journey with HireKarma",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/10_HK.png"
+      },
+      {
+        "template": "student",
+        "divisionId": "skills",
+        "typeId": "student",
+        "divisionLabel": "Skill development",
+        "typeLabel": "Student story",
+        "readMore": "Read more",
+        "id": "chitun-shortlisted",
+        "slug": "chitun-sahu",
+        "title": "Chitun Sahu",
+        "location": "WeIntern Pvt. Ltd.",
+        "summary": "From Curiosity to Career: How HireKarma's Shortlisted Program helped Chitun Sahu begin as a Digital Marketing Intern at WeIntern Pvt. Ltd.",
+        "imageAlt": "Chitun Sahu placement journey with HireKarma",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/11_HK.png"
+      },
+      {
+        "template": "student",
+        "divisionId": "skills",
+        "typeId": "student",
+        "divisionLabel": "Skill development",
+        "typeLabel": "Student story",
+        "readMore": "Read more",
+        "id": "rakesh-shortlisted",
+        "slug": "rakesh-nath-sharma",
+        "title": "Rakesh Nath Sharma",
+        "location": "SEOCZAR IT SERVICES PVT. LTD.",
+        "summary": "From Job Seeker to SEO Executive: How HireKarma's Shortlisted Program helped Rakesh Nath Sharma land his role as SEO Executive at SEOCZAR IT SERVICES PVT. LTD.",
+        "imageAlt": "Rakesh Nath Sharma placement journey with HireKarma",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/12_HK.png"
+      },
+      {
+        "template": "student",
+        "divisionId": "skills",
+        "typeId": "student",
+        "divisionLabel": "Skill development",
+        "typeLabel": "Student story",
+        "readMore": "Read more",
+        "id": "prabhudatta-shortlisted",
+        "slug": "prabhudatta-barik",
+        "title": "Prabhudatta Barik",
+        "location": "WeIntern Pvt. Ltd.",
+        "summary": "Building Tomorrow, One Opportunity at a Time: How HireKarma's Shortlisted Program helped Prabhudatta Barik begin as an AI Intern at WeIntern Pvt. Ltd.",
+        "imageAlt": "Prabhudatta Barik placement journey with HireKarma",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/13_HK.png"
+      },
+      {
+        "template": "student",
+        "divisionId": "skills",
+        "typeId": "student",
+        "divisionLabel": "Skill development",
+        "typeLabel": "Student story",
+        "readMore": "Read more",
+        "id": "uttam-shortlisted",
+        "slug": "uttam-singh-rathor",
+        "title": "Uttam Singh Rathor",
+        "location": "WeIntern Pvt. Ltd.",
+        "summary": "From Learning to Building: How HireKarma's Shortlisted Program helped Uttam Singh Rathor begin as a Full Stack Web Developer Intern at WeIntern Pvt. Ltd.",
+        "imageAlt": "Uttam Singh Rathor placement journey with HireKarma",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/14_HK.png"
+      },
+      {
+        "template": "student",
+        "divisionId": "skills",
+        "typeId": "student",
+        "divisionLabel": "Skill development",
+        "typeLabel": "Student story",
+        "readMore": "Read more",
+        "id": "ayush-shortlisted",
+        "slug": "ayush-patel",
+        "title": "Ayush Patel",
+        "location": "WeIntern Pvt. Ltd.",
+        "summary": "From Code to Career: How HireKarma's Shortlisted Program helped Ayush Patel begin as a Full Stack Web Developer Intern at WeIntern Pvt. Ltd.",
+        "imageAlt": "Ayush Patel placement journey with HireKarma",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/15_HK.png"
+      },
+      {
+        "template": "student",
+        "divisionId": "skills",
+        "typeId": "student",
+        "divisionLabel": "Skill development",
+        "typeLabel": "Student story",
+        "readMore": "Read more",
+        "id": "nitish-shortlisted",
+        "slug": "nitish-kumar-behera",
+        "title": "Nitish Kumar Behera",
+        "location": "WeIntern Pvt. Ltd.",
+        "summary": "Building Skills, Creating Opportunities: How HireKarma's Shortlisted Program helped Nitish Kumar Behera begin as a Full Stack Web Developer Intern at WeIntern Pvt. Ltd.",
+        "imageAlt": "Nitish Kumar Behera placement journey with HireKarma",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/16_HK.png"
       }
     ]
   },
@@ -232,10 +412,288 @@
   },
   "details": [
     {
-      "slug": "suvam-s-mishra",
       "template": "student",
       "breadcrumb": "Impact / Student story",
       "label": "Student story · Shortlisted Program",
+      "primaryCta": {
+        "label": "Explore Shortlisted",
+        "href": "/shortlisted"
+      },
+      "secondaryCta": {
+        "label": "All stories",
+        "href": "/impact#browse-stories"
+      },
+      "slug": "swarnasikha-behera",
+      "heading": "From Being Overlooked to a Big Achievement:",
+      "headingAccent": "Swarnasikha Behera’s Career Journey",
+      "description": "When Swarnasikha Behera began her career journey, finding the right opportunity was not easy. Like many aspiring professionals, she faced moments when her skills and potential did not receive the recognition she hoped for.",
+      "tags": [
+        "Skill development",
+        "Student story",
+        "Shortlisted Program",
+        "Technical Support"
+      ],
+      "heroImageAlt": "Swarnasikha Behera - Technical Support at Tech Mahindra",
+      "columns": [
+        {
+          "title": "The Journey & Aspirations",
+          "paragraphs": [
+            "When Swarnasikha Behera began her career journey, finding the right opportunity was not easy. Like many aspiring professionals, she faced moments when her skills and potential did not receive the recognition she hoped for.",
+            "However, instead of allowing those experiences to hold her back, she continued working on herself and looking for the right opportunity to prove her capabilities."
+          ]
+        },
+        {
+          "title": "Preparation & Shortlisted Program",
+          "paragraphs": [
+            "Through HireKarma’s Shortlisted Program, Swarnasikha found a structured platform designed to help aspiring professionals become industry-ready.",
+            "From skill assessments and preparation activities to personalized guidance and employer interactions, the program helped her understand her strengths, improve her professional readiness, and gain valuable exposure to real-world recruitment processes.",
+            "With consistent effort and the right guidance, Swarnasikha began approaching career opportunities with greater confidence. The preparation she received helped her recognize her abilities and present her skills more effectively to recruiters."
+          ]
+        },
+        {
+          "title": "Placement & Impact",
+          "paragraphs": [
+            "Her dedication and determination, combined with the support of the Shortlisted Program, ultimately led to a significant career achievement—her successful placement in Technical Support at Tech Mahindra.",
+            "Starting her professional journey in Technical Support at Tech Mahindra gives Swarnasikha the opportunity to gain valuable industry exposure, strengthen her technical and problem-solving abilities, and build confidence in a professional IT environment.",
+            "At HireKarma, stories like Swarnasikha’s represent the purpose of the Shortlisted Program—to help talented candidates recognize their potential, prepare for real-world opportunities, connect with relevant employers, and take meaningful steps toward their career goals."
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "Technical Support",
+          "label": "Placed Role"
+        },
+        {
+          "value": "Tech Mahindra",
+          "label": "Employer"
+        },
+        {
+          "value": "Shortlisted",
+          "label": "Program Completed"
+        }
+      ],
+      "quote": "My experience with the Shortlisted Program helped me understand my strengths and approach the recruitment process with much more confidence. The guidance, preparation, and opportunities provided through the program helped me improve my professional skills and believe more strongly in my potential. I am grateful to HireKarma for supporting me throughout my journey and helping me achieve this important milestone in my career at Tech Mahindra.",
+      "quoteName": "Swarnasikha Behera",
+      "quoteRole": "Technical Support at Tech Mahindra",
+      "heroImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/1_HK.png",
+      "quoteImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/1_HK.png"
+    },
+    {
+      "template": "student",
+      "breadcrumb": "Impact / Student story",
+      "label": "Student story · Shortlisted Program",
+      "primaryCta": {
+        "label": "Explore Shortlisted",
+        "href": "/shortlisted"
+      },
+      "secondaryCta": {
+        "label": "All stories",
+        "href": "/impact#browse-stories"
+      },
+      "slug": "sahil-kumar-sahoo",
+      "heading": "From Doubt to Direction:",
+      "headingAccent": "Sahil Kumar Sahoo’s Journey to Tech Mahindra",
+      "description": "Every career begins with a moment when a person decides to believe in their own potential. For Sahil Kumar Sahoo, that moment came when he chose to turn uncertainty into action and actively work toward building a professional future.",
+      "tags": [
+        "Skill development",
+        "Student story",
+        "Shortlisted Program",
+        "Technical Support"
+      ],
+      "heroImageAlt": "Sahil Kumar Sahoo - Technical Support at Tech Mahindra",
+      "columns": [
+        {
+          "title": "The Journey & Aspirations",
+          "paragraphs": [
+            "Every career begins with a moment when a person decides to believe in their own potential. For Sahil Kumar Sahoo, that moment came when he chose to turn uncertainty into action and actively work toward building a professional future.",
+            "Instead of waiting for the perfect opportunity, Sahil focused on becoming better prepared for the opportunities that came his way. He understood that getting selected was not only about having the right qualifications—it was also about having the confidence, communication, preparation, and professional mindset needed to succeed in a competitive recruitment environment."
+          ]
+        },
+        {
+          "title": "Preparation & Shortlisted Program",
+          "paragraphs": [
+            "HireKarma’s Shortlisted Program became an important part of this journey. Through structured preparation, skill evaluation, career guidance, and opportunities to interact with employers, Sahil gained a clearer understanding of what it takes to enter the professional world.",
+            "Each stage of the process helped him become more confident. He learned how to present his abilities, approach recruitment conversations with a positive mindset, and recognize the value of the skills he had developed."
+          ]
+        },
+        {
+          "title": "Placement & Impact",
+          "paragraphs": [
+            "That preparation eventually turned into a major milestone when Sahil Kumar Sahoo was successfully selected for a Technical Support role at Tech Mahindra.",
+            "His new role in Technical Support at Tech Mahindra will give him the opportunity to work in a professional technology environment, develop his troubleshooting and communication abilities, understand real-world technical challenges, and gain valuable experience working with customers and technology solutions.",
+            "At HireKarma, Sahil’s journey reflects an important belief: sometimes, the difference between having potential and achieving something meaningful is having the right preparation and the right opportunity at the right time."
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "Technical Support",
+          "label": "Placed Role"
+        },
+        {
+          "value": "Tech Mahindra",
+          "label": "Employer"
+        },
+        {
+          "value": "Shortlisted",
+          "label": "Program Completed"
+        }
+      ],
+      "quote": "The Shortlisted Program gave me a better understanding of how to prepare myself for professional opportunities. The guidance and preparation helped me become more confident in presenting my skills and facing the recruitment process. Being selected at Tech Mahindra is a very important milestone for me, and I am thankful to HireKarma for helping me move closer to my career goals.",
+      "quoteName": "Sahil Kumar Sahoo",
+      "quoteRole": "Technical Support at Tech Mahindra",
+      "heroImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/2_HK.png",
+      "quoteImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/2_HK.png"
+    },
+    {
+      "template": "student",
+      "breadcrumb": "Impact / Student story",
+      "label": "Student story · Shortlisted Program",
+      "primaryCta": {
+        "label": "Explore Shortlisted",
+        "href": "/shortlisted"
+      },
+      "secondaryCta": {
+        "label": "All stories",
+        "href": "/impact#browse-stories"
+      },
+      "slug": "karan-nayak",
+      "heading": "From Ambition to Opportunity:",
+      "headingAccent": "Karan Nayak’s Career Story",
+      "description": "When Karan Nayak began his career journey, he was looking for more than just an internship. He wanted the right platform to understand his strengths, prepare for the recruitment process, and connect with an organization where he could begin his professional career.",
+      "tags": [
+        "Skill development",
+        "Student story",
+        "Shortlisted Program",
+        "Full Stack Intern"
+      ],
+      "heroImageAlt": "Karan Nayak - Full Stack Web Developer Intern at WeIntern Pvt. Ltd.",
+      "columns": [
+        {
+          "title": "The Journey & Aspirations",
+          "paragraphs": [
+            "When Karan Nayak began his career journey, he was looking for more than just an internship. He wanted the right platform to understand his strengths, prepare for the recruitment process, and connect with an organization where he could begin his professional career."
+          ]
+        },
+        {
+          "title": "Preparation & Shortlisted Program",
+          "paragraphs": [
+            "Through HireKarma’s Shortlisted Program, Karan gained access to a structured placement ecosystem focused on helping aspiring professionals become industry-ready.",
+            "From skill assessments and preparation activities to personalized guidance and employer interactions, the program helped him better understand his capabilities, strengthen his professional readiness, and gain valuable exposure to real-world recruitment processes.",
+            "With the right guidance and consistent effort, Karan developed greater confidence in approaching career opportunities. The preparation he received helped him recognize his potential and present his technical skills more effectively to recruiters."
+          ]
+        },
+        {
+          "title": "Placement & Impact",
+          "paragraphs": [
+            "His dedication, combined with the support of the Shortlisted Program, ultimately led to his successful placement as a Full Stack Web Developer Intern at WeIntern Pvt. Ltd.",
+            "Starting his professional journey as a Full Stack Web Developer Intern gives Karan the opportunity to gain practical industry exposure, strengthen his frontend and backend development skills, work on real-world web applications, and develop a deeper understanding of professional software development practices.",
+            "At HireKarma, stories like Karan’s represent the core purpose of the Shortlisted Program—to prepare talented candidates, connect them with relevant employers, and help them move toward meaningful career opportunities with confidence."
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "Full Stack Intern",
+          "label": "Placed Role"
+        },
+        {
+          "value": "WeIntern Pvt. Ltd.",
+          "label": "Employer"
+        },
+        {
+          "value": "Shortlisted",
+          "label": "Program Completed"
+        }
+      ],
+      "quote": "My experience with the Shortlisted Program helped me understand how to approach the recruitment process with greater confidence and preparation. The guidance, support, and opportunities provided through the program helped me identify my strengths, improve my professional readiness, and better understand what employers look for in candidates. I am grateful to HireKarma for supporting me throughout my journey and helping me begin my career as a Full Stack Web Developer Intern at WeIntern Pvt. Ltd.",
+      "quoteName": "Karan Nayak",
+      "quoteRole": "Full Stack Web Developer Intern at WeIntern Pvt. Ltd.",
+      "heroImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/3_HK.png",
+      "quoteImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/3_HK.png"
+    },
+    {
+      "template": "student",
+      "breadcrumb": "Impact / Student story",
+      "label": "Student story · Shortlisted Program",
+      "primaryCta": {
+        "label": "Explore Shortlisted",
+        "href": "/shortlisted"
+      },
+      "secondaryCta": {
+        "label": "All stories",
+        "href": "/impact#browse-stories"
+      },
+      "slug": "nikeeta-sahoo",
+      "heading": "Turning Data into Possibilities:",
+      "headingAccent": "Nikeeta Sahoo's Career Journey",
+      "description": "For Nikeeta Sahoo, the journey from learning to professional experience began with a growing curiosity about data, technology, and problem-solving. She wanted to explore how analytical thinking could be applied to real-world challenges and build a strong foundation for a career in data science.",
+      "tags": [
+        "Skill development",
+        "Student story",
+        "Shortlisted Program",
+        "Data Science Intern"
+      ],
+      "heroImageAlt": "Nikeeta Sahoo - Data Science Intern at WeIntern Pvt. Ltd.",
+      "columns": [
+        {
+          "title": "The Journey & Aspirations",
+          "paragraphs": [
+            "For Nikeeta Sahoo, the journey from learning to professional experience began with a growing curiosity about data, technology, and problem-solving. She wanted to explore how analytical thinking could be applied to real-world challenges and build a strong foundation for a career in the evolving field of data science.",
+            "As she prepared to enter the professional world, Nikeeta understood that academic knowledge was only the beginning. She was looking for an opportunity that would help her strengthen her skills, understand industry expectations, and gain the confidence to present her capabilities in a professional environment."
+          ]
+        },
+        {
+          "title": "Preparation & Shortlisted Program",
+          "paragraphs": [
+            "Through HireKarma's Shortlisted Program, Nikeeta gained access to a structured career pathway designed to help aspiring professionals become better prepared for employment opportunities.",
+            "Through skill assessments, career-focused activities, preparation support, and recruitment interactions, she gained valuable exposure to the hiring process and a clearer understanding of how to communicate her strengths effectively.",
+            "Each stage of the journey helped Nikeeta become more confident, focused, and prepared to take her first step into the industry."
+          ]
+        },
+        {
+          "title": "Placement & Impact",
+          "paragraphs": [
+            "Her dedication and continuous efforts eventually led to a successful opportunity at WeIntern Pvt. Ltd., where she joined as a Data Science Intern.",
+            "As a Data Science Intern, Nikeeta now has the opportunity to work with real-world challenges, apply her analytical knowledge, strengthen her technical abilities, and gain practical industry experience in a field she is passionate about.",
+            "At HireKarma, Nikeeta's achievement reflects the purpose of the Shortlisted Program—to help candidates prepare for the professional world, understand their strengths, build confidence, demonstrate their abilities, and connect with organizations where their careers can grow."
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "Data Science Intern",
+          "label": "Placed Role"
+        },
+        {
+          "value": "WeIntern Pvt. Ltd.",
+          "label": "Employer"
+        },
+        {
+          "value": "Shortlisted",
+          "label": "Program Completed"
+        }
+      ],
+      "quote": "My experience with HireKarma helped me understand how to turn my learning into something I could confidently present in a professional setting. The Shortlisted Program gave me valuable exposure to the recruitment process and motivated me to keep developing my skills. I am excited to begin my journey as a Data Science Intern at WeIntern Pvt. Ltd. and look forward to learning, gaining practical experience, and growing through every opportunity.",
+      "quoteName": "Nikeeta Sahoo",
+      "quoteRole": "Data Science Intern at WeIntern Pvt. Ltd.",
+      "heroImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/4_HK.png",
+      "quoteImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/4_HK.png"
+    },
+    {
+      "template": "student",
+      "breadcrumb": "Impact / Student story",
+      "label": "Student story · Shortlisted Program",
+      "primaryCta": {
+        "label": "Explore Shortlisted",
+        "href": "/shortlisted"
+      },
+      "secondaryCta": {
+        "label": "All stories",
+        "href": "/impact#browse-stories"
+      },
+      "slug": "suvam-s-mishra",
       "heading": "From Aspiration to Achievement:",
       "headingAccent": "Suvam S. Mishra's Placement Journey",
       "description": "When Suvam S. Mishra began his job search, he was looking for more than just an opportunity—he wanted a platform that could help him showcase his skills, prepare for industry expectations, and connect with the right employers.",
@@ -245,29 +703,19 @@
         "Shortlisted Program",
         "AI Engineer"
       ],
-      "primaryCta": {
-        "label": "Explore Shortlisted",
-        "href": "/shortlisted"
-      },
-      "secondaryCta": {
-        "label": "All stories",
-        "href": "/impact#browse-stories"
-      },
-      "heroImage": "/impact/2f840f8b-a730-4cdc-ba63-860e52df7513.webp",
       "heroImageAlt": "Suvam S. Mishra - AI Engineer at Authority Entrepreneurs",
       "columns": [
         {
           "title": "The Journey & Aspirations",
           "paragraphs": [
-            "When Suvam S. Mishra began his job search, he was looking for more than just an opportunity—he wanted a platform that could help him showcase his technical skills, prepare for industry expectations, and connect directly with top hiring employers.",
-            "He sought structured guidance to elevate his profile and gain direct exposure to leading companies, leading him to join HireKarma's Shortlisted program ecosystem."
+            "When Suvam S. Mishra began his job search, he was looking for more than just an opportunity—he wanted a platform that could help him showcase his skills, prepare for industry expectations, and connect with the right employers."
           ]
         },
         {
-          "title": "Preparation & Shortlisted Ecosystem",
+          "title": "Preparation & Shortlisted Program",
           "paragraphs": [
             "Through HireKarma's Shortlisted program, Suvam gained access to a structured placement ecosystem designed to bridge the gap between talent and opportunity.",
-            "He completed comprehensive skill assessments to validate his technical capabilities, strengthened his interview readiness through structured feedback, and participated in active recruitment drives facilitated through the platform. The personalized guidance and streamlined hiring process enabled him to confidently present his technical capabilities to recruiters."
+            "He completed skill assessments, strengthened his interview readiness, and participated in recruitment drives facilitated through the platform. The personalized guidance and streamlined hiring process enabled him to confidently present his technical capabilities to recruiters."
           ]
         },
         {
@@ -295,13 +743,22 @@
       "quote": "The Shortlisted program gave me the confidence and direction I needed during my placement journey. From preparing for interviews to connecting with the right employer, every step was well organized and focused on helping candidates succeed. I'm grateful to HireKarma for helping me begin my professional career as an AI Engineer at Authority Entrepreneurs.",
       "quoteName": "Suvam S. Mishra",
       "quoteRole": "AI Engineer at Authority Entrepreneurs",
-      "quoteImage": "/impact/2f840f8b-a730-4cdc-ba63-860e52df7513.webp"
+      "heroImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/5_HK.png",
+      "quoteImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/5_HK.png"
     },
     {
-      "slug": "devi-prasad-patra",
       "template": "student",
       "breadcrumb": "Impact / Student story",
       "label": "Student story · Shortlisted Program",
+      "primaryCta": {
+        "label": "Explore Shortlisted",
+        "href": "/shortlisted"
+      },
+      "secondaryCta": {
+        "label": "All stories",
+        "href": "/impact#browse-stories"
+      },
+      "slug": "devi-prasad-patra",
       "heading": "Where Preparation Meets Opportunity:",
       "headingAccent": "Devi Prasad Patra's Career Journey",
       "description": "For Devi Prasad Patra, securing the right career opportunity meant continuously improving, learning from every experience, and staying committed to his goal despite the challenges of a competitive job market.",
@@ -311,15 +768,6 @@
         "Shortlisted Program",
         "QA Engineer"
       ],
-      "primaryCta": {
-        "label": "Explore Shortlisted",
-        "href": "/shortlisted"
-      },
-      "secondaryCta": {
-        "label": "All stories",
-        "href": "/impact#browse-stories"
-      },
-      "heroImage": "/impact/161de7ce-0c48-4133-a9ff-1d9b65d7f031.webp",
       "heroImageAlt": "Devi Prasad Patra - QA Engineer at Trayi Consulting Pvt. Ltd.",
       "columns": [
         {
@@ -330,7 +778,7 @@
           ]
         },
         {
-          "title": "Preparation & Shortlisted Ecosystem",
+          "title": "Preparation & Shortlisted Program",
           "paragraphs": [
             "Each stage of the journey strengthened his confidence and prepared him to perform at his best.",
             "The structured support from the Shortlisted program allowed Devi to refine his capabilities and approach recruitment drives with purpose, focus, and interview-ready confidence."
@@ -361,22 +809,13 @@
       "quote": "What made the biggest difference for me was the continuous support and the opportunity to learn throughout the placement journey. The Shortlisted program helped me become more confident in my abilities and connected me with an organization where I could begin my career with purpose. I am thankful to HireKarma for being a part of this important milestone.",
       "quoteName": "Devi Prasad Patra",
       "quoteRole": "QA Engineer at Trayi Consulting Pvt. Ltd.",
-      "quoteImage": "/impact/161de7ce-0c48-4133-a9ff-1d9b65d7f031.webp"
+      "heroImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/6_HK.png",
+      "quoteImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/6_HK.png"
     },
     {
-      "slug": "satyabrata-kulhari",
       "template": "student",
       "breadcrumb": "Impact / Student story",
       "label": "Student story · Shortlisted Program",
-      "heading": "Where Determination Meets Growth:",
-      "headingAccent": "Satyabrata Kulhari's Career Journey",
-      "description": "For Satyabrata Kulhari, building a successful career in data analytics required dedication, continuous learning, and the willingness to adapt in an ever-evolving job market.",
-      "tags": [
-        "Skill development",
-        "Student story",
-        "Shortlisted Program",
-        "Data Analyst"
-      ],
       "primaryCta": {
         "label": "Explore Shortlisted",
         "href": "/shortlisted"
@@ -385,38 +824,48 @@
         "label": "All stories",
         "href": "/impact#browse-stories"
       },
-      "heroImage": "/impact/8e8103a5-3559-4bf3-b127-aad93aacc195.webp",
-      "heroImageAlt": "Satyabrata Kulhari - Data Analyst at Corporate Ranking",
+      "slug": "shridhar-shekhar",
+      "heading": "Turning Potential into Opportunity:",
+      "headingAccent": "Shridhar Shekhar’s Career Breakthrough",
+      "description": "When Shridhar Shekhar began his career journey, he was looking for more than just an internship. He wanted the right platform to understand his strengths, prepare for the recruitment process, and connect with an organization where he could begin his professional career.",
+      "tags": [
+        "Skill development",
+        "Student story",
+        "Shortlisted Program",
+        "AI Intern"
+      ],
+      "heroImageAlt": "Shridhar Shekhar - AI Intern at WeIntern Pvt. Ltd.",
       "columns": [
         {
           "title": "The Journey & Aspirations",
           "paragraphs": [
-            "For Satyabrata Kulhari, building a successful career in data analytics required dedication, continuous learning, and the willingness to adapt in an ever-evolving job market.",
-            "With a strong interest in working with data and uncovering meaningful insights, he remained focused on enhancing his skills and preparing himself for the right opportunity."
+            "When Shridhar Shekhar began his career journey, he was looking for more than just an internship. He wanted the right platform to understand his strengths, prepare for the recruitment process, and connect with an organization where he could begin his professional career."
           ]
         },
         {
-          "title": "Preparation & Shortlisted Ecosystem",
+          "title": "Preparation & Shortlisted Program",
           "paragraphs": [
-            "Through HireKarma's Shortlisted program, Satyabrata gained valuable guidance that extended beyond technical training. The program helped him better understand industry requirements, strengthen his analytical capabilities, and confidently navigate the recruitment process.",
-            "With access to relevant opportunities and continuous support, he was able to showcase his potential to prospective employers."
+            "Through HireKarma’s Shortlisted Program, Shridhar gained access to a structured placement ecosystem focused on helping aspiring professionals become industry-ready.",
+            "From skill assessments and preparation activities to personalized guidance and employer interactions, the program helped him better understand his capabilities, strengthen his professional readiness, and gain valuable exposure to real-world recruitment processes.",
+            "With the right guidance and consistent effort, Shridhar developed greater confidence in approaching career opportunities. The preparation he received helped him recognize his potential and present his skills more effectively to recruiters."
           ]
         },
         {
           "title": "Placement & Impact",
           "paragraphs": [
-            "His efforts and perseverance led to a significant achievement when he was selected as a Data Analyst at Corporate Ranking, marking an important milestone in his professional journey.",
-            "Satyabrata's success story highlights the importance of consistent effort, skill development, and access to the right opportunities. At HireKarma, we remain committed to empowering aspiring professionals by helping them bridge the gap between talent and career success."
+            "His dedication, combined with the support of the Shortlisted Program, ultimately led to his successful placement as an AI Intern at WeIntern Pvt. Ltd.",
+            "Starting his professional journey as an AI Intern gives Shridhar the opportunity to gain practical industry exposure, strengthen his technical skills, and develop a deeper understanding of the professional environment.",
+            "At HireKarma, stories like Shridhar’s represent the core purpose of the Shortlisted Program—to prepare talented candidates, connect them with relevant employers, and help them move toward meaningful career opportunities with confidence."
           ]
         }
       ],
       "metrics": [
         {
-          "value": "Data Analyst",
+          "value": "AI Intern",
           "label": "Placed Role"
         },
         {
-          "value": "Corporate Ranking",
+          "value": "WeIntern Pvt. Ltd.",
           "label": "Employer"
         },
         {
@@ -424,25 +873,16 @@
           "label": "Program Completed"
         }
       ],
-      "quote": "The Shortlisted program provided me with the direction and confidence I needed during my job search. The mentorship, learning opportunities, and placement support helped me prepare for industry expectations and connect with the right opportunity. I am grateful to HireKarma for supporting me throughout this journey.",
-      "quoteName": "Satyabrata Kulhari",
-      "quoteRole": "Data Analyst at Corporate Ranking",
-      "quoteImage": "/impact/8e8103a5-3559-4bf3-b127-aad93aacc195.webp"
+      "quote": "My experience with the Shortlisted Program helped me understand how to approach the recruitment process with a better mindset. The guidance, preparation, and opportunities provided through the program helped me recognize my strengths and become more confident and prepared for the professional world. I am grateful to HireKarma for supporting me throughout my journey and helping me begin my career as an AI Intern at WeIntern Pvt. Ltd.",
+      "quoteName": "Shridhar Shekhar",
+      "quoteRole": "AI Intern at WeIntern Pvt. Ltd.",
+      "heroImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/7_HK.png",
+      "quoteImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/7_HK.png"
     },
     {
-      "slug": "rakesh-nath-sharma",
       "template": "student",
       "breadcrumb": "Impact / Student story",
       "label": "Student story · Shortlisted Program",
-      "heading": "From Job Seeker to SEO Executive:",
-      "headingAccent": "Rakesh Nath Sharma's Journey",
-      "description": "Every successful career begins with a goal and the determination to achieve it. For Rakesh Nath Sharma, the journey to securing the right opportunity was built on continuous learning, patience, and professional growth.",
-      "tags": [
-        "Skill development",
-        "Student story",
-        "Shortlisted Program",
-        "SEO Executive"
-      ],
       "primaryCta": {
         "label": "Explore Shortlisted",
         "href": "/shortlisted"
@@ -451,55 +891,7 @@
         "label": "All stories",
         "href": "/impact#browse-stories"
       },
-      "heroImage": "/impact/f93da89e-7967-4cd7-849c-e31790dcf6ea.webp",
-      "heroImageAlt": "Rakesh Nath Sharma - SEO Executive at SEOCZAR IT SERVICES PVT. LTD.",
-      "columns": [
-        {
-          "title": "The Journey & Growth",
-          "paragraphs": [
-            "Every successful career begins with a goal and the determination to achieve it. For Rakesh Nath Sharma, the journey to securing the right opportunity was built on continuous learning, patience, and a commitment to professional growth.",
-            "Like many job seekers, Rakesh faced the challenge of standing out in a competitive market. Instead of giving up, he focused on improving his skills, understanding industry requirements, and preparing himself for opportunities that aligned with his career ambitions."
-          ]
-        },
-        {
-          "title": "Preparation & Shortlisted Ecosystem",
-          "paragraphs": [
-            "Through HireKarma's Shortlisted program, Rakesh gained access to structured guidance, career support, and hiring opportunities that helped him move closer to his goal.",
-            "The program not only enhanced his understanding of the recruitment process but also helped him build the confidence needed to showcase his abilities effectively."
-          ]
-        },
-        {
-          "title": "Placement & Impact",
-          "paragraphs": [
-            "His dedication was rewarded when he was selected as an SEO Executive at SEOCZAR IT SERVICES PVT. LTD. This achievement marked the beginning of an exciting chapter in his professional journey and a significant step toward building a successful career in digital marketing.",
-            "Rakesh's success story shows that with the right mindset, consistent effort, and access to the right opportunities, career goals can become reality. At HireKarma, we are proud to support talented individuals like Rakesh as they take meaningful steps toward a brighter professional future."
-          ]
-        }
-      ],
-      "metrics": [
-        {
-          "value": "SEO Executive",
-          "label": "Placed Role"
-        },
-        {
-          "value": "SEOCZAR IT SERVICES",
-          "label": "Employer"
-        },
-        {
-          "value": "Shortlisted",
-          "label": "Program Completed"
-        }
-      ],
-      "quote": "The support and guidance I received throughout the placement journey played a crucial role in helping me secure this opportunity. The Shortlisted program helped me improve my confidence, prepare for interviews, and connect with the right employer. I am grateful to HireKarma for being a part of my career journey.",
-      "quoteName": "Rakesh Nath Sharma",
-      "quoteRole": "SEO Executive at SEOCZAR IT SERVICES PVT. LTD.",
-      "quoteImage": "/impact/f93da89e-7967-4cd7-849c-e31790dcf6ea.webp"
-    },
-    {
       "slug": "sanchita-rani-nayak",
-      "template": "student",
-      "breadcrumb": "Impact / Student story",
-      "label": "Student story · Shortlisted Program",
       "heading": "Transforming Potential into Success:",
       "headingAccent": "Sanchita Rani Nayak's Career Journey",
       "description": "For Sanchita Rani Nayak, pursuing a career in Artificial Intelligence and Machine Learning was driven by curiosity, determination, and a passion for technology.",
@@ -509,15 +901,6 @@
         "Shortlisted Program",
         "AI/ML Engineer"
       ],
-      "primaryCta": {
-        "label": "Explore Shortlisted",
-        "href": "/shortlisted"
-      },
-      "secondaryCta": {
-        "label": "All stories",
-        "href": "/impact#browse-stories"
-      },
-      "heroImage": "/impact/ff494e6e-cc87-40af-adb8-0061858cf650.webp",
       "heroImageAlt": "Sanchita Rani Nayak - AI/ML Engineer at Luminous Infoways",
       "columns": [
         {
@@ -528,7 +911,7 @@
           ]
         },
         {
-          "title": "Preparation & Shortlisted Ecosystem",
+          "title": "Preparation & Shortlisted Program",
           "paragraphs": [
             "Through HireKarma's Shortlisted program, Sanchita received the guidance, support, and exposure needed to strengthen her technical foundation and understand industry expectations.",
             "The program helped her identify areas for growth, build confidence in her abilities, and participate in opportunities that aligned with her career goals."
@@ -559,7 +942,548 @@
       "quote": "The Shortlisted program played an important role in my placement journey. The guidance, learning opportunities, and support throughout the process helped me improve my confidence and prepare for industry requirements. I am grateful to HireKarma for helping me take this important step in my career.",
       "quoteName": "Sanchita Rani Nayak",
       "quoteRole": "AI/ML Engineer at Luminous Infoways",
-      "quoteImage": "/impact/ff494e6e-cc87-40af-adb8-0061858cf650.webp"
+      "heroImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/8_HK.png",
+      "quoteImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/8_HK.png"
+    },
+    {
+      "template": "student",
+      "breadcrumb": "Impact / Student story",
+      "label": "Student story · Shortlisted Program",
+      "primaryCta": {
+        "label": "Explore Shortlisted",
+        "href": "/shortlisted"
+      },
+      "secondaryCta": {
+        "label": "All stories",
+        "href": "/impact#browse-stories"
+      },
+      "slug": "nalla-vamsi-krishna",
+      "heading": "From Taking the First Step to Finding the Right Fit:",
+      "headingAccent": "Nalla Vamsi Krishna's Story",
+      "description": "For Nalla Vamsi Krishna, beginning his career was not simply about finding a job—it was about finding the right opportunity to apply his skills, understand industry expectations, and build the confidence needed to enter the professional world.",
+      "tags": [
+        "Skill development",
+        "Student story",
+        "Shortlisted Program",
+        "Software Developer"
+      ],
+      "heroImageAlt": "Nalla Vamsi Krishna - Software Developer at Jowib Technology",
+      "columns": [
+        {
+          "title": "The Journey & Aspirations",
+          "paragraphs": [
+            "For Nalla Vamsi Krishna, beginning his career was not simply about finding a job—it was about finding the right opportunity to apply his skills, understand industry expectations, and build the confidence needed to enter the professional world.",
+            "As he explored career opportunities, Vamsi Krishna wanted more than just a platform to apply for jobs. He wanted the right preparation, guidance, and exposure to help him understand how to present his abilities effectively and approach recruitment opportunities with confidence."
+          ]
+        },
+        {
+          "title": "Preparation & Shortlisted Program",
+          "paragraphs": [
+            "Through HireKarma's Shortlisted Program, Vamsi Krishna gained access to a structured and career-focused placement ecosystem. The program helped him strengthen his professional readiness through skill assessments, preparation activities, recruitment interactions, and opportunities to connect with potential employers.",
+            "With each stage of the process, he gained a better understanding of his strengths and areas for improvement. The guidance and practical exposure provided through the program helped him become more confident in communicating his skills and navigating the recruitment process."
+          ]
+        },
+        {
+          "title": "Placement & Impact",
+          "paragraphs": [
+            "His consistent efforts and determination ultimately led to a successful placement at Jowib Technology, where he began his professional journey as a Software Developer.",
+            "Starting his career as a Software Developer gives him the opportunity to apply his technical knowledge, gain practical industry experience, and continue developing his skills in a professional environment.",
+            "At HireKarma, stories like Vamsi Krishna's highlight the purpose of the Shortlisted Program—to help candidates become better prepared, build confidence, gain industry exposure, and connect with employers who value their potential."
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "Software Developer",
+          "label": "Placed Role"
+        },
+        {
+          "value": "Jowib Technology",
+          "label": "Employer"
+        },
+        {
+          "value": "Shortlisted",
+          "label": "Program Completed"
+        }
+      ],
+      "quote": "The journey helped me look at my career preparation in a completely different way. Through the Shortlisted Program, I became more aware of how to communicate my skills, prepare for opportunities, and approach the recruitment process with confidence. The guidance and exposure I received through HireKarma encouraged me to keep improving and believe in my potential. I am happy to begin my professional journey as a Software Developer at Jowib Technology.",
+      "quoteName": "Nalla Vamsi Krishna",
+      "quoteRole": "Software Developer at Jowib Technology",
+      "heroImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/9_HK.png",
+      "quoteImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/9_HK.png"
+    },
+    {
+      "template": "student",
+      "breadcrumb": "Impact / Student story",
+      "label": "Student story · Shortlisted Program",
+      "primaryCta": {
+        "label": "Explore Shortlisted",
+        "href": "/shortlisted"
+      },
+      "secondaryCta": {
+        "label": "All stories",
+        "href": "/impact#browse-stories"
+      },
+      "slug": "atasi-pradhan",
+      "heading": "One Opportunity, A New Chapter:",
+      "headingAccent": "Atasi Pradhan's Success Story",
+      "description": "When Atasi Pradhan began exploring career opportunities, she was looking for more than just a chance to get started. She wanted an opportunity that would help her build confidence, understand professional expectations, and take her first meaningful step into the industry.",
+      "tags": [
+        "Skill development",
+        "Student story",
+        "Shortlisted Program",
+        "AI Intern"
+      ],
+      "heroImageAlt": "Atasi Pradhan - AI Intern at WeIntern Pvt. Ltd.",
+      "columns": [
+        {
+          "title": "The Journey & Aspirations",
+          "paragraphs": [
+            "When Atasi Pradhan began exploring career opportunities, she was looking for more than just a chance to get started. She wanted an opportunity that would help her build confidence, understand professional expectations, and take her first meaningful step into the industry.",
+            "Like many aspiring professionals, Atasi had the skills and ambition to build a career, but turning that potential into the right opportunity required preparation and guidance. She wanted to become more comfortable with the recruitment process and understand how to present her abilities effectively to potential employers."
+          ]
+        },
+        {
+          "title": "Preparation & Shortlisted Program",
+          "paragraphs": [
+            "Her journey with HireKarma's Shortlisted Program provided her with a structured and supportive career pathway. Through skill assessments, preparation activities, professional interactions, and employer opportunities, Atasi gained valuable exposure to the recruitment environment and became better prepared to take on workplace expectations.",
+            "The program helped her recognize her strengths, improve her professional confidence, and approach opportunities with a more focused mindset. With her dedication and willingness to learn, Atasi successfully moved from preparation to opportunity."
+          ]
+        },
+        {
+          "title": "Placement & Impact",
+          "paragraphs": [
+            "Her efforts led to a successful placement at WeIntern Pvt. Ltd., where she began her professional journey as an AI Intern.",
+            "Atasi's achievement shows how the right preparation and opportunity can turn potential into a meaningful career beginning. Her willingness to learn, adapt, and take on new challenges has opened the door to valuable practical experience in the field of AI.",
+            "At HireKarma, Atasi's journey reflects the purpose of the Shortlisted Program—to help candidates assess their abilities, strengthen their professional readiness, build confidence, gain industry exposure, and connect with the right employment opportunities."
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "AI Intern",
+          "label": "Placed Role"
+        },
+        {
+          "value": "WeIntern Pvt. Ltd.",
+          "label": "Employer"
+        },
+        {
+          "value": "Shortlisted",
+          "label": "Program Completed"
+        }
+      ],
+      "quote": "This journey taught me that being ready for a career is not only about having the right skills, but also about having the confidence to use them. The experience with HireKarma helped me become more prepared, confident, and positive about my career path. I am thankful for the opportunity to begin my professional journey as an AI Intern at WeIntern Pvt. Ltd. and look forward to learning, contributing, and growing in this role.",
+      "quoteName": "Atasi Pradhan",
+      "quoteRole": "AI Intern at WeIntern Pvt. Ltd.",
+      "heroImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/10_HK.png",
+      "quoteImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/10_HK.png"
+    },
+    {
+      "template": "student",
+      "breadcrumb": "Impact / Student story",
+      "label": "Student story · Shortlisted Program",
+      "primaryCta": {
+        "label": "Explore Shortlisted",
+        "href": "/shortlisted"
+      },
+      "secondaryCta": {
+        "label": "All stories",
+        "href": "/impact#browse-stories"
+      },
+      "slug": "chitun-sahu",
+      "heading": "From Curiosity to Career:",
+      "headingAccent": "Chitun Sahu's Professional Journey",
+      "description": "For Chitun Sahu, the journey toward a career in digital marketing began with curiosity—the desire to understand how businesses connect with audiences, explore the digital landscape, and turn his interest into practical skills and professional experience.",
+      "tags": [
+        "Skill development",
+        "Student story",
+        "Shortlisted Program",
+        "Digital Marketing Intern"
+      ],
+      "heroImageAlt": "Chitun Sahu - Digital Marketing Intern at WeIntern Pvt. Ltd.",
+      "columns": [
+        {
+          "title": "The Journey & Aspirations",
+          "paragraphs": [
+            "For Chitun Sahu, the journey toward a career in digital marketing began with curiosity—the desire to understand how businesses connect with audiences, explore the digital landscape, and turn his interest into practical skills and professional experience.",
+            "As he explored career opportunities, Chitun wanted more than just theoretical knowledge. He was looking for an opportunity to gain real-world exposure, understand industry expectations, and develop the confidence needed to begin his professional journey."
+          ]
+        },
+        {
+          "title": "Preparation & Shortlisted Program",
+          "paragraphs": [
+            "Through HireKarma's Shortlisted Program, Chitun gained access to a structured career pathway designed to help aspiring professionals prepare for the world of work.",
+            "Through skill assessments, career-focused activities, preparation support, and recruitment interactions, he was able to better understand his strengths and improve his professional readiness.",
+            "The program also gave him valuable exposure to the recruitment process, helping him become more confident in presenting his abilities and approaching potential opportunities."
+          ]
+        },
+        {
+          "title": "Placement & Impact",
+          "paragraphs": [
+            "His efforts led to a successful placement at WeIntern Pvt. Ltd., where he joined as a Digital Marketing Intern.",
+            "Chitun's new role as a Digital Marketing Intern gives him the opportunity to gain hands-on experience, apply his knowledge, explore different areas of digital marketing, and build skills for his future career.",
+            "At HireKarma, Chitun's achievement reflects the purpose of the Shortlisted Program—to help candidates understand their potential, strengthen their skills, build professional confidence, gain industry exposure, and connect with opportunities that support their career goals."
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "Digital Marketing Intern",
+          "label": "Placed Role"
+        },
+        {
+          "value": "WeIntern Pvt. Ltd.",
+          "label": "Employer"
+        },
+        {
+          "value": "Shortlisted",
+          "label": "Program Completed"
+        }
+      ],
+      "quote": "My journey with HireKarma gave me the opportunity to understand my strengths and become more confident about entering the professional world. The experience helped me approach opportunities with a positive mindset and encouraged me to keep learning and improving. I am excited to begin my journey as a Digital Marketing Intern at WeIntern Pvt. Ltd. and look forward to gaining new skills, practical experience, and valuable industry exposure.",
+      "quoteName": "Chitun Sahu",
+      "quoteRole": "Digital Marketing Intern at WeIntern Pvt. Ltd.",
+      "heroImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/11_HK.png",
+      "quoteImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/11_HK.png"
+    },
+    {
+      "template": "student",
+      "breadcrumb": "Impact / Student story",
+      "label": "Student story · Shortlisted Program",
+      "primaryCta": {
+        "label": "Explore Shortlisted",
+        "href": "/shortlisted"
+      },
+      "secondaryCta": {
+        "label": "All stories",
+        "href": "/impact#browse-stories"
+      },
+      "slug": "rakesh-nath-sharma",
+      "heading": "From Job Seeker to SEO Executive:",
+      "headingAccent": "Rakesh Nath Sharma's Journey",
+      "description": "Every successful career begins with a goal and the determination to achieve it. For Rakesh Nath Sharma, the journey to securing the right opportunity was built on continuous learning, patience, and a commitment to professional growth.",
+      "tags": [
+        "Skill development",
+        "Student story",
+        "Shortlisted Program",
+        "SEO Executive"
+      ],
+      "heroImageAlt": "Rakesh Nath Sharma - SEO Executive at SEOCZAR IT SERVICES PVT. LTD.",
+      "columns": [
+        {
+          "title": "The Journey & Growth",
+          "paragraphs": [
+            "Every successful career begins with a goal and the determination to achieve it. For Rakesh Nath Sharma, the journey to securing the right opportunity was built on continuous learning, patience, and a commitment to professional growth.",
+            "Like many job seekers, Rakesh faced the challenge of standing out in a competitive market. Instead of giving up, he focused on improving his skills, understanding industry requirements, and preparing himself for opportunities that aligned with his career ambitions."
+          ]
+        },
+        {
+          "title": "Preparation & Shortlisted Program",
+          "paragraphs": [
+            "Through HireKarma's Shortlisted program, Rakesh gained access to structured guidance, career support, and hiring opportunities that helped him move closer to his goal.",
+            "The program not only enhanced his understanding of the recruitment process but also helped him build the confidence needed to showcase his abilities effectively."
+          ]
+        },
+        {
+          "title": "Placement & Impact",
+          "paragraphs": [
+            "His dedication was rewarded when he was selected as an SEO Executive at SEOCZAR IT SERVICES PVT. LTD. This achievement marked the beginning of an exciting chapter in his professional journey and a significant step toward building a successful career in digital marketing.",
+            "Rakesh's success story shows that with the right mindset, consistent effort, and access to the right opportunities, career goals can become reality. At HireKarma, we are proud to support talented individuals like Rakesh as they take meaningful steps toward a brighter professional future."
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "SEO Executive",
+          "label": "Placed Role"
+        },
+        {
+          "value": "SEOCZAR IT SERVICES",
+          "label": "Employer"
+        },
+        {
+          "value": "Shortlisted",
+          "label": "Program Completed"
+        }
+      ],
+      "quote": "The support and guidance I received throughout the placement journey played a crucial role in helping me secure this opportunity. The Shortlisted program helped me improve my confidence, prepare for interviews, and connect with the right employer. I am grateful to HireKarma for being a part of my career journey.",
+      "quoteName": "Rakesh Nath Sharma",
+      "quoteRole": "SEO Executive at SEOCZAR IT SERVICES PVT. LTD.",
+      "heroImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/12_HK.png",
+      "quoteImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/12_HK.png"
+    },
+    {
+      "template": "student",
+      "breadcrumb": "Impact / Student story",
+      "label": "Student story · Shortlisted Program",
+      "primaryCta": {
+        "label": "Explore Shortlisted",
+        "href": "/shortlisted"
+      },
+      "secondaryCta": {
+        "label": "All stories",
+        "href": "/impact#browse-stories"
+      },
+      "slug": "prabhudatta-barik",
+      "heading": "Building Tomorrow, One Opportunity at a Time:",
+      "headingAccent": "Prabhudatta Barik's Journey",
+      "description": "For Prabhudatta Barik, the journey from learning to working was an opportunity to turn his interest in technology and artificial intelligence into practical experience.",
+      "tags": [
+        "Skill development",
+        "Student story",
+        "Shortlisted Program",
+        "AI Intern"
+      ],
+      "heroImageAlt": "Prabhudatta Barik - AI Intern at WeIntern Pvt. Ltd.",
+      "columns": [
+        {
+          "title": "The Journey & Aspirations",
+          "paragraphs": [
+            "For Prabhudatta Barik, the journey from learning to working was an opportunity to turn his interest in technology and artificial intelligence into practical experience. As he prepared to enter the professional world, he wanted to find an environment where he could apply his knowledge, understand industry expectations, and build the confidence needed to take the next step in his career.",
+            "Prabhudatta understood that technical knowledge was only one part of becoming career-ready. He also wanted to learn how to present his abilities, approach recruitment opportunities, and adapt his skills to a professional environment."
+          ]
+        },
+        {
+          "title": "Preparation & Shortlisted Program",
+          "paragraphs": [
+            "Through HireKarma's Shortlisted Program, Prabhudatta gained access to a structured career-focused ecosystem designed to help candidates become better prepared for employment opportunities.",
+            "Through assessments, preparation activities, recruitment interactions, and employer exposure, he gained a clearer understanding of his strengths and the expectations of the professional world.",
+            "The experience helped him improve his approach, build confidence, and remain focused on his career aspirations."
+          ]
+        },
+        {
+          "title": "Placement & Impact",
+          "paragraphs": [
+            "His efforts led to a successful placement at WeIntern Pvt. Ltd., where he joined as an AI Intern.",
+            "His role as an AI Intern gives him the opportunity to work with emerging technologies, gain hands-on industry experience, strengthen his practical understanding of artificial intelligence, and continue developing the skills needed for his future career.",
+            "At HireKarma, his achievement represents the purpose of the Shortlisted Program—to help candidates assess their potential, strengthen their professional readiness, build confidence, gain industry exposure, and connect with meaningful employment opportunities."
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "AI Intern",
+          "label": "Placed Role"
+        },
+        {
+          "value": "WeIntern Pvt. Ltd.",
+          "label": "Employer"
+        },
+        {
+          "value": "Shortlisted",
+          "label": "Program Completed"
+        }
+      ],
+      "quote": "My journey with HireKarma helped me become more confident about taking my skills into a professional environment. The Shortlisted Program gave me valuable exposure to the recruitment process and encouraged me to keep learning and improving myself. I am grateful for the opportunity to begin my career as an AI Intern at WeIntern Pvt. Ltd., and I am excited about everything I can learn, contribute, and experience along the way.",
+      "quoteName": "Prabhudatta Barik",
+      "quoteRole": "AI Intern at WeIntern Pvt. Ltd.",
+      "heroImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/13_HK.png",
+      "quoteImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/13_HK.png"
+    },
+    {
+      "template": "student",
+      "breadcrumb": "Impact / Student story",
+      "label": "Student story · Shortlisted Program",
+      "primaryCta": {
+        "label": "Explore Shortlisted",
+        "href": "/shortlisted"
+      },
+      "secondaryCta": {
+        "label": "All stories",
+        "href": "/impact#browse-stories"
+      },
+      "slug": "uttam-singh-rathor",
+      "heading": "From Learning to Building:",
+      "headingAccent": "Uttam Singh Rathor's Career Journey",
+      "description": "For Uttam Singh Rathor, the journey toward a career in technology began with a passion for web development and a desire to transform his technical knowledge into practical experience.",
+      "tags": [
+        "Skill development",
+        "Student story",
+        "Shortlisted Program",
+        "Full Stack Intern"
+      ],
+      "heroImageAlt": "Uttam Singh Rathor - Full Stack Web Developer Intern at WeIntern Pvt. Ltd.",
+      "columns": [
+        {
+          "title": "The Journey & Aspirations",
+          "paragraphs": [
+            "For Uttam Singh Rathor, the journey toward a career in technology began with a passion for web development and a desire to transform his technical knowledge into practical experience. He wanted to move beyond academic learning and discover how his skills could be applied to real-world projects and professional challenges.",
+            "With an interest in programming, technology, and building digital solutions, Uttam was looking for an opportunity that would help him strengthen his development skills, understand industry expectations, and build the confidence needed to enter the professional world."
+          ]
+        },
+        {
+          "title": "Preparation & Shortlisted Program",
+          "paragraphs": [
+            "Through HireKarma's Shortlisted Program, Uttam gained access to a structured and career-focused placement ecosystem designed to help aspiring professionals become industry-ready.",
+            "Through skill assessments, career-oriented activities, preparation support, and exposure to the recruitment process, he gained valuable insights into professional expectations and learned how to communicate his technical capabilities more effectively.",
+            "Each stage of the journey helped Uttam become more confident, focused, and prepared to take on professional opportunities."
+          ]
+        },
+        {
+          "title": "Placement & Impact",
+          "paragraphs": [
+            "His consistent efforts and commitment to learning eventually led to a successful opportunity at WeIntern Pvt. Ltd., where he joined as a Full Stack Web Developer Intern.",
+            "As a Full Stack Web Developer Intern, Uttam now has the opportunity to work on real-world web development challenges, strengthen his frontend and backend skills, understand complete application development, and gain hands-on experience in a professional environment.",
+            "At HireKarma, Uttam's achievement reflects the purpose of the Shortlisted Program—to help candidates assess their abilities, strengthen their professional readiness, build confidence, gain industry exposure, and connect with organizations where their skills and careers can grow."
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "Full Stack Intern",
+          "label": "Placed Role"
+        },
+        {
+          "value": "WeIntern Pvt. Ltd.",
+          "label": "Employer"
+        },
+        {
+          "value": "Shortlisted",
+          "label": "Program Completed"
+        }
+      ],
+      "quote": "My experience with HireKarma gave me valuable exposure to the professional hiring process and helped me understand how to present my skills with greater confidence. The Shortlisted Program motivated me to keep learning and improving my technical abilities while preparing me for professional opportunities. I am excited to begin my role as a Full Stack Web Developer Intern at WeIntern Pvt. Ltd. and look forward to gaining practical experience and continuing to grow as a developer.",
+      "quoteName": "Uttam Singh Rathor",
+      "quoteRole": "Full Stack Web Developer Intern at WeIntern Pvt. Ltd.",
+      "heroImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/14_HK.png",
+      "quoteImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/14_HK.png"
+    },
+    {
+      "template": "student",
+      "breadcrumb": "Impact / Student story",
+      "label": "Student story · Shortlisted Program",
+      "primaryCta": {
+        "label": "Explore Shortlisted",
+        "href": "/shortlisted"
+      },
+      "secondaryCta": {
+        "label": "All stories",
+        "href": "/impact#browse-stories"
+      },
+      "slug": "ayush-patel",
+      "heading": "From Code to Career:",
+      "headingAccent": "Ayush Patel's Journey into Full Stack Development",
+      "description": "For Ayush Patel, the journey toward a career in technology began with a strong interest in programming, web development, and problem-solving. He wanted to transform his technical knowledge into practical skills and gain the experience needed to confidently step into the professional world.",
+      "tags": [
+        "Skill development",
+        "Student story",
+        "Shortlisted Program",
+        "Full Stack Intern"
+      ],
+      "heroImageAlt": "Ayush Patel - Full Stack Web Developer Intern at WeIntern Pvt. Ltd.",
+      "columns": [
+        {
+          "title": "The Journey & Aspirations",
+          "paragraphs": [
+            "For Ayush Patel, the journey toward a career in technology began with a strong interest in programming, web development, and problem-solving. He wanted to transform his technical knowledge into practical skills and gain the experience needed to confidently step into the professional world.",
+            "With a growing passion for building web applications, Ayush understood that classroom learning was only the beginning. He was looking for an opportunity that could help him strengthen his development abilities, understand industry expectations, and prepare himself for the challenges of a professional technology environment."
+          ]
+        },
+        {
+          "title": "Preparation & Shortlisted Program",
+          "paragraphs": [
+            "Through HireKarma's Shortlisted Program, Ayush gained access to a structured and career-focused placement ecosystem designed to help aspiring professionals become industry-ready.",
+            "Through skill assessments, career-oriented activities, preparation support, and recruitment interactions, he gained valuable insights into the hiring process and learned how to present his technical capabilities more effectively.",
+            "The experience helped Ayush build greater confidence, identify areas for improvement, and approach professional opportunities with a more focused mindset."
+          ]
+        },
+        {
+          "title": "Placement & Impact",
+          "paragraphs": [
+            "His dedication and continuous efforts eventually led to a successful opportunity at WeIntern Pvt. Ltd., where he joined as a Full Stack Web Developer Intern.",
+            "As a Full Stack Web Developer Intern, Ayush now has the opportunity to gain hands-on experience in developing web applications, work with frontend and backend technologies, understand real-world development practices, and contribute to building modern web solutions in a professional environment.",
+            "At HireKarma, Ayush's achievement reflects the purpose of the Shortlisted Program—to help candidates assess their abilities, strengthen their professional readiness, build confidence, gain industry exposure, and connect with organizations where their skills can create meaningful opportunities."
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "Full Stack Intern",
+          "label": "Placed Role"
+        },
+        {
+          "value": "WeIntern Pvt. Ltd.",
+          "label": "Employer"
+        },
+        {
+          "value": "Shortlisted",
+          "label": "Program Completed"
+        }
+      ],
+      "quote": "My experience with HireKarma helped me understand the importance of presenting my skills confidently and preparing myself for real-world opportunities. The Shortlisted Program gave me valuable exposure to the professional hiring process and encouraged me to keep improving my technical knowledge. I am excited to begin my role as a Full Stack Web Developer Intern at WeIntern Pvt. Ltd. and look forward to learning, contributing, and growing throughout this experience.",
+      "quoteName": "Ayush Patel",
+      "quoteRole": "Full Stack Web Developer Intern at WeIntern Pvt. Ltd.",
+      "heroImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/15_HK.png",
+      "quoteImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/15_HK.png"
+    },
+    {
+      "template": "student",
+      "breadcrumb": "Impact / Student story",
+      "label": "Student story · Shortlisted Program",
+      "primaryCta": {
+        "label": "Explore Shortlisted",
+        "href": "/shortlisted"
+      },
+      "secondaryCta": {
+        "label": "All stories",
+        "href": "/impact#browse-stories"
+      },
+      "slug": "nitish-kumar-behera",
+      "heading": "Building Skills, Creating Opportunities:",
+      "headingAccent": "Nitish Kumar Behera's Career Journey",
+      "description": "For Nitish Kumar Behera, the journey toward a career in technology began with an interest in web development and a determination to turn his technical knowledge into meaningful professional experience.",
+      "tags": [
+        "Skill development",
+        "Student story",
+        "Shortlisted Program",
+        "Full Stack Intern"
+      ],
+      "heroImageAlt": "Nitish Kumar Behera - Full Stack Web Developer Intern at WeIntern Pvt. Ltd.",
+      "columns": [
+        {
+          "title": "The Journey & Aspirations",
+          "paragraphs": [
+            "For Nitish Kumar Behera, the journey toward a career in technology began with an interest in web development and a determination to turn his technical knowledge into meaningful professional experience. He wanted to move beyond academic learning and discover how his skills could be applied to real-world development challenges.",
+            "With a growing passion for programming, technology, and problem-solving, Nitish was looking for an opportunity that would help him strengthen his development abilities, understand industry expectations, and build the confidence needed to take his first steps into the professional world."
+          ]
+        },
+        {
+          "title": "Preparation & Shortlisted Program",
+          "paragraphs": [
+            "Through HireKarma's Shortlisted Program, Nitish gained access to a structured and career-focused placement ecosystem designed to help aspiring professionals become industry-ready.",
+            "Through skill assessments, career-oriented activities, preparation support, and recruitment interactions, he gained valuable exposure to professional expectations and learned how to communicate his technical capabilities more effectively.",
+            "Each stage of the journey helped Nitish become more confident, focused, and prepared to take on professional opportunities."
+          ]
+        },
+        {
+          "title": "Placement & Impact",
+          "paragraphs": [
+            "His consistent efforts and commitment to learning eventually led to a successful opportunity at WeIntern Pvt. Ltd., where he joined as a Full Stack Web Developer Intern.",
+            "As a Full Stack Web Developer Intern, Nitish now has the opportunity to work on real-world web development projects, strengthen his frontend and backend capabilities, understand modern development practices, and gain hands-on experience in building complete and functional web applications.",
+            "At HireKarma, Nitish's achievement reflects the purpose of the Shortlisted Program—to help candidates assess their skills, strengthen their professional readiness, build confidence, gain industry exposure, and connect with organizations where their abilities can create meaningful career opportunities."
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "Full Stack Intern",
+          "label": "Placed Role"
+        },
+        {
+          "value": "WeIntern Pvt. Ltd.",
+          "label": "Employer"
+        },
+        {
+          "value": "Shortlisted",
+          "label": "Program Completed"
+        }
+      ],
+      "quote": "My experience with HireKarma gave me valuable exposure to the professional environment and helped me understand how to present my skills with greater confidence. The Shortlisted Program motivated me to continue learning and improving my technical abilities while preparing me for real-world opportunities. I am excited to begin my role as a Full Stack Web Developer Intern at WeIntern Pvt. Ltd. and look forward to gaining practical experience, taking on new challenges, and growing as a developer.",
+      "quoteName": "Nitish Kumar Behera",
+      "quoteRole": "Full Stack Web Developer Intern at WeIntern Pvt. Ltd.",
+      "heroImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/16_HK.png",
+      "quoteImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/16_HK.png"
     }
   ]
 }
