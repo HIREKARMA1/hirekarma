@@ -10,8 +10,7 @@
       "label": "View Open Positions",
       "href": "/contact"
     },
-    "partnersNote": "Trusted by partners and institutions across India.",
-    "headingHighlight": "Opportunity"
+    "partnersNote": "Trusted by partners and institutions across India."
   },
   "statsBar": {
     "items": [
@@ -146,8 +145,7 @@
         "image": "/offerings/skill-development.png",
         "href": "/services/pre-placement-training"
       }
-    ],
-    "headingHighlight": "One mission."
+    ]
   },
   "journey": {
     "label": "The pathway",
@@ -189,8 +187,7 @@
         "label": "Contribute",
         "description": "Feed impact back into communities and public systems."
       }
-    ],
-    "headingHighlight": "our ecosystem"
+    ]
   },
   "techShowcase": {
     "label": "Our technology",
@@ -227,8 +224,7 @@
   "testimonials": {
     "heading": "Testimonials",
     "subheading": "Voices of Transformation",
-    "description": "Hear from colleges, universities, and corporate partners who have transformed their hiring processes with HireKarma.",
-    "subheadingHighlight": "Transformation"
+    "description": "Hear from colleges, universities, and corporate partners who have transformed their hiring processes with HireKarma."
   },
   "hiringCta": {
     "heading": "We're hiring. Build what matters.",
@@ -240,8 +236,7 @@
     "secondaryCta": {
       "label": "Talk to us",
       "href": "/contact"
-    },
-    "headingHighlight": "what matters."
+    }
   },
   "dpi": {
     "label": "Digital public infrastructure",
@@ -325,15 +320,13 @@
         "description": "National Association of Software and Service Companies",
         "category": "Technology"
       }
-    ],
-    "headingHighlight": "Certified By"
+    ]
   },
   "partners": {
     "heading": "Our Partners",
     "subheading": "Trusted Collaboration Network",
     "description": "Trusted by leading companies and educational institutions across India who rely on HireKarma for their campus placement needs.",
     "universityPartnersLabel": "University Partners",
-    "corporatePartnersLabel": "Corporate Partners",
-    "headingHighlight": "Partners"
+    "corporatePartnersLabel": "Corporate Partners"
   }
 }

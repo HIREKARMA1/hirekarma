@@ -5,7 +5,6 @@ import Image from "next/image";
 
 import { theme } from "@/config/theme";
 import { useHomeLocale } from "@/contexts/HomeLocaleContext";
-import { withHighlightMark } from "@/components/shared/HighlightMark";
 import type { HomeTestimonialItem } from "@/types/home-page";
 
 const CARD_W = 320;
@@ -144,10 +143,7 @@ export default function Testimonials() {
             >
               {testimonials.heading}
               <span className="mt-1.5 block text-lg font-medium tracking-tight text-white sm:text-[1.35rem]">
-                {withHighlightMark(
-                  testimonials.subheading,
-                  testimonials.subheadingHighlight
-                )}
+                {testimonials.subheading}
               </span>
             </h2>
             <p className="mx-auto mt-2 max-w-2xl text-sm leading-relaxed text-white/85">

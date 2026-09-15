@@ -13,7 +13,6 @@ import {
 import EcosystemDiagram from "@/components/home/EcosystemDiagram";
 import { NumberTicker } from "@/components/products-page/ui/NumberTicker";
 import footerPartners from "@/data/footer-partners.json";
-import { withHighlightMark } from "@/components/shared/HighlightMark";
 import { theme } from "@/config/theme";
 import { useHomeLocale } from "@/contexts/HomeLocaleContext";
 
@@ -37,21 +36,18 @@ export default function HeroBanner() {
       />
 
       {/* Hero content */}
-      <div className="relative flex flex-1 flex-col justify-center content-container py-6 sm:py-8 lg:py-6">
-        <div className="grid items-center gap-6 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-6 xl:gap-8">
-          <div className="min-w-0 space-y-4 sm:space-y-5">
-            <h1 className="text-[1.75rem] font-bold leading-[1.12] tracking-tight text-[#0f1622] sm:text-[2.15rem] lg:text-[2.4rem]">
-              {withHighlightMark(
-                heroBanner.heading,
-                heroBanner.headingHighlight
-              )}
+      <div className="relative flex min-h-0 flex-1 flex-col justify-center content-container py-4 sm:py-5 lg:py-6">
+        <div className="grid items-center gap-8 sm:gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-10 xl:gap-14">
+          <div className="min-w-0 lg:pr-4">
+            <h1 className="text-[1.65rem] font-bold leading-[1.12] tracking-tight text-[#0f1622] sm:text-[2rem] lg:text-[2.4rem] xl:text-[2.5rem]">
+              {heroBanner.heading}
             </h1>
 
-            <p className="max-w-xl text-[15px] leading-relaxed text-[#334155] sm:text-[16px]">
+            <p className="mt-4 max-w-xl text-[14px] leading-relaxed text-[#334155] sm:mt-5 sm:text-[15px] lg:text-[16px]">
               {heroBanner.description}
             </p>
 
-            <div className="flex flex-col gap-2.5 sm:flex-row sm:items-center">
+            <div className="mt-6 flex flex-col gap-2.5 sm:mt-7 sm:flex-row sm:items-center">
               <Link
                 href={heroBanner.primaryCta.href}
                 className="inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold text-white transition hover:brightness-110"
@@ -60,22 +56,15 @@ export default function HeroBanner() {
                 {heroBanner.primaryCta.label}
                 <span aria-hidden>→</span>
               </Link>
-              {/* <Link
-                href={heroBanner.secondaryCta.href}
-                className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#d5d9e0] bg-white px-5 py-2.5 text-sm font-semibold text-[#0f1622] transition hover:border-[#0f1622]/35"
-              >
-                {heroBanner.secondaryCta.label}
-                <span aria-hidden>→</span>
-              </Link> */}
             </div>
 
-            <div className="pt-0.5">
+            <div className="mt-8 sm:mt-10">
               <p className="text-sm text-[#475569]">{heroBanner.partnersNote}</p>
-              <div className="mt-2.5 flex flex-wrap items-center gap-x-4 gap-y-2">
+              <div className="mt-3 flex w-full min-w-0 flex-nowrap items-center gap-x-2 sm:gap-x-5">
                 {trustLogos.map((partner) => (
                   <div
                     key={partner.id}
-                    className="relative flex h-7 w-[4rem] items-center justify-center grayscale opacity-70 transition hover:opacity-100 hover:grayscale-0 sm:h-8 sm:w-[4.5rem]"
+                    className="relative flex h-6 min-w-0 flex-1 items-center justify-center grayscale opacity-70 transition hover:opacity-100 hover:grayscale-0 sm:h-7 sm:w-[4.25rem] sm:max-w-[4.25rem] sm:flex-none"
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
@@ -91,7 +80,7 @@ export default function HeroBanner() {
             </div>
           </div>
 
-          <div className="mx-auto w-full max-w-[min(100%,420px)] lg:max-w-[min(100%,460px)] xl:max-w-[500px]">
+          <div className="mx-auto flex w-full max-w-[min(100%,33rem)] shrink-0 items-center justify-center overflow-visible sm:max-w-[min(660px,calc(100dvh-14rem))] lg:max-w-[min(780px,calc(100dvh-12.5rem))] xl:max-w-[min(840px,calc(100dvh-12rem))]">
             <EcosystemDiagram />
           </div>
         </div>
@@ -102,7 +91,7 @@ export default function HeroBanner() {
         className="relative mt-auto shrink-0"
         style={{ backgroundColor: theme.colors.ink }}
       >
-        <div className="content-container py-5 sm:py-6">
+        <div className="content-container py-4 sm:py-5">
           <div className="grid grid-cols-2 gap-x-4 gap-y-4 sm:grid-cols-3 lg:grid-cols-6 lg:gap-x-2">
             {statsBar.items.map((item, index) => {
               const Icon = icons[index % icons.length];

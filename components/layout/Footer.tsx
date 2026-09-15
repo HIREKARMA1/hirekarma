@@ -9,7 +9,6 @@ import {
   Linkedin,
   Mail,
   Phone,
-  Twitter,
 } from "lucide-react";
 
 import footerPrograms from "@/data/footer-programs.json";
@@ -17,8 +16,21 @@ import { useSiteLocale } from "@/contexts/SiteLocaleContext";
 import { theme } from "@/config/theme";
 import PartnersMarquee from "@/components/layout/PartnersMarquee";
 
+function XLogo({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={className}
+      aria-hidden
+    >
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.743l7.724-8.835L1.2 2.25h7.54l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z" />
+    </svg>
+  );
+}
+
 const socials = [
-  { href: "https://x.com/hirekarma", label: "Twitter", Icon: Twitter },
+  { href: "https://x.com/hirekarma", label: "X", Icon: XLogo },
   {
     href: "https://www.linkedin.com/company/hirekarma-pvt-ltd",
     label: "LinkedIn",
