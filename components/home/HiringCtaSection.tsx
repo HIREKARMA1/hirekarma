@@ -5,7 +5,6 @@ import { ArrowRight } from "lucide-react";
 
 import { theme } from "@/config/theme";
 import { useHomeLocale } from "@/contexts/HomeLocaleContext";
-import { withHighlightMark } from "@/components/shared/HighlightMark";
 
 export default function HiringCtaSection() {
   const { content } = useHomeLocale();
@@ -32,10 +31,7 @@ export default function HiringCtaSection() {
           <div className="relative flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
             <div className="max-w-xl">
               <h2 className="text-xl font-bold tracking-tight text-white sm:text-2xl">
-                {withHighlightMark(
-                  hiringCta.heading,
-                  hiringCta.headingHighlight
-                )}
+                {hiringCta.heading}
               </h2>
               <p className="mt-2 text-sm leading-snug text-white/85">
                 {hiringCta.description}

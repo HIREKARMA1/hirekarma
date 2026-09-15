@@ -12,7 +12,6 @@ import {
 
 import { theme } from "@/config/theme";
 import { useHomeLocale } from "@/contexts/HomeLocaleContext";
-import { withHighlightMark } from "@/components/shared/HighlightMark";
 
 const stepMeta = [
   { Icon: BookOpen, color: theme.colors.primary },
@@ -57,7 +56,7 @@ export default function JourneySection() {
             {journey.label}
           </p>
           <h2 className="mt-2 text-2xl font-bold tracking-tight text-white sm:text-[1.85rem]">
-            {withHighlightMark(journey.heading, journey.headingHighlight)}
+            {journey.heading}
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-white/85">
             {journey.description}
