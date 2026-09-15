@@ -3,7 +3,6 @@
 import Link from "next/link";
 
 import PartnersMarquee from "@/components/layout/PartnersMarquee";
-import { withHighlightMark } from "@/components/shared/HighlightMark";
 import corporateData from "@/data/corporate.json";
 import companyData from "@/data/company.json";
 import { theme } from "@/config/theme";
@@ -61,7 +60,7 @@ export default function Partners() {
             {partners.subheading}
           </p>
           <h2 className="mt-2 text-2xl font-bold tracking-tight text-white sm:text-[1.85rem]">
-            {withHighlightMark(partners.heading, partners.headingHighlight)}
+            {partners.heading}
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-white/85">
             {partners.description}

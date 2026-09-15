@@ -5,7 +5,6 @@ import Link from "next/link";
 
 import { theme } from "@/config/theme";
 import { useHomeLocale } from "@/contexts/HomeLocaleContext";
-import { withHighlightMark } from "@/components/shared/HighlightMark";
 
 export default function DivisionsSection() {
   const { content } = useHomeLocale();
@@ -17,11 +16,7 @@ export default function DivisionsSection() {
         <div className="flex flex-col gap-8 lg:flex-row lg:items-stretch lg:gap-5 xl:gap-7">
           <div className="flex shrink-0 flex-col justify-center lg:w-[180px] xl:w-[200px]">
             <h2 className="text-2xl font-bold tracking-tight text-[#0f1622] sm:text-[1.75rem] lg:text-[1.85rem] lg:leading-tight">
-              {withHighlightMark(
-                divisions.heading,
-                divisions.headingHighlight,
-                { nowrap: false }
-              )}
+              {divisions.heading}
             </h2>
             <p className="mt-3 text-[15px] leading-relaxed text-[#334155] lg:text-sm">
               {divisions.description}

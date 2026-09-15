@@ -98,10 +98,36 @@ function polar(cx: number, cy: number, r: number, angleDeg: number) {
   return { x: cx + r * Math.cos(rad), y: cy + r * Math.sin(rad) };
 }
 
-/** Extra outward clearance on left/right so wide labels never cover nodes. */
-function labelRadius(orbitR: number, angleDeg: number) {
-  const side = Math.abs(Math.cos((angleDeg * Math.PI) / 180));
-  return orbitR + 58 + side * 42;
+/**
+ * Hang the label off the icon. `--eco-label-gap` clears the node
+ * (cqw, so it stays circular and scales). Percentages are of the label box.
+ */
+function labelPlacement(angleDeg: number) {
+  const rad = (angleDeg * Math.PI) / 180;
+  const cos = Math.cos(rad);
+  const sin = Math.sin(rad);
+  const absCos = Math.abs(cos);
+  const absSin = Math.abs(sin);
+  const gap = "var(--eco-label-gap)";
+
+  if (absCos < 0.4) {
+    return {
+      x: "-50%",
+      y: sin < 0 ? `calc(-100% - ${gap})` : gap,
+    };
+  }
+
+  if (absSin < 0.4) {
+    return {
+      x: cos > 0 ? gap : `calc(-100% - ${gap})`,
+      y: "-50%",
+    };
+  }
+
+  return {
+    x: cos > 0 ? `calc(${gap} * 0.82)` : `calc(-100% - ${gap} * 0.82)`,
+    y: sin > 0 ? `calc(${gap} * 0.82)` : `calc(-100% - ${gap} * 0.82)`,
+  };
 }
 
 function spokePath(
@@ -135,11 +161,12 @@ export default function EcosystemDiagram() {
   const cx = size / 2;
   const cy = size / 2;
   const orbitR = 186;
-  const hubR = 70;
-  const nodeR = 26;
+  const hubR = 74;
+  const nodeR = 42;
+  const orbitCqw = (orbitR / size) * 100;
 
   return (
-    <div className="relative mx-auto w-full max-w-[680px]">
+    <div className="relative mx-auto w-full max-w-[880px] shrink-0">
       <div
         className="pointer-events-none absolute -right-6 -top-8 h-56 w-56 rounded-full blur-3xl"
         style={{
@@ -149,12 +176,23 @@ export default function EcosystemDiagram() {
         aria-hidden
       />
 
-      <svg
-        viewBox={`0 0 ${size} ${size}`}
-        className="h-auto w-full overflow-visible"
-        role="img"
-        aria-label="HireKarma ecosystem: products and activities evolving from one hub"
-      >
+      {/* Padding-top square lock — flex/grid cannot squash this into an ellipse */}
+      <div className="relative w-full pt-[100%]">
+        <div className="absolute inset-0 overflow-visible">
+          <div
+            className="absolute inset-[14%] sm:inset-[11%] lg:inset-[10%]"
+            style={{
+              containerType: "inline-size",
+              ["--eco-label-gap" as string]: "7.5cqw",
+            }}
+          >
+        <svg
+          viewBox={`0 0 ${size} ${size}`}
+          preserveAspectRatio="xMidYMid meet"
+          className="absolute inset-0 h-full w-full overflow-visible"
+          role="img"
+          aria-label="HireKarma ecosystem: products and activities evolving from one hub"
+        >
         <defs>
           <radialGradient id="eco-dot-fade" cx="50%" cy="50%" r="50%">
             <stop offset="0%" stopColor="#1b52a4" stopOpacity="0.35" />
@@ -338,7 +376,10 @@ export default function EcosystemDiagram() {
       {/* Center logo */}
       <motion.div
         className="pointer-events-none absolute left-1/2 top-1/2 z-10 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center"
-        style={{ width: `${(hubR * 2) / size * 100}%`, height: `${(hubR * 2) / size * 100}%` }}
+        style={{
+          width: `${(hubR * 2) / size * 100}cqw`,
+          height: `${(hubR * 2) / size * 100}cqw`,
+        }}
         initial={{ scale: 0.6, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.55, ease: easeOut }}
@@ -366,13 +407,8 @@ export default function EcosystemDiagram() {
           const item = byId[id];
           if (!item || !meta) return null;
 
-          const iconPos = polar(cx, cy, orbitR, meta.angle);
-          const labelPos = polar(
-            cx,
-            cy,
-            labelRadius(orbitR, meta.angle),
-            meta.angle
-          );
+          const rad = (meta.angle * Math.PI) / 180;
+          const placement = labelPlacement(meta.angle);
           const Icon = meta.Icon;
           const kind = item.kind === "product" ? "Product" : "Activity";
           const href = item.href;
@@ -382,14 +418,13 @@ export default function EcosystemDiagram() {
             ? "text-[#0f1622] group-hover:text-[#0f1622]"
             : "text-white group-hover:text-[#0f1622]";
 
-          const leftPct = (iconPos.x / size) * 100;
-          const topPct = (iconPos.y / size) * 100;
-          const labelLeft = (labelPos.x / size) * 100;
-          const labelTop = (labelPos.y / size) * 100;
+          const iconLeft = `calc(50% + ${Math.cos(rad) * orbitCqw}cqw)`;
+          const iconTop = `calc(50% + ${Math.sin(rad) * orbitCqw}cqw)`;
 
           const icon = (
             <motion.span
-              className="group pointer-events-auto absolute flex flex-col items-center"
+              className="group pointer-events-auto absolute flex items-center justify-center"
+              style={{ width: "13.5cqw", height: "13.5cqw" }}
               initial={{
                 left: "50%",
                 top: "50%",
@@ -399,8 +434,8 @@ export default function EcosystemDiagram() {
                 opacity: 0,
               }}
               animate={{
-                left: `${leftPct}%`,
-                top: `${topPct}%`,
+                left: iconLeft,
+                top: iconTop,
                 x: "-50%",
                 y: "-50%",
                 scale: 1,
@@ -409,7 +444,7 @@ export default function EcosystemDiagram() {
               transition={{ duration: 0.9, delay, ease: easeOut }}
             >
               <span
-                className={`relative flex h-12 w-12 items-center justify-center rounded-full shadow-[0_8px_24px_rgba(15,22,34,0.2)] transition duration-300 group-hover:scale-110 group-hover:shadow-[0_12px_28px_rgba(254,196,13,0.35)] sm:h-[3.4rem] sm:w-[3.4rem] ${iconTone}`}
+                className={`relative flex h-full w-full items-center justify-center rounded-full shadow-[0_8px_24px_rgba(15,22,34,0.2)] transition duration-300 group-hover:scale-110 group-hover:shadow-[0_12px_28px_rgba(254,196,13,0.35)] ${iconTone}`}
                 style={{ backgroundColor: meta.color }}
               >
                 <span
@@ -418,7 +453,7 @@ export default function EcosystemDiagram() {
                   aria-hidden
                 />
                 <Icon
-                  className="relative z-10 h-5 w-5 sm:h-[1.35rem] sm:w-[1.35rem]"
+                  className="relative z-10 h-[42%] w-[42%]"
                   strokeWidth={2.1}
                 />
               </span>
@@ -426,26 +461,35 @@ export default function EcosystemDiagram() {
           );
 
           const label = (
-            <motion.span
-              className="pointer-events-none absolute w-[7.25rem] text-center sm:w-[8rem]"
-              style={{ left: `${labelLeft}%`, top: `${labelTop}%` }}
-              initial={{ opacity: 0, scale: 0.9, x: "-50%", y: "-50%" }}
-              animate={{ opacity: 1, scale: 1, x: "-50%", y: "-50%" }}
-              transition={{ duration: 0.45, delay: delay + 0.55, ease: easeOut }}
+            <span
+              className="pointer-events-none absolute w-max max-w-[24cqw] sm:max-w-[8.5rem]"
+              style={{
+                left: iconLeft,
+                top: iconTop,
+                transform: `translate(${placement.x}, ${placement.y})`,
+                textAlign: "center",
+              }}
             >
-              <span className="block text-[12px] font-bold leading-tight text-[#0f1622] sm:text-[13px]">
-                {meta.shortLabel}
-              </span>
-              <span
-                className="mt-1 inline-block rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide"
-                style={{
-                  color: primary,
-                  backgroundColor: "rgba(27,82,164,0.08)",
-                }}
+              <motion.span
+                className="flex flex-col items-center gap-0.5"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.45, delay: delay + 0.55, ease: easeOut }}
               >
-                {kind}
-              </span>
-            </motion.span>
+                <span className="block text-[clamp(10px,4.6cqw,13px)] font-bold leading-[1.2] text-[#0f1622]">
+                  {meta.shortLabel}
+                </span>
+                <span
+                  className="inline-block rounded-full px-2 py-[2px] text-[clamp(8px,3.2cqw,10px)] font-semibold uppercase tracking-wide sm:px-2.5 sm:py-[3px]"
+                  style={{
+                    color: primary,
+                    backgroundColor: "rgba(27,82,164,0.08)",
+                  }}
+                >
+                  {kind}
+                </span>
+              </motion.span>
+            </span>
           );
 
           return (
@@ -468,6 +512,9 @@ export default function EcosystemDiagram() {
             </span>
           );
         })}
+      </div>
+          </div>
+        </div>
       </div>
     </div>
   );

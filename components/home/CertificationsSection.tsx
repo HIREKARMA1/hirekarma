@@ -4,7 +4,6 @@ import Image from "next/image";
 
 import { theme } from "@/config/theme";
 import { useHomeLocale } from "@/contexts/HomeLocaleContext";
-import { withHighlightMark } from "@/components/shared/HighlightMark";
 
 const certificationMeta = [
   { logo: "/DPIIT.png", accent: theme.colors.primary },
@@ -30,10 +29,7 @@ export default function CertificationsSection() {
               {certificationsSection.subheading}
             </p>
             <h2 className="mt-1.5 text-xl font-bold tracking-tight text-[#0f1622] sm:text-[1.35rem]">
-              {withHighlightMark(
-                certificationsSection.heading,
-                certificationsSection.headingHighlight
-              )}
+              {certificationsSection.heading}
             </h2>
           </div>
 
