@@ -45,7 +45,6 @@ export interface HomeDivisionsSection {
   heading: string;
   headingHighlight?: string;
   description: string;
-  cta: HomeCta;
   items: HomeDivisionItem[];
 }
 

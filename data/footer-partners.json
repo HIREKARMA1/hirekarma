@@ -15,14 +15,14 @@
     "logo": "/partners/niti-aayog.png"
   },
   {
-    "id": "meity-startup-hub",
-    "name": "MeitY Startup Hub",
-    "logo": "/partners/meity-startup-hub.png"
-  },
-  {
     "id": "aim",
     "name": "Atal Innovation Mission",
     "logo": "/partners/aim.png"
+  },
+  {
+    "id": "meity-startup-hub",
+    "name": "MeitY Startup Hub",
+    "logo": "/partners/meity-startup-hub.png"
   },
   {
     "id": "inji",

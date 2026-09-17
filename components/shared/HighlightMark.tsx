@@ -1,37 +1,22 @@
 import type { ReactNode } from "react";
 
-import { theme } from "@/config/theme";
 import { cn } from "@/lib/utils/cn";
 
 type HighlightMarkProps = {
   children: ReactNode;
   className?: string;
-  /** Allow the mark to wrap across lines. Default keeps a single stroke. */
+  /** Kept for API compatibility; highlight stroke has been removed. */
   nowrap?: boolean;
 };
 
 /**
- * Brand yellow highlighter stroke behind the lower portion of text
- * (same treatment as Mission / People heroes).
+ * Phrase wrapper used by headings. Renders as plain text (no yellow mark).
  */
 export function HighlightMark({
   children,
   className,
-  nowrap = true,
 }: HighlightMarkProps) {
-  return (
-    <span
-      className={cn(nowrap && "whitespace-nowrap", className)}
-      style={{
-        backgroundImage: `linear-gradient(transparent 65%, ${theme.colors.yellow} 65%, ${theme.colors.yellow} 95%, transparent 95%)`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "100% 100%",
-        padding: "0 0.05em",
-      }}
-    >
-      {children}
-    </span>
-  );
+  return <span className={cn(className)}>{children}</span>;
 }
 
 /**
