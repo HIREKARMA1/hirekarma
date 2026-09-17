@@ -342,7 +342,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
   ];
 
   const linkClass =
-    "relative px-3.5 py-2.5 text-base font-semibold tracking-tight text-[#0f172a] transition-colors duration-200 hover:text-[#fec40d] xl:px-4 xl:text-[17px]";
+    "relative inline-flex shrink-0 items-center whitespace-nowrap px-[clamp(0.7rem,0.35rem+0.55vw,1rem)] py-[clamp(0.55rem,0.35rem+0.25vw,0.7rem)] text-[clamp(0.9375rem,0.7rem+0.4vw,1.0625rem)] font-semibold leading-none tracking-tight text-[#0f172a] transition-colors duration-200 hover:text-[#fec40d]";
 
   const renderDropdown = (item: NavigationItem, open: boolean) => (
     <div key={item.label} className="relative">
@@ -357,7 +357,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
       >
         {item.label}
         <ChevronDown
-          className={`h-3.5 w-3.5 transition-transform duration-200 ${
+          className={`h-4 w-4 transition-transform duration-200 ${
             open ? "rotate-180" : ""
           }`}
         />
@@ -444,20 +444,20 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
             : "border-[#e6e8ec]/60 bg-gradient-to-b from-[#f7f8fc] to-white/95 backdrop-blur-md"
         } ${className}`}
       >
-        <div className="content-container">
-          <div className="grid h-[4.5rem] grid-cols-[auto_1fr_auto] items-center gap-4 lg:h-[4.75rem] lg:gap-6">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-8 2xl:px-10">
+          <div className="grid h-[4.75rem] grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 sm:gap-4 lg:h-20 lg:gap-5 xl:gap-6">
             {/* Brand */}
             <Link
               href="/"
-              className="flex min-w-0 items-center"
+              className="flex min-w-0 shrink-0 items-center"
               onClick={closeDropdowns}
             >
               <Image
                 src="https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/home_ui/HKlogoblack.png"
                 alt="HireKarma"
-                width={160}
-                height={36}
-                className="h-7 w-auto sm:h-8"
+                width={180}
+                height={40}
+                className="h-8 w-auto sm:h-9"
                 priority
               />
               {/* <span className="mt-0.5 hidden text-[10px] font-medium tracking-wide text-[#475569] sm:block">
@@ -466,10 +466,10 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
             </Link>
 
             {/* Center nav */}
-            <div className="hidden items-center justify-center lg:flex">
+            <div className="hidden min-w-0 items-center justify-center xl:flex">
               <div
                 ref={desktopNavRef}
-                className="flex items-center gap-1 rounded-full border border-[#e6e8ec]/80 bg-white/70 px-2.5 py-1.5 shadow-[0_1px_0_rgba(15,22,34,0.03)] backdrop-blur-sm xl:gap-1.5 xl:px-3"
+                className="flex max-w-full flex-nowrap items-center gap-0.5 rounded-full border border-[#e6e8ec]/80 bg-white/70 px-2 py-1.5 shadow-[0_1px_0_rgba(15,22,34,0.03)] backdrop-blur-sm 2xl:gap-1.5 2xl:px-3 2xl:py-1.5"
               >
                 {navEntries.map((entry) => {
                   if (entry.type === "link") {
@@ -493,8 +493,8 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
             </div>
 
             {/* Right actions */}
-            <div className="flex items-center justify-end gap-2">
-              <div className="hidden items-center gap-2 lg:flex">
+            <div className="flex shrink-0 items-center justify-end gap-2">
+              <div className="hidden items-center gap-2 xl:flex">
                 {/* <LanguageDropdown /> */}
                 {/* <Link
                   href={nav.secondaryCta.href}
@@ -505,7 +505,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
                 </Link> */}
                 <Link
                   href={nav.primaryCta.href}
-                  className="inline-flex items-center justify-center gap-1.5 whitespace-nowrap rounded-lg px-4 py-2 text-[14px] font-semibold text-white shadow-sm transition hover:brightness-110"
+                  className="inline-flex items-center justify-center gap-1.5 whitespace-nowrap rounded-lg px-4 py-2.5 text-[14px] font-semibold text-white shadow-sm transition hover:brightness-110 2xl:px-5 2xl:text-[15px]"
                   style={{ backgroundColor: theme.colors.primary }}
                   onClick={closeDropdowns}
                 >
@@ -514,7 +514,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
                 </Link>
               </div>
 
-              <div className="flex items-center gap-1.5 lg:hidden">
+              <div className="flex items-center gap-1.5 xl:hidden">
                 {/* <LanguageDropdown /> */}
                 <button
                   type="button"
@@ -536,7 +536,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
 
         {/* Mobile panel */}
         <div
-          className={`lg:hidden overflow-hidden border-t border-[#e6e8ec] bg-white transition-all duration-300 ${
+          className={`xl:hidden overflow-hidden border-t border-[#e6e8ec] bg-white transition-all duration-300 ${
             isMobileMenuOpen
               ? "max-h-[min(80vh,680px)] opacity-100"
               : "max-h-0 border-transparent opacity-0"
@@ -649,7 +649,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
 
       {isMobileMenuOpen ? (
         <div
-          className="fixed inset-0 z-40 bg-[#0f1622]/25 backdrop-blur-[2px] lg:hidden"
+          className="fixed inset-0 z-40 bg-[#0f1622]/25 backdrop-blur-[2px] xl:hidden"
           onClick={() => setIsMobileMenuOpen(false)}
           aria-hidden
         />
