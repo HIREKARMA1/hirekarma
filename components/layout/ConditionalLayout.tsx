@@ -28,7 +28,7 @@ export function ConditionalLayout({ children }: { children: React.ReactNode }) {
         className={
           isShortlistedRoute
             ? undefined
-            : "pt-[4.5rem] lg:pt-[4.75rem]"
+            : "pt-[4.75rem] lg:pt-20"
         }
       >
         {children}

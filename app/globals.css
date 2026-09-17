@@ -468,6 +468,49 @@ html {
   }
 }
 
+/* Home offerings strip — hovered card expands, siblings ease back */
+.hk-offering-card {
+  container-type: inline-size;
+  container-name: offering;
+}
+
+@media (min-width: 1024px) {
+  .hk-offering-card {
+    flex: 1 1 0%;
+    width: auto;
+    min-width: 0;
+    transition: flex-grow 0.52s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .hk-offering-row:hover .hk-offering-card {
+    flex-grow: 0.82;
+  }
+
+  .hk-offering-row .hk-offering-card:hover,
+  .hk-offering-row .hk-offering-card:focus-visible {
+    flex-grow: 1.85;
+  }
+
+  /*
+    Keep label/title composition at a readable width, then scale it
+    to the live card width so hover shrink never crops or packs type.
+    Expanded cards stay at scale 1 and use the full card width.
+  */
+  .hk-offering-text {
+    width: max(100%, 8.25rem);
+    transform-origin: top left;
+    scale: min(1, calc(100cqi / 8.25rem));
+    transition: scale 0.52s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .hk-offering-title {
+    overflow: visible;
+    text-wrap: pretty;
+    overflow-wrap: break-word;
+    hyphens: manual;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
