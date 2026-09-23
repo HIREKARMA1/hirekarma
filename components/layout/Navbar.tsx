@@ -3,14 +3,17 @@
 import React, { useEffect, useRef, useState } from "react";
 import {
   ArrowRight,
+  Award,
   BookOpen,
   Briefcase,
+  CalendarDays,
   ChevronDown,
   CircleHelp,
   Code2,
   Compass,
   GraduationCap,
   Heart,
+  Images,
   LayoutGrid,
   MapPin,
   Menu,
@@ -40,12 +43,18 @@ interface DropdownItem {
   icon: React.ComponentType<{ className?: string }>;
   accent?: string;
   description?: string;
+  /** When false, external http links navigate in the same tab. Defaults to true. */
+  openInNewTab?: boolean;
 }
 
 interface NavigationItem {
   label: string;
   href: string;
   dropdownItems: DropdownItem[];
+  /** When false, omits the Explore / View all header (parent does not navigate). */
+  showOverview?: boolean;
+  /** Desktop: open on hover; mobile accordion still uses click. */
+  openOnHover?: boolean;
 }
 
 interface SimpleLink {
@@ -102,19 +111,22 @@ function DropdownNavLink({
   onClick,
   children,
   role,
+  openInNewTab = true,
 }: {
   href: string;
   className?: string;
   onClick?: () => void;
   children: React.ReactNode;
   role?: string;
+  openInNewTab?: boolean;
 }) {
   if (isExternalHref(href)) {
     return (
       <a
         href={href}
-        target="_blank"
-        rel="noopener noreferrer"
+        {...(openInNewTab
+          ? { target: "_blank", rel: "noopener noreferrer" }
+          : {})}
         className={className}
         onClick={onClick}
         role={role}
@@ -214,11 +226,33 @@ const resourcesMeta: Record<
   },
 };
 
+const eventsMeta: Record<
+  string,
+  { icon: React.ComponentType<{ className?: string }>; accent: string; description: string }
+> = {
+  upcoming: {
+    icon: CalendarDays,
+    accent: theme.colors.primary,
+    description: "DISHA upcoming events",
+  },
+  "past-gallery": {
+    icon: Images,
+    accent: theme.colors.secondary,
+    description: "Photos from past events",
+  },
+  "certificates-achievements": {
+    icon: Award,
+    accent: theme.colors.orange,
+    description: "Recognitions & certificates",
+  },
+};
+
 const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const desktopNavRef = useRef<HTMLDivElement>(null);
+  const hoverCloseTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const { content } = useSiteLocale();
   const { nav } = content;
 
@@ -260,11 +294,39 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
     };
   }, [activeDropdown, isMobileMenuOpen]);
 
-  const closeDropdowns = () => setActiveDropdown(null);
+  const clearHoverCloseTimeout = () => {
+    if (hoverCloseTimeoutRef.current) {
+      clearTimeout(hoverCloseTimeoutRef.current);
+      hoverCloseTimeoutRef.current = null;
+    }
+  };
+
+  const closeDropdowns = () => {
+    clearHoverCloseTimeout();
+    setActiveDropdown(null);
+  };
 
   const toggleDropdown = (label: string) => {
+    clearHoverCloseTimeout();
     setActiveDropdown((current) => (current === label ? null : label));
   };
+
+  const openDropdownOnHover = (label: string) => {
+    clearHoverCloseTimeout();
+    setActiveDropdown(label);
+  };
+
+  const scheduleHoverClose = (label: string) => {
+    clearHoverCloseTimeout();
+    hoverCloseTimeoutRef.current = setTimeout(() => {
+      setActiveDropdown((current) => (current === label ? null : current));
+      hoverCloseTimeoutRef.current = null;
+    }, 120);
+  };
+
+  useEffect(() => {
+    return () => clearHoverCloseTimeout();
+  }, []);
 
   const productsItem: NavigationItem = {
     label: nav.products.label,
@@ -326,6 +388,24 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
     }),
   };
 
+  const eventsItem: NavigationItem = {
+    label: nav.events.label,
+    href: nav.events.href,
+    showOverview: false,
+    dropdownItems: nav.events.items.map((item) => {
+      const meta = eventsMeta[item.id] ?? eventsMeta.upcoming;
+      return {
+        label: item.label,
+        href: item.href,
+        icon: meta.icon,
+        accent: meta.accent,
+        description: meta.description,
+        // Upcoming Events goes to DISHA but should stay in the same tab.
+        openInNewTab: item.id !== "upcoming",
+      };
+    }),
+  };
+
   type NavEntry =
     | { type: "link"; item: SimpleLink }
     | { type: "dropdown"; item: NavigationItem };
@@ -337,103 +417,141 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
     { type: "link", item: { label: nav.impact.label, href: nav.impact.href } },
     { type: "dropdown", item: resourcesItem },
     { type: "dropdown", item: aboutItem },
-    { type: "link", item: { label: nav.events.label, href: nav.events.href } },
+    { type: "dropdown", item: eventsItem },
     { type: "link", item: { label: nav.contact.label, href: nav.contact.href } },
   ];
 
   const linkClass =
     "relative inline-flex shrink-0 items-center whitespace-nowrap px-[clamp(0.7rem,0.35rem+0.55vw,1rem)] py-[clamp(0.55rem,0.35rem+0.25vw,0.7rem)] text-[clamp(0.9375rem,0.7rem+0.4vw,1.0625rem)] font-semibold leading-none tracking-tight text-[#0f172a] transition-colors duration-200 hover:text-[#fec40d]";
 
-  const renderDropdown = (item: NavigationItem, open: boolean) => (
-    <div key={item.label} className="relative">
-      <button
-        type="button"
-        aria-expanded={open}
-        aria-haspopup="menu"
-        onClick={() => toggleDropdown(item.label)}
-        className={`${linkClass} inline-flex items-center gap-1.5 ${
-          open ? "text-[#fec40d]" : ""
-        }`}
+  const menuIdFor = (label: string) =>
+    `nav-menu-${label.toLowerCase().replace(/\s+/g, "-")}`;
+
+  const renderDropdown = (item: NavigationItem, open: boolean) => {
+    const showOverview = item.showOverview !== false;
+    const openOnHover = Boolean(item.openOnHover);
+    const menuId = menuIdFor(item.label);
+
+    return (
+      <div
+        key={item.label}
+        className="relative"
+        onMouseEnter={
+          openOnHover ? () => openDropdownOnHover(item.label) : undefined
+        }
+        onMouseLeave={
+          openOnHover ? () => scheduleHoverClose(item.label) : undefined
+        }
       >
-        {item.label}
-        <ChevronDown
-          className={`h-4 w-4 transition-transform duration-200 ${
-            open ? "rotate-180" : ""
+        <button
+          type="button"
+          aria-expanded={open}
+          aria-haspopup="menu"
+          aria-controls={menuId}
+          id={`${menuId}-button`}
+          onClick={() => toggleDropdown(item.label)}
+          onKeyDown={(event) => {
+            if (event.key === "ArrowDown" && !open) {
+              event.preventDefault();
+              openDropdownOnHover(item.label);
+            }
+          }}
+          className={`${linkClass} inline-flex items-center gap-1.5 ${
+            open ? "text-[#fec40d]" : ""
           }`}
-        />
-      </button>
-
-      {open ? (
-        <div
-          role="menu"
-          className="absolute left-1/2 top-full z-50 mt-2 w-[320px] -translate-x-1/2 overflow-hidden rounded-2xl border border-[#e6e8ec] bg-white shadow-[0_20px_50px_rgba(15,22,34,0.14)]"
         >
-          <div
-            className="flex items-center justify-between border-b border-[#e6e8ec] px-4 py-3"
-            style={{
-              background:
-                "linear-gradient(135deg, rgba(27,82,164,0.06), rgba(0,162,229,0.06))",
-            }}
-          >
-            <div>
-              <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-[#00a2e5]">
-                Explore
-              </p>
-              <Link
-                href={item.href}
-                onClick={closeDropdowns}
-                className="text-sm font-bold text-[#0f1622] transition hover:text-[#1b52a4]"
-              >
-                {item.label}
-              </Link>
-            </div>
-            <Link
-              href={item.href}
-              onClick={closeDropdowns}
-              className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[12px] font-semibold text-[#1b52a4] transition hover:bg-[#1b52a4]/08"
-            >
-              View all
-              <ArrowRight className="h-3 w-3" />
-            </Link>
-          </div>
+          {item.label}
+          <ChevronDown
+            className={`h-4 w-4 transition-transform duration-200 ${
+              open ? "rotate-180" : ""
+            }`}
+            aria-hidden
+          />
+        </button>
 
-          <div className="p-2">
-            {item.dropdownItems.map((dropdownItem) => {
-              const Icon = dropdownItem.icon;
-              const accent = dropdownItem.accent ?? theme.colors.primary;
-              return (
-                <DropdownNavLink
-                  key={dropdownItem.label}
-                  href={dropdownItem.href}
-                  role="menuitem"
-                  onClick={closeDropdowns}
-                  className="group flex items-center gap-3 rounded-xl px-2.5 py-2.5 transition hover:bg-[#f6f8fb]"
-                >
-                  <span
-                    className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-white shadow-sm"
-                    style={{ backgroundColor: accent }}
+        {open || openOnHover ? (
+          <div
+            id={menuId}
+            role="menu"
+            aria-labelledby={`${menuId}-button`}
+            aria-hidden={!open}
+            inert={!open ? true : undefined}
+            className={`absolute left-1/2 top-full z-50 mt-2 w-[320px] -translate-x-1/2 overflow-hidden rounded-2xl border border-[#e6e8ec] bg-white shadow-[0_20px_50px_rgba(15,22,34,0.14)] transition-all duration-200 ease-out ${
+              open
+                ? "pointer-events-auto translate-y-0 opacity-100 visible"
+                : "pointer-events-none -translate-y-1 opacity-0 invisible"
+            }`}
+          >
+            {showOverview ? (
+              <div
+                className="flex items-center justify-between border-b border-[#e6e8ec] px-4 py-3"
+                style={{
+                  background:
+                    "linear-gradient(135deg, rgba(27,82,164,0.06), rgba(0,162,229,0.06))",
+                }}
+              >
+                <div>
+                  <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-[#00a2e5]">
+                    Explore
+                  </p>
+                  <Link
+                    href={item.href}
+                    onClick={closeDropdowns}
+                    className="text-sm font-bold text-[#0f1622] transition hover:text-[#1b52a4]"
                   >
-                    <Icon className="h-4 w-4" />
-                  </span>
-                  <span className="min-w-0 flex-1">
-                    <span className="block text-sm font-semibold text-[#0f1622] transition group-hover:text-[#1b52a4]">
-                      {dropdownItem.label}
+                    {item.label}
+                  </Link>
+                </div>
+                <Link
+                  href={item.href}
+                  onClick={closeDropdowns}
+                  className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[12px] font-semibold text-[#1b52a4] transition hover:bg-[#1b52a4]/08"
+                >
+                  View all
+                  <ArrowRight className="h-3 w-3" />
+                </Link>
+              </div>
+            ) : null}
+
+            <div className="p-2">
+              {item.dropdownItems.map((dropdownItem) => {
+                const Icon = dropdownItem.icon;
+                const accent = dropdownItem.accent ?? theme.colors.primary;
+                return (
+                  <DropdownNavLink
+                    key={dropdownItem.label}
+                    href={dropdownItem.href}
+                    role="menuitem"
+                    openInNewTab={dropdownItem.openInNewTab}
+                    onClick={closeDropdowns}
+                    className="group flex items-center gap-3 rounded-xl px-2.5 py-2.5 transition hover:bg-[#f6f8fb] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1b52a4]/40"
+                  >
+                    <span
+                      className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-white shadow-sm"
+                      style={{ backgroundColor: accent }}
+                    >
+                      <Icon className="h-4 w-4" />
                     </span>
-                    {dropdownItem.description ? (
-                      <span className="mt-0.5 block truncate text-[12px] text-[#475569]">
-                        {dropdownItem.description}
+                    <span className="min-w-0 flex-1">
+                      <span className="block text-sm font-semibold text-[#0f1622] transition group-hover:text-[#1b52a4]">
+                        {dropdownItem.label}
                       </span>
-                    ) : null}
-                  </span>
-                  <ArrowRight className="h-3.5 w-3.5 shrink-0 text-[#0f1622]/25 transition group-hover:translate-x-0.5 group-hover:text-[#00a2e5]" />
-                </DropdownNavLink>
-              );
-            })}
+                      {dropdownItem.description ? (
+                        <span className="mt-0.5 block truncate text-[12px] text-[#475569]">
+                          {dropdownItem.description}
+                        </span>
+                      ) : null}
+                    </span>
+                    <ArrowRight className="h-3.5 w-3.5 shrink-0 text-[#0f1622]/25 transition group-hover:translate-x-0.5 group-hover:text-[#00a2e5]" />
+                  </DropdownNavLink>
+                );
+              })}
+            </div>
           </div>
-        </div>
-      ) : null}
-    </div>
-  );
+        ) : null}
+      </div>
+    );
+  };
 
   return (
     <>
@@ -571,21 +689,29 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
                 <div key={item.label} className="rounded-xl">
                   <button
                     type="button"
+                    aria-expanded={open}
+                    aria-haspopup="menu"
+                    aria-controls={`mobile-${menuIdFor(item.label)}`}
                     onClick={() =>
                       setActiveDropdown(open ? null : item.label)
                     }
-                    className="flex w-full items-center justify-between rounded-xl px-3 py-3 text-left text-sm font-semibold text-[#0f1622] transition hover:bg-[#f6f8fb]"
+                    className="flex w-full items-center justify-between rounded-xl px-3 py-3 text-left text-sm font-semibold text-[#0f1622] transition hover:bg-[#f6f8fb] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1b52a4]/40"
                   >
                     {item.label}
                     <ChevronDown
-                      className={`h-4 w-4 text-[#475569] transition ${
+                      className={`h-4 w-4 text-[#475569] transition-transform duration-200 ${
                         open ? "rotate-180" : ""
                       }`}
+                      aria-hidden
                     />
                   </button>
 
                   {open ? (
-                    <div className="mb-1 space-y-0.5 px-2 pb-2">
+                    <div
+                      id={`mobile-${menuIdFor(item.label)}`}
+                      role="menu"
+                      className="mb-1 space-y-0.5 px-2 pb-2"
+                    >
                       {item.dropdownItems.map((dropdownItem) => {
                         const Icon = dropdownItem.icon;
                         const accent =
@@ -594,7 +720,9 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
                           <DropdownNavLink
                             key={dropdownItem.label}
                             href={dropdownItem.href}
-                            className="flex items-center gap-3 rounded-xl px-3 py-2.5 transition hover:bg-[#f6f8fb]"
+                            role="menuitem"
+                            openInNewTab={dropdownItem.openInNewTab}
+                            className="flex items-center gap-3 rounded-xl px-3 py-2.5 transition hover:bg-[#f6f8fb] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1b52a4]/40"
                             onClick={() => {
                               setIsMobileMenuOpen(false);
                               closeDropdowns();

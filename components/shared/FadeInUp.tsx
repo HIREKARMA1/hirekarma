@@ -43,7 +43,7 @@ export function FadeInUp({
       style={style}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.18 }}
+      viewport={{ once: true, amount: 0.12 }}
       variants={fadeUp}
       transition={{ delay }}
     >

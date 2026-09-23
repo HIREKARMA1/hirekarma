@@ -41,7 +41,7 @@ export default function DivisionsSection() {
                       alt={item.title}
                       fill
                       unoptimized
-                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.08]"
+                      className="object-cover will-change-transform group-hover:scale-[1.06]"
                       sizes="(max-width: 1024px) 168px, 18vw"
                     />
                   </div>

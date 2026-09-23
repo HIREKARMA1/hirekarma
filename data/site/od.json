@@ -131,7 +131,24 @@
     "events": {
       "id": "events",
       "label": "ଇଭେଣ୍ଟ୍ସ",
-      "href": "https://disha.hirekarma.in/events"
+      "href": "#",
+      "items": [
+        {
+          "id": "upcoming",
+          "label": "ଆଗାମୀ ଇଭେଣ୍ଟ୍ସ",
+          "href": "https://disha.hirekarma.in/events"
+        },
+        {
+          "id": "past-gallery",
+          "label": "ପୂର୍ବ ଇଭେଣ୍ଟ୍ସ ଗ୍ୟାଲେରୀ",
+          "href": "/events/past-gallery"
+        },
+        {
+          "id": "certificates-achievements",
+          "label": "ସାର୍ଟିଫିକେଟ୍ ଏବଂ ସଫଳତା",
+          "href": "/events/certificates-achievements"
+        }
+      ]
     },
     "contact": {
       "id": "contact",

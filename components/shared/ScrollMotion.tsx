@@ -6,8 +6,9 @@ import { usePathname } from "next/navigation";
 const REVEAL_SELECTOR =
   "section, article, [data-hk-animate], .hk-reveal";
 
-const AUTO_STAGGER_SELECTOR =
-  "[data-hk-stagger], section .grid, section [class*='grid-cols']";
+// Opt-in only. Auto-matching every `section .grid` races App Router streaming:
+// layout hydrates → MutationObserver mutates page HTML → child hydration mismatch.
+const AUTO_STAGGER_SELECTOR = "[data-hk-stagger]";
 
 function prefersReducedMotion() {
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -15,6 +16,10 @@ function prefersReducedMotion() {
 
 /**
  * Site-wide scroll reveals + auto-stagger for grids.
+ *
+ * Must not mutate page DOM until after streamed App Router segments hydrate.
+ * Layout effects can otherwise run while page HTML is already in the document
+ * but not yet hydrated — classic `hk-revealed` / `hk-stagger-child` mismatches.
  */
 export function ScrollMotion() {
   const pathname = usePathname();
@@ -23,15 +28,14 @@ export function ScrollMotion() {
     if (typeof window === "undefined") return;
 
     if (prefersReducedMotion()) {
+      // Hide rules only apply under html.hk-motion-on — no per-node class churn.
       document.documentElement.classList.remove("hk-motion-on");
-      document
-        .querySelectorAll(REVEAL_SELECTOR)
-        .forEach((el) => el.classList.add("hk-revealed"));
       return;
     }
 
-    document.documentElement.classList.add("hk-motion-on");
-
+    let cancelled = false;
+    let raf = 0;
+    let mo: MutationObserver | null = null;
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
@@ -50,7 +54,10 @@ export function ScrollMotion() {
       document
         .querySelectorAll<HTMLElement>(AUTO_STAGGER_SELECTOR)
         .forEach((grid) => {
-          if (grid.closest(".hk-marquee-track") || grid.querySelector(".hk-marquee-track")) {
+          if (
+            grid.closest(".hk-marquee-track") ||
+            grid.querySelector(".hk-marquee-track")
+          ) {
             return;
           }
           const kids = Array.from(grid.children).filter(
@@ -75,36 +82,49 @@ export function ScrollMotion() {
         if (seen.has(el)) return;
         seen.add(el);
 
+        // CSS already excludes .hk-no-reveal from opacity:0 — do not mutate.
         if (el.classList.contains("hk-no-reveal")) {
-          el.classList.add("hk-revealed");
           return;
         }
 
-        // Only skip animation for the true first fold (flush under nav)
+        // First fold: reveal immediately (still post-hydration via deferred boot).
         const rect = el.getBoundingClientRect();
         if (rect.top < 96 && rect.bottom > 0) {
           el.classList.add("hk-revealed");
           return;
         }
 
-        el.classList.remove("hk-revealed");
         observer.observe(el);
       });
     };
 
-    scan();
+    const boot = () => {
+      if (cancelled) return;
+      document.documentElement.classList.add("hk-motion-on");
+      scan();
+      mo = new MutationObserver(() => {
+        cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(scan);
+      });
+      mo.observe(document.body, { childList: true, subtree: true });
+    };
 
-    let raf = 0;
-    const mo = new MutationObserver(() => {
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(scan);
-    });
-    mo.observe(document.body, { childList: true, subtree: true });
+    // Wait until streamed page segments finish hydrating before touching classes.
+    const idleId =
+      "requestIdleCallback" in window
+        ? window.requestIdleCallback(() => boot(), { timeout: 300 })
+        : setTimeout(() => boot(), 150);
 
     return () => {
+      cancelled = true;
       cancelAnimationFrame(raf);
       observer.disconnect();
-      mo.disconnect();
+      mo?.disconnect();
+      if ("requestIdleCallback" in window) {
+        window.cancelIdleCallback(idleId as number);
+      } else {
+        clearTimeout(idleId);
+      }
     };
   }, [pathname]);
 
