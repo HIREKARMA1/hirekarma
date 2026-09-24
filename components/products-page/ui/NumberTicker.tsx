@@ -50,7 +50,7 @@ export function NumberTicker({
   style,
 }: NumberTickerProps) {
   const ref = useRef<HTMLParagraphElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-80px" });
+  const isInView = useInView(ref, { once: true });
   const parsed = useMemo(() => parseStatValue(value), [value]);
   const count = useMotionValue(0);
   const [display, setDisplay] = useState(() => formatDisplay(0, parsed, locale));
