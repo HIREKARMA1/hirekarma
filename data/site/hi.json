@@ -146,9 +146,9 @@
       "href": "/contact"
     },
     "primaryCta": {
-      "id": "explore-products",
-      "label": "उत्पाद देखें",
-      "href": "/products"
+      "id": "explore-events",
+      "label": "इवेंट देखें",
+      "href": "https://disha.hirekarma.in/events"
     }
   },
   "footer": {
