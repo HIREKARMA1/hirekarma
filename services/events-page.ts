@@ -150,10 +150,23 @@ function mapCampusDrive(raw: Record<string, unknown>): CampusDriveItem | null {
   };
 }
 
-async function fetchJson(url: string) {
+async function fetchJson(url: string): Promise<unknown> {
   const response = await fetch(url, { next: { revalidate: 30 } });
   if (!response.ok) return null;
   return response.json();
+}
+
+function asRecordList(value: unknown): Record<string, unknown>[] {
+  if (!Array.isArray(value)) return [];
+  return value.filter(
+    (item): item is Record<string, unknown> =>
+      Boolean(item) && typeof item === "object"
+  );
+}
+
+function payloadList(data: unknown, key: "events" | "jobs") {
+  if (!data || typeof data !== "object") return [];
+  return asRecordList((data as Record<string, unknown>)[key]);
 }
 
 export async function getEventsPageContent(): Promise<EventsPageContent> {
@@ -163,9 +176,7 @@ export async function getEventsPageContent(): Promise<EventsPageContent> {
       fetchJson(DISHA_CAMPUS_DRIVES_URL),
     ]);
 
-    const rawEvents = Array.isArray(eventsData?.events) ? eventsData.events : [];
-    const events = rawEvents
-      .filter((item): item is Record<string, unknown> => Boolean(item) && typeof item === "object")
+    const events = payloadList(eventsData, "events")
       .map(mapEvent)
       .filter((item): item is EventsPageItem => item !== null)
       .sort((a, b) => {
@@ -177,9 +188,7 @@ export async function getEventsPageContent(): Promise<EventsPageContent> {
         );
       });
 
-    const rawJobs = Array.isArray(jobsData?.jobs) ? jobsData.jobs : [];
-    const liveCampusDrives = rawJobs
-      .filter((item): item is Record<string, unknown> => Boolean(item) && typeof item === "object")
+    const liveCampusDrives = payloadList(jobsData, "jobs")
       .map(mapCampusDrive)
       .filter((item): item is CampusDriveItem => item !== null);
 
