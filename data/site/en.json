@@ -131,7 +131,7 @@
     "events": {
       "id": "events",
       "label": "Events",
-      "href": "https://disha.hirekarma.in/events"
+      "href": "/events"
     },
     "contact": {
       "id": "contact",
@@ -148,7 +148,7 @@
     "primaryCta": {
       "id": "explore-events",
       "label": "Explore Events",
-      "href": "https://disha.hirekarma.in/events"
+      "href": "/events"
     }
   },
   "footer": {
