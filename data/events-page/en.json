@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "title": "Events | HireKarma",
+    "description": "Browse HireKarma events. Use Visit to open an event on Disha and register there."
+  },
+  "hero": {
+    "label": "Events",
+    "heading": "Career Events",
+    "headingAccent": "& Opportunities",
+    "description": "Explore live campus drives and career events.",
+    "searchPlaceholder": "Search events or campus drives"
+  },
+  "visitLabel": "Visit",
+  "campusDrives": {
+    "label": "Disha Jobs",
+    "heading": "Campus drives",
+    "headingAccent": "",
+    "description": "Live campus drives. Visit opens the drive on Disha."
+  },
+  "events": [
+    {
+      "id": "41ca4194-4d9b-4592-a1e1-0205a2d59726",
+      "slug": "hirekarma-professional-readiness-initiative-2026",
+      "title": "HIREKARMA PROFESSIONAL READINESS INITIATIVE 2026",
+      "subtitle": "Building the Skills, Strategies & Confidence to Become Job-Ready",
+      "short_description": "A practical student-focused session covering professional skills, career insights, placement preparation, interview strategies, and essential workplace readiness.",
+      "banner_url": "https://hirekarma.s3.us-east-1.amazonaws.com/events/banners/3c7597d2-6ebc-4830-a380-f89daeb18ee0_d9b7b265-df10-48d5-8532-48f621be3532.png",
+      "organizer_name": "HireKarma Private Limited",
+      "mode": "online",
+      "venue": "Online",
+      "event_start_date": "2026-10-03T05:30:00Z",
+      "status": "open"
+    },
+    {
+      "id": "7536b7be-e3d6-4a77-a043-189149b7963d",
+      "slug": "arise-hub-webinar-the-rise-of-the-ai-native-professional",
+      "title": "ARISE Hub Webinar - The Rise of the AI-Native Professional",
+      "subtitle": "Explore the skills, tools and real-world experience you need to thrive in the AI era.",
+      "short_description": "A free webinar on the future of AI careers, essential AI and Agentic AI skills, live demonstrations, and hands-on project experience.",
+      "banner_url": "https://hirekarma.s3.us-east-1.amazonaws.com/events/banners/a4896e31-ad04-4138-92e3-4029d410b8ad_cfe018a2-71d4-462a-81f1-41da24993413.jpeg",
+      "organizer_name": "ARISE Hub",
+      "mode": "online",
+      "venue": "Online",
+      "event_start_date": "2026-08-21T11:30:00Z",
+      "status": "closed"
+    },
+    {
+      "id": "9b199748-b92e-4cb4-98c0-2a8b9a1030f1",
+      "slug": "HireKarma Future Leaders Internship 2026",
+      "title": "HireKarma Future Leaders Internship 2026",
+      "subtitle": "Exclusive Leadership Internship for MBA & MCA Students",
+      "short_description": "A two-month leadership development program for postgraduate students in Management and Technology, with hands-on campus and community work.",
+      "banner_url": "https://hirekarma.s3.us-east-1.amazonaws.com/events/banners/9f00996a-d335-494a-a912-c630dd076e73_HireKarma_Future_Leaders_Internship_2026_Office_Meeting_Day.webp",
+      "organizer_name": "HireKarma",
+      "mode": "offline",
+      "venue": "Bhubaneswar, Odisha",
+      "event_start_date": "2026-09-03T05:30:00Z",
+      "status": "closed"
+    },
+    {
+      "id": "d20b6b92-f984-45d8-b1a0-2fd0ef5a315e",
+      "slug": "hirekarma-career-awareness-virtual-webinar",
+      "title": "HIREKARMA CAREER AWARENESS VIRTUAL WEBINAR",
+      "subtitle": "From College to Career: Build Skills. Get Visible. Get Hired.",
+      "short_description": "A career awareness webinar for college students and fresh graduates on today’s market, career direction, skills, and placement preparation.",
+      "banner_url": "https://hirekarma.s3.us-east-1.amazonaws.com/events/banners/23356bf9-20ab-4ba9-a659-996b53fce818_18cb0a1a-26f0-46c2-b8aa-3d3e6bdc91df.webp",
+      "organizer_name": "HireKarma",
+      "mode": "online",
+      "venue": "Online",
+      "event_start_date": "2026-09-05T09:30:00Z",
+      "status": "closed"
+    },
+    {
+      "id": "b7047058-4ff3-4f37-b8aa-798bead2e1ca",
+      "slug": "hirekarma-career-orientation-virtual-program",
+      "title": "HireKarma Career Orientation Virtual Program",
+      "subtitle": "From Campus to Career: Learn. Connect. Get Hired",
+      "short_description": "A virtual career orientation program to understand opportunities, build future-ready skills, and prepare for internships and placements.",
+      "banner_url": "https://hirekarma.s3.us-east-1.amazonaws.com/events/banners/c247a054-8a81-442e-94b6-ee47c9b5179f_f0e9ebc3-6e4b-42ee-910a-c4cb1c688f5e.webp",
+      "organizer_name": "HireKarma",
+      "mode": "online",
+      "venue": "Online",
+      "event_start_date": "2026-09-11T09:30:00Z",
+      "status": "closed"
+    }
+  ],
+  "liveCampusDrives": []
+}
