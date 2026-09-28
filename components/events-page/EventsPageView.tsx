@@ -37,6 +37,27 @@ function visitHref(slug: string) {
   return `${DISHA_EVENT_BASE}/${encodeURIComponent(slug)}`;
 }
 
+/**
+ * Path Disha saves as `redirect_after_login` when Register Now is clicked.
+ * After sign-in, that page applies the event's own registration rules.
+ */
+function eventRegisterReturnPath(event: Pick<EventsPageItem, "slug" | "id">) {
+  const params = new URLSearchParams({
+    register: "1",
+    action: "register",
+  });
+  if (event.id) params.set("eventId", event.id);
+  return `/events/${encodeURIComponent(event.slug)}?${params.toString()}`;
+}
+
+/** Disha's existing sign-in step for event registration. Not the event details page. */
+function eventRegisterHref(event: Pick<EventsPageItem, "slug" | "id">) {
+  const params = new URLSearchParams({
+    redirect: eventRegisterReturnPath(event),
+  });
+  return `${new URL(DISHA_EVENT_BASE).origin}/auth/login?${params.toString()}`;
+}
+
 function matchesDriveQuery(job: CampusDriveItem, needle: string) {
   if (!needle) return true;
   return (
@@ -126,23 +147,38 @@ function matchesEventQuery(event: EventsPageItem, needle: string) {
 
 function CompactLiveMark() {
   return (
-    <span className="inline-flex shrink-0 items-center gap-1 text-[10px] font-bold uppercase tracking-wide text-[#098855]">
+    <span
+      className="inline-flex shrink-0 items-center gap-1 text-[10px] font-bold uppercase tracking-wide"
+      style={{ color: theme.colors.primary }}
+    >
       <span className="relative flex h-1.5 w-1.5">
-        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#098855]/70" />
-        <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#098855]" />
+        <span
+          className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-70"
+          style={{ backgroundColor: theme.colors.primary }}
+        />
+        <span
+          className="relative inline-flex h-1.5 w-1.5 rounded-full"
+          style={{ backgroundColor: theme.colors.primary }}
+        />
       </span>
       Live
     </span>
   );
 }
 
-function LivePill({ large = false }: { large?: boolean }) {
+function LivePill({
+  large = false,
+  color = theme.colors.green,
+}: {
+  large?: boolean;
+  color?: string;
+}) {
   return (
     <span
       className={`inline-flex items-center gap-1.5 rounded-full font-bold uppercase tracking-wide text-white ${
         large ? "px-2.5 py-1 text-[11px]" : "px-2 py-0.5 text-[10px]"
       }`}
-      style={{ backgroundColor: theme.colors.green }}
+      style={{ backgroundColor: color }}
     >
       <span className="relative flex h-1.5 w-1.5">
         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white/80 opacity-75" />
@@ -261,20 +297,24 @@ function CampusDriveBoard({
     <section id="campus-drives" className="relative pl-4 sm:pl-5">
       <span
         aria-hidden
-        className="absolute bottom-0 left-0 top-0 w-1 overflow-hidden rounded-full bg-[#098855]"
+        className="absolute bottom-0 left-0 top-0 w-1 overflow-hidden rounded-full"
+        style={{ backgroundColor: theme.colors.primary }}
       >
-        <span className="absolute inset-0 animate-pulse bg-[#36c48a]" />
+        <span className="absolute inset-0 animate-pulse bg-white/40" />
       </span>
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <div className="flex flex-wrap items-center gap-2.5">
-            <LivePill large />
+            <LivePill large color={theme.colors.primary} />
             <h2 className="text-xl font-bold tracking-tight text-[#0f1622] sm:text-[1.35rem]">
               {heading}
               {headingAccent ? ` ${headingAccent}` : ""}
             </h2>
           </div>
-          <p className="mt-1 text-[13px] font-semibold text-[#098855]">
+          <p
+            className="mt-1 text-[13px] font-semibold"
+            style={{ color: theme.colors.primary }}
+          >
             Happening now
           </p>
         </div>
@@ -345,7 +385,7 @@ function CampusDriveCard({
       href={job.visit_href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex h-full gap-3 rounded-xl border border-[#e6e8ec] bg-white p-3.5 shadow-[0_4px_14px_rgba(15,22,34,0.04)] transition hover:-translate-y-1 hover:border-[#098855]/45 hover:shadow-[0_14px_28px_rgba(9,136,85,0.12)]"
+      className="group flex h-full gap-3 rounded-xl border border-[#e6e8ec] bg-white p-3.5 shadow-[0_4px_14px_rgba(15,22,34,0.04)] transition hover:-translate-y-1 hover:border-[#1b52a4]/45 hover:shadow-[0_14px_28px_rgba(27,82,164,0.12)]"
     >
       <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-lg border border-[#e6e8ec] bg-[#f6f8fb]">
         {job.company_logo ? (
@@ -372,7 +412,10 @@ function CampusDriveCard({
         <p className="mt-0.5 truncate text-[12px] font-medium text-[#64748b]">
           {job.company_name}
         </p>
-        <p className="mt-2 truncate text-[14px] font-bold leading-tight text-[#098855]">
+        <p
+          className="mt-2 truncate text-[14px] font-bold leading-tight"
+          style={{ color: theme.colors.primary }}
+        >
           {pay}
         </p>
         <p className="mt-1.5 truncate text-[12px] text-[#64748b]">
@@ -398,22 +441,18 @@ function CampusDriveCard({
 
 function EventCard({
   event,
-  visitLabel,
   accent,
   primary,
 }: {
   event: EventsPageItem;
-  visitLabel: string;
   accent: string;
   primary: string;
 }) {
+  const actionClass =
+    "inline-flex min-h-10 items-center justify-center rounded-lg px-3 py-2 text-center text-[13px] font-semibold leading-tight transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1b52a4]";
+
   return (
-    <a
-      href={visitHref(event.slug)}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group flex h-full flex-col overflow-hidden rounded-xl border border-[#e6e8ec] bg-white shadow-[0_4px_16px_rgba(15,22,34,0.04)] transition hover:-translate-y-0.5 hover:border-[#1b52a4]/40 hover:shadow-[0_12px_28px_rgba(15,22,34,0.08)]"
-    >
+    <div className="flex h-full flex-col overflow-hidden rounded-xl border border-[#e6e8ec] bg-white shadow-[0_4px_16px_rgba(15,22,34,0.04)] transition hover:-translate-y-0.5 hover:border-[#1b52a4]/40 hover:shadow-[0_12px_28px_rgba(15,22,34,0.08)]">
       <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#0f1622]">
         {event.banner_url ? (
           <Image
@@ -455,12 +494,27 @@ function EventCard({
         <h3 className="mt-1.5 line-clamp-2 text-[15px] font-bold leading-snug tracking-tight text-[#0f1622]">
           {event.title}
         </h3>
-        <span className="mt-auto inline-flex items-center gap-1 pt-3 text-[13px] font-semibold text-[#1b52a4] underline-offset-4 transition group-hover:underline">
-          {visitLabel}
-          <ArrowUpRight className="h-3.5 w-3.5" />
-        </span>
+        <div className="mt-auto flex flex-col gap-2 pt-3 sm:flex-row">
+          <a
+            href={visitHref(event.slug)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${actionClass} min-w-0 flex-1 border border-[#1b52a4]/35 bg-white text-[#1b52a4] hover:border-[#1b52a4] hover:bg-[#1b52a4]/5`}
+          >
+            View Event
+          </a>
+          <a
+            href={eventRegisterHref(event)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${actionClass} min-w-0 flex-1 text-white shadow-sm hover:brightness-110`}
+            style={{ backgroundColor: primary }}
+          >
+            Register Event
+          </a>
+        </div>
       </div>
-    </a>
+    </div>
   );
 }
 
@@ -606,7 +660,6 @@ export function EventsPageView({ content }: { content: EventsPageContent }) {
                       <EventCard
                         key={event.id}
                         event={event}
-                        visitLabel={visitLabel}
                         accent={accent}
                         primary={primary}
                       />
