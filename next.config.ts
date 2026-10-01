@@ -1,6 +1,14 @@
+import path from "path";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // This app now lives under the Disha workspace. Pin the Turbopack root to
+  // this package so it resolves `next` from the local node_modules instead of
+  // walking up to a parent folder that does not have it installed.
+  turbopack: {
+    root: path.resolve(__dirname),
+  },
+
   // Performance optimizations handled by Next.js 16+ automatically
   productionBrowserSourceMaps: false,
   

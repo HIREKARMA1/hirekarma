@@ -61,12 +61,14 @@ export function ResourceCardVisual({
           aria-hidden
         />
       )}
-      <span
-        className="relative z-10 rounded-md px-2.5 py-1 text-[0.72rem] font-bold tracking-wider text-white uppercase backdrop-blur-sm"
-        style={{ backgroundColor: `${accent}cc` }}
-      >
-        {tag}
-      </span>
+      {tag ? (
+        <span
+          className="relative z-10 rounded-md px-2.5 py-1 text-[0.72rem] font-bold tracking-wider text-white uppercase backdrop-blur-sm"
+          style={{ backgroundColor: `${accent}cc` }}
+        >
+          {tag}
+        </span>
+      ) : null}
     </div>
   );
 }

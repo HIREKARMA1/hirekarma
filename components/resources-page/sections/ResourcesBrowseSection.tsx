@@ -8,6 +8,7 @@ import { ResourcesCtaBand } from "../ui/ResourcesCtaBand";
 export function ResourcesBrowseSection() {
   const { content } = useResourcesLocale();
   const { browse, items, cta } = content;
+  const visibleItems = items.slice(0, 1);
 
   return (
     <section className="relative py-7 sm:py-9 lg:py-10">
@@ -17,7 +18,7 @@ export function ResourcesBrowseSection() {
         </h2>
 
         <div className="mt-4 grid gap-5 sm:mt-5 sm:grid-cols-2 sm:gap-6 xl:grid-cols-3">
-          {items.map((item) => (
+          {visibleItems.map((item) => (
             <ResourceCard
               key={item.id}
               item={item}
