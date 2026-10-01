@@ -41,7 +41,7 @@ export function ScrollMotion() {
           observer.unobserve(el);
         }
       },
-      { root: null, rootMargin: "0px 0px -12% 0px", threshold: 0.08 }
+      { root: null, rootMargin: "0px 0px -8% 0px", threshold: 0 }
     );
 
     const seen = new WeakSet<Element>();
@@ -51,6 +51,9 @@ export function ScrollMotion() {
         .querySelectorAll<HTMLElement>(AUTO_STAGGER_SELECTOR)
         .forEach((grid) => {
           if (grid.closest(".hk-marquee-track") || grid.querySelector(".hk-marquee-track")) {
+            return;
+          }
+          if (grid.closest(".hk-no-reveal")) {
             return;
           }
           const kids = Array.from(grid.children).filter(
@@ -76,7 +79,6 @@ export function ScrollMotion() {
         seen.add(el);
 
         if (el.classList.contains("hk-no-reveal")) {
-          el.classList.add("hk-revealed");
           return;
         }
 

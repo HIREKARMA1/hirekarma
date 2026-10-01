@@ -28,16 +28,16 @@
   },
   "items": [
     {
-      "id": "campus-placement",
-      "slug": "campus-placement-systems-problem",
+      "id": "future-proof-careers",
+      "slug": "future-proof-careers-for-students-2030",
       "category": "blogs",
-      "tag": "କ୍ୟାମ୍ପସ ନିଯୁକ୍ତି",
+      "tag": "",
       "visualVariant": "default",
-      "image": "https://hirekarma.s3.us-east-1.amazonaws.com/resources/campus-hiring.jpeg",
-      "title": "ଡ୍ରାଇଭ୍ ବନ୍ଦ କରନ୍ତୁ, ପ୍ରସ୍ତୁତି ପୁନର୍ନିର୍ମାଣ କରନ୍ତୁ: କ୍ୟାମ୍ପସ ପ୍ଲେସମେଣ୍ଟ ବ୍ୟବଧାନ ଏକ ସିଷ୍ଟମ ସମସ୍ୟା",
-      "excerpt": "ଭାରତ ପ୍ରତି ବର୍ଷ ଲକ୍ଷ ଲକ୍ଷ ସ୍ନାତକ ଉତ୍ପାଦନ କରେ, ତଥାପି କାର୍ଯ୍ୟକ୍ଷମତା ବ୍ୟବଧାନ ବଜାୟ ରହେ। ସମସ୍ୟା ପାଇପଲାଇନ୍ ପରିମାଣ ନୁହେଁ - ଖଣ୍ଡିତ ପ୍ଲେସମେଣ୍ଟ ଆର୍କିଟେକ୍ଚର୍।",
-      "date": "ଜୁଲାଇ 2026",
-      "dateIso": "2026-07-08"
+      "image": "/resources/future-proof-careers-2030.png",
+      "title": "Future-Proof Careers for Students: Top Opportunities Through 2030",
+      "excerpt": "Explore future-proof careers for students through 2030, from AI and cybersecurity to data, software, green energy and digital roles, plus the skills needed to stay employable.",
+      "date": "September 2026",
+      "dateIso": "2026-09-29"
     },
     {
       "id": "public-grievance",

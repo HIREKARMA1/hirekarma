@@ -32,7 +32,9 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${article.meta.title} | HireKarma Resources`,
+    title: article.meta.title.includes("|")
+      ? article.meta.title
+      : `${article.meta.title} | HireKarma Resources`,
     description: article.meta.description,
   };
 }

@@ -42,7 +42,8 @@ export type HrefKey =
   | "contact"
   | "products"
   | "productStack"
-  | "resources";
+  | "resources"
+  | "dishaJobs";
 
 const hrefMap: Record<HrefKey, () => string> = {
   disha: () => env.dishaUrl,
@@ -56,6 +57,7 @@ const hrefMap: Record<HrefKey, () => string> = {
   products: () => "/products",
   productStack: () => "/products#product-stack",
   resources: () => "/resources",
+  dishaJobs: () => `${env.dishaUrl.replace(/\/$/, "")}/jobs`,
 };
 
 export function resolveHref(key: HrefKey): string {

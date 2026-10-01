@@ -5,6 +5,7 @@ import type {
 } from "@/types/resources-page";
 import { RESOURCE_ARTICLE_SLUGS } from "@/types/resources-page";
 
+import futureProofCareersEn from "@/data/resources-page/articles/en/future-proof-careers-for-students-2030.json";
 import campusPlacementEn from "@/data/resources-page/articles/en/campus-placement-systems-problem.json";
 import publicGrievanceEn from "@/data/resources-page/articles/en/public-grievance-systems-problem.json";
 import hyperlocalWorkforceEn from "@/data/resources-page/articles/en/hyperlocal-workforce-systems-problem.json";
@@ -15,6 +16,7 @@ import dishaOpsEn from "@/data/resources-page/articles/en/disha-placement-operat
 import skillDevEn from "@/data/resources-page/articles/en/skill-development-employability-systems-problem.json";
 import dpiEn from "@/data/resources-page/articles/en/digital-public-infrastructure-systems-problem.json";
 
+import futureProofCareersHi from "@/data/resources-page/articles/hi/future-proof-careers-for-students-2030.json";
 import campusPlacementHi from "@/data/resources-page/articles/hi/campus-placement-systems-problem.json";
 import publicGrievanceHi from "@/data/resources-page/articles/hi/public-grievance-systems-problem.json";
 import hyperlocalWorkforceHi from "@/data/resources-page/articles/hi/hyperlocal-workforce-systems-problem.json";
@@ -25,6 +27,7 @@ import dishaOpsHi from "@/data/resources-page/articles/hi/disha-placement-operat
 import skillDevHi from "@/data/resources-page/articles/hi/skill-development-employability-systems-problem.json";
 import dpiHi from "@/data/resources-page/articles/hi/digital-public-infrastructure-systems-problem.json";
 
+import futureProofCareersOd from "@/data/resources-page/articles/od/future-proof-careers-for-students-2030.json";
 import campusPlacementOd from "@/data/resources-page/articles/od/campus-placement-systems-problem.json";
 import publicGrievanceOd from "@/data/resources-page/articles/od/public-grievance-systems-problem.json";
 import hyperlocalWorkforceOd from "@/data/resources-page/articles/od/hyperlocal-workforce-systems-problem.json";
@@ -36,6 +39,8 @@ import skillDevOd from "@/data/resources-page/articles/od/skill-development-empl
 import dpiOd from "@/data/resources-page/articles/od/digital-public-infrastructure-systems-problem.json";
 
 const articleMapEn: Record<ResourceArticleSlug, ResourceArticleContent> = {
+  "future-proof-careers-for-students-2030":
+    futureProofCareersEn as ResourceArticleContent,
   "campus-placement-systems-problem":
     campusPlacementEn as ResourceArticleContent,
   "public-grievance-systems-problem":
@@ -57,6 +62,8 @@ const articleMapEn: Record<ResourceArticleSlug, ResourceArticleContent> = {
 };
 
 const articleMapHi: Record<ResourceArticleSlug, ResourceArticleContent> = {
+  "future-proof-careers-for-students-2030":
+    futureProofCareersHi as ResourceArticleContent,
   "campus-placement-systems-problem":
     campusPlacementHi as ResourceArticleContent,
   "public-grievance-systems-problem":
@@ -78,6 +85,8 @@ const articleMapHi: Record<ResourceArticleSlug, ResourceArticleContent> = {
 };
 
 const articleMapOd: Record<ResourceArticleSlug, ResourceArticleContent> = {
+  "future-proof-careers-for-students-2030":
+    futureProofCareersOd as ResourceArticleContent,
   "campus-placement-systems-problem":
     campusPlacementOd as ResourceArticleContent,
   "public-grievance-systems-problem":

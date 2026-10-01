@@ -28,16 +28,16 @@
   },
   "items": [
     {
-      "id": "campus-placement",
-      "slug": "campus-placement-systems-problem",
+      "id": "future-proof-careers",
+      "slug": "future-proof-careers-for-students-2030",
       "category": "blogs",
-      "tag": "कैंपस हायरिंग",
+      "tag": "",
       "visualVariant": "default",
-      "image": "https://hirekarma.s3.us-east-1.amazonaws.com/resources/campus-hiring.jpeg",
-      "title": "ड्राइव बंद करें, तैयारी पुनर्निर्मित करें: कैंपस प्लेसमेंट अंतर एक सिस्टम समस्या है",
-      "excerpt": "भारत हर साल लाखों स्नातक पैदा करता है, फिर भी रोजगार योग्यता का अंतर बना रहता है। मुद्दा पाइपलाइन की मात्रा नहीं - खंडित प्लेसमेंट आर्किटेक्चर है।",
-      "date": "जुलाई 2026",
-      "dateIso": "2026-07-08"
+      "image": "/resources/future-proof-careers-2030.png",
+      "title": "Future-Proof Careers for Students: Top Opportunities Through 2030",
+      "excerpt": "Explore future-proof careers for students through 2030, from AI and cybersecurity to data, software, green energy and digital roles, plus the skills needed to stay employable.",
+      "date": "September 2026",
+      "dateIso": "2026-09-29"
     },
     {
       "id": "public-grievance",

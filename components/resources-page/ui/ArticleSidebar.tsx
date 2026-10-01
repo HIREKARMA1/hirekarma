@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import { ProductButton } from "@/components/products-page/ui/ProductButton";
 import { theme } from "@/config/theme";
@@ -73,13 +74,26 @@ export function ArticleAuthorBox({ authorBox }: ArticleAuthorBoxProps) {
         {authorBox.title}
       </h2>
       <div className="mt-4 flex gap-4">
-        <span
-          className="grid size-14 shrink-0 place-items-center rounded-full text-sm font-bold text-white"
-          style={{ background: theme.gradients.brand }}
-          aria-hidden
-        >
-          HK
-        </span>
+        {authorBox.photo ? (
+          <span className="relative size-14 shrink-0 overflow-hidden rounded-full ring-2 ring-white/20">
+            <Image
+              src={authorBox.photo}
+              alt={authorBox.name}
+              fill
+              unoptimized
+              className="object-cover object-top"
+              sizes="56px"
+            />
+          </span>
+        ) : (
+          <span
+            className="grid size-14 shrink-0 place-items-center rounded-full text-sm font-bold text-white"
+            style={{ background: theme.gradients.brand }}
+            aria-hidden
+          >
+            HK
+          </span>
+        )}
         <div>
           <h3 className="font-semibold text-gray-900 dark:text-white">
             {authorBox.name}
@@ -87,9 +101,11 @@ export function ArticleAuthorBox({ authorBox }: ArticleAuthorBoxProps) {
           <p className="text-sm italic text-slate-500 dark:text-white/85">
             {authorBox.role}
           </p>
-          <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-white/90">
-            {authorBox.bio}
-          </p>
+          {authorBox.bio ? (
+            <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-white/90">
+              {authorBox.bio}
+            </p>
+          ) : null}
         </div>
       </div>
     </section>
@@ -107,7 +123,7 @@ export function ArticleReferences({ references }: ArticleReferencesProps) {
         {references.title}
       </h2>
       <ol className="mt-4 list-decimal space-y-2 pl-5 text-sm text-slate-600 dark:text-white/85">
-        {references.items.map((item, index) => (
+        {references.items?.map((item, index) => (
           <li key={index}>{item}</li>
         ))}
       </ol>
