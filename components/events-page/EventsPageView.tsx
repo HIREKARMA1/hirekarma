@@ -1,10 +1,13 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Image from "next/image";
+import Link from "next/link";
 import { ArrowUpRight, Calendar, MapPin, Search } from "lucide-react";
 
+import { NameCover } from "@/components/events-page/NameCover";
+
 import { theme } from "@/config/theme";
+import { env } from "@/lib/config/env";
 import type {
   CampusDriveItem,
   EventMode,
@@ -13,9 +16,14 @@ import type {
   EventsPageItem,
 } from "@/types/events-page";
 
-const DISHA_EVENT_BASE = "https://disha.hirekarma.in/events";
-const DISHA_CAMPUS_DRIVES_PAGE =
-  "https://disha.hirekarma.in/jobs?is_campus_drive=true";
+const CONFIGURED_SITE = env.dishaUrl.replace(/\/$/, "") || "https://disha.hirekarma.in";
+const LIVE_LISTING_SITE = /localhost|127\.0\.0\.1/i.test(CONFIGURED_SITE)
+  ? "https://disha.hirekarma.in"
+  : CONFIGURED_SITE;
+const DISHA_EVENT_BASE = `${LIVE_LISTING_SITE}/events`;
+const DISHA_CAMPUS_DRIVES_PAGE = `${LIVE_LISTING_SITE}/jobs?category=campus_drive`;
+
+export type EventsFocus = "overview" | "campus" | "upcoming";
 
 const MODE_LABEL: Record<EventMode, string> = {
   online: "Online",
@@ -33,8 +41,79 @@ function formatEventDate(iso: string) {
   });
 }
 
-function visitHref(slug: string) {
-  return `${DISHA_EVENT_BASE}/${encodeURIComponent(slug)}`;
+function visitHref(event: EventsPageItem) {
+  if (event.visit_href) return event.visit_href;
+  return `${CONFIGURED_SITE}/events/${encodeURIComponent(event.slug)}`;
+}
+
+function eventDetailHref(event: EventsPageItem) {
+  if (event.visit_href?.includes("/campus-drives/")) {
+    return event.visit_href;
+  }
+  return `/events/${encodeURIComponent(event.slug)}`;
+}
+
+function eventApplyHref(event: EventsPageItem) {
+  const base = visitHref(event);
+  if (base.includes("register=1")) return base;
+  const join = base.includes("?") ? "&" : "?";
+  if (base.includes("/campus-drives/")) {
+    return `${base}${join}register=1&action=register`;
+  }
+  return `${base}${join}register=1`;
+}
+
+function CardActions({
+  detailHref,
+  applyHref,
+  detailLabel = "View details",
+  applyLabel = "Apply",
+  paired = false,
+  showApply = true,
+}: {
+  detailHref: string;
+  applyHref: string;
+  detailLabel?: string;
+  applyLabel?: string;
+  paired?: boolean;
+  showApply?: boolean;
+}) {
+  const buttonClass = paired
+    ? "inline-flex flex-1 items-center justify-center rounded-lg px-3 py-2 text-[13px] font-semibold"
+    : "inline-flex items-center rounded-md px-3 py-1.5 text-[12px] font-semibold";
+
+  return (
+    <div className={`mt-auto flex gap-2 pt-3 ${paired ? "" : "flex-wrap"}`}>
+      {detailHref.startsWith("http") ? (
+        <a
+          href={detailHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${buttonClass} border border-[#1b52a4] text-[#1b52a4] transition hover:bg-[#1b52a4]/5`}
+        >
+          {detailLabel}
+        </a>
+      ) : (
+        <Link
+          href={detailHref}
+          className={`${buttonClass} border border-[#1b52a4] text-[#1b52a4] transition hover:bg-[#1b52a4]/5`}
+        >
+          {detailLabel}
+        </Link>
+      )}
+      {showApply ? (
+      <a
+        href={applyHref}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`${buttonClass} gap-1 bg-[#1b52a4] text-white transition hover:brightness-110`}
+      >
+        {applyLabel}
+        {paired ? null : <ArrowUpRight className="h-3.5 w-3.5" />}
+      </a>
+      ) : null}
+    </div>
+  );
 }
 
 function matchesDriveQuery(job: CampusDriveItem, needle: string) {
@@ -44,6 +123,30 @@ function matchesDriveQuery(job: CampusDriveItem, needle: string) {
     job.company_name.toLowerCase().includes(needle) ||
     (job.location ?? "").toLowerCase().includes(needle)
   );
+}
+
+const JOB_TYPE_LABEL: Record<string, string> = {
+  full_time: "Full-time",
+  part_time: "Part-time",
+  internship: "Internship",
+  contract: "Contract",
+};
+
+const WORK_MODE_LABEL: Record<string, string> = {
+  onsite: "Onsite",
+  offline: "Onsite",
+  remote: "Remote",
+  hybrid: "Hybrid",
+};
+
+function jobTypeLabel(value?: string) {
+  if (!value) return "";
+  return JOB_TYPE_LABEL[value] ?? value.replace(/_/g, " ");
+}
+
+function workModeLabel(value?: string) {
+  if (!value) return "";
+  return WORK_MODE_LABEL[value] ?? value.replace(/_/g, " ");
 }
 
 function cityLabel(location?: string) {
@@ -82,30 +185,6 @@ function formatCampusPay(job: CampusDriveItem) {
   return "Not disclosed";
 }
 
-const JOB_TYPE_LABEL: Record<string, string> = {
-  full_time: "Full-time",
-  part_time: "Part-time",
-  internship: "Internship",
-  contract: "Contract",
-};
-
-const WORK_MODE_LABEL: Record<string, string> = {
-  onsite: "Onsite",
-  offline: "Onsite",
-  remote: "Remote",
-  hybrid: "Hybrid",
-};
-
-function jobTypeLabel(value?: string) {
-  if (!value) return "";
-  return JOB_TYPE_LABEL[value] ?? value.replace(/_/g, " ");
-}
-
-function workModeLabel(value?: string) {
-  if (!value) return "";
-  return WORK_MODE_LABEL[value] ?? value.replace(/_/g, " ");
-}
-
 function eventStatusRank(status: EventUiStatus) {
   if (status === "live") return 0;
   if (status === "open") return 1;
@@ -126,10 +205,10 @@ function matchesEventQuery(event: EventsPageItem, needle: string) {
 
 function CompactLiveMark() {
   return (
-    <span className="inline-flex shrink-0 items-center gap-1 text-[10px] font-bold uppercase tracking-wide text-[#098855]">
+    <span className="inline-flex shrink-0 items-center gap-1 text-[10px] font-bold uppercase tracking-wide text-[#1b52a4]">
       <span className="relative flex h-1.5 w-1.5">
-        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#098855]/70" />
-        <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#098855]" />
+        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#1b52a4]/70" />
+        <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#1b52a4]" />
       </span>
       Live
     </span>
@@ -142,7 +221,7 @@ function LivePill({ large = false }: { large?: boolean }) {
       className={`inline-flex items-center gap-1.5 rounded-full font-bold uppercase tracking-wide text-white ${
         large ? "px-2.5 py-1 text-[11px]" : "px-2 py-0.5 text-[10px]"
       }`}
-      style={{ backgroundColor: theme.colors.green }}
+      style={{ backgroundColor: theme.colors.primary }}
     >
       <span className="relative flex h-1.5 w-1.5">
         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white/80 opacity-75" />
@@ -174,34 +253,20 @@ function StatusPill({ status }: { status: EventUiStatus }) {
 
 function LiveNowBanner({
   event,
-  visitLabel,
   accent,
 }: {
   event: EventsPageItem;
-  visitLabel: string;
   accent: string;
 }) {
   return (
-    <a
-      href={visitHref(event.slug)}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group grid overflow-hidden rounded-2xl bg-[#0f1622] shadow-[0_16px_40px_rgba(15,22,34,0.18)] transition hover:shadow-[0_20px_48px_rgba(15,22,34,0.24)] lg:grid-cols-[1.15fr_1fr]"
-    >
+    <section className="grid overflow-hidden rounded-2xl bg-[#0f1622] shadow-[0_16px_40px_rgba(15,22,34,0.18)] lg:grid-cols-[1.15fr_1fr]">
       <div className="relative min-h-[200px] lg:min-h-[280px]">
-        {event.banner_url ? (
-          <Image
-            src={event.banner_url}
-            alt={event.title}
-            fill
-            className="object-cover object-center"
-            sizes="(max-width: 1024px) 100vw, 55vw"
-            priority
-          />
-        ) : (
-          <div className="absolute inset-0 bg-[#1b52a4]" />
-        )}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0f1622] via-[#0f1622]/20 to-transparent lg:bg-gradient-to-r" />
+        <NameCover
+          src={event.banner_url}
+          name={event.title}
+          className="absolute inset-0 h-full w-full text-3xl"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0f1622] via-[#0f1622]/20 to-transparent lg:bg-gradient-to-r" />
       </div>
       <div className="relative flex flex-col justify-center px-5 py-6 sm:px-8">
         <div className="flex flex-wrap items-center gap-2">
@@ -230,40 +295,40 @@ function LiveNowBanner({
             {event.short_description}
           </p>
         ) : null}
-        <span
-          className="mt-5 inline-flex w-fit items-center gap-1.5 rounded-md px-4 py-2 text-sm font-semibold text-white transition group-hover:brightness-110"
-          style={{ backgroundColor: theme.colors.green }}
-        >
-          {visitLabel}
-          <ArrowUpRight className="h-4 w-4" />
-        </span>
+        <CardActions
+          detailHref={eventDetailHref(event)}
+          applyHref={eventApplyHref(event)}
+          showApply={event.can_register !== false}
+        />
       </div>
-    </a>
+    </section>
   );
 }
 
-const CAMPUS_DRIVE_PREVIEW = 4;
-
 function CampusDriveBoard({
   drives,
-  visitLabel,
   heading,
   headingAccent,
+  preview,
+  viewAllLabel = "View all",
+  viewAllHref = DISHA_CAMPUS_DRIVES_PAGE,
 }: {
   drives: CampusDriveItem[];
-  visitLabel: string;
   heading: string;
   headingAccent: string;
+  preview?: number;
+  viewAllLabel?: string;
+  viewAllHref?: string;
 }) {
-  const visible = drives.slice(0, CAMPUS_DRIVE_PREVIEW);
+  const visible = preview ? drives.slice(0, preview) : drives;
 
   return (
     <section id="campus-drives" className="relative pl-4 sm:pl-5">
       <span
         aria-hidden
-        className="absolute bottom-0 left-0 top-0 w-1 overflow-hidden rounded-full bg-[#098855]"
+        className="absolute bottom-0 left-0 top-0 w-1 overflow-hidden rounded-full bg-[#1b52a4]"
       >
-        <span className="absolute inset-0 animate-pulse bg-[#36c48a]" />
+        <span className="absolute inset-0 animate-pulse bg-[#1b52a4]/70" />
       </span>
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
@@ -274,17 +339,17 @@ function CampusDriveBoard({
               {headingAccent ? ` ${headingAccent}` : ""}
             </h2>
           </div>
-          <p className="mt-1 text-[13px] font-semibold text-[#098855]">
+          <p className="mt-1 text-[13px] font-semibold text-[#1b52a4]">
             Happening now
           </p>
         </div>
         <a
-          href={DISHA_CAMPUS_DRIVES_PAGE}
+          href={viewAllHref}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex shrink-0 items-center gap-1 pt-1 text-[13px] font-semibold text-[#1b52a4] underline-offset-4 transition hover:underline"
         >
-          View all
+          {viewAllLabel}
           <ArrowUpRight className="h-3.5 w-3.5" />
         </a>
       </div>
@@ -296,7 +361,7 @@ function CampusDriveBoard({
       ) : (
         <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
           {visible.map((job) => (
-            <CampusDriveCard key={job.id} job={job} visitLabel={visitLabel} />
+            <CampusDriveCard key={job.id} job={job} />
           ))}
         </div>
       )}
@@ -328,106 +393,59 @@ function LocationChip({
   );
 }
 
-function CampusDriveCard({
-  job,
-  visitLabel,
-}: {
-  job: CampusDriveItem;
-  visitLabel: string;
-}) {
-  const city = cityLabel(job.location);
+function CampusDriveCard({ job }: { job: CampusDriveItem }) {
   const pay = formatCampusPay(job);
-  const type = jobTypeLabel(job.job_type);
-  const workMode = workModeLabel(job.mode_of_work);
+  const details = [
+    cityLabel(job.location),
+    job.campus_drive_date ? formatEventDate(job.campus_drive_date) : "",
+    jobTypeLabel(job.job_type),
+    workModeLabel(job.mode_of_work),
+  ]
+    .filter(Boolean)
+    .join(" · ");
 
   return (
-    <a
-      href={job.visit_href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group flex h-full gap-3 rounded-xl border border-[#e6e8ec] bg-white p-3.5 shadow-[0_4px_14px_rgba(15,22,34,0.04)] transition hover:-translate-y-1 hover:border-[#098855]/45 hover:shadow-[0_14px_28px_rgba(9,136,85,0.12)]"
-    >
-      <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-lg border border-[#e6e8ec] bg-[#f6f8fb]">
-        {job.company_logo ? (
-          <Image
-            src={job.company_logo}
-            alt={job.company_name}
-            fill
-            className="object-contain p-1"
-            sizes="48px"
-          />
-        ) : (
-          <div className="flex h-full w-full items-center justify-center text-[10px] font-bold text-[#0f1622]">
-            {job.company_name.slice(0, 2).toUpperCase()}
-          </div>
-        )}
+    <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-[#e6e8ec] bg-white shadow-[0_4px_14px_rgba(15,22,34,0.04)] transition hover:-translate-y-1 hover:border-[#1b52a4]/40 hover:shadow-[0_14px_28px_rgba(27,82,164,0.12)]">
+      <div className="relative aspect-video bg-[#e8eef8]">
+        <NameCover
+          src={job.company_logo}
+          name={job.company_name || job.title}
+          className="absolute inset-0 h-full w-full text-2xl"
+        />
       </div>
-      <div className="flex min-w-0 flex-1 flex-col">
-        <div className="flex items-center gap-2">
-          <h3 className="min-w-0 flex-1 truncate text-[15px] font-bold leading-snug text-[#0f1622]">
+      <div className="flex flex-1 flex-col gap-1.5 p-4">
+        <div className="flex items-start gap-2">
+          <h3 className="min-w-0 flex-1 text-[15px] font-bold leading-snug text-[#0f1622]">
             {job.title}
           </h3>
           <CompactLiveMark />
         </div>
-        <p className="mt-0.5 truncate text-[12px] font-medium text-[#64748b]">
-          {job.company_name}
-        </p>
-        <p className="mt-2 truncate text-[14px] font-bold leading-tight text-[#098855]">
-          {pay}
-        </p>
-        <p className="mt-1.5 truncate text-[12px] text-[#64748b]">
-          {[
-            city,
-            job.campus_drive_date
-              ? formatEventDate(job.campus_drive_date)
-              : "",
-            type,
-            workMode,
-          ]
-            .filter(Boolean)
-            .join(" · ")}
-        </p>
-        <span className="mt-auto inline-flex items-center gap-1 pt-3 text-[13px] font-semibold text-[#1b52a4] underline-offset-4 transition group-hover:gap-1.5 group-hover:underline">
-          {visitLabel}
-          <ArrowUpRight className="h-3.5 w-3.5 transition group-hover:translate-x-0.5" />
-        </span>
+        <p className="text-xs text-[#64748b]">{job.company_name}</p>
+        <p className="truncate text-[14px] font-bold leading-tight text-[#1b52a4]">{pay}</p>
+        {details ? <p className="truncate text-[12px] text-[#64748b]">{details}</p> : null}
+        <CardActions detailHref={job.detail_href || "/events/campus-drives"} applyHref={job.visit_href} />
       </div>
-    </a>
+    </article>
   );
 }
 
 function EventCard({
   event,
-  visitLabel,
   accent,
   primary,
 }: {
   event: EventsPageItem;
-  visitLabel: string;
   accent: string;
   primary: string;
 }) {
   return (
-    <a
-      href={visitHref(event.slug)}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group flex h-full flex-col overflow-hidden rounded-xl border border-[#e6e8ec] bg-white shadow-[0_4px_16px_rgba(15,22,34,0.04)] transition hover:-translate-y-0.5 hover:border-[#1b52a4]/40 hover:shadow-[0_12px_28px_rgba(15,22,34,0.08)]"
-    >
-      <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#0f1622]">
-        {event.banner_url ? (
-          <Image
-            src={event.banner_url}
-            alt={event.title}
-            fill
-            className="object-cover object-center"
-            sizes="(max-width: 768px) 100vw, 33vw"
-          />
-        ) : (
-          <div className="flex h-full w-full items-center justify-center bg-[#0f1622] px-3 text-center text-sm font-semibold text-white/80">
-            {event.title}
-          </div>
-        )}
+    <article className="flex h-full flex-col overflow-hidden rounded-xl border border-[#e6e8ec] bg-white shadow-[0_4px_16px_rgba(15,22,34,0.04)] transition hover:-translate-y-0.5 hover:border-[#1b52a4]/40 hover:shadow-[0_12px_28px_rgba(15,22,34,0.08)]">
+      <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#e8eef8]">
+        <NameCover
+          src={event.banner_url}
+          name={event.title}
+          className="absolute inset-0 h-full w-full text-2xl"
+        />
         <div className="absolute bottom-2 left-2 flex flex-wrap gap-1.5">
           <StatusPill status={event.status} />
           <span
@@ -455,24 +473,83 @@ function EventCard({
         <h3 className="mt-1.5 line-clamp-2 text-[15px] font-bold leading-snug tracking-tight text-[#0f1622]">
           {event.title}
         </h3>
-        <span className="mt-auto inline-flex items-center gap-1 pt-3 text-[13px] font-semibold text-[#1b52a4] underline-offset-4 transition group-hover:underline">
-          {visitLabel}
-          <ArrowUpRight className="h-3.5 w-3.5" />
-        </span>
+        <CardActions
+          detailHref={eventDetailHref(event)}
+          applyHref={eventApplyHref(event)}
+          detailLabel={
+            event.visit_href?.includes("/campus-drives/")
+              ? "View Campus Drive"
+              : "View Event"
+          }
+          applyLabel={
+            event.visit_href?.includes("/campus-drives/")
+              ? "Register Campus Drive"
+              : "Register Event"
+          }
+          paired
+          showApply={event.can_register !== false}
+        />
       </div>
+    </article>
+  );
+}
+
+function SectionSwitch({ focus }: { focus: EventsFocus }) {
+  const items: { id: EventsFocus; label: string; href: string }[] = [
+    { id: "campus", label: "Campus Drive", href: "/events/campus-drives" },
+    { id: "upcoming", label: "Upcoming Events", href: "/events/upcoming" },
+  ];
+
+  return (
+    <div className="mt-4 flex flex-wrap gap-2">
+      {items.map((item) => {
+        const active = focus === item.id;
+        return (
+          <Link
+            key={item.id}
+            href={item.href}
+            className={`rounded-full px-3 py-1.5 text-[12px] font-semibold transition ${
+              active
+                ? "bg-[#1b52a4] text-white"
+                : "border border-[#e6e8ec] bg-[#f6f8fb] text-[#334155] hover:border-[#1b52a4]/35"
+            }`}
+          >
+            {item.label}
+          </Link>
+        );
+      })}
+    </div>
+  );
+}
+
+function DishaListingLink({ href, label }: { href: string; label: string }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex shrink-0 items-center gap-1 pt-1 text-[13px] font-semibold text-[#1b52a4] underline-offset-4 transition hover:underline"
+    >
+      {label}
+      <ArrowUpRight className="h-3.5 w-3.5" />
     </a>
   );
 }
 
-export function EventsPageView({ content }: { content: EventsPageContent }) {
-  const { hero, events, visitLabel, campusDrives, liveCampusDrives } = content;
+export function EventsPageView({
+  content,
+  focus = "overview",
+}: {
+  content: EventsPageContent;
+  focus?: EventsFocus;
+}) {
+  const { hero: pageHero, events, campusDrives, liveCampusDrives, campusPrograms } = content;
   const accent = theme.colors.secondary;
   const primary = theme.colors.primary;
   const drives = liveCampusDrives ?? [];
+  const programs = campusPrograms ?? [];
   const [query, setQuery] = useState("");
-  const [eventScope, setEventScope] = useState<"all" | "live" | "open" | "closed">(
-    "all"
-  );
+  const [eventScope, setEventScope] = useState<"all" | "live" | "open" | "closed">("all");
   const needle = query.trim().toLowerCase();
 
   const filteredDrives = useMemo(
@@ -480,9 +557,19 @@ export function EventsPageView({ content }: { content: EventsPageContent }) {
     [drives, needle]
   );
 
+  const filteredPrograms = useMemo(
+    () => programs.filter((event) => matchesEventQuery(event, needle)),
+    [programs, needle]
+  );
+
+  const eventSource = useMemo(
+    () => (focus === "overview" ? events : events.filter((event) => event.status !== "closed")),
+    [events, focus]
+  );
+
   const searchedEvents = useMemo(
-    () => events.filter((event) => matchesEventQuery(event, needle)),
-    [events, needle]
+    () => eventSource.filter((event) => matchesEventQuery(event, needle)),
+    [eventSource, needle]
   );
 
   const filteredEvents = useMemo(
@@ -498,13 +585,45 @@ export function EventsPageView({ content }: { content: EventsPageContent }) {
     [searchedEvents, eventScope]
   );
 
+  const isOverview = focus === "overview";
+  const isCampus = focus === "campus";
+
   const featuredLive =
-    eventScope === "closed"
-      ? null
-      : searchedEvents.find((event) => event.status === "live") ?? null;
-  const showCampusSection = filteredDrives.length > 0;
-  const showEventsSection = searchedEvents.length > 0;
-  const hasMatches = showCampusSection || showEventsSection;
+    focus === "campus"
+      ? filteredPrograms.find((event) => event.status === "live") ?? null
+      : isOverview
+        ? eventScope === "closed"
+          ? null
+          : searchedEvents.find((event) => event.status === "live") ?? null
+        : eventScope === "open"
+          ? null
+          : searchedEvents.find((event) => event.status === "live") ?? null;
+
+  const hasMatches = isOverview
+    ? filteredDrives.length > 0 || searchedEvents.length > 0
+    : isCampus
+      ? filteredPrograms.length > 0
+      : filteredEvents.length > 0 || featuredLive !== null;
+
+  const hero = isOverview
+    ? pageHero
+    : isCampus
+      ? {
+          label: "Campus Drive",
+          heading: campusDrives.heading || "Campus drives",
+          headingAccent: campusDrives.headingAccent,
+          description:
+            "Live drives stay up front. Visit opens that drive on Disha, and All campus drives opens the full Disha list.",
+          searchPlaceholder: "Search campus drives",
+        }
+      : {
+          label: "Upcoming Events",
+          heading: "Upcoming",
+          headingAccent: "Events",
+          description:
+            "Open and live events from Disha. Visit opens the event on Disha.",
+          searchPlaceholder: "Search upcoming events",
+        };
 
   return (
     <main className="min-h-screen bg-[#f6f8fb]">
@@ -523,6 +642,7 @@ export function EventsPageView({ content }: { content: EventsPageContent }) {
                 {hero.headingAccent}
               </h1>
               <p className="mt-1.5 max-w-lg text-sm text-[#64748b]">{hero.description}</p>
+              {isOverview ? null : <SectionSwitch focus={focus} />}
             </div>
 
             <label className="flex w-full shrink-0 items-center gap-3 rounded-full border border-[#e6e8ec] bg-[#f6f8fb] px-4 py-2 shadow-[0_4px_16px_rgba(15,22,34,0.04)] transition focus-within:border-[#1b52a4]/35 focus-within:bg-white lg:mt-1 lg:w-[300px]">
@@ -543,36 +663,84 @@ export function EventsPageView({ content }: { content: EventsPageContent }) {
 
       <div className="content-container space-y-5 py-4">
         {!hasMatches ? (
-          <p className="text-sm text-[#475569]">No matches for this search.</p>
+          isOverview ? (
+            <p className="text-sm text-[#475569]">No matches for this search.</p>
+          ) : (
+            <div className="space-y-3">
+              <p className="text-sm text-[#475569]">
+                {isCampus
+                  ? "No campus drives to show right now."
+                  : "No upcoming events to show right now."}
+              </p>
+              <DishaListingLink
+                href={isCampus ? DISHA_CAMPUS_DRIVES_PAGE : DISHA_EVENT_BASE}
+                label={isCampus ? "All campus drives" : "All events on Disha"}
+              />
+            </div>
+          )
         ) : (
           <>
-            {showEventsSection && featuredLive ? (
+            {featuredLive && (isOverview || !isCampus || filteredPrograms.some((event) => event.id === featuredLive.id)) ? (
               <section>
-                <LiveNowBanner
-                  event={featuredLive}
-                  visitLabel={visitLabel}
-                  accent={accent}
-                />
+                <LiveNowBanner event={featuredLive} accent={accent} />
               </section>
             ) : null}
 
-            {showCampusSection ? (
+            {isOverview && filteredDrives.length > 0 ? (
               <CampusDriveBoard
                 drives={filteredDrives}
-                visitLabel={visitLabel}
                 heading={campusDrives.heading}
                 headingAccent={campusDrives.headingAccent}
+                preview={isOverview ? 4 : undefined}
+                viewAllLabel={isOverview ? "View all" : "All campus drives"}
+                viewAllHref={
+                  isOverview ? DISHA_CAMPUS_DRIVES_PAGE : `${CONFIGURED_SITE}/campus-drives`
+                }
               />
             ) : null}
 
-            {showEventsSection ? (
-              <section id="all-events">
-                <h2 className="text-lg font-bold tracking-tight text-[#0f1622] sm:text-xl">
-                  All Events
-                </h2>
-                <p className="mt-1 text-sm text-[#64748b]">
-                  Discover opportunities happening near you
-                </p>
+            {isCampus && filteredPrograms.length > 0 ? (
+              <section id="all-campus-drives">
+                <div className="flex flex-wrap items-end justify-between gap-3">
+                  <div>
+                    <h2 className="text-lg font-bold tracking-tight text-[#0f1622] sm:text-xl">
+                      All campus drives
+                    </h2>
+                    <p className="mt-1 text-sm text-[#64748b]">
+                      Every published campus drive from Disha. Visit opens it there.
+                    </p>
+                  </div>
+                  <DishaListingLink
+                    href={`${CONFIGURED_SITE}/campus-drives`}
+                    label="All campus drives"
+                  />
+                </div>
+                <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  {filteredPrograms.map((event) => (
+                    <EventCard
+                      key={event.id}
+                      event={event}
+                      accent={accent}
+                      primary={primary}
+                    />
+                  ))}
+                </div>
+              </section>
+            ) : null}
+
+            {!isCampus && searchedEvents.length > 0 ? (
+              <section id={isOverview ? "all-events" : "upcoming-events"}>
+                <div className="flex flex-wrap items-end justify-between gap-3">
+                  <div>
+                    <h2 className="text-lg font-bold tracking-tight text-[#0f1622] sm:text-xl">
+                      {isOverview ? "All Events" : "Upcoming events"}
+                    </h2>
+                    <p className="mt-1 text-sm text-[#64748b]">
+                      Discover opportunities happening near you
+                    </p>
+                  </div>
+                  <DishaListingLink href={DISHA_EVENT_BASE} label="View all" />
+                </div>
                 <div className="mt-3 flex flex-wrap gap-2">
                   <LocationChip
                     label="All"
@@ -589,11 +757,13 @@ export function EventsPageView({ content }: { content: EventsPageContent }) {
                     active={eventScope === "open"}
                     onClick={() => setEventScope("open")}
                   />
-                  <LocationChip
-                    label="Closed"
-                    active={eventScope === "closed"}
-                    onClick={() => setEventScope("closed")}
-                  />
+                  {isOverview ? (
+                    <LocationChip
+                      label="Closed"
+                      active={eventScope === "closed"}
+                      onClick={() => setEventScope("closed")}
+                    />
+                  ) : null}
                 </div>
 
                 {filteredEvents.length === 0 ? (
@@ -606,7 +776,6 @@ export function EventsPageView({ content }: { content: EventsPageContent }) {
                       <EventCard
                         key={event.id}
                         event={event}
-                        visitLabel={visitLabel}
                         accent={accent}
                         primary={primary}
                       />

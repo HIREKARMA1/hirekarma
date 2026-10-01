@@ -21,6 +21,8 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Metadata
   { path: "/about-us/locations", priority: 0.5, changeFrequency: "yearly" },
   { path: "/partners", priority: 0.5, changeFrequency: "monthly" },
   { path: "/contact", priority: 0.6, changeFrequency: "yearly" },
+  { path: "/events/upcoming", priority: 0.8, changeFrequency: "daily" },
+  { path: "/events/campus-drives", priority: 0.8, changeFrequency: "daily" },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

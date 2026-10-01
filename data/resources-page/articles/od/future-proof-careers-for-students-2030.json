@@ -1,0 +1,707 @@
+{
+  "slug": "future-proof-careers-for-students-2030",
+  "meta": {
+    "title": "Future-Proof Careers for Students Through 2030 | Career Guide",
+    "description": "Explore future-proof careers for students through 2030, from AI and cybersecurity to data, software, green energy and digital roles, plus the skills needed to stay employable."
+  },
+  "hero": {
+    "title": "Future-Proof Careers for Students: Top Opportunities Through 2030",
+    "date": "September 29, 2026",
+    "categoryLabel": "Career Guide · Blogs",
+    "author": "Sohan Kumar Dey",
+    "backLink": "Back to Resources"
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "variant": "lead",
+      "text": "Choosing a career in college can feel like trying to predict the future. The role you prepare for today may look very different by the time you graduate, while entirely new opportunities may emerge in areas that barely existed when you started college."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "That doesn't mean students need to find one \"perfect\" career that will remain unchanged until 2030. A more practical approach is to identify career areas that are being shaped by long-term changes in technology, business, demographics and sustainability — and then build skills that can move with those changes."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "The World Economic Forum's Future of Jobs Report 2025 expects significant labour-market transformation through 2030. Its employer survey identifies technology-related roles such as big data specialists, fintech engineers, AI and machine learning specialists, software developers and security management specialists among the fastest-growing roles. It also highlights growth in renewable energy, environmental engineering, healthcare, education and other essential sectors."
+    },
+    {
+      "type": "paragraph",
+      "variant": "emphasis",
+      "text": "For students, the message is simple: don't prepare only for a job title. Prepare for a changing job market."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "So, which careers could offer meaningful opportunities through 2030, and what should students start learning today?"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "AI and Machine Learning Careers"
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Artificial intelligence is changing how companies build products, analyse information and automate workflows. As AI adoption expands beyond traditional technology companies, students with skills in machine learning, generative AI, data handling and AI application development may find opportunities across multiple industries."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "The World Economic Forum identifies AI and machine learning specialists among the fastest-growing roles through 2030, while AI and big data are expected to be among the fastest-growing skill areas."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Students interested in this field can start with:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "listType": "default",
+      "items": [
+        "Python",
+        "Machine learning fundamentals",
+        "Generative AI concepts",
+        "Data analysis",
+        "Prompt engineering",
+        "Model evaluation",
+        "APIs and AI application development",
+        "Mathematics and statistics"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "A degree can provide the foundation, but practical projects can help demonstrate that you know how to apply what you've learned."
+    },
+    {
+      "type": "paragraph",
+      "variant": "italic",
+      "text": "Best suited for: Students who enjoy technology, logical problem-solving, experimentation and working with data."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Big Data and Data Analytics"
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Businesses are generating more data than ever, but collecting data is only part of the challenge. Organisations also need people who can turn information into useful business decisions."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Big data specialists, data analysts and data-focused roles are expected to remain important as organisations become increasingly dependent on digital systems and analytics. Big Data Specialists and Data Analysts and Scientists appear among the roles identified as growing by the World Economic Forum's 2025 report."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Students considering this path can build skills in:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "listType": "default",
+      "items": [
+        "SQL",
+        "Python or R",
+        "Statistics",
+        "Data visualisation",
+        "Excel",
+        "Power BI or similar analytics tools",
+        "Database fundamentals",
+        "Business analysis"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "The most valuable combination is not simply knowing a data tool. It is being able to understand a business problem, analyse the information and communicate the result clearly."
+    },
+    {
+      "type": "paragraph",
+      "variant": "italic",
+      "text": "Best suited for: Analytical thinkers who enjoy finding patterns and turning complex information into practical insights."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Cybersecurity and Information Security"
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "As businesses become increasingly digital, protecting systems, applications and information becomes an ongoing requirement."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "The World Economic Forum lists networks and cybersecurity among the fastest-growing skill areas through 2030, while security management specialists are among the fastest-growing job roles identified in its employer survey."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Students interested in cybersecurity can explore:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "listType": "default",
+      "items": [
+        "Networking fundamentals",
+        "Linux",
+        "Cloud security",
+        "Application security",
+        "Ethical hacking",
+        "Identity and access management",
+        "Security operations",
+        "Risk and compliance"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Cybersecurity also illustrates why future-proofing a career isn't only about learning the latest technology. Security professionals need analytical thinking, attention to risk and continuous learning as threats and systems evolve."
+    },
+    {
+      "type": "paragraph",
+      "variant": "italic",
+      "text": "Best suited for: Students who enjoy investigation, problem-solving and understanding how systems work."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Software Development and Cloud Careers"
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Software development continues to sit at the centre of digital transformation. At the same time, cloud infrastructure has become an important part of how organisations build, deploy and scale digital products."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Software and application developers are among the fastest-growing roles in the World Economic Forum's 2025 projections, while DevOps Engineer also appears among the growing technology roles."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Students can build a foundation through:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "listType": "default",
+      "items": [
+        "HTML, CSS and JavaScript",
+        "Python, Java or another programming language",
+        "React or other modern frameworks",
+        "APIs",
+        "Databases",
+        "Git and version control",
+        "Cloud platforms",
+        "DevOps fundamentals",
+        "Containerisation"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Instead of collecting programming certifications, students should focus on building working projects that demonstrate how they solve real problems."
+    },
+    {
+      "type": "paragraph",
+      "variant": "italic",
+      "text": "Best suited for: Students who enjoy building applications, solving technical problems and learning through projects."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "FinTech and Digital Finance Careers"
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Financial services are increasingly influenced by technology, data, automation and digital platforms."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "The World Economic Forum places FinTech Engineers among the fastest-growing job roles in its 2025–2030 projections."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Students don't necessarily need to choose between finance and technology. The intersection of both can create opportunities in areas such as:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "listType": "default",
+      "items": [
+        "Digital payments",
+        "Financial analytics",
+        "Risk technology",
+        "Banking technology",
+        "Financial software",
+        "Blockchain applications",
+        "Fraud detection",
+        "Financial data systems"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "variant": "italic",
+      "text": "Best suited for: Students interested in combining technology, finance, mathematics and business."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Green Energy and Sustainability Careers"
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "The future of employment isn't only about AI and software."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "The transition toward renewable energy and more sustainable business models is also expected to influence employment through 2030. The World Economic Forum identifies renewable energy engineers, environmental engineers, and electric and autonomous vehicle specialists among growing roles."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Students can explore career paths related to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "listType": "default",
+      "items": [
+        "Renewable energy",
+        "Solar and wind systems",
+        "Electric vehicles",
+        "Environmental engineering",
+        "Sustainability management",
+        "Energy efficiency",
+        "Climate technology",
+        "Environmental data"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "This makes sustainability an increasingly relevant career consideration for students from engineering, science, management and related disciplines."
+    },
+    {
+      "type": "paragraph",
+      "variant": "italic",
+      "text": "Best suited for: Students interested in engineering, environmental challenges, energy systems and sustainability."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Healthcare, Education and Human-Centred Careers"
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Technology may dominate conversations about future careers, but not every growing opportunity will be technical."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Demographic changes are expected to increase demand for healthcare and care-related roles, while expanding working-age populations are expected to contribute to demand for education professionals in some regions."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "This creates opportunities across areas such as:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "listType": "default",
+      "items": [
+        "Healthcare",
+        "Nursing",
+        "Counselling",
+        "Education",
+        "Training and mentoring",
+        "Healthcare technology",
+        "Health administration",
+        "Learning and development"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "These careers also highlight an important point: human interaction remains valuable even as technology becomes more capable."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Digital Marketing and Content Careers Are Changing"
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Digital marketing will also continue to evolve as businesses compete for attention across search, social media, websites and digital platforms."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "But students entering this field should think beyond simply creating social media posts."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Modern digital roles increasingly combine:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "listType": "default",
+      "items": [
+        "SEO",
+        "Content strategy",
+        "Analytics",
+        "Performance marketing",
+        "Marketing automation",
+        "AI-assisted content workflows",
+        "Consumer research",
+        "Conversion optimisation"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "The more technology changes marketing, the more useful it becomes to understand both creative communication and measurable business outcomes."
+    },
+    {
+      "type": "paragraph",
+      "variant": "italic",
+      "text": "Best suited for: Students who enjoy communication, creativity, digital platforms and analysing audience behaviour."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "The Real Future-Proof Career Is a Future-Proof Skill Set"
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "There is an important distinction between a future-proof career and a future-proof skill set."
+    },
+    {
+      "type": "paragraph",
+      "variant": "emphasis",
+      "text": "No career is completely protected from technological or economic change."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "The World Economic Forum estimates that around 39% of workers' existing skill sets could be transformed or become outdated between 2025 and 2030. At the same time, AI and big data, networks and cybersecurity, technological literacy, creative thinking, resilience, flexibility and agility are among the skills expected to grow in importance."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "That means students shouldn't build their entire career strategy around one technology or job title."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Instead, build a combination of:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "listType": "default",
+      "items": [
+        "Technical Skills - Learn technologies relevant to your chosen field.",
+        "Analytical Thinking - Develop the ability to break down problems and make decisions using evidence.",
+        "Communication - Learn to explain ideas clearly to recruiters, colleagues, clients and customers.",
+        "Creative Thinking - Technology can automate many tasks, but organisations still need people who can generate ideas and approach problems differently.",
+        "Adaptability - The tools you use in your first job may not be the tools you use five years later.",
+        "Continuous Learning - Treat learning as an ongoing part of your career rather than something that ends with graduation."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "These human and technical capabilities complement one another. The World Economic Forum specifically highlights analytical thinking, creative thinking, resilience, flexibility and agility, leadership, curiosity and lifelong learning alongside technology skills as important through 2030."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Why Students Should Start Preparing Before Their Final Year"
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "One of the biggest mistakes students make is treating employability as something to work on during their final semester."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "By then, there may be very little time to build meaningful projects, improve communication, prepare for assessments and understand what employers actually expect."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "A stronger approach is to build career readiness progressively:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "listType": "default",
+      "items": [
+        "Year 1 → Explore - Understand different career paths and identify areas that match your interests.",
+        "Year 2 → Build - Develop technical and professional skills and start creating projects.",
+        "Year 3 → Practice - Strengthen your resume, communication, aptitude, interview skills and practical experience.",
+        "Final Year → Execute - Participate in campus drives, apply for relevant jobs, practise assessments and interviews, and actively engage with employers."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "This turns career preparation into a process instead of a last-minute placement activity."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "How HireKarma Helps Students Prepare for the Jobs of 2030"
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Knowing which careers may grow is only the first step. The harder part is turning that information into job-ready capability and actual opportunities."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "This is where HireKarma's ecosystem is designed to connect the different stages of the student journey."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "HireKarma brings together skill development, AI-powered placement preparation, campus recruitment, pre-placement training and career opportunities within a connected talent ecosystem."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Students can begin by building job-ready digital skills through industry-aligned skill development. From there, SolviqAI provides AI-powered placement preparation, including practice for interviews, assessments and hiring scenarios."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "For students looking for campus and early-career opportunities, [Disha](https://disha.hirekarma.in/) connects students with jobs, campus opportunities, events and career resources while bringing students, colleges and employers into one ecosystem."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "For students who need more structured placement execution, [Shortlisted](https://shortlisted.hirekarma.in/) combines placement preparation, live opportunities, interview practice, application support and continuous mentoring into a focused placement program."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "HireKarma also supports the employer side through platforms such as [Lakshya](https://lakshya.hirekarma.in/), helping connect organisations with emerging talent and streamline hiring workflows."
+    },
+    {
+      "type": "paragraph",
+      "variant": "emphasis",
+      "text": "The larger idea is straightforward: Learn → Practice → Assess → Connect → Hire → Grow"
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "That's a more useful career model for an uncertain job market than simply collecting certificates and waiting for placement season."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "What Students Can Do Today to Build a Future-Ready Career"
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "You don't need to wait until 2030 to start preparing."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Here are practical steps students can take now:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "listType": "default",
+      "items": [
+        "Choose a career direction - You don't need to have your entire career figured out. Start by choosing one or two areas worth exploring.",
+        "Build one strong skill - Instead of learning ten technologies superficially, develop meaningful capability in one relevant area.",
+        "Build projects - A project gives you something concrete to discuss during interviews and demonstrate on your resume.",
+        "Develop communication skills - Technical ability becomes more valuable when you can explain your work clearly.",
+        "Practise hiring scenarios - Use mock interviews, assessments and structured placement preparation to become comfortable with the recruitment process.",
+        "Follow actual opportunities - Don't rely entirely on classroom announcements. Track relevant jobs, campus drives, internships and career events through platforms such as Disha.",
+        "Keep updating your skills - The career you start with may evolve. Your ability to learn and adapt can become one of your strongest professional assets."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Future-Proofing Your Career Starts Before You Need a Job"
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "The jobs of 2030 won't all look the same as the jobs of 2026."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Some roles will grow rapidly. Some will change significantly. Some tasks will become automated, while new responsibilities and entirely new roles will emerge."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "The World Economic Forum projects that technological change, green transition, demographic shifts, economic uncertainty and other structural trends will reshape the labour market through 2030. Its research also indicates that employers will need a combination of technology capabilities and human skills as this transformation continues."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "For students, that means the goal shouldn't be to predict exactly which job title will dominate in 2030."
+    },
+    {
+      "type": "paragraph",
+      "variant": "emphasis",
+      "text": "The better goal is to become the kind of candidate who can learn a new tool, solve a new problem, communicate clearly and adapt when the market changes."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "That's what makes a career more resilient."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "And that is also why career preparation needs to go beyond a degree — from building relevant skills and practising real hiring scenarios to discovering opportunities and connecting with employers."
+    },
+    {
+      "type": "paragraph",
+      "variant": "pullquote",
+      "text": "The future of work is changing. Start preparing before it arrives."
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Explore [HireKarma](/) and build your path from skills to opportunity."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Frequently Asked Questions"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "1. What are the most future-proof careers for students through 2030?"
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Technology-related careers such as AI and machine learning, big data, software development and cybersecurity are among the roles expected to grow rapidly. Opportunities are also expected in renewable energy, environmental engineering, healthcare, education and other essential sectors."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "2. Which skills will be important for jobs in 2030?"
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "AI and big data, networks and cybersecurity, technological literacy, analytical thinking, creative thinking, resilience, flexibility and agility are among the skills expected to increase in importance through 2030."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "3. Should students focus only on AI careers?"
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "No. AI is an important growth area, but future opportunities are also expected across software, cybersecurity, data, renewable energy, healthcare, education, engineering and other sectors. Students should choose career areas based on their interests, strengths and the skills they are willing to develop."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "4. How can students prepare for future jobs?"
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Students can start by identifying a career direction, developing relevant technical skills, building projects, improving communication, practising assessments and interviews, gaining practical experience and regularly updating their skills."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "5. How can HireKarma help students become career-ready?"
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "HireKarma connects skill development, AI-powered placement preparation, campus recruitment, pre-placement training and career opportunities. Disha helps students discover jobs and campus opportunities, while SolviqAI supports AI-powered placement preparation and Shortlisted provides structured placement execution and mentoring."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "6. Is a degree enough to build a future-proof career?"
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "A degree can provide an important academic foundation, but students also need practical and professional skills that match changing employer requirements. The growing emphasis on both technical and human skills makes continuous learning and practical experience increasingly important."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "7. When should college students start preparing for their careers?"
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Ideally, career preparation should begin well before the final year. Students can use the early years to explore career options and build skills, then move into projects, internships, placement preparation and active job applications as they approach graduation."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "8. Can non-technical students build future-proof careers?"
+    },
+    {
+      "type": "paragraph",
+      "variant": "default",
+      "text": "Yes. Future opportunities are not limited to software and AI. Fields such as healthcare, education, sustainability, digital marketing, business operations, finance and other sectors will continue to require specialised knowledge combined with adaptable professional skills."
+    }
+  ],
+  "authorBox": {
+    "title": "About the authors",
+    "name": "Sohan Kumar Dey",
+    "role": "Founder & CEO, HireKarma Private Limited",
+    "bio": "",
+    "photo": "https://hirekarma.s3.us-east-1.amazonaws.com/sohan_sir.png"
+  },
+  "sidebar": {
+    "shareTitle": "Loved this insight?",
+    "shareDescription": "Share it with students who are planning careers through 2030.",
+    "relatedTitle": "Related products",
+    "relatedProducts": "SolviqAI · Disha · Lakshya · Shortlisted",
+    "cta": {
+      "label": "Explore our jobs",
+      "hrefKey": "dishaJobs"
+    }
+  }
+}

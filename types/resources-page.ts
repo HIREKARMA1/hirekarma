@@ -1,4 +1,5 @@
 import type { HeadingParts, Locale } from "@/types/products-page";
+import type { HrefKey } from "@/lib/config/env";
 
 export type { Locale };
 export type { HeadingParts };
@@ -111,6 +112,7 @@ export interface ResourceArticleContent {
     name: string;
     role: string;
     bio: string;
+    photo?: string;
   };
   sidebar: {
     shareTitle: string;
@@ -119,12 +121,13 @@ export interface ResourceArticleContent {
     relatedProducts: string;
     cta: {
       label: string;
-      hrefKey: "products";
+      hrefKey: HrefKey;
     };
   };
 }
 
 export const RESOURCE_ARTICLE_SLUGS = [
+  "future-proof-careers-for-students-2030",
   "campus-placement-systems-problem",
   "public-grievance-systems-problem",
   "hyperlocal-workforce-systems-problem",

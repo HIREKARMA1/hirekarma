@@ -3,11 +3,30 @@ import { theme } from "@/config/theme";
 import { cn } from "@/lib/utils/cn";
 
 function renderInlineBold(text: string) {
-  const parts = text.split(/(\*\*[^*]+\*\*)/g);
-  return parts.map((part, index) => {
+  const chunks = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+  return chunks.map((chunk, chunkIndex) => {
+    const markdownLink = chunk.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (markdownLink) {
+      const [, label, href] = markdownLink;
+      const isExternal = href.startsWith("http");
+      return (
+        <a
+          key={`md-${chunkIndex}`}
+          href={href}
+          target={isExternal ? "_blank" : undefined}
+          rel={isExternal ? "noopener noreferrer" : undefined}
+          className="font-semibold text-[#00a2e5] underline decoration-[#00a2e5]/70 underline-offset-2 transition hover:text-[#1b52a4] hover:decoration-[#1b52a4]"
+        >
+          {label}
+        </a>
+      );
+    }
+
+    const parts = chunk.split(/(\*\*[^*]+\*\*)/g);
+    return parts.map((part, index) => {
     if (part.startsWith("**") && part.endsWith("**")) {
       return (
-        <strong key={index} className="font-semibold text-gray-900 dark:text-white">
+        <strong key={`${chunkIndex}-${index}`} className="font-semibold text-gray-900 dark:text-white">
           {part.slice(2, -2)}
         </strong>
       );
@@ -16,11 +35,11 @@ function renderInlineBold(text: string) {
     const colonMatch = part.match(/^([^:]+:)(.*)$/);
     if (colonMatch && part.includes(" - ")) {
       return (
-        <span key={index}>
+        <span key={`${chunkIndex}-${index}`}>
           <strong className="font-semibold text-gray-900 dark:text-white">
             {colonMatch[1]}
           </strong>
-          {colonMatch[2]}
+          {renderInlineBold(colonMatch[2])}
         </span>
       );
     }
@@ -28,7 +47,7 @@ function renderInlineBold(text: string) {
     const dashParts = part.split(/(\s-\s)/);
     if (dashParts.length > 1) {
       return (
-        <span key={index}>
+        <span key={`${chunkIndex}-${index}`}>
           {dashParts.map((segment, i) =>
             i === 0 && segment.includes(":") ? (
               <strong key={i} className="font-semibold text-gray-900 dark:text-white">
@@ -42,7 +61,8 @@ function renderInlineBold(text: string) {
       );
     }
 
-    return <span key={index}>{part}</span>;
+    return <span key={`${chunkIndex}-${index}`}>{part}</span>;
+    });
   });
 }
 
@@ -67,7 +87,7 @@ function ParagraphBlock({
           : undefined
       }
     >
-      {text}
+      {renderInlineBold(text)}
     </p>
   );
 }
@@ -85,7 +105,7 @@ function ListBlock({
 
   return (
     <Tag className={listClass}>
-      {items.map((item, index) => (
+        {items?.map((item, index) => (
         <li
           key={index}
           className={cn(
@@ -132,7 +152,11 @@ export function ArticleContentRenderer({
           );
         }
 
-        return <ListBlock key={index} {...block} />;
+        if (block.type === "list") {
+          return <ListBlock key={index} {...block} />;
+        }
+
+        return null;
       })}
     </div>
   );

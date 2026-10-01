@@ -9,6 +9,7 @@ import {
   CircleHelp,
   Code2,
   Compass,
+  Calendar,
   GraduationCap,
   Heart,
   LayoutGrid,
@@ -198,6 +199,22 @@ const aboutMeta: Record<
   },
 };
 
+const eventsMeta: Record<
+  string,
+  { icon: React.ComponentType<{ className?: string }>; accent: string; description: string }
+> = {
+  "campus-drives": {
+    icon: GraduationCap,
+    accent: theme.colors.green,
+    description: "Drives happening on Disha",
+  },
+  upcoming: {
+    icon: Calendar,
+    accent: theme.colors.primary,
+    description: "Open events on Disha",
+  },
+};
+
 const resourcesMeta: Record<
   string,
   { icon: React.ComponentType<{ className?: string }>; accent: string; description: string }
@@ -311,6 +328,21 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
     }),
   };
 
+  const eventsItem: NavigationItem = {
+    label: nav.events.label,
+    href: nav.events.href,
+    dropdownItems: nav.events.items.map((item) => {
+      const meta = eventsMeta[item.id] ?? eventsMeta.upcoming;
+      return {
+        label: item.label,
+        href: item.href,
+        icon: meta.icon,
+        accent: meta.accent,
+        description: meta.description,
+      };
+    }),
+  };
+
   const resourcesItem: NavigationItem = {
     label: nav.resources.label,
     href: nav.resources.href,
@@ -337,7 +369,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
     { type: "link", item: { label: nav.impact.label, href: nav.impact.href } },
     { type: "dropdown", item: resourcesItem },
     { type: "dropdown", item: aboutItem },
-    { type: "link", item: { label: nav.events.label, href: nav.events.href } },
+    { type: "dropdown", item: eventsItem },
     { type: "link", item: { label: nav.contact.label, href: nav.contact.href } },
   ];
 
@@ -368,6 +400,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
           role="menu"
           className="absolute left-1/2 top-full z-50 mt-2 w-[320px] -translate-x-1/2 overflow-hidden rounded-2xl border border-[#e6e8ec] bg-white shadow-[0_20px_50px_rgba(15,22,34,0.14)]"
         >
+          {item.href !== nav.events.href ? (
           <div
             className="flex items-center justify-between border-b border-[#e6e8ec] px-4 py-3"
             style={{
@@ -396,6 +429,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
               <ArrowRight className="h-3 w-3" />
             </Link>
           </div>
+          ) : null}
 
           <div className="p-2">
             {item.dropdownItems.map((dropdownItem) => {

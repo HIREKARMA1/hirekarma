@@ -14,6 +14,10 @@ export interface EventsPageItem {
   venue?: string;
   event_start_date: string;
   status: EventUiStatus;
+  /** When set, Visit opens this URL instead of the Disha event page. */
+  visit_href?: string;
+  /** Campus drives can hide registration while details stay visible. */
+  can_register?: boolean;
 }
 
 export interface CampusDriveItem {
@@ -25,6 +29,8 @@ export interface CampusDriveItem {
   company_logo: string;
   campus_drive_date?: string;
   visit_href: string;
+  /** HireKarma page with the same public details Disha shows. */
+  detail_href: string;
   salary_min?: string;
   salary_max?: string;
   salary_currency?: string;
@@ -55,4 +61,6 @@ export interface EventsPageContent {
   };
   events: EventsPageItem[];
   liveCampusDrives: CampusDriveItem[];
+  /** Published Disha campus-drive programs, including ones that are not live yet. */
+  campusPrograms: EventsPageItem[];
 }

@@ -131,7 +131,19 @@
     "events": {
       "id": "events",
       "label": "Events",
-      "href": "/events"
+      "href": "/events",
+      "items": [
+        {
+          "id": "campus-drives",
+          "label": "Campus Drive",
+          "href": "/events/campus-drives"
+        },
+        {
+          "id": "upcoming",
+          "label": "Upcoming Events",
+          "href": "/events/upcoming"
+        }
+      ]
     },
     "contact": {
       "id": "contact",
