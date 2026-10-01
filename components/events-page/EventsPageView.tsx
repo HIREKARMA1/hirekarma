@@ -191,6 +191,15 @@ function eventStatusRank(status: EventUiStatus) {
   return 2;
 }
 
+function pickFeaturedEvent(items: EventsPageItem[]) {
+  return (
+    items.find((event) => event.status === "live") ??
+    items.find((event) => event.status === "open") ??
+    items.find((event) => event.status === "closed") ??
+    null
+  );
+}
+
 function matchesEventQuery(event: EventsPageItem, needle: string) {
   if (!needle) return true;
   return [
@@ -270,9 +279,24 @@ function LiveNowBanner({
       </div>
       <div className="relative flex flex-col justify-center px-5 py-6 sm:px-8">
         <div className="flex flex-wrap items-center gap-2">
-          <LivePill large />
+          {event.status === "live" ? (
+            <LivePill large />
+          ) : (
+            <span
+              className="rounded-full px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-white"
+              style={{
+                backgroundColor: event.status === "open" ? theme.colors.primary : "#64748b",
+              }}
+            >
+              {event.status === "open" ? "Open" : "Closed"}
+            </span>
+          )}
           <span className="text-[12px] font-semibold uppercase tracking-[0.16em] text-white/70">
-            Happening now
+            {event.status === "live"
+              ? "Happening now"
+              : event.status === "open"
+                ? "Open"
+                : "Closed"}
           </span>
         </div>
         <h2 className="mt-3 text-[1.35rem] font-bold leading-tight tracking-tight text-white sm:text-[1.65rem]">
@@ -549,7 +573,7 @@ export function EventsPageView({
   const drives = liveCampusDrives ?? [];
   const programs = campusPrograms ?? [];
   const [query, setQuery] = useState("");
-  const [eventScope, setEventScope] = useState<"all" | "live" | "open" | "closed">("all");
+  const [eventScope, setEventScope] = useState<"all" | "open" | "closed">("all");
   const needle = query.trim().toLowerCase();
 
   const filteredDrives = useMemo(
@@ -562,10 +586,7 @@ export function EventsPageView({
     [programs, needle]
   );
 
-  const eventSource = useMemo(
-    () => (focus === "overview" ? events : events.filter((event) => event.status !== "closed")),
-    [events, focus]
-  );
+  const eventSource = events;
 
   const searchedEvents = useMemo(
     () => eventSource.filter((event) => matchesEventQuery(event, needle)),
@@ -576,7 +597,6 @@ export function EventsPageView({
     () =>
       searchedEvents
         .filter((event) => {
-          if (eventScope === "live") return event.status === "live";
           if (eventScope === "open") return event.status === "live" || event.status === "open";
           if (eventScope === "closed") return event.status === "closed";
           return true;
@@ -588,22 +608,14 @@ export function EventsPageView({
   const isOverview = focus === "overview";
   const isCampus = focus === "campus";
 
-  const featuredLive =
-    focus === "campus"
-      ? filteredPrograms.find((event) => event.status === "live") ?? null
-      : isOverview
-        ? eventScope === "closed"
-          ? null
-          : searchedEvents.find((event) => event.status === "live") ?? null
-        : eventScope === "open"
-          ? null
-          : searchedEvents.find((event) => event.status === "live") ?? null;
+  const featuredEvent = isCampus ? null : pickFeaturedEvent(events);
+  const featuredProgram = isCampus ? pickFeaturedEvent(programs) : null;
 
   const hasMatches = isOverview
     ? filteredDrives.length > 0 || searchedEvents.length > 0
     : isCampus
       ? filteredPrograms.length > 0
-      : filteredEvents.length > 0 || featuredLive !== null;
+      : searchedEvents.length > 0;
 
   const hero = isOverview
     ? pageHero
@@ -662,6 +674,16 @@ export function EventsPageView({
       </section>
 
       <div className="content-container space-y-5 py-4">
+        {featuredEvent ? (
+          <section>
+            <LiveNowBanner event={featuredEvent} accent={accent} />
+          </section>
+        ) : null}
+        {featuredProgram ? (
+          <section>
+            <LiveNowBanner event={featuredProgram} accent={accent} />
+          </section>
+        ) : null}
         {!hasMatches ? (
           isOverview ? (
             <p className="text-sm text-[#475569]">No matches for this search.</p>
@@ -680,12 +702,6 @@ export function EventsPageView({
           )
         ) : (
           <>
-            {featuredLive && (isOverview || !isCampus || filteredPrograms.some((event) => event.id === featuredLive.id)) ? (
-              <section>
-                <LiveNowBanner event={featuredLive} accent={accent} />
-              </section>
-            ) : null}
-
             {isOverview && filteredDrives.length > 0 ? (
               <CampusDriveBoard
                 drives={filteredDrives}
@@ -748,22 +764,15 @@ export function EventsPageView({
                     onClick={() => setEventScope("all")}
                   />
                   <LocationChip
-                    label="Live"
-                    active={eventScope === "live"}
-                    onClick={() => setEventScope("live")}
-                  />
-                  <LocationChip
                     label="Open"
                     active={eventScope === "open"}
                     onClick={() => setEventScope("open")}
                   />
-                  {isOverview ? (
-                    <LocationChip
-                      label="Closed"
-                      active={eventScope === "closed"}
-                      onClick={() => setEventScope("closed")}
-                    />
-                  ) : null}
+                  <LocationChip
+                    label="Close"
+                    active={eventScope === "closed"}
+                    onClick={() => setEventScope("closed")}
+                  />
                 </div>
 
                 {filteredEvents.length === 0 ? (
