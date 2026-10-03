@@ -38,14 +38,18 @@ function MemberPortrait({
   accent,
   badge,
   badgeDarkText,
+  imagePosition,
+  imageScale,
 }: {
   src: string;
   name: string;
   accent: string;
   badge: string;
   badgeDarkText: boolean;
+  imagePosition?: string;
+  imageScale?: number;
 }) {
-  const [loaded, setLoaded] = useState(false);
+  const [hasError, setHasError] = useState(false);
   const initial = name.trim().charAt(0).toUpperCase() || "?";
 
   return (
@@ -60,22 +64,19 @@ function MemberPortrait({
         className="relative aspect-[3/3.4] overflow-hidden rounded-xl bg-gray-100 shadow-md ring-1 ring-white"
         style={{ outline: `1px solid ${accent}33` }}
       >
-        {src ? (
-          <>
-            <Image
-              src={src}
-              alt={name}
-              fill
-              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 28vw, 14vw"
-              className={`object-cover object-[center_18%] transition duration-500 group-hover:scale-105 ${
-                loaded ? "opacity-100" : "opacity-0"
-              }`}
-              onLoad={() => setLoaded(true)}
-            />
-            {!loaded && (
-              <div className="absolute inset-0 animate-pulse bg-gray-200" />
-            )}
-          </>
+        {src && !hasError ? (
+          <Image
+            src={src}
+            alt={name}
+            fill
+            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 28vw, 14vw"
+            className="object-cover transition duration-500 group-hover:scale-105"
+            style={{
+              objectPosition: imagePosition || "center top",
+              transform: imageScale ? `scale(${imageScale})` : undefined,
+            }}
+            onError={() => setHasError(true)}
+          />
         ) : (
           <div
             className="flex h-full w-full items-center justify-center text-3xl font-bold text-white"
@@ -247,18 +248,14 @@ export default function LeadershipProfilesSection() {
                     accent={accent}
                     badge={member.role}
                     badgeDarkText={tone === "yellow"}
+                    imagePosition={member.imagePosition}
+                    imageScale={member.imageScale}
                   />
 
-                  <div className="mt-5 space-y-1 text-center">
+                  <div className="mt-5 space-y-1.5 text-center">
                     <h3 className="text-sm font-bold text-[#0f1622]">
                       {member.name}
                     </h3>
-                    <p
-                      className="line-clamp-2 text-[11px] font-semibold leading-snug"
-                      style={{ color: accent }}
-                    >
-                      {member.role}
-                    </p>
                     <p className="mx-auto line-clamp-2 max-w-[98%] text-[11px] leading-snug text-gray-600">
                       {member.description}
                     </p>
