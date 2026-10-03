@@ -325,6 +325,8 @@ export interface TeamMember {
   role: LocalizedText;
   category: TeamCategory;
   image: string;
+  imagePosition?: string;
+  imageScale?: number;
   description: LocalizedText;
   socialLinks: {
     linkedin?: string;
@@ -338,6 +340,8 @@ export interface ResolvedTeamMember {
   role: string;
   category: TeamCategory;
   image: string;
+  imagePosition?: string;
+  imageScale?: number;
   description: string;
   socialLinks: {
     linkedin?: string;

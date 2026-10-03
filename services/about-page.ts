@@ -46,6 +46,8 @@ export function getTeamMembers(locale: Locale): ResolvedTeamMember[] {
     role: pickLocalized(member.role, locale),
     category: member.category,
     image: member.image,
+    imagePosition: member.imagePosition,
+    imageScale: member.imageScale,
     description: pickLocalized(member.description, locale),
     socialLinks: member.socialLinks,
   }));
