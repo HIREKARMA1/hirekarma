@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowUpRight, Calendar, MapPin, Search } from "lucide-react";
 
 import { NameCover } from "@/components/events-page/NameCover";
+import { CampusDriveHero } from "@/components/events-page/CampusDriveHero";
 
 import { theme } from "@/config/theme";
 import { env } from "@/lib/config/env";
@@ -573,6 +574,9 @@ export function EventsPageView({
   const drives = liveCampusDrives ?? [];
   const programs = campusPrograms ?? [];
   const [query, setQuery] = useState("");
+  const [heroTab, setHeroTab] = useState<"campus" | "upcoming">(
+    focus === "campus" ? "campus" : focus === "upcoming" ? "upcoming" : "campus"
+  );
   const [eventScope, setEventScope] = useState<"all" | "open" | "closed">("all");
   const needle = query.trim().toLowerCase();
 
@@ -673,17 +677,13 @@ export function EventsPageView({
         </div>
       </section>
 
-      <div className="content-container space-y-5 py-4">
-        {featuredEvent ? (
-          <section>
-            <LiveNowBanner event={featuredEvent} accent={accent} />
-          </section>
-        ) : null}
-        {featuredProgram ? (
-          <section>
-            <LiveNowBanner event={featuredProgram} accent={accent} />
-          </section>
-        ) : null}
+      <div className="content-container space-y-6 py-5">
+        <CampusDriveHero
+          drives={drives}
+          featuredEvents={events}
+          activeTab={heroTab}
+          onTabChange={setHeroTab}
+        />
         {!hasMatches ? (
           isOverview ? (
             <p className="text-sm text-[#475569]">No matches for this search.</p>
