@@ -11,7 +11,7 @@
       "od": "ପ୍ରତିଷ୍ଠାତା ଏବଂ CEO"
     },
     "category": "leadership",
-    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/SohanKumarDey.jpg",
+    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Teams_images/sohan_sir.png",
     "description": {
       "en": "Sets HireKarma's vision and drives strategy across placements, products, and partnerships.",
       "hi": "HireKarma की दृष्टि निर्धारित करते हैं और प्लेसमेंट, उत्पादों व साझेदारियों में रणनीति चलाते हैं।",
@@ -35,7 +35,7 @@
       "od": "ପ୍ରତିଷ୍ଠାତା, CMO ଏବଂ COO"
     },
     "category": "leadership",
-    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Rohit.jpg",
+    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Teams_images/Rohit_sir.png",
     "description": {
       "en": "Builds brand, operations, and go-to-market engines that connect talent with opportunity.",
       "hi": "ब्रांड, संचालन और गो-टू-मार्केट इंजन बनाते हैं जो प्रतिभा को अवसर से जोड़ते हैं।",
@@ -74,9 +74,9 @@
   
   {
     "name": {
-      "en": "Lokanath Panda",
-      "hi": "लोकनाथ पांडा",
-      "od": "ଲୋକନାଥ ପଣ୍ଡା"
+      "en": "Akash Kumar Sahu",
+      "hi": "आकाश कुमार साहू",
+      "od": "ଆକାଶ କୁମାର ସାହୁ"
     },
     "role": {
       "en": "Lead Engineer",
@@ -84,16 +84,16 @@
       "od": "ଲିଡ୍ ଇଞ୍ଜିନିୟର୍"
     },
     "category": "core",
-    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/LokanathPanda.jpg",
+    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Teams_images/akash_bhai.png",
     "description": {
       "en": "Leading the development team with a focus on building scalable softwares, integrating innovative technologies, and ensuring smooth digital transformation for Hirekarma's platform.",
       "hi": "डेवलपमेंट टीम का नेतृत्व - स्केलेबल सॉफ़्टवेयर निर्माण, नवीन तकनीक एकीकरण, और HireKarma प्लेटफ़ॉर्म के सुचारू डिजिटल ट्रांसफ़ॉर्मेशन पर ध्यान।",
       "od": "ଡେଭଲପମେଣ୍ଟ ଟିମର ନେତୃତ୍ୱ - ସ୍କେଲେବଲ ସଫ୍ଟୱେର ନିର୍ମାଣ, ନବାଚାର ପ୍ରଯୁକ୍ତି ଏକୀକରଣ, ଏବଂ HireKarma ପ୍ଲାଟଫର୍ମର ସୁଚାରୁ ଡିଜିଟାଲ ରୂପାନ୍ତରଣ ଉପରେ ଧ୍ୟାନ।"
     },
     "socialLinks": {
-      "linkedin": "https://www.linkedin.com/in/lokanath-panda-642193238/",
-      "instagram": "https://www.instagram.com/lokanathpanda7/",
-      "email": "mailto:lokanath@hirekarma.in"
+      "linkedin": "https://www.linkedin.com/in/akashkumarsahu915/",
+      "instagram": "",
+      "email": "mailto:akash@hirekarma.in"
     }
   },
   {
@@ -108,7 +108,8 @@
       "od": "ଅର୍ଥ ଏବଂ ହିସାବ କାର୍ଯ୍ୟନିର୍ବାହୀ (FO)"
     },
     "category": "core",
-    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/GANESH+CHANDRA+DEY.jpg",
+    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Teams_images/ganesh_sir.png",
+    "imagePosition": "center top",
     "description": {
       "en": "Manage finance, procurement, payments, vendors, compliance, reporting, operations efficiently",
       "hi": "वित्त, खरीद, भुगतान, विक्रेता, अनुपालन, रिपोर्टिंग और संचालन का कुशल प्रबंधन",
@@ -122,9 +123,9 @@
   },
   {
     "name": {
-      "en": "Sushree Sagarika Padhy",
-      "hi": "सुश्री सागरिका पढ़ी",
-      "od": "ସୁଶ୍ରୀ ସାଗରିକା ପାଢ଼ୀ"
+      "en": "Santanu Kumar Kar",
+      "hi": "शांतनु कुमार कर",
+      "od": "ଶାନ୍ତନୁ କୁମାର କର"
     },
     "role": {
       "en": "Head, Campus Drive",
@@ -132,16 +133,16 @@
       "od": "ହେଡ୍, କ୍ୟାମ୍ପସ୍ ଡ୍ରାଇଭ୍"
     },
     "category": "core",
-    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Sagarika+Padhy.jpg",
+    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Teams_images/Shantanu.png",
     "description": {
       "en": "Leads campus hiring and college partnerships that turn relationships into placements.",
       "hi": "कैंपस हायरिंग और कॉलेज साझेदारियों का नेतृत्व - संबंधों को प्लेसमेंट में बदलना।",
       "od": "କ୍ୟାମ୍ପସ୍ ହାୟରିଂ ଏବଂ କଲେଜ ସହଭାଗିତାର ନେତୃତ୍ୱ - ସମ୍ପର୍କକୁ ପ୍ଲେସମେଣ୍ଟରେ ରୂପାନ୍ତର।"
     },
     "socialLinks": {
-      "linkedin": "https://www.linkedin.com/in/shankar-kesanupalli-31a33693/",
+      "linkedin": "https://www.linkedin.com/in/santanu-kar-0656ba311?utm_source=share_via&utm_content=profile&utm_medium=member_android",
       "instagram": "",
-      "email": "mailto:sushree@hirekarma.in"
+      "email": "mailto:santanu@hirekarma.in"
     }
   },
   {
@@ -171,9 +172,9 @@
   
   {
     "name": {
-      "en": "Anushka Dash",
-      "hi": "अनुष्का दाश",
-      "od": "ଅନୁଷ୍କା ଦାଶ"
+      "en": "Pratiksha Kerr",
+      "hi": "प्रतीक्षा केर",
+      "od": "ପ୍ରତୀକ୍ଷା କେର"
     },
     "role": {
       "en": "HR Executive",
@@ -181,14 +182,16 @@
       "od": "HR କାର୍ଯ୍ୟନିର୍ବାହୀ"
     },
     "category": "core",
-    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/hirekarma_ui/team/Anushka_Dash.jpeg",
+    "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Teams_images/hr_mam.png",
+    "imagePosition": "center 25%",
+    "imageScale": 1.25,
     "description": {
       "en": "Recruit, manage employees, ensure compliance, support organizational growth.",
       "hi": "भर्ती, कर्मचारी प्रबंधन, अनुपालन सुनिश्चित करना और संगठनात्मक विकास में सहयोग।",
       "od": "ନିଯୁକ୍ତି, କର୍ମଚାରୀ ପରିଚାଳନା, ଅନୁପାଳନ ନିଶ୍ଚିତ କରିବା ଏବଂ ସଂଗଠନିକ ବିକାଶରେ ସହାୟତା।"
     },
     "socialLinks": {
-      "linkedin": "",
+      "linkedin": "https://www.linkedin.com/in/pratiksha-kerr-319672205?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
       "instagram": "",
       "email": "mailto:hr@hirekarma.in"
     }

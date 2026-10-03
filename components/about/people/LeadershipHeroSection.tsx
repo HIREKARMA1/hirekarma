@@ -35,8 +35,6 @@ function MaskedPhoto({
   className?: string;
   sizes?: string;
 }) {
-  const [loaded, setLoaded] = useState(false);
-
   return (
     <div className={`relative overflow-hidden ${className ?? ""}`}>
       <Image
@@ -44,12 +42,8 @@ function MaskedPhoto({
         alt={alt}
         fill
         sizes={sizes}
-        className={`object-cover transition duration-700 ${
-          loaded ? "opacity-100 scale-100" : "opacity-0 scale-105"
-        }`}
-        onLoad={() => setLoaded(true)}
+        className="object-cover transition duration-700"
       />
-      {!loaded && <div className="absolute inset-0 animate-pulse bg-white/10" />}
     </div>
   );
 }
