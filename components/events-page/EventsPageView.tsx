@@ -680,8 +680,9 @@ export function EventsPageView({
       <div className="content-container space-y-6 py-5">
         <CampusDriveHero
           drives={drives}
+          programs={programs}
           featuredEvents={events}
-          activeTab={heroTab}
+          activeTab={focus === "campus" ? "campus" : focus === "upcoming" ? "upcoming" : heroTab}
           onTabChange={setHeroTab}
         />
         {!hasMatches ? (

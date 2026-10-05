@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
+import { CampusDriveDetailView } from "@/components/events-page/CampusDriveDetailView";
 import { NameCover } from "@/components/events-page/NameCover";
 
 function text(value: unknown): string {
@@ -191,48 +192,12 @@ export function JobPublicDetail({
   record: Record<string, unknown>;
   applyHref: string;
 }) {
-  const title = text(record.title) || "Campus drive";
-  const company = text(record.company_name || record.corporate_name) || "Company";
-  const experience =
-    text(record.experience_min) || text(record.experience_max)
-      ? `${text(record.experience_min) || "0"}–${text(record.experience_max) || "+"} yrs`
-      : "";
-  const facts = rows([
-    { label: "Company", value: company },
-    { label: "Salary", value: money(record.salary_min, record.salary_max, record.salary_currency) },
-    { label: "CTC with probation", value: text(record.ctc_with_probation) },
-    { label: "CTC after probation", value: text(record.ctc_after_probation) },
-    { label: "Job type", value: text(record.job_type).replace(/_/g, " ") },
-    { label: "Work mode", value: text(record.mode_of_work) },
-    { label: "Location", value: text(record.location) },
-    { label: "Experience", value: experience },
-    { label: "Openings", value: text(record.number_of_openings) },
-    { label: "Campus drive date", value: when(record.campus_drive_date) },
-    { label: "Industry", value: text(record.industry) },
-    { label: "Skills", value: text(record.skills_required) },
-    { label: "Website", value: text(record.company_website) },
-  ]);
-  const blocks = [
-    { title: "Job description", body: text(record.description) },
-    { title: "Responsibilities", body: text(record.responsibilities) },
-    { title: "Requirements", body: text(record.requirements) },
-    { title: "Eligibility", body: text(record.eligibility_criteria) },
-    { title: "Benefits", body: text(record.perks_and_benefits) },
-    { title: "Application process", body: text(record.selection_process) },
-    { title: "About the company", body: text(record.company_description) },
-  ].filter((block) => block.body);
-
   return (
-    <Shell
+    <CampusDriveDetailView
+      record={record}
+      applyHref={applyHref}
       backHref="/events/campus-drives"
       backLabel="Back to campus drives"
-      image={text(record.company_logo)}
-      imageName={company}
-      title={title}
-      subtitle={company}
-      applyHref={applyHref}
-      facts={facts}
-      blocks={blocks}
     />
   );
 }
@@ -244,54 +209,16 @@ export function ProgramPublicDetail({
   record: Record<string, unknown>;
   applyHref: string;
 }) {
-  const title = text(record.title) || "Campus drive";
-  const facts = rows([
-    { label: "Category", value: text(record.category) },
-    { label: "Mode", value: text(record.mode) },
-    { label: "Venue", value: text(record.venue) },
-    { label: "Starts", value: when(record.event_start_date) },
-    { label: "Ends", value: when(record.event_end_date) },
-    { label: "Registration starts", value: when(record.registration_start_date) },
-    { label: "Registration ends", value: when(record.registration_end_date) },
-    { label: "Organizer", value: text(record.organizer_name) },
-    { label: "Organizer email", value: text(record.organizer_email) },
-    { label: "Organizer phone", value: text(record.organizer_phone) },
-    { label: "Website", value: text(record.organizer_website) },
-  ]);
-  const jobs = Array.isArray(record.jobs) ? record.jobs : [];
-  const jobLines = jobs
-    .map((job) => {
-      if (!job || typeof job !== "object") return "";
-      const row = job as Record<string, unknown>;
-      return text(row.title || row.company_name);
-    })
-    .filter(Boolean)
-    .join("\n");
-  const blocks = [
-    { title: "Summary", body: text(record.short_description || record.subtitle) },
-    { title: "Description", body: text(record.long_description) },
-    { title: "Eligibility", body: text(record.eligibility) },
-    { title: "Selected jobs", body: jobLines },
-    { title: "About the organizer", body: text(record.about_organizer) },
-    ...listBlocks(record, "rounds", "Rounds"),
-    ...listBlocks(record, "rewards", "Rewards"),
-    ...listBlocks(record, "faqs", "FAQs"),
-  ].filter((block) => block.body);
-
   return (
-    <Shell
+    <CampusDriveDetailView
+      record={record}
+      applyHref={applyHref}
       backHref="/events/campus-drives"
       backLabel="Back to campus drives"
-      image={text(record.banner_url || record.organizer_logo_url)}
-      imageName={title}
-      title={title}
-      subtitle={text(record.subtitle)}
-      applyHref={applyHref}
-      facts={facts}
-      blocks={blocks}
     />
   );
 }
+
 
 export function DetailMissing({ backHref, backLabel }: { backHref: string; backLabel: string }) {
   return (
