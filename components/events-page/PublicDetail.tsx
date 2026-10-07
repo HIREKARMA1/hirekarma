@@ -60,8 +60,6 @@ function ApplyLink({ href }: { href: string }) {
 }
 
 function Shell({
-  backHref,
-  backLabel,
   image,
   imageName,
   title,
@@ -70,8 +68,6 @@ function Shell({
   facts,
   blocks,
 }: {
-  backHref: string;
-  backLabel: string;
   image?: string;
   imageName: string;
   title: string;
@@ -83,12 +79,14 @@ function Shell({
   return (
     <main className="min-h-screen bg-[#f6f8fb]">
       <div className="content-container space-y-5 py-6">
-        <Link href={backHref} className="text-sm font-semibold text-[#1b52a4] hover:underline">
-          {backLabel}
-        </Link>
         <section className="overflow-hidden rounded-2xl border border-[#e6e8ec] bg-white shadow-sm">
-          <div className="relative aspect-[16/9] max-h-80 w-full bg-[#e8eef8]">
-            <NameCover src={image} name={imageName} className="absolute inset-0 h-full w-full text-3xl" />
+          <div className="relative flex min-h-[200px] w-full items-center justify-center bg-[#e8eef8] sm:min-h-[240px] md:aspect-[16/9] md:max-h-[28rem]">
+            <NameCover
+              src={image}
+              name={imageName}
+              objectFit="contain"
+              className="h-full w-full max-h-[28rem] text-3xl"
+            />
           </div>
           <div className="space-y-4 p-5 sm:p-6">
             <div>
@@ -172,8 +170,6 @@ export function EventPublicDetail({
 
   return (
     <Shell
-      backHref="/events"
-      backLabel="Back to events"
       image={text(record.banner_url || record.organizer_logo_url)}
       imageName={title}
       title={title}

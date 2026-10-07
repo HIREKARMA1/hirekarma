@@ -3,7 +3,20 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Banknote, Calendar, Check, GraduationCap, MapPin, Sparkles, Star } from "lucide-react";
+import {
+  ArrowRight,
+  Banknote,
+  Calendar,
+  Check,
+  ChevronLeft,
+  ChevronRight,
+  GraduationCap,
+  MapPin,
+  Sparkles,
+  Star,
+} from "lucide-react";
+
+const AUTO_SLIDE_MS = 5000;
 
 import { PosterFrame } from "@/components/events-page/PosterFrame";
 import type { CampusDriveItem, EventsPageItem } from "@/types/events-page";
@@ -235,17 +248,17 @@ export function CampusDriveHero({
     setCurrentIndex(0);
   }, [activeTab, slides.length]);
 
-  // Auto slide timer (6s per slide) strictly when there are 2 or more slides and not paused/hovered
+  // Auto slide timer (5s per slide) when 2+ slides and not paused/hovered
   useEffect(() => {
     if (isHovered || isPaused || slides.length <= 1) return;
     timerRef.current = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % slides.length);
-    }, 6000);
+    }, AUTO_SLIDE_MS);
 
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
-  }, [slides.length, isHovered, isPaused]);
+  }, [slides.length, isHovered, isPaused, currentIndex]);
 
   const showToast = (msg: string) => {
     setToastMessage(msg);
@@ -269,15 +282,42 @@ export function CampusDriveHero({
     showToast(`Redirecting to registration for ${currentSlide.co}...`);
   };
 
+  const goPrev = () => {
+    if (slides.length <= 1) return;
+    setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
+  const goNext = () => {
+    if (slides.length <= 1) return;
+    setCurrentIndex((prev) => (prev + 1) % slides.length);
+  };
+
+  const handleHeroKeyDown = (e: React.KeyboardEvent) => {
+    if (slides.length <= 1) return;
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      goPrev();
+    } else if (e.key === "ArrowRight") {
+      e.preventDefault();
+      goNext();
+    }
+  };
+
   return (
     <div className="w-full">
+      <div
+        className="relative w-full px-4 sm:px-5"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        onKeyDown={handleHeroKeyDown}
+        tabIndex={slides.length > 1 ? 0 : undefined}
+        aria-roledescription={slides.length > 1 ? "carousel" : undefined}
+      >
       {/* Main Hero Card (Light Theme - Fixed Dimensions) */}
       <section
         className={`hero relative overflow-hidden rounded-[24px] border border-[#e1e8f4] text-[#0f1b33] transition-all duration-500 ${
           !hasGivenImage ? "no-image" : ""
         }`}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
         style={{
           background: `
             radial-gradient(520px 340px at 88% 20%, rgba(0,162,229,.16) 0, transparent 70%),
@@ -472,6 +512,34 @@ export function CampusDriveHero({
         </div>
       </section>
 
+        {slides.length > 1 && (
+          <>
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                goPrev();
+              }}
+              aria-label="Previous slide"
+              className="absolute left-4 top-[38%] z-30 flex h-9 w-9 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-[#d6e2f5] bg-white/95 text-[#1b52a4] shadow-md backdrop-blur-sm transition hover:bg-white hover:shadow-lg sm:h-10 sm:w-10"
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </button>
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                goNext();
+              }}
+              aria-label="Next slide"
+              className="absolute right-4 top-[38%] z-30 flex h-9 w-9 translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-[#d6e2f5] bg-white/95 text-[#1b52a4] shadow-md backdrop-blur-sm transition hover:bg-white hover:shadow-lg sm:h-10 sm:w-10"
+            >
+              <ChevronRight className="h-5 w-5" />
+            </button>
+          </>
+        )}
+      </div>
+
       {/* Navigation Indicator Dots (Strictly shown only when 2 or more slides exist) */}
       {slides.length > 1 && (
         <div className="mt-3.5 flex items-center justify-center gap-2">
@@ -494,7 +562,7 @@ export function CampusDriveHero({
                     key={`progress-${idx}`}
                     className="absolute inset-0 rounded-full bg-[#1b52a4]/40"
                     style={{
-                      animation: "fillProgress 6s linear forwards",
+                      animation: `fillProgress ${AUTO_SLIDE_MS}ms linear forwards`,
                       transformOrigin: "left",
                     }}
                   />

@@ -4,11 +4,19 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { ArrowUpRight, Calendar, MapPin, Search } from "lucide-react";
 
+import { CardActions } from "@/components/events-page/CardActions";
+import { CampusDriveListingCard } from "@/components/events-page/CampusDriveListingCard";
+import campusDriveCardStyles from "@/components/events-page/CampusDriveListingCard.module.css";
 import { NameCover } from "@/components/events-page/NameCover";
 import { CampusDriveHero } from "@/components/events-page/CampusDriveHero";
 
 import { theme } from "@/config/theme";
 import { env } from "@/lib/config/env";
+import {
+  driveCardCompanyLine,
+  resolveDriveCardLocation,
+  resolveJobCardLocation,
+} from "@/lib/utils/driveCardDisplay";
 import type {
   CampusDriveItem,
   EventMode,
@@ -64,59 +72,6 @@ function eventApplyHref(event: EventsPageItem) {
   return `${base}${join}register=1`;
 }
 
-function CardActions({
-  detailHref,
-  applyHref,
-  detailLabel = "View details",
-  applyLabel = "Apply",
-  paired = false,
-  showApply = true,
-}: {
-  detailHref: string;
-  applyHref: string;
-  detailLabel?: string;
-  applyLabel?: string;
-  paired?: boolean;
-  showApply?: boolean;
-}) {
-  const buttonClass = paired
-    ? "inline-flex flex-1 items-center justify-center rounded-lg px-3 py-2 text-[13px] font-semibold"
-    : "inline-flex items-center rounded-md px-3 py-1.5 text-[12px] font-semibold";
-
-  return (
-    <div className={`mt-auto flex gap-2 pt-3 ${paired ? "" : "flex-wrap"}`}>
-      {detailHref.startsWith("http") ? (
-        <a
-          href={detailHref}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`${buttonClass} border border-[#1b52a4] text-[#1b52a4] transition hover:bg-[#1b52a4]/5`}
-        >
-          {detailLabel}
-        </a>
-      ) : (
-        <Link
-          href={detailHref}
-          className={`${buttonClass} border border-[#1b52a4] text-[#1b52a4] transition hover:bg-[#1b52a4]/5`}
-        >
-          {detailLabel}
-        </Link>
-      )}
-      {showApply ? (
-      <a
-        href={applyHref}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`${buttonClass} gap-1 bg-[#1b52a4] text-white transition hover:brightness-110`}
-      >
-        {applyLabel}
-        {paired ? null : <ArrowUpRight className="h-3.5 w-3.5" />}
-      </a>
-      ) : null}
-    </div>
-  );
-}
-
 function matchesDriveQuery(job: CampusDriveItem, needle: string) {
   if (!needle) return true;
   return (
@@ -126,12 +81,29 @@ function matchesDriveQuery(job: CampusDriveItem, needle: string) {
   );
 }
 
-const JOB_TYPE_LABEL: Record<string, string> = {
-  full_time: "Full-time",
-  part_time: "Part-time",
-  internship: "Internship",
-  contract: "Contract",
-};
+function driveCardLocationProps(
+  raw?: string,
+  mode?: EventMode,
+) {
+  const { display, full } = resolveDriveCardLocation(raw, mode);
+  if (!display) return {};
+  return {
+    locationLabel: display,
+    locationTooltip: full,
+  };
+}
+
+function jobCardLocationProps(job: CampusDriveItem) {
+  const { display, full } = resolveJobCardLocation(
+    job.location,
+    job.mode_of_work,
+  );
+  if (!display) return {};
+  return {
+    locationLabel: display,
+    locationTooltip: full,
+  };
+}
 
 const WORK_MODE_LABEL: Record<string, string> = {
   onsite: "Onsite",
@@ -140,50 +112,19 @@ const WORK_MODE_LABEL: Record<string, string> = {
   hybrid: "Hybrid",
 };
 
-function jobTypeLabel(value?: string) {
-  if (!value) return "";
-  return JOB_TYPE_LABEL[value] ?? value.replace(/_/g, " ");
-}
-
 function workModeLabel(value?: string) {
   if (!value) return "";
   return WORK_MODE_LABEL[value] ?? value.replace(/_/g, " ");
 }
 
-function cityLabel(location?: string) {
-  const value = location?.trim() ?? "";
-  if (!value) return "";
-  return value.split(",")[0]?.trim() ?? value;
-}
-
-function parsePayAmount(value?: string) {
-  if (!value) return null;
-  const amount = Number(value.replace(/,/g, ""));
-  return Number.isFinite(amount) && amount > 0 ? amount : null;
-}
-
-function formatInr(amount: number) {
-  return new Intl.NumberFormat("en-IN", {
-    style: "currency",
-    currency: "INR",
-    maximumFractionDigits: 0,
-  }).format(amount);
-}
-
-function formatCampusPay(job: CampusDriveItem) {
-  const ctc =
-    parsePayAmount(job.ctc_after_probation) ??
-    parsePayAmount(job.ctc_with_probation);
-  if (ctc) return formatInr(ctc);
-
-  const min = parsePayAmount(job.salary_min);
-  const max = parsePayAmount(job.salary_max);
-  if (min && max) {
-    return min === max ? formatInr(min) : `${formatInr(min)} – ${formatInr(max)}`;
-  }
-  if (min) return formatInr(min);
-  if (max) return formatInr(max);
-  return "Not disclosed";
+function jobDriveModeLabel(value?: string) {
+  if (!value) return undefined;
+  const normalized = value.toLowerCase().replace(/-/g, "_");
+  if (normalized === "remote") return "Online";
+  if (normalized === "onsite" || normalized === "offline") return "Offline";
+  if (normalized === "hybrid") return "Hybrid";
+  const label = workModeLabel(value);
+  return label || undefined;
 }
 
 function eventStatusRank(status: EventUiStatus) {
@@ -211,18 +152,6 @@ function matchesEventQuery(event: EventsPageItem, needle: string) {
   ]
     .filter((value): value is string => Boolean(value))
     .some((value) => value.toLowerCase().includes(needle));
-}
-
-function CompactLiveMark() {
-  return (
-    <span className="inline-flex shrink-0 items-center gap-1 text-[10px] font-bold uppercase tracking-wide text-[#1b52a4]">
-      <span className="relative flex h-1.5 w-1.5">
-        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#1b52a4]/70" />
-        <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#1b52a4]" />
-      </span>
-      Live
-    </span>
-  );
 }
 
 function LivePill({ large = false }: { large?: boolean }) {
@@ -384,7 +313,7 @@ function CampusDriveBoard({
           No campus drives to show right now.
         </p>
       ) : (
-        <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
+        <div className={`mt-4 ${campusDriveCardStyles.campusDriveGrid}`}>
           {visible.map((job) => (
             <CampusDriveCard key={job.id} job={job} />
           ))}
@@ -419,38 +348,57 @@ function LocationChip({
 }
 
 function CampusDriveCard({ job }: { job: CampusDriveItem }) {
-  const pay = formatCampusPay(job);
-  const details = [
-    cityLabel(job.location),
-    job.campus_drive_date ? formatEventDate(job.campus_drive_date) : "",
-    jobTypeLabel(job.job_type),
-    workModeLabel(job.mode_of_work),
-  ]
-    .filter(Boolean)
-    .join(" · ");
-
   return (
-    <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-[#e6e8ec] bg-white shadow-[0_4px_14px_rgba(15,22,34,0.04)] transition hover:-translate-y-1 hover:border-[#1b52a4]/40 hover:shadow-[0_14px_28px_rgba(27,82,164,0.12)]">
-      <div className="relative aspect-video bg-[#e8eef8]">
-        <NameCover
-          src={job.company_logo}
-          name={job.company_name || job.title}
-          className="absolute inset-0 h-full w-full text-2xl"
-        />
-      </div>
-      <div className="flex flex-1 flex-col gap-1.5 p-4">
-        <div className="flex items-start gap-2">
-          <h3 className="min-w-0 flex-1 text-[15px] font-bold leading-snug text-[#0f1622]">
-            {job.title}
-          </h3>
-          <CompactLiveMark />
-        </div>
-        <p className="text-xs text-[#64748b]">{job.company_name}</p>
-        <p className="truncate text-[14px] font-bold leading-tight text-[#1b52a4]">{pay}</p>
-        {details ? <p className="truncate text-[12px] text-[#64748b]">{details}</p> : null}
-        <CardActions detailHref={job.detail_href || "/events/campus-drives"} applyHref={job.visit_href} />
-      </div>
-    </article>
+    <CampusDriveListingCard
+      brandName={job.company_name || job.title}
+      title={job.title}
+      companyLine={driveCardCompanyLine({
+        title: job.title,
+        companyName: job.company_name,
+      })}
+      imageSrc={job.company_logo}
+      imageAlt={`${job.company_name} campus drive`}
+      dateIso={job.campus_drive_date}
+      {...jobCardLocationProps(job)}
+      modeLabel={jobDriveModeLabel(job.mode_of_work)}
+      detailHref={job.detail_href || "/events/campus-drives"}
+      applyHref={job.visit_href}
+      detailLabel="View Details"
+      applyLabel="Register"
+    />
+  );
+}
+
+function CampusProgramCard({ event }: { event: EventsPageItem }) {
+  const isCampusVisit = event.visit_href?.includes("/campus-drives/");
+  return (
+    <CampusDriveListingCard
+      brandName={
+        driveCardCompanyLine({
+          title: event.title,
+          organizerName: event.organizer_name,
+          subtitle: event.subtitle,
+        }) || event.title
+      }
+      title={event.title}
+      companyLine={driveCardCompanyLine({
+        title: event.title,
+        organizerName: event.organizer_name,
+        subtitle: event.subtitle,
+      })}
+      imageSrc={event.banner_url}
+      imageAlt={event.title}
+      dateIso={event.event_start_date}
+      {...driveCardLocationProps(event.venue, event.mode)}
+      modeLabel={MODE_LABEL[event.mode]}
+      status={event.status}
+      detailHref={eventDetailHref(event)}
+      applyHref={eventApplyHref(event)}
+      detailLabel={isCampusVisit ? "View Details" : "View Event"}
+      applyLabel={isCampusVisit ? "Register" : "Register Event"}
+      paired
+      showApply={event.can_register !== false}
+    />
   );
 }
 
@@ -516,34 +464,6 @@ function EventCard({
         />
       </div>
     </article>
-  );
-}
-
-function SectionSwitch({ focus }: { focus: EventsFocus }) {
-  const items: { id: EventsFocus; label: string; href: string }[] = [
-    { id: "campus", label: "Campus Drive", href: "/events/campus-drives" },
-    { id: "upcoming", label: "Upcoming Events", href: "/events/upcoming" },
-  ];
-
-  return (
-    <div className="mt-4 flex flex-wrap gap-2">
-      {items.map((item) => {
-        const active = focus === item.id;
-        return (
-          <Link
-            key={item.id}
-            href={item.href}
-            className={`rounded-full px-3 py-1.5 text-[12px] font-semibold transition ${
-              active
-                ? "bg-[#1b52a4] text-white"
-                : "border border-[#e6e8ec] bg-[#f6f8fb] text-[#334155] hover:border-[#1b52a4]/35"
-            }`}
-          >
-            {item.label}
-          </Link>
-        );
-      })}
-    </div>
   );
 }
 
@@ -643,41 +563,44 @@ export function EventsPageView({
 
   return (
     <main className="min-h-screen bg-[#f6f8fb]">
-      <section className="border-b border-[#e6e8ec] bg-white">
-        <div className="content-container py-4">
-          <div className="flex flex-col gap-3 lg:flex-row lg:items-start lg:justify-between">
-            <div className="min-w-0">
-              <p
-                className="text-[11px] font-semibold uppercase tracking-[0.2em]"
-                style={{ color: accent }}
-              >
-                {hero.label}
-              </p>
-              <h1 className="mt-1 max-w-xl text-[1.45rem] font-bold leading-tight tracking-tight text-[#0f1622] sm:text-[1.7rem]">
-                <span style={{ color: theme.colors.primary }}>{hero.heading}</span>{" "}
-                {hero.headingAccent}
-              </h1>
-              <p className="mt-1.5 max-w-lg text-sm text-[#64748b]">{hero.description}</p>
-              {isOverview ? null : <SectionSwitch focus={focus} />}
+      {isOverview ? (
+        <section className="border-b border-[#e6e8ec] bg-white">
+          <div className="content-container py-4">
+            <div className="flex flex-col gap-3 lg:flex-row lg:items-start lg:justify-between">
+              <div className="min-w-0">
+                <p
+                  className="text-[11px] font-semibold uppercase tracking-[0.2em]"
+                  style={{ color: accent }}
+                >
+                  {hero.label}
+                </p>
+                <h1 className="mt-1 max-w-xl text-[1.45rem] font-bold leading-tight tracking-tight text-[#0f1622] sm:text-[1.7rem]">
+                  <span style={{ color: theme.colors.primary }}>{hero.heading}</span>{" "}
+                  {hero.headingAccent}
+                </h1>
+                <p className="mt-1.5 max-w-lg text-sm text-[#64748b]">{hero.description}</p>
+              </div>
+
+              <label className="flex w-full shrink-0 items-center gap-3 rounded-full border border-[#e6e8ec] bg-[#f6f8fb] px-4 py-2 shadow-[0_4px_16px_rgba(15,22,34,0.04)] transition focus-within:border-[#1b52a4]/35 focus-within:bg-white lg:mt-1 lg:w-[300px]">
+                <Search className="h-4 w-4 shrink-0 text-[#94a3b8]" />
+                <input
+                  type="search"
+                  value={query}
+                  onChange={(event) => setQuery(event.target.value)}
+                  placeholder={
+                    hero.searchPlaceholder ?? "Search events or campus drives"
+                  }
+                  className="w-full bg-transparent text-[14px] text-[#0f1622] outline-none placeholder:text-[#94a3b8]"
+                />
+              </label>
             </div>
-
-            <label className="flex w-full shrink-0 items-center gap-3 rounded-full border border-[#e6e8ec] bg-[#f6f8fb] px-4 py-2 shadow-[0_4px_16px_rgba(15,22,34,0.04)] transition focus-within:border-[#1b52a4]/35 focus-within:bg-white lg:mt-1 lg:w-[300px]">
-              <Search className="h-4 w-4 shrink-0 text-[#94a3b8]" />
-              <input
-                type="search"
-                value={query}
-                onChange={(event) => setQuery(event.target.value)}
-                placeholder={
-                  hero.searchPlaceholder ?? "Search events or campus drives"
-                }
-                className="w-full bg-transparent text-[14px] text-[#0f1622] outline-none placeholder:text-[#94a3b8]"
-              />
-            </label>
           </div>
-        </div>
-      </section>
+        </section>
+      ) : null}
 
-      <div className="content-container space-y-6 py-5">
+      <div
+        className={`content-container space-y-6 py-5${isOverview ? "" : " pt-6"}`}
+      >
         <CampusDriveHero
           drives={drives}
           programs={programs}
@@ -732,14 +655,9 @@ export function EventsPageView({
                     label="All campus drives"
                   />
                 </div>
-                <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <div className={`mt-5 ${campusDriveCardStyles.campusDriveGrid}`}>
                   {filteredPrograms.map((event) => (
-                    <EventCard
-                      key={event.id}
-                      event={event}
-                      accent={accent}
-                      primary={primary}
-                    />
+                    <CampusProgramCard key={event.id} event={event} />
                   ))}
                 </div>
               </section>
