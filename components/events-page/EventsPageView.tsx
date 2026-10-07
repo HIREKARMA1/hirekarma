@@ -17,6 +17,10 @@ import {
   resolveDriveCardLocation,
   resolveJobCardLocation,
 } from "@/lib/utils/driveCardDisplay";
+import {
+  eventsPageApplyHref,
+  eventsPageDetailHref,
+} from "@/lib/utils/eventsPageLinks";
 import type {
   CampusDriveItem,
   EventMode,
@@ -50,27 +54,8 @@ function formatEventDate(iso: string) {
   });
 }
 
-function visitHref(event: EventsPageItem) {
-  if (event.visit_href) return event.visit_href;
-  return `${CONFIGURED_SITE}/events/${encodeURIComponent(event.slug)}`;
-}
-
-function eventDetailHref(event: EventsPageItem) {
-  if (event.visit_href?.includes("/campus-drives/")) {
-    return event.visit_href;
-  }
-  return `/events/${encodeURIComponent(event.slug)}`;
-}
-
-function eventApplyHref(event: EventsPageItem) {
-  const base = visitHref(event);
-  if (base.includes("register=1")) return base;
-  const join = base.includes("?") ? "&" : "?";
-  if (base.includes("/campus-drives/")) {
-    return `${base}${join}register=1&action=register`;
-  }
-  return `${base}${join}register=1`;
-}
+const eventDetailHref = eventsPageDetailHref;
+const eventApplyHref = eventsPageApplyHref;
 
 function matchesDriveQuery(job: CampusDriveItem, needle: string) {
   if (!needle) return true;
@@ -602,7 +587,6 @@ export function EventsPageView({
         className={`content-container space-y-6 py-5${isOverview ? "" : " pt-6"}`}
       >
         <CampusDriveHero
-          drives={drives}
           programs={programs}
           featuredEvents={events}
           activeTab={focus === "campus" ? "campus" : focus === "upcoming" ? "upcoming" : heroTab}
