@@ -84,6 +84,13 @@ function mapEvent(raw: Record<string, unknown>, siteBase: string): EventsPageIte
         ? stripHtml(raw.subtitle)
         : "";
 
+  const participantCount =
+    typeof raw.participant_count === "number"
+      ? raw.participant_count
+      : typeof raw.registration_count === "number"
+        ? raw.registration_count
+        : undefined;
+
   return {
     id: typeof raw.id === "string" ? raw.id : slug,
     slug,
@@ -102,6 +109,17 @@ function mapEvent(raw: Record<string, unknown>, siteBase: string): EventsPageIte
           : undefined,
     event_start_date:
       typeof raw.event_start_date === "string" ? raw.event_start_date : "",
+    event_end_date:
+      typeof raw.event_end_date === "string" ? raw.event_end_date : undefined,
+    registration_end_date:
+      typeof raw.registration_end_date === "string"
+        ? raw.registration_end_date
+        : undefined,
+    category: typeof raw.category === "string" ? raw.category : undefined,
+    visibility_labels: Array.isArray(raw.visibility_labels)
+      ? raw.visibility_labels.filter((v): v is string => typeof v === "string")
+      : undefined,
+    registration_count: participantCount,
     status: asEventStatus(raw.contest_status, raw.registration_state),
     visit_href: `${siteBase}/events/${encodeURIComponent(slug)}`,
   };
@@ -245,6 +263,11 @@ function mapCampusProgram(raw: Record<string, unknown>, siteBase: string): Event
       : undefined;
   const { full: venueLabel } = resolveDriveCardLocation(venueRaw, mode);
 
+  const jobCount =
+    typeof raw.job_count === "number" && Number.isFinite(raw.job_count)
+      ? raw.job_count
+      : undefined;
+
   return {
     id,
     slug: slug || id,
@@ -257,6 +280,22 @@ function mapCampusProgram(raw: Record<string, unknown>, siteBase: string): Event
     mode,
     venue: venueLabel,
     event_start_date: start,
+    event_end_date: end || undefined,
+    registration_end_date:
+      typeof raw.registration_end_date === "string"
+        ? raw.registration_end_date
+        : undefined,
+    registration_start_date:
+      typeof raw.registration_start_date === "string"
+        ? raw.registration_start_date
+        : undefined,
+    eligibility:
+      typeof raw.eligibility === "string" ? stripHtml(raw.eligibility) : undefined,
+    category: typeof raw.category === "string" ? raw.category : undefined,
+    visibility_labels: Array.isArray(raw.visibility_labels)
+      ? raw.visibility_labels.filter((v): v is string => typeof v === "string")
+      : undefined,
+    job_count: jobCount,
     status: programStatus(start, end, raw.registration_status),
     visit_href: campusDriveVisitHref(slug, siteBase),
     can_register: raw.listing_status !== "hidden",
