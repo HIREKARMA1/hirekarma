@@ -13,6 +13,15 @@ export interface EventsPageItem {
   mode: EventMode;
   venue?: string;
   event_start_date: string;
+  event_end_date?: string;
+  registration_end_date?: string;
+  registration_start_date?: string;
+  eligibility?: string;
+  category?: string;
+  visibility_labels?: string[];
+  job_count?: number;
+  /** Contest events: participant_count from API. */
+  registration_count?: number;
   status: EventUiStatus;
   /** When set, Visit opens this URL instead of the Disha event page. */
   visit_href?: string;
