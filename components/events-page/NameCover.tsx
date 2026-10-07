@@ -13,11 +13,13 @@ export function NameCover({
   name,
   className = "",
   rounded = false,
+  objectFit = "cover",
 }: {
   src?: string | null;
   name: string;
   className?: string;
   rounded?: boolean;
+  objectFit?: "cover" | "contain";
 }) {
   const [failed, setFailed] = useState(false);
   const showImage = Boolean(src) && !failed;
@@ -40,7 +42,7 @@ export function NameCover({
     <img
       src={src || ""}
       alt=""
-      className={`object-cover ${rounded ? "rounded-xl" : ""} ${className}`}
+      className={`${objectFit === "contain" ? "object-contain object-center" : "object-cover"} ${rounded ? "rounded-xl" : ""} ${className}`}
       onError={() => setFailed(true)}
     />
   );

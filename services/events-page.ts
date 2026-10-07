@@ -1,5 +1,6 @@
 import fallbackContent from "@/data/events-page/en.json";
 import { env } from "@/lib/config/env";
+import { resolveDriveCardLocation } from "@/lib/utils/driveCardDisplay";
 import type {
   CampusDriveItem,
   EventMode,
@@ -93,7 +94,12 @@ function mapEvent(raw: Record<string, unknown>, siteBase: string): EventsPageIte
     organizer_name:
       typeof raw.organizer_name === "string" ? raw.organizer_name : undefined,
     mode: asMode(raw.mode),
-    venue: typeof raw.venue === "string" ? raw.venue : undefined,
+    venue:
+      typeof raw.venue === "string" && raw.venue.trim()
+        ? raw.venue.trim()
+        : typeof raw.place === "string" && raw.place.trim()
+          ? raw.place.trim()
+          : undefined,
     event_start_date:
       typeof raw.event_start_date === "string" ? raw.event_start_date : "",
     status: asEventStatus(raw.contest_status, raw.registration_state),
@@ -232,6 +238,13 @@ function mapCampusProgram(raw: Record<string, unknown>, siteBase: string): Event
         ? stripHtml(raw.subtitle)
         : "";
 
+  const mode = asMode(raw.mode);
+  const venueRaw =
+    typeof raw.venue === "string" && raw.venue.trim()
+      ? raw.venue.trim()
+      : undefined;
+  const { full: venueLabel } = resolveDriveCardLocation(venueRaw, mode);
+
   return {
     id,
     slug: slug || id,
@@ -241,8 +254,8 @@ function mapCampusProgram(raw: Record<string, unknown>, siteBase: string): Event
     banner_url: typeof raw.banner_url === "string" ? raw.banner_url : "",
     organizer_name:
       typeof raw.organizer_name === "string" ? raw.organizer_name : undefined,
-    mode: asMode(raw.mode),
-    venue: typeof raw.venue === "string" ? raw.venue : undefined,
+    mode,
+    venue: venueLabel,
     event_start_date: start,
     status: programStatus(start, end, raw.registration_status),
     visit_href: campusDriveVisitHref(slug, siteBase),
