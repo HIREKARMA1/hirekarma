@@ -88,7 +88,10 @@ export function CampusDriveListingCard({
   const showImg = Boolean(imageSrc?.trim()) && !imgFailed;
   const dateParts = driveDateParts(dateIso);
   const isOpen = status === "live" || status === "open";
+  const isUpcoming = status === "upcoming";
   const registerDisabled = status === "closed";
+  const tagLabel = isUpcoming ? "UPCOMING" : isOpen ? "OPEN" : "CLOSED";
+  const tagClass = isUpcoming ? styles.dtTagUpcoming : isOpen ? styles.dtTagOpen : "";
 
   const dateAria = dateParts
     ? `Drive date ${dateParts.day} ${dateParts.month} ${dateParts.year}`
@@ -118,10 +121,8 @@ export function CampusDriveListingCard({
           </div>
         )}
         {status ? (
-          <span
-            className={`${styles.dtTag} ${isOpen ? styles.dtTagOpen : ""}`}
-          >
-            {isOpen ? "OPEN" : "CLOSED"}
+          <span className={`${styles.dtTag} ${tagClass}`}>
+            {tagLabel}
           </span>
         ) : null}
       </div>

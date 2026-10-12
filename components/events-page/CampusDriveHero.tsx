@@ -66,11 +66,21 @@ export function CampusDriveHero({
 
   const slides: HeroDriveSlide[] = useMemo(() => {
     if (activeTab === "campus") {
-      const livePrograms = programs.filter(
-        (prog) => prog.status === "live" || prog.status === "open",
-      );
-      if (livePrograms.length > 0) {
-        return livePrograms
+      const bannerRank = { live: 0, open: 1, upcoming: 2, closed: 3 };
+      const bannerPrograms = programs
+        .filter(
+          (prog) =>
+            prog.status === "live" ||
+            prog.status === "open" ||
+            prog.status === "upcoming",
+        )
+        .sort((a, b) => {
+          const rank = bannerRank[a.status] - bannerRank[b.status];
+          if (rank !== 0) return rank;
+          return Date.parse(a.event_start_date) - Date.parse(b.event_start_date);
+        });
+      if (bannerPrograms.length > 0) {
+        return bannerPrograms
           .map((prog) => slideFromCampusProgram(prog))
           .filter((slide) => slide.title.length > 0);
       }
@@ -191,8 +201,18 @@ export function CampusDriveHero({
               {currentSlide.statusPill ? (
                 <div className="live inline-flex items-center gap-2 rounded-full border border-[#d6e2f5] bg-white/80 px-3 py-1 text-xs font-semibold text-[#1b52a4] shadow-sm backdrop-blur-md">
                   <span className="relative flex h-2 w-2">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#ff5a4d] opacity-75" />
-                    <span className="relative inline-flex h-2 w-2 rounded-full bg-[#ff5a4d]" />
+                    {currentSlide.status === "live" ? (
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#ff5a4d] opacity-75" />
+                    ) : null}
+                    <span
+                      className={`relative inline-flex h-2 w-2 rounded-full ${
+                        currentSlide.status === "upcoming"
+                          ? "bg-[#f59e0b]"
+                          : currentSlide.status === "open"
+                            ? "bg-[#098855]"
+                            : "bg-[#ff5a4d]"
+                      }`}
+                    />
                   </span>
                   <span>{currentSlide.statusPill}</span>
                 </div>

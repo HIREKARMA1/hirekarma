@@ -1,8 +1,8 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
-import { ArrowUpRight, Calendar, MapPin, Search } from "lucide-react";
+import { ArrowUpRight, Calendar, ChevronLeft, ChevronRight, MapPin, Search } from "lucide-react";
 
 import { CardActions } from "@/components/events-page/CardActions";
 import { CampusDriveListingCard } from "@/components/events-page/CampusDriveListingCard";
@@ -452,6 +452,137 @@ function EventCard({
   );
 }
 
+function ClosedProgramRow({ programs }: { programs: EventsPageItem[] }) {
+  const scrollerRef = useRef<HTMLDivElement>(null);
+  const paused = useRef(false);
+
+  const scrollByCard = (direction: 1 | -1) => {
+    const scroller = scrollerRef.current;
+    if (!scroller) return;
+    const card = scroller.firstElementChild as HTMLElement | null;
+    const styles = window.getComputedStyle(scroller);
+    const gap = Number.parseFloat(styles.columnGap || styles.gap) || 0;
+    const step = (card?.offsetWidth || scroller.clientWidth) + gap;
+    const max = scroller.scrollWidth - scroller.clientWidth;
+    if (direction === 1 && scroller.scrollLeft >= max - 4) {
+      scroller.scrollTo({ left: 0, behavior: "smooth" });
+      return;
+    }
+    if (direction === -1 && scroller.scrollLeft <= 4) {
+      scroller.scrollTo({ left: max, behavior: "smooth" });
+      return;
+    }
+    scroller.scrollBy({ left: direction * step, behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const timer = window.setInterval(() => {
+      const scroller = scrollerRef.current;
+      if (paused.current || !scroller || scroller.scrollWidth <= scroller.clientWidth + 8) return;
+      scrollByCard(1);
+    }, 3500);
+    return () => window.clearInterval(timer);
+  }, [programs.length]);
+
+  return (
+    <div
+      className="relative"
+      onMouseEnter={() => {
+        paused.current = true;
+      }}
+      onMouseLeave={() => {
+        paused.current = false;
+      }}
+    >
+      {programs.length > 1 ? (
+        <button
+          type="button"
+          aria-label="Previous closed drives"
+          onClick={() => scrollByCard(-1)}
+          className="absolute left-0 top-1/2 z-10 inline-flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-[#e3e8f0] bg-white text-[#0f1622] shadow-md"
+        >
+          <ChevronLeft className="h-4 w-4" />
+        </button>
+      ) : null}
+      <div
+        ref={scrollerRef}
+        className="flex gap-6 overflow-x-auto scroll-smooth px-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      >
+        {programs.map((event) => (
+          <div key={event.id} className="w-[min(100%,340px)] shrink-0">
+            <CampusProgramCard event={event} />
+          </div>
+        ))}
+      </div>
+      {programs.length > 1 ? (
+        <button
+          type="button"
+          aria-label="Next closed drives"
+          onClick={() => scrollByCard(1)}
+          className="absolute right-0 top-1/2 z-10 inline-flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-[#e3e8f0] bg-white text-[#0f1622] shadow-md"
+        >
+          <ChevronRight className="h-4 w-4" />
+        </button>
+      ) : null}
+    </div>
+  );
+}
+
+function CampusProgramSections({ programs }: { programs: EventsPageItem[] }) {
+  const open = programs.filter((event) => event.status === "live" || event.status === "open");
+  const upcoming = programs.filter((event) => event.status === "upcoming");
+  const closed = programs.filter((event) => event.status === "closed");
+
+  return (
+    <div className="space-y-10">
+      {open.length > 0 ? (
+        <section>
+          <h2 className="flex items-center gap-2 text-lg font-bold tracking-tight text-[#0f1622] sm:text-xl">
+            <span className="inline-block h-2 w-2 rounded-full bg-[#098855]" aria-hidden />
+            Open now
+          </h2>
+          <p className="mt-1 text-sm text-[#64748b]">
+            These drives are open today. Register while they are available.
+          </p>
+          <div className={`mt-5 ${campusDriveCardStyles.campusDriveGrid}`}>
+            {open.map((event) => (
+              <CampusProgramCard key={event.id} event={event} />
+            ))}
+          </div>
+        </section>
+      ) : null}
+      {upcoming.length > 0 ? (
+        <section>
+          <h2 className="flex items-center gap-2 text-lg font-bold tracking-tight text-[#0f1622] sm:text-xl">
+            <span className="inline-block h-2 w-2 rounded-full bg-[#f59e0b]" aria-hidden />
+            Upcoming
+          </h2>
+          <p className="mt-1 text-sm text-[#64748b]">
+            These drives start on a later date. You can view the details until then.
+          </p>
+          <div className={`mt-5 ${campusDriveCardStyles.campusDriveGrid}`}>
+            {upcoming.map((event) => (
+              <CampusProgramCard key={event.id} event={event} />
+            ))}
+          </div>
+        </section>
+      ) : null}
+      {closed.length > 0 ? (
+        <section>
+          <h2 className="text-lg font-bold tracking-tight text-[#0f1622] sm:text-xl">Closed drives</h2>
+          <p className="mt-1 text-sm text-[#64748b]">
+            Registration is over. You can still view details.
+          </p>
+          <div className="mt-5">
+            <ClosedProgramRow programs={closed} />
+          </div>
+        </section>
+      ) : null}
+    </div>
+  );
+}
+
 function DishaListingLink({ href, label }: { href: string; label: string }) {
   return (
     <a
@@ -534,7 +665,7 @@ export function EventsPageView({
           heading: campusDrives.heading || "Campus drives",
           headingAccent: campusDrives.headingAccent,
           description:
-            "Live drives stay up front. Visit opens that drive on Disha, and All campus drives opens the full Disha list.",
+            "Open and upcoming drives stay on the banner. Visit opens that drive on Disha.",
           searchPlaceholder: "Search campus drives",
         }
       : {
@@ -624,27 +755,7 @@ export function EventsPageView({
             ) : null}
 
             {isCampus && filteredPrograms.length > 0 ? (
-              <section id="all-campus-drives">
-                <div className="flex flex-wrap items-end justify-between gap-3">
-                  <div>
-                    <h2 className="text-lg font-bold tracking-tight text-[#0f1622] sm:text-xl">
-                      All campus drives
-                    </h2>
-                    <p className="mt-1 text-sm text-[#64748b]">
-                      Every published campus drive from Disha. Visit opens it there.
-                    </p>
-                  </div>
-                  <DishaListingLink
-                    href={`${CONFIGURED_SITE}/campus-drives`}
-                    label="All campus drives"
-                  />
-                </div>
-                <div className={`mt-5 ${campusDriveCardStyles.campusDriveGrid}`}>
-                  {filteredPrograms.map((event) => (
-                    <CampusProgramCard key={event.id} event={event} />
-                  ))}
-                </div>
-              </section>
+              <CampusProgramSections programs={filteredPrograms} />
             ) : null}
 
             {!isCampus && searchedEvents.length > 0 ? (
