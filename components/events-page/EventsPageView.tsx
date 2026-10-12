@@ -538,7 +538,10 @@ function CampusProgramSections({ programs }: { programs: EventsPageItem[] }) {
     <div className="space-y-10">
       {open.length > 0 ? (
         <section>
-          <h2 className="text-lg font-bold tracking-tight text-[#0f1622] sm:text-xl">Open now</h2>
+          <h2 className="flex items-center gap-2 text-lg font-bold tracking-tight text-[#0f1622] sm:text-xl">
+            <span className="inline-block h-2 w-2 rounded-full bg-[#098855]" aria-hidden />
+            Open now
+          </h2>
           <p className="mt-1 text-sm text-[#64748b]">
             These drives are open today. Register while they are available.
           </p>
