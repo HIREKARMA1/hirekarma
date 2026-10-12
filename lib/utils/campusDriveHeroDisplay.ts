@@ -24,6 +24,7 @@ export interface HeroDriveSlide {
   co: string;
   title: string;
   lede: string;
+  status?: EventUiStatus;
   statusPill?: string;
   tagLabels: string[];
   tiles: HeroTileInfo[];
@@ -81,10 +82,19 @@ function heroTiles(...tiles: (HeroTileInfo | null | undefined)[]) {
 export function heroStatusPill(
   status: EventUiStatus,
   registrationEndIso?: string | null,
+  eventStartIso?: string | null,
 ) {
   if (status === "closed") return "Closed";
-  const base = status === "live" ? "Live now" : "Open for registration";
-  const closes = formatHeroDate(registrationEndIso);
+  if (status === "upcoming") {
+    const starts = formatHeroDate(eventStartIso);
+    return starts ? `Upcoming · Starts ${starts}` : "Upcoming";
+  }
+  const base = status === "live" ? "Live now" : "Open";
+  const closesAt = registrationEndIso ? Date.parse(registrationEndIso) : NaN;
+  const closes =
+    Number.isFinite(closesAt) && closesAt > Date.now()
+      ? formatHeroDate(registrationEndIso)
+      : null;
   if (closes) return `${base} · Closes ${closes}`;
   return base;
 }
@@ -172,7 +182,12 @@ export function slideFromCampusProgram(prog: EventsPageItem): HeroDriveSlide {
     co: company || title,
     title,
     lede,
-    statusPill: heroStatusPill(prog.status, prog.registration_end_date),
+    status: prog.status,
+    statusPill: heroStatusPill(
+      prog.status,
+      prog.registration_end_date,
+      prog.event_start_date,
+    ),
     tagLabels: heroTagsFromProgram(prog),
     tiles,
     img: isValidImageUrl(prog.banner_url)
@@ -266,7 +281,12 @@ export function slideFromUpcomingEvent(evt: EventsPageItem): HeroDriveSlide {
     co: organizer || title,
     title,
     lede,
-    statusPill: heroStatusPill(evt.status, evt.registration_end_date),
+    status: evt.status,
+    statusPill: heroStatusPill(
+      evt.status,
+      evt.registration_end_date,
+      evt.event_start_date,
+    ),
     tagLabels: heroTagsFromProgram(evt),
     tiles,
     img: isValidImageUrl(evt.banner_url) ? evt.banner_url.trim() : undefined,

@@ -69,7 +69,14 @@ function asEventStatus(
 function statusRank(status: EventUiStatus) {
   if (status === "live") return 0;
   if (status === "open") return 1;
-  return 2;
+  if (status === "upcoming") return 2;
+  return 3;
+}
+
+function localDay(value: string | number | Date) {
+  const date = value instanceof Date ? value : new Date(value);
+  if (Number.isNaN(date.getTime())) return NaN;
+  return new Date(date.getFullYear(), date.getMonth(), date.getDate()).getTime();
 }
 
 function mapEvent(raw: Record<string, unknown>, siteBase: string): EventsPageItem | null {
@@ -223,20 +230,20 @@ function asRecordList(value: unknown): Record<string, unknown>[] {
 function programStatus(
   startIso: string,
   endIso: string,
-  registration: unknown
+  _registration?: unknown
 ): EventUiStatus {
-  const now = Date.now();
+  const now = new Date();
+  const today = localDay(now);
+  const startDay = localDay(startIso);
   const start = Date.parse(startIso);
   const end = Date.parse(endIso);
-  if (Number.isFinite(end) && end < now) return "closed";
-  if (
+  if (Number.isFinite(end) && end < now.getTime()) return "closed";
+  if (Number.isFinite(startDay) && startDay > today) return "upcoming";
+  const inWindow =
     Number.isFinite(start) &&
-    start <= now &&
-    (!Number.isFinite(end) || end >= now)
-  ) {
-    return "live";
-  }
-  if (registration === "closed") return "closed";
+    start <= now.getTime() &&
+    (!Number.isFinite(end) || end >= now.getTime());
+  if (inWindow && (startDay === today || Number.isFinite(end))) return "live";
   return "open";
 }
 
