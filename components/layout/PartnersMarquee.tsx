@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 
 import footerPartners from "@/data/footer-partners.json";
 import { theme } from "@/config/theme";
+import { fetchApprovedPartnerLogos } from "@/services/partner-logos";
 
 export type FooterPartner = {
   id: string;
@@ -20,6 +21,8 @@ type PartnersMarqueeProps = {
   durationSeconds?: number;
   /** Match homepage partners: compact white logo chips. */
   uniformChips?: boolean;
+  /** Append logos approved as Active in the Disha admin partner-logo queue. */
+  includeApproved?: boolean;
 };
 
 function PartnerLogo({
@@ -83,14 +86,43 @@ function PartnerLogo({
  * Horizontal partners marquee — logo only.
  * RAF-driven so scroll-reveal / CSS transforms cannot freeze it.
  */
+function mergePartners(base: FooterPartner[], extra: FooterPartner[]) {
+  const seen = new Set(base.map((partner) => partner.logo.trim().toLowerCase()));
+  const merged = [...base];
+  for (const partner of extra) {
+    const key = partner.logo.trim().toLowerCase();
+    if (!key || seen.has(key)) continue;
+    seen.add(key);
+    merged.push(partner);
+  }
+  return merged;
+}
+
 export default function PartnersMarquee({
   partners = footerPartners as FooterPartner[],
   edgeColor = theme.colors.ink,
   baseSpeedSeconds = 5,
   durationSeconds,
   uniformChips = false,
+  includeApproved = false,
 }: PartnersMarqueeProps) {
+  const [approved, setApproved] = useState<FooterPartner[]>([]);
   const [paused, setPaused] = useState(false);
+  const shown = useMemo(
+    () => (includeApproved ? mergePartners(partners, approved) : partners),
+    [includeApproved, partners, approved],
+  );
+
+  useEffect(() => {
+    if (!includeApproved) return;
+    let active = true;
+    fetchApprovedPartnerLogos().then((logos) => {
+      if (active) setApproved(logos);
+    });
+    return () => {
+      active = false;
+    };
+  }, [includeApproved]);
   const trackRef = useRef<HTMLDivElement>(null);
   const firstSetRef = useRef<HTMLDivElement>(null);
   const pausedRef = useRef(false);
@@ -100,13 +132,13 @@ export default function PartnersMarquee({
 
   const speedSeconds = Math.min(
     55,
-    durationSeconds ?? Math.max(28, partners.length * baseSpeedSeconds)
+    durationSeconds ?? Math.max(28, shown.length * baseSpeedSeconds)
   );
 
   useEffect(() => {
     const track = trackRef.current;
     const firstSet = firstSetRef.current;
-    if (!track || !firstSet || !partners.length) return;
+    if (!track || !firstSet || !shown.length) return;
 
     let raf = 0;
     let last = performance.now();
@@ -137,13 +169,13 @@ export default function PartnersMarquee({
 
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [partners, speedSeconds]);
+  }, [shown, speedSeconds]);
 
-  if (!partners.length) return null;
+  if (!shown.length) return null;
 
   return (
     <div
-      className="relative min-w-0 flex-1 overflow-hidden"
+      className="relative min-w-0 max-w-full flex-1 touch-pan-y overflow-hidden"
       style={{
         maskImage:
           "linear-gradient(to right, transparent, #000 8%, #000 92%, transparent)",
@@ -183,7 +215,7 @@ export default function PartnersMarquee({
             className="flex items-center gap-2 sm:gap-2.5"
             aria-hidden={copy === 1}
           >
-            {partners.map((partner) => (
+            {shown.map((partner) => (
               <PartnerLogo
                 key={`${copy}-${partner.id}`}
                 name={partner.name}

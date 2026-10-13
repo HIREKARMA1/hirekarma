@@ -1,4 +1,10 @@
-export type EventMode = "online" | "offline" | "hybrid";
+export type EventMode =
+  | "online"
+  | "offline"
+  | "hybrid"
+  | "virtual"
+  | "oncampus"
+  | "walking";
 export type EventUiStatus = "live" | "open" | "upcoming" | "closed";
 
 /** Same field names as Disha public events — Part B can swap this list for the API. */

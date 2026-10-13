@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import Link from "next/link";
-import { ArrowUpRight, Calendar, ChevronLeft, ChevronRight, MapPin, Search } from "lucide-react";
+import { ArrowUpRight, Calendar, ChevronDown, ChevronLeft, ChevronRight, Filter, MapPin, Search } from "lucide-react";
 
 import { CardActions } from "@/components/events-page/CardActions";
 import { CampusDriveListingCard } from "@/components/events-page/CampusDriveListingCard";
@@ -42,6 +42,9 @@ const MODE_LABEL: Record<EventMode, string> = {
   online: "Online",
   offline: "Offline",
   hybrid: "Hybrid",
+  virtual: "Virtual",
+  oncampus: "Oncampus",
+  walking: "Walking",
 };
 
 function formatEventDate(iso: string) {
@@ -487,7 +490,7 @@ function ClosedProgramRow({ programs }: { programs: EventsPageItem[] }) {
 
   return (
     <div
-      className="relative"
+      className="relative min-w-0 max-w-full overflow-hidden"
       onMouseEnter={() => {
         paused.current = true;
       }}
@@ -507,10 +510,10 @@ function ClosedProgramRow({ programs }: { programs: EventsPageItem[] }) {
       ) : null}
       <div
         ref={scrollerRef}
-        className="flex gap-6 overflow-x-auto scroll-smooth px-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        className="flex w-full min-w-0 max-w-full gap-4 overflow-x-auto overscroll-x-contain scroll-smooth px-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
         {programs.map((event) => (
-          <div key={event.id} className="w-[min(100%,340px)] shrink-0">
+          <div key={event.id} className="w-full min-w-0 max-w-full shrink-0 basis-full sm:basis-auto sm:w-[min(100%,340px)]">
             <CampusProgramCard event={event} />
           </div>
         ))}
@@ -529,22 +532,212 @@ function ClosedProgramRow({ programs }: { programs: EventsPageItem[] }) {
   );
 }
 
-function CampusProgramSections({ programs }: { programs: EventsPageItem[] }) {
+function DriveFilterMenu({
+  label,
+  value,
+  options,
+  open,
+  onOpenChange,
+  onChange,
+}: {
+  label: string;
+  value: string;
+  options: { value: string; label: string }[];
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+  onChange: (value: string) => void;
+}) {
+  const rootRef = useRef<HTMLDivElement>(null);
+  const current = options.find((option) => option.value === value)?.label ?? "";
+
+  useEffect(() => {
+    if (!open) return;
+    const onPointerDown = (event: MouseEvent) => {
+      if (!rootRef.current?.contains(event.target as Node)) onOpenChange(false);
+    };
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") onOpenChange(false);
+    };
+    document.addEventListener("mousedown", onPointerDown);
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("mousedown", onPointerDown);
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [open, onOpenChange]);
+
+  return (
+    <div className="relative min-w-0 w-full sm:min-w-[148px]" ref={rootRef}>
+      <span className="mb-1.5 block text-[11px] font-semibold uppercase tracking-[0.14em] text-[#64748b]">
+        {label}
+      </span>
+      <button
+        type="button"
+        aria-label={label}
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        onClick={() => onOpenChange(!open)}
+        className={`flex h-9 w-full items-center justify-between gap-2 rounded-full border bg-white px-3.5 text-sm font-semibold text-[#0f1622] ${
+          open
+            ? "border-[#1b52a4] shadow-[0_0_0_3px_rgba(27,82,164,0.15)]"
+            : "border-[#e3e8f0] hover:border-[#cbd5e1]"
+        }`}
+      >
+        {current}
+        <ChevronDown
+          className={`h-4 w-4 shrink-0 text-[#64748b] transition ${open ? "rotate-180" : ""}`}
+          aria-hidden
+        />
+      </button>
+      {open ? (
+        <ul
+          role="listbox"
+          aria-label={label}
+          className="absolute right-0 z-30 mt-1.5 w-full min-w-[148px] rounded-2xl border border-[#e3e8f0] bg-white p-1.5 shadow-[0_12px_28px_rgba(15,31,61,0.12)]"
+        >
+          {options.map((option) => {
+            const selected = option.value === value;
+            return (
+              <li key={option.value}>
+                <button
+                  type="button"
+                  role="option"
+                  aria-selected={selected}
+                  onClick={() => {
+                    onChange(option.value);
+                    onOpenChange(false);
+                  }}
+                  className={`w-full rounded-xl px-3 py-2 text-left text-sm font-semibold ${
+                    selected ? "bg-[#1b52a4] text-white" : "text-[#0f1622] hover:bg-[#f1f5f9]"
+                  }`}
+                >
+                  {option.label}
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      ) : null}
+    </div>
+  );
+}
+
+function DriveFilterMenus({
+  driveMode,
+  setDriveMode,
+  driveSort,
+  setDriveSort,
+  driveMenu,
+  setDriveMenu,
+}: {
+  driveMode: "" | "virtual" | "oncampus" | "walking";
+  setDriveMode: (value: "" | "virtual" | "oncampus" | "walking") => void;
+  driveSort: "soonest" | "latest";
+  setDriveSort: (value: "soonest" | "latest") => void;
+  driveMenu: "mode" | "date" | null;
+  setDriveMenu: (value: "mode" | "date" | null) => void;
+}) {
+  return (
+    <div className="grid w-full grid-cols-2 gap-3 sm:flex sm:w-auto">
+      <DriveFilterMenu
+        label="Mode"
+        value={driveMode}
+        open={driveMenu === "mode"}
+        onOpenChange={(next) => setDriveMenu(next ? "mode" : null)}
+        onChange={(value) => setDriveMode(value as "" | "virtual" | "oncampus" | "walking")}
+        options={[
+          { value: "", label: "All" },
+          { value: "virtual", label: "Virtual" },
+          { value: "oncampus", label: "Oncampus" },
+          { value: "walking", label: "Walking" },
+        ]}
+      />
+      <DriveFilterMenu
+        label="Date"
+        value={driveSort}
+        open={driveMenu === "date"}
+        onOpenChange={(next) => setDriveMenu(next ? "date" : null)}
+        onChange={(value) => setDriveSort(value as "soonest" | "latest")}
+        options={[
+          { value: "soonest", label: "Soonest" },
+          { value: "latest", label: "Latest" },
+        ]}
+      />
+    </div>
+  );
+}
+
+function ProgramSectionHead({
+  title,
+  dotClass,
+  description,
+  showFilters,
+  menus,
+}: {
+  title: string;
+  dotClass?: string;
+  description: string;
+  showFilters: boolean;
+  menus: ReactNode;
+}) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="w-full sm:flex sm:items-end sm:justify-between sm:gap-6">
+      <div className="flex items-start justify-between gap-3">
+        <div className="min-w-0 text-left">
+          <h2 className="flex items-center gap-2 text-left text-lg font-bold tracking-tight text-[#0f1622] sm:text-xl">
+            {dotClass ? <span className={`inline-block h-2 w-2 rounded-full ${dotClass}`} aria-hidden /> : null}
+            {title}
+          </h2>
+          <p className="mt-1 text-sm text-[#64748b]">{description}</p>
+        </div>
+        {showFilters ? (
+          <button
+            type="button"
+            className={`inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border shadow-sm sm:hidden ${
+              open
+                ? "border-[#1b52a4] bg-[#1b52a4] text-white"
+                : "border-[#e3e8f0] bg-white text-[#0f1622]"
+            }`}
+            aria-label="Filters"
+            aria-expanded={open}
+            onClick={() => setOpen((value) => !value)}
+          >
+            <Filter className="h-4 w-4" />
+          </button>
+        ) : null}
+      </div>
+      {showFilters ? (
+        <div className={open ? "mt-3 sm:mt-0" : "hidden sm:block"}>{menus}</div>
+      ) : null}
+    </div>
+  );
+}
+
+function CampusProgramSections({
+  programs,
+  menus,
+}: {
+  programs: EventsPageItem[];
+  menus: ReactNode;
+}) {
   const open = programs.filter((event) => event.status === "live" || event.status === "open");
   const upcoming = programs.filter((event) => event.status === "upcoming");
   const closed = programs.filter((event) => event.status === "closed");
+  const filterOn = open.length > 0 ? "open" : upcoming.length > 0 ? "upcoming" : "closed";
 
   return (
     <div className="space-y-10">
       {open.length > 0 ? (
         <section>
-          <h2 className="flex items-center gap-2 text-lg font-bold tracking-tight text-[#0f1622] sm:text-xl">
-            <span className="inline-block h-2 w-2 rounded-full bg-[#098855]" aria-hidden />
-            Open now
-          </h2>
-          <p className="mt-1 text-sm text-[#64748b]">
-            These drives are open today. Register while they are available.
-          </p>
+          <ProgramSectionHead
+            title="Open now"
+            dotClass="bg-[#098855]"
+            description="These drives are open today. Register while they are available."
+            showFilters={filterOn === "open"}
+            menus={menus}
+          />
           <div className={`mt-5 ${campusDriveCardStyles.campusDriveGrid}`}>
             {open.map((event) => (
               <CampusProgramCard key={event.id} event={event} />
@@ -554,13 +747,13 @@ function CampusProgramSections({ programs }: { programs: EventsPageItem[] }) {
       ) : null}
       {upcoming.length > 0 ? (
         <section>
-          <h2 className="flex items-center gap-2 text-lg font-bold tracking-tight text-[#0f1622] sm:text-xl">
-            <span className="inline-block h-2 w-2 rounded-full bg-[#f59e0b]" aria-hidden />
-            Upcoming
-          </h2>
-          <p className="mt-1 text-sm text-[#64748b]">
-            These drives start on a later date. You can view the details until then.
-          </p>
+          <ProgramSectionHead
+            title="Upcoming"
+            dotClass="bg-[#f59e0b]"
+            description="These drives start on a later date. You can view the details until then."
+            showFilters={filterOn === "upcoming"}
+            menus={menus}
+          />
           <div className={`mt-5 ${campusDriveCardStyles.campusDriveGrid}`}>
             {upcoming.map((event) => (
               <CampusProgramCard key={event.id} event={event} />
@@ -570,10 +763,12 @@ function CampusProgramSections({ programs }: { programs: EventsPageItem[] }) {
       ) : null}
       {closed.length > 0 ? (
         <section>
-          <h2 className="text-lg font-bold tracking-tight text-[#0f1622] sm:text-xl">Closed drives</h2>
-          <p className="mt-1 text-sm text-[#64748b]">
-            Registration is over. You can still view details.
-          </p>
+          <ProgramSectionHead
+            title="Closed drives"
+            description="Registration is over. You can still view details."
+            showFilters={filterOn === "closed"}
+            menus={menus}
+          />
           <div className="mt-5">
             <ClosedProgramRow programs={closed} />
           </div>
@@ -614,6 +809,9 @@ export function EventsPageView({
     focus === "campus" ? "campus" : focus === "upcoming" ? "upcoming" : "campus"
   );
   const [eventScope, setEventScope] = useState<"all" | "open" | "closed">("all");
+  const [driveMode, setDriveMode] = useState<"" | "virtual" | "oncampus" | "walking">("");
+  const [driveSort, setDriveSort] = useState<"soonest" | "latest">("soonest");
+  const [driveMenu, setDriveMenu] = useState<"mode" | "date" | null>(null);
   const needle = query.trim().toLowerCase();
 
   const filteredDrives = useMemo(
@@ -625,6 +823,23 @@ export function EventsPageView({
     () => programs.filter((event) => matchesEventQuery(event, needle)),
     [programs, needle]
   );
+
+  const campusProgramsView = useMemo(() => {
+    const matched = driveMode
+      ? programs.filter((event) => event.mode === driveMode)
+      : programs;
+    const direction = driveSort === "latest" ? -1 : 1;
+    return [...matched].sort((a, b) => {
+      const aTime = Date.parse(a.event_start_date);
+      const bTime = Date.parse(b.event_start_date);
+      const aOk = Number.isFinite(aTime);
+      const bOk = Number.isFinite(bTime);
+      if (!aOk && !bOk) return 0;
+      if (!aOk) return 1;
+      if (!bOk) return -1;
+      return (aTime - bTime) * direction;
+    });
+  }, [programs, driveMode, driveSort]);
 
   const eventSource = events;
 
@@ -678,7 +893,7 @@ export function EventsPageView({
         };
 
   return (
-    <main className="min-h-screen bg-[#f6f8fb]">
+    <main className="min-h-screen min-w-0 max-w-full overflow-x-clip bg-[#f6f8fb]">
       {isOverview ? (
         <section className="border-b border-[#e6e8ec] bg-white">
           <div className="content-container py-4">
@@ -718,7 +933,7 @@ export function EventsPageView({
         className={`content-container space-y-6 py-5${isOverview ? "" : " pt-6"}`}
       >
         <CampusDriveHero
-          programs={programs}
+          programs={isCampus ? campusProgramsView : programs}
           featuredEvents={events}
           activeTab={focus === "campus" ? "campus" : focus === "upcoming" ? "upcoming" : heroTab}
           onTabChange={setHeroTab}
@@ -754,22 +969,51 @@ export function EventsPageView({
               />
             ) : null}
 
-            {isCampus && filteredPrograms.length > 0 ? (
-              <CampusProgramSections programs={filteredPrograms} />
+            {isCampus && programs.length > 0 ? (
+              campusProgramsView.length > 0 ? (
+                <CampusProgramSections
+                  programs={campusProgramsView}
+                  menus={
+                    <DriveFilterMenus
+                      driveMode={driveMode}
+                      setDriveMode={setDriveMode}
+                      driveSort={driveSort}
+                      setDriveSort={setDriveSort}
+                      driveMenu={driveMenu}
+                      setDriveMenu={setDriveMenu}
+                    />
+                  }
+                />
+              ) : (
+                <div className="space-y-4">
+                  <ProgramSectionHead
+                    title="Campus drives"
+                    description="No campus drives match these filters."
+                    showFilters
+                    menus={
+                      <DriveFilterMenus
+                        driveMode={driveMode}
+                        setDriveMode={setDriveMode}
+                        driveSort={driveSort}
+                        setDriveSort={setDriveSort}
+                        driveMenu={driveMenu}
+                        setDriveMenu={setDriveMenu}
+                      />
+                    }
+                  />
+                </div>
+              )
             ) : null}
 
             {!isCampus && searchedEvents.length > 0 ? (
               <section id={isOverview ? "all-events" : "upcoming-events"}>
-                <div className="flex flex-wrap items-end justify-between gap-3">
-                  <div>
-                    <h2 className="text-lg font-bold tracking-tight text-[#0f1622] sm:text-xl">
-                      {isOverview ? "All Events" : "Upcoming events"}
-                    </h2>
-                    <p className="mt-1 text-sm text-[#64748b]">
-                      Discover opportunities happening near you
-                    </p>
-                  </div>
-                  <DishaListingLink href={DISHA_EVENT_BASE} label="View all" />
+                <div>
+                  <h2 className="text-lg font-bold tracking-tight text-[#0f1622] sm:text-xl">
+                    {isOverview ? "All Events" : "Upcoming events"}
+                  </h2>
+                  <p className="mt-1 text-sm text-[#64748b]">
+                    Discover opportunities happening near you
+                  </p>
                 </div>
                 <div className="mt-3 flex flex-wrap gap-2">
                   <LocationChip

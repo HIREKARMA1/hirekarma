@@ -14,10 +14,12 @@ function PartnerScrollBand({
   label,
   partners,
   durationSeconds,
+  includeApproved = false,
 }: {
   label: string;
   partners: PartnerLogo[];
   durationSeconds: number;
+  includeApproved?: boolean;
 }) {
   return (
     <div className="space-y-3">
@@ -30,6 +32,7 @@ function PartnerScrollBand({
         }))}
         durationSeconds={durationSeconds}
         uniformChips
+        includeApproved={includeApproved}
       />
     </div>
   );
@@ -78,6 +81,7 @@ export default function Partners() {
             label={partners.corporatePartnersLabel}
             partners={corporates}
             durationSeconds={55}
+            includeApproved
           />
           <div className="flex justify-center pt-1">
             <Link

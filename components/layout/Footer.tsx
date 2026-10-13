@@ -63,7 +63,7 @@ export default function Footer() {
           <p className="shrink-0 text-sm font-medium leading-snug text-white/85 sm:max-w-[200px] lg:max-w-[220px]">
             {footer.partnersNote}
           </p>
-          <PartnersMarquee />
+          <PartnersMarquee includeApproved />
         </div>
       </div>
 
