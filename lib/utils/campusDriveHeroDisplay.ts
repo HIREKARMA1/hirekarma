@@ -39,6 +39,9 @@ const MODE_LABEL: Record<EventMode, string> = {
   online: "Online",
   offline: "Offline",
   hybrid: "Hybrid",
+  virtual: "Virtual",
+  oncampus: "Oncampus",
+  walking: "Walking",
 };
 
 export function cleanHeroTitle(raw: string): string {

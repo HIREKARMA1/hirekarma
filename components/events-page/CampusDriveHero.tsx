@@ -122,10 +122,11 @@ export function CampusDriveHero({
   const currentSlide = slides[currentIndex % slides.length];
   const isCampusType = currentSlide.type === "campus";
   const hasGivenImage = Boolean(currentSlide.img && currentSlide.img.trim().length > 0);
+  const carouselHasPoster = slides.some((slide) => Boolean(slide.img && slide.img.trim().length > 0));
   const stripTiles = currentSlide.tiles;
   const heroLayoutClass = [
     "hero",
-    hasGivenImage ? "has-poster" : "no-image",
+    carouselHasPoster ? "has-poster" : "no-image",
   ].join(" ");
 
   const goPrev = () => {
@@ -152,7 +153,7 @@ export function CampusDriveHero({
   return (
     <div className="w-full">
       <div
-        className="relative w-full px-4 sm:px-5"
+        className="relative w-full min-w-0 max-w-full overflow-x-clip sm:px-5"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         onKeyDown={handleHeroKeyDown}
@@ -197,7 +198,7 @@ export function CampusDriveHero({
         <div className="hero-body flex w-full min-h-0 flex-col">
           <div className="hero-text relative z-20 flex min-w-0 flex-1 flex-col justify-start">
             {/* Live Indicator Pill Row */}
-            <div className="pills flex flex-wrap items-center gap-2.5">
+            <div className="pills flex flex-wrap items-center gap-2.5 max-[639px]:justify-center">
               {currentSlide.statusPill ? (
                 <div className="live inline-flex items-center gap-2 rounded-full border border-[#d6e2f5] bg-white/80 px-3 py-1 text-xs font-semibold text-[#1b52a4] shadow-sm backdrop-blur-md">
                   <span className="relative flex h-2 w-2">
@@ -218,19 +219,19 @@ export function CampusDriveHero({
                 </div>
               ) : null}
               {currentSlide.co ? (
-                <span className="live alt rounded-full border border-[#d6e2f5] bg-[#eef3fb] px-3 py-1 text-xs font-bold text-[#1b52a4]">
+                <span className="live alt inline-block max-w-full truncate rounded-full border border-[#d6e2f5] bg-[#eef3fb] px-3 py-1 text-xs font-bold text-[#1b52a4]">
                   {currentSlide.co}
                 </span>
               ) : null}
             </div>
 
-            <h1 className="hero-title mt-[18px] line-clamp-2 text-[clamp(1.375rem,3vw,2.5rem)] font-extrabold leading-[1.15] tracking-tight text-[#0f1b33]">
+            <h1 className="hero-title mt-[18px] line-clamp-2 min-h-[2.3em] text-[clamp(1.375rem,3vw,2.5rem)] font-extrabold leading-[1.15] tracking-tight text-[#0f1b33] max-[639px]:text-center">
               {currentSlide.title}
             </h1>
 
             {currentSlide.tagLabels.length > 0 ? (
               <ul
-                className="tags-row m-0 mt-3 flex list-none flex-wrap items-center gap-2 p-0"
+                className="tags-row m-0 mt-3 flex list-none flex-wrap items-center gap-2 p-0 max-[639px]:hidden"
                 aria-label="Program tags"
               >
                 {currentSlide.tagLabels.slice(0, HERO_TAG_LIMIT).map((tag, idx) => {
@@ -288,14 +289,14 @@ export function CampusDriveHero({
                   href={currentSlide.detailHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex h-11 w-full min-w-0 items-center justify-center rounded-xl border border-[#c9d8f0] bg-white px-5 text-sm font-bold text-[#1b52a4] shadow-sm transition hover:border-[#1b52a4] hover:bg-[#eef3fb] sm:w-auto"
+                  className="hero-details inline-flex h-11 w-full min-w-0 items-center justify-center rounded-xl border border-[#c9d8f0] bg-white px-5 text-sm font-bold text-[#1b52a4] shadow-sm transition hover:border-[#1b52a4] hover:bg-[#eef3fb] max-[639px]:hidden sm:w-auto"
                 >
                   View details
                 </a>
               ) : (
                 <Link
                   href={currentSlide.detailHref}
-                  className="inline-flex h-11 w-full min-w-0 items-center justify-center rounded-xl border border-[#c9d8f0] bg-white px-5 text-sm font-bold text-[#1b52a4] shadow-sm transition hover:border-[#1b52a4] hover:bg-[#eef3fb] sm:w-auto"
+                  className="hero-details inline-flex h-11 w-full min-w-0 items-center justify-center rounded-xl border border-[#c9d8f0] bg-white px-5 text-sm font-bold text-[#1b52a4] shadow-sm transition hover:border-[#1b52a4] hover:bg-[#eef3fb] max-[639px]:hidden sm:w-auto"
                 >
                   View details
                 </Link>
@@ -303,39 +304,42 @@ export function CampusDriveHero({
             </div>
           </div>
 
-          {/* Right Poster Frame (Interactive Zoom Modal + Registered Bubble) */}
-          {hasGivenImage && currentSlide.img ? (
+          {carouselHasPoster ? (
             <div className="hero-poster relative z-10 shrink-0">
-            <PosterFrame
-              src={currentSlide.img}
-              alt={currentSlide.title}
-              onOpenChange={(isOpen) => setIsPaused(isOpen)}
-            >
-              {currentSlide.posterStat ? (
-                <div className="fc c1">
-                  <span className="pi">
-                    <svg viewBox="0 0 24 24">
-                      <circle cx="9" cy="8" r="3.2" />
-                      <path d="M3 20c0-3.4 2.7-6 6-6s6 2.6 6 6" />
-                      <circle cx="17" cy="9" r="2.4" />
-                      <path d="M16 14.2c3 0 5 2 5 5" />
-                    </svg>
-                  </span>
-                  <div className="leading-tight">
-                    <span>{currentSlide.posterStat.primary}</span>
-                    {currentSlide.posterStat.secondary ? (
-                      <small>{currentSlide.posterStat.secondary}</small>
-                    ) : null}
-                  </div>
-                </div>
-              ) : null}
-            </PosterFrame>
+              {hasGivenImage && currentSlide.img ? (
+                <PosterFrame
+                  src={currentSlide.img}
+                  alt={currentSlide.title}
+                  onOpenChange={(isOpen) => setIsPaused(isOpen)}
+                >
+                  {currentSlide.posterStat ? (
+                    <div className="fc c1">
+                      <span className="pi">
+                        <svg viewBox="0 0 24 24">
+                          <circle cx="9" cy="8" r="3.2" />
+                          <path d="M3 20c0-3.4 2.7-6 6-6s6 2.6 6 6" />
+                          <circle cx="17" cy="9" r="2.4" />
+                          <path d="M16 14.2c3 0 5 2 5 5" />
+                        </svg>
+                      </span>
+                      <div className="leading-tight">
+                        <span>{currentSlide.posterStat.primary}</span>
+                        {currentSlide.posterStat.secondary ? (
+                          <small>{currentSlide.posterStat.secondary}</small>
+                        ) : null}
+                      </div>
+                    </div>
+                  ) : null}
+                </PosterFrame>
+              ) : (
+                <div className="frame frame-empty" aria-hidden />
+              )}
             </div>
           ) : null}
         </div>
 
         {stripTiles.length > 0 ? (
-          <div className="info-strip grid overflow-hidden rounded-2xl border border-[#e1e8f4] bg-white shadow-[0_10px_26px_-16px_rgba(27,82,164,0.35)]">
+          <div className="info-strip grid overflow-hidden rounded-2xl border border-[#e1e8f4] bg-white shadow-[0_10px_26px_-16px_rgba(27,82,164,0.35)] max-[639px]:hidden">
             {stripTiles.map((tile: HeroTileInfo, idx: number) => {
               const Icon = TILE_ICONS[idx % TILE_ICONS.length];
               return (
@@ -518,7 +522,8 @@ export function CampusDriveHero({
           -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
           overflow: hidden;
-          overflow-wrap: anywhere;
+          overflow-wrap: break-word;
+          word-break: normal;
         }
 
         .hero .hero-text {
@@ -554,11 +559,18 @@ export function CampusDriveHero({
           box-shadow: 0 22px 44px -18px rgba(27, 82, 164, 0.35);
         }
 
+        .hero :global(.frame.frame-empty) {
+          cursor: default;
+          background: #eef3fb;
+        }
+
         .hero :global(.frame:hover) {
           transform: translateY(-4px);
         }
 
         .hero :global(.frame .art) {
+          position: absolute;
+          inset: 0;
           width: 100%;
           height: 100%;
           padding: 0;
@@ -698,12 +710,15 @@ export function CampusDriveHero({
             grid-template-columns: 1fr;
           }
           .hero .hero-poster {
-            max-width: min(100%, 360px);
+            max-width: 100%;
             margin-inline: auto;
             order: 2;
           }
           .hero .hero-text {
             order: 1;
+          }
+          .hero .info-strip-cell:last-child:nth-child(odd) {
+            grid-column: 1 / -1;
           }
         }
 
@@ -728,6 +743,43 @@ export function CampusDriveHero({
             bottom: 8px;
             max-width: calc(100% - 20px);
             white-space: nowrap;
+          }
+        }
+
+        @media (max-width: 639px) {
+          .hero {
+            --hero-inset-x: 16px;
+            --hero-inset-y: 16px;
+            border-radius: 20px;
+            overflow: hidden;
+          }
+          .hero .hero-inner {
+            gap: 16px;
+          }
+          .hero .info-strip {
+            grid-template-columns: 1fr;
+          }
+          .hero .info-strip-value {
+            -webkit-line-clamp: 3;
+          }
+          .hero .pills {
+            justify-content: center;
+            align-content: center;
+            min-height: 4.25rem;
+          }
+          .hero .hero-title {
+            margin-top: 10px;
+            text-align: center;
+          }
+          .hero .cta {
+            margin-top: 12px;
+          }
+          .hero :global(.frame) {
+            aspect-ratio: 2 / 1;
+          }
+          .hero :global(.fc.c1) {
+            white-space: normal;
+            text-align: left;
           }
         }
 

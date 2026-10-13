@@ -1,6 +1,7 @@
 import fallbackContent from "@/data/events-page/en.json";
 import { env } from "@/lib/config/env";
 import { resolveDriveCardLocation } from "@/lib/utils/driveCardDisplay";
+import { campusDriveModeValue } from "@/lib/utils/campusDriveMode";
 import type {
   CampusDriveItem,
   EventMode,
@@ -32,7 +33,7 @@ const fallback = {
   campusPrograms: [],
 } as EventsPageContent;
 
-const MODES: EventMode[] = ["online", "offline", "hybrid"];
+const MODES: EventMode[] = ["online", "offline", "hybrid", "virtual", "oncampus", "walking"];
 
 function stripHtml(value: string) {
   return value.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
@@ -263,7 +264,10 @@ function mapCampusProgram(raw: Record<string, unknown>, siteBase: string): Event
         ? stripHtml(raw.subtitle)
         : "";
 
-  const mode = asMode(raw.mode);
+  const storedMode = campusDriveModeValue(
+    typeof raw.mode === "string" ? raw.mode : "",
+  );
+  const mode = storedMode || asMode(raw.mode);
   const venueRaw =
     typeof raw.venue === "string" && raw.venue.trim()
       ? raw.venue.trim()

@@ -12,7 +12,7 @@ export function HeroTrustBand() {
       <p className="w-full shrink-0 text-left text-[15px] font-medium leading-relaxed text-[#334155] dark:text-white/80 sm:max-w-[200px] lg:max-w-[220px]">
         {content.partners.text}
       </p>
-      <PartnersMarquee edgeColor="#ffffff" />
+      <PartnersMarquee edgeColor="#ffffff" includeApproved />
     </div>
   );
 }

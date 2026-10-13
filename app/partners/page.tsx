@@ -223,6 +223,7 @@ function PartnersPageInner() {
               durationSeconds={140}
               uniformChips
               edgeColor="#f8f9fb"
+              includeApproved
             />
           </div>
 
