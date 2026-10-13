@@ -1,12 +1,12 @@
 import type { EventMode } from "@/types/events-page";
 
 import { formatCardLocation } from "@/lib/utils/cardLocationLabel";
+import { campusDriveVenueFallback } from "@/lib/utils/campusDriveMode";
 
 function defaultVenueForMode(mode?: EventMode | string): string {
   const normalized = (mode ?? "").toLowerCase();
-  if (normalized === "online") return "Online";
   if (normalized === "hybrid") return "Hybrid / Campus";
-  return "On campus";
+  return campusDriveVenueFallback(mode);
 }
 
 export function resolveDriveCardLocation(

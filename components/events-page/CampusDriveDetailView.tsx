@@ -3,6 +3,10 @@
 import React, { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { ArrowUpRight, Eye, Check } from "lucide-react";
+import {
+  campusDriveModeLabel,
+  campusDriveVenueFallback,
+} from "@/lib/utils/campusDriveMode";
 
 export interface CampusDriveDetailViewProps {
   record: Record<string, unknown>;
@@ -138,9 +142,9 @@ export function CampusDriveDetailView({
   const bannerUrl = cleanText(record.banner_url || record.organizer_logo_url);
   const logoUrl = cleanText(record.organizer_logo_url || record.company_logo || record.logo_url);
   const category = cleanText(record.category) || "Campus Drive";
-  const rawMode = cleanText(record.mode || record.mode_of_work) || "offline";
-  const modeLabel = rawMode.toLowerCase() === "online" ? "Online" : rawMode.toLowerCase() === "hybrid" ? "Hybrid" : "Offline";
-  const venue = cleanText(record.venue || record.location) || (rawMode.toLowerCase() === "online" ? "Online" : "Main Campus");
+  const rawMode = cleanText(record.mode || record.mode_of_work) || "oncampus";
+  const modeLabel = campusDriveModeLabel(rawMode) || "Oncampus";
+  const venue = cleanText(record.venue || record.location) || campusDriveVenueFallback(rawMode);
   const website = cleanText(record.organizer_website || record.company_website);
 
   const startDate = cleanText(record.event_start_date || record.campus_drive_date);

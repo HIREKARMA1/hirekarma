@@ -16,7 +16,7 @@ export function ImpactPartnersBand() {
         <p className="shrink-0 text-sm font-medium leading-snug text-white/90 sm:max-w-[220px]">
           {content.partnersNote}
         </p>
-        <PartnersMarquee edgeColor={theme.colors.ink} />
+        <PartnersMarquee edgeColor={theme.colors.ink} includeApproved />
       </div>
     </div>
   );
