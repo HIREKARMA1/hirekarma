@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import { theme } from "@/config/theme";
 import type { ResourceCardVariant } from "@/types/resources-page";
 import { cn } from "@/lib/utils/cn";
@@ -29,29 +27,18 @@ export function ResourceCardVisual({
   return (
     <div
       className={cn(
-        "relative flex aspect-video items-end overflow-hidden p-5",
+        "relative flex aspect-video items-end overflow-hidden bg-slate-100 p-5 dark:bg-[#0b1220]",
         className
       )}
       style={image ? undefined : { background: gradient }}
     >
       {image ? (
         <>
-          <Image
+          <img
             src={image}
             alt=""
-            fill
-            sizes="(max-width: 768px) 100vw, 33vw"
-            unoptimized
-            className="object-cover"
-          />
-          <div
-            className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/60 via-black/15 to-transparent"
-            aria-hidden
-          />
-          <div
-            className="pointer-events-none absolute inset-x-0 top-0 h-1"
-            style={{ backgroundColor: accent }}
-            aria-hidden
+            className="absolute inset-0 h-full w-full"
+            style={{ objectFit: "cover", objectPosition: "center" }}
           />
         </>
       ) : (

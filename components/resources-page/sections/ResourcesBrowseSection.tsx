@@ -1,6 +1,10 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 import { useResourcesLocale } from "@/contexts/ResourcesLocaleContext";
+import { fetchPublishedBlogs } from "@/services/blogs";
+import type { ResourceHubItem } from "@/types/resources-page";
 
 import { ResourceCard } from "../ui/ResourceCard";
 import { ResourcesCtaBand } from "../ui/ResourcesCtaBand";
@@ -8,7 +12,28 @@ import { ResourcesCtaBand } from "../ui/ResourcesCtaBand";
 export function ResourcesBrowseSection() {
   const { content } = useResourcesLocale();
   const { browse, items, cta } = content;
-  const visibleItems = items.slice(0, 1);
+  const [published, setPublished] = useState<ResourceHubItem[]>([]);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetchPublishedBlogs()
+      .then((blogs) => {
+        if (!cancelled) setPublished(blogs);
+      })
+      .catch(() => {
+        if (!cancelled) setPublished([]);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const featured = items.slice(0, 1);
+  const featuredSlugs = new Set(featured.map((item) => item.slug));
+  const visibleItems = [
+    ...featured,
+    ...published.filter((item) => !featuredSlugs.has(item.slug)),
+  ];
 
   return (
     <section className="relative py-7 sm:py-9 lg:py-10">

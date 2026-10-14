@@ -40,7 +40,7 @@ const categoryAccents: Record<string, string> = {
 const helpCardMeta = [
   {
     Icon: MessageCircle,
-    href: "https://wa.me/919124364764",
+    href: "https://wa.me/15554503532?text=Hi",
     accent: theme.colors.secondary,
   },
   {

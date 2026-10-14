@@ -63,12 +63,6 @@ export function ResourceCard({ item, readMoreLabel }: ResourceCardProps) {
         shell.ring
       )}
     >
-      <div
-        className="h-1.5 w-full shrink-0"
-        style={{ backgroundColor: accent.main }}
-        aria-hidden
-      />
-
       <ResourceCardVisual
         tag={item.tag}
         image={item.image}

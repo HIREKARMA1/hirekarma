@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { ResourceArticlePageContent } from "@/components/resources-page/ResourceArticlePageContent";
+import { PublishedBlogArticle } from "@/components/resources-page/PublishedBlogArticle";
 import {
   getAllResourceArticleSlugs,
   getResourceArticleSync,
@@ -45,7 +46,7 @@ export default async function ResourceArticlePage({
   const { slug } = await params;
 
   if (!isResourceArticleSlug(slug)) {
-    notFound();
+    return <PublishedBlogArticle slug={slug} />;
   }
 
   const article = getResourceArticleSync(slug, "en");
