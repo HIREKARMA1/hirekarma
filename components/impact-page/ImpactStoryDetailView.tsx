@@ -67,15 +67,8 @@ export function ImpactStoryDetailView({
       {/* Editorial header — same rhythm as blog articles */}
       <section className="relative bg-white pt-8 pb-8 sm:pt-10 sm:pb-10 lg:pt-12">
         <div className="content-container">
-          <Link
-            href="/impact#browse-stories"
-            className="inline-flex items-center gap-1 text-sm font-semibold text-slate-500 transition hover:text-[#00a2e5]"
-          >
-            ← Back to Impact
-          </Link>
-
           <p
-            className="mt-6 text-[11px] font-semibold uppercase tracking-[0.18em]"
+            className="text-[11px] font-semibold uppercase tracking-[0.18em]"
             style={{ color: accent }}
           >
             {story.label}
