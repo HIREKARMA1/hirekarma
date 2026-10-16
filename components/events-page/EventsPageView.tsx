@@ -844,7 +844,7 @@ export function EventsPageView({
           <CampusDriveHero
             programs={programs}
             featuredEvents={events}
-            activeTab={focus === "upcoming" ? "upcoming" : heroTab}
+            activeTab={heroTab}
             onTabChange={setHeroTab}
           />
         ) : null}
