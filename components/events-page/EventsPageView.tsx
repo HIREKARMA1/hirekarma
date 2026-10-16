@@ -10,6 +10,7 @@ import campusDriveCardStyles from "@/components/events-page/CampusDriveListingCa
 import { NameCover } from "@/components/events-page/NameCover";
 import { CampusDriveHero } from "@/components/events-page/CampusDriveHero";
 import { CampusDriveLandingHero } from "@/components/events-page/CampusDriveLandingHero";
+import { UpcomingEventsCarousel } from "@/components/events-page/UpcomingEventsCarousel";
 
 import { theme } from "@/config/theme";
 import { env } from "@/lib/config/env";
@@ -176,25 +177,6 @@ function LivePill({ large = false }: { large?: boolean }) {
   );
 }
 
-function StatusPill({ status }: { status: EventUiStatus }) {
-  if (status === "live") return <LivePill />;
-  if (status === "open") {
-    return (
-      <span
-        className="rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white"
-        style={{ backgroundColor: theme.colors.primary }}
-      >
-        Open
-      </span>
-    );
-  }
-  return (
-    <span className="rounded-full bg-[#64748b] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">
-      Closed
-    </span>
-  );
-}
-
 function LiveNowBanner({
   event,
   accent,
@@ -341,10 +323,10 @@ function LocationChip({
     <button
       type="button"
       onClick={onClick}
-      className={`rounded-full px-3 py-1.5 text-[12px] font-semibold transition ${
+      className={`whitespace-nowrap rounded-full px-4 py-2 text-[12px] font-semibold transition ${
         active
-          ? "bg-[#1b52a4] text-white"
-          : "border border-[#e6e8ec] bg-white text-[#334155] hover:border-[#1b52a4]/35"
+          ? "bg-[#eef4ff] text-[#1b52a4] shadow-sm"
+          : "text-[#334155] hover:bg-[#f4f7fb]"
       }`}
     >
       {label}
@@ -414,57 +396,47 @@ function EventCard({
   accent: string;
   primary: string;
 }) {
+  const closed = event.status === "closed";
+  const actionHref = closed ? eventDetailHref(event) : eventApplyHref(event);
+  const actionLabel = closed ? "View event" : "Register now";
+  const eventTime = formatEventTimeRange(event.event_start_date, event.event_end_date);
   return (
-    <article className="flex h-full flex-col overflow-hidden rounded-xl border border-[#e6e8ec] bg-white shadow-[0_4px_16px_rgba(15,22,34,0.04)] transition hover:-translate-y-0.5 hover:border-[#1b52a4]/40 hover:shadow-[0_12px_28px_rgba(15,22,34,0.08)]">
-      <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#e8eef8]">
+    <article className="grid overflow-hidden rounded-2xl border border-[#e8edf4] bg-white shadow-[0_8px_24px_rgba(15,22,34,0.045)] transition hover:border-[#1b52a4]/30 hover:shadow-[0_14px_32px_rgba(15,22,34,0.09)] sm:grid-cols-[150px_minmax(0,1fr)_132px] lg:grid-cols-[170px_minmax(0,1fr)_150px]">
+      <div className="relative aspect-[1.2/1] w-full overflow-hidden bg-[#e8eef8] sm:aspect-auto sm:h-full sm:min-h-[128px]">
         <NameCover
           src={event.banner_url}
           name={event.title}
+          className="absolute inset-0 h-full w-full scale-110 opacity-35 blur-md"
+        />
+        <NameCover
+          src={event.banner_url}
+          name={event.title}
+          objectFit="contain"
           className="absolute inset-0 h-full w-full text-2xl"
         />
-        <div className="absolute bottom-2 left-2 flex flex-wrap gap-1.5">
-          <StatusPill status={event.status} />
-          <span
-            className="rounded-full px-2 py-0.5 text-[10px] font-bold text-white"
-            style={{ backgroundColor: primary }}
-          >
-            {MODE_LABEL[event.mode]}
-          </span>
-        </div>
       </div>
 
-      <div className="flex flex-1 flex-col px-3.5 py-3">
-        <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] font-medium text-[#64748b]">
-          <span className="inline-flex items-center gap-1">
-            <Calendar className="h-3 w-3" style={{ color: accent }} />
-            {formatEventDate(event.event_start_date)}
+      <div className="flex min-w-0 flex-col justify-center px-4 py-4 sm:px-5 sm:py-4 lg:px-6">
+        <div className="flex flex-wrap items-center gap-2 text-[10px] font-medium text-[#64748b] sm:text-[11px]">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-[#f4f7fb] px-2.5 py-1">
+            <Calendar className="h-3 w-3" style={{ color: accent }} />{formatEventDate(event.event_start_date)}
           </span>
-          {event.venue ? (
-            <span className="inline-flex min-w-0 items-center gap-1">
-              <MapPin className="h-3 w-3 shrink-0" style={{ color: accent }} />
-              <span className="truncate">{event.venue}</span>
-            </span>
-          ) : null}
+          {eventTime ? <span className="inline-flex items-center gap-1.5 rounded-full bg-[#f4f7fb] px-2.5 py-1"><Clock className="h-3 w-3" style={{ color: accent }} />{eventTime}</span> : null}
+          <span className="rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide text-white" style={{ backgroundColor: closed ? "#64748b" : primary }}>{closed ? "Closed" : event.status === "live" ? "Live" : MODE_LABEL[event.mode]}</span>
         </div>
-        <h3 className="mt-1.5 line-clamp-2 text-[15px] font-bold leading-snug tracking-tight text-[#0f1622]">
+        <Link href={eventDetailHref(event)} className="mt-2 line-clamp-2 text-[15px] font-bold leading-snug tracking-tight text-[#0f1622] hover:text-[#1b52a4] sm:text-base">
           {event.title}
-        </h3>
-        <CardActions
-          detailHref={eventDetailHref(event)}
-          applyHref={eventApplyHref(event)}
-          detailLabel={
-            event.visit_href?.includes("/campus-drives/")
-              ? "View Campus Drive"
-              : "View Event"
-          }
-          applyLabel={
-            event.visit_href?.includes("/campus-drives/")
-              ? "Register Campus Drive"
-              : "Register Event"
-          }
-          paired
-          showApply={event.can_register !== false}
-        />
+        </Link>
+        {event.short_description ? <p className="mt-1 line-clamp-1 text-xs leading-relaxed text-[#64748b] sm:text-[13px]">{event.short_description}</p> : null}
+        {event.venue ? <p className="mt-2 flex min-w-0 items-center gap-1.5 text-[11px] font-medium text-[#64748b]"><MapPin className="h-3 w-3 shrink-0" style={{ color: accent }} /><span className="line-clamp-1">{event.venue}</span></p> : null}
+      </div>
+
+      <div className="flex items-center justify-center border-t border-[#edf0f4] px-4 py-3 sm:border-l sm:border-t-0 sm:px-3 lg:px-4">
+        {closed || event.can_register === false ? (
+          <Link href={eventDetailHref(event)} className="inline-flex min-h-9 w-full items-center justify-center rounded-full border border-[#c8d6eb] bg-white px-3 text-[11px] font-semibold text-[#1b52a4] transition hover:border-[#1b52a4] hover:bg-[#f4f8ff] sm:text-xs">View event</Link>
+        ) : (
+          <a href={actionHref} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-9 w-full items-center justify-center rounded-full border border-[#c8d6eb] bg-white px-3 text-[11px] font-semibold text-[#1b52a4] transition hover:border-[#1b52a4] hover:bg-[#f4f8ff] sm:text-xs">{actionLabel}</a>
+        )}
       </div>
     </article>
   );
@@ -781,7 +753,7 @@ export function EventsPageView({
     () =>
       searchedEvents
         .filter((event) => {
-          if (eventScope === "open") return event.status === "live" || event.status === "open";
+          if (eventScope === "open") return event.status !== "closed";
           if (eventScope === "closed") return event.status === "closed";
           return true;
         })
@@ -868,7 +840,7 @@ export function EventsPageView({
           isOverview ? "" : isCampus ? " pt-2" : " pt-6"
         }`}
       >
-        {!isCampus ? (
+        {!isCampus && focus !== "upcoming" ? (
           <CampusDriveHero
             programs={programs}
             featuredEvents={events}
@@ -947,30 +919,31 @@ export function EventsPageView({
 
             {!isCampus && searchedEvents.length > 0 ? (
               <section id={isOverview ? "all-events" : "upcoming-events"}>
-                <div>
+                {focus === "upcoming" ? <div className="mb-8"><UpcomingEventsCarousel events={filteredEvents.length ? filteredEvents : searchedEvents} /></div> : null}
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between sm:gap-6">
                   <h2 className="text-lg font-bold tracking-tight text-[#0f1622] sm:text-xl">
                     {isOverview ? "All Events" : "Upcoming events"}
+                    <span className="mt-1 block text-sm font-normal tracking-normal text-[#64748b]">
+                      Discover opportunities happening near you
+                    </span>
                   </h2>
-                  <p className="mt-1 text-sm text-[#64748b]">
-                    Discover opportunities happening near you
-                  </p>
-                </div>
-                <div className="mt-3 flex flex-wrap gap-2">
+                <div className="inline-flex w-fit max-w-full flex-wrap items-center gap-1 rounded-full border border-[#edf0f5] bg-white p-1 shadow-[0_5px_20px_rgba(15,35,72,.06)]">
                   <LocationChip
-                    label="All"
+                    label="All events"
                     active={eventScope === "all"}
                     onClick={() => setEventScope("all")}
                   />
                   <LocationChip
-                    label="Open"
+                    label="Open events"
                     active={eventScope === "open"}
                     onClick={() => setEventScope("open")}
                   />
                   <LocationChip
-                    label="Close"
+                    label="Closed events"
                     active={eventScope === "closed"}
                     onClick={() => setEventScope("closed")}
                   />
+                </div>
                 </div>
 
                 {filteredEvents.length === 0 ? (
@@ -978,7 +951,7 @@ export function EventsPageView({
                     No events match this filter.
                   </p>
                 ) : (
-                  <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  <div className="mt-5 grid gap-4">
                     {filteredEvents.map((event) => (
                       <EventCard
                         key={event.id}

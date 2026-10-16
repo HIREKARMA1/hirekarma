@@ -5,16 +5,16 @@ import { ArrowRight } from "lucide-react";
 
 import styles from "./CampusDriveLandingHero.module.css";
 
-/** Put a photo URL on `imageSrc` later — the slot is already in each card. */
 const PORTRAITS = [
-  { id: "warm", color: "#e3b08a", imageSrc: "" },
-  { id: "slate", color: "#3d3d45", imageSrc: "" },
-  { id: "ink", color: "#2a2a32", imageSrc: "" },
-  { id: "plum", color: "#7a5560", imageSrc: "" },
-  { id: "rose", color: "#c45c78", imageSrc: "" },
-  { id: "lilac", color: "#c9a3b4", imageSrc: "" },
-  { id: "clay", color: "#b07a6e", imageSrc: "" },
-  { id: "wine", color: "#6e3f48", imageSrc: "" },
+  { id: "9th", imageSrc: "https://disha-ui.s3.ap-south-1.amazonaws.com/campus_drive_logo/9th.png" },
+  { id: "8th", imageSrc: "https://disha-ui.s3.ap-south-1.amazonaws.com/campus_drive_logo/8th.png" },
+  { id: "7th", imageSrc: "https://disha-ui.s3.ap-south-1.amazonaws.com/campus_drive_logo/7th.png" },
+  { id: "6th", imageSrc: "https://disha-ui.s3.ap-south-1.amazonaws.com/campus_drive_logo/6th.png" },
+  { id: "5th", imageSrc: "https://disha-ui.s3.ap-south-1.amazonaws.com/campus_drive_logo/5th.png" },
+  { id: "4th", imageSrc: "https://disha-ui.s3.ap-south-1.amazonaws.com/campus_drive_logo/4th.png" },
+  { id: "3rd", imageSrc: "https://disha-ui.s3.ap-south-1.amazonaws.com/campus_drive_logo/3rd.png" },
+  { id: "2nd", imageSrc: "https://disha-ui.s3.ap-south-1.amazonaws.com/campus_drive_logo/2nd.png" },
+  { id: "1st", imageSrc: "https://disha-ui.s3.ap-south-1.amazonaws.com/campus_drive_logo/1st.png" },
 ] as const;
 
 const FEATURES = [
@@ -33,14 +33,12 @@ const FEATURES = [
 ];
 
 function PortraitCard({
-  color,
   imageSrc,
 }: {
-  color: string;
   imageSrc?: string;
 }) {
   return (
-    <div className={styles.card} style={{ backgroundColor: color }}>
+    <div className={styles.card}>
       {imageSrc ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img className={styles.photo} src={imageSrc} alt="" />
@@ -55,7 +53,6 @@ function PortraitSet() {
       {PORTRAITS.map((portrait) => (
         <PortraitCard
           key={portrait.id}
-          color={portrait.color}
           imageSrc={portrait.imageSrc}
         />
       ))}
