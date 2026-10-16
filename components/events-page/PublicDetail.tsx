@@ -29,7 +29,37 @@ function rows(items: { label: string; value: string }[]) {
   return items.filter((item) => item.value);
 }
 
-function ApplyLink({ href, bright = false }: { href: string; bright?: boolean }) {
+function isEventClosed(record: Record<string, unknown>): boolean {
+  const contestStatus = String(record.contest_status ?? "").toLowerCase();
+  if (["closed", "archived", "cancelled", "draft"].includes(contestStatus)) return true;
+  const regState = String(record.registration_state ?? "").toLowerCase();
+  if (regState === "event_completed" || regState === "registration_closed") return true;
+  const regEnd = record.registration_end_date;
+  if (typeof regEnd === "string" && regEnd) {
+    const endMs = Date.parse(regEnd);
+    if (Number.isFinite(endMs) && endMs < Date.now()) return true;
+  }
+  const eventEnd = record.event_end_date;
+  if (typeof eventEnd === "string" && eventEnd) {
+    const endMs = Date.parse(eventEnd);
+    if (Number.isFinite(endMs) && endMs < Date.now()) return true;
+  }
+  return false;
+}
+
+function ApplyLink({ href, bright = false, closed = false }: { href: string; bright?: boolean; closed?: boolean }) {
+  if (closed) {
+    return (
+      <span
+        className={`inline-flex min-h-11 cursor-not-allowed items-center justify-center gap-1.5 rounded-xl px-5 py-2.5 text-sm font-bold opacity-50 ${
+          bright ? "bg-[#ffc72c] text-[#102657]" : "bg-[#2450dc] text-white"
+        }`}
+        title="Applications are closed for this event"
+      >
+        Applications Closed
+      </span>
+    );
+  }
   return (
     <a
       href={href}
@@ -49,6 +79,7 @@ function Shell({
   title,
   subtitle,
   applyHref,
+  isClosed,
   facts,
   blocks,
   takeaways,
@@ -59,6 +90,7 @@ function Shell({
   title: string;
   subtitle?: string;
   applyHref: string;
+  isClosed?: boolean;
   facts: { label: string; value: string }[];
   blocks: { title: string; body: string }[];
   takeaways: { title: string; body: string }[];
@@ -87,7 +119,7 @@ function Shell({
             <h1 className="mt-5 max-w-[700px] text-3xl font-extrabold leading-[1.08] tracking-tight sm:text-4xl lg:text-[50px]">{title}</h1>
             {subtitle ? <p className="mt-4 max-w-[620px] text-base leading-relaxed text-[#d8e2ff] sm:text-lg">{subtitle}</p> : null}
             <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-3">
-              <ApplyLink href={applyHref} bright />
+              <ApplyLink href={applyHref} bright closed={isClosed} />
               {facts.find((fact) => fact.label === "Starts") ? <span className="inline-flex items-center gap-2 text-sm font-medium text-[#d8e2ff]"><CalendarDays className="h-4 w-4" />{facts.find((fact) => fact.label === "Starts")?.value}</span> : null}
             </div>
           </div>
@@ -112,7 +144,7 @@ function Shell({
           </div>
 
           <aside className="space-y-4 lg:sticky lg:top-24">
-            {otherFacts.length ? <section className="rounded-[24px] border border-[#e8edf5] bg-white p-6 shadow-[0_8px_24px_rgba(24,44,88,.08)]"><h2 className="text-lg font-bold text-[#14244c]">Event information</h2><div className="mt-4 space-y-3">{otherFacts.map((fact) => <p key={fact.label}><span className="block text-[11px] font-bold uppercase tracking-wide text-[#7a88a5]">{fact.label}</span><span className="mt-0.5 block text-sm font-semibold text-[#253657]">{fact.value}</span></p>)}</div><div className="mt-5"><ApplyLink href={applyHref} /></div></section> : null}
+            {otherFacts.length ? <section className="rounded-[24px] border border-[#e8edf5] bg-white p-6 shadow-[0_8px_24px_rgba(24,44,88,.08)]"><h2 className="text-lg font-bold text-[#14244c]">Event information</h2><div className="mt-4 space-y-3">{otherFacts.map((fact) => <p key={fact.label}><span className="block text-[11px] font-bold uppercase tracking-wide text-[#7a88a5]">{fact.label}</span><span className="mt-0.5 block text-sm font-semibold text-[#253657]">{fact.value}</span></p>)}</div><div className="mt-5"><ApplyLink href={applyHref} closed={isClosed} /></div></section> : null}
             {organizer.length ? <section className="rounded-[24px] border border-[#e8edf5] bg-white p-6 shadow-[0_8px_24px_rgba(24,44,88,.06)]"><h2 className="text-lg font-bold text-[#14244c]">Organizer</h2><div className="mt-3 space-y-2.5">{organizer.map((fact) => <p key={fact.label}><span className="block text-[11px] font-bold uppercase tracking-wide text-[#7a88a5]">{fact.label}</span><span className="mt-0.5 block text-sm font-semibold text-[#253657]">{fact.value}</span></p>)}</div></section> : null}
           </aside>
         </div>
@@ -189,6 +221,8 @@ export function EventPublicDetail({
     { label: "Website", value: text(record.organizer_website) },
   ]);
 
+  const isClosed = isEventClosed(record);
+
   return (
     <Shell
       image={text(record.banner_url || record.organizer_logo_url)}
@@ -196,6 +230,7 @@ export function EventPublicDetail({
       title={title}
       subtitle={text(record.subtitle)}
       applyHref={applyHref}
+      isClosed={isClosed}
       facts={facts}
       blocks={blocks}
       takeaways={takeawayCards(record)}
