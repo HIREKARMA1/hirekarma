@@ -2,13 +2,15 @@
 
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import Link from "next/link";
-import { ArrowUpRight, Calendar, ChevronDown, ChevronLeft, ChevronRight, Filter, MapPin, Search } from "lucide-react";
+import { ArrowUpRight, Calendar, ChevronDown, Clock, Filter, MapPin, Search } from "lucide-react";
 
 import { CardActions } from "@/components/events-page/CardActions";
 import { CampusDriveListingCard } from "@/components/events-page/CampusDriveListingCard";
 import campusDriveCardStyles from "@/components/events-page/CampusDriveListingCard.module.css";
 import { NameCover } from "@/components/events-page/NameCover";
 import { CampusDriveHero } from "@/components/events-page/CampusDriveHero";
+import { CampusDriveLandingHero } from "@/components/events-page/CampusDriveLandingHero";
+import { UpcomingEventsCarousel } from "@/components/events-page/UpcomingEventsCarousel";
 
 import { theme } from "@/config/theme";
 import { env } from "@/lib/config/env";
@@ -44,7 +46,7 @@ const MODE_LABEL: Record<EventMode, string> = {
   hybrid: "Hybrid",
   virtual: "Virtual",
   oncampus: "Oncampus",
-  walking: "Walking",
+  walking: "Walk-in",
 };
 
 function formatEventDate(iso: string) {
@@ -55,6 +57,22 @@ function formatEventDate(iso: string) {
     month: "short",
     year: "numeric",
   });
+}
+
+function formatEventTime(iso?: string) {
+  if (!iso) return "";
+  const date = new Date(iso);
+  if (Number.isNaN(date.getTime())) return "";
+  return date
+    .toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" })
+    .toLowerCase();
+}
+
+function formatEventTimeRange(startIso?: string, endIso?: string) {
+  const start = formatEventTime(startIso);
+  if (!start) return "";
+  const end = formatEventTime(endIso);
+  return end && end !== start ? `${start} — ${end}` : start;
 }
 
 const eventDetailHref = eventsPageDetailHref;
@@ -155,25 +173,6 @@ function LivePill({ large = false }: { large?: boolean }) {
         <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-white" />
       </span>
       Live
-    </span>
-  );
-}
-
-function StatusPill({ status }: { status: EventUiStatus }) {
-  if (status === "live") return <LivePill />;
-  if (status === "open") {
-    return (
-      <span
-        className="rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white"
-        style={{ backgroundColor: theme.colors.primary }}
-      >
-        Open
-      </span>
-    );
-  }
-  return (
-    <span className="rounded-full bg-[#64748b] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">
-      Closed
     </span>
   );
 }
@@ -324,10 +323,10 @@ function LocationChip({
     <button
       type="button"
       onClick={onClick}
-      className={`rounded-full px-3 py-1.5 text-[12px] font-semibold transition ${
+      className={`whitespace-nowrap rounded-full px-4 py-2 text-[12px] font-semibold transition ${
         active
-          ? "bg-[#1b52a4] text-white"
-          : "border border-[#e6e8ec] bg-white text-[#334155] hover:border-[#1b52a4]/35"
+          ? "bg-[#eef4ff] text-[#1b52a4] shadow-sm"
+          : "text-[#334155] hover:bg-[#f4f7fb]"
       }`}
     >
       {label}
@@ -344,6 +343,7 @@ function CampusDriveCard({ job }: { job: CampusDriveItem }) {
         title: job.title,
         companyName: job.company_name,
       })}
+      description={job.description}
       imageSrc={job.company_logo}
       imageAlt={`${job.company_name} campus drive`}
       dateIso={job.campus_drive_date}
@@ -351,14 +351,12 @@ function CampusDriveCard({ job }: { job: CampusDriveItem }) {
       modeLabel={jobDriveModeLabel(job.mode_of_work)}
       detailHref={job.detail_href || "/events/campus-drives"}
       applyHref={job.visit_href}
-      detailLabel="View Details"
-      applyLabel="Register"
+      detailLabel="View Event Details"
     />
   );
 }
 
 function CampusProgramCard({ event }: { event: EventsPageItem }) {
-  const isCampusVisit = event.visit_href?.includes("/campus-drives/");
   return (
     <CampusDriveListingCard
       brandName={
@@ -374,18 +372,17 @@ function CampusProgramCard({ event }: { event: EventsPageItem }) {
         organizerName: event.organizer_name,
         subtitle: event.subtitle,
       })}
+      description={event.short_description || event.subtitle}
       imageSrc={event.banner_url}
       imageAlt={event.title}
       dateIso={event.event_start_date}
+      timeLabel={formatEventTimeRange(event.event_start_date, event.event_end_date)}
       {...driveCardLocationProps(event.venue, event.mode)}
       modeLabel={MODE_LABEL[event.mode]}
       status={event.status}
       detailHref={eventDetailHref(event)}
       applyHref={eventApplyHref(event)}
-      detailLabel={isCampusVisit ? "View Details" : "View Event"}
-      applyLabel={isCampusVisit ? "Register" : "Register Event"}
-      paired
-      showApply={event.can_register !== false}
+      detailLabel="View Event Details"
     />
   );
 }
@@ -399,136 +396,49 @@ function EventCard({
   accent: string;
   primary: string;
 }) {
+  const closed = event.status === "closed";
+  const actionHref = closed ? eventDetailHref(event) : eventApplyHref(event);
+  const actionLabel = closed ? "View event" : "Register now";
+  const eventTime = formatEventTimeRange(event.event_start_date, event.event_end_date);
   return (
-    <article className="flex h-full flex-col overflow-hidden rounded-xl border border-[#e6e8ec] bg-white shadow-[0_4px_16px_rgba(15,22,34,0.04)] transition hover:-translate-y-0.5 hover:border-[#1b52a4]/40 hover:shadow-[0_12px_28px_rgba(15,22,34,0.08)]">
-      <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#e8eef8]">
+    <article className="grid overflow-hidden rounded-2xl border border-[#e8edf4] bg-white shadow-[0_8px_24px_rgba(15,22,34,0.045)] transition hover:border-[#1b52a4]/30 hover:shadow-[0_14px_32px_rgba(15,22,34,0.09)] sm:grid-cols-[150px_minmax(0,1fr)_132px] lg:grid-cols-[170px_minmax(0,1fr)_150px]">
+      <div className="relative aspect-[1.2/1] w-full overflow-hidden bg-[#e8eef8] sm:aspect-auto sm:h-full sm:min-h-[128px]">
         <NameCover
           src={event.banner_url}
           name={event.title}
+          className="absolute inset-0 h-full w-full scale-110 opacity-35 blur-md"
+        />
+        <NameCover
+          src={event.banner_url}
+          name={event.title}
+          objectFit="contain"
           className="absolute inset-0 h-full w-full text-2xl"
         />
-        <div className="absolute bottom-2 left-2 flex flex-wrap gap-1.5">
-          <StatusPill status={event.status} />
-          <span
-            className="rounded-full px-2 py-0.5 text-[10px] font-bold text-white"
-            style={{ backgroundColor: primary }}
-          >
-            {MODE_LABEL[event.mode]}
-          </span>
-        </div>
       </div>
 
-      <div className="flex flex-1 flex-col px-3.5 py-3">
-        <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] font-medium text-[#64748b]">
-          <span className="inline-flex items-center gap-1">
-            <Calendar className="h-3 w-3" style={{ color: accent }} />
-            {formatEventDate(event.event_start_date)}
+      <div className="flex min-w-0 flex-col justify-center px-4 py-4 sm:px-5 sm:py-4 lg:px-6">
+        <div className="flex flex-wrap items-center gap-2 text-[10px] font-medium text-[#64748b] sm:text-[11px]">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-[#f4f7fb] px-2.5 py-1">
+            <Calendar className="h-3 w-3" style={{ color: accent }} />{formatEventDate(event.event_start_date)}
           </span>
-          {event.venue ? (
-            <span className="inline-flex min-w-0 items-center gap-1">
-              <MapPin className="h-3 w-3 shrink-0" style={{ color: accent }} />
-              <span className="truncate">{event.venue}</span>
-            </span>
-          ) : null}
+          {eventTime ? <span className="inline-flex items-center gap-1.5 rounded-full bg-[#f4f7fb] px-2.5 py-1"><Clock className="h-3 w-3" style={{ color: accent }} />{eventTime}</span> : null}
+          <span className="rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide text-white" style={{ backgroundColor: closed ? "#64748b" : primary }}>{closed ? "Closed" : event.status === "live" ? "Live" : MODE_LABEL[event.mode]}</span>
         </div>
-        <h3 className="mt-1.5 line-clamp-2 text-[15px] font-bold leading-snug tracking-tight text-[#0f1622]">
+        <Link href={eventDetailHref(event)} className="mt-2 line-clamp-2 text-[15px] font-bold leading-snug tracking-tight text-[#0f1622] hover:text-[#1b52a4] sm:text-base">
           {event.title}
-        </h3>
-        <CardActions
-          detailHref={eventDetailHref(event)}
-          applyHref={eventApplyHref(event)}
-          detailLabel={
-            event.visit_href?.includes("/campus-drives/")
-              ? "View Campus Drive"
-              : "View Event"
-          }
-          applyLabel={
-            event.visit_href?.includes("/campus-drives/")
-              ? "Register Campus Drive"
-              : "Register Event"
-          }
-          paired
-          showApply={event.can_register !== false}
-        />
+        </Link>
+        {event.short_description ? <p className="mt-1 line-clamp-1 text-xs leading-relaxed text-[#64748b] sm:text-[13px]">{event.short_description}</p> : null}
+        {event.venue ? <p className="mt-2 flex min-w-0 items-center gap-1.5 text-[11px] font-medium text-[#64748b]"><MapPin className="h-3 w-3 shrink-0" style={{ color: accent }} /><span className="line-clamp-1">{event.venue}</span></p> : null}
+      </div>
+
+      <div className="flex items-center justify-center border-t border-[#edf0f4] px-4 py-3 sm:border-l sm:border-t-0 sm:px-3 lg:px-4">
+        {closed || event.can_register === false ? (
+          <Link href={eventDetailHref(event)} className="inline-flex min-h-9 w-full items-center justify-center rounded-full border border-[#c8d6eb] bg-white px-3 text-[11px] font-semibold text-[#1b52a4] transition hover:border-[#1b52a4] hover:bg-[#f4f8ff] sm:text-xs">View event</Link>
+        ) : (
+          <a href={actionHref} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-9 w-full items-center justify-center rounded-full border border-[#c8d6eb] bg-white px-3 text-[11px] font-semibold text-[#1b52a4] transition hover:border-[#1b52a4] hover:bg-[#f4f8ff] sm:text-xs">{actionLabel}</a>
+        )}
       </div>
     </article>
-  );
-}
-
-function ClosedProgramRow({ programs }: { programs: EventsPageItem[] }) {
-  const scrollerRef = useRef<HTMLDivElement>(null);
-  const paused = useRef(false);
-
-  const scrollByCard = (direction: 1 | -1) => {
-    const scroller = scrollerRef.current;
-    if (!scroller) return;
-    const card = scroller.firstElementChild as HTMLElement | null;
-    const styles = window.getComputedStyle(scroller);
-    const gap = Number.parseFloat(styles.columnGap || styles.gap) || 0;
-    const step = (card?.offsetWidth || scroller.clientWidth) + gap;
-    const max = scroller.scrollWidth - scroller.clientWidth;
-    if (direction === 1 && scroller.scrollLeft >= max - 4) {
-      scroller.scrollTo({ left: 0, behavior: "smooth" });
-      return;
-    }
-    if (direction === -1 && scroller.scrollLeft <= 4) {
-      scroller.scrollTo({ left: max, behavior: "smooth" });
-      return;
-    }
-    scroller.scrollBy({ left: direction * step, behavior: "smooth" });
-  };
-
-  useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const timer = window.setInterval(() => {
-      const scroller = scrollerRef.current;
-      if (paused.current || !scroller || scroller.scrollWidth <= scroller.clientWidth + 8) return;
-      scrollByCard(1);
-    }, 3500);
-    return () => window.clearInterval(timer);
-  }, [programs.length]);
-
-  return (
-    <div
-      className="relative min-w-0 max-w-full overflow-hidden"
-      onMouseEnter={() => {
-        paused.current = true;
-      }}
-      onMouseLeave={() => {
-        paused.current = false;
-      }}
-    >
-      {programs.length > 1 ? (
-        <button
-          type="button"
-          aria-label="Previous closed drives"
-          onClick={() => scrollByCard(-1)}
-          className="absolute left-0 top-1/2 z-10 inline-flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-[#e3e8f0] bg-white text-[#0f1622] shadow-md"
-        >
-          <ChevronLeft className="h-4 w-4" />
-        </button>
-      ) : null}
-      <div
-        ref={scrollerRef}
-        className="flex w-full min-w-0 max-w-full gap-4 overflow-x-auto overscroll-x-contain scroll-smooth px-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-      >
-        {programs.map((event) => (
-          <div key={event.id} className="w-full min-w-0 max-w-full shrink-0 basis-full sm:basis-auto sm:w-[min(100%,340px)]">
-            <CampusProgramCard event={event} />
-          </div>
-        ))}
-      </div>
-      {programs.length > 1 ? (
-        <button
-          type="button"
-          aria-label="Next closed drives"
-          onClick={() => scrollByCard(1)}
-          className="absolute right-0 top-1/2 z-10 inline-flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-[#e3e8f0] bg-white text-[#0f1622] shadow-md"
-        >
-          <ChevronRight className="h-4 w-4" />
-        </button>
-      ) : null}
-    </div>
   );
 }
 
@@ -649,7 +559,7 @@ function DriveFilterMenus({
           { value: "", label: "All" },
           { value: "virtual", label: "Virtual" },
           { value: "oncampus", label: "Oncampus" },
-          { value: "walking", label: "Walking" },
+          { value: "walking", label: "Walk-in" },
         ]}
       />
       <DriveFilterMenu
@@ -722,57 +632,48 @@ function CampusProgramSections({
   programs: EventsPageItem[];
   menus: ReactNode;
 }) {
-  const open = programs.filter((event) => event.status === "live" || event.status === "open");
-  const upcoming = programs.filter((event) => event.status === "upcoming");
+  const current = programs.filter((event) => event.status !== "closed");
   const closed = programs.filter((event) => event.status === "closed");
-  const filterOn = open.length > 0 ? "open" : upcoming.length > 0 ? "upcoming" : "closed";
+  const [showPrevious, setShowPrevious] = useState(true);
 
   return (
-    <div className="space-y-10">
-      {open.length > 0 ? (
-        <section>
-          <ProgramSectionHead
-            title="Open now"
-            dotClass="bg-[#098855]"
-            description="These drives are open today. Register while they are available."
-            showFilters={filterOn === "open"}
-            menus={menus}
-          />
-          <div className={`mt-5 ${campusDriveCardStyles.campusDriveGrid}`}>
-            {open.map((event) => (
-              <CampusProgramCard key={event.id} event={event} />
-            ))}
-          </div>
-        </section>
-      ) : null}
-      {upcoming.length > 0 ? (
-        <section>
-          <ProgramSectionHead
-            title="Upcoming"
-            dotClass="bg-[#f59e0b]"
-            description="These drives start on a later date. You can view the details until then."
-            showFilters={filterOn === "upcoming"}
-            menus={menus}
-          />
-          <div className={`mt-5 ${campusDriveCardStyles.campusDriveGrid}`}>
-            {upcoming.map((event) => (
-              <CampusProgramCard key={event.id} event={event} />
-            ))}
-          </div>
-        </section>
-      ) : null}
+    <div>
+      <div className={campusDriveCardStyles.sectionHead}>
+        <h2 className={campusDriveCardStyles.sectionTitle}>Upcoming Events</h2>
+        <div className="w-full sm:w-auto">{menus}</div>
+      </div>
+
+      {current.length > 0 ? (
+        <div className={campusDriveCardStyles.eventList}>
+          {current.map((event) => (
+            <CampusProgramCard key={event.id} event={event} />
+          ))}
+        </div>
+      ) : (
+        <p className="py-8 text-sm text-[#64748b]">
+          No upcoming campus drives to show right now.
+        </p>
+      )}
+
       {closed.length > 0 ? (
-        <section>
-          <ProgramSectionHead
-            title="Closed drives"
-            description="Registration is over. You can still view details."
-            showFilters={filterOn === "closed"}
-            menus={menus}
-          />
-          <div className="mt-5">
-            <ClosedProgramRow programs={closed} />
-          </div>
-        </section>
+        <div>
+          <button
+            type="button"
+            className={campusDriveCardStyles.previousBtn}
+            aria-expanded={showPrevious}
+            onClick={() => setShowPrevious((open) => !open)}
+          >
+            <Clock aria-hidden />
+            {showPrevious ? "Hide previous events" : "Previous Events"}
+          </button>
+          {showPrevious ? (
+            <div className={campusDriveCardStyles.eventList}>
+              {closed.map((event) => (
+                <CampusProgramCard key={event.id} event={event} />
+              ))}
+            </div>
+          ) : null}
+        </div>
       ) : null}
     </div>
   );
@@ -852,7 +753,7 @@ export function EventsPageView({
     () =>
       searchedEvents
         .filter((event) => {
-          if (eventScope === "open") return event.status === "live" || event.status === "open";
+          if (eventScope === "open") return event.status !== "closed";
           if (eventScope === "closed") return event.status === "closed";
           return true;
         })
@@ -893,7 +794,12 @@ export function EventsPageView({
         };
 
   return (
-    <main className="min-h-screen min-w-0 max-w-full overflow-x-clip bg-[#f6f8fb]">
+    <main
+      className={`min-h-screen min-w-0 max-w-full overflow-x-clip ${
+        isCampus ? "bg-white" : "bg-[#f6f8fb]"
+      }`}
+    >
+      {isCampus ? <CampusDriveLandingHero listingHref="#campus-drive-listing" /> : null}
       {isOverview ? (
         <section className="border-b border-[#e6e8ec] bg-white">
           <div className="content-container py-4">
@@ -930,19 +836,23 @@ export function EventsPageView({
       ) : null}
 
       <div
-        className={`content-container space-y-6 py-5${isOverview ? "" : " pt-6"}`}
+        className={`content-container space-y-6 py-5${
+          isOverview ? "" : isCampus ? " pt-2" : " pt-6"
+        }`}
       >
-        <CampusDriveHero
-          programs={isCampus ? campusProgramsView : programs}
-          featuredEvents={events}
-          activeTab={focus === "campus" ? "campus" : focus === "upcoming" ? "upcoming" : heroTab}
-          onTabChange={setHeroTab}
-        />
+        {!isCampus && focus !== "upcoming" ? (
+          <CampusDriveHero
+            programs={programs}
+            featuredEvents={events}
+            activeTab={heroTab}
+            onTabChange={setHeroTab}
+          />
+        ) : null}
         {!hasMatches ? (
           isOverview ? (
             <p className="text-sm text-[#475569]">No matches for this search.</p>
           ) : (
-            <div className="space-y-3">
+            <div id={isCampus ? "campus-drive-listing" : undefined} className="space-y-3">
               <p className="text-sm text-[#475569]">
                 {isCampus
                   ? "No campus drives to show right now."
@@ -971,21 +881,23 @@ export function EventsPageView({
 
             {isCampus && programs.length > 0 ? (
               campusProgramsView.length > 0 ? (
-                <CampusProgramSections
-                  programs={campusProgramsView}
-                  menus={
-                    <DriveFilterMenus
-                      driveMode={driveMode}
-                      setDriveMode={setDriveMode}
-                      driveSort={driveSort}
-                      setDriveSort={setDriveSort}
-                      driveMenu={driveMenu}
-                      setDriveMenu={setDriveMenu}
-                    />
-                  }
-                />
+                <div id="campus-drive-listing">
+                  <CampusProgramSections
+                    programs={campusProgramsView}
+                    menus={
+                      <DriveFilterMenus
+                        driveMode={driveMode}
+                        setDriveMode={setDriveMode}
+                        driveSort={driveSort}
+                        setDriveSort={setDriveSort}
+                        driveMenu={driveMenu}
+                        setDriveMenu={setDriveMenu}
+                      />
+                    }
+                  />
+                </div>
               ) : (
-                <div className="space-y-4">
+                <div id="campus-drive-listing" className="space-y-4">
                   <ProgramSectionHead
                     title="Campus drives"
                     description="No campus drives match these filters."
@@ -1007,30 +919,31 @@ export function EventsPageView({
 
             {!isCampus && searchedEvents.length > 0 ? (
               <section id={isOverview ? "all-events" : "upcoming-events"}>
-                <div>
+                {focus === "upcoming" ? <div className="mb-8"><UpcomingEventsCarousel events={filteredEvents.length ? filteredEvents : searchedEvents} /></div> : null}
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between sm:gap-6">
                   <h2 className="text-lg font-bold tracking-tight text-[#0f1622] sm:text-xl">
                     {isOverview ? "All Events" : "Upcoming events"}
+                    <span className="mt-1 block text-sm font-normal tracking-normal text-[#64748b]">
+                      Discover opportunities happening near you
+                    </span>
                   </h2>
-                  <p className="mt-1 text-sm text-[#64748b]">
-                    Discover opportunities happening near you
-                  </p>
-                </div>
-                <div className="mt-3 flex flex-wrap gap-2">
+                <div className="inline-flex w-fit max-w-full flex-wrap items-center gap-1 rounded-full border border-[#edf0f5] bg-white p-1 shadow-[0_5px_20px_rgba(15,35,72,.06)]">
                   <LocationChip
-                    label="All"
+                    label="All events"
                     active={eventScope === "all"}
                     onClick={() => setEventScope("all")}
                   />
                   <LocationChip
-                    label="Open"
+                    label="Open events"
                     active={eventScope === "open"}
                     onClick={() => setEventScope("open")}
                   />
                   <LocationChip
-                    label="Close"
+                    label="Closed events"
                     active={eventScope === "closed"}
                     onClick={() => setEventScope("closed")}
                   />
+                </div>
                 </div>
 
                 {filteredEvents.length === 0 ? (
@@ -1038,7 +951,7 @@ export function EventsPageView({
                     No events match this filter.
                   </p>
                 ) : (
-                  <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  <div className="mt-5 grid gap-4">
                     {filteredEvents.map((event) => (
                       <EventCard
                         key={event.id}

@@ -41,7 +41,7 @@ const MODE_LABEL: Record<EventMode, string> = {
   hybrid: "Hybrid",
   virtual: "Virtual",
   oncampus: "Oncampus",
-  walking: "Walking",
+  walking: "Walk-in",
 };
 
 export function cleanHeroTitle(raw: string): string {
