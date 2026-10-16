@@ -16,7 +16,7 @@ const PORTRAITS = [
   { id: "2nd", imageSrc: "https://disha-ui.s3.ap-south-1.amazonaws.com/campus_drive_logo/2nd.png" },
   { id: "1st", imageSrc: "https://disha-ui.s3.ap-south-1.amazonaws.com/campus_drive_logo/1st.png" },
 ] as const;
-
+// anuj laptop changes
 const FEATURES = [
   {
     title: "Live Campus Drives",
