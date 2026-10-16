@@ -394,6 +394,66 @@
         "summary": "Building Skills, Creating Opportunities: How HireKarma's Shortlisted Program helped Nitish Kumar Behera begin as a Full Stack Web Developer Intern at WeIntern Pvt. Ltd.",
         "imageAlt": "Nitish Kumar Behera placement journey with HireKarma",
         "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/16_HK.png"
+      },
+      {
+        "template": "student",
+        "divisionId": "skills",
+        "typeId": "student",
+        "divisionLabel": "Skill development",
+        "typeLabel": "Student story",
+        "readMore": "Read more",
+        "id": "ankit-shortlisted",
+        "slug": "ankit-bal",
+        "title": "Ankit Bal",
+        "location": "K One Ventures",
+        "summary": "From Building Skills to Building a Career: How HireKarma's Shortlisted Program helped Ankit Bal land his role as Software Developer – Full Stack at K One Ventures.",
+        "imageAlt": "Ankit Bal placement journey with HireKarma",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/impacts/17_HK.png"
+      },
+      {
+        "template": "student",
+        "divisionId": "skills",
+        "typeId": "student",
+        "divisionLabel": "Skill development",
+        "typeLabel": "Student story",
+        "readMore": "Read more",
+        "id": "sourajit-shortlisted",
+        "slug": "sourajit-swain",
+        "title": "Sourajit Swain",
+        "location": "Constellation Technologies Limited",
+        "summary": "From Searching for the Right Opportunity to Starting a New Career: How HireKarma's Shortlisted Program helped Sourajit Swain land his role as Indexing Associate at Constellation Technologies Limited.",
+        "imageAlt": "Sourajit Swain placement journey with HireKarma",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/impacts/18_HK.png"
+      },
+      {
+        "template": "student",
+        "divisionId": "skills",
+        "typeId": "student",
+        "divisionLabel": "Skill development",
+        "typeLabel": "Student story",
+        "readMore": "Read more",
+        "id": "rohan-shortlisted",
+        "slug": "rohan-behera",
+        "title": "Rohan Behera",
+        "location": "Technocracy Group",
+        "summary": "From Learning to Building: How HireKarma's Shortlisted Program helped Rohan Behera land his role as Full Stack Developer Intern at Technocracy Group.",
+        "imageAlt": "Rohan Behera placement journey with HireKarma",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/impacts/19_HK.png"
+      },
+      {
+        "template": "student",
+        "divisionId": "skills",
+        "typeId": "student",
+        "divisionLabel": "Skill development",
+        "typeLabel": "Student story",
+        "readMore": "Read more",
+        "id": "sai-shortlisted",
+        "slug": "sai-prasad-dash",
+        "title": "Sai Prasad Dash",
+        "location": "Tenacious Techies",
+        "summary": "From Learning to Building: How HireKarma's Shortlisted Program helped Sai Prasad Dash land his role as AI/ML Developer at Tenacious Techies.",
+        "imageAlt": "Sai Prasad Dash placement journey with HireKarma",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/impacts/20_HK.png"
       }
     ]
   },
@@ -1484,6 +1544,274 @@
       "quoteRole": "Full Stack Web Developer Intern at WeIntern Pvt. Ltd.",
       "heroImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/16_HK.png",
       "quoteImage": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/16_HK.png"
+    },
+    {
+      "template": "student",
+      "breadcrumb": "Impact / Student story",
+      "label": "Student story · Shortlisted Program",
+      "primaryCta": {
+        "label": "Explore Shortlisted",
+        "href": "/shortlisted"
+      },
+      "secondaryCta": {
+        "label": "All stories",
+        "href": "/impact#browse-stories"
+      },
+      "slug": "ankit-bal",
+      "heading": "From Building Skills to Building a Career:",
+      "headingAccent": "Ankit Bal’s Journey to Becoming a Full Stack Software Developer",
+      "description": "Starting a career in the technology industry can be challenging. For aspiring software developers, having technical knowledge is only one part of the journey—the ability to present those skills effectively, prepare for recruitment processes, and find the right opportunity can make an equally important difference.",
+      "tags": [
+        "Skill development",
+        "Student story",
+        "Shortlisted Program",
+        "Full Stack Developer"
+      ],
+      "heroImageAlt": "Ankit Bal - Software Developer – Full Stack at K One Ventures",
+      "columns": [
+        {
+          "title": "The Journey & Aspirations",
+          "paragraphs": [
+            "Starting a career in the technology industry can be challenging. For aspiring software developers, having technical knowledge is only one part of the journey—the ability to present those skills effectively, prepare for recruitment processes, and find the right opportunity can make an equally important difference.",
+            "For Ankit Bal, the journey toward a professional career in software development was shaped by continuous learning, preparation, and the determination to turn his technical capabilities into a meaningful career opportunity."
+          ]
+        },
+        {
+          "title": "Preparation & Shortlisted Program",
+          "paragraphs": [
+            "Through HireKarma’s Shortlisted Program, Ankit gained access to a structured platform focused on helping aspiring professionals become more industry-ready. From preparation and skill development to career guidance and exposure to recruitment opportunities, the program provided him with the support needed to approach his career journey with greater clarity and confidence.",
+            "The experience helped Ankit better understand how to showcase his technical abilities, strengthen his professional readiness, and approach opportunities aligned with his career aspirations. With consistent effort and preparation, he was able to move forward with greater confidence during the recruitment process."
+          ]
+        },
+        {
+          "title": "Placement & Impact",
+          "paragraphs": [
+            "His dedication and commitment ultimately led to an important career milestone—his successful placement as a Software Developer – Full Stack at K One Ventures.",
+            "Beginning his professional journey as a Software Developer – Full Stack at K One Ventures gives Ankit an opportunity to apply his technical knowledge in a professional environment, work on real-world software development challenges, strengthen his development capabilities, and continue growing as a technology professional.",
+            "At HireKarma, stories like Ankit’s reflect the purpose of the Shortlisted Program—to help aspiring professionals become career-ready, recognize their strengths, prepare for real-world recruitment, connect with relevant opportunities, and take meaningful steps toward their professional goals."
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "Full Stack Developer",
+          "label": "Placed Role"
+        },
+        {
+          "value": "K One Ventures",
+          "label": "Employer"
+        },
+        {
+          "value": "Shortlisted",
+          "label": "Program Completed"
+        }
+      ],
+      "quote": "The Shortlisted Program gave me valuable guidance and support throughout my career journey. The preparation and exposure helped me understand how to present my technical skills more effectively and approach recruitment opportunities with greater confidence. I am thankful to HireKarma for providing me with the right guidance and opportunity to take an important step forward in my career as a Full Stack Software Developer.",
+      "quoteName": "Ankit Bal",
+      "quoteRole": "Software Developer – Full Stack at K One Ventures",
+      "heroImage": "https://hirekarma.s3.us-east-1.amazonaws.com/impacts/17_HK.png",
+      "quoteImage": "https://hirekarma.s3.us-east-1.amazonaws.com/impacts/17_HK.png"
+    },
+    {
+      "template": "student",
+      "breadcrumb": "Impact / Student story",
+      "label": "Student story · Shortlisted Program",
+      "primaryCta": {
+        "label": "Explore Shortlisted",
+        "href": "/shortlisted"
+      },
+      "secondaryCta": {
+        "label": "All stories",
+        "href": "/impact#browse-stories"
+      },
+      "slug": "sourajit-swain",
+      "heading": "From Searching for the Right Opportunity to Starting a New Career:",
+      "headingAccent": "Sourajit Swain’s Journey",
+      "description": "Starting a professional career can often come with uncertainty. For many aspiring professionals, finding an opportunity that matches their abilities and provides a pathway for growth can take time. Sourajit Swain’s journey reflects the importance of staying committed, preparing consistently, and continuing to look for the right opportunity.",
+      "tags": [
+        "Skill development",
+        "Student story",
+        "Shortlisted Program",
+        "Indexing Associate"
+      ],
+      "heroImageAlt": "Sourajit Swain - Indexing Associate at Constellation Technologies Limited",
+      "columns": [
+        {
+          "title": "The Journey & Aspirations",
+          "paragraphs": [
+            "Starting a professional career can often come with uncertainty. For many aspiring professionals, finding an opportunity that matches their abilities and provides a pathway for growth can take time. Sourajit Swain’s journey reflects the importance of staying committed, preparing consistently, and continuing to look for the right opportunity.",
+            "Like many job seekers beginning their professional journey, Sourajit faced the challenge of navigating the recruitment process and identifying opportunities where he could build his skills and gain valuable industry experience. Rather than letting uncertainty slow him down, he continued working toward becoming more prepared for the professional world."
+          ]
+        },
+        {
+          "title": "Preparation & Shortlisted Program",
+          "paragraphs": [
+            "Through HireKarma’s Shortlisted Program, Sourajit received structured support designed to help aspiring professionals become more career-ready. The program provided guidance, preparation activities, and exposure to relevant recruitment opportunities, helping him develop a clearer understanding of the professional expectations involved in the hiring process.",
+            "With consistent preparation and guidance, Sourajit became more confident in approaching career opportunities. The experience helped him understand how to present himself professionally, communicate his capabilities, and approach recruitment processes with greater confidence."
+          ]
+        },
+        {
+          "title": "Placement & Impact",
+          "paragraphs": [
+            "His efforts eventually led to an important career milestone—his successful placement as an Indexing Associate at Constellation Technologies Limited.",
+            "Starting his professional journey as an Indexing Associate at Constellation Technologies Limited gives Sourajit the opportunity to gain practical industry experience, develop his professional capabilities, understand real-world business processes, and build a strong foundation for his future career.",
+            "At HireKarma, stories like Sourajit’s represent the purpose of the Shortlisted Program—to support aspiring professionals with preparation, guidance, career exposure, and relevant opportunities that can help them move closer to their professional goals."
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "Indexing Associate",
+          "label": "Placed Role"
+        },
+        {
+          "value": "Constellation Technologies",
+          "label": "Employer"
+        },
+        {
+          "value": "Shortlisted",
+          "label": "Program Completed"
+        }
+      ],
+      "quote": "My experience with the Shortlisted Program gave me valuable support and guidance throughout my career journey. The preparation and opportunities helped me become more confident about approaching the recruitment process and presenting my abilities professionally. I am grateful to HireKarma for providing me with the guidance and opportunity that helped me take this important step forward in my career.",
+      "quoteName": "Sourajit Swain",
+      "quoteRole": "Indexing Associate at Constellation Technologies Limited",
+      "heroImage": "https://hirekarma.s3.us-east-1.amazonaws.com/impacts/18_HK.png",
+      "quoteImage": "https://hirekarma.s3.us-east-1.amazonaws.com/impacts/18_HK.png"
+    },
+    {
+      "template": "student",
+      "breadcrumb": "Impact / Student story",
+      "label": "Student story · Shortlisted Program",
+      "primaryCta": {
+        "label": "Explore Shortlisted",
+        "href": "/shortlisted"
+      },
+      "secondaryCta": {
+        "label": "All stories",
+        "href": "/impact#browse-stories"
+      },
+      "slug": "rohan-behera",
+      "heading": "From Learning to Building:",
+      "headingAccent": "Rohan Behera’s Journey to Becoming a Full Stack Developer Intern",
+      "description": "For aspiring technology professionals, turning technical knowledge into practical experience is an important step toward building a successful career. While learning programming concepts and development skills is essential, getting the right opportunity to apply those skills in a professional environment can make a significant difference.",
+      "tags": [
+        "Skill development",
+        "Student story",
+        "Shortlisted Program",
+        "Full Stack Intern"
+      ],
+      "heroImageAlt": "Rohan Behera - Full Stack Developer Intern at Technocracy Group",
+      "columns": [
+        {
+          "title": "The Journey & Aspirations",
+          "paragraphs": [
+            "For aspiring technology professionals, turning technical knowledge into practical experience is an important step toward building a successful career. While learning programming concepts and development skills is essential, getting the right opportunity to apply those skills in a professional environment can make a significant difference.",
+            "For Rohan Behera, the journey toward gaining professional experience in software development was driven by a desire to learn, improve, and find an opportunity where he could put his technical skills into practice."
+          ]
+        },
+        {
+          "title": "Preparation & Shortlisted Program",
+          "paragraphs": [
+            "Through HireKarma’s Shortlisted Program, Rohan received structured guidance and career support designed to help him become more prepared for industry opportunities. The program helped him focus on professional readiness, understand recruitment expectations, and approach relevant opportunities with greater confidence.",
+            "As he continued preparing and improving his skills, Rohan became more confident in presenting his technical capabilities and participating in the recruitment process. The exposure and guidance he received helped him take a more focused approach toward building his career in software development."
+          ]
+        },
+        {
+          "title": "Placement & Impact",
+          "paragraphs": [
+            "His efforts eventually resulted in an important career milestone—his selection as a Full Stack Developer Intern at Technocracy Group.",
+            "Beginning his professional journey as a Full Stack Developer Intern at Technocracy Group gives Rohan the opportunity to work with real-world development projects, strengthen his understanding of full-stack technologies, gain practical industry experience, and learn how software is developed in a professional environment.",
+            "At HireKarma, stories like Rohan’s reflect the purpose of the Shortlisted Program—to help aspiring professionals prepare for the workplace, identify relevant opportunities, build confidence, and take meaningful steps toward their career goals."
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "Full Stack Intern",
+          "label": "Placed Role"
+        },
+        {
+          "value": "Technocracy Group",
+          "label": "Employer"
+        },
+        {
+          "value": "Shortlisted",
+          "label": "Program Completed"
+        }
+      ],
+      "quote": "The Shortlisted Program gave me valuable guidance and helped me become more confident about taking the next step in my career. The preparation and opportunities provided through the program helped me understand how to approach the recruitment process and present my skills more effectively. I am grateful to HireKarma for supporting me and helping me begin my professional journey in software development.",
+      "quoteName": "Rohan Behera",
+      "quoteRole": "Full Stack Developer Intern at Technocracy Group",
+      "heroImage": "https://hirekarma.s3.us-east-1.amazonaws.com/impacts/19_HK.png",
+      "quoteImage": "https://hirekarma.s3.us-east-1.amazonaws.com/impacts/19_HK.png"
+    },
+    {
+      "template": "student",
+      "breadcrumb": "Impact / Student story",
+      "label": "Student story · Shortlisted Program",
+      "primaryCta": {
+        "label": "Explore Shortlisted",
+        "href": "/shortlisted"
+      },
+      "secondaryCta": {
+        "label": "All stories",
+        "href": "/impact#browse-stories"
+      },
+      "slug": "sai-prasad-dash",
+      "heading": "From Learning to Building:",
+      "headingAccent": "Sai Prasad Dash’s Journey to Becoming an AI/ML Developer",
+      "description": "For aspiring technology professionals, transforming technical knowledge into practical industry experience is an important step toward building a successful career. While learning programming, artificial intelligence, and machine learning concepts provides a strong foundation, gaining the right opportunity to apply that knowledge in a professional environment can make a meaningful difference.",
+      "tags": [
+        "Skill development",
+        "Student story",
+        "Shortlisted Program",
+        "AI/ML Developer"
+      ],
+      "heroImageAlt": "Sai Prasad Dash - AI/ML Developer at Tenacious Techies",
+      "columns": [
+        {
+          "title": "The Journey & Aspirations",
+          "paragraphs": [
+            "For aspiring technology professionals, transforming technical knowledge into practical industry experience is an important step toward building a successful career. While learning programming, artificial intelligence, and machine learning concepts provides a strong foundation, gaining the right opportunity to apply that knowledge in a professional environment can make a meaningful difference.",
+            "For Sai Prasad Dash, the journey toward building a career in artificial intelligence and machine learning was shaped by a desire to learn, strengthen his technical capabilities, and find an opportunity where he could turn his knowledge into practical experience."
+          ]
+        },
+        {
+          "title": "Preparation & Shortlisted Program",
+          "paragraphs": [
+            "Through HireKarma’s Shortlisted Program, Sai Prasad received structured guidance and career support designed to help him become better prepared for professional opportunities. The program helped him focus on workplace readiness, understand recruitment expectations, and approach relevant career opportunities with greater confidence.",
+            "As he continued preparing for the professional world and developing his technical skills, Sai Prasad became more confident in presenting his capabilities and participating in the recruitment process. The guidance and exposure provided through the program helped him take a more focused approach toward building his career in the rapidly evolving field of artificial intelligence and machine learning."
+          ]
+        },
+        {
+          "title": "Placement & Impact",
+          "paragraphs": [
+            "His efforts eventually resulted in an important career milestone—his selection as an AI/ML Developer at Tenacious Techies.",
+            "Beginning his professional journey as an AI/ML Developer at Tenacious Techies gives Sai Prasad the opportunity to work in a professional technology environment, apply his understanding of artificial intelligence and machine learning, gain exposure to real-world development practices, and strengthen his technical skills through practical experience.",
+            "At HireKarma, stories like Sai Prasad’s reflect the purpose of the Shortlisted Program—to help aspiring professionals prepare for the workplace, identify relevant opportunities, build confidence, and take meaningful steps toward their career goals."
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "AI/ML Developer",
+          "label": "Placed Role"
+        },
+        {
+          "value": "Tenacious Techies",
+          "label": "Employer"
+        },
+        {
+          "value": "Shortlisted",
+          "label": "Program Completed"
+        }
+      ],
+      "quote": "Being part of the Shortlisted Program gave me valuable guidance and helped me become more confident about taking the next step in my career. The preparation and support provided through the program helped me understand the recruitment process and present my technical skills more effectively. I am grateful to HireKarma for supporting me throughout this journey and helping me begin my professional journey in AI and machine learning.",
+      "quoteName": "Sai Prasad Dash",
+      "quoteRole": "AI/ML Developer at Tenacious Techies",
+      "heroImage": "https://hirekarma.s3.us-east-1.amazonaws.com/impacts/20_HK.png",
+      "quoteImage": "https://hirekarma.s3.us-east-1.amazonaws.com/impacts/20_HK.png"
     }
   ]
 }

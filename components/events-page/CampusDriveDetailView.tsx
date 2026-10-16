@@ -557,9 +557,9 @@ export function CampusDriveDetailView({
 
               {/* Action Buttons */}
               <div className="actions">
-                <a className="btn primary" href="#jobs">
+                {/* <a className="btn primary" href="#jobs">
                   View open roles
-                </a>
+                </a> */}
                 <button type="button" className="btn" onClick={handleShareClick}>
                   Share drive
                 </button>
