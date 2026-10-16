@@ -12,7 +12,7 @@ const PORTRAITS = [
   { id: "6th", imageSrc: "https://disha-ui.s3.ap-south-1.amazonaws.com/campus_drive_logo/6th.png" },
   { id: "5th", imageSrc: "https://disha-ui.s3.ap-south-1.amazonaws.com/campus_drive_logo/5th.png" },
   { id: "4th", imageSrc: "https://disha-ui.s3.ap-south-1.amazonaws.com/campus_drive_logo/4th.png" },
-  { id: "3rd", imageSrc: "https://disha-ui.s3.ap-south-1.amazonaws.com/campus_drive_logo/3rd.png" },
+  { id: "3rd", imageSrc: "https://disha-ui.s3.ap-south-1.amazonaws.com/campus_drive_logo/10th.jpeg" },
   { id: "2nd", imageSrc: "https://disha-ui.s3.ap-south-1.amazonaws.com/campus_drive_logo/2nd.png" },
   { id: "1st", imageSrc: "https://disha-ui.s3.ap-south-1.amazonaws.com/campus_drive_logo/1st.png" },
 ] as const;
