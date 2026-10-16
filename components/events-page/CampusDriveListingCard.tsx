@@ -1,47 +1,24 @@
 "use client";
 
 import { useState } from "react";
-import { Montserrat } from "next/font/google";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
-import { CardActions } from "@/components/events-page/CardActions";
 import type { EventUiStatus } from "@/types/events-page";
 
 import styles from "./CampusDriveListingCard.module.css";
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-});
 
 export function driveDateParts(iso?: string) {
   if (!iso?.trim()) return null;
   const date = new Date(iso);
   if (Number.isNaN(date.getTime())) return null;
-  const day = String(date.getDate());
+  const day = String(date.getDate()).padStart(2, "0");
   const month = date
     .toLocaleDateString("en-GB", { month: "short" })
     .replace(".", "")
     .toUpperCase();
   const year = String(date.getFullYear());
   return { day, month, year };
-}
-
-function PinIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden>
-      <path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z" />
-      <circle cx="12" cy="9.5" r="2.5" />
-    </svg>
-  );
-}
-
-function ClockIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden>
-      <circle cx="12" cy="12" r="9" />
-      <path d="M12 7v5l3 2" />
-    </svg>
-  );
 }
 
 function posterInitial(title: string) {
@@ -53,32 +30,32 @@ export function CampusDriveListingCard({
   brandName,
   title,
   companyLine,
+  description,
   imageSrc,
   imageAlt,
   dateIso,
   locationLabel,
   locationTooltip,
+  timeLabel,
   modeLabel,
   status,
   detailHref,
-  applyHref,
-  detailLabel = "View details",
-  applyLabel = "Apply",
-  paired = false,
-  showApply = true,
+  detailLabel = "View Event Details",
 }: {
   brandName?: string;
   title: string;
   companyLine?: string;
+  description?: string;
   imageSrc?: string;
   imageAlt?: string;
   dateIso?: string;
   locationLabel?: string;
   locationTooltip?: string;
+  timeLabel?: string;
   modeLabel?: string;
   status?: EventUiStatus | null;
   detailHref: string;
-  applyHref: string;
+  applyHref?: string;
   detailLabel?: string;
   applyLabel?: string;
   paired?: boolean;
@@ -87,27 +64,41 @@ export function CampusDriveListingCard({
   const [imgFailed, setImgFailed] = useState(false);
   const showImg = Boolean(imageSrc?.trim()) && !imgFailed;
   const dateParts = driveDateParts(dateIso);
-  const isOpen = status === "live" || status === "open";
-  const isUpcoming = status === "upcoming";
-  const registerDisabled = status === "closed";
-  const tagLabel = isUpcoming ? "UPCOMING" : isOpen ? "OPEN" : "CLOSED";
-  const tagClass = isUpcoming ? styles.dtTagUpcoming : isOpen ? styles.dtTagOpen : "";
-
   const dateAria = dateParts
     ? `Drive date ${dateParts.day} ${dateParts.month} ${dateParts.year}`
     : undefined;
 
-  const companyText = companyLine?.trim() ?? "";
-  const modeText = modeLabel?.trim() ?? "";
   const locationText = locationLabel?.trim() ?? "";
-  const showLocationPin =
+  const modeText = modeLabel?.trim() ?? "";
+  const showLocation =
     Boolean(locationText) &&
     locationText.toLowerCase() !== modeText.toLowerCase();
-  const hasMetaRow = showLocationPin || Boolean(modeText);
+  const copy = description?.trim() || companyLine?.trim() || "";
+
+  const details = (
+    <>
+      {detailLabel}
+      <ArrowRight className={styles.detailsIcon} aria-hidden />
+    </>
+  );
 
   return (
-    <article className={`${styles.dt} ${montserrat.className}`}>
-      <div className={styles.dtImg}>
+    <article className={styles.row}>
+      <div className={styles.date} aria-label={dateAria}>
+        {dateParts ? (
+          <>
+            <span className={styles.month}>{dateParts.month}</span>
+            <span className={styles.day}>{dateParts.day}</span>
+          </>
+        ) : (
+          <>
+            <span className={styles.month}>—</span>
+            <span className={styles.day}>—</span>
+          </>
+        )}
+      </div>
+
+      <div className={styles.thumb}>
         {showImg ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
@@ -116,72 +107,42 @@ export function CampusDriveListingCard({
             onError={() => setImgFailed(true)}
           />
         ) : (
-          <div className={styles.dtImgPlaceholder} aria-hidden>
+          <div className={styles.thumbPlaceholder} aria-hidden>
             {posterInitial(brandName || title)}
           </div>
         )}
-        {status ? (
-          <span className={`${styles.dtTag} ${tagClass}`}>
-            {tagLabel}
-          </span>
+      </div>
+
+      <div className={styles.body}>
+        <h2>{title}</h2>
+        {showLocation || timeLabel || modeText ? (
+          <p className={styles.meta}>
+            {showLocation ? (
+              <span title={locationTooltip || locationText}>{locationText}</span>
+            ) : modeText ? (
+              <span>{modeText}</span>
+            ) : null}
+            {timeLabel ? <span>{timeLabel}</span> : null}
+          </p>
         ) : null}
-      </div>
-
-      <div className={styles.dtRow}>
-        {dateParts ? (
-          <div className={styles.dtDate} aria-label={dateAria}>
-            <b>{dateParts.day}</b>
-            <span>{dateParts.month}</span>
-            <i />
-            <em>{dateParts.year}</em>
-          </div>
+        {copy ? <p className={styles.copy}>{copy}</p> : null}
+        {status === "closed" ? (
+          <p className={styles.closedNote}>Registration is closed</p>
+        ) : null}
+        {detailHref.startsWith("http") ? (
+          <a
+            href={detailHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.details}
+          >
+            {details}
+          </a>
         ) : (
-          <div className={styles.dtDate} aria-hidden>
-            <b>—</b>
-            <span>—</span>
-            <i />
-            <em>—</em>
-          </div>
+          <Link href={detailHref} className={styles.details}>
+            {details}
+          </Link>
         )}
-
-        <div className={styles.dtInfo}>
-          <h2>{title}</h2>
-          {companyText ? <p className={styles.dtCo}>{companyText}</p> : null}
-          {hasMetaRow ? (
-            <div className={styles.dtMeta}>
-              {showLocationPin ? (
-                <span className={styles.dtMetaLocation}>
-                  <PinIcon />
-                  <span
-                    className={styles.dtMetaLocationText}
-                    title={locationTooltip || locationText}
-                  >
-                    {locationText}
-                  </span>
-                </span>
-              ) : null}
-              {modeText ? (
-                <span className={styles.dtMetaMode}>
-                  <ClockIcon />
-                  {modeText}
-                </span>
-              ) : null}
-            </div>
-          ) : null}
-        </div>
-      </div>
-
-      <div className={styles.dtActionsWrap}>
-        <CardActions
-          detailHref={detailHref}
-          applyHref={applyHref}
-          detailLabel={detailLabel}
-          applyLabel={applyLabel}
-          paired={paired}
-          showApply={showApply}
-          registerDisabled={registerDisabled}
-          appearance="driveTicket"
-        />
       </div>
     </article>
   );

@@ -206,12 +206,12 @@ const eventsMeta: Record<
   "campus-drives": {
     icon: GraduationCap,
     accent: theme.colors.green,
-    description: "Drives happening on Disha",
+    description: "Explore Campus Hiring Opportunities",
   },
   upcoming: {
     icon: Calendar,
     accent: theme.colors.primary,
-    description: "Open events on Disha",
+    description: "Discover Career Events & Workshops",
   },
 };
 
