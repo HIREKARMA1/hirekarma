@@ -74,9 +74,9 @@ function Shell({
   return (
     <main className="min-h-screen bg-[#f3f6fc]">
       <div className="content-container py-5 sm:py-8">
-        <Link href="/events/upcoming" className="mb-5 inline-flex items-center gap-2 text-sm font-semibold text-[#5c6c91] transition hover:text-[#2450dc]">
+        {/* <Link href="/events/upcoming" className="mb-5 inline-flex items-center gap-2 text-sm font-semibold text-[#5c6c91] transition hover:text-[#2450dc]">
           <ArrowLeft className="h-4 w-4" />Back to all events
-        </Link>
+        </Link> */}
 
         <section className="grid overflow-hidden rounded-[28px] bg-gradient-to-br from-[#10245b] via-[#16377f] to-[#2146a4] p-6 text-white shadow-[0_20px_50px_rgba(22,49,112,.16)] sm:p-9 lg:min-h-[420px] lg:grid-cols-[1.15fr_.85fr] lg:items-center lg:gap-10 lg:p-12">
           <div className="flex flex-col items-start">
@@ -96,8 +96,8 @@ function Shell({
             <NameCover src={image} name={imageName} className="absolute inset-0 h-full w-full text-4xl" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#081942]/85 via-[#081942]/10 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6">
-              <p className="mt-1 text-lg font-bold text-white sm:text-xl">{facts.find((fact) => fact.label === "Category")?.value || "Featured event"}</p>
-              {summary ? <p className="mt-2 line-clamp-2 max-w-lg text-sm leading-relaxed text-white/80">{summary.body}</p> : null}
+              {/* <p className="mt-1 text-lg font-bold text-white sm:text-xl">{facts.find((fact) => fact.label === "Category")?.value || "Featured event"}</p>
+              {summary ? <p className="mt-2 line-clamp-2 max-w-lg text-sm leading-relaxed text-white/80">{summary.body}</p> : null} */}
             </div>
           </div>
         </section>
