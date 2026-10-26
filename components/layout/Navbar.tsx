@@ -208,6 +208,11 @@ const eventsMeta: Record<
     accent: theme.colors.green,
     description: "Explore Campus Hiring Opportunities",
   },
+  "job-fair": {
+    icon: Briefcase,
+    accent: theme.colors.primary,
+    description: "Explore Job Fairs and participating employers",
+  },
   upcoming: {
     icon: Calendar,
     accent: theme.colors.primary,
@@ -335,7 +340,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
       const meta = eventsMeta[item.id] ?? eventsMeta.upcoming;
       return {
         label: item.label,
-        href: item.href,
+        href: item.id === "job-fair" ? "/events/job-fair" : item.href,
         icon: meta.icon,
         accent: meta.accent,
         description: meta.description,
