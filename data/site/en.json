@@ -134,6 +134,11 @@
       "href": "/events",
       "items": [
         {
+          "id": "job-fair",
+          "label": "Job Fair",
+          "href": "/job-fairs"
+        },
+        {
           "id": "campus-drives",
           "label": "Campus Drive",
           "href": "/events/campus-drives"
