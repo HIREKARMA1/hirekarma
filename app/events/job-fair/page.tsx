@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowUpRight, Briefcase, Sparkles } from "lucide-react";
+import { ArrowUpRight, Briefcase } from "lucide-react";
 
 import { getPublicJobFairs } from "@/services/job-fairs";
 import { env } from "@/lib/config/env";
@@ -21,15 +21,12 @@ export default async function JobFairLandingPage() {
 
   return (
     <main className="min-h-screen bg-[#fbfbf8] text-slate-950">
-      <section className="mx-auto max-w-7xl px-4 pb-8 pt-10 sm:px-6 sm:pt-14 lg:px-8">
-        <div className="relative overflow-hidden rounded-[2rem] border border-emerald-100 bg-[#effbf5] px-6 py-12 sm:px-10 lg:px-14 lg:py-16">
+      <section className="mx-auto max-w-7xl px-4 pb-6 pt-6 sm:px-6 sm:pt-8 lg:px-8">
+        <div className="relative overflow-hidden rounded-[2rem] border border-emerald-100 bg-[#effbf5] px-6 py-10 sm:px-8 sm:py-12 lg:px-10 lg:py-14">
           <div aria-hidden="true" className="pointer-events-none absolute -right-12 -top-24 h-72 w-72 rounded-full border-[36px] border-white/60" />
           <div className="relative max-w-2xl">
-            <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-bold uppercase tracking-[.18em] text-emerald-800 shadow-sm">
-              <Sparkles className="h-4 w-4" /> Career events
-            </span>
-            <h1 className="mt-5 text-4xl font-bold tracking-tight sm:text-5xl">Job Fairs</h1>
-            <p className="mt-4 max-w-xl text-lg leading-8 text-slate-600">
+            <h1 className="text-[2.75rem] font-bold leading-tight tracking-tight sm:text-[3.25rem]">Job Fairs</h1>
+            <p className="mt-3 max-w-xl text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
               Explore published career fairs and the opportunities shared by participating organizations.
             </p>
           </div>
