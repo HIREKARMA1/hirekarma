@@ -9,12 +9,27 @@ const REVEAL_SELECTOR =
 const AUTO_STAGGER_SELECTOR =
   "[data-hk-stagger], section .grid, section [class*='grid-cols']";
 
+/** After this long, stop waiting for hydration (e.g. non-React markup). */
+const HYDRATION_WAIT_MS = 15000;
+const HYDRATION_RETRY_MS = 100;
+
 function prefersReducedMotion() {
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
+/** React attaches a `__reactFiber$…` key to every DOM node it owns once hydrated. */
+function isReactHydrated(el: Element) {
+  for (const key in el) {
+    if (key.startsWith("__reactFiber$")) return true;
+  }
+  return false;
+}
+
 /**
  * Site-wide scroll reveals + auto-stagger for grids.
+ *
+ * Only touches DOM nodes after React has hydrated them, so the class/style
+ * changes made here never cause hydration mismatches.
  */
 export function ScrollMotion() {
   const pathname = usePathname();
@@ -22,15 +37,19 @@ export function ScrollMotion() {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    if (prefersReducedMotion()) {
-      document.documentElement.classList.remove("hk-motion-on");
-      document
-        .querySelectorAll(REVEAL_SELECTOR)
-        .forEach((el) => el.classList.add("hk-revealed"));
-      return;
-    }
+    const reduced = prefersReducedMotion();
+    const startedAt = Date.now();
+    let retryTimer: ReturnType<typeof setTimeout> | undefined;
+    let pending = false;
 
-    document.documentElement.classList.add("hk-motion-on");
+    const ready = (el: Element) =>
+      Date.now() - startedAt > HYDRATION_WAIT_MS || isReactHydrated(el);
+
+    if (reduced) {
+      document.documentElement.classList.remove("hk-motion-on");
+    } else {
+      document.documentElement.classList.add("hk-motion-on");
+    }
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -64,6 +83,11 @@ export function ScrollMotion() {
           );
           if (kids.length < 2 || kids.length > 16) return;
 
+          if (!ready(grid) || kids.some((k) => !ready(k))) {
+            pending = true;
+            return;
+          }
+
           kids.forEach((child, i) => {
             if (child.classList.contains("hk-stagger-child")) return;
             child.style.setProperty("--hk-stagger", `${Math.min(i, 12) * 70}ms`);
@@ -73,10 +97,21 @@ export function ScrollMotion() {
     };
 
     const scan = () => {
-      applyStagger();
+      pending = false;
+      if (!reduced) applyStagger();
+
       document.querySelectorAll<HTMLElement>(REVEAL_SELECTOR).forEach((el) => {
         if (seen.has(el)) return;
+        if (!ready(el)) {
+          pending = true;
+          return;
+        }
         seen.add(el);
+
+        if (reduced) {
+          el.classList.add("hk-revealed");
+          return;
+        }
 
         if (el.classList.contains("hk-no-reveal")) {
           return;
@@ -92,6 +127,12 @@ export function ScrollMotion() {
         el.classList.remove("hk-revealed");
         observer.observe(el);
       });
+
+      // Some nodes aren't hydrated yet; try again shortly.
+      if (pending) {
+        clearTimeout(retryTimer);
+        retryTimer = setTimeout(scan, HYDRATION_RETRY_MS);
+      }
     };
 
     scan();
@@ -105,6 +146,7 @@ export function ScrollMotion() {
 
     return () => {
       cancelAnimationFrame(raf);
+      clearTimeout(retryTimer);
       observer.disconnect();
       mo.disconnect();
     };

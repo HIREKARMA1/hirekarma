@@ -127,6 +127,8 @@ export interface ResourceArticleContent {
 }
 
 export const RESOURCE_ARTICLE_SLUGS = [
+  "how-ai-is-transforming-recruitment-2026",
+  "top-10-high-paying-careers-2026",
   "future-proof-careers-for-students-2030",
   "campus-placement-systems-problem",
   "public-grievance-systems-problem",
