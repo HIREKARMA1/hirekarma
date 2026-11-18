@@ -5,6 +5,8 @@ import type {
 } from "@/types/resources-page";
 import { RESOURCE_ARTICLE_SLUGS } from "@/types/resources-page";
 
+import highPayingCareersEn from "@/data/resources-page/articles/en/top-10-high-paying-careers-2026.json";
+import aiRecruitmentEn from "@/data/resources-page/articles/en/how-ai-is-transforming-recruitment-2026.json";
 import futureProofCareersEn from "@/data/resources-page/articles/en/future-proof-careers-for-students-2030.json";
 import campusPlacementEn from "@/data/resources-page/articles/en/campus-placement-systems-problem.json";
 import publicGrievanceEn from "@/data/resources-page/articles/en/public-grievance-systems-problem.json";
@@ -39,6 +41,10 @@ import skillDevOd from "@/data/resources-page/articles/od/skill-development-empl
 import dpiOd from "@/data/resources-page/articles/od/digital-public-infrastructure-systems-problem.json";
 
 const articleMapEn: Record<ResourceArticleSlug, ResourceArticleContent> = {
+  "how-ai-is-transforming-recruitment-2026":
+    aiRecruitmentEn as ResourceArticleContent,
+  "top-10-high-paying-careers-2026":
+    highPayingCareersEn as ResourceArticleContent,
   "future-proof-careers-for-students-2030":
     futureProofCareersEn as ResourceArticleContent,
   "campus-placement-systems-problem":
@@ -61,7 +67,7 @@ const articleMapEn: Record<ResourceArticleSlug, ResourceArticleContent> = {
     dpiEn as ResourceArticleContent,
 };
 
-const articleMapHi: Record<ResourceArticleSlug, ResourceArticleContent> = {
+const articleMapHi: Partial<Record<ResourceArticleSlug, ResourceArticleContent>> = {
   "future-proof-careers-for-students-2030":
     futureProofCareersHi as ResourceArticleContent,
   "campus-placement-systems-problem":
@@ -84,7 +90,7 @@ const articleMapHi: Record<ResourceArticleSlug, ResourceArticleContent> = {
     dpiHi as ResourceArticleContent,
 };
 
-const articleMapOd: Record<ResourceArticleSlug, ResourceArticleContent> = {
+const articleMapOd: Partial<Record<ResourceArticleSlug, ResourceArticleContent>> = {
   "future-proof-careers-for-students-2030":
     futureProofCareersOd as ResourceArticleContent,
   "campus-placement-systems-problem":
@@ -109,7 +115,7 @@ const articleMapOd: Record<ResourceArticleSlug, ResourceArticleContent> = {
 
 const localeArticleMaps: Record<
   Locale,
-  Record<ResourceArticleSlug, ResourceArticleContent>
+  Partial<Record<ResourceArticleSlug, ResourceArticleContent>>
 > = {
   en: articleMapEn,
   hi: articleMapHi,

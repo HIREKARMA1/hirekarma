@@ -28,6 +28,30 @@
   },
   "items": [
     {
+      "id": "how-ai-is-transforming-recruitment-2026",
+      "slug": "how-ai-is-transforming-recruitment-2026",
+      "category": "blogs",
+      "tag": "",
+      "visualVariant": "sky",
+      "image": "https://hirekarma.s3.us-east-1.amazonaws.com/image+(3).png",
+      "title": "AI in Recruitment: How Hiring Is Changing in 2026",
+      "excerpt": "Discover how AI is transforming recruitment in 2026, from resume screening to voice agents, and how job seekers and recruiters can adapt and stay ahead.",
+      "date": "October 2026",
+      "dateIso": "2026-10-22"
+    },
+    {
+      "id": "top-10-high-paying-careers-2026",
+      "slug": "top-10-high-paying-careers-2026",
+      "category": "blogs",
+      "tag": "",
+      "visualVariant": "default",
+      "image": "https://hirekarma.s3.us-east-1.amazonaws.com/image+(2).png",
+      "title": "Top 10 High-Paying Career Opportunities in 2026",
+      "excerpt": "Discover the top 10 high-paying careers in 2026, in-demand skills, and expert tips to succeed in today's job market and boost your earning potential.",
+      "date": "October 2026",
+      "dateIso": "2026-10-22"
+    },
+    {
       "id": "future-proof-careers",
       "slug": "future-proof-careers-for-students-2030",
       "category": "blogs",

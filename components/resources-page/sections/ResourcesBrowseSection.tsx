@@ -28,7 +28,7 @@ export function ResourcesBrowseSection() {
     };
   }, []);
 
-  const featured = items.slice(0, 1);
+  const featured = items.slice(0, 3);
   const featuredSlugs = new Set(featured.map((item) => item.slug));
   const visibleItems = [
     ...featured,

@@ -162,6 +162,126 @@
         "divisionLabel": "Skill development",
         "typeLabel": "Student story",
         "readMore": "Read more",
+        "id": "ankit-shortlisted",
+        "slug": "ankit-bal",
+        "title": "Ankit Bal",
+        "location": "K One Ventures",
+        "summary": "From Building Skills to Building a Career: How HireKarma's Shortlisted Program helped Ankit Bal land his role as Software Developer – Full Stack at K One Ventures.",
+        "imageAlt": "Ankit Bal placement journey with HireKarma",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/impacts/17_HK.png"
+      },
+      {
+        "template": "student",
+        "divisionId": "skills",
+        "typeId": "student",
+        "divisionLabel": "Skill development",
+        "typeLabel": "Student story",
+        "readMore": "Read more",
+        "id": "sourajit-shortlisted",
+        "slug": "sourajit-swain",
+        "title": "Sourajit Swain",
+        "location": "Constellation Technologies Limited",
+        "summary": "From Searching for the Right Opportunity to Starting a New Career: How HireKarma's Shortlisted Program helped Sourajit Swain land his role as Indexing Associate at Constellation Technologies Limited.",
+        "imageAlt": "Sourajit Swain placement journey with HireKarma",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/impacts/18_HK.png"
+      },
+      {
+        "template": "student",
+        "divisionId": "skills",
+        "typeId": "student",
+        "divisionLabel": "Skill development",
+        "typeLabel": "Student story",
+        "readMore": "Read more",
+        "id": "rohan-shortlisted",
+        "slug": "rohan-behera",
+        "title": "Rohan Behera",
+        "location": "Technocracy Group",
+        "summary": "From Learning to Building: How HireKarma's Shortlisted Program helped Rohan Behera land his role as Full Stack Developer Intern at Technocracy Group.",
+        "imageAlt": "Rohan Behera placement journey with HireKarma",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/impacts/19_HK.png"
+      },
+      {
+        "template": "student",
+        "divisionId": "skills",
+        "typeId": "student",
+        "divisionLabel": "Skill development",
+        "typeLabel": "Student story",
+        "readMore": "Read more",
+        "id": "sai-shortlisted",
+        "slug": "sai-prasad-dash",
+        "title": "Sai Prasad Dash",
+        "location": "Tenacious Techies",
+        "summary": "From Learning to Building: How HireKarma's Shortlisted Program helped Sai Prasad Dash land his role as AI/ML Developer at Tenacious Techies.",
+        "imageAlt": "Sai Prasad Dash placement journey with HireKarma",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/impacts/20_HK.png"
+      },
+      {
+        "template": "student",
+        "divisionId": "skills",
+        "typeId": "student",
+        "divisionLabel": "Skill development",
+        "typeLabel": "Student story",
+        "readMore": "Read more",
+        "id": "sanchita-shortlisted",
+        "slug": "sanchita-rani-nayak",
+        "title": "Sanchita Rani Nayak",
+        "location": "Luminous Infoways",
+        "summary": "Transforming Potential into Success: How HireKarma's Shortlisted Program helped Sanchita Rani Nayak land her role as AI/ML Engineer at Luminous Infoways.",
+        "imageAlt": "Sanchita Rani Nayak placement journey with HireKarma",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/8_HK.png"
+      },
+      {
+        "template": "student",
+        "divisionId": "skills",
+        "typeId": "student",
+        "divisionLabel": "Skill development",
+        "typeLabel": "Student story",
+        "readMore": "Read more",
+        "id": "prabina-shortlisted",
+        "slug": "prabina-kumar-das",
+        "title": "Prabina Kumar Das",
+        "location": "Tecnoglance Consulting Pvt. Ltd.",
+        "summary": "From Aspiration to Achievement: How HireKarma's Shortlisted Program helped Prabina Kumar Das land his role as Junior LiDAR Engineer at Tecnoglance Consulting Pvt. Ltd..",
+        "imageAlt": "Prabina Kumar Das placement journey with HireKarma",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/impacts/WhatsApp+Image+2026-11-18+at+4.47.31+PM.jpeg"
+      },
+      {
+        "template": "student",
+        "divisionId": "skills",
+        "typeId": "student",
+        "divisionLabel": "Skill development",
+        "typeLabel": "Student story",
+        "readMore": "Read more",
+        "id": "jashaswini-shortlisted",
+        "slug": "jashaswini-padhi",
+        "title": "Jashaswini Padhi",
+        "location": "SolvionTech",
+        "summary": "From Potential to Possibility: How HireKarma's Shortlisted Program helped Jashaswini Padhi land her role as AI/ML Developer Intern at SolvionTech.",
+        "imageAlt": "Jashaswini Padhi placement journey with HireKarma",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/impacts/WhatsApp+Image+2026-11-18+at+4.47.31+PM+(1).jpeg"
+      },
+      {
+        "template": "student",
+        "divisionId": "skills",
+        "typeId": "student",
+        "divisionLabel": "Skill development",
+        "typeLabel": "Student story",
+        "readMore": "Read more",
+        "id": "suensa-shortlisted",
+        "slug": "suensa-maharathi",
+        "title": "Suensa Maharathi",
+        "location": "ELRICS",
+        "summary": "From Learning to Achievement: How HireKarma's Shortlisted Program helped Suensa Maharathi land her role as Junior Software Developer at ELRICS.",
+        "imageAlt": "Suensa Maharathi placement journey with HireKarma",
+        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/impacts/WhatsApp+Image+2026-11-18+at+4.47.31+PM+(2).jpeg"
+      },
+      {
+        "template": "student",
+        "divisionId": "skills",
+        "typeId": "student",
+        "divisionLabel": "Skill development",
+        "typeLabel": "Student story",
+        "readMore": "Read more",
         "id": "swarnasikha-shortlisted",
         "slug": "swarnasikha-behera",
         "title": "Swarnasikha Behera",
@@ -259,21 +379,6 @@
         "summary": "Turning Potential into Opportunity: How HireKarma's Shortlisted Program helped Shridhar Shekhar begin as an AI Intern at WeIntern Pvt. Ltd.",
         "imageAlt": "Shridhar Shekhar placement journey with HireKarma",
         "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/7_HK.png"
-      },
-      {
-        "template": "student",
-        "divisionId": "skills",
-        "typeId": "student",
-        "divisionLabel": "Skill development",
-        "typeLabel": "Student story",
-        "readMore": "Read more",
-        "id": "sanchita-shortlisted",
-        "slug": "sanchita-rani-nayak",
-        "title": "Sanchita Rani Nayak",
-        "location": "Luminous Infoways",
-        "summary": "Transforming Potential into Success: How HireKarma's Shortlisted Program helped Sanchita Rani Nayak land her role as AI/ML Engineer at Luminous Infoways.",
-        "imageAlt": "Sanchita Rani Nayak placement journey with HireKarma",
-        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/8_HK.png"
       },
       {
         "template": "student",
@@ -394,66 +499,6 @@
         "summary": "Building Skills, Creating Opportunities: How HireKarma's Shortlisted Program helped Nitish Kumar Behera begin as a Full Stack Web Developer Intern at WeIntern Pvt. Ltd.",
         "imageAlt": "Nitish Kumar Behera placement journey with HireKarma",
         "image": "https://hirekarma.s3.us-east-1.amazonaws.com/Impact/16_HK.png"
-      },
-      {
-        "template": "student",
-        "divisionId": "skills",
-        "typeId": "student",
-        "divisionLabel": "Skill development",
-        "typeLabel": "Student story",
-        "readMore": "Read more",
-        "id": "ankit-shortlisted",
-        "slug": "ankit-bal",
-        "title": "Ankit Bal",
-        "location": "K One Ventures",
-        "summary": "From Building Skills to Building a Career: How HireKarma's Shortlisted Program helped Ankit Bal land his role as Software Developer – Full Stack at K One Ventures.",
-        "imageAlt": "Ankit Bal placement journey with HireKarma",
-        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/impacts/17_HK.png"
-      },
-      {
-        "template": "student",
-        "divisionId": "skills",
-        "typeId": "student",
-        "divisionLabel": "Skill development",
-        "typeLabel": "Student story",
-        "readMore": "Read more",
-        "id": "sourajit-shortlisted",
-        "slug": "sourajit-swain",
-        "title": "Sourajit Swain",
-        "location": "Constellation Technologies Limited",
-        "summary": "From Searching for the Right Opportunity to Starting a New Career: How HireKarma's Shortlisted Program helped Sourajit Swain land his role as Indexing Associate at Constellation Technologies Limited.",
-        "imageAlt": "Sourajit Swain placement journey with HireKarma",
-        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/impacts/18_HK.png"
-      },
-      {
-        "template": "student",
-        "divisionId": "skills",
-        "typeId": "student",
-        "divisionLabel": "Skill development",
-        "typeLabel": "Student story",
-        "readMore": "Read more",
-        "id": "rohan-shortlisted",
-        "slug": "rohan-behera",
-        "title": "Rohan Behera",
-        "location": "Technocracy Group",
-        "summary": "From Learning to Building: How HireKarma's Shortlisted Program helped Rohan Behera land his role as Full Stack Developer Intern at Technocracy Group.",
-        "imageAlt": "Rohan Behera placement journey with HireKarma",
-        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/impacts/19_HK.png"
-      },
-      {
-        "template": "student",
-        "divisionId": "skills",
-        "typeId": "student",
-        "divisionLabel": "Skill development",
-        "typeLabel": "Student story",
-        "readMore": "Read more",
-        "id": "sai-shortlisted",
-        "slug": "sai-prasad-dash",
-        "title": "Sai Prasad Dash",
-        "location": "Tenacious Techies",
-        "summary": "From Learning to Building: How HireKarma's Shortlisted Program helped Sai Prasad Dash land his role as AI/ML Developer at Tenacious Techies.",
-        "imageAlt": "Sai Prasad Dash placement journey with HireKarma",
-        "image": "https://hirekarma.s3.us-east-1.amazonaws.com/impacts/20_HK.png"
       }
     ]
   },
@@ -1812,6 +1857,201 @@
       "quoteRole": "AI/ML Developer at Tenacious Techies",
       "heroImage": "https://hirekarma.s3.us-east-1.amazonaws.com/impacts/20_HK.png",
       "quoteImage": "https://hirekarma.s3.us-east-1.amazonaws.com/impacts/20_HK.png"
+    },
+    {
+      "template": "student",
+      "breadcrumb": "Impact / Student story",
+      "label": "Student story · Shortlisted Program",
+      "primaryCta": {
+        "label": "Explore Shortlisted",
+        "href": "/shortlisted"
+      },
+      "secondaryCta": {
+        "label": "All stories",
+        "href": "/impact#browse-stories"
+      },
+      "slug": "prabina-kumar-das",
+      "heading": "From Aspiration to Achievement:",
+      "headingAccent": "Prabina Kumar Das’s Career Journey",
+      "description": "Every career milestone begins with an opportunity, and every opportunity creates a pathway to growth. Prabina Kumar Das has taken an important step towards building his professional future with a new achievement.",
+      "tags": [
+        "Skill development",
+        "Student story",
+        "Shortlisted Program",
+        "Junior LiDAR Engineer"
+      ],
+      "heroImageAlt": "Prabina Kumar Das - Junior LiDAR Engineer at Tecnoglance Consulting Pvt. Ltd.",
+      "columns": [
+        {
+          "title": "The Journey & Aspirations",
+          "paragraphs": [
+            "Building a successful career requires dedication, continuous learning and the willingness to explore new opportunities. Prabina Kumar Das took a step forward towards his professional aspirations, opening doors to a promising career in the engineering and technology sector."
+          ]
+        },
+        {
+          "title": "The Shortlisted Program",
+          "paragraphs": [
+            "Through HireKarma’s Shortlisted Program, Prabina got an opportunity to move closer to his career goals and connect with an industry opportunity that matched his professional journey.",
+            "The program focuses on connecting aspiring candidates with employers and helping them access meaningful career opportunities."
+          ]
+        },
+        {
+          "title": "Placement & Achievement",
+          "paragraphs": [
+            "We are delighted to announce that Prabina Kumar Das has been successfully placed at Tecnoglance Consulting Pvt. Ltd. as a Junior LiDAR Engineer.",
+            "This achievement marks an exciting beginning to his professional journey in the LiDAR engineering domain. His new role offers an opportunity to gain industry exposure, strengthen his technical capabilities and contribute to professional projects.",
+            "At HireKarma, we believe that every candidate deserves the right opportunity to showcase their potential. Prabina’s achievement reflects our continued commitment to bridging the gap between aspiring talent and industry opportunities."
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "Junior LiDAR Engineer",
+          "label": "Placed Role"
+        },
+        {
+          "value": "Tecnoglance Consulting Pvt. Ltd.",
+          "label": "Employer"
+        },
+        {
+          "value": "Successfully Placed",
+          "label": "Achievement"
+        }
+      ],
+      "quote": "At HireKarma, we believe that every candidate deserves the right opportunity to showcase their potential.",
+      "quoteName": "HireKarma",
+      "quoteRole": "Shortlisted Program",
+      "heroImage": "https://hirekarma.s3.us-east-1.amazonaws.com/impacts/WhatsApp+Image+2026-11-18+at+4.47.31+PM.jpeg"
+    },
+    {
+      "template": "student",
+      "breadcrumb": "Impact / Student story",
+      "label": "Student story · Shortlisted Program",
+      "primaryCta": {
+        "label": "Explore Shortlisted",
+        "href": "/shortlisted"
+      },
+      "secondaryCta": {
+        "label": "All stories",
+        "href": "/impact#browse-stories"
+      },
+      "slug": "jashaswini-padhi",
+      "heading": "From Potential to Possibility:",
+      "headingAccent": "Jashaswini Padhi’s Journey to AI/ML",
+      "description": "Every successful career begins with an opportunity to turn knowledge and ambition into real-world experience. For Jashaswini Padhi, a new chapter in her professional journey begins with an exciting achievement.",
+      "tags": [
+        "Skill development",
+        "Student story",
+        "Shortlisted Program",
+        "AI/ML Developer Intern"
+      ],
+      "heroImageAlt": "Jashaswini Padhi - AI/ML Developer Intern at SolvionTech",
+      "columns": [
+        {
+          "title": "The Journey & Aspirations",
+          "paragraphs": [
+            "With an interest in building a career in technology, Jashaswini took a step forward towards her professional aspirations. Her achievement reflects the importance of recognising one's potential and being ready to embrace new opportunities in the evolving technology industry."
+          ]
+        },
+        {
+          "title": "The Shortlisted Program",
+          "paragraphs": [
+            "Through HireKarma’s Shortlisted Program – Batch 7, Jashaswini moved closer to her career goals and an opportunity to begin her professional journey in the AI and Machine Learning domain.",
+            "The program aims to connect aspiring talent with industry opportunities and help candidates take meaningful steps towards their careers."
+          ]
+        },
+        {
+          "title": "Placement & Achievement",
+          "paragraphs": [
+            "Her efforts have led to an exciting milestone: Jashaswini Padhi has been selected as an AI/ML Developer Intern at SolvionTech.",
+            "This opportunity marks the beginning of her professional journey in Artificial Intelligence and Machine Learning, where she can develop her technical capabilities, gain practical industry exposure and work towards becoming a skilled technology professional.",
+            "At HireKarma, we believe every opportunity has the power to shape a future. Jashaswini's achievement is another step towards our mission of connecting talent with meaningful career opportunities."
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "AI/ML Developer Intern",
+          "label": "Placed Role"
+        },
+        {
+          "value": "SolvionTech",
+          "label": "Employer"
+        },
+        {
+          "value": "Shortlisted – Batch 7",
+          "label": "Program"
+        }
+      ],
+      "quote": "At HireKarma, we believe every opportunity has the power to shape a future.",
+      "quoteName": "HireKarma",
+      "quoteRole": "Shortlisted Program",
+      "heroImage": "https://hirekarma.s3.us-east-1.amazonaws.com/impacts/WhatsApp+Image+2026-11-18+at+4.47.31+PM+(1).jpeg"
+    },
+    {
+      "template": "student",
+      "breadcrumb": "Impact / Student story",
+      "label": "Student story · Shortlisted Program",
+      "primaryCta": {
+        "label": "Explore Shortlisted",
+        "href": "/shortlisted"
+      },
+      "secondaryCta": {
+        "label": "All stories",
+        "href": "/impact#browse-stories"
+      },
+      "slug": "suensa-maharathi",
+      "heading": "From Learning to Achievement:",
+      "headingAccent": "Suensa Maharathi’s Journey to Success",
+      "description": "Every new opportunity brings the possibility of a brighter future. For Suensa Maharathi, a significant career milestone marks the beginning of an exciting professional journey in the software development industry.",
+      "tags": [
+        "Skill development",
+        "Student story",
+        "Shortlisted Program",
+        "Junior Software Developer"
+      ],
+      "heroImageAlt": "Suensa Maharathi - Junior Software Developer at ELRICS",
+      "columns": [
+        {
+          "title": "The Journey & Aspirations",
+          "paragraphs": [
+            "A successful career is built through dedication, continuous learning and the courage to take the next step. Suensa Maharathi moved forward with her professional aspirations, opening the door to an exciting opportunity in the technology sector."
+          ]
+        },
+        {
+          "title": "The Shortlisted Program",
+          "paragraphs": [
+            "Through HireKarma’s Shortlisted Program, Suensa got an opportunity to connect with an industry employer and take an important step towards achieving her career goals.",
+            "The program focuses on connecting aspiring candidates with meaningful job opportunities and helping them move closer to their professional ambitions."
+          ]
+        },
+        {
+          "title": "Placement & Achievement",
+          "paragraphs": [
+            "We are delighted to announce that Suensa Maharathi has been successfully placed at ELRICS as a Junior Software Developer.",
+            "This achievement marks an exciting beginning to her journey in the software development field. Her new role brings opportunities to enhance her technical knowledge, gain practical industry experience and contribute to software development projects.",
+            "At HireKarma, we believe that every aspiring professional deserves an opportunity to showcase their potential. Suensa’s achievement reflects our commitment to connecting talent with the right career opportunities."
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "Junior Software Developer",
+          "label": "Placed Role"
+        },
+        {
+          "value": "ELRICS",
+          "label": "Employer"
+        },
+        {
+          "value": "Successfully Placed",
+          "label": "Achievement"
+        }
+      ],
+      "quote": "At HireKarma, we believe that every aspiring professional deserves an opportunity to showcase their potential.",
+      "quoteName": "HireKarma",
+      "quoteRole": "Shortlisted Program",
+      "heroImage": "https://hirekarma.s3.us-east-1.amazonaws.com/impacts/WhatsApp+Image+2026-11-18+at+4.47.31+PM+(2).jpeg"
     }
   ]
 }
