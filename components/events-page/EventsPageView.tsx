@@ -711,7 +711,7 @@ export function EventsPageView({
   );
   const [eventScope, setEventScope] = useState<"all" | "open" | "closed">("all");
   const [driveMode, setDriveMode] = useState<"" | "virtual" | "oncampus" | "walking">("");
-  const [driveSort, setDriveSort] = useState<"soonest" | "latest">("soonest");
+  const [driveSort, setDriveSort] = useState<"soonest" | "latest">("latest");
   const [driveMenu, setDriveMenu] = useState<"mode" | "date" | null>(null);
   const needle = query.trim().toLowerCase();
 
